@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="UTF-8"/>
+	<style>
+	 form {
+	     width: 500px;
+	     vertical-align: baseline;
+	 }
+	</style>
+	
+    </head>
+    
+    <div class="container" style="position:relative; width:800px; height:800px; fl
+				  oat:left; border:1px solid black;">
+	<canvas id="overlay" style="z-index:2; position:absolute; left:0px; top:0px;
+				    " width="800px" height="800px"></canvas>
+	<canvas id="scene" style="z-index:1; position:absolute; left:0px; top:0px;" 
+		width="800px" height="800px"/></canvas>
+    </div>
+    
+    <div id="t1" style="padding-left:300px; float: left;">
+	<form id="myform" name="inpform" action="javascript:plotGraph()">
+	    <table>
+		<tr>
+		    <td>xmin</td> <td><input type="text" name="xmi" value="-2"></td>
+		</tr>
+		<tr>
+		    <td>xmax</td><td><input type="text" name="xma" value="0.5"> </td>
+		</tr>
+		<tr>
+		    <td>ymin</td><td> <input type="text" name="ymi" value="-1.25"> </td>
+		</tr>
+		<tr>
+		    <td>ymax</td><td><input type="text" name="yma" value="1.25"></td>
+		</tr>
+		
+	    </table>
+	    
+	    <input type="submit" value="Plot">
+	    <button ondblclick="resetForm()">Reset form (dblclick)</button>
+	    <div style="padding-right:300px;"></div>
+	</form>
+    </div>
+    
+    <script src="js/mandelbrot.js"></script>
+    
+    <script>
+     function resetForm(){
+	 document.getElementById("myform").reset();
+     }
+     
+     function plotGraph(){
+	 xmin = parseFloat(document.inpform.xmi.value);
+	 xmax = parseFloat(document.inpform.xma.value);
+	 ymin = parseFloat(document.inpform.ymi.value);
+	 ymax = parseFloat(document.inpform.yma.value);
+	 
+	 var g = Mandelbrot("scene");
+	 
+	 g.init(xmin, xmax, ymin, ymax);
+	 
+	 g.plot();
+	 
+	 Overlay("overlay", g);
+     }
+</script>
+
+</body>
+</html>
