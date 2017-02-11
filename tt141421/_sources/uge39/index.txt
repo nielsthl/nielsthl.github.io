@@ -1,0 +1,294 @@
+######
+Uge 39
+######
+
+
+What exactly is a number?
+=========================
+
+We have avoided the issue, but now we have to face it head on. We need to define numbers so that
+irrational numbers are included. This is actually a bit subtle.
+
+Limits
+------
+
+In the famous paradox due to `Zeno <https://en.wikipedia.org/wiki/Zeno_of_Elea>`_ Achilles races against a tortoise and Zeno claims that Achilles can never win. A boiled down version of this paradox says that you will never be able to get back home tonight!
+
+Because first you have to cover half the distance. After that you will
+cover half of the remaining distance and again after that half of the
+remaining distance. This goes on forever and you are stuck in this infinite procedure.
+
+The subtle point is that one may add infinitely many numbers and end up with a well
+defined (finite) number. 
+In terms of mathematics, suppose that your house is one kilometer away. Then this
+infinite procedure leads to the sum
+
+.. math:: \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots
+   :label: zeno
+   
+Recall how we evaluate this sum. Last time we saw the formula
+
+.. math::
+
+   1 + q + \cdots + q^n = \frac{1 - q^{n+1}}{1 - q}.
+
+If :math:`0 < q < 1`, then :math:`q^m` gets smaller and smaller as :math:`m` gets
+bigger and bigger. In mathematical notation this is expressed as
+
+.. math::
+
+   q^m \to 0 \quad \text{as} \quad m \to \infty.
+
+As a sneak preview I can reveal now that this means the following mouthful:
+
+.. math:: \forall \epsilon > 0\, \exists N\in \mathbb{N}: m \geq N \implies q^m < \epsilon.
+   :label: epsdef
+   
+
+You can experiment a bit with Sage for different values of :math:`q`  and :math:`m` below to convince yourself of the mouthful above.
+		
+.. sage::
+      
+   q = 0.2
+   m = 2
+   q^m
+
+.. note:: 
+
+ .. eqt:: limit
+
+    What is the smallest value of :math:`N` that works in :eq:`epsdef` when :math:`q = 0.2` and :math:`\epsilon = 0.001`? 
+
+    A) :eqt:`C` :math:`5`
+
+    #) :eqt:`I` :math:`3`
+
+    #) :eqt:`I` :math:`6`
+
+    #) :eqt:`I` :math:`7`
+
+With this precise definition in mind, the following formula actually makes sense
+
+.. math:: 1 + q + q^2 + \cdots = \frac{1}{1 - q}
+   :label: geoms
+
+provided that :math:`0 \leq q < 1`. You can use this formula to prove that you are not stuck in the infinite world alluded to in :eq:`zeno` and that you actually will get home tonight.
+
+Well, I have cheated a bit here. One must prove :eq:`epsdef` when :math:`0\leq q < 1` (or more
+generally when :math:`-1 < q < 1`). A trick is here to use the inequality
+
+.. math:: (1 + p)^n \geq 1 + n p
+   :label: inducineq
+
+for :math:`p \geq 0` and :math:`n\in \mathbb{N}` with :math:`q = 1/(1 + p)`.
+
+.. admonition:: Exercise
+
+		Prove the inequality in :eq:`inducineq` for :math:`p > - 1` and :math:`n\in \mathbb{N}` by using induction.
+
+Working definition of numbers
+-----------------------------
+
+Let us agree to define a number as an infinite decimal expansion
+
+.. math::
+
+   a_0 + a_1 q + a_2 q^2 + \cdots,
+
+where :math:`q = \frac{1}{10}`, :math:`a_0\in \mathbb{Z}` and :math:`a_i \in \{0, 1, 2, \dots, 9\}` for :math:`i\geq 1`.
+Notice with this convention that
+
+.. math::
+
+   0.25 = 0.2499999999999999999 \dots,
+
+basically because :math:`1 = 0.9999\dots`, since
+
+.. math::
+
+   0.9999\dots = 9 \frac{1}{10} \frac{1}{1 - \frac{1}{10}} = 1
+
+by :eq:`geoms`. Perhaps, this is not the most elegant definition of numbers, but it will have
+to do for now. Numbers can be added and multiplied and every number is a limit of
+a sequence of rational numbers.
+
+.. admonition:: Question
+
+		How do we prove that :math:`\sqrt{2}` is a number with this definition of numbers?
+
+
+Convergents for continued fractions
+-----------------------------------
+
+Consider a continued fraction
+
+.. math:: a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{a_3 + \cfrac{1}{\dots}}}},
+
+and its convergents (the honest fractions you get after cutting it off)
+
+.. math::
+
+   a_0, \quad a_0 + \cfrac{1}{a_1}, \quad a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2}}, \quad
+   a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{a_3}}}, \dots
+
+.. admonition:: Computational experiment
+
+   Let us experiment a bit in Sage and see if can find a pattern in the numerators and denominators of the first five convergents. First the numerators
+		
+   .. sage::
+      
+      var('a0 a1 a2 a3 a4')
+      c1 = a0
+      c2 = a0 + 1/a1
+      c3 = a0 + 1/(a1 + 1/a2)
+      c4 = a0 + 1/(a1 + 1/(a2 + 1/a3))
+      c5 = a0 + 1/(a1 + 1/(a2 + 1/(a3 + 1/a4)))
+      
+      print numerator(c1)
+      print numerator(c2)
+      print numerator(c3)
+      print numerator(c4)
+      print numerator(c5)
+
+   and then the denominators
+
+   .. sage::
+      
+      var('a0 a1 a2 a3 a4')
+      c1 = a0
+      c2 = a0 + 1/a1
+      c3 = a0 + 1/(a1 + 1/a2)
+      c4 = a0 + 1/(a1 + 1/(a2 + 1/a3))
+      c5 = a0 + 1/(a1 + 1/(a2 + 1/(a3 + 1/a4)))
+      
+      print denominator(c1)
+      print denominator(c2)
+      print denominator(c3)
+      print denominator(c4)
+      print denominator(c5)
+
+Eulers remarkable observation
+-----------------------------
+
+It seems that
+
+.. math:: a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{\cdots + \cfrac{1}{a_n}}}} = \frac{[a_0, a_1, \dots, a_n]}{[a_1, a_2, \dots, a_n]},
+   :label: eulerf
+	  
+where :math:`[x_1, x_2, \dots, x_n]` is an expression starting from the full product
+:math:`x_1 x_2 \cdots x_n` and then adding the subproducts you get when you omit adjacent variables and then pairs of separate adjacent variables etc. 
+      
+Let us give a small argument for this. With the notation in :eq:`eulerf` you can see that the left hand side equals
+
+.. math::
+
+   a_0 + \cfrac{1}{\cfrac{[a_1, \dots, a_n]}{[a_2, \dots, a_n]}} 
+   = \frac{a_0 [a_1, \dots, a_n] + [a_2, \dots, a_n]}{[a_1, \dots, a_n]}.
+   
+This shows
+
+.. math:: [a_0, a_1, \dots, a_n] = a_0 [a_1, \dots, a_n] + [a_2, \dots, a_n]
+   :label: recurse
+
+Let us make the convention that :math:`[] = 1`.  We have already seen
+that :math:`[x] = x` and :math:`[x, y] = x y + 1`.
+
+Let us assume by induction that :math:`[a_0, \dots, a_m]` for :math:`m < n` is
+the sum of the products you get from removing seperate adjacent variables
+in :math:`a_0 a_1 \cdots a_m`, e.g. for :math:`m = 3`, we have
+
+.. math::
+
+   [a_0, a_1, a_2, a_3] = a_0 a_1 a_2 a_3 + a_2 a_3 + a_0 a_3 + a_0 a_1 + 1.
+
+If you look carefully at
+:eq:`recurse` you will see that the term :math:`a_0 [a_1, \dots, a_n]` by induction
+represents the sum of the products, where the adjacent pair :math:`a_0 a_1` is not omitted, whereas
+:math:`[a_2, \dots, a_n]` by induction represents the sum of the products, where :math:`a_0 a_1` is omitted from the full product :math:`a_0 a_1 \cdots a_n`.
+  
+      
+.. attention::
+
+   With this remark we get Eulers famous observation:
+
+   .. math::
+
+      [a_0, a_1, \dots, a_{n-1}, a_n ] =
+      [a_n, a_{n-1}, \dots, a_1, a_0 ]
+
+   and therefore that
+
+   .. math:: [a_0, a_1, \dots, a_{n-1}, a_n ] =
+       [a_0, \dots, a_{n-1}]\, a_n + [a_0, \dots, a_{n-2}].
+      :label: cfcomp
+
+Computing the convergents
+-------------------------
+
+The identity in :eq:`cfcomp` is really useful in computing the
+convergents iteratively. For the continued fraction
+
+.. math::
+
+   a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{\cdots + \cfrac{1}{a_n}}}} 
+
+you build a table with two rows corresponding to the numerator and
+the denominator in the convergents. Start with the table
+
++-----------+-------------+
+| :math:`1` | :math:`a_0` |
++-----------+-------------+
+| :math:`0` | :math:`1`   |
++-----------+-------------+
+
+and build it up successively using :eq:`cfcomp` as
+
++-----------+-------------+---------------------+----------------------------------+------------------+
+| :math:`1` | :math:`a_0` | :math:`a_1 a_0 + 1` | :math:`a_2 (a_1 a_0 + 1) + a_0`  | :math:`\cdots`   |
++-----------+-------------+---------------------+----------------------------------+------------------+
+| :math:`0` | :math:`1`   | :math:`a_1`         |  :math:`a_2  a_1 + 1`            | :math:`\cdots`   |
++-----------+-------------+---------------------+----------------------------------+------------------+
+
+
+Let us try out this magical tool for the continued fraction
+
+.. math::
+
+   1 + \cfrac{1}{2 + \cfrac{1}{2 + \cfrac{1}{\cdots}}}
+
+of :math:`\sqrt{2}`:
+
++----+----+----+----+----+----+----+----+----+
+| 1  | 1  | 3  | 7  | 17 | 41 | 99 | 239| 577| 
++----+----+----+----+----+----+----+----+----+
+| 0  | 1  | 2  | 5  | 12 | 29 | 70 | 169| 408| 
++----+----+----+----+----+----+----+----+----+
+
+The last convergent in this table is :math:`\frac{577}{408} \approx 1.414216`, which is a decent approximation to
+:math:`\sqrt{2} \approx 1.414214`.
+
+      .. admonition:: Exercise
+
+         Carry out the above procedure for the even simpler continued fraction
+
+         .. math::
+
+            x = 1 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{\cdots}}}
+
+	 Use the identity
+
+	 .. math::
+
+	    x = 1 + \cfrac{1}{x}
+
+	 to compute the exact value of :math:`x`.
+
+
+.. admonition:: Computational experiment
+
+   Of course, Sage has built in functions for continued fractions.  Below you can experiment with :math:`\sqrt[3]{2}` i.e., the cube root :math:`2^{1/3}` of two. I should say that the continued fraction expansion for this number is a true mystery. For example, one does not know if the numbers in the continued fraction expansion are bounded.
+		
+   .. sage::
+
+      x = RealField(200)(2^(1/3)) # 200 bits in the precision of computations
+      continued_fraction(x) 

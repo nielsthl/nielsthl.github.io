@@ -1,0 +1,298 @@
+######
+Uge 40
+######
+
+
+The recursive formula for computing convergents
+===============================================
+
+Recall from last week that we attempted to compute the :math:`n`-th convergent
+
+.. math::
+
+   a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{\cdots + \cfrac{1}{a_n}}}} 
+
+
+of a continued fraction as a fraction :math:`\frac{r_n}{s_n}` by
+finding formulas for the numerator :math:`r_n` and the denominator
+:math:`s_n`. Of course, we know the beginning i.e.,
+
+.. math::
+
+   \begin{align*}
+   r_0 &= a_0\\
+   s_0 &= 1\\
+   &\\
+   r_1 &= a_1 a_0 + 1\\
+   s_1 &= a_1\\
+   &\\
+   r_2 &= a_0 a_1 a_2 + a_0 + a_2\\
+   s_2 &= a_2 a_1 + 1\\
+   &\\
+   &\vdots
+   \end{align*}
+
+Let us begin this week just by proving the recursive formulas
+
+.. math::
+
+   r_n &= a_n r_{n-1} + r_{n-2}\\
+   s_n &= a_n s_{n-1} + s_{n-2}
+
+by induction without any mention of Eulers observation. Let us assume that the formulas
+above hold up to the :math:`n`-th convergent and try to prove similar formulas for the
+:math:`(n+1)`-st convergent:
+
+.. math::
+
+   \begin{align*}
+   &a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{\cdots + a_{n-1} + \cfrac{1}{a_n + \cfrac{1}{a_{n+1}}}}}} =
+   \cfrac{\left(a_n + \cfrac{1}{a_{n+1}}\right) r_{n-1} + r_{n-2}}{\left(a_n + \cfrac{1}{a_{n+1}}\right) s_{n-1} + s_{n-2}}\\
+   &= \cfrac{a_{n+1} a_n r_{n-1} + r_{n-1} + a_{n+1}r_{n-2}}{a_{n+1} a_n s_{n-1} + s_{n-1} + a_{n+1}s_{n-2}} =
+   \cfrac{a_{n+1}(a_n r_{n-1} + r_{n-2}) + r_{n-1}}{a_{n+1}(a_n s_{n-1} + s_{n-2}) + s_{n-1}}\\
+   &= \cfrac{a_{n+1} r_n + r_{n-1}}{a_{n+1} s_n + s_{n-1}}
+   \end{align*}
+
+An important observation is that the sequence :math:`s_0, s_1, s_2, \dots` of
+denominators are natural numbers satisfying
+
+.. math:: 1 = s_0 \leq s_1 < s_2 < s_3 < \cdots
+   :label: incrs
+   
+The convergents are in lowest terms
+-----------------------------------
+
+A surprising identity shows up for the numerators and denominators in a continued fraction.
+
+.. math:: r_{n+1} s_n - r_n s_{n+1} = (-1)^n
+   :label: idcf
+	  
+for :math:`n\geq 0`. You can check this identity explicitly for :math:`n=0`. To prove it in general, we again need to use
+induction:
+
+.. math::
+
+   r_{n+2} s_{n+1} - r_{n+1} s_{n+2} &= (a_{n+2} r_{n+1} + r_n) s_{n+1} - r_{n+1}(a_{n+2} s_{n+1} + s_n) \\
+                                     &= r_n s_{n+1} - s_n r_{n+1} = - (r_{n+1} s_n - r_n s_{n+1}) = (-1)^{n+1}.
+
+If :math:`d` is a common divisor of  :math:`r_n` and :math:`s_n`, say
+:math:`r_n = a d` and :math:`s_n = b d`, then
+
+.. math:: r_{n+1}(a d) - (b d) s_{n+1} = d( r_{n+1} a - b s_{n+1}) = (-1)^n   
+
+by :eq:`idcf`. Therefore :math:`d` must divide :math:`1` and the convergents
+expressed as :math:`\frac{r_n}{s_n}` are in lowest terms.
+
+
+				     
+Even and odd convergents
+------------------------
+
+				     
+Using :eq:`idcf` it follows that				     
+
+.. math:: \frac{r_{n+1}}{s_{n+1}} - \frac{r_n}{s_n} = \frac{(-1)^n}{s_n s_{+1}}.
+   :label: compcf
+
+.. admonition:: Exercise
+
+   Prove that
+
+   .. math:: \frac{r_{n+2}}{s_{n+2}} - \frac{r_n}{s_n} = (-1)^n\left( \frac{1}{s_n s_{n+1}} - \frac{1}{s_{n+1} s_{n+2}}\right)
+      :label: evenodd
+
+
+The identity :eq:`evenodd` along with :eq:`incrs` show that
+
+.. math::
+
+   \begin{align*}
+   &\frac{r_0}{s_0} < \frac{r_2}{s_2} < \frac{r_4}{s_4} < \cdots < \frac{r_{2n}}{s_{2n}} < \cdots\\
+   &\\
+   &\frac{r_1}{s_1} > \frac{r_3}{s_3} > \frac{r_5}{s_5} > \cdots > \frac{r_{2n+1}}{s_{2n+1}} > \cdots
+   \end{align*}
+
+Also, using :eq:`compcf` it follows that
+
+.. math::
+
+   \begin{align*}
+   \frac{r_{2n}}{s_{2n}} &< \frac{r_1}{s_1} \\
+   &\\
+   \frac{r_{2n+1}}{s_{2n+1}} &> \frac{r_0}{s_0}
+   \end{align*}
+   
+Therefore the sequence :math:`(\frac{r_{2n}}{s_{2n}})` of even
+convergents is an *increasing sequence* of numbers *bounded
+above*. Similary the sequence :math:`(\frac{r_{2n +1}}{s_{2n + 1}})` of odd
+convergents is a *decreasing sequence* of numbers *bounded below*. Each of
+these sequences have a well defined limit in the real numbers
+
+.. math::
+
+   \xi_e &= \lim_{n\to \infty} \frac{r_{2n}}{s_{2n}}  \\
+   &=\\
+   \xi_o &= \lim_{n\to\infty} \frac{r_{2n+1}}{s_{2n+1}}
+
+It follows from :eq:`compcf` that :math:`\xi_e = \xi_o`. We call this number
+:math:`\xi`. Notice that
+
+.. math::
+
+   \lim_{n\to\infty} \frac{r_n}{s_n} = \xi.
+
+
+Intuition on increasing sequences bounded from above
+----------------------------------------------------
+
+
+
+I am (again) cheating a bit here. Let me explain why it is
+reasonable to suspect that an increasing sequence of numbers bounded from
+above defines or converges to a number. Suppose that
+
+   .. math::
+
+      x_1 \leq x_2 \leq x_3 \leq \cdots
+
+is an increasing sequence of numbers and there exists a natural
+number :math:`M`, such that :math:`x_n \leq M` for every
+:math:`n\in \mathbb{N}`.   The following bisection procedure leads  to the limit.
+
+0) Let :math:`\delta := M-x_1` and :math:`\Delta := \delta`.
+1) Let :math:`\Delta := \Delta/2`
+2) If there are no numbers in :math:`(x_n)` bigger than 
+   :math:`x_1 + \delta`, then let :math:`\delta := \delta - \Delta`. Otherwise      let  :math:`\delta := \delta + \Delta`
+3) Repeat from 1.
+
+
+      
+.. admonition:: Animation
+
+   Here is a small animation showing the steps in the above procedure for a random increasing sequence with a **fat line** indicating where its elements are situated. The left end of the complete line corresponds to :math:`x_1` and the right end of the line to :math:`M`. The vertical bars represent :math:`x_1 + \delta` in successive steps of the procedure. Step through the procedure using **Repeat from 1.** and start over using **Reset/Goto 0.**
+		
+   .. raw:: html
+
+	 <br>
+	 <button onclick="clearanim()" style="float:left;">Reset/Goto 0.</button>
+	 <button onclick="rndpt()">Repeat from 1.</button>
+	 <br>
+	 <br>
+	 <canvas id="anim" height="100px"></canvas> 
+	  <script>	  
+	   var M = document.getElementById("uge-40").offsetWidth; // Get width of parent!	   
+	   var h = 50, bh = 25; //h = vertical pos of line, bh = below and over line length of bars
+           var first; // Boolean for first middle bar
+	   var lwidth = 0.3;
+	   var fatlwidth = 3.5;
+	   
+	   var canvas = document.getElementById("anim");
+	   canvas.width = M; // Dynamic width!
+	   var ctx = canvas.getContext("2d");
+	   ctx.lineWidth = lwidth;
+
+	   var x, Delta, delta, limitpt; 
+	   
+	  function initline(){
+	   first = true;
+	   limitpt = Math.random() * M;
+	   delta = M/2; Delta = M/2;
+
+	   ctx.beginPath();
+	   ctx.moveTo(0, h); ctx.lineTo(M, h);
+	   ctx.closePath();
+	   ctx.stroke();
+	   
+	   ctx.beginPath();
+	   ctx.lineWidth = fatlwidth;
+	   ctx.moveTo(0, h); ctx.lineTo(limitpt, h);
+	   ctx.closePath();
+	   ctx.stroke();
+	   
+	   ctx.lineWidth = lwidth
+	   return;
+	  }
+
+	  function plotbar(delta){
+	      ctx.beginPath();	
+	      ctx.moveTo(delta, h+bh); ctx.lineTo(delta, h-bh);
+	      ctx.closePath();
+	      ctx.stroke();
+	      }
+	      
+	  initline();
+	   
+	   function rndpt(){
+	      if (first){
+	         plotbar(delta);
+		 first = false;
+		 return;
+		 }
+		 
+	      Delta = Delta/2;
+	      if (delta < limitpt)
+	        delta = delta + Delta;
+              else
+	        delta = delta - Delta
+	      plotbar(delta);
+	      }
+
+           function clearanim(){
+	      ctx.clearRect(0,0, M, 2*h);
+	      initline();
+	   }
+	 </script>
+	 <br>
+
+	 
+	    
+The continued fraction algorithm converges
+------------------------------------------
+
+Recall the fundamental step in the continued fraction algorithm for an
+irrational number :math:`\xi`:
+
+.. math:: \xi = \lfloor \xi \rfloor + \xi - \lfloor \xi \rfloor =
+   \lfloor \xi \rfloor + \frac{1}{\cfrac{1}{\xi - \lfloor \xi \rfloor}} =
+   \lfloor \xi \rfloor + \frac{1}{\xi_1}.
+
+Repeating this step we end up with an identity   
+
+.. math::
+
+     \xi = a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{+ \cfrac{\ddots}{a_{n-1} + \cfrac{1}{\xi_n}}}}} 
+    
+after :math:`n` steps. This leads again to the identity
+
+.. math::
+
+   \xi = \frac{\xi_n r_{n-1} + r_{n-2}} {\xi_n s_{n-1} + s_{n-2}}
+
+ 
+exactly as we did in the recursive formulas for computing the numerator
+and the denominator of the convergents. Now a miracle happens:
+
+.. math::
+
+   \begin{align*}
+   \left| \xi - \frac{r_{n-1}}{s_{n-1}} \right| &=
+   \left| \frac{\xi_n r_{n-1} + r_{n-2}} {\xi_n s_{n-1} + s_{n-2}}- \frac{r_{n-1}}{s_{n-1}} \right|= 
+   \left| \frac{s_{n-1} (\xi_n r_{n-1} + r_{n-2}) - r_{n-1}(\xi_n s_{n-1} + s_{n-2})}{\xi_n s_{n-1}^2 + s_{n-1} s_{n-2}}\right|\\
+   &= \left|\frac{s_{n-1} r_{n-2} - r_{n-1} s_{n-2}}{\xi_n s_{n-1}^2 + s_{n-1} s_{n-2}}\right|\\
+   &\leq \frac{1}{\xi_n s_{n-1}^2 + s_{n-1} s_{n-2}}\\
+   &= \frac{1}{s_{n-1}(\xi_n s_{n-1} + s_{n-2})} < \frac{1}{s_{n-1}^2}, 
+   \end{align*}
+
+since :math:`\xi_n > 1`. The upshot of this is quite remarkable. The continued fraction algorithm really converges, since the denominators form a strictly increasing sequence of natural numbers (see :eq:`incrs`). If you have a convergent with a large denominator, then it is a good approximation.
+
+.. note::
+
+   Recall that :math:`\frac{355}{113}` is a convergent to :math:`\pi`. The above inequality says that
+
+   .. math::
+
+      \left| \pi - \frac{355}{113} \right| < \frac{1}{113^2} \approx 0.0007831
+
+   The actual approximation is much better: the left hand side is :math:`\approx 0.0000003`.
+
+   

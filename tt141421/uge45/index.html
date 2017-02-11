@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Uge 45: Diophantine approximation &mdash; Talentspor E16 v1.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Talentspor E16 v1.0" href="../index.html"/>
+        <link rel="next" title="Uge 41" href="../uge41/index.html"/>
+        <link rel="prev" title="Talentspor E16" href="../index.html"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="../_static/dynsite.js"></script>
+
+<script type="text/javascript" src="../_static/embedded_video.js
+"></script>
+
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+		displayMath: [ ['$$','$$'], ["\\[","\\]"]],
+		processEscapes: true
+      },
+      TeX: {
+	  equationNumbers: {autoNumber: "AMS"},
+	  Macros: {
+	      NN: '{\\mathbb{N}}',
+              ZZ: '{\\mathbb{Z}}',
+	      QQ: '{\\mathbb{Q}}',
+	      RR: '{\\mathbb{R}}',
+	      CC: '{\\mathbb{C}}',
+	      sgn: '{\\mathrm{sign}}'
+	      }
+    
+}});
+</script>
+
+
+
+
+<link rel="stylesheet" type="text/css"  href="../_static/topbar.css">
+<link rel="stylesheet" type="text/css"  href="../_static/thmstyling.css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Talentspor E16
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Uge 45: Diophantine approximation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-stern-brocot-tree">The Stern-Brocot Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#farey-fractions">Farey Fractions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#approximations-and-the-stern-brocot-tree">Approximations and The Stern-Brocot Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#geometric-continued-fractions">Geometric Continued Fractions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../uge41/index.html">Uge 41</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uge40/index.html">Uge 40</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uge39/index.html">Uge 39</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uge38/index.html">Uge 38</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Talentspor E16</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Uge 45: Diophantine approximation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="uge-45-diophantine-approximation">
+<h1>Uge 45: Diophantine approximation<a class="headerlink" href="#uge-45-diophantine-approximation" title="Permalink to this headline">¶</a></h1>
+<p>The notes for this week were carefully written by Morten Hein Tiljeset, phd-student at MATH.</p>
+<p>Diophantine approximation is about approximating real numbers by
+rational numbers. This can of course be done arbitrarily well, so we
+seek to simultanously do this with &#8220;simple&#8221; fractions, which we take
+to be those with small denominators. The first result in this field
+is Dirichlet&#8217;s theorem, which is usually proved using the
+pidgeon hole principle, but which we can now quickly derive from the
+theory of continued fractions.</p>
+<div class="admonition-theorem admonition">
+<p class="first admonition-title">Theorem</p>
+<p>Let $x \in \RR$ be a real number. There are infinitely many
+integers $p,q$ such that</p>
+<p class="last">$$
+\left|x - \frac{p}{q}\right| &lt; \frac{1}{q^2}.
+$$</p>
+</div>
+
+   <button class="bevisknap" id="bevisknap-be496f54-30ef-4a0e-8a65-4e43029ecbe9">Show proof</button>
+   <div class = "proof" id = "bevis-acc268f9-3891-4742-9c62-3d9f12f968d6" style="display:none;">
+   <script>$( "#bevisknap-be496f54-30ef-4a0e-8a65-4e43029ecbe9" ).click(function() {
+   if ($(this).text() == 'Show proof')
+      {$(this).text('Hide proof');} 
+   else
+      {$(this).text('Show proof');}; 
+   $("#bevis-acc268f9-3891-4742-9c62-3d9f12f968d6").toggle();});</script>
+   <p>If $x \in \QQ$, we can just choose
+$x = p/q = 2p/2q = 3p/3q = \dots$, since we made no assumptions on
+our fractions being reduced.</p>
+<p>If $x$ is irrational, the continued fraction process converges but
+thus not terminate, so we get infinitely many convergents $p_n/q_n$
+with the property</p>
+<p>$$
+\left|x - \frac{p_n}{q_n}\right| &lt; \frac{1}{q_n^2}.
+$$</p>
+</div><p>The continued fraction process is even better still: Not only does it
+give the existence, it also gives an algorithm (and an effective one
+at that). But that&#8217;s not all! The convergents of the continued
+fraction are <em>exactly</em> the best approximants, in the sense of the
+following theorem.</p>
+<div class="admonition-theorem admonition">
+<p class="first admonition-title">Theorem</p>
+<p>Let $x \in \RR$ and $p_n/q_n$ be a convergent with $n \geq 2$. If
+$0 &lt; q \leq q_n$ and $p/q \neq p_n/q_n$, then</p>
+<p class="last">$$
+\left|p_n - q_n x\right| &lt; \left| p - qx \right|.
+$$</p>
+</div>
+<p>In particular, if we divide the left hand side by $q_n$ and the right
+hand side by $q$, we get the weaker inequality</p>
+<p>$$
+\left|\frac{p_n}{q_n} - x\right| &lt; \left|\frac{p}{q} - x\right|,
+$$</p>
+<p>so the continued fractions are the closest approximants. But the
+statement of the theorem is stronger; this can be interpreted as
+saying that not only are the continued fractions best approximants,
+they are also best &#8220;value for money&#8221;.</p>
+
+   <button class="bevisknap" id="bevisknap-fc9f3e70-3c18-4fac-b01a-aff0e2c2c410">Show proof</button>
+   <div class = "proof" id = "bevis-f03e233e-aa49-4943-a239-88cdeeec8342" style="display:none;">
+   <script>$( "#bevisknap-fc9f3e70-3c18-4fac-b01a-aff0e2c2c410" ).click(function() {
+   if ($(this).text() == 'Show proof')
+      {$(this).text('Hide proof');} 
+   else
+      {$(this).text('Show proof');}; 
+   $("#bevis-f03e233e-aa49-4943-a239-88cdeeec8342").toggle();});</script>
+   <p>Without loss of generality we may suppose $\gcd(p, q) = 1$.
+First, suppose $q_n = q$. Then,</p>
+<p>\begin{equation*}
+\left|\frac{p_n}{q_n} - \frac{p}{q}\right| =
+\left|\frac{p_n}{q_n} - \frac{p}{q_n}\right| \geq \frac{1}{q_n},
+\end{equation*}</p>
+<p>but since $q_n \geq 2$ for $n \geq 2$,</p>
+<p>\begin{equation*}
+\left|x - \frac{p_n}{q_n}\right| &lt; \frac{1}{q_n^2} \leq \frac{1}{2q_n}.
+\end{equation*}</p>
+<p>But then $p/q$ cannot be a better approximation than $p_n/q_n$: this
+can be seen either by drawing, or by the inverse triangle
+inequality:</p>
+<p>\begin{align*}
+\left|x - \frac{p}{q}\right|
+&amp;= \left|x - \frac{p_n}{q_n} + \frac{p_n}{q_n} - \frac{p}{q}\right|
+\\
+&amp;\geq
+\left|\left|x - \frac{p_n}{q_n}\right| - \left|\frac{p_n}{q_n} - \frac{p}{q}\right|\right|
+\\
+&amp;\geq
+\frac{1}{q_n} - \frac{1}{2q_n}
+= \frac{1}{2q_n}.
+\end{align*}</p>
+<p>Now suppose $q_{n-1} &lt; q &lt; q_n$. Then consider the equation</p>
+<p>\begin{equation*}
+\begin{pmatrix}
+p_n &amp; p_{n-1} \\ q_n &amp; q_{n-1}
+\end{pmatrix}
+\begin{pmatrix}
+s \\ t
+\end{pmatrix}
+=
+\begin{pmatrix}
+p \\ q
+\end{pmatrix}.
+\end{equation*}</p>
+<p>Since the determinant of the matrix is
+$p_nq_{n-1} - p_{n-1}q_n = (-1)^n$, the inverse of the matrix exists
+and is also an integer. Thus, we can find integers $(s,t)$ which
+solves this system.</p>
+<p>For these integers, we have</p>
+<p>\begin{equation*}
+q = q_n s + q_{n-1} t &lt; q_n
+\end{equation*}</p>
+<p>so $\sgn(s) = -\sgn(t)$. Now, since the convergents of a continued
+fraction alternate between being above and below, we have</p>
+<p>\begin{equation*}
+\sgn\left(\frac{p_n}{q_n} - x\right)
+=  -\sgn\left(\frac{p_{n-1}}{q_{n-1}} - x\right),
+\end{equation*}</p>
+<p>and hence $\sgn(s(p_n - q_n x)) = -\sgn(t(p_{n-1} - q_{n-1} x))$.
+We can use this equality, to get</p>
+<p>\begin{align*}
+\left|p - qx\right|
+&amp;= \left|s p_n + t p_{n-1} - (sq_n + tq_{n-1})x\right|
+\\
+&amp;= \left|s(p_n - q_n x) + t(p_{n-1} - q_{n-1}x)\right|
+\\
+&amp;= \left|s(p_n - q_n x)\right| + \left|t(p_{n-1} - q_{n-1}x)\right|
+\\
+&amp;\gt \left|s\right| \left|p_n - q_n x\right|
+\geq \left|p_n - q_n x\right|,
+\end{align*}</p>
+<p>which was what we wanted.</p>
+</div><div class="section" id="the-stern-brocot-tree">
+<h2>The Stern-Brocot Tree<a class="headerlink" href="#the-stern-brocot-tree" title="Permalink to this headline">¶</a></h2>
+<p>Given two positive fractions, we may add them &#8220;the easy way&#8221; by taking:</p>
+<p>\begin{equation*}
+\frac{p}{q} \oplus \frac{r}{s} = \frac{p + r}{q + s}.
+\end{equation*}</p>
+<p>Less informally, we will refer to this <a href="#id1"><span class="problematic" id="id2">``</span></a>sum&#8217;&#8217; as the <em>median</em> of
+$p/q$ and $r/s$.</p>
+<p>The Stern-Brocot tree is generated by starting with &#8220;the fractions&#8221;
+$0/1$ and $1/0$ and recursively taking mediants of succesive nodes in
+the tree. The first part of the tree is illustrated here (the illustration omits the two starting fractions):</p>
+<a class="reference internal image-reference" href="../_images/SternBrocotTree.svg"><div align="center" class="align-center"><img alt="../_images/SternBrocotTree.svg" src="../_images/SternBrocotTree.svg" /></div>
+</a>
+<p>The Stern-Brocot tree has many amazing properties: It gives a tree
+containing all positive reduced fractions, and it is ordered as a
+binary search tree. We now prove these properties.</p>
+<div class="admonition-lemma admonition">
+<p class="first admonition-title">Lemma</p>
+<p>Let $0 \leq p/q &lt; r/s$ be positive fractions. Then</p>
+<p class="last">\begin{equation*}
+\frac{p}{q} &lt; \frac{p + r}{q+s} &lt; \frac{r}{s}.
+\end{equation*}</p>
+</div>
+
+   <button class="bevisknap" id="bevisknap-5d3c59f0-63f4-4fb2-8d65-067a848414c1">Show proof</button>
+   <div class = "proof" id = "bevis-3bde13cd-3be2-4805-8b40-64867be304d0" style="display:none;">
+   <script>$( "#bevisknap-5d3c59f0-63f4-4fb2-8d65-067a848414c1" ).click(function() {
+   if ($(this).text() == 'Show proof')
+      {$(this).text('Hide proof');} 
+   else
+      {$(this).text('Show proof');}; 
+   $("#bevis-3bde13cd-3be2-4805-8b40-64867be304d0").toggle();});</script>
+   <p>We prove the first inequality, and leave the second as an exercise
+to the reader. We have</p>
+<p>\begin{align*}
+\frac{p}{q} &lt; \frac{p + r}{q + s}
+\iff
+(q + s)p &lt; q (p + r)
+\iff
+sp &lt; qr
+\iff
+\frac{p}{q} &lt; \frac{r}{s}
+\end{align*}</p>
+<p>and the lemma follows.</p>
+</div><p>The following technical lemma will allow us to easily derive all the
+other properties of the Stern-Brocot tree.</p>
+<div class="admonition-lemma admonition">
+<p class="first admonition-title">Lemma</p>
+<p>If $p/q &lt; r/s$ are two succesive fractions at any stage of the
+construction of the Stern-Brocot tree, we have</p>
+<p class="last">\begin{equation*}
+rq - sp = 1.
+\end{equation*}</p>
+</div>
+
+   <button class="bevisknap" id="bevisknap-9fc3ca0e-75b5-4a56-92ef-62aec597afbb">Show proof</button>
+   <div class = "proof" id = "bevis-9710ba17-7f72-4110-b2b4-c3d9f612555e" style="display:none;">
+   <script>$( "#bevisknap-9fc3ca0e-75b5-4a56-92ef-62aec597afbb" ).click(function() {
+   if ($(this).text() == 'Show proof')
+      {$(this).text('Hide proof');} 
+   else
+      {$(this).text('Show proof');}; 
+   $("#bevis-9710ba17-7f72-4110-b2b4-c3d9f612555e").toggle();});</script>
+   <p>The proof goes by <em>induction in the tree</em>. We start the tree
+with the fractions $0/1$ and $1/0$. The relation is true for the
+starting fractions $0/1$ and $1/0$ since $1\cdot1 - 0\cdot0 =
+1$. Now we must show that if it holds at some point in the tree, it
+is true when we insert the median fraction.</p>
+<p>Now suppose that the relation is true at some point in the
+construction of the tree. Let $p/q &lt; r/s$ be two fractions in this
+construction. We must show that it still holds true when we insert
+the mediant. Then the successor to $p/q$ becomes $(p + r)/(q+s)$ and
+we must show</p>
+<p>\begin{equation*}
+1 = q(p+r) - (q+s)p
+\end{equation*}</p>
+<p>but this follows easily, as</p>
+<p>\begin{equation*}
+q(p+r) - (q+s)p  = qp + qr - qp - ps = qr - ps = 1.
+\end{equation*}</p>
+<p>Similarily, the successor to $(p + r)/(q+s)$ is $r/s$ so we verify
+that</p>
+<p>\begin{equation*}
+r(q+s) - s(p+r) = rq - sp = 1.
+\end{equation*}</p>
+</div><div class="admonition-corollary admonition">
+<p class="first admonition-title">Corollary</p>
+<p class="last">All fractions in the Stern-Brocot tree are reduced.</p>
+</div>
+
+   <button class="bevisknap" id="bevisknap-eec576ee-eec3-4faa-a4d6-8b62584f882d">Show proof</button>
+   <div class = "proof" id = "bevis-4cebb012-3eec-4220-8cf9-5eb8a8a419fd" style="display:none;">
+   <script>$( "#bevisknap-eec576ee-eec3-4faa-a4d6-8b62584f882d" ).click(function() {
+   if ($(this).text() == 'Show proof')
+      {$(this).text('Hide proof');} 
+   else
+      {$(this).text('Show proof');}; 
+   $("#bevis-4cebb012-3eec-4220-8cf9-5eb8a8a419fd").toggle();});</script>
+   <p>Let $p/q$ be some fraction in the tree. Find a sucessor, $r/s$. By the lemma</p>
+<p>\begin{equation*}
+rq - ps = 1
+\end{equation*}</p>
+<p>so any common divisor of $p$ and $q$ must divide 1.</p>
+</div><div class="admonition-lemma admonition">
+<p class="first admonition-title">Lemma</p>
+<p class="last">Any positive fraction $a/b &gt; 0$ is somewhere in the Stern-Brocot
+tree.</p>
+</div>
+
+   <button class="bevisknap" id="bevisknap-6f03e4f6-72cf-4b65-b009-1a4fac1e2808">Show proof</button>
+   <div class = "proof" id = "bevis-24306415-3723-4d6e-8d9e-1cf48f221854" style="display:none;">
+   <script>$( "#bevisknap-6f03e4f6-72cf-4b65-b009-1a4fac1e2808" ).click(function() {
+   if ($(this).text() == 'Show proof')
+      {$(this).text('Hide proof');} 
+   else
+      {$(this).text('Show proof');}; 
+   $("#bevis-24306415-3723-4d6e-8d9e-1cf48f221854").toggle();});</script>
+   <p>Suppose we have</p>
+<p>\begin{equation*}
+\frac{p}{q} &lt; \frac{a}{b} &lt; \frac{r}{s}
+\end{equation*}</p>
+<p>for two successive fractions in the Stern-Brocot tree.  That we can
+find such is clear, as we could just start with $0/1$ and $1/0$.</p>
+<p>The algorithm for finding the fraction is now the following. Compute
+the median of $p/q$ and $r/s$. We have three cases:</p>
+<ol class="arabic simple">
+<li>If <span class="math">\((p + q)/(r + s) = a/b\)</span> we are done.</li>
+<li>If <span class="math">\((p + q)/(r + s) &lt; a/b\)</span>, we replace <span class="math">\(p/q\)</span> by the median.</li>
+<li>If <span class="math">\((p + q)/(r + s) &gt; a/b\)</span>, we replace <span class="math">\(r/s\)</span> by the median.</li>
+</ol>
+<p>Can this process go on forever? No, since $p/q &lt; a/b &lt; r/s$ gives</p>
+<p>\begin{equation*}
+qa - bp &gt; 0 \text{ and } br - as &gt; 0
+\end{equation*}</p>
+<p>and since they are integers, we must even have</p>
+<p>\begin{equation*}
+qa - bp \geq 1 \text{ and } br - as \geq 1.
+\end{equation*}</p>
+<p>Now we find</p>
+<p>\begin{equation*}
+a + b = (r+s)(qa - bp) + (p+q)(br - as) \geq p + q + r + s.
+\end{equation*}</p>
+<p>But at each step of the algorithm, the right-hand side must increase
+by at least one, so we stop after at most $a + b$ iterations.</p>
+</div></div>
+<div class="section" id="farey-fractions">
+<h2>Farey Fractions<a class="headerlink" href="#farey-fractions" title="Permalink to this headline">¶</a></h2>
+<p>The Farey Fractions $\mathcal{F}_n$ are defined to be the reduced
+fractions in the interval $[0,1]$ with denominator at most $n$. Thus,
+the first few terms are:</p>
+<p>\begin{align*}
+\mathcal{F}_1 &amp;= \left\{
+\frac{0}{1},
+\frac{1}{1}
+\right\}
+\\
+\mathcal{F}_2 &amp;= \left\{
+\frac{0}{1},
+\frac{1}{2},
+\frac{1}{1}
+\right\}
+\\
+\mathcal{F}_3 &amp;= \left\{
+\frac{0}{1},
+\frac{1}{3},
+\frac{1}{2},
+\frac{2}{3},
+\frac{1}{1}
+\right\}
+\\
+\mathcal{F}_4 &amp;= \left\{
+\frac{0}{1},
+\frac{1}{4},
+\frac{1}{3},
+\frac{1}{2},
+\frac{2}{3},
+\frac{3}{4},
+\frac{1}{1}
+\right\}
+\\
+\mathcal{F}_5 &amp;= \left\{
+\frac{0}{1},
+\frac{1}{5},
+\frac{1}{4},
+\frac{1}{3},
+\frac{2}{5},
+\frac{1}{2},
+\frac{3}{5},
+\frac{2}{3},
+\frac{3}{4},
+\frac{4}{5},
+\frac{1}{1}
+\right\}.
+\end{align*}</p>
+<p>The Stern-Brocot tree is heavily related to the more well-known Farey
+Fractions. The lemma&#8217;s we just proved above give us an algorithm for
+iteratively constructing the Farey fraction, it is the following: For
+each successive pair of numbers in $\mathcal{F}_n$, compute their
+mediant. If the mediant has denominator below $n+1$ we include it in
+$\mathcal{F}_{n+1}$.</p>
+</div>
+<div class="section" id="approximations-and-the-stern-brocot-tree">
+<h2>Approximations and The Stern-Brocot Tree<a class="headerlink" href="#approximations-and-the-stern-brocot-tree" title="Permalink to this headline">¶</a></h2>
+<p>Having established the properties of the Stern-Brocot tree, we can now
+give a very nice algoritm for finding all approximations to a given
+positive real number $x$. Start in $1/1$: if $x &gt; 1$ we can go right,
+since all numbers to the left are less than $1$. If $x &lt; 1$ go
+left. Now just iterate.</p>
+<p>The tree can be thought of as an infinite <em>binary search tree</em>. Such binary search trees also occur frequently as data
+structures in computer science (although here they are rarely
+infinite).</p>
+<p>As a sidenote, the tree was discovered by Moritz Stern og Achille
+Brocot. While Stern was a number theorist, Brocot was a french
+clockmaker and his interest was entirely practical. This application
+is very natural: The ratio produced by a set of gears is precisely the
+fraction given by the ratio of the number of teeth. For more details
+of this application see~\cite{clocks}.
+It turns out that this method of approximating real numbers is
+intimately related to the continued fraction process. We now explain
+this relationship.</p>
+<p>Let $x &gt; 0$ be an irrational real number. The algorithm of searching
+in the Stern-Brocot tree never stops, so if we mark and $R$ every time
+we go right and an $L$ every time we go left, we get an infinite
+sequence</p>
+<p>\begin{equation*}
+R^{a_0}L^{a_1}R^{a_2}L^{a_3}\dots
+\end{equation*}</p>
+<p>It turns out, that this sequence is exactly the elements of the
+continued fraction.</p>
+<div class="admonition-theorem admonition">
+<p class="first admonition-title">Theorem</p>
+<blockquote>
+<div>Let $x &gt; 0$ have the continued fraction expansion</div></blockquote>
+<p>\begin{equation*}
+x = a_0 +
+\cfrac{1}{a_1 + \cfrac{1}
+{a_2 + \dots}}.
+\end{equation*}</p>
+<blockquote class="last">
+<div>The path to $x$ in the Stern-Brocot tree is $R^{a_0}L^{a_1}R^{a_2}\dots$.</div></blockquote>
+</div>
+
+   <button class="bevisknap" id="bevisknap-1b73d8b7-7402-48a8-a095-e0bd5554892d">Show proof</button>
+   <div class = "proof" id = "bevis-836400f8-4bc8-4b54-ac8d-76bb47308d6a" style="display:none;">
+   <script>$( "#bevisknap-1b73d8b7-7402-48a8-a095-e0bd5554892d" ).click(function() {
+   if ($(this).text() == 'Show proof')
+      {$(this).text('Hide proof');} 
+   else
+      {$(this).text('Show proof');}; 
+   $("#bevis-836400f8-4bc8-4b54-ac8d-76bb47308d6a").toggle();});</script>
+   <p>For every fraction in the Stern-Brocot tree, we represent it by its
+left- and right parents $p/q &lt; r/s$. For example, the number $3/8$
+is represented by the pair $(1/3, 2/5)$ and the number we represent
+is precisely their median.</p>
+<p>A convenient way to keep track of this, is as a matrix</p>
+<p>\begin{equation*}
+M = M\left(\frac{p + r}{q + s}\right) =
+\begin{pmatrix}
+q &amp; s \\ p &amp; r
+\end{pmatrix},
+\end{equation*}</p>
+<p>where we take the slightly odd-looking approach of keeping the
+denominators in the first row and the numerators in the second
+row. The reason is that now, starting from $1/1$ we have</p>
+<p>\begin{equation*}
+M\left(\frac{1}{1}\right) =
+\begin{pmatrix}
+1 &amp; 0 \\ 0 &amp; 1
+\end{pmatrix}
+= I
+\end{equation*}</p>
+<p>the identity matrix!</p>
+<p>Now a step to the left is given by replacing M with</p>
+<p>\begin{equation*}
+ML =
+\begin{pmatrix}
+q &amp; q + s \\ p &amp; p + r
+\end{pmatrix}
+=
+\begin{pmatrix}
+q &amp; s \\ p &amp; r
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 1 \\ 0 &amp; 1
+\end{pmatrix}
+\end{equation*}</p>
+<p>so we simply  multiply with the matrix</p>
+<p>\begin{equation*}
+L =
+\begin{pmatrix}
+1 &amp; 1 \\ 0 &amp; 1
+\end{pmatrix}.
+\end{equation*}</p>
+<p>Similarily, a step to the right is given by matrix multiplication with</p>
+<p>\begin{equation*}
+R =
+\begin{pmatrix}
+1 &amp; 0 \\ 1 &amp; 1
+\end{pmatrix}
+\end{equation*}</p>
+<p>so that</p>
+<p>\begin{equation*}
+MR =
+\begin{pmatrix}
+q + s &amp; s \\ p + r &amp; r
+\end{pmatrix}
+\end{equation*}
+.</p>
+<p>Now start with $M(1) = I$ and let $p_n/q_n$ denote the convergents,
+where we&#8217;ve taken $p_{-1} = 1$, $q_{-1} = 0$. We now compute, using
+the recursive formula for the convergents:</p>
+<p>\begin{gather*}
+IR^{a_0} =
+\begin{pmatrix}
+1 &amp; 0 \\ a_0 &amp; 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+q_0 &amp; q_{-1} \\ p_0 &amp; p_{-1}
+\end{pmatrix}
+\\
+IR^{a_0}L^{a_1} =
+\begin{pmatrix}
+q_0 &amp; q_{-1} \\ p_0 &amp; p_{-1}
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; a_1 \\ 0 &amp; 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+q_0 &amp; a_1 q_0 + q_{-1} \\
+p_0 &amp; a_1 p_0 + p_{-1} \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+q_0 &amp; q_1 \\ p_0 &amp; p_1
+\end{pmatrix}
+\\
+IR^{a_0}L^{a_1}R^{a_2} =
+\begin{pmatrix}
+q_0 &amp; q_1 \\ p_0 &amp; p_1
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 0 \\ a_2 &amp; 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_2q_1 + q_0 &amp; q_1 \\
+a_2p_1 + p_0 &amp; p_1 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+q_2 &amp; q_1 \\
+p_2 &amp; p_1
+\end{pmatrix}.
+\end{gather*}</p>
+<p>The system should now be clear. We leave it as an exercise to the
+reader to prove the relationship by induction.</p>
+<p>It is now clear that the continued fraction gives the path to $x$ in
+the Stern-Brocot tree, since the convergents alternate, so $x$ is
+always between $p_n/q_n$ and $p_{n+1}/q_{n+1}$.</p>
+</div></div>
+<div class="section" id="geometric-continued-fractions">
+<h2>Geometric Continued Fractions<a class="headerlink" href="#geometric-continued-fractions" title="Permalink to this headline">¶</a></h2>
+<p>In the construction of the Stern-Brocot tree, we added fractions <a href="#id3"><span class="problematic" id="id4">``</span></a>the
+easy way&#8217;&#8217; by taking the median. If we think of the elements of the
+tree not as a fractions, but just pairs of numbers $(q, p)$. We get an
+equivalent formulation of the same theory. We can think of this as
+being something like replacing $\left|x - p/q\right|$ with $qx - p$ by
+multiplying with $q$.</p>
+<p>The construction goes as follows: Put the $q$&#8217;s on the $x$-axis, and
+the $p$&#8217;s on the $y$-axis. To approximate some point $\alpha &gt; 0$,
+draw the line $l: y = q\alpha$. When this line is close to an integer
+point $(q, p)$, then $\alpha$ is close to the fraction $p/q$.</p>
+<p>We can think of the approximation process in a very geometric way like
+this: Take an infinite wooden board and put nails into each integer
+point. Fix a piece of string at the <a href="#id5"><span class="problematic" id="id6">``</span></a>end&#8217;&#8217; of $y = q\alpha$. Start
+with the string parallel to the line, and pull down toward
+$(1,0)$. The points that precisely touch the string are the closest
+approximants from below. Similarly, if we pull the string up to
+$(0,1)$ the poins touching the string are the approximants from above.</p>
+<div align="center" class="align-center"><img alt="../_images/sqrt2.svg" src="../_images/sqrt2.svg" /></div>
+<p>Another way to describe this process is to translate the construction
+of the Stern-Brocot tree. Start with the vectors</p>
+<p>\begin{equation*}
+e_{-1} = (1,0) \text{ and } e_0 = (0,1)
+\end{equation*}</p>
+<p>corresponding to the <a href="#id7"><span class="problematic" id="id8">``</span></a>fractions&#8217;&#8217; $0/1$ and $1/0$. Iteratively
+compute:</p>
+<p>\begin{equation*}
+e_k = a_k e_{k-1} + e_{k-2}.
+\end{equation*}</p>
+<p>This is simply the median addition of the Stern-Brocot tree translated
+to vector notation. The points below are given by the odd
+$k$&#8217;s, and the points above are given by the even $k$&#8217;s, and they
+exactly correspond to the convergents of the continued fraction.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../uge41/index.html" class="btn btn-neutral float-right" title="Uge 41" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Talentspor E16" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

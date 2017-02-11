@@ -1,0 +1,183 @@
+body {counter-reset: niels 0 chapter 0 section 0;
+     }
+
+h1 {
+    counter-increment: chapter;
+}
+
+h2 {
+    counter-increment: section;
+}
+
+h1::before{
+/*    content: counter(chapter) " "; */
+}
+
+
+
+h2::before{
+    content: counter(chapter) "." counter(section) " ";
+}
+
+
+
+span.eqno {float:left;} 
+.red {color:red;}
+
+.admonition-definition
+{padding-left:12px;
+ padding-right:12px;
+ padding-bottom:4px;
+ background:#e8e8e8;}
+.admonition-definition > .admonition-title
+{
+    background:#111;
+}
+.admonition-definition > .admonition-title
+{
+    counter-increment:niels;
+}
+.admonition-definition > .admonition-title::after
+{
+    content: ' ' counter(chapter) "." counter(niels);
+}
+
+.admonition-example
+{padding-left:12px;
+ padding-right:12px;
+ padding-bottom:4px;
+ background:#e8e8e8;}
+.admonition-example > .admonition-title
+{
+    background:#111;
+}
+.admonition-example > .admonition-title
+{
+    counter-increment:niels;
+}
+.admonition-example > .admonition-title::after
+{
+    content: ' ' counter(chapter) "." counter(niels);
+}
+
+.admonition-exercise
+{padding-left:12px;
+ padding-right:12px;
+ padding-bottom:4px;
+ background:#e8e8e8;}
+.admonition-exercise > .admonition-title
+{
+    background:#111;
+}
+.admonition-exercise > .admonition-title
+{
+    counter-increment:niels;
+}
+.admonition-exercise > .admonition-title::after
+{
+    content: ' ' counter(chapter) "." counter(niels);
+}
+
+.admonition-theorem
+{padding-left:12px;
+ padding-right:12px;
+ padding-bottom:4px;
+ background:#e8e8e8;}
+.admonition-theorem > .admonition-title
+{
+    background:#111;
+}
+.admonition-theorem > .admonition-title
+{
+    counter-increment:niels;
+}
+.admonition-theorem > .admonition-title::after
+{
+    content: ' ' counter(chapter) "." counter(niels);
+}
+
+.admonition-corollary
+{padding-left:12px;
+ padding-right:12px;
+ padding-bottom:4px;
+ background:#e8e8e8;}
+.admonition-corollary > .admonition-title
+{
+    background:#111;
+}
+.admonition-corollary > .admonition-title
+{
+    counter-increment:niels;
+}
+.admonition-corollary > .admonition-title::after
+{
+    content: ' ' counter(chapter) "." counter(niels);
+}
+
+
+
+
+.admonition-proposition
+{padding-left:12px;
+ padding-right:12px;
+ padding-bottom:4px;
+ background:#e8e8e8;}
+.admonition-proposition > .admonition-title
+{
+    background:#111;
+}
+.admonition-proposition > .admonition-title
+{
+    counter-increment:niels;
+}
+.admonition-proposition > .admonition-title::after
+{
+    content: ' ' counter(chapter) "." counter(niels);
+}
+
+.admonition-lemma
+{padding-left:12px;
+ padding-right:12px;
+ padding-bottom:4px;
+ background:#e8e8e8;}
+.admonition-lemma > .admonition-title
+{
+    background:#111;
+}
+.admonition-lemma > .admonition-title
+{
+    counter-increment:niels;
+}
+.admonition-lemma > .admonition-title::after
+{
+    content: ' ' counter(chapter) "." counter(niels);
+}
+
+.proof {
+    margin-top: 5px;
+    padding-top: 10px;
+/*    margin-bottom:-10px; */
+    background:#e5e7e9;
+    }
+
+/*
+.proof:before {
+   
+    content: "Proof.";
+    font-style: italic;
+
+}
+*/
+
+.proof:after {
+/*
+    content: "\25FC";
+    float:right;
+    margin-bottom: 15px;
+*/
+}
+
+.bevisknap {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

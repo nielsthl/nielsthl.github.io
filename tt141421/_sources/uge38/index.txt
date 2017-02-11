@@ -1,0 +1,376 @@
+######
+Uge 38
+######
+
+
+An introduction to continued fractions
+======================================
+
+Mathematics begins with counting from one:
+
+.. math:: 1, 2, 3, \dots
+   
+An extremely important number is :math:`0` (zero). We add this to the above set of numbers and call these the natural numbers and denote them by :math:`\NN`. The next step is to introduce fractions such as
+
+.. math::
+
+   \frac{1}{2}, \frac{4}{5}, \frac{17}{12}, \dots
+
+Remarkably there are numbers that are not fractions! The square root of :math:`2` is a positive number :math:`x` with
+:math:`x^2 = x\cdot x = 2`. There is an extraordinarily beautiful argument that such a number cannot be a fraction! Take a look:
+
+
+.. attention::
+
+   Suppose that
+
+   .. math:: x = \frac{p}{q},
+      :label: broek     
+	     
+   where :math:`p` and :math:`q` are natural numbers and :math:`x^2 = 2`. Of course, here we have to require that :math:`q \neq 0`. We can also assume that :eq:`broek` is reduced to lowest terms i.e., there is no natural number
+   :math:`n>1` dividing both :math:`p` and :math:`q`.
+
+   Then we  multiply both sides of :eq:`broek` by :math:`q` to get
+
+   .. math:: p = q x
+      :label: ident
+	     
+   and therefore
+
+   .. math:: p^2 = (q x)^2 = (q x)\cdot (q x) = q^2 x^2 = 2 q^2
+      :label: qins
+	      
+   by squaring both sides of :eq:`ident` and using the assumption that :math:`x^2 = 2`. A useful result is that if the square of a number is even, then the number itself is even! You can immediately spot from :eq:`qins` that :math:`p^2` is an even number (since :math:`2` divides it).  
+      
+   This implies that :math:`2` divides :math:`p` and we may write :math:`p = 2 m` for some :math:`m\in \mathbb{N}`. Now insert this into :eq:`qins` to get
+
+   .. math:: (2 m)^2 = 4 m^2 = 2 q^2
+
+   Now conclude that :math:`q^2 = 2 m^2` and therefore, in the same way as for :math:`p^2`, that :math:`q` is even, since :math:`q^2` is even. So our assumption that :math:`x` is a fraction :math:`p/q` leads us to conlude that :math:`2` divides both :math:`p` and :math:`q`. This is a contradiction, since we have assumed that :math:`p/q` is reduced to lowest terms.
+
+Today such a proof seems natural, but thousands of years ago it stunned humanity. History seems to show that human casualties were involved: the Pythagorean philosopher `Hippasus of Metapontum <https://en.wikipedia.org/wiki/Hippasus>`_ is supposed to have drowned at sea as a punishment from the gods for discovering such numbers.
+
+.. note:: 
+
+ .. eqt:: contfrac1
+
+    What is :math:`\sqrt{2}` rounded to :math:`6` decimal places?
+
+    A) :eqt:`I` :math:`1.414213`
+
+    #) :eqt:`C` :math:`1.414214`
+
+    #) :eqt:`I` :math:`1.421324`
+
+    #) :eqt:`I` None of the above
+
+
+
+
+
+Decimal expansion of rational numbers
+-------------------------------------
+
+.. role:: red
+
+How do we compute the decimal expansion of a fraction? The decimal
+expansion of :math:`1/3` is 0.333... while the decimal expansion of
+:math:`1/7` is 0.142857 :red:`142857` 142857 ... 
+There seems to be a pattern of periodicity - a sequence of digits that
+repeats itself. This is in fact characteristic of the decimal
+expansion of a rational number. Why is this? Let us have a closer look at the
+divison algorithm for computing the decimal expansion of :math:`1/7`:
+
+.. math::
+
+   \begin{align*}
+   \frac{10}{7} &= 1 + \frac{3}{7}\\
+   \frac{30}{7} &= 4 + \frac{2}{7}\\
+   \frac{20}{7} &= 2 + \frac{6}{7}\\
+   \frac{60}{7} &= 8 + \frac{4}{7}\\
+   \frac{40}{7} &= 5 + \frac{5}{7}\\
+   \frac{50}{7} &= 7 + \frac{1}{7}\\
+   \frac{10}{7} &= 1 + \frac{3}{7}\\
+                &\vdots
+   \end{align*}
+
+You see that the decimal expansion repeats once we encounter a left
+hand side that we have encountered before - in this case :math:`10/7`. This has something to do with remainders modulo :math:`7` of
+which there are only :math:`0, 1, 2, 3, 4, 5, 6`. There are only a finite set of possibilities. Sooner or later you are bound to encounter a left hand side you have seen before. This happens when you compute the decimal expansion of any rational number :math:`p/q`.
+
+.. important::
+
+   Here is a fun problem. If :math:`p` is a prime number, can you say something about the length of the period of the decimal expansion of :math:`1/p`? We just saw above that the length of the period in the decimal expansion of  :math:`1/7` is :math:`6`. However, for the prime number :math:`11` the length of the period in the decimal expansion is only :math:`2`, since well, :math:`1/11 = 0.090909\dots`. How do we predict the length of the period for a general prime number?
+
+.. note:: 
+
+ .. eqt:: contfrac2
+
+    What is the period length in the decimal expansion of :math:`1/31`?
+
+    A) :eqt:`I` :math:`5`
+
+    #) :eqt:`I` :math:`13`
+
+    #) :eqt:`C` :math:`15`
+
+    #) :eqt:`I` :math:`10`
+
+
+The beauty and general principles of mathematics tells us that the
+answer :math:`13` in the above mcq simply has to be false. This is another story. Maybe later!
+In the mean time you may want to experiment a bit with `Sage <http://sagemath.org>`_:
+
+.. admonition:: Computational experiment
+
+   .. sage::
+      
+      numerical_approx(1/31, digits=30)
+
+
+
+A periodic decimal expansion is a fraction
+------------------------------------------
+
+.. attention::
+   Consider a periodic decimal expansion
+
+   .. math::
+
+         z.x_1x_2\dots x_my_1y_2\dots y_ny_1 y_2\dots y_n\dots,
+
+   where :math:`z` is an integer and
+
+   .. math::
+
+      x_i, y_j\in \{0, 1, \dots, 9\}.
+
+   Let me give a proof that such a number
+   is in fact rational. It is enough to prove that the number
+
+   .. math::
+
+     r = 0.y_1y_2\dots y_ny_1 y_2\dots y_n\dots,
+
+   is rational. For this purpose we let :math:`w` denote the number
+   :math:`y_1y_2\dots y_n` written in base :math:`10`. Then
+
+   .. math::
+
+     \begin{align*}
+     r &= w 10^{-n} + w 10^{-2n} + \cdots = w 10^{-n} (1 + 10^{-n} + 10^{-2n} + \cdots)\\
+       &= w 10^{-n} \frac{1}{1 - 10^{-n}}\\
+       &= \frac{w}{10^n - 1}
+     \end{align*}
+
+Let us do a reality check on the above proof. Consider our old friend
+
+.. math::
+   1/7 = 0.142857142857142857\dots
+
+According to the above proof this periodic decimal expansion is the number
+
+.. math::
+
+   \frac{142857}{10^6-1} = \frac{142857}{999999}
+
+You can check this fraction equals :math:`\frac{1}{7}` in the WolframAlpha window above.
+
+
+An algorithm for expanding any real number into a fraction!
+-----------------------------------------------------------
+
+Philosophically we do not know what a number is, but are in some sense
+forced to accept :math:`\sqrt{2}` as a genuine number. After all, it
+is by the Pythegorean theorem the length of the hypotenuse in a simple
+right triangle!
+
+Let us assume that we know what a number is and denote the set
+of numbers with :math:`\mathbb{R}` . Now take any number
+:math:`\xi\in \mathbb{R}` and let :math:`\lfloor \xi \rfloor` denote
+the largest integer :math:`\leq \xi` i.e.,
+
+.. math::
+
+   \lfloor \xi \rfloor \leq \xi < \lfloor \xi \rfloor + 1
+
+If :math:`\lfloor \xi \rfloor < \xi`, then
+
+.. math:: \xi = \lfloor \xi \rfloor + \xi - \lfloor \xi \rfloor =
+   \lfloor \xi \rfloor + \frac{1}{\cfrac{1}{\xi - \lfloor \xi \rfloor}} =
+   \lfloor \xi \rfloor + \frac{1}{\xi_1}
+   :label: algcf
+   
+Now we can play the same game with the number :math:`\xi_1` unless
+:math:`\lfloor \xi_1 \rfloor = \xi_1` and the game stops!
+
+
+Let us play the game with a decimal approximation to :math:`\sqrt{2}`, say
+:math:`\xi = 1.414214`. The first step of the game is
+
+.. math:: 1.414214 = 1 + 0.414214 = 1 + \frac{1}{\cfrac{1}{0.414214}} = 1 + \frac{1}{2.144211}
+	  :label: game
+
+  
+   
+The game continues
+
+
+.. math::
+
+   2.414214 = 2 + 0.414214 = 2 + \frac{1}{\cfrac{1}{0.414214}} =
+   2 + \frac{1}{2.144211}
+
+This can be inserted into :eq:`game` and we get
+
+.. math::
+
+   1 + \cfrac{1}{2 + \cfrac{1}{2.144211}}
+
+But wait! We can do it again:
+
+
+.. math::
+
+   1 + \cfrac{1}{2 + \cfrac{1}{2 + \cfrac{1}{2.144211}}}
+
+and again and again ... Well, I have
+cheated a bit. I really should have begun the game with the exact
+number :math:`\sqrt{2}`. Anyway, it seems that we get an expression
+
+.. math:: 1 + \cfrac{1}{2 + \cfrac{1}{2 + \cfrac{1}{2 + \cfrac{1}{2 + \cfrac{1}{\cdots}}}}}
+	  :label: bigfr
+
+associated with :math:`\sqrt{2}`. What does this mean, really? 
+
+.. note:: 
+
+ .. eqt:: contfrac3
+
+	Try and do the same for :math:`\sqrt{11}` by working with an
+	approximate decimal expansion. Which numbers do you encounter?
+
+    A) :eqt:`I` :math:`3, 5, 7`
+
+    #) :eqt:`C` :math:`3, 6`
+
+    #) :eqt:`I` :math:`3, 3, 4`
+
+    #) :eqt:`I` :math:`3, 5, 7, 8`
+
+The algebraic expansion of :math:`\sqrt{2}` into a continued fraction
+---------------------------------------------------------------------
+
+We can repeat the above algorithm with the **exact** value of
+:math:`\sqrt{2}` using a little algebra:
+
+.. math:: \sqrt{2} = 1 + \sqrt{2} - 1 = 1 + \cfrac{1}{\cfrac{1}{\sqrt{2}-1}} =
+   1 + \cfrac{1}{\cfrac{\sqrt{2}+1}{(\sqrt{2}+1)(\sqrt{2}-1)}} = 
+   1 + \cfrac{1}{1 + \sqrt{2}}
+   :label: sq2
+	  
+Continuing the algorithm outlined in :eq:`algcf` with the number :math:`1 + \sqrt{2}` we get
+
+.. math:: 1 + \sqrt{2} = 2 + \sqrt{2} - 1 = 2 + \cfrac{1}{\cfrac{1}{\sqrt{2}-1}}= 2 + \cfrac{1}{\cfrac{\sqrt{2}+1}{(\sqrt{2}+1)(\sqrt{2}-1)}} = 
+   2 + \cfrac{1}{1 + \sqrt{2}}
+   :label: sq2c
+   
+Successively inserting :eq:`sq2c` into :eq:`sq2` you see how the very long fraction in :eq:`bigfr` is obtained.
+
+
+Making sense of continued fractions
+-----------------------------------
+
+Let us have a closer look at the long fraction in :eq:`bigfr`. It
+seems natural to truncate our computations of this long fraction by
+breaking off after a certain point:
+
+.. math::
+
+   1, \quad 1 + \cfrac{1}{2}, \quad 1 + \cfrac{1}{2 + \cfrac{1}{2}}, \quad
+   1 + \cfrac{1}{2 + \cfrac{1}{2 + \cfrac{1}{2}}}, \quad  1 + \cfrac{1}{2 + \cfrac{1}{2 + \cfrac{1}{2 + \cfrac{1}{2}}}}, \dots
+
+corresponding to the fractions
+
+.. math::
+
+   1,\quad \frac{3}{2}, \quad \frac{7}{5}, \quad \frac{17}{12}, \quad \frac{41}{29}, \quad \dots
+
+
+Expanded decimally these fractions are approximately
+
+.. math::
+
+   1, \quad 1.5, \quad 1.4, \quad 1.4167, \quad 1.4138
+
+Comparing this to :math:`\sqrt{2} \approx 1.4142` it seems that some hidden magic is at play. In fact, if you compute :eq:`bigfr` down to a depth of *ten* you end up with the fraction
+
+.. math::
+
+   \frac{3363}{2378} \approx 1.4142126
+
+very close to :math:`\sqrt{2} \approx 1.4142136`. In a sense, this behavior is not so special for :math:`\sqrt{2}`, but extends
+miraculously to all numbers, when they are processed with the algorithm
+coming from :eq:`algcf`! We will explain this later. 
+
+Definition of a continued fraction
+----------------------------------
+
+I think this is the time to introduce the formal definition: an 
+*infinite continued fraction* is an expression of the form
+
+.. math:: a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{a_3 + \cfrac{1}{\dots}}}},
+	  :label: defcf
+	  
+where :math:`a_0` is an integer and :math:`a_1, a_2, a_3, \dots` are
+positive natural numbers. A *finite continued fraction* is a
+truncation of an infinite continued fraction i.e., we only go down to
+a certain depth.
+
+   
+Continued fractions for rational numbers
+----------------------------------------
+
+A finite continued fraction is an honest fraction! Here you can just compute
+bottom up and find the numerator and denominator.
+Well, how about a fraction :math:`p/q`?
+
+You may have heard about division with remainder. If we suppose that
+:math:`q>0`, then division by :math:`q` with remainder says that 
+
+.. math::
+
+   p = d q + r,
+
+where :math:`0\leq r < q` and :math:`d` is an integer. Therefore
+
+ .. math::
+
+    \frac{p}{q} = \frac{d q + r}{q} = d + \cfrac{r}{q} = d + \cfrac{1}{\cfrac{q}{r}}
+
+showing one step in our usual algorithm for the rational number
+:math:`p/q`. Now our algorithm may be applied once more to the 
+fraction :math:`q/r`. Will this algorithm terminate?
+
+.. attention::
+
+   Let us have a look at
+   the specific example :math:`355/113`. Since
+   :math:`355 = 3\cdot 113 + 16`  we get
+
+    .. math:: \frac{355}{113} = \frac{3\cdot 113 + 16}{113} = 3 + \frac{16}{113} = 3 + \cfrac{1}{\cfrac{113}{16}}
+       :label: fscf
+   
+    Again, since :math:`113 = 7\cdot 16 + 1` we get
+
+    .. math:: \frac{113}{16} = \frac{7\cdot 16 + 1}{16} = 7 + \frac{1}{16}
+       :label: lscf
+		  
+    This is all we need! Now insert :eq:`lscf` into :eq:`fscf` to obtain
+    the finite continued fraction
+
+    .. math:: \frac{355}{113} = 3 + \cfrac{1}{7 + \cfrac{1}{16}}.
+
+
+The continued fraction algorithm for rational numbers is the
+`Euclidean algorithm <https://en.wikipedia.org/wiki/Euclidean_algorithm>`_ in disguise.

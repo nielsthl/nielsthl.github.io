@@ -1,0 +1,74 @@
+.. Talentspor E16 documentation master file, created by
+   sphinx-quickstart on Sun Sep 18 10:39:45 2016.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+ 
+Talentspor E16
+==============
+
+Velkommen til prætalentforløbet på matematik og matematik-økonomi
+E16. Emnet for efterårets forelæsninger og selvstændige rapportopgave
+bliver uendeligt lange brøker også kaldet kædebrøker eller `continued fractions <https://en.wikipedia.org/wiki/Continued_fraction>`_ på engelsk. En god introduktion til kædebrøker og verdens mest irrationale tal kan ses i videoen nedenfor.
+
+
+.. embedvideo:: youtube:CaasbfdJdJg
+		    
+
+		
+Forelæser og kontaktperson
+--------------------------
+
+`Niels Lauritzen <http://pure.au.dk/portal/en/niels@imf.au.dk>`_.
+
+Ugentlige forelæsninger
+-----------------------
+
+De ugentlige forelæsninger finder sted **tirsdage 16-18 i Aud. D3** i
+ugerne **38-41** samt **45--51**. Deadline for den obligatoriske
+opgave bliver **tirsdag den 20/12** og den udkommer 3 uger før tirsdag den
+29/11.
+   
+.. attention::
+
+  Starttidspunktet er 16:15.
+
+  I denne uge (uge 47) vil vi igen repetere og nå en anelse
+  videre. Der vil være overraskende matematik i anden time i form af
+  eksempler på diofantiske ligninger. I næste uge kommer den
+  obligatoriske uge.
+
+  
+Sage
+----
+
+I kurset vil vi benytte open source værktøjet `Sage <http://www.sagemath.org>`_. Det er en matematisk overbygning på programmeringssproget `python <https://www.python.org>`_. Cellen
+nedenfor evaluerer til et 3d plot af funktionen :math:`f(x, y) = e^{-x^2 - y^2}` i de to variable :math:`x, y`. Læg mærke til at du kan
+interagere med grafen.
+
+.. sage::
+
+   var('x y')
+   plot3d(e^(-x^2 - y^2), (x, -2, 2), (y, -2, 2))
+   
+Du er også velkommen til at eksperimentere med yderligere af de utallige funktioner i `Sage <http://www.sagemath.org>`_. F.eks. beregner nedenstående kommando :math:`\pi` med :math:`50` decimaler
+
+.. sage::
+
+   N(pi, digits = 50)
+
+  
+  
+Forelæsningsnoter
+-----------------
+
+Noterne til talentsporet er på engelsk og udkommer løbende herunder.
+
+.. toctree:: 
+
+   uge45/index
+   uge41/index
+   uge40/index
+   uge39/index
+   uge38/index
+
+

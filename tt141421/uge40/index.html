@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Uge 40 &mdash; Talentspor E16 v1.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Talentspor E16 v1.0" href="../index.html"/>
+        <link rel="next" title="Uge 39" href="../uge39/index.html"/>
+        <link rel="prev" title="Uge 41" href="../uge41/index.html"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="../_static/dynsite.js"></script>
+
+<script type="text/javascript" src="../_static/embedded_video.js
+"></script>
+
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+		displayMath: [ ['$$','$$'], ["\\[","\\]"]],
+		processEscapes: true
+      },
+      TeX: {
+	  equationNumbers: {autoNumber: "AMS"},
+	  Macros: {
+	      NN: '{\\mathbb{N}}',
+              ZZ: '{\\mathbb{Z}}',
+	      QQ: '{\\mathbb{Q}}',
+	      RR: '{\\mathbb{R}}',
+	      CC: '{\\mathbb{C}}',
+	      sgn: '{\\mathrm{sign}}'
+	      }
+    
+}});
+</script>
+
+
+
+
+<link rel="stylesheet" type="text/css"  href="../_static/topbar.css">
+<link rel="stylesheet" type="text/css"  href="../_static/thmstyling.css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Talentspor E16
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../uge45/index.html">Uge 45: Diophantine approximation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uge41/index.html">Uge 41</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Uge 40</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-recursive-formula-for-computing-convergents">The recursive formula for computing convergents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-convergents-are-in-lowest-terms">The convergents are in lowest terms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#even-and-odd-convergents">Even and odd convergents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intuition-on-increasing-sequences-bounded-from-above">Intuition on increasing sequences bounded from above</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-continued-fraction-algorithm-converges">The continued fraction algorithm converges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../uge39/index.html">Uge 39</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uge38/index.html">Uge 38</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Talentspor E16</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Uge 40</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="uge-40">
+<h1>Uge 40<a class="headerlink" href="#uge-40" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-recursive-formula-for-computing-convergents">
+<h2>The recursive formula for computing convergents<a class="headerlink" href="#the-recursive-formula-for-computing-convergents" title="Permalink to this headline">¶</a></h2>
+<p>Recall from last week that we attempted to compute the <span class="math">\(n\)</span>-th convergent</p>
+<div class="math">
+\[a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{\cdots + \cfrac{1}{a_n}}}}\]</div>
+<p>of a continued fraction as a fraction <span class="math">\(\frac{r_n}{s_n}\)</span> by
+finding formulas for the numerator <span class="math">\(r_n\)</span> and the denominator
+<span class="math">\(s_n\)</span>. Of course, we know the beginning i.e.,</p>
+<div class="math">
+\[\begin{split}\begin{align*}
+r_0 &amp;= a_0\\
+s_0 &amp;= 1\\
+&amp;\\
+r_1 &amp;= a_1 a_0 + 1\\
+s_1 &amp;= a_1\\
+&amp;\\
+r_2 &amp;= a_0 a_1 a_2 + a_0 + a_2\\
+s_2 &amp;= a_2 a_1 + 1\\
+&amp;\\
+&amp;\vdots
+\end{align*}\end{split}\]</div>
+<p>Let us begin this week just by proving the recursive formulas</p>
+<div class="math">
+\[\begin{split}r_n &amp;= a_n r_{n-1} + r_{n-2}\\
+s_n &amp;= a_n s_{n-1} + s_{n-2}\end{split}\]</div>
+<p>by induction without any mention of Eulers observation. Let us assume that the formulas
+above hold up to the <span class="math">\(n\)</span>-th convergent and try to prove similar formulas for the
+<span class="math">\((n+1)\)</span>-st convergent:</p>
+<div class="math">
+\[\begin{split}\begin{align*}
+&amp;a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{\cdots + a_{n-1} + \cfrac{1}{a_n + \cfrac{1}{a_{n+1}}}}}} =
+\cfrac{\left(a_n + \cfrac{1}{a_{n+1}}\right) r_{n-1} + r_{n-2}}{\left(a_n + \cfrac{1}{a_{n+1}}\right) s_{n-1} + s_{n-2}}\\
+&amp;= \cfrac{a_{n+1} a_n r_{n-1} + r_{n-1} + a_{n+1}r_{n-2}}{a_{n+1} a_n s_{n-1} + s_{n-1} + a_{n+1}s_{n-2}} =
+\cfrac{a_{n+1}(a_n r_{n-1} + r_{n-2}) + r_{n-1}}{a_{n+1}(a_n s_{n-1} + s_{n-2}) + s_{n-1}}\\
+&amp;= \cfrac{a_{n+1} r_n + r_{n-1}}{a_{n+1} s_n + s_{n-1}}
+\end{align*}\end{split}\]</div>
+<p>An important observation is that the sequence <span class="math">\(s_0, s_1, s_2, \dots\)</span> of
+denominators are natural numbers satisfying</p>
+<div class="math" id="equation-incrs">
+<span class="eqno">(1)</span>\[1 = s_0 \leq s_1 &lt; s_2 &lt; s_3 &lt; \cdots\]</div>
+<div class="section" id="the-convergents-are-in-lowest-terms">
+<h3>The convergents are in lowest terms<a class="headerlink" href="#the-convergents-are-in-lowest-terms" title="Permalink to this headline">¶</a></h3>
+<p>A surprising identity shows up for the numerators and denominators in a continued fraction.</p>
+<div class="math" id="equation-idcf">
+<span class="eqno">(2)</span>\[r_{n+1} s_n - r_n s_{n+1} = (-1)^n\]</div>
+<p>for <span class="math">\(n\geq 0\)</span>. You can check this identity explicitly for <span class="math">\(n=0\)</span>. To prove it in general, we again need to use
+induction:</p>
+<div class="math">
+\[\begin{split}r_{n+2} s_{n+1} - r_{n+1} s_{n+2} &amp;= (a_{n+2} r_{n+1} + r_n) s_{n+1} - r_{n+1}(a_{n+2} s_{n+1} + s_n) \\
+                                  &amp;= r_n s_{n+1} - s_n r_{n+1} = - (r_{n+1} s_n - r_n s_{n+1}) = (-1)^{n+1}.\end{split}\]</div>
+<p>If <span class="math">\(d\)</span> is a common divisor of  <span class="math">\(r_n\)</span> and <span class="math">\(s_n\)</span>, say
+<span class="math">\(r_n = a d\)</span> and <span class="math">\(s_n = b d\)</span>, then</p>
+<div class="math">
+\[r_{n+1}(a d) - (b d) s_{n+1} = d( r_{n+1} a - b s_{n+1}) = (-1)^n\]</div>
+<p>by <a href="#equation-idcf">(2)</a>. Therefore <span class="math">\(d\)</span> must divide <span class="math">\(1\)</span> and the convergents
+expressed as <span class="math">\(\frac{r_n}{s_n}\)</span> are in lowest terms.</p>
+</div>
+<div class="section" id="even-and-odd-convergents">
+<h3>Even and odd convergents<a class="headerlink" href="#even-and-odd-convergents" title="Permalink to this headline">¶</a></h3>
+<p>Using <a href="#equation-idcf">(2)</a> it follows that</p>
+<div class="math" id="equation-compcf">
+<span class="eqno">(3)</span>\[\frac{r_{n+1}}{s_{n+1}} - \frac{r_n}{s_n} = \frac{(-1)^n}{s_n s_{+1}}.\]</div>
+<div class="admonition-exercise admonition">
+<p class="first admonition-title">Exercise</p>
+<p>Prove that</p>
+<div class="last math" id="equation-evenodd">
+<span class="eqno">(4)</span>\[\frac{r_{n+2}}{s_{n+2}} - \frac{r_n}{s_n} = (-1)^n\left( \frac{1}{s_n s_{n+1}} - \frac{1}{s_{n+1} s_{n+2}}\right)\]</div>
+</div>
+<p>The identity <a href="#equation-evenodd">(4)</a> along with <a href="#equation-incrs">(1)</a> show that</p>
+<div class="math">
+\[\begin{split}\begin{align*}
+&amp;\frac{r_0}{s_0} &lt; \frac{r_2}{s_2} &lt; \frac{r_4}{s_4} &lt; \cdots &lt; \frac{r_{2n}}{s_{2n}} &lt; \cdots\\
+&amp;\\
+&amp;\frac{r_1}{s_1} &gt; \frac{r_3}{s_3} &gt; \frac{r_5}{s_5} &gt; \cdots &gt; \frac{r_{2n+1}}{s_{2n+1}} &gt; \cdots
+\end{align*}\end{split}\]</div>
+<p>Also, using <a href="#equation-compcf">(3)</a> it follows that</p>
+<div class="math">
+\[\begin{split}\begin{align*}
+\frac{r_{2n}}{s_{2n}} &amp;&lt; \frac{r_1}{s_1} \\
+&amp;\\
+\frac{r_{2n+1}}{s_{2n+1}} &amp;&gt; \frac{r_0}{s_0}
+\end{align*}\end{split}\]</div>
+<p>Therefore the sequence <span class="math">\((\frac{r_{2n}}{s_{2n}})\)</span> of even
+convergents is an <em>increasing sequence</em> of numbers <em>bounded
+above</em>. Similary the sequence <span class="math">\((\frac{r_{2n +1}}{s_{2n + 1}})\)</span> of odd
+convergents is a <em>decreasing sequence</em> of numbers <em>bounded below</em>. Each of
+these sequences have a well defined limit in the real numbers</p>
+<div class="math">
+\[\begin{split}\xi_e &amp;= \lim_{n\to \infty} \frac{r_{2n}}{s_{2n}}  \\
+&amp;=\\
+\xi_o &amp;= \lim_{n\to\infty} \frac{r_{2n+1}}{s_{2n+1}}\end{split}\]</div>
+<p>It follows from <a href="#equation-compcf">(3)</a> that <span class="math">\(\xi_e = \xi_o\)</span>. We call this number
+<span class="math">\(\xi\)</span>. Notice that</p>
+<div class="math">
+\[\lim_{n\to\infty} \frac{r_n}{s_n} = \xi.\]</div>
+</div>
+<div class="section" id="intuition-on-increasing-sequences-bounded-from-above">
+<h3>Intuition on increasing sequences bounded from above<a class="headerlink" href="#intuition-on-increasing-sequences-bounded-from-above" title="Permalink to this headline">¶</a></h3>
+<p>I am (again) cheating a bit here. Let me explain why it is
+reasonable to suspect that an increasing sequence of numbers bounded from
+above defines or converges to a number. Suppose that</p>
+<blockquote>
+<div><div class="math">
+\[x_1 \leq x_2 \leq x_3 \leq \cdots\]</div>
+</div></blockquote>
+<p>is an increasing sequence of numbers and there exists a natural
+number <span class="math">\(M\)</span>, such that <span class="math">\(x_n \leq M\)</span> for every
+<span class="math">\(n\in \mathbb{N}\)</span>.   The following bisection procedure leads  to the limit.</p>
+<ol class="arabic simple" start="0">
+<li>Let <span class="math">\(\delta := M-x_1\)</span> and <span class="math">\(\Delta := \delta\)</span>.</li>
+<li>Let <span class="math">\(\Delta := \Delta/2\)</span></li>
+<li>If there are no numbers in <span class="math">\((x_n)\)</span> bigger than
+<span class="math">\(x_1 + \delta\)</span>, then let <span class="math">\(\delta := \delta - \Delta\)</span>. Otherwise      let  <span class="math">\(\delta := \delta + \Delta\)</span></li>
+<li>Repeat from 1.</li>
+</ol>
+<div class="admonition-animation admonition">
+<p class="first admonition-title">Animation</p>
+<p>Here is a small animation showing the steps in the above procedure for a random increasing sequence with a <strong>fat line</strong> indicating where its elements are situated. The left end of the complete line corresponds to <span class="math">\(x_1\)</span> and the right end of the line to <span class="math">\(M\)</span>. The vertical bars represent <span class="math">\(x_1 + \delta\)</span> in successive steps of the procedure. Step through the procedure using <strong>Repeat from 1.</strong> and start over using <strong>Reset/Goto 0.</strong></p>
+<div class="last"><br>
+<button onclick="clearanim()" style="float:left;">Reset/Goto 0.</button>
+<button onclick="rndpt()">Repeat from 1.</button>
+<br>
+<br>
+<canvas id="anim" height="100px"></canvas>
+ <script>
+  var M = document.getElementById("uge-40").offsetWidth; // Get width of parent!
+  var h = 50, bh = 25; //h = vertical pos of line, bh = below and over line length of bars
+  var first; // Boolean for first middle bar
+  var lwidth = 0.3;
+  var fatlwidth = 3.5;
+
+  var canvas = document.getElementById("anim");
+  canvas.width = M; // Dynamic width!
+  var ctx = canvas.getContext("2d");
+  ctx.lineWidth = lwidth;
+
+  var x, Delta, delta, limitpt;
+
+ function initline(){
+  first = true;
+  limitpt = Math.random() * M;
+  delta = M/2; Delta = M/2;
+
+  ctx.beginPath();
+  ctx.moveTo(0, h); ctx.lineTo(M, h);
+  ctx.closePath();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.lineWidth = fatlwidth;
+  ctx.moveTo(0, h); ctx.lineTo(limitpt, h);
+  ctx.closePath();
+  ctx.stroke();
+
+  ctx.lineWidth = lwidth
+  return;
+ }
+
+ function plotbar(delta){
+     ctx.beginPath();
+     ctx.moveTo(delta, h+bh); ctx.lineTo(delta, h-bh);
+     ctx.closePath();
+     ctx.stroke();
+     }
+
+ initline();
+
+  function rndpt(){
+     if (first){
+        plotbar(delta);
+        first = false;
+        return;
+        }
+
+     Delta = Delta/2;
+     if (delta < limitpt)
+       delta = delta + Delta;
+     else
+       delta = delta - Delta
+     plotbar(delta);
+     }
+
+  function clearanim(){
+     ctx.clearRect(0,0, M, 2*h);
+     initline();
+  }
+</script>
+<br></div></div>
+</div>
+<div class="section" id="the-continued-fraction-algorithm-converges">
+<h3>The continued fraction algorithm converges<a class="headerlink" href="#the-continued-fraction-algorithm-converges" title="Permalink to this headline">¶</a></h3>
+<p>Recall the fundamental step in the continued fraction algorithm for an
+irrational number <span class="math">\(\xi\)</span>:</p>
+<div class="math">
+\[\xi = \lfloor \xi \rfloor + \xi - \lfloor \xi \rfloor =
+\lfloor \xi \rfloor + \frac{1}{\cfrac{1}{\xi - \lfloor \xi \rfloor}} =
+\lfloor \xi \rfloor + \frac{1}{\xi_1}.\]</div>
+<p>Repeating this step we end up with an identity</p>
+<div class="math">
+\[\xi = a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{+ \cfrac{\ddots}{a_{n-1} + \cfrac{1}{\xi_n}}}}}\]</div>
+<p>after <span class="math">\(n\)</span> steps. This leads again to the identity</p>
+<div class="math">
+\[\xi = \frac{\xi_n r_{n-1} + r_{n-2}} {\xi_n s_{n-1} + s_{n-2}}\]</div>
+<p>exactly as we did in the recursive formulas for computing the numerator
+and the denominator of the convergents. Now a miracle happens:</p>
+<div class="math">
+\[\begin{split}\begin{align*}
+\left| \xi - \frac{r_{n-1}}{s_{n-1}} \right| &amp;=
+\left| \frac{\xi_n r_{n-1} + r_{n-2}} {\xi_n s_{n-1} + s_{n-2}}- \frac{r_{n-1}}{s_{n-1}} \right|=
+\left| \frac{s_{n-1} (\xi_n r_{n-1} + r_{n-2}) - r_{n-1}(\xi_n s_{n-1} + s_{n-2})}{\xi_n s_{n-1}^2 + s_{n-1} s_{n-2}}\right|\\
+&amp;= \left|\frac{s_{n-1} r_{n-2} - r_{n-1} s_{n-2}}{\xi_n s_{n-1}^2 + s_{n-1} s_{n-2}}\right|\\
+&amp;\leq \frac{1}{\xi_n s_{n-1}^2 + s_{n-1} s_{n-2}}\\
+&amp;= \frac{1}{s_{n-1}(\xi_n s_{n-1} + s_{n-2})} &lt; \frac{1}{s_{n-1}^2},
+\end{align*}\end{split}\]</div>
+<p>since <span class="math">\(\xi_n &gt; 1\)</span>. The upshot of this is quite remarkable. The continued fraction algorithm really converges, since the denominators form a strictly increasing sequence of natural numbers (see <a href="#equation-incrs">(1)</a>). If you have a convergent with a large denominator, then it is a good approximation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Recall that <span class="math">\(\frac{355}{113}\)</span> is a convergent to <span class="math">\(\pi\)</span>. The above inequality says that</p>
+<div class="math">
+\[\left| \pi - \frac{355}{113} \right| &lt; \frac{1}{113^2} \approx 0.0007831\]</div>
+<p class="last">The actual approximation is much better: the left hand side is <span class="math">\(\approx 0.0000003\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../uge39/index.html" class="btn btn-neutral float-right" title="Uge 39" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../uge41/index.html" class="btn btn-neutral" title="Uge 41" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
