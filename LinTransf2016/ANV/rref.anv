@@ -1,0 +1,204 @@
+<video>
+http://edtech.dk/VIDEOS/rref.mp4
+</video>
+
+<title>
+DEN REDUCEREDE RÆKKE ECHELON FORM: Maskinrummet i lineær algebra.
+</title>
+
+<intro>
+<h2>Lineære ligninger og RREF</h2>
+
+Denne video skitserer forbindelsen mellem naturlige operationer på
+lineære ligningssystemer og  oversætter disse til elementære operationer på matricer. Den helt fundamentale normalform
+for matricer hedder <b>den reducerede række echelonform</b> og skrives kort RREF. Den er nyttig bl.a.
+når man skal opskrive <b>alle</b> løsningerne til et ligningssystem som
+$$
+\begin{align*}
+x + y + z + w &= 7\\
+2 x - y +3 z - w &= 8,
+\end{align*}
+$$
+hvor der er flere variable end ubekendte.
+<br/> <br/>
+
+Internettet bugner med materiale om den reducerede række echelon form, som en 
+<a target ="_blank" href="https://www.google.dk/search?q=reduced+row+echelon+form">Google søgning</a> viser.
+<br/> <br/>
+Som posteren til videoen viser, er der meget nyttige online værktøjer som f.eks.
+<a target = "_blank" href="http://www.wolframalpha.com">WolframAlpha</a>.
+
+
+</intro>
+
+<poster>
+http://edtech.dk/PNG/WolframAlpha.png
+</poster>
+
+
+<event:0>
+<remark>
+<h2>Lineære ligninger og RREF</h2>
+
+Denne video skitserer forbindelsen mellem naturlige operationer på
+lineære ligningssystemer og  oversætter disse til elementære operationer på matricer. Den helt fundamentale normalform
+for matricer hedder <b>den reducerede række echelonform</b> og skrives kort RREF. Den er nyttig bl.a.
+når man skal opskrive <b>alle</b> løsningerne til et ligningssystem som
+$$
+\\begin{align*}
+x + y + z + w &= 7\\\\
+2 x - y +3 z - w &= 8,
+\\end{align*}
+$$
+hvor der er flere variable end ubekendte.
+<br/> <br/>
+
+Internettet bugner med materiale om den reducerede række echelon form, som en 
+<a target ="_blank" href="https://www.google.dk/search?q=reduced+row+echelon+form">Google søgning</a> viser.
+<br/> <br/>
+Som posteren til videoen viser, er der meget nyttige online værktøjer som f.eks.
+<a target = "_blank" href="http://www.wolframalpha.com">WolframAlpha</a>.
+</remark>
+
+</event>
+
+
+
+<event:128>
+<quiz>
+      <question> Hvilken matrix oversættes ligningssystemet
+$$\\begin{align*} x + y&= 5 z - w - 7\\\\ z &= x - w +8,\\end{align*}$$
+til, når man forudsætter at rækkefølgen af de variable er $x, y, z, w$?
+</question>
+<answer:false>$$\\begin{pmatrix}1 & 1 & -5 & -1 & -7\\\\ -1 & 1 & 0 & 1 & 8\\end{pmatrix}$$
+</answer>
+<answer:true>$$\\begin{pmatrix}1 & 1 & -5 & 1 & -7\\\\ -1 & 0 & 1 & 1 & 8\\end{pmatrix}$$
+</answer>
+
+<answer:false>$$\\begin{pmatrix}1 & 1 & -5 & -1 & -7\\\\ 1 & 1 & -1 & 1 & 8\\end{pmatrix}$$
+</answer>
+</quiz>
+</event>
+
+
+<event:249>
+<remarkpause>
+De tre elementære operationer på matricer er
+<ul>
+<li> Ombytning af to rækker </li>
+<li> At gange en række med et tal $\\neq 0$ </li>
+<li> At gange en række med et tal og addere til en anden række </li>
+</ul>
+<br/> <br />
+Den helt præcise definition er: En matrix siges at være på RREF, hvis
+<ul>
+<li> Rækker som udelukkende består af $0$ står til sidst i matricen</li>
+<li> Den første indgang $\\neq 0$ i en række skal være $= 1$</li>
+<li> $1$-tallet ovenfor skal være den eneste indgang $\\neq0$ "nedadtil mod venstre" e.g.,
+$$
+\\begin{matrix} 0 & 0 & 1\\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{matrix}
+$$
+</li>
+<li>$1$-tallet ovenfor skal være eneste indgang $\\neq 0$ i sin søjle. </li>
+</ul>
+Her er et eksempel på en matrix på RREF og en matrix der ikke er på RREF:
+$$
+\\begin{pmatrix}
+1 & 0 & 0 & 1\\\\ 0 & 0 & 1 & 2 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix}
+\\qquad
+\\begin{pmatrix}
+1 & 0 & 0\\\\ 0 & 1 & 3\\\\ 0 & 2 & 4\\end{pmatrix}
+$$
+</remarkpause>
+</event>
+
+<event: 320>
+<remarkpause>
+<h3>Elementære matricer</h3>
+En meget, meget interessant observation er at de elementære operationer kan indkodes i matricer. Indsigten er at en elementær operation foretaget på matricen $A$ svarer til at gange matricen $E$ på fra venstre, hvor $E$ fremkommer ved at udføre den elementære operation pa identitetsmatricen.
+<br/> <br />
+Lad os illustrere det med et eksempel. Hvis
+$$
+A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}
+$$
+og den elementære operation er at gange første række med $-3$ og lægge til anden række, så bliver
+$$
+E = \\begin{pmatrix} 1 & 0 \\\\ -3 & 1 \\end{pmatrix}.
+$$
+Check selv at
+$$
+E A = \\begin{pmatrix} 1 & 0 \\\\ -3 & 1 \\end{pmatrix}
+\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} =
+\\begin{pmatrix} 1 & 2 \\\\ 0 & -2 \\end{pmatrix}.
+$$
+<h3>Udregning af den inverse matrix</h3>
+Vi kan benytte denne opdagelse til at udregne den inverse af en matrix: Tag som eksempel $A$ ovenfor. Vi udregner RREF af $A$ udvidet med $2\\times 2$ identitetsmatricen:
+$$
+\\begin{pmatrix} 1 & 2 & 1 & 0\\\\ 3 & 4 & 0 & 1 \\end{pmatrix}\\rightsquigarrow
+\\begin{pmatrix} 1 & 0 & -2 & 1\\\\ 0 & 1 & \\frac{3}{2} & -\\frac{1}{2} \\end{pmatrix}
+$$
+Den inverse matrix $A^{-1}$ er de to sidste søjler i RREF for den udvidede matrix ovenfor. Check selv at det passer!
+</remarkpause>
+</event>
+
+<event:360>
+<quiz>
+<question> Betragt ligningssystemet
+$$
+\\begin{align*}
+x + y + z + w &= 7\\\\
+2 x - y +3 z - w &= 8,
+\\end{align*}
+$$
+kaldet $L_1$ og ligningssystemet $L_2$, som består af ligningerne i $L_1$ samt
+ligningen $$-x + 5 y - 3 z = 5.$$ Hvad er rigtigt?
+</question>
+<answer:false>
+$L_1$ har endeligt mange løsninger.
+</answer>
+<answer:false>
+$L_2$ har endeligt mange løsninger.
+</answer>
+<answer:true>
+$L_1$ har uendeligt mange løsninger.
+</answer>
+</quiz>
+</event>
+
+<event:399>
+<remarkpause>
+<h3>Afleveringsopgave til fredag 5/2 </h3>
+
+Lad
+$$
+A = \\begin{pmatrix}
+1 & -2 & -7 & -8 & -9\\\\
+3 & -4 & -13 & -14 & -15
+\\end{pmatrix}.
+$$
+<br/> <br />
+<ol>
+<li> Find den reducerede række echelon form for $A$. </li>
+<br/>
+<li> Find samtlige løsninger til ligningssystemet
+$$
+\\begin{align*}
+x -2 y -7z - 8 w &= -9 \\\\
+3x -4 y -13 z - 14 w &= -15.
+\\end{align*}
+$$
+</li>
+<br/>
+<li>
+Udregn den inverse matrix til matricen
+$$
+\\begin{pmatrix}
+ i & 1 & 1\\\\
+ 1 & i & 1 \\\\
+ 1 & 1 & i
+\\end{pmatrix}.
+$$
+</li>
+</ol>
+</remarkpause>
+</event>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="CSS/video.css"/>
+  
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72936318-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+<div id="ramme">
+  <div id="vid">
+    <div id="overlay"></div>
+  <video id = "video1" controls poster=" http://edtech.dk/PNG/CWessel.png ">
+    <source src=" http://edtech.dk/VIDEOS/kompleksetal.mp4 " type="video/mp4">
+    Video ikke understøttet.
+  </video>
+  </div>
+
+  <div id="annot" >
+
+    <div id="expl" style="line-height:1.5;">
+   <h2>De komplekse tal</h2> Denne video introducerer de komplekse tal, som faktisk er et matematisk emne med danske rødder (se videoen grundigt - ikke kun for at nå frem til afleveringsopgaven til sidst!). <b>Husk at links åbnes i en ny browser tab, hvis du klikker videre og udforsker</b>. <br/><br/> Jeg når desværre ikke i videoen at komme ind på de mange anvendelser af komplekse tal. F. eks. kan de bruges til generering af kompliceret computergrafik som nedenstående figur. Den er et eksempel på et matematisk objekt, som hedder en fraktal. 	 <br><br> 	 <img src="http://edtech.dk/PNG/mandelbrot.png" width="300"/> <br><br> Jeg håber i løbet af kurset at kunne forklare flere gange hvorfor de komplekse tal er helt centrale både i matematikken og dens anvendelser. 
+</div>
+</div>
+
+<div class="my-clear"></div>
+
+</div>
+
+<script>
+var events = [['remark', ' <h2>De komplekse tal</h2> Denne video introducerer de komplekse tal, som faktisk er et matematisk emne med danske rødder (se videoen grundigt - ikke kun for at nå frem til afleveringsopgaven til sidst!). <b>Husk at links åbnes i en ny browser tab, hvis du klikker videre og udforsker</b>. <br/><br/> Jeg når desværre ikke i videoen at komme ind på de mange anvendelser af komplekse tal. F. eks. kan de bruges til generering af kompliceret computergrafik som nedenstående figur. Den er et eksempel på et matematisk objekt, som hedder en fraktal. 	 <br><br> 	 <img src="http://edtech.dk/PNG/mandelbrot.png" width="300"/> <br><br> Jeg håber i løbet af kurset at kunne forklare flere gange hvorfor de komplekse tal er helt centrale både i matematikken og dens anvendelser. '],['remarkpause', ' <br/> Rygtet vil vide at det var en uheldig græker, <a target ="_blank" href="https://en.wikipedia.org/wiki/Hippasus">Hippasus</a>, som opdagede at $\\sqrt{2}$ umuligt kan skrives som brøk $$\\frac{p}{q},$$ hvor $p$ er et helt tal $\\dots, -2, -1, 0, 1, 2, \\dots$ og $q$ er et ikke-negativt naturligt tal $1, 2, 3, \\dots$. Uheldet kom sig af at han fortalte sine medrejsende på et skib i åbent hav om sin opdagelse. Det bevirkede at han blev smidt overbord. Der var ikke plads til grimme tal på den tid. De passede ikke ind i forestillingen om at alle tal skulle være forholdet mellem heltallige længder. Du kan læse videre om irrationale tal på <a target = "_blank" href="https://en.wikipedia.org/wiki/Irrational_number">Wikipedia</a>. '],['remark', ' Faktisk hedder det ikke boldface mht symbolet $\\mathbb{R}$, men <b>blackboard bold</b>. Markeringen af de to lodrette streger kommer sig af at det er vanskeligt at lave almindelig boldface typer på en tavle (det vil også spilde uforholdsmæssigt meget kridt). '],['remarkpause', ' <br/> <br/> Historien om de komplekse tal er ekstremt spændende. I $1500$-tallet konkurrerede man om at finde formler til at løse ligninger. Vi kender formlen $$ x= \\frac{-b \\pm \\sqrt{b^2 - 4 a c}}{2 a} $$ for løsning af andengradsligningen $a x^2 + b x + c = 0$. Den altfavnende videnskabsmand <a target="_blank" href="https://en.wikipedia.org/wiki/Gerolamo_Cardano">Gerolamo Cardano</a> og andre italienere gik skridtet videre og fandt komplicerede og <a target="_blank" href="https://en.wikipedia.org/wiki/Cubic_function">fantastiske formler</a> til løsning af trediegradsligningen. <br/><br /> Allerede her omkring 1545 fandt man ud af at det var nødvendigt at indføre det mærkværdige tal $i$ med egenskaben $$i^2 = -1.$$ '],['remark', ' Husk på hvordan vi ganger parentesen ud rent algebraisk: $$ (X + Y) (Z + W) = X Z + X W + Y Z + Y W. $$ Det hele kommer fra det der med et fint ord hedder den distributive lov: $$ A (B + C) = A B + A C $$ dvs at man må gange ind i parentesen. I $1500$-tallet bekymrede man sig ikke om fine aksiomer, man regnede bare. '],["quiz", '<h2 style="color:red;">Quiz</h2> Lad $z = (2 + 3 i) (5 + 7 i)$ og $w = (2 + i)(2 - i)$. Afgør følgende om disse komplekse tal<br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>  $z = -13 + 31 i$</div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>  $z = 10 + 21 i$</div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>  $z = -11 + 29 i$</div><br><div id=ans3><label for="yo3"><input id="yo3" type="checkbox" value=""/>  $w = 4 + i$</div><br><div id=ans4><label for="yo4"><input id="yo4" type="checkbox" value=""/>  $w$ er et ulige almindeligt tal</div><br>', ["red","red","green","red","green"]],['remark', ' Den geometriske fortolkning af de komplekse tal som punkter i et koordinatsystem blev først fundet af danskeren <a target="_blank" href="https://en.wikipedia.org/wiki/Caspar_Wessel">Caspar Wessel</a> omkring 1797, før Gauss kom på banen med det i 1831! <br/> <br /> Den geometriske fortolkning af de komplekse tal er forklaret på <a target="_blank" href="https://en.wikipedia.org/wiki/Complex_number">Wikipedia</a>. '],["quiz", '<h2 style="color:red;">Quiz</h2> Lad $z = 3 + 4 i$. Hvad er rigtigt af nedenstående?<br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>  $|z| = \\sqrt{5} i$</div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>  $|z| = 5$</div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>  $\\overline{z} = -3 + 4 i$</div><br><div id=ans3><label for="yo3"><input id="yo3" type="checkbox" value=""/>  $\\overline{z} = 3 - 4 i$</div><br><div id=ans4><label for="yo4"><input id="yo4" type="checkbox" value=""/>  Der findes kun et ulige tal som går op i $z \\overline{z}$</div><br><div id=ans5><label for="yo5"><input id="yo5" type="checkbox" value=""/>   $z \\overline{z} = \\overline{z} z$ </div><br>', ["red","green","red","green","green","green"]],['remark', ' Addition foregår via $$ (a + b i) + (c + d i) = (a + c) + (b + d) i. $$ Eksempelvis er $$ (1 + 2 i) + (-5 + 7 i) = -4 + 9 i. $$ '],["quiz", '<h2 style="color:red;">Quiz</h2> Lad $z_1 = 3 + 4 i$, $z_2 = 1 + 2 i$ og $z_3 = a + b i$. Lad $$w = \\frac{z_1}{z_2}$$ og $$u = \\frac{1}{a + b i}.$$ Hvad er rigtigt af nedenstående?<br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>  $w = 11 + 4 i $</div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>  $w = 11 - 2 i$</div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   $w = \\frac{11}{5} - \\frac{2}{5} i$</div><br><div id=ans3><label for="yo3"><input id="yo3" type="checkbox" value=""/>  $w \\overline{w} = 145$</div><br><div id=ans4><label for="yo4"><input id="yo4" type="checkbox" value=""/>  Imaginærdelen for $u$ er $$-\\frac{b}{a^2 + b^2}$$</div><br><div id=ans5><label for="yo5"><input id="yo5" type="checkbox" value=""/>  Længden af $u$ er lig med længden af $a + b i$</div><br>', ["red","red","green","red","green","red"]],["quiz", '<h2 style="color:red;">Quiz</h2> Lad $x$ og $y$ være to tal, som opfylder ligningerne $$ \\begin{align*} 3 x + 2 y &= 1\\\\ 5 x - y &= 6. \\end{align*} $$ Hvad gælder om $x$ og $y$? <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>  $x + y = 1$</div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>  $x + y = 0$</div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>  $x = 2$</div><br><div id=ans3><label for="yo3"><input id="yo3" type="checkbox" value=""/>  $y = 1$</div><br>', ["red","green","red","red"]],['remarkpause', ' <h2>Afleveringsopgave til fredag den 29/1</h2> Find komplekse tal $x, y$ og $z$, som opfylder ligningerne $$ \\begin{align*} i x + y + (1 - i) z &= -1\\\\ x + y + z &= 2 + i\\\\ x - i y + z &= 3 \\end{align*} $$ ']];var eventtimes = [0,29.7,40,93, 103, 153,268, 351, 458, 463, 560,579];
+</script>
+
+<script src="JS/video.js"></script>
+
+</body>
+</html>

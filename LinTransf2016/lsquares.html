@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="CSS/video.css"/>
+  
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72936318-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+<div id="ramme">
+  <div id="vid">
+    <div id="overlay"></div>
+  <video id = "video1" controls poster=" http://edtech.dk/PNG/ceres.jpg ">
+    <source src=" http://edtech.dk/VIDEOS/lsquares.mp4 " type="video/mp4">
+    Video ikke understøttet.
+  </video>
+  </div>
+
+  <div id="annot" >
+
+    <div id="expl" style="line-height:1.5;">
+   <h2>Ortogonalitet og mindste kvadraters metode</h2> Denne video gennemgår hvordan generalisering af ortogonalitet og Pythagoras sætning fra planen til vektorrum $\mathbb{R}^n$ af vilkårlig dimension $n$ giver den ekstremt kraftfulde mindste kvadraters metode. <br/> <br/> Jeg siger i videoen at Gauss bestemte banen for en komet, men det var faktisk asteroiden Ceres i 1801 (posteren til videoen viser et NASA fotografi af Ceres, som i dag kaldes en dværgplanet). <br/> <br/> Læs mere om begivenheden og andet, der gjorde Gauss til en videnskabelig rockstjerne i Europa omkring begyndelsen af 1800-tallet: <a target ="_blank" href = "https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss">Wikipedia om Gauss</a>. 
+</div>
+</div>
+
+<div class="my-clear"></div>
+
+</div>
+
+<script>
+var events = [['remark', ' <h2>Ortogonalitet og mindste kvadraters metode</h2> Denne video gennemgår hvordan generalisering af ortogonalitet og Pythagoras sætning fra planen til vektorrum $\\mathbb{R}^n$ af vilkårlig dimension $n$ giver den ekstremt kraftfulde mindste kvadraters metode. <br/> <br/> Jeg siger i videoen at Gauss bestemte banen for en komet, men det var faktisk asteroiden Ceres i 1801 (posteren til videoen viser et NASA fotografi af Ceres, som i dag kaldes en dværgplanet). <br/> <br/> Læs mere om begivenheden og andet, der gjorde Gauss til en videnskabelig rockstjerne i Europa omkring begyndelsen af 1800-tallet: <a target ="_blank" href = "https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss">Wikipedia om Gauss</a>. '],["quiz", '<h2 style="color:red;">Quiz</h2> Betragt vektorerne $$ v_1 = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix}\\qquad\\text{og}\\qquad v_2 = \\begin{pmatrix} 4 \\\\ 5 \\\\ 6 \\end{pmatrix}. $$ Der findes et tal $\\lambda$ så $\\lambda$ så $v_2 - \\lambda v_1$ er ortogonal på $v_1$. Hvad gælder om $\\lambda$? <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>   Der findes mere end et tal $\\lambda$, som opfylder betingelsen.</div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>   $1 < \\lambda < 2$ </div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   $2 < \\lambda < 3$ </div><br><div id=ans3><label for="yo3"><input id="yo3" type="checkbox" value=""/>   $3 < \\lambda < 4$ </div><br>', ["red","red","green","red"]],["quiz", '<h2 style="color:red;">Quiz</h2> Betragt ligningssystemet $$ \\begin{align*} x_1 + x_2 &= 5 \\\\ x_1 - x_2 &= 1 \\\\ x_1 + 3 x_2 &= 2 \\end{align*} $$ Et valg af $x_1$ og $x_2$ giver en vektor i $\\mathbb{R}^3$. Lad $d$ være afstanden fra denne vektor til højresiden $b = (5, 1, 2)^T$. Hvor lille kan $d$ blive, hvis man vælger $x_1$ og $x_2$ optimalt? <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>   Afstanden er $0$, fordi ligningssystemet har en løsning</div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>   Mindre end $1$</div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   Mellem $1$ og $2$</div><br><div id=ans3><label for="yo3"><input id="yo3" type="checkbox" value=""/>   Mellem $2$ og $3$ </div><br><div id=ans4><label for="yo4"><input id="yo4" type="checkbox" value=""/>   Større end $3$ </div><br>', ["red","red","red","green","red"]],['remarkpause', ' <h3>Afleveringsopgave til fredag 26/2</h3> En mand kaster en stålkugle lodret ned mod Jorden fra toppen af en skyskraber. Fra nabobygningen måles kuglens højde efter givne tidsrum: Efter $4$ sekunder har kuglen en højde på $410$ meter, efter $6$ sekunder har kuglen en højde på $305$ meter, efter $7$ sekunder har kuglen en højde på $230$ meter og efter $9$ sekunder har kuglen en højde på $70$ meter. <br/> <br/> Estimer højden af skyskraberen ud fra målingerne. Hvad estimeres tyngdeaccelerationen til i forhold til målingerne? <br/> <br/> <b>NB</b>: Gå ud fra at der ikke er luftmodstand, når du opstiller en model til løsning af opgaven. ']];var eventtimes = [0,146,491,597];
+</script>
+
+<script src="JS/video.js"></script>
+
+</body>
+</html>

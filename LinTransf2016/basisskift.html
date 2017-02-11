@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="CSS/video.css"/>
+  
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72936318-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+<div id="ramme">
+  <div id="vid">
+    <div id="overlay"></div>
+  <video id = "video1" controls poster=" http://edtech.dk/PNG/basis.png ">
+    <source src=" http://edtech.dk/VIDEOS/basisskift.mp4 " type="video/mp4">
+    Video ikke understøttet.
+  </video>
+  </div>
+
+  <div id="annot" >
+
+    <div id="expl" style="line-height:1.5;">
+   <h2>Basisskift og matrixrepræsentationer for lineære transformationer i planen.</h2> Denne video gennemgår detaljerne i omregningen mellem koordinaterne mht to forksellige baser med planen $\mathbb{R}^2$ som eksempel. I samme ramme gennemgås matrixrepræsentationer for lineære transformationer. <br/> <br/> Khan Academy har også materiale online: <a target ="_blank" href="https://www.khanacademy.org/math/linear-algebra/alternate_bases/change_of_basis/v/linear-algebra-coordinates-with-respect-to-a-basis">Change of basis</a>. 
+</div>
+</div>
+
+<div class="my-clear"></div>
+
+</div>
+
+<script>
+var events = [['remark', ' <h2>Basisskift og matrixrepræsentationer for lineære transformationer i planen.</h2> Denne video gennemgår detaljerne i omregningen mellem koordinaterne mht to forksellige baser med planen $\\mathbb{R}^2$ som eksempel. I samme ramme gennemgås matrixrepræsentationer for lineære transformationer. <br/> <br/> Khan Academy har også materiale online: <a target ="_blank" href="https://www.khanacademy.org/math/linear-algebra/alternate_bases/change_of_basis/v/linear-algebra-coordinates-with-respect-to-a-basis">Change of basis</a>. '],["quiz", '<h2 style="color:red;">Quiz</h2> Hvad gælder om $\\lambda_1$ og $\\lambda_2$, hvis $$ \\lambda_1 \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} + \\lambda_2 \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}? $$ <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>   $\\lambda_1 + \\lambda_2 = 0$ </div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>   $\\lambda_1 = 2$ </div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   $2\\lambda_1^2 = \\lambda_2$ </div><br>', ["red","red","green"]],["quiz", '<h2 style="color:red;">Quiz</h2> Hvis koordinaterne i basen $$ \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}\\quad{\\text{og}}\\quad \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} $$ til en vektor er $(2, -1)$, hvad gælder så om koordinaterne $(\\lambda_1, \\lambda_2)$ til vektoren i basen $$ \\begin{pmatrix} 5 \\\\ 6 \\end{pmatrix}\\quad{\\text{og}}\\quad \\begin{pmatrix} 7 \\\\ 8 \\end{pmatrix}? $$ <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>   $\\lambda_1 < 0$ </div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>   $\\lambda_2 < 0$ </div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   $\\lambda_1 + \\lambda_2 = 1$</div><br>', ["red","green","green"]],["quiz", '<h2 style="color:red;">Quiz</h2>Antag at den lineære transformation $L:\\mathbb{R}^2\\rightarrow \\mathbb{R}^2$ er givet ved $$ L(x_1, x_2) = (x_1 + x_2, x_1 - x_2). $$ Hvad er matricen for $L$ hvis både $B_1$ og $B_2$ er den naturlige basis $(1,0)$ og $(0,1)$? <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>   $$ \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}? $$ </div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>   $$ \\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}? $$ </div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   $$ \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\end{pmatrix}? $$ </div><br>', ["red","green","red"]],['remarkpause', ' <h3>Afleveringsopgave til fredag 19/2 (Opgave 2, eksamen marts 2011)</h3> Betragt vektorrummet $$ P_4 = \\{a_0 + a_1 x + a_2 x^2 + a_3 x^3 \\mid a_0, a_1, a_2, a_3\\in \\mathbb{R}\\} $$ af polynomier af grad højst $3$. Definer for et polynomium $f\\in P_4$ polynomiet givet ved $$ L(f) = \\cfrac{d}{d x} ((x-1) f) \\qquad (\\text{f.eks. er } L(x) = 2 x - 1). $$ <ol> <li> Gør rede for at $L$ er en lineær transformation fra $P_4$ til $P_4$. </li> <li> Argumenter for at polynomierne $$ T = \\{1, x, 2 x^2 - 1, 4 x^3 - 3 x\\} $$ udgør en basis for $P_4$. </li> <li> Find matrixrepræsentationen for $L$ mht basen $T$. </li> <li> Det oplyses at polynomierne $$ H = \\{1, 2 x, 4 x^2 - 2, 8 x^3 - 12 x\\} $$ udgør en basis for $P_4$. Bestem overgangsmatricen (koordinatskiftematricen) fra $H$ to $T$. </li> <li> Find matrixrepræsentationen for $L$ mht basen $H$. </li> </ol> ']];var eventtimes = [0,156,306,475,594];
+</script>
+
+<script src="JS/video.js"></script>
+
+</body>
+</html>

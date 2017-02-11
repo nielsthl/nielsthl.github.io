@@ -1,0 +1,198 @@
+<video>
+http://edtech.dk/VIDEOS/kompleksetal.mp4
+</video>
+
+<title>
+Komplekse tal
+</title>
+
+<poster>
+http://edtech.dk/PNG/CWessel.png
+</poster>
+
+
+<intro>
+<h2>De komplekse tal</h2>
+Denne video introducerer de komplekse tal, som faktisk er et
+    matematisk emne med danske rødder (se videoen grundigt - ikke kun for at nå 
+frem til afleveringsopgaven til sidst!). <b>Husk at links åbnes i en ny browser 
+tab, hvis du klikker videre og udforsker</b>.
+<br/><br/>
+    Jeg når desværre ikke i videoen at komme ind på de mange anvendelser af komplekse tal. F. eks. kan de bruges til generering af kompliceret computergrafik som nedenstående figur. Den er et eksempel på et matematisk objekt, som hedder en 
+fraktal.
+    	  <br><br>
+	  <img src="http://edtech.dk/PNG/mandelbrot.png" width="300"/>
+<br><br>
+  Jeg håber i løbet af kurset at kunne forklare flere gange hvorfor de komplekse
+ tal er helt centrale både i matematikken og dens anvendelser.
+</intro>
+
+<event:0>
+<remark>
+<h2>De komplekse tal</h2>
+Denne video introducerer de komplekse tal, som faktisk er et
+    matematisk emne med danske rødder (se videoen grundigt - ikke kun for at nå 
+frem til afleveringsopgaven til sidst!). <b>Husk at links åbnes i en ny browser 
+tab, hvis du klikker videre og udforsker</b>.
+<br/><br/>
+    Jeg når desværre ikke i videoen at komme ind på de mange anvendelser af komplekse tal. F. eks. kan de bruges til generering af kompliceret computergrafik som nedenstående figur. Den er et eksempel på et matematisk objekt, som hedder en 
+fraktal.
+    	  <br><br>
+	  <img src="http://edtech.dk/PNG/mandelbrot.png" width="300"/>
+<br><br>
+  Jeg håber i løbet af kurset at kunne forklare flere gange hvorfor de komplekse
+ tal er helt centrale både i matematikken og dens anvendelser.
+</remark>
+</event>
+
+<event:29.7>
+<remarkpause>
+<br/>
+Rygtet vil vide at det var en uheldig græker, <a target ="_blank" href="https://en.wikipedia.org/wiki/Hippasus">Hippasus</a>, som
+opdagede at $\\sqrt{2}$ umuligt kan skrives som brøk $$\\frac{p}{q},$$
+hvor $p$ er et helt tal $\\dots, -2, -1, 0, 1, 2, \\dots$ og $q$ er
+et ikke-negativt naturligt tal $1, 2, 3, \\dots$.
+
+Uheldet kom
+sig af at han fortalte sine medrejsende på et skib i åbent hav om sin
+opdagelse. Det bevirkede at han blev smidt overbord. Der var ikke
+plads til grimme tal på den tid. De passede ikke ind i forestillingen om at alle tal skulle være forholdet mellem heltallige længder.
+
+Du kan læse videre om irrationale tal på <a target = "_blank" href="https://en.wikipedia.org/wiki/Irrational_number">Wikipedia</a>.
+</remarkpause>
+</event>
+
+<event:40>
+<remark>
+
+Faktisk hedder det ikke boldface mht symbolet $\\mathbb{R}$, men <b>blackboard bold</b>. Markeringen af de to lodrette streger kommer sig af at det er vanskeligt at lave almindelig boldface typer på en tavle (det vil også spilde uforholdsmæssigt meget kridt).
+</remark>
+</event>
+
+<event:93> <remarkpause>
+<br/>
+<br/>
+Historien om de komplekse tal er ekstremt
+spændende. I $1500$-tallet konkurrerede man om at finde formler til at
+løse ligninger. Vi kender formlen $$ x= \\frac{-b \\pm \\sqrt{b^2 - 4 a
+c}}{2 a} $$ for løsning af andengradsligningen $a x^2 + b x + c =
+0$. Den altfavnende videnskabsmand <a target="_blank" href="https://en.wikipedia.org/wiki/Gerolamo_Cardano">Gerolamo Cardano</a> og andre italienere gik skridtet videre og fandt komplicerede og <a target="_blank" href="https://en.wikipedia.org/wiki/Cubic_function">fantastiske formler</a> til løsning af trediegradsligningen.
+
+<br/><br />
+Allerede her omkring 1545 fandt man ud af
+at det var nødvendigt at indføre det mærkværdige tal $i$ med
+egenskaben $$i^2 = -1.$$
+
+</remarkpause> 
+</event>
+
+<event: 103>
+<remark>
+Husk på hvordan vi ganger parentesen ud rent algebraisk:
+$$
+(X + Y) (Z + W) = X Z + X W + Y Z + Y W.
+$$
+Det hele kommer fra det der med et fint ord hedder den distributive lov:
+$$
+A (B + C) = A B + A C
+$$
+dvs at man må gange ind i parentesen. I $1500$-tallet bekymrede man sig ikke om fine aksiomer, man regnede bare.
+</remark>
+</event>
+<event: 153>
+<quiz>
+  <question> Lad $z = (2 + 3 i) (5 + 7 i)$ og $w = (2 + i)(2 - i)$. Afgør følgende om disse komplekse tal</question>
+      <answer:false>$z = -13 + 31 i$</answer>
+      <answer:false>$z = 10 + 21 i$</answer>
+      <answer:true>$z = -11 + 29 i$</answer>
+      <answer:false>$w = 4 + i$</answer>
+      <answer:true>$w$ er et ulige almindeligt tal</answer>
+</quiz>
+</event>
+
+<event:268>
+<remark>
+Den geometriske fortolkning af de komplekse tal som punkter i et koordinatsystem blev først fundet af 
+danskeren <a target="_blank" href="https://en.wikipedia.org/wiki/Caspar_Wessel">Caspar Wessel</a> omkring 1797, før Gauss kom på banen med det i 1831!
+<br/> <br />
+Den geometriske fortolkning af de komplekse tal er forklaret på <a target="_blank" href="https://en.wikipedia.org/wiki/Complex_number">Wikipedia</a>.
+</remark>
+</event>
+
+<event: 351>
+<quiz>
+  <question> Lad $z = 3 + 4 i$. Hvad er rigtigt af nedenstående?</question>
+      <answer:false>$|z| = \\sqrt{5} i$</answer>
+      <answer:true>$|z| = 5$</answer>
+      <answer:false>$\\overline{z} = -3 + 4 i$</answer>
+      <answer:true>$\\overline{z} = 3 - 4 i$</answer>
+      <answer:true>Der findes kun et ulige tal som går op i $z \\overline{z}$</answer>
+<answer:true> $z \\overline{z} = \\overline{z} z$ </answer>
+</quiz>
+</event>
+
+<event: 458>
+<remark>
+Addition foregår via
+$$
+(a + b i) + (c + d i) = (a + c) + (b + d) i.
+$$
+Eksempelvis er
+$$
+(1 + 2 i) + (-5 + 7 i) = -4 + 9 i.
+$$
+</remark>
+</event>
+
+<event: 463>
+<quiz>
+  <question> Lad $z_1 = 3 + 4 i$, $z_2 = 1 + 2 i$ og $z_3 = a + b i$. Lad $$w = \\frac{z_1}{z_2}$$ og $$u = \\frac{1}{a + b i}.$$ Hvad er rigtigt af nedenstående?</question>
+      <answer:false>$w = 11 + 4 i $</answer>
+      <answer:false>$w = 11 - 2 i$</answer>
+      <answer:true> $w = \\frac{11}{5} - \\frac{2}{5} i$</answer>
+      <answer:false>$w \\overline{w} = 145$</answer>
+      <answer:true>Imaginærdelen for $u$ er $$-\\frac{b}{a^2 + b^2}$$</answer>
+      <answer:false>Længden af $u$ er lig med længden af $a + b i$</answer>
+</quiz>
+</event>
+
+
+<event: 560>
+<quiz>
+  <question> 
+Lad $x$ og $y$ være to tal, som opfylder ligningerne
+$$
+\\begin{align*}
+3 x + 2 y &= 1\\\\
+5 x -  y &= 6.
+\\end{align*}
+$$
+Hvad gælder om $x$ og $y$?
+</question>
+      <answer:false>$x + y = 1$</answer>
+      <answer:true>$x + y = 0$</answer>
+      <answer:false>$x = 2$</answer>
+      <answer:false>$y = 1$</answer>
+</quiz>
+</event>
+
+<event:579>
+<remarkpause>
+<h2>Afleveringsopgave til fredag den 29/1</h2>
+
+Find komplekse tal $x, y$ og $z$, som opfylder ligningerne
+$$
+\\begin{align*}
+i x + y + (1 - i) z &= -1\\\\
+x + y + z &= 2 + i\\\\
+x - i y + z &= 3
+\\end{align*}
+$$
+</remarkpause>
+</event>
+
+
+
+
+
+

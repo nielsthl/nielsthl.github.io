@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="CSS/video.css"/>
+  
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72936318-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+<div id="ramme">
+  <div id="vid">
+    <div id="overlay"></div>
+  <video id = "video1" controls poster="{2}">
+    <source src="{0}" type="video/mp4">
+    Video ikke understøttet.
+  </video>
+  </div>
+
+  <div id="annot" >
+
+    <div id="expl" style="line-height:1.5;">
+  {3}
+</div>
+</div>
+
+<div class="my-clear"></div>
+
+</div>
+
+<script>
+{4}
+</script>
+
+<script src="JS/video.js"></script>
+
+</body>
+</html>

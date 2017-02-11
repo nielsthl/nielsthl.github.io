@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="CSS/video.css"/>
+  
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72936318-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+<div id="ramme">
+  <div id="vid">
+    <div id="overlay"></div>
+  <video id = "video1" controls poster=" http://edtech.dk/PNG/linindep.png ">
+    <source src=" http://edtech.dk/VIDEOS/linuafhspan.mp4 " type="video/mp4">
+    Video ikke understøttet.
+  </video>
+  </div>
+
+  <div id="annot" >
+
+    <div id="expl" style="line-height:1.5;">
+   <h2>Lineær uafhængighed og span i vektorrum.</h2> Denne video forklarer de centrale begreber lineær uafhængighed og span af vektorer i vektorrum. Definitionerne er korte, men dækker over meget visdom, som man kun får gennem mange konkrete eksempler. Igen som så mange gange før: Det drejer sig om ligninger! <br/> <br/> Et helt fundamental resultat i den abstrakte verden siger at vektorerne $v_1, \dots, v_m\in \mathbb{R}^n$ er lineært afhængige, hvis $m > n$. Dette resultat kan trækkes helt ned på Jorden ved det simple eksempel at ligningen $$ x + y = 0 $$ har andre løsninger (hvilke?) end $x = y = 0$: Et homogent ligningssystem med flere ubekendte end ligninger har altid en løsning udover løsningen, hvor alle ubekendte er $0$. <br/> <br/> Internettet har igen masser af materiale om lineær uafhængighed (<a target ="_blank" href="https://www.google.dk/search?q=linear+independence">linear independence</a>) og span af vektorer (<a target ="_blank" href="https://www.google.dk/search?q=span+of+vectors">span of vectors</a>). 
+</div>
+</div>
+
+<div class="my-clear"></div>
+
+</div>
+
+<script>
+var events = [['remark', ' <h2>Lineær uafhængighed og span i vektorrum.</h2> Denne video forklarer de centrale begreber lineær uafhængighed og span af vektorer i vektorrum. Definitionerne er korte, men dækker over meget visdom, som man kun får gennem mange konkrete eksempler. Igen som så mange gange før: Det drejer sig om ligninger! <br/> <br/> Et helt fundamental resultat i den abstrakte verden siger at vektorerne $v_1, \\dots, v_m\\in \\mathbb{R}^n$ er lineært afhængige, hvis $m > n$. Dette resultat kan trækkes helt ned på Jorden ved det simple eksempel at ligningen $$ x + y = 0 $$ har andre løsninger (hvilke?) end $x = y = 0$: Et homogent ligningssystem med flere ubekendte end ligninger har altid en løsning udover løsningen, hvor alle ubekendte er $0$. <br/> <br/> Internettet har igen masser af materiale om lineær uafhængighed (<a target ="_blank" href="https://www.google.dk/search?q=linear+independence">linear independence</a>) og span af vektorer (<a target ="_blank" href="https://www.google.dk/search?q=span+of+vectors">span of vectors</a>). '],['remarkpause', ' Vi vil beskæftige os med vektorrum over $L$, hvor $L$ enten er de reelle tal $\\mathbb{R}$ eller de komplekse tal $\\mathbb{C}$. <br/> <br/> Helt præcist er aksiomerne som følger: En mængde $V$ udstyret med en addition $$+ : V\\times V\\rightarrow V$$ og en skalarmultiplikation $$\\cdot: L\\times V\\rightarrow V$$ kaldes et vektorrum over $L$, hvis <ol> <li> $u + v = v + u$ for alle $u, v\\in V$. </li> <li> $u + (v + w) = (u + v) + w$ for alle $u, v, w\\in V$ (associativ lov). </li> <li> Der findes $0\\in V$ så $0 + v = v$ for alle $v\\in V$. </li> <li> Til ethvert $v\\in V$ findes $u\\in V$ så $u + v = 0$ (dvs. $u = -v$). </li> <li> $1\\cdot v = v$ for alle $v\\in V$. </li> <li> $\\lambda\\cdot (u + v) = \\lambda \\cdot u + \\lambda \\cdot v$ for alle $\\lambda\\in L$ og alle $u, v\\in V$. </li> <li> $(\\lambda + \\mu)\\cdot v = \\lambda\\cdot v + \\mu\\cdot v$ for alle $\\lambda, \\mu\\in L$ og alle $v\\in V$. </li> <li> $(\\lambda \\mu) \\cdot v = \\lambda \\cdot (\\mu\\cdot v)$ for alle $\\lambda, \\mu\\in L$ og alle $v\\in V$. </li> </ol> Ofte undlader man at skrive $\\cdot$ og noterer $\\lambda\\cdot v$ som blot $\\lambda v$. <h3>Vigtig lille testopgave </h3> Vis hvordan de komplekse tal $\\mathbb{C}$ er et vektorrum over de reelle tal $\\mathbb{R}$ og eftervis reglerne ovenfor her. <font color="red"><h3>Meget svær opgave </h3></font> Er de reelle tal $\\mathbb{R}$ et vektorrum over de komplekse tal $\\mathbb{C}$? '],["quiz", '<h2 style="color:red;">Quiz</h2> Betragt delmængden $W = \\{(x, y, z) \\mid x + y - z = a\\}$ af $\\mathbb{R}^3$. For hvilke $a$ er $W$ et underrum af $\\mathbb{R}^3$? <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>   $a = 1$ </div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>   $a = -1$ </div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   $a = 0$ </div><br>', ["red","red","green"]],["quiz", '<h2 style="color:red;">Quiz</h2> Se på vektorrummet $P_3 = \\{a_0 + a_1 X + a_2 X^2 \\mid a_0, a_1, a_2\\in\\mathbb{R}\\}$ af polynomier af grad højst $2$. Lad $$ f = 1 + X + x^2\\qquad g = 6 - 5 X + X^2 $$ samt $\\lambda = 13$ og $\\mu = -17$. Hvad er $\\lambda f + \\mu g$? <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>   $115 - 74 X + 30 X^2$ </div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>   $115 - 72 X + 30 X^2$ </div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   $110 - 72 X + 30 X^2$ </div><br><div id=ans3><label for="yo3"><input id="yo3" type="checkbox" value=""/>   $-89 + 98 X -4 X^2$ </div><br>', ["red","red","red","green"]],['remark', ' Strengt taget skulle man her se på hele matricen $$ \\begin{pmatrix} 1 & 4 & -1 & 0\\\\ 2 & 5 & 1 & 0\\\\ 3 & 6 & 3 & 0 \\end{pmatrix}, $$ men i omformningen til RREF er der ingen grund til at have den sidste søjle med (hvorfor?). '],["quiz", '<h2 style="color:red;">Quiz</h2> Betragt ligningen $$ \\lambda_1 \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix} + \\lambda_2 \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix} + \\lambda_3 \\begin{pmatrix} 1 \\\\ 2 \\\\ 1 \\end{pmatrix} + \\lambda_4 \\begin{pmatrix} 4 \\\\ 0 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\end{pmatrix}, $$ hvor $\\lambda_1, \\lambda_2, \\lambda_3, \\lambda_4 \\in \\mathbb{R}$. Denne ligning er opfyldt for? <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>   $\\lambda_1 = -6,\\quad \\lambda_2 = -2,\\quad \\lambda_3 = 3,\\quad \\lambda_4 = 5$. </div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>   $\\lambda_1 = 5,\\quad \\lambda_2 = -6,\\quad \\lambda_3 = 3,\\quad \\lambda_4 = -2$. </div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   $\\lambda_1 = -2,\\quad \\lambda_2 = -1,\\quad \\lambda_3 = 3,\\quad \\lambda_4 = 7$. </div><br><div id=ans3><label for="yo3"><input id="yo3" type="checkbox" value=""/>   $2\\lambda_1 = -5 \\lambda_4,\\quad \\lambda_2 = 3 \\lambda_4,\\quad 2 \\lambda_3 = - 3\\lambda_4$. </div><br>', ["red","green","red","green"]],['remarkpause', ' <br/><br/> Hånden på hjertet! Kan du forklare helt præcist, hvorfor $$ \\mathrm{Span} \\left( \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}, \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}\\right) = \\mathbb{R}^2? $$ Hvis du ikke forstår, hvordan man gør det, SKAL du søge hjælp aldeles omgående hos din instruktor! Hellere i dag end i morgen. Du kan også vente til du har set videoen og forsøgt at løse afleveringsopgaven. '],['remarkpause', ' <h3>Afleveringsopgave til fredag 12/2 </h3> En basis for et vektorrum $V$ er et lineært uafhængigt sæt af vektorer $v_1, \\dots, v_n\\in V$, som opfylder $$ \\mathrm{Span} (v_1, \\dots, v_n) = V. $$ Giv detaljerede forklaringer til følgende spørgsmål. <br/> <br /> <ol> <li> Forklar hvorfor $\\mathrm{Span}(v_1, \\dots, v_r)$ er et underrum af $V$, hvor $v_1, \\dots, v_r\\in V$. </li> <br/> <li> Lad $e_1, \\dots, e_n$ være den naturlige basis for $\\mathbb{R}^n$ dvs $(x_1, \\dots, x_n) = x_1 e_1 + \\dots + x_n e_n$ for et $n$-tupel $(x_1, \\dots, x_n)\\in \\mathbb{R}^n$. Hvis $V$ er et underrum af $\\mathbb{R}^n$ og $e_1, \\dots, e_n$ alle ligger i $V$, hvorfor kan vi så slutte at $V = \\mathbb{R}^n$? </li> <br/> <li> Er sættet $$ \\begin{pmatrix} 2 \\\\ 3 \\\\ 5 \\end{pmatrix},\\quad \\begin{pmatrix} 7 \\\\ 11 \\\\ 13 \\end{pmatrix},\\quad \\begin{pmatrix} 17 \\\\ 19 \\\\ 23 \\end{pmatrix} $$ en basis for $\\mathbb{R}^3$? </li> <br/> <li> Er polynomierne $X^2+1,\\quad X^2 + X + 1$ samt $X$ en basis for $P_3$? </li> </ol> ']];var eventtimes = [0,66, 199,272.3,379,431,501,586];
+</script>
+
+<script src="JS/video.js"></script>
+
+</body>
+</html>

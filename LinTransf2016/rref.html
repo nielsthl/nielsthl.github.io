@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="CSS/video.css"/>
+  
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72936318-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+<div id="ramme">
+  <div id="vid">
+    <div id="overlay"></div>
+  <video id = "video1" controls poster=" http://edtech.dk/PNG/WolframAlpha.png ">
+    <source src=" http://edtech.dk/VIDEOS/rref.mp4 " type="video/mp4">
+    Video ikke understøttet.
+  </video>
+  </div>
+
+  <div id="annot" >
+
+    <div id="expl" style="line-height:1.5;">
+   <h2>Lineære ligninger og RREF</h2> Denne video skitserer forbindelsen mellem naturlige operationer på lineære ligningssystemer og oversætter disse til elementære operationer på matricer. Den helt fundamentale normalform for matricer hedder <b>den reducerede række echelonform</b> og skrives kort RREF. Den er nyttig bl.a. når man skal opskrive <b>alle</b> løsningerne til et ligningssystem som $$ \begin{align*} x + y + z + w &= 7\\ 2 x - y +3 z - w &= 8, \end{align*} $$ hvor der er flere variable end ubekendte. <br/> <br/> Internettet bugner med materiale om den reducerede række echelon form, som en <a target ="_blank" href="https://www.google.dk/search?q=reduced+row+echelon+form">Google søgning</a> viser. <br/> <br/> Som posteren til videoen viser, er der meget nyttige online værktøjer som f.eks. <a target = "_blank" href="http://www.wolframalpha.com">WolframAlpha</a>. 
+</div>
+</div>
+
+<div class="my-clear"></div>
+
+</div>
+
+<script>
+var events = [['remark', ' <h2>Lineære ligninger og RREF</h2> Denne video skitserer forbindelsen mellem naturlige operationer på lineære ligningssystemer og oversætter disse til elementære operationer på matricer. Den helt fundamentale normalform for matricer hedder <b>den reducerede række echelonform</b> og skrives kort RREF. Den er nyttig bl.a. når man skal opskrive <b>alle</b> løsningerne til et ligningssystem som $$ \\begin{align*} x + y + z + w &= 7\\\\ 2 x - y +3 z - w &= 8, \\end{align*} $$ hvor der er flere variable end ubekendte. <br/> <br/> Internettet bugner med materiale om den reducerede række echelon form, som en <a target ="_blank" href="https://www.google.dk/search?q=reduced+row+echelon+form">Google søgning</a> viser. <br/> <br/> Som posteren til videoen viser, er der meget nyttige online værktøjer som f.eks. <a target = "_blank" href="http://www.wolframalpha.com">WolframAlpha</a>. '],["quiz", '<h2 style="color:red;">Quiz</h2> Hvilken matrix oversættes ligningssystemet $$\\begin{align*} x + y&= 5 z - w - 7\\\\ z &= x - w +8,\\end{align*}$$ til, når man forudsætter at rækkefølgen af de variable er $x, y, z, w$? <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>  $$\\begin{pmatrix}1 & 1 & -5 & -1 & -7\\\\ -1 & 1 & 0 & 1 & 8\\end{pmatrix}$$ </div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>  $$\\begin{pmatrix}1 & 1 & -5 & 1 & -7\\\\ -1 & 0 & 1 & 1 & 8\\end{pmatrix}$$ </div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>  $$\\begin{pmatrix}1 & 1 & -5 & -1 & -7\\\\ 1 & 1 & -1 & 1 & 8\\end{pmatrix}$$ </div><br>', ["red","green","red"]],['remarkpause', ' De tre elementære operationer på matricer er <ul> <li> Ombytning af to rækker </li> <li> At gange en række med et tal $\\neq 0$ </li> <li> At gange en række med et tal og addere til en anden række </li> </ul> <br/> <br /> Den helt præcise definition er: En matrix siges at være på RREF, hvis <ul> <li> Rækker som udelukkende består af $0$ står til sidst i matricen</li> <li> Den første indgang $\\neq 0$ i en række skal være $= 1$</li> <li> $1$-tallet ovenfor skal være den eneste indgang $\\neq0$ "nedadtil mod venstre" e.g., $$ \\begin{matrix} 0 & 0 & 1\\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{matrix} $$ </li> <li>$1$-tallet ovenfor skal være eneste indgang $\\neq 0$ i sin søjle og kaldes en <font color="red">pivot</font> eller et <font color="red">pivotelement</font>. </li> </ul> Her er et eksempel på en matrix på RREF og en matrix der ikke er på RREF: $$ \\begin{pmatrix} 1 & 0 & 0 & 1\\\\ 0 & 0 & 1 & 2 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix} \\qquad \\begin{pmatrix} 1 & 0 & 0\\\\ 0 & 1 & 3\\\\ 0 & 2 & 4\\end{pmatrix} $$ '],['remarkpause', ' <h3>Elementære matricer</h3> En meget, meget interessant observation er at de elementære operationer kan indkodes i matricer. Indsigten er at en elementær operation foretaget på matricen $A$ svarer til at gange matricen $E$ på fra venstre, hvor $E$ fremkommer ved at udføre den elementære operation pa identitetsmatricen. <br/> <br /> Lad os illustrere det med et eksempel. Hvis $$ A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} $$ og den elementære operation er at gange første række med $-3$ og lægge til anden række, så bliver $$ E = \\begin{pmatrix} 1 & 0 \\\\ -3 & 1 \\end{pmatrix}. $$ Check selv at $$ E A = \\begin{pmatrix} 1 & 0 \\\\ -3 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} = \\begin{pmatrix} 1 & 2 \\\\ 0 & -2 \\end{pmatrix}. $$ <h3>Udregning af den inverse matrix</h3> Vi kan benytte denne opdagelse til at udregne den inverse af en matrix: Tag som eksempel $A$ ovenfor. Vi udregner RREF af $A$ udvidet med $2\\times 2$ identitetsmatricen: $$ \\begin{pmatrix} 1 & 2 & 1 & 0\\\\ 3 & 4 & 0 & 1 \\end{pmatrix}\\rightsquigarrow \\begin{pmatrix} 1 & 0 & -2 & 1\\\\ 0 & 1 & \\frac{3}{2} & -\\frac{1}{2} \\end{pmatrix} $$ Den inverse matrix $A^{-1}$ er de to sidste søjler i RREF for den udvidede matrix ovenfor. Check selv at det passer! '],["quiz", '<h2 style="color:red;">Quiz</h2> Betragt ligningssystemet $$ \\begin{align*} x + y + z + w &= 7\\\\ 2 x - y +3 z - w &= 8, \\end{align*} $$ kaldet $L_1$ og ligningssystemet $L_2$, som består af ligningerne i $L_1$ samt ligningen $$-x + 5 y - 3 z = 5.$$ Hvad er rigtigt? <br><br><div id=ans0><label for="yo0"><input id="yo0" type="checkbox" value=""/>   $L_1$ har endeligt mange løsninger. </div><br><div id=ans1><label for="yo1"><input id="yo1" type="checkbox" value=""/>   $L_2$ har endeligt mange løsninger. </div><br><div id=ans2><label for="yo2"><input id="yo2" type="checkbox" value=""/>   $L_1$ har uendeligt mange løsninger. </div><br>', ["red","red","green"]],['remarkpause', ' <h3>Afleveringsopgave til fredag 5/2 </h3> Lad $$ A = \\begin{pmatrix} 1 & -2 & -7 & -8 & -9\\\\ 3 & -4 & -13 & -14 & -15 \\end{pmatrix}. $$ <br/> <br /> <ol> <li> Find den reducerede række echelon form for $A$. </li> <br/> <li> Find samtlige løsninger til ligningssystemet $$ \\begin{align*} x -2 y -7z - 8 w &= -9 \\\\ 3x -4 y -13 z - 14 w &= -15. \\end{align*} $$ </li> <br/> <li> Udregn den inverse matrix til matricen $$ \\begin{pmatrix} i & 1 & 1\\\\ 1 & i & 1 \\\\ 1 & 1 & i \\end{pmatrix}. $$ </li> </ol> ']];var eventtimes = [0,128,249, 320,360,399];
+</script>
+
+<script src="JS/video.js"></script>
+
+</body>
+</html>
