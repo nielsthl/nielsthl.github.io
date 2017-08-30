@@ -1,0 +1,951 @@
+<!doctype html>
+<head>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.css" integrity="sha384-BDqcjN11/6D69oC63ObubLHNvQR2fNjin6+AzxA3xalB0swTj17TxVV1tL1Q5Png" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.js" integrity="sha384-sKYm5us3z9/bRQA+cc3gPzqwI5RVgL8vJQx1lpBudr9IzHOR8fnFUH68dz1GsTQw" crossorigin="anonymous"></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+    
+    for(var i = 0; i < tex.length; ++i)
+       {
+         var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+      
+         var math = tex[i].previousSibling;
+         math.className = 'katex-render';
+        
+         var content = tex[i].textContent;
+
+	 katex.render(content, math, {
+	    displayMode: display,
+	    throwOnError: false,
+	    //macros: {"\\NN":"\\mathbb{N}",
+	    //	     "\\ZZ":"\\mathbb{Z}",
+	    //	     "\\QQ":"\\mathbb{Q}",
+	    //	     "\\RR":"\\mathbb{R}",
+	    //	     "\\CC":"\\mathbb{C}",
+	    //	     "\\tag":"\\pod\\text"}
+	    macros: {"\\tag":"\\pod\\text"} // Hack for \eqref!
+      });
+
+	tex[i].parentNode.removeChild(tex[i]);
+	
+    }
+    var eqno = document.querySelectorAll('.katex span > span.mspace.quad');
+    for(var i = 0; i < eqno.length; ++i)
+    {
+        if(eqno[i].parentNode.className)
+            continue;
+        var quad = eqno[i];
+        var span = quad.parentNode;
+        var text = span.nextSibling;
+        var pare = text.nextSibling;
+        span.removeChild(quad);
+        span.appendChild(text);
+        span.appendChild(pare);
+        span.className = 'eqno';
+    }
+});
+</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/math.css">
+
+</script>
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<style>
+      
+      html {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      }
+      .container {
+      max-width: 24cm;
+      }
+
+</style>
+
+<link rel="stylesheet" href="../css/nt0.css">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-1">
+	<div class="sidebar-nav" data-spy="affix">
+	  <!--<a href="../index.html"><i class="fa fa-book tocicon" style="color:black;"></i></a>-->
+	  <a href="../index.html"><i class="fa fa-th-list tocicon" style="color:#76323f;" title="Indholdsfortegnelse"></i></a>
+	</div>
+      </div>
+      <div class="col-xs-11">
+	
+
+
+
+
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<style> body{counter-reset: chapter 1;}</style>
+<h1 id="chapter_Om_tal_og_vektorer_i_planen"><span style="float:right;">Om tal og vektorer i planen</span></h1>
+</p>
+
+<p class="indent text-justify">
+
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/80nJknoes7A?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div> 
+</p>
+
+<p class="indent text-justify">
+I dette kapitel vil vi introducere tal helt fra de naturlige tal
+<span class="matematik"></span><script type="math/tex">0, 1, 2, \ldots</script>, komme ind på negative tal
+og brøker for til sidst at berøre de reelle tal og vektorer i planen. 
+Alt dette for at lede frem til de komplekse tal i næste kapitel.
+De komplekse tal er fantastiske, men for at komme i dybden med dem kræves
+at man er fortrolig med lidt trigonometri og vektorer i planen.
+</p>
+
+<p class="indent text-justify">
+Noget af det første man lærer som et lille barn er at tælle:
+<div class="matematik"></div><script type="math/tex; mode=display">
+1, 2, 3, 4, \ldots
+</script>
+</p>
+
+<p class="indent text-justify">
+Det at tælle er fundamentalt for mennesket og arkæologiske kilder
+nævner at mennesket har gjort det i mindst 50.000 år. Man
+må formode at tællesymbolerne dengang har været primitive uden
+avancerede symboler som <span class="matematik"></span><script type="math/tex">0, \ldots, 9</script>. Måske har man symboliseret
+<span class="matematik"></span><script type="math/tex">1, 2, 3, 4, 5</script> som nedenfor
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Talogvekt/Count.png">
+</p>
+
+<p class="indent text-justify">
+<a href="https://en.wikipedia.org/wiki/Natural_number#History" target="_blank">Tallenes historie</a> er fascinerende.
+</p>
+
+<p class="indent text-justify">
+ 
+
+<h2 id="section_Det_mirakuløse_tal_nul">Det mirakuløse tal nul</h2>
+</p>
+
+<p class="indent text-justify">
+Notationen med pinde er ikke specielt økonomisk. Vores titalssystem er
+i dag så indgroet i vores kultur at vi synes det er spild af blæk at
+skrive tallet <span class="matematik"></span><script type="math/tex">20</script> som  
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Talogvekt/Count20.png">  
+</p>
+
+<p class="indent text-justify">
+Man må ikke
+glemme at notationen <span class="matematik"></span><script type="math/tex">20</script> indeholder visdom gemt i årtusinders ophobet
+menneskelig erfaring. Ved at indføre tallet <span class="matematik"></span><script type="math/tex">0</script> kan man tælle i
+grupper af <span class="matematik"></span><script type="math/tex">1, 10, 100, \ldots</script>. Således dækker notationen <span class="matematik"></span><script type="math/tex">20</script> over at
+man tæller <span class="matematik"></span><script type="math/tex">0</script> grupper af <span class="matematik"></span><script type="math/tex">1</script> og <span class="matematik"></span><script type="math/tex">2</script> grupper af <span class="matematik"></span><script type="math/tex">10</script>. I det hele taget
+er symbolet <span class="matematik"></span><script type="math/tex">0</script> et mirakel, som har bragt menneskeheden betydeligt
+videre efter det blev indført at den indiske matematiker
+<a href="https://en.wikipedia.org/wiki/Brahmagupta" target="_blank">Brahmagupta</a> i 628. At
+have et specielt symbol for ingenting er en smuk abstraktion. 
+</p>
+
+<p class="indent text-justify">
+Omkring computerens opfindelse kom der mere fokus på at man nødvendigvis
+ikke behøver at tælle mht grupper af størrelser <span class="matematik"></span><script type="math/tex">1, 10, 100, \ldots</script>. Man
+kan også tælle binært dvs mht grupper af størrelser <span class="matematik"></span><script type="math/tex">1, 2, 4, 8, 16, \ldots</script>. I
+det binære talsystem kan de <span class="matematik"></span><script type="math/tex">20</script> pinde skrives
+<div class="matematik"></div><script type="math/tex; mode=display">
+10100.
+</script>
+Måske er dette mere elegant - enten er en gruppe der (<span class="matematik"></span><script type="math/tex">1</script>) eller også er den der ikke (<span class="matematik"></span><script type="math/tex">0</script>).
+Læg mærke til at tallet <span class="matematik"></span><script type="math/tex">0</script> er central lige meget hvilket talsystem man vælger.
+</p>
+
+<p class="indent text-justify">
+<p class="Quiz"><a href="#9b8162fe-741e-45b6-964f-99ef46472d1b" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="9b8162fe-741e-45b6-964f-99ef46472d1b" class="collapse">
+<div id="quiz1" style="width:100%;"><div class="row quizquestion">
+Brahmagupta opfandt tallet <span class="matematik"></span><script type="math/tex">0</script> i år <span class="matematik"></span><script type="math/tex">628</script>. Hvad gælder om tallet <span class="matematik"></span><script type="math/tex">628</script>?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+Det skrives <span class="matematik"></span><script type="math/tex">1010001000</script> i det binære talsystem.
+</div><div class="col-xs-5 quizanswer" datav="T">
+Det skrives <span class="matematik"></span><script type="math/tex">1001110100</script> i det binære talsystem.
+</div><div class="col-xs-5 quizanswer" datav="F">
+I det oktale talsystem dvs mht grupper af størrelse <span class="matematik"></span><script type="math/tex">1, 8, 64, 512, \ldots</script> skrives
+<span class="matematik"></span><script type="math/tex">628</script> som <span class="matematik"></span><script type="math/tex">1210</script>.
+</div><div class="col-xs-5 quizanswer" datav="T">
+Det skrives DCXXVIII som romertal. 
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_De_naturlige_tal">De naturlige tal</h2>
+</p>
+
+<p class="indent text-justify">
+Rent matematisk har de naturlige tal egentlig ikke noget at gøre med i
+hvilket talsystem de bliver skrevet op. I den abstrakte matematiske
+verden giver det god mening at bruge pinde til at repræsentere
+naturlige tal. Faktisk er det sådan man indfører de
+naturlige tal med den aksiomatiske metode under navnet
+<a href="https://en.wikipedia.org/wiki/Peano_axioms" target="_blank">Peanos aksiomer</a>.
+</p>
+
+<p class="indent text-justify">
+For nemheds skyld vil vi definere de naturlige tal
+til at starte med <span class="matematik"></span><script type="math/tex">0</script> og være
+<div class="matematik"></div><script type="math/tex; mode=display">
+0, 1, 2, \ldots,
+</script>
+hvor vi allerede ved hvordan man adderer og multiplicerer naturlige tal.
+Mængden af naturlige tal
+betegnes med <span class="matematik"></span><script type="math/tex">\mathbb{N}</script>. Årsagen til denne notation skyldes at man i
+århundreder har brugt tavle og kridt som kommunikationsmiddel. På en
+tavle er det svært at skrive et boldface N. Det er nemmere at dekorere
+et N til et blackboard bold N som ovenfor.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_De_hele_tal">De hele tal</h2><span id="niels"></span> 
+Vi ved godt at der findes negative tal, men hvordan vil vi egentlig
+forklare dem?  Skru tiden nogle hundrede år tilbage og forestil dig
+hvor svært det har været at komme fra at man har <span class="matematik"></span><script type="math/tex">0</script> kroner i sin pung
+og skylder <span class="matematik"></span><script type="math/tex">5</script> kroner væk til at abstrahere og sige at man har <span class="matematik"></span><script type="math/tex">-5</script>
+kroner i sin pung. Måske er det også svært at forestille sig i dag.
+</p>
+
+<p class="indent text-justify">
+I matematikkens verden drejer det sig om at kunne løse ligninger. Indenfor
+de naturlige tal kan man ikke finde løsninger
+ikke løse de enkleste ligninger, hvor man kun har lov at benytte naturlige tal, 
+<span class="matematik"></span><script type="math/tex">x</script> og <span class="matematik"></span><script type="math/tex">+</script> indenfor de naturlige tal. For eksempel har ligningen
+<span id="1.1"></span><div class="matematik"></div><script type="math/tex; mode=display">
+x + 5 = 3
+\tag{1.1}</script>
+ikke løsninger i de naturlige tal. Mere formelt skriver vi at der ikke
+findes noget <span class="matematik"></span><script type="math/tex">x\in \mathbb{N}</script>, som opfylder at <span class="matematik"></span><script type="math/tex">x + 5 = 3</script>. For at kunne løse 
+denne ligning bliver nødt til at udvide de naturlige tal til de
+hele tal
+<div class="matematik"></div><script type="math/tex; mode=display"> 
+\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots
+</script>
+som betegnes <span class="matematik"></span><script type="math/tex">\mathbb{Z}</script> (for Zahlen på tysk). I mængden af heltal har
+ligningen <a href="#1.1">(1.1)</a> løsningen <span class="matematik"></span><script type="math/tex">x=-2</script>.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_De_rationale_tal">De rationale tal</h2><span id="afsnQ"></span>
+</p>
+
+<p class="indent text-justify">
+Der er stadig ret enkle ligninger som feks 
+<span id="1.2"></span><div class="matematik"></div><script type="math/tex; mode=display">
+2 x = 1,
+\tag{1.2}</script>
+som vi ikke
+kan løse med et heltal <span class="matematik"></span><script type="math/tex">x\in \mathbb{Z}</script>. Det er grunden til at vi
+indfører mængden af brøker eller rationale tal, som betegnes
+<span class="matematik"></span><script type="math/tex">\mathbb{Q}</script>. Brøker er som bekendt tal af formen <span class="matematik"></span><script type="math/tex">p/q</script>, hvor
+<span class="matematik"></span><script type="math/tex">p\in \mathbb{Z}</script> og <span class="matematik"></span><script type="math/tex">q\in\mathbb{N}</script> med betingelsen at <span class="matematik"></span><script type="math/tex">q\neq 0</script>. Ligningen
+<a href="#1.2">(1.2)</a> kan løses med brøken <span class="matematik"></span><script type="math/tex">x = \frac{1}{2}</script>.
+</p>
+
+<p class="indent text-justify">
+<p class="Quiz"><a href="#147d41dd-c4fd-450b-bc57-38919c961e5c" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="147d41dd-c4fd-450b-bc57-38919c961e5c" class="collapse">
+<div id="quiz2" style="width:100%;"><div class="row quizquestion">
+Hvad gælder om ligningen
+<div class="matematik"></div><script type="math/tex; mode=display">
+\frac{1}{2} + \frac{x}{3} = 1?
+</script>
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+Den har to løsninger.
+</div><div class="col-xs-5 quizanswer" datav="T">
+Ingen løsninger til ligningen er naturlige tal.
+</div><div class="col-xs-5 quizanswer" datav="T">
+Der er kun en løsning, som er et rationalt tal mellem <span class="matematik"></span><script type="math/tex">1</script> og <span class="matematik"></span><script type="math/tex">2</script>.
+</div><div class="col-xs-5 quizanswer" datav="F">
+Der er kun en løsning, som er et rationalt tal mellem <span class="matematik"></span><script type="math/tex">0</script> og <span class="matematik"></span><script type="math/tex">1</script>.
+</div></div></div><button id="quizbutton2" class = "btn btn-default">Check</button><script>$("#quizbutton2").click(function(){quizshowanswers(quiz2, quizbutton2);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+
+<h3 id="subsection_Eksempel">Eksempel</h3>
+</p>
+
+<p class="indent text-justify">
+Det er ikke svært at lægge heltal sammen eller gange to brøker sammen,
+men forestil dig nu at du har glemt hvordan man lægger brøker
+sammen. Kunne du benytte hjernekraft til at finde ud af det, blot ud
+fra indfaldsvinklen med at man skal kunne løse ligninger? Lad os
+tage eksemplet
+<span id="1.3"></span><div class="matematik"></div><script type="math/tex; mode=display">
+s = \frac{1}{2} + \frac{1}{3}.
+\tag{1.3}</script>
+Vi er godt klar over at <span class="matematik"></span><script type="math/tex">s</script> <span class="mark">bestemt ikke er lig med</span>
+<div class="matematik"></div><script type="math/tex; mode=display">
+\frac{1 + 1}{2+ 3} = \frac{2}{5}
+</script>
+i og med at <span class="matematik"></span><script type="math/tex">s</script> må være større end <span class="matematik"></span><script type="math/tex">\frac{1}{2}</script>.
+Men hvordan finder vi <span class="matematik"></span><script type="math/tex">s</script> som brøk? Her hjælper ligninger os. Vi
+ved at <span class="matematik"></span><script type="math/tex">x = \frac{1}{2}</script> og <span class="matematik"></span><script type="math/tex">y = \frac{1}{3}</script> er løsninger til ligningerne
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+2 x & = 1\\
+3 y & = 1.
+\end{aligned}</script>
+Hvis vi nu ganger første ligning med <span class="matematik"></span><script type="math/tex">3</script> og anden ligning med <span class="matematik"></span><script type="math/tex">2</script> får vi ligningerne
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+6 x & = 3\\
+6 y & = 2.
+\end{aligned}</script>
+Disse to ligninger kan vi nu lægge sammen og få ligningen
+<div class="matematik"></div><script type="math/tex; mode=display">
+6 x + 6 y = 6 (x + y) = 5.
+</script>
+Derfor er 
+<div class="matematik"></div><script type="math/tex; mode=display">
+\frac{1}{2} + \frac{1}{3} = x + y = \frac{5}{6}.
+</script>
+Et alternativ til ligningerne kunne være at gange ligningen <a href="#1.3">(1.3)</a> igennem med
+<span class="matematik"></span><script type="math/tex">6 = 2\cdot 3</script> og få 
+<div class="matematik"></div><script type="math/tex; mode=display">
+6 s = 6 \left(\frac{1}{2} + \frac{1}{3}\right) = \frac{6}{2} + \frac{6}{3} = 3 + 2 = 5\quad
+\text{dvs}\quad s = \frac{5}{6}.
+</script>
+Indrømmet, matematisk har vi snydt en smule her. Faktisk har vi også brug for at sige
+hvornår to brøker er ens, som feks
+<div class="matematik"></div><script type="math/tex; mode=display">
+\frac{5}{6} = \frac{10}{12},
+</script>
+men det er en anden historie.
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#d1e43730-c2f3-4d0b-b970-5a639bbb1c06" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="d1e43730-c2f3-4d0b-b970-5a639bbb1c06" class="collapse">
+Efter præcis samme metode som i eksemplet kan vi finde (med bogstaver)
+formlen 
+<span id="1.4"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\frac{a}{s} + \frac{b}{t} = \frac{a t + b s}{s t}
+\tag{1.4}</script>
+for addition af de to brøker <span class="matematik"></span><script type="math/tex">\frac{a}{s}</script> og <span class="matematik"></span><script type="math/tex">\frac{b}{t}</script>. Prøv
+langsomt at gå igennem metoden, som følger:
+<span class="matematik"></span><script type="math/tex">x = \frac{a}{s}</script> og <span class="matematik"></span><script type="math/tex">y = \frac{b}{t}</script> er løsninger til 
+ligningerne
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+s x & = a\\
+t y & = b. 
+\end{aligned}</script> 
+Ved at gange første ligning med <span class="matematik"></span><script type="math/tex">t</script> og anden ligning med <span class="matematik"></span><script type="math/tex">s</script> og
+addere ligningerne fremkommer formlen <a href="#1.4">(1.4)</a>.
+</p>
+
+<p class="indent text-justify">
+</div>
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#7100b25c-57aa-41c8-a447-ad9deaf30848" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="7100b25c-57aa-41c8-a447-ad9deaf30848" class="collapse">
+Diofants ungdom varede <span class="matematik"></span><script type="math/tex">1/6</script> af hans liv. Han fik skæg efter <span class="matematik"></span><script type="math/tex">1/12</script> mere. Efter <span class="matematik"></span><script type="math/tex">1/7</script> mere blev han gift. Fem år senere fik han en søn. Sønnen levede halvt så længe som faderen og Diofant døde fire år efter sønnen. Hvor gammel blev Diofant?
+</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_De_reelle_tal">De reelle tal</h2>
+</p>
+
+<p class="indent text-justify">
+Vi begyndte med de naturlige tal <span class="matematik"></span><script type="math/tex">\mathbb{N}</script> og kunne
+ikke løse enkle ligninger. Så udbyggede vi til de hele tal <span class="matematik"></span><script type="math/tex">\mathbb{Z}</script>,  men
+kunne her stadig ikke løse helt simple ligninger som <span class="matematik"></span><script type="math/tex">2 x = 1</script>. Det
+gjorde at vi ``opfandt'' brøker eller de rationale tal <span class="matematik"></span><script type="math/tex">\mathbb{Q}</script>. Her har
+vi at gøre med tal, hvor man kan addere, subtrahere, multiplicere og
+dividere (med alle tal undtagen <span class="matematik"></span><script type="math/tex">0</script>). Med symboler har vi
+lavet kæden 
+<div class="matematik"></div><script type="math/tex; mode=display">
+\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}.
+</script>
+Til hverdag omgiver vi os
+praktisk taget kun med rationale tal. Computere kan strengt taget kun
+håndtere rationale tal. Men rationale tal kan sagtens være
+overordentligt komplicerede med store tællere og nævnere som feks
+<div class="matematik"></div><script type="math/tex; mode=display">
+\frac{237894619875623478956127341734059237458923745237528903475203857}
+{534058927340589273450923475029345723049587234095723408957121232}
+</script>
+Findes der andre tal end de rationale?  
+</p>
+
+<p class="indent text-justify">
+Her støder vi på et af de mest overraskende elementer i matematikkens
+historie. Svaret er ja og skal findes i Pythagoras' læresætning om
+længden af hypotenusen i en retvinklet trekant. Som du helt givet husker,
+siger Pythagoras for en retvinklet trekant med hypotenuselængde <span class="matematik"></span><script type="math/tex">c</script>
+og med katetelængder <span class="matematik"></span><script type="math/tex">a</script> og <span class="matematik"></span><script type="math/tex">b</script> at
+<div class="matematik"></div><script type="math/tex; mode=display">
+a^2 + b^2 = c^2.
+</script>
+Vi kan illustrere det med vektorer i et koordinatsystem:
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Talogvekt/Pythagoras.svg">
+</p>
+
+<p class="indent text-justify">
+Her siger Pythagoras at længden af vektoren med koordinaterne <span class="matematik"></span><script type="math/tex">(a, b)</script> er
+<span class="matematik"></span><script type="math/tex">\sqrt{a^2 + b^2}</script> eller i mere dagligdags sprog: Længden af diagonalen
+i et rektangel med sidelængder <span class="matematik"></span><script type="math/tex">a</script> og <span class="matematik"></span><script type="math/tex">b</script> er <span class="matematik"></span><script type="math/tex">\sqrt{a^2 + b^2}</script>.
+</p>
+
+<p class="indent text-justify">
+Den totale overraskelse er at længden af diagonalen i et rektangel,
+hvor begge sidelængder er <span class="matematik"></span><script type="math/tex">1</script> (dvs et kvadrat med sidelængde <span class="matematik"></span><script type="math/tex">1</script>) ikke
+er et rationalt tal. Tænk lige over det. Noget så naturligt som
+længden af diagonalen nedenfor er ikke en brøk!
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Talogvekt/Kvadratrod2.svg">
+</p>
+
+<p class="indent text-justify">
+Et af de mest berømte matematiske argumenter, flere tusinde år gammelt, er netop et
+bevis for at længden af diagonalen ovenfor ikke kan skrives som en brøk. Det er 
+ren matematik, når den er allerbedst.
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#e6dd9d24-bb2c-4af8-9bb3-71c9175c60d6" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="e6dd9d24-bb2c-4af8-9bb3-71c9175c60d6" class="collapse">
+Hovedingrediensen i det matematiske bevis for at kvadratroden af <span class="matematik"></span><script type="math/tex">2</script> ikke er et rational tal er følgende udsagn om naturlige tal: Kvadratet at et ulige tal er 
+ulige f.eks., <span class="matematik"></span><script type="math/tex">3^2 = 9, 5^2 = 25,  7^2 = 49</script>. 
+Kan du lave et bevis for at udsagnet gælder for alle ulige tal?
+</div>
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/nVFJepH6Q0M?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div> 
+Selvom man til daglig egentlig ikke har brug for irrationale tal, er
+det i matematikken ekstremt vigtigt at kunne håndtere tal som
+<span class="matematik"></span><script type="math/tex">\sqrt{2}</script>. I abstrakt matematik kan man vise at der faktisk er langt
+flere irrationale tal end rationale. Disse udgør tilsammen de reelle
+tal, som betegnes <span class="matematik"></span><script type="math/tex">\mathbb{R}</script>. Det er en anelse teknisk at konstruere de
+reelle tal matematisk, men vi vil alligevel benytte dem, når vi regner
+med vektorer i planen.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Vektorer_i_planen">Vektorer i planen</h2>
+</p>
+
+<p class="indent text-justify">
+En vektor <span class="matematik"></span><script type="math/tex">v</script> i planen er givet ved dens koordinater <span class="matematik"></span><script type="math/tex">\begin{pmatrix}x \\ y\end{pmatrix}</script>, som er ordnede par af reelle tal <span class="matematik"></span><script type="math/tex">x, y\in \mathbb{R}</script>. Af typografiske hensyn skrives vektoren <span class="matematik"></span><script type="math/tex">v</script> også som <span class="matematik"></span><script type="math/tex">(x, y)</script>.
+</p>
+
+<p class="indent text-justify">
+Det er meget
+naturligt at lægge to vektorer sammen og gange en vektor med et tal på følgende måde: Betragt
+vektorerne
+<div class="matematik"></div><script type="math/tex; mode=display">
+u = \begin{pmatrix} a \\ b \end{pmatrix}\quad\text{og}\quad
+v = \begin{pmatrix} c \\ d \end{pmatrix}
+</script>
+samt tallet <span class="matematik"></span><script type="math/tex">\lambda</script>. Så er <span class="mark">summen</span> <span class="matematik"></span><script type="math/tex">u + v</script> lig med
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{pmatrix} a + c \\ b + d \end{pmatrix}
+</script>
+og <span class="mark">skalarmultiplikationen</span> <span class="matematik"></span><script type="math/tex">\lambda u</script> lig med
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{pmatrix} \lambda a \\ \lambda b \end{pmatrix}.
+</script>
+Vi betegner mængden af vektorer givet ved deres koordinater som <span class="matematik"></span><script type="math/tex">\mathbb{R}^2</script>.
+Fra din baggrund i matematik ved du at <span class="mark">prikproduktet</span> mellem <span class="matematik"></span><script type="math/tex">u</script> og <span class="matematik"></span><script type="math/tex">v</script>
+er givet ved formlen
+<div class="matematik"></div><script type="math/tex; mode=display">
+u \cdot
+v = a c + b d.
+</script>
+Prikproduktet har en masse gode egenskaber, herunder
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+(\lambda u)\cdot v &= \lambda (u\cdot v)\\
+u \cdot (v + w) &= u\cdot v + u\cdot w,
+\end{aligned}</script>
+<span id="defenhedsvektor"></span>
+</p>
+
+<p class="indent text-justify">
+<div class="definition">
+<span class="mark">Længden</span> af vektoren <span class="matematik"></span><script type="math/tex">u</script> er givet ved formlen
+<div class="matematik"></div><script type="math/tex; mode=display">
+\left\vert u \right\vert = \sqrt{u\cdot u} = \sqrt{a^2 + b^2}\qquad(\text{NB: } \left\vert u \right\vert^2 = u\cdot u).
+</script>
+</p>
+
+<p class="indent text-justify">
+En vektor <span class="matematik"></span><script type="math/tex">v</script> siges at være en <span class="mark">enhedsvektor</span>, hvis den har længde <span class="matematik"></span><script type="math/tex">1</script> dvs <span class="matematik"></span><script type="math/tex">\left\vert v \right\vert = 1</script>.
+</p>
+
+<p class="indent text-justify">
+Vektorerne <span class="matematik"></span><script type="math/tex">u</script> og <span class="matematik"></span><script type="math/tex">v</script> siges at være <span class="mark">vinkelrette</span> på hinanden hvis <span class="matematik"></span><script type="math/tex">u\cdot v = 0</script>.
+</div>
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/Hz7fNEayQSU?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<p class="Quiz"><a href="#e7da8b76-ef18-4716-ac42-35f422fdbb87" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="e7da8b76-ef18-4716-ac42-35f422fdbb87" class="collapse">
+<div id="quiz3" style="width:100%;"><div class="row quizquestion">
+Betragt vektorerne 
+<div class="matematik"></div><script type="math/tex; mode=display">
+u = \begin{pmatrix} 1 \\ 1\end{pmatrix}\qquad\text{og}\qquad
+v = \begin{pmatrix} 2 \\ 1\end{pmatrix}.
+</script>
+For hvilket <span class="matematik"></span><script type="math/tex">\lambda</script> er <span class="matematik"></span><script type="math/tex">u - \lambda v</script> vinkelret på <span class="matematik"></span><script type="math/tex">v</script>?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">\lambda = 1</script>.
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">\lambda = \frac{2}{3}</script>.
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">\lambda = \frac{4}{5}</script>.
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="matematik"></span><script type="math/tex">\lambda = \frac{3}{5}</script>.
+</div></div></div><button id="quizbutton3" class = "btn btn-default">Check</button><script>$("#quizbutton3").click(function(){quizshowanswers(quiz3, quizbutton3);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Cosinus_og_sinus_til_en_vinkel">Cosinus og sinus til en vinkel</h2><span id="hmmm"></span>
+</p>
+
+<p class="indent text-justify">
+Vi repeterer cosinus og sinus af vinkler.
+Enhedscirklen nedenfor er netop defineret som mængden af enhedsvektorer dvs
+vektorer med længde <span class="matematik"></span><script type="math/tex">1</script>.
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Talogvekt/enhedscirkel.svg">
+</p>
+
+<p class="indent text-justify">
+Enhedsvektoren <span class="matematik"></span><script type="math/tex">(x, y)</script> på tegningen er entydigt givet ud fra dens vinkel <span class="matematik"></span><script type="math/tex">\theta</script>
+med <span class="matematik"></span><script type="math/tex">x</script>-aksen. <span class="mark">Cosinus, <span class="matematik"></span><script type="math/tex">\cos(\theta)</script>, til vinklen <span class="matematik"></span><script type="math/tex">\theta</script> 
+er defineret som <span class="matematik"></span><script type="math/tex">x</script>-koordinaten og sinus, <span class="matematik"></span><script type="math/tex">\sin(\theta)</script>, som 
+<span class="matematik"></span><script type="math/tex">y</script>-koordinaten til enhedsvektoren</span>. Denne definition giver omgående den
+velkendte formel
+<div class="matematik"></div><script type="math/tex; mode=display">
+\cos^2(\theta) + \sin^2(\theta) = 1.
+</script>
+</p>
+
+<p class="indent text-justify">
+
+Ud fra tegningen ovenfor kan man også aflæse følgende ligninger:
+</p>
+
+<p class="indent text-justify">
+<div class="frameit"><span id="trigfms"></span>
+<span id="1.5"></span><div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+\cos(-\theta) &= \cos(\theta)\\
+\sin(-\theta) &= - \sin(\theta)\\
+\cos(\theta + \pi/2) &= -\sin(\theta)\\
+\sin(\theta + \pi/2) &= \cos(\theta)
+\end{aligned}\tag{1.5}</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/3XUfu-Lpx1A?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div> 
+<p class="Quiz"><a href="#6e75e7c9-a068-4231-a214-c0f04b0c1810" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="6e75e7c9-a068-4231-a214-c0f04b0c1810" class="collapse">
+<div id="quiz4" style="width:100%;"><div class="row quizquestion">
+Lad <span class="matematik"></span><script type="math/tex">x</script> være cosinus til <span class="matematik"></span><script type="math/tex">45</script> grader (eller <span class="matematik"></span><script type="math/tex">\pi/4</script>). Hvad gælder om <span class="matematik"></span><script type="math/tex">x</script>?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">x = \sin(\pi/4).</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">2 x^2 = 1.</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">x = \frac{\sqrt{2}}{2}.</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">x = \sin(3\pi/4).</script>
+</div></div></div><button id="quizbutton4" class = "btn btn-default">Check</button><script>$("#quizbutton4").click(function(){quizshowanswers(quiz4, quizbutton4);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+For den retvinklede trekant 
+<span id="retvcossin"></span>
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Talogvekt/CosSin.svg">
+</p>
+
+<p class="indent text-justify">
+kan man også via definitionen af cosinus og sinus ud fra enhedscirklen finde frem
+til formlerne
+<div class="frameit">
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+c \cos(\theta) &= a\\
+c \sin(\theta) &= b
+\end{aligned}</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<span class="mark">Disse formler er meget nyttige, når man skal regne
+på vektorer i planen</span>.
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#c6140d24-da2f-43e4-90d8-c9c2c2549312" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="c6140d24-da2f-43e4-90d8-c9c2c2549312" class="collapse">
+Findes en retvinklet trekant med sidelængder <span class="matematik"></span><script type="math/tex">3</script>, <span class="matematik"></span><script type="math/tex">4</script> og <span class="matematik"></span><script type="math/tex">5</script>? I givet fald, 
+bestem vinklerne i denne trekant.
+</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Projektionen_af_en_vektor_på_en_anden_vektor">Projektionen af en vektor på en anden vektor</h2>
+</p>
+
+<p class="indent text-justify">
+Givet to vektorer <span class="matematik"></span><script type="math/tex">u</script> og <span class="matematik"></span><script type="math/tex">v</script> som nedenfor, hvor meget (<span class="matematik"></span><script type="math/tex">\lambda</script>) skal vi forkorte eller
+forlænge <span class="matematik"></span><script type="math/tex">v</script> med for at afstanden mellem <span class="matematik"></span><script type="math/tex">\lambda v</script> og <span class="matematik"></span><script type="math/tex">u</script> bliver mindst mulig?
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Talogvekt/projektion.svg">
+</p>
+
+<p class="indent text-justify">
+Der er her tale et minimeringsproblem. Vi kender vektorerne <span class="matematik"></span><script type="math/tex">u</script> og <span class="matematik"></span><script type="math/tex">v</script> og skal finde tallet <span class="matematik"></span><script type="math/tex">\lambda</script> så længden
+<div class="matematik"></div><script type="math/tex; mode=display">
+\left\vert u - \lambda v \right\vert
+</script>
+af vektoren <span class="matematik"></span><script type="math/tex">u - \lambda v</script> bliver minimal. Det er præcis det samme som at finde <span class="matematik"></span><script type="math/tex">\lambda</script>, som minimerer funktionen
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+f(\lambda) &= |u - \lambda v|^2 = (u - \lambda v)\cdot (u - \lambda v) = 
+u\cdot u -2 \lambda u\cdot v + \lambda^2 v\cdot v\\ 
+&=\left\vert v \right\vert^2 \lambda^2 - 2 (u\cdot v) \lambda + \left\vert u \right\vert^2.
+\end{aligned}</script>
+Faktisk er <span class="matematik"></span><script type="math/tex">f(\lambda)</script> en parabel (i <span class="matematik"></span><script type="math/tex">\lambda</script>), som vender benene opad og med
+bundpunkt for 
+<div class="matematik"></div><script type="math/tex; mode=display">
+\lambda = -\frac{-2 (u\cdot v)}{2 \left\vert v \right\vert^2} = \frac{u\cdot v}{\left\vert v \right\vert^2}.
+</script>
+Med denne værdi for <span class="matematik"></span><script type="math/tex">\lambda</script> gælder
+<div class="matematik"></div><script type="math/tex; mode=display">
+(u - \lambda v) \cdot v = 0
+</script>
+dvs vektorerne <span class="matematik"></span><script type="math/tex">u-\lambda v</script> og <span class="matematik"></span><script type="math/tex">v</script> er vinkelrette. Måske ikke så overraskende ud fra tegningen ovenfor. Vektoren <span class="matematik"></span><script type="math/tex">\lambda v</script> kaldes for projektionen af
+<span class="matematik"></span><script type="math/tex">u</script> på <span class="matematik"></span><script type="math/tex">v</script>.
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/th5cvI0NFos?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div> 
+<p class="Quiz"><a href="#d575d318-6bcf-4f5c-b66d-61534743cd74" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="d575d318-6bcf-4f5c-b66d-61534743cd74" class="collapse">
+<div id="quiz5" style="width:100%;"><div class="row quizquestion">
+Lad <span class="matematik"></span><script type="math/tex">d</script> betegne afstanden fra punktet <span class="matematik"></span><script type="math/tex">(1, 1)</script> til linjen gennem <span class="matematik"></span><script type="math/tex">(0, 0)</script> og <span class="matematik"></span><script type="math/tex">(2, 1)</script>. Hvad gælder om <span class="matematik"></span><script type="math/tex">d</script>?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<div class="matematik"></div><script type="math/tex; mode=display">
+d = \frac{1}{2}.
+</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="matematik"></div><script type="math/tex; mode=display">
+d = 0.447214.
+</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">
+d = \frac{\sqrt{5}}{5}.
+</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="matematik"></div><script type="math/tex; mode=display">
+d = \frac{2}{\sqrt{5}}.
+</script>
+</div></div></div><button id="quizbutton5" class = "btn btn-default">Check</button><script>$("#quizbutton5").click(function(){quizshowanswers(quiz5, quizbutton5);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+Ud fra <a href="#retvcossin">formlerne</a> for retvinklede trekanter får vi
+<div class="matematik"></div><script type="math/tex; mode=display">
+\left\vert u \right\vert \cos(\theta) = \left\vert v \right\vert \lambda
+</script>
+og dermed <span class="mark">den smukke formel for cosinus til vinklen <span class="matematik"></span><script type="math/tex">\theta</script> mellem vektorerne <span class="matematik"></span><script type="math/tex">u</script> og <span class="matematik"></span><script type="math/tex">v</script></span>:
+<div class="frameit">
+<span id="1.6"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\cos(\theta) = 
+\frac{u\cdot v} {\left\vert u \right\vert \left\vert v \right\vert}.
+\tag{1.6}</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<span id="addcossin"></span>
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Cosinus_og_sinus_for_summen_af_to_vinkler">Cosinus og sinus for summen af to vinkler</h2>
+</p>
+
+<p class="indent text-justify">
+Man kan ret nemt overbevise sig om at <span class="mark"><span class="matematik"></span><script type="math/tex">\cos(A + B)</script> ikke er lig med</span>
+<div class="matematik"></div><script type="math/tex; mode=display">
+\cos(A) + \cos(B)
+</script>
+for to vinkler <span class="matematik"></span><script type="math/tex">A</script> og <span class="matematik"></span><script type="math/tex">B</script>.
+For eksempel er <span class="matematik"></span><script type="math/tex">1 = \cos(0) = \cos(0 + 0)</script> ikke lig med <span class="matematik"></span><script type="math/tex">\cos(0) + \cos(0) = 2</script>. Men 
+findes der en formel, som udtrykker <span class="matematik"></span><script type="math/tex">\cos(A + B)</script> ved hjælp af
+cosinus og sinus til <span class="matematik"></span><script type="math/tex">A</script> og <span class="matematik"></span><script type="math/tex">B</script>?
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Talogvekt/CosSum.svg">
+</p>
+
+<p class="indent text-justify">
+Ud fra tegningen ovenfor kan vi udlede en formel for cosinus til
+differencen mellem de to vinkler <span class="matematik"></span><script type="math/tex">A</script> og <span class="matematik"></span><script type="math/tex">B</script>. Da de to vektorer er
+<a href="#defenhedsvektor">enhedsvektorer</a> er deres prikprodukt ud fra den smukke formel <a href="#1.6">(1.6)</a> netop lig med cosinus 
+til forskellen mellem deres vinkler dvs.
+<div class="frameit">
+<span id="1.7"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\cos(A - B) = \begin{pmatrix} \cos(A) \\ \sin(A) \end{pmatrix} \cdot
+\begin{pmatrix} \cos(B) \\ \sin(B) \end{pmatrix} = \cos(A) \cos(B) + \sin(A) \sin(B).
+\tag{1.7}</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/AzI2QAkqCcs?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div> 
+Ved at lave et mindre hack og udskifte <span class="matematik"></span><script type="math/tex">B</script> med <span class="matematik"></span><script type="math/tex">-B</script> i formlen <a href="#1.7">(1.7)</a> får vi
+</p>
+
+<p class="indent text-justify">
+<div class="matematik"></div><script type="math/tex; mode=display">
+\cos(A + B) = \cos(A - (- B)) = \cos(A)\cos(-B) + \sin(A)\sin(-B) 
+</script>
+</p>
+
+<p class="indent text-justify">
+Ved nu at benytte <span class="matematik"></span><script type="math/tex">\cos(-B) = \cos(B)</script> og <span class="matematik"></span><script type="math/tex">\sin(-B) = - \sin(B)</script> (se
+<a href="#trigfms">de grundlæggende trigonometriske formler</a>) kommer vi frem til formlen
+<div class="frameit">
+<span id="1.8"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\cos(A + B) = \cos(A) \cos(B) - \sin(A) \sin(B). 
+\tag{1.8}</script>
+</div>
+Hvad med additionsformler for sinus? Her benyttes igen de <a href="#trigfms">trigonometriske formler</a> til at slutte
+<div class="matematik"></div><script type="math/tex; mode=display">
+\sin(x) = \cos\left(x + \frac{\pi}{2}\right)\quad\text{samt}\quad
+-\cos(x) = \sin\left(x + \frac{\pi}{2}\right)
+</script>
+dvs
+<div class="matematik"></div><script type="math/tex; mode=display">
+\sin(A + B) = \cos\left(A + B +\frac{\pi}{2}\right) = \cos(A) \cos\left(B+\frac{\pi}{2}\right)  -
+\sin(A) \sin\left(B+\frac{\pi}{2}\right).
+</script>
+og dermed
+<div class="frameit">
+<span id="1.9"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\sin(A + B) = \cos(A) \sin(B) + \sin(A) \cos(B).
+\tag{1.9}</script>
+</div>
+Nu overlades det som en opgave til læseren at overbevise sig om at den sidste formel
+<div class="frameit">
+<span id="1.10"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\sin(A - B) = \sin(A) \cos(B) - \sin(B) \cos(A)
+\tag{1.10}</script>
+</div>
+gælder.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Opgaver">Opgaver</h2>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+</p>
+
+<p class="indent text-justify">
+<p class="Quizopgave"><a href="#2495e4e3-92b4-4d33-8be3-57834a261498" class="btn btn-default" data-toggle="collapse">Quizopgave</a></p><div id="2495e4e3-92b4-4d33-8be3-57834a261498" class="collapse">
+<div id="quiz6" style="width:100%;"><div class="row quizquestion">
+Lad <span class="matematik"></span><script type="math/tex">d</script> betegne afstanden fra punktet <span class="matematik"></span><script type="math/tex">(2, 1)</script> til linjen gennem <span class="matematik"></span><script type="math/tex">(0, 0)</script> og <span class="matematik"></span><script type="math/tex">(1, 3)</script>. Hvad gælder om <span class="matematik"></span><script type="math/tex">d</script>?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">
+d > \frac{3}{2}.
+</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="matematik"></div><script type="math/tex; mode=display">
+1 < d < \frac{3}{2}
+</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">
+2 d^2 = 5.
+</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="matematik"></div><script type="math/tex; mode=display">
+3 d^2 = 5.
+</script>
+</div></div></div><button id="quizbutton6" class = "btn btn-default">Check</button><script>$("#quizbutton6").click(function(){quizshowanswers(quiz6, quizbutton6);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+</p>
+
+<p class="indent text-justify">
+Giv et præcist argument for at
+<div class="matematik"></div><script type="math/tex; mode=display">
+\sin(2\theta) = 2 \sin(\theta) \cos(\theta).
+</script>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+<h3 id="subsection__"> </h3>
+</p>
+
+<p class="indent text-justify">
+Lommeregneren siger at <span class="matematik"></span><script type="math/tex">\sin(\pi/3)</script> ca er <span class="matematik"></span><script type="math/tex">0.866</script>. Giv et geometrisk argument for at 
+<div class="matematik"></div><script type="math/tex; mode=display">
+\sin(\pi/3) = \frac{\sqrt{3}}{2}
+</script>
+ved hjælp af en retvinklet trekant, hvor de to ikke rette vinkler er 
+<span class="matematik"></span><script type="math/tex">\theta = \pi/3</script> og <span class="matematik"></span><script type="math/tex">\theta/2 = \pi/6</script> (dvs hhv <span class="matematik"></span><script type="math/tex">60</script> og <span class="matematik"></span><script type="math/tex">30</script> grader).
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+
+
+
+</div>
+</div>
+
+</div>
+
+<!-- Til brug ved afklikning af svar i quiz -->
+<script>
+$(document).on('click', '.quizanswer',  function(){$(this).toggleClass("toggle");});
+</script>
+
+<!-- Feedback mht svar i quiz. Button deaktiveret i et stykke tid via setTimeout! -->
+
+<script>
+var quizshowanswers = function(quizid, quizbutton){
+//
+// Hmmmm, quizid.id i stedet for quizid !!!
+//
+    str = "#"+quizid.id+" .row .quizanswer"; 
+//    str = "#quiz1 .row .quizanswer";
+    $(str).each(
+    function(){
+    obj = $(this);
+    if (obj.attr("datav") == "F")
+      obj.addClass("quizwronganswer");
+    else
+      obj.addClass("quizrightanswer");
+    });
+    setTimeout(function(){
+    $(str).each(
+    function(){
+      obj=$(this);
+      if (obj.attr("datav") == "F")
+        obj.removeClass("quizwronganswer");
+      else
+        obj.removeClass("quizrightanswer");
+      obj.removeClass("toggle");
+      obj.addClass("quizanswer");
+      })}, 3000);
+
+    strbutton="#" + quizbutton.id;
+    //strbutton = "#quizbutton1";
+    $(strbutton).attr("disabled", true);
+    setTimeout(function(){
+    $(strbutton).attr("disabled", false);
+    }, 10000);
+    };
+</script>
+
+<!-- Model fra Bjørk -->
+
+<div id="myModal" class="modal">
+
+   <div class="modal-content" style="z-index:99">
+    <div class="document" style="z-index:99">
+      <span id="myCls" class="close">&times;</span>
+      <p id="myModalMessage" style="color: black">Inge aktuel sci2u quiz</p>
+      <div id="stepboardcontainer">
+        <div id="stepboardUdvikler" style="width: 100%; z-index:99"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+

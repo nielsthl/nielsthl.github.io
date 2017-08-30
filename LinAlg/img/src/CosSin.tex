@@ -1,0 +1,18 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}[2012/04/13]
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+\begin{tikzpicture}[scale=10]
+
+\draw (0cm, 0cm) -- (0.866cm, 0cm) -- (0.866cm, 0.5cm) -- (0cm, 0cm);
+
+\draw (0.4cm, 0.25cm) node[above] {$c$};
+\draw (0.5cm, 0cm) node[below] {$a$};
+\draw (0.866cm, 0.25cm) node[right] {$b$};
+
+\draw [blue, thick, domain=0:30] plot ({0.2*cos(\x)}, {0.2*sin(\x)});
+
+\draw (0.2, 0.07) node[right] {$\theta$};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,284 @@
+<!doctype html>
+<head>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.css" integrity="sha384-BDqcjN11/6D69oC63ObubLHNvQR2fNjin6+AzxA3xalB0swTj17TxVV1tL1Q5Png" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.js" integrity="sha384-sKYm5us3z9/bRQA+cc3gPzqwI5RVgL8vJQx1lpBudr9IzHOR8fnFUH68dz1GsTQw" crossorigin="anonymous"></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+    
+    for(var i = 0; i < tex.length; ++i)
+       {
+         var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+      
+         var math = tex[i].previousSibling;
+         math.className = 'katex-render';
+        
+         var content = tex[i].textContent;
+
+	 katex.render(content, math, {
+	    displayMode: display,
+	    throwOnError: false,
+	    //macros: {"\\NN":"\\mathbb{N}",
+	    //	     "\\ZZ":"\\mathbb{Z}",
+	    //	     "\\QQ":"\\mathbb{Q}",
+	    //	     "\\RR":"\\mathbb{R}",
+	    //	     "\\CC":"\\mathbb{C}",
+	    //	     "\\tag":"\\pod\\text"}
+	    macros: {"\\tag":"\\pod\\text"} // Hack for \eqref!
+      });
+
+	tex[i].parentNode.removeChild(tex[i]);
+	
+    }
+    var eqno = document.querySelectorAll('.katex span > span.mspace.quad');
+    for(var i = 0; i < eqno.length; ++i)
+    {
+        if(eqno[i].parentNode.className)
+            continue;
+        var quad = eqno[i];
+        var span = quad.parentNode;
+        var text = span.nextSibling;
+        var pare = text.nextSibling;
+        span.removeChild(quad);
+        span.appendChild(text);
+        span.appendChild(pare);
+        span.className = 'eqno';
+    }
+});
+</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/math.css">
+
+</script>
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<style>
+      
+      html {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      }
+      .container {
+      max-width: 24cm;
+      }
+
+</style>
+
+<link rel="stylesheet" href="../css/nt0.css">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-1">
+	<div class="sidebar-nav" data-spy="affix">
+	  <!--<a href="../index.html"><i class="fa fa-book tocicon" style="color:black;"></i></a>-->
+	  <a href="../index.html"><i class="fa fa-th-list tocicon" style="color:#76323f;" title="Indholdsfortegnelse"></i></a>
+	</div>
+      </div>
+      <div class="col-xs-11">
+	
+<style> body{counter-reset: chapter 10;}</style>
+<h1 id="chapter_Anvendelser_af_lineær_algebra"><span style="float:right;">Anvendelser af lineær algebra</span></h1>
+</p>
+
+<p class="indent text-justify">
+Nedenstående anvendelse kommer fra kemi og er skrevet af <a href="http://pure.au.dk/portal/da/persons/frank-jensen(7f24d274-8bec-4667-bde5-f8f9dedc4889).html" target="_blank">Frank Jensen</a>.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Principal_component_analysis">Principal component analysis</h2>
+</p>
+
+<p class="indent text-justify">
+<a href="https://en.wikipedia.org/wiki/Principal_component_analysis" target="_blank">Principal Component Analysis (PCA)</a> er en hyppigt anvendt metode til at
+uddrage information fra store datamængder.
+</p>
+
+<p class="indent text-justify">
+Et eksempel er en computer simulering på et microsekund af et protein
+indeholdende <span class="matematik"></span><script type="math/tex">10^4</script> atomer, hvor den rå datamængde er <span class="matematik"></span><script type="math/tex">10^5</script>
+tidsmæssige adskilte positioner af <span class="matematik"></span><script type="math/tex">10^4</script> atom koordinater. Langt
+størstedelen af denne information er tilfældige termiske bevægelser, som
+ikke er interessante, mens koordinerede atombevægelser, der ændrer
+proteinets struktur er interessante.
+</p>
+
+<p class="indent text-justify">
+Et andet eksempel er korrelationen mellem molekylers struktur og deres
+biologiske virkning, hvor et molekyles vekselvirkninger med det
+biologiske target kan kvantificeres ved dets egenskaber i f.eks.
+<span class="matematik"></span><script type="math/tex">10^4</script> punkter i det <span class="matematik"></span><script type="math/tex">3</script>-dimensionale rum omkring molekylet. I en
+<a href="https://en.wikipedia.org/wiki/Quantitative_structure-activity_relationship" target="_blank">Quantitative Structure Activity Relationship (QSAR)</a> forsøger man at
+finde hvilke områder omkring et molekyle, der er vigtig for den
+biologiske virkning, ud fra informationen om hvordan de <span class="matematik"></span><script type="math/tex">10^4</script>
+beskrivende variable for f.eks. <span class="matematik"></span><script type="math/tex">50</script> molekyler korrelerer med deres
+biologiske aktivitet.
+</p>
+
+<p class="indent text-justify">
+Den rå information kan arrangeres i en rektangulær matrix <span class="matematik"></span><script type="math/tex">M</script>, og vi
+er interesseret i korrelationen mellem elementerne i matricen. Dette kan
+vi finde ud fra en analyse af <span class="matematik"></span><script type="math/tex">A = M^t M</script>, som er en symmetrisk
+kvadratisk matrix. En sådan matrix kan ifølge noterne altid
+diagonaliseres ved en unitær transformation, hvor <span class="matematik"></span><script type="math/tex">U</script>-matricen
+indeholder egenvektorerne.
+</p>
+
+<p class="indent text-justify">
+<div class="frameit">
+<span id="10.1"></span><div class="matematik"></div><script type="math/tex; mode=display">
+A = M^t M, \qquad \Lambda = U^t A U.
+\tag{10.1}</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+Den omvendte transformation betyder at den originale matrix kan
+konstrueres ud fra egenværdierne og egenvektorerne.
+</p>
+
+<p class="indent text-justify">
+<div class="frameit">
+<span id="10.2"></span><div class="matematik"></div><script type="math/tex; mode=display">
+A = U \Lambda U^t
+\tag{10.2}</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+Ideen i PCA er at repræsentere informationen i <span class="matematik"></span><script type="math/tex">A</script> matricen som en
+approksimation ved kun nogle få egenvektorer. Egenværdierne fra
+diagonalisering af A matricen, relativt til summen af alle
+egenværdier, giver et mål for, hvor stor en brøkdel af den originale
+information et given antal egenvektorer kan repræsentere.
+Egenvektorerne kaldes Principal Components, og egenvektoren svarende
+til den største egenværdi beskriver den største variation af de
+originale variable, egenvektoren med den næst-største egenværdi
+beskriver den næst-største variation af de original variable,
+etc. Ofte kan man repræsentere 80-90% af informationen i en matrix
+med dimension ~<span class="matematik"></span><script type="math/tex">10^4</script> med kun nogle få (<span class="matematik"></span><script type="math/tex">1</script>-<span class="matematik"></span><script type="math/tex">5</script>) Principal Components.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Opgaver">Opgaver</h2>
+Vi vil illustrere principperne ved følgende <span class="matematik"></span><script type="math/tex">A</script> matrix.
+<div class="matematik"></div><script type="math/tex; mode=display">
+A = 
+\begin{pmatrix}
+28.5 & 28.5 & 33.0\\
+28.5 & 38.5 & 33.0\\
+33.0 & 33.0 & 34.0
+\end{pmatrix}
+</script>
+<h3 id="subsection__"> </h3>
+Diagonaliser <span class="matematik"></span><script type="math/tex">A</script> matricen og vis at den originale <span class="matematik"></span><script type="math/tex">A</script> matrix kan
+rekonstrueres ud fra dens egenværdier og egenvektorer fra <a href="#10.2">(10.2)</a>.
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+Udregn matricen <span class="matematik"></span><script type="math/tex">A_1</script> ved den omvendte transformation
+<a href="#10.2">(10.2)</a> af kun egenvektoren med den største egenværdi
+(dvs. sæt de to andre egenværdier = <span class="matematik"></span><script type="math/tex">0</script>).  Beregn %-fejlen ud fra en
+sammenligning af alle elementerne af <span class="matematik"></span><script type="math/tex">A</script> og <span class="matematik"></span><script type="math/tex">A_1</script> matricen.
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+</p>
+
+<p class="indent text-justify">
+Beregn %-fejlen ud fra en sammenligning af alle elementerne af <span class="matematik"></span><script type="math/tex">A</script> og
+matricen <span class="matematik"></span><script type="math/tex">A_2</script>, svarende til den omvendte transformation
+<a href="#10.2">(10.2)</a> med egenvektorer hørende til de to største
+egenværdier.
+</div>
+</div>
+
+</div>
+
+<!-- Til brug ved afklikning af svar i quiz -->
+<script>
+$(document).on('click', '.quizanswer',  function(){$(this).toggleClass("toggle");});
+</script>
+
+<!-- Feedback mht svar i quiz. Button deaktiveret i et stykke tid via setTimeout! -->
+
+<script>
+var quizshowanswers = function(quizid, quizbutton){
+//
+// Hmmmm, quizid.id i stedet for quizid !!!
+//
+    str = "#"+quizid.id+" .row .quizanswer"; 
+//    str = "#quiz1 .row .quizanswer";
+    $(str).each(
+    function(){
+    obj = $(this);
+    if (obj.attr("datav") == "F")
+      obj.addClass("quizwronganswer");
+    else
+      obj.addClass("quizrightanswer");
+    });
+    setTimeout(function(){
+    $(str).each(
+    function(){
+      obj=$(this);
+      if (obj.attr("datav") == "F")
+        obj.removeClass("quizwronganswer");
+      else
+        obj.removeClass("quizrightanswer");
+      obj.removeClass("toggle");
+      obj.addClass("quizanswer");
+      })}, 3000);
+
+    strbutton="#" + quizbutton.id;
+    //strbutton = "#quizbutton1";
+    $(strbutton).attr("disabled", true);
+    setTimeout(function(){
+    $(strbutton).attr("disabled", false);
+    }, 10000);
+    };
+</script>
+
+<!-- Model fra Bjørk -->
+
+<div id="myModal" class="modal">
+
+   <div class="modal-content" style="z-index:99">
+    <div class="document" style="z-index:99">
+      <span id="myCls" class="close">&times;</span>
+      <p id="myModalMessage" style="color: black">Inge aktuel sci2u quiz</p>
+      <div id="stepboardcontainer">
+        <div id="stepboardUdvikler" style="width: 100%; z-index:99"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+

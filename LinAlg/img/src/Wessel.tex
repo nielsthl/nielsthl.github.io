@@ -1,0 +1,13 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}[2012/04/13]
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+\begin{tikzpicture}[scale=10]
+\draw[->] (-0.2cm, 0cm) -- (1.2cm, 0cm) node[right, fill=white] {$x$};
+\draw[->] (0cm, -0.5cm) -- (0cm, 0.7cm) node[above, fill=white] {$y$};
+\draw[thick, ->] (0cm, 0cm) -- (0.866cm, 0.5cm) node[right] {$z = x + y i$};
+\draw[thick, ->] (0cm, 0cm) -- (0.866cm, -0.5cm) node[right] {$\overline{z} = x - y i$};
+\draw [blue, thick, domain=0:30] plot ({0.25*cos(\x)}, {0.25*sin(\x)});
+\draw (0.25cm, 0.08cm) node[right] {$\theta$};
+\end{tikzpicture}
+\end{document}

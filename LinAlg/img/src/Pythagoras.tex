@@ -1,0 +1,19 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}[2012/04/13]
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+\begin{tikzpicture}[scale=10]
+\draw[->] (-0.2cm, 0cm) -- (1.2cm, 0cm) node[right, fill=white] {$x$};
+\draw[->] (0cm, -0.2cm) -- (0cm, 0.7cm) node[above, fill=white] {$y$};
+\draw[->] (0cm, 0cm) -- (0.866cm, 0.5cm) node[right] {$(a, b)$};;
+\draw (0.4cm, 0.26cm) node[above] {$c$};
+
+\draw[dashed] (0.866cm, 0.46cm) -- (0.866cm, 0cm);
+\draw[dashed] (0.82cm, 0.5cm) -- (0cm, 0.5cm);
+
+\draw (0.5cm, 0.51cm) node[above] {$a$};
+\draw (0.866cm, 0.25cm) node[right] {$b$};
+
+
+\end{tikzpicture}
+\end{document}

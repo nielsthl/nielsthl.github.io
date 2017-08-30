@@ -1,0 +1,15 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}[2012/04/13]
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+\begin{tikzpicture}[scale=10]
+
+\draw (0cm, 0cm) -- (1cm, 0cm) -- (1cm, 1cm) -- (0cm, 1cm) -- (0cm, 0cm);
+\draw[thick] (0cm, 0cm) -- (1cm, 1cm);
+
+\draw (0.47cm, 0.5cm) node[above] {$\sqrt{2}$};
+\draw (0.5cm, 0cm) node[below] {$1$};
+\draw (1cm, 0.5cm) node[right] {$1$};
+
+\end{tikzpicture}
+\end{document}

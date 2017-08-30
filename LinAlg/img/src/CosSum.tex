@@ -1,0 +1,29 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}[2012/04/13]
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+\begin{tikzpicture}[scale=5]
+\draw[thick](0cm, 0cm) circle (1cm);
+\draw[->] (-1.2cm, 0cm) -- (1.2cm, 0cm) node[right, fill=white] {$x$};
+\draw[->] (0cm, -1.2cm) -- (0cm, 1.2cm) node[above, fill=white] {$y$};
+\draw (0cm, 0cm) -- (0.866cm, 0.5cm);
+
+\draw (0cm, 0cm) -- (0.5cm, 0.866cm);
+\filldraw (0.5cm, 0.866cm) circle (0.01cm);
+
+\draw (0.5cm, 0.9cm)  node[right] {$(\cos(A), \sin(A))$};
+
+\draw [blue, thick, domain=0:60] plot ({0.4*cos(\x)}, {0.4*sin(\x)});
+\draw (0.3cm, 0.33cm) node[right] {$A$};
+
+\draw [orange, thick, domain=0:30] plot ({0.25*cos(\x)}, {0.25*sin(\x)});
+
+\filldraw (0.866cm, 0.5cm) circle (0.01cm) node[right] {$(\cos(B), \sin(B))$};
+\draw (0.25cm, 0.08cm) node[right] {$B$};
+
+\draw [red, thick, domain=30:60] plot ({0.6*cos(\x)}, {0.6*sin(\x)});
+\draw (0.52cm, 0.45cm) node[above] {$A-B$};
+
+
+\end{tikzpicture}
+\end{document}

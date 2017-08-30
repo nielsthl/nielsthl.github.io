@@ -1,0 +1,49 @@
+document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+    
+    //alert("I am running!");
+    
+    for(var i = 0; i < tex.length; ++i)
+    {
+	var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+	
+	var math = tex[i].previousSibling;
+
+
+	while(math && math.className != 'MathJax_Preview')
+            math = math.previousSibling;
+        if(!math)
+            math = document.createElement(display ? 'div' : 'span');
+        math.className = 'katex-render';
+        
+        var content = tex[i].textContent
+	
+	katex.render(content, math, {
+	    displayMode: display,
+	    throwOnError: false,
+	    //macros: {"\\NN":"\\mathbb{N}",
+	    //	     "\\ZZ":"\\mathbb{Z}",
+	    //	     "\\QQ":"\\mathbb{Q}",
+	    //	     "\\RR":"\\mathbb{R}",
+	    //	     "\\CC":"\\mathbb{C}",
+	    //	     "\\tag":"\\pod\\text"}
+	    macros: {"\\tag":"\\pod\\text"} // Hack for \eqref!
+	});
+	tex[i].parentNode.removeChild(tex[i]);
+	
+    }
+    var eqno = document.querySelectorAll('.katex span > span.mspace.quad');
+    for(var i = 0; i < eqno.length; ++i)
+    {
+        if(eqno[i].parentNode.className)
+            continue;
+        var quad = eqno[i];
+        var span = quad.parentNode;
+        var text = span.nextSibling;
+        var pare = text.nextSibling;
+        span.removeChild(quad);
+        span.appendChild(text);
+        span.appendChild(pare);
+        span.className = 'eqno';
+    }
+});

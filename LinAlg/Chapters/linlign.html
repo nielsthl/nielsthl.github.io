@@ -1,0 +1,977 @@
+<!doctype html>
+<head>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.css" integrity="sha384-BDqcjN11/6D69oC63ObubLHNvQR2fNjin6+AzxA3xalB0swTj17TxVV1tL1Q5Png" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.js" integrity="sha384-sKYm5us3z9/bRQA+cc3gPzqwI5RVgL8vJQx1lpBudr9IzHOR8fnFUH68dz1GsTQw" crossorigin="anonymous"></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+    
+    for(var i = 0; i < tex.length; ++i)
+       {
+         var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+      
+         var math = tex[i].previousSibling;
+         math.className = 'katex-render';
+        
+         var content = tex[i].textContent;
+
+	 katex.render(content, math, {
+	    displayMode: display,
+	    throwOnError: false,
+	    //macros: {"\\NN":"\\mathbb{N}",
+	    //	     "\\ZZ":"\\mathbb{Z}",
+	    //	     "\\QQ":"\\mathbb{Q}",
+	    //	     "\\RR":"\\mathbb{R}",
+	    //	     "\\CC":"\\mathbb{C}",
+	    //	     "\\tag":"\\pod\\text"}
+	    macros: {"\\tag":"\\pod\\text"} // Hack for \eqref!
+      });
+
+	tex[i].parentNode.removeChild(tex[i]);
+	
+    }
+    var eqno = document.querySelectorAll('.katex span > span.mspace.quad');
+    for(var i = 0; i < eqno.length; ++i)
+    {
+        if(eqno[i].parentNode.className)
+            continue;
+        var quad = eqno[i];
+        var span = quad.parentNode;
+        var text = span.nextSibling;
+        var pare = text.nextSibling;
+        span.removeChild(quad);
+        span.appendChild(text);
+        span.appendChild(pare);
+        span.className = 'eqno';
+    }
+});
+</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/math.css">
+
+</script>
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<style>
+      
+      html {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      }
+      .container {
+      max-width: 24cm;
+      }
+
+</style>
+
+<link rel="stylesheet" href="../css/nt0.css">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-1">
+	<div class="sidebar-nav" data-spy="affix">
+	  <!--<a href="../index.html"><i class="fa fa-book tocicon" style="color:black;"></i></a>-->
+	  <a href="../index.html"><i class="fa fa-th-list tocicon" style="color:#76323f;" title="Indholdsfortegnelse"></i></a>
+	</div>
+      </div>
+      <div class="col-xs-11">
+	
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+
+
+
+
+
+</p>
+
+<p class="indent text-justify">
+
+
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<style> body{counter-reset: chapter 3;}</style>
+<h1 id="chapter_Lineære_ligninger"><span style="float:right;">Lineære ligninger</span></h1>
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/JFTwV6KzgQI?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div> 
+Lineære ligninger optræder i et utal af anvendelser af matematikken og
+udgør det idemæssige fundament for lineær algebra. Inden vi 
+berører de mere abstrakte dele af den lineære algebra ser vi
+nærmere på lineære ligninger og deres anvendelser.
+</p>
+
+<p class="indent text-justify">
+Lineære ligninger er ligninger, hvor de ubekendte optræder i første
+potens. For eksempel er <span class="matematik"></span><script type="math/tex">2 x - 3 = 1</script> en lineær ligning i den
+ubekendte <span class="matematik"></span><script type="math/tex">x</script>, mens <span class="matematik"></span><script type="math/tex">x^2 + x + 1 = 0</script> ikke er det, da den ubekendte
+<span class="matematik"></span><script type="math/tex">x</script> optræder i anden potens. Lineære ligninger dækker også over 
+flere ligninger med flere ubekendte som f.eks. følgende tre
+ligninger med de tre ubekendte <span class="matematik"></span><script type="math/tex">x, y</script> og <span class="matematik"></span><script type="math/tex">z</script>.
+</p>
+
+<p class="indent text-justify">
+<span id="3.1"></span><div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+x + y + z &= 3\\
+x - y + z &= 1\\ 
+x + y - z &= 1
+\end{aligned}\tag{3.1}</script>
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#b03fa660-09c1-4330-bc56-df2530a7abcf" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="b03fa660-09c1-4330-bc56-df2530a7abcf" class="collapse">
+Gæt en løsning til ligningerne i <a href="#3.1">(3.1)</a> dvs gæt på tre tal
+<span class="matematik"></span><script type="math/tex">x, y, z</script>, som tilfredsstiller alle tre ligninger. Findes der
+mere end en løsning?
+</p>
+
+<p class="indent text-justify">
+Opskriv
+to ligninger med to ubekendte, som ikke har en løsning.
+</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_En_ligning_med_en_ubekendt">En ligning med en ubekendt</h2>
+</p>
+
+<p class="indent text-justify">
+Der er nogle ganske enkle regler for
+løsning af lineære ligninger.
+Lad os, som eksempel, kigge nærmere på ligningen <span class="matematik"></span><script type="math/tex">2 x - 3 = 1</script>. Processen
+for at isolere <span class="matematik"></span><script type="math/tex">x</script> er helt mekanisk:
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+2 x - 3 &= 1\\
+&\Updownarrow\\
+2 x - 3 + 3 &= 1 + 3\\
+&\Updownarrow\\
+2 x &= 4\\
+&\Updownarrow\\
+\left(\frac{1}{2}\right) 2 x &= \left(\frac{1}{2}\right) 4\\ 
+&\Updownarrow\\
+x &= 2
+\end{aligned}</script>
+De overordnede regler vi har brugt er
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+&a=b\qquad \Leftrightarrow \qquad a + c = b + c\\
+&a=b\qquad \Leftrightarrow \qquad t a = t b,
+\end{aligned}</script>
+hvor <span class="matematik"></span><script type="math/tex">a, b, c</script> er tal og <span class="matematik"></span><script type="math/tex">t</script> et tal <span class="matematik"></span><script type="math/tex">\neq 0</script>. Disse regler gør at vi altid
+kan isolere den ubekendte på den ene side af lighedstegnet.
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#1a5d1966-7269-4566-8cec-386516d04fd3" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="1a5d1966-7269-4566-8cec-386516d04fd3" class="collapse">
+Hvorfor bliver vi nødt til at kræve at <span class="matematik"></span><script type="math/tex">t\neq 0</script> ovenfor?
+</div>
+</p>
+
+<p class="indent text-justify">
+<p class="Quiz"><a href="#29d56aed-6d83-42c2-b490-a5ae21b626f6" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="29d56aed-6d83-42c2-b490-a5ae21b626f6" class="collapse">
+<div id="quiz1" style="width:100%;"><div class="row quizquestion">
+Fysiologisk saltvand består af <span class="matematik"></span><script type="math/tex">0.9\%</script> salt. Du
+har <span class="matematik"></span><script type="math/tex">2</script> liter vand med en saltkoncentration på <span class="matematik"></span><script type="math/tex">9\%</script>. Hvor
+mange liter destilleret vand (<span class="matematik"></span><script type="math/tex">0</script> procent salt) skal du tilsætte for at få
+fysiologisk saltvand?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">4.5</script> liter
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">10</script> liter
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="matematik"></span><script type="math/tex">18</script> liter
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Flere_ligninger_og_flere_ubekendte">Flere ligninger og flere ubekendte</h2>
+</p>
+
+<p class="indent text-justify">
+Ligningen <span class="matematik"></span><script type="math/tex">2 x - 3 = 1</script> indeholder kun en ubekendt og har kun
+løsningen <span class="matematik"></span><script type="math/tex">x=2</script>. <em>Hvis en lineær ligning indeholder mere end
+en ubekendt har den uendeligt mange løsninger</em>. Tag som eksempel
+ligningen <span class="matematik"></span><script type="math/tex">2 x - 3 y = 1</script>. Ved samme omskrivninger som ovenfor gælder
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+2 x - 3 y &= 1\\
+&\Updownarrow\\
+x &= \frac{1}{2} + \frac{3}{2} y
+\end{aligned}</script>
+Her kan vi altså vælge <span class="matematik"></span><script type="math/tex">y</script> frit på uendeligt mange måder, men når
+først <span class="matematik"></span><script type="math/tex">y</script> er valgt er <span class="matematik"></span><script type="math/tex">x</script> lagt fast.
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection_Flere_ligninger">Flere ligninger</h3>
+</p>
+
+<p class="indent text-justify">
+Det giver også mening at betragte flere ligninger med flere ubekendte
+som f.eks.
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+x + y &= 3\\
+2 x - 3 y &= 1
+\end{aligned}</script>
+To tal <span class="matematik"></span><script type="math/tex">x</script> og <span class="matematik"></span><script type="math/tex">y</script> er en løsning hvis begge ligningerne er opfyldt.
+Fra eksemplet ovenfor ved vi at den anden ligning medfører at
+<span id="3.2"></span><div class="matematik"></div><script type="math/tex; mode=display">
+x = \color{blue}{\frac{1}{2} + \frac{3}{2} y}. 
+\tag{3.2}</script>
+Dette kan indsættes for <span class="matematik"></span><script type="math/tex">x</script> i den
+første ligning og vi får 
+<div class="matematik"></div><script type="math/tex; mode=display">
+3 = x + y = \color{blue}{\frac{1}{2} + \frac{3}{2} y} + y = \frac{1}{2} + \frac{5}{2} y.
+</script>
+Dette er en almindelig førstegradsligning kun i variablen <span class="matematik"></span><script type="math/tex">y</script>. Løsningen 
+er <span class="matematik"></span><script type="math/tex">y=1</script>, som så indsættes i ligningen <a href="#3.2">(3.2)</a>. Her ses så at
+<span class="matematik"></span><script type="math/tex">x = 2</script>. Dvs de to ligninger har løsningen <span class="matematik"></span><script type="math/tex">x= 2</script> og <span class="matematik"></span><script type="math/tex">y=1</script>.
+</p>
+
+<p class="indent text-justify">
+<p class="Quiz"><a href="#4744d9f8-0c10-4716-8f64-e6c0b1aedf1c" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="4744d9f8-0c10-4716-8f64-e6c0b1aedf1c" class="collapse">
+<div id="quiz2" style="width:100%;"><div class="row quizquestion">
+Kona kaffe fra Hawaii er en udsøgt delikatesse til 200 kr for 400 gram.
+En standard pose Arabica bønner kan fås til 60 kroner for 500 gram. En
+forhandler vil gerne lave en blandingskaffe af de to bønner til en
+pris på 75 kroner for 400 gram. Hvilken af nedenstående procentsatser vil 
+Konaindholdet i blandingskaffen 
+ligge tættest på?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="T">
+<span class="matematik"></span><script type="math/tex">18\%</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">5\%</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">30\%</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">12\%</script>
+</div></div></div><button id="quizbutton2" class = "btn btn-default">Check</button><script>$("#quizbutton2").click(function(){quizshowanswers(quiz2, quizbutton2);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Gauss_elimination">Gauss elimination</h2>
+</p>
+
+<p class="indent text-justify">
+Ved løsning af flere lineære ligninger, er det naturligt at
+fastholde en af ligningerne, isolere en variabel 
+og så indsætte i de andre ligninger. Lad os studere
+denne operation via et eksempel med to ligninger med tre ubekendte:
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+x + 2 y + z &= 8\\
+2 x + y + z &= 7
+\end{aligned}</script>
+I den første ligning isoleres <span class="matematik"></span><script type="math/tex">x = 8 - 2 y - z</script>, som så indsættes i den anden
+ligning:
+<div class="matematik"></div><script type="math/tex; mode=display">
+2 x + y + z = 2(8 - 2 y - z) + y + z = - 3 y - z + 16 = 7 \Rightarrow -3 y - z = -9. 
+</script>
+I ligningssystemet giver det også god mening at gange første ligning med <span class="matematik"></span><script type="math/tex">2</script> og trække fra anden ligning. Denne operation giver ligningen
+<div class="matematik"></div><script type="math/tex; mode=display">
+-3 y -  z = -9.
+</script>
+At de to operationer giver samme ligning er ikke noget tilfælde. Det er indholdet af
+følgende resultat.
+</p>
+
+<p class="indent text-justify">
+<div class="theorem">
+Lad 
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+a_1 x_1 + a_2 x_2 + \cdots + a_n x_n &= c_1\\
+b_1 x_1 + b_2 x_2 + \cdots + b_n x_n &= c_2
+\end{aligned}</script>
+være to lineære ligninger i de ubekendte <span class="matematik"></span><script type="math/tex">x_1, \ldots, x_n</script> med
+<span class="matematik"></span><script type="math/tex">a_1\neq 0</script>. Ligningen som fremkommer ved først
+at isolere <span class="matematik"></span><script type="math/tex">x_1</script> i den første ligning og derefter indsætte
+udtrykket for <span class="matematik"></span><script type="math/tex">x_1</script> i den anden ligning svarer præcis til ligningen,
+som fremkommer ved at gange første ligning med <span class="matematik"></span><script type="math/tex">-b_1/a_1</script> og 
+addere til anden ligning.
+</p>
+
+<p class="indent text-justify">
+</div>
+<p class="Bevis"><a href="#e538d664-3a22-48fc-a531-fd83d535249e" class="btn btn-default" data-toggle="collapse">Bevis</a></p><div id="e538d664-3a22-48fc-a531-fd83d535249e" class="collapse">
+<div class="proof">
+Isolering af <span class="matematik"></span><script type="math/tex">x_1</script> i første ligning med indsættelse i anden ligning giver
+ligningen
+<span id="3.3"></span><div class="matematik"></div><script type="math/tex; mode=display">
+b_1\left(\frac{c_1}{a_1} - \frac{a_2}{a_1} x_2 - \cdots -\frac{a_n}{a_1} x_n\right) + b_2 x_2 + \cdots + b_n x_n = c_2
+\tag{3.3}</script>
+Multiplikation af første ligning med <span class="matematik"></span><script type="math/tex">-b_1/a_1</script> med efterfølgende addition til anden ligning giver ligningen
+<span id="3.4"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\left(b_2 - \frac{b_1 a_2}{a_1}\right) x_2 + \cdots +
+\left(b_n - \frac{b_1 a_n}{a_1}\right) x_n = c_2 - \frac{b_1}{a_1} c_1
+\tag{3.4}</script>
+Ved almindelige regneregler ses at <a href="#3.3">(3.3)</a> kan omskrives
+til <a href="#3.4">(3.4)</a>. 
+</div>
+</div>
+</p>
+
+<p class="indent text-justify">
+Operationen med at gange en ligning med et tal og addere til en anden ligning er 
+umiddelbart nemmere at håndtere end substitutionsmetoden og vi har ovenfor vist at
+de er ens. Nedenfor er et helt gennemregnet eksempel. 
+</p>
+
+<p class="indent text-justify">
+<p class="Eksempel"><a href="#53b47ff0-a34d-46ec-ad77-02f243760589" class="btn btn-default" data-toggle="collapse">Eksempel</a></p><div id="53b47ff0-a34d-46ec-ad77-02f243760589" class="collapse">
+</p>
+
+<p class="indent text-justify">
+Vi ønsker at løse
+ligningssystemet
+</p>
+
+<p class="indent text-justify">
+<span id="3.5"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&2 x &+ &y &+ &z &= 7\\
+&x &+ &2y &+ &z &= 8\\
+&x &+ &y &+ &2 z &= 9
+\end{matrix}.
+\tag{3.5}</script>
+</p>
+
+<p class="indent text-justify">
+
+Første trin nedenfor består i at
+trække den tredje ligning fra den anden:
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&2 x &+ &y &+ &z &= 7\\
+&x &+ &2y &+ &z &= 8\\
+&x &+ &y &+ &2 z &= 9
+\end{matrix}\quad\Leftrightarrow
+\begin{matrix}
+&2 x &+ &y &+ &z &= 7\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}
+</script>
+Derefter trækkes <span class="matematik"></span><script type="math/tex">2</script> gange tredje ligning fra den første:
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&2 x &+ &y &+ &z &= 7\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}
+\quad\Leftrightarrow
+\begin{matrix}
+& &-  &y &- &3 z &= -11\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}
+</script>
+Til sidste lægges anden ligning til første ligning:
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+& &-  &y &- &3 z &= -11\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}\quad\Leftrightarrow
+\begin{matrix}
+& &  & &- &4 z &= -12\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}
+</script>
+Vi har nu reduceret det oprindelige ligningssystem <a href="#3.5">(3.5)</a> til 
+ligningssystemet
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+& &  & &- &4 z &= -12\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix},
+</script>
+hvor vi ud fra første ligning hurtigt ser at <span class="matematik"></span><script type="math/tex">z = 3</script>. Men så kan <span class="matematik"></span><script type="math/tex">z = 3</script> sættes ind
+i anden ligning, som så bliver <span class="matematik"></span><script type="math/tex">y - 3 = -1</script> med løsning <span class="matematik"></span><script type="math/tex">y=2</script>. Til sidst sættes
+<span class="matematik"></span><script type="math/tex">y = 2</script> og <span class="matematik"></span><script type="math/tex">z=3</script> ind i den tredje ligning og man får ligningen
+<span class="matematik"></span><script type="math/tex">x + 8 = 9</script> eller <span class="matematik"></span><script type="math/tex">x=1</script>.
+</div>
+</p>
+
+<p class="indent text-justify">
+Eliminations- eller substitutionsmetoden til løsning af lineære ligningerne er en gammel kending.
+<a href="https://en.wikipedia.org/wiki/Isaac_Newton" target="_blank">Sir Isaac Newton</a> beskrev i 1720 metoden som følger.
+</p>
+
+<p class="indent text-justify">
+<blockquote>
+  <em>And you are to know, that by each Æquation one unknown Quantity may
+  be taken away, and consequently, when there are as many Æquations
+  and unknown Quantities, all at length may be reduc'd into one, in
+  which there shall be only one Quantity unknown.</em>
+</blockquote>
+</p>
+
+<p class="indent text-justify">
+Den matematiske superstjerne <a href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss" target="_blank">Carl Friedrich
+  Gauss</a> benyttede
+metoden til at bestemme banen for asteroiden
+<a href="https://en.wikipedia.org/wiki/2_Pallas" target="_blank">Pallas</a>. Den matematiske
+behandling af obervationerne ledte ham til <a href="https://en.wikipedia.org/wiki/Least_squares" target="_blank">mindste kvadraters metode</a> og
+et ligningssystem med seks lineære ligninger og seks ubekendte.
+</p>
+
+<p class="indent text-justify">
+Selvom han langt fra var den første til at løse lineære ligninger ved
+proceduren ovenfor, er metoden blevet opkaldt efter ham. I nutiden
+kendes den ved navnet <em>Gauss elimination</em>.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Anvendelser">Anvendelser</h2>
+</p>
+
+<p class="indent text-justify">
+Vi har allerede ovenfor set et par quizeksempler på anvendelser af
+lineære ligninger. Her giver vi nogle flere.
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection_Linjer,_parabler_og_polynomier_af_højere_grad">Linjer, parabler og polynomier af højere grad</h3>
+</p>
+
+<p class="indent text-justify">
+En linje i planen er karakteriseret ved dens ligning <span class="matematik"></span><script type="math/tex">y = a x + b</script>, hvor <span class="matematik"></span><script type="math/tex">a</script> er 
+hældningskoefficienten og <span class="matematik"></span><script type="math/tex">b</script> skæringen med <span class="matematik"></span><script type="math/tex">y</script>-aksen. Gennem to
+punkter <span class="matematik"></span><script type="math/tex">(x_1, y_1)</script> og <span class="matematik"></span><script type="math/tex">(x_2, y_2)</script> med <span class="matematik"></span><script type="math/tex">x_1\neq x_2</script> går præcis en linje: 
+</p>
+
+<p class="indent text-justify">
+<figure>
+<img src="../img/Linlign/linje.svg"></figure> 
+</p>
+
+<p class="indent text-justify">
+Linjen
+kan findes ved at løse to ligninger med to ubekendte:
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+x_1 a + b &= y_1\\
+x_2 a + b &= y_2
+\end{aligned}</script>
+Her er de ubekendte <span class="matematik"></span><script type="math/tex">a</script> og <span class="matematik"></span><script type="math/tex">b</script>. Lige i dette tilfælde kan vi benytte Gauss elimination og 
+trække sidste ligning fra første og få <span class="matematik"></span><script type="math/tex">(x_1 - x_2) a = y_1 - y_2</script> dvs
+<div class="matematik"></div><script type="math/tex; mode=display">
+a = \frac{y_1 - y_2}{x_1 - x_2}.
+</script>
+Ved indsættelse af <span class="matematik"></span><script type="math/tex">a</script> i første ligning fås
+<div class="matematik"></div><script type="math/tex; mode=display">
+b = \frac{x_1 y_2 -x_2 y_1}{x_1 - x_2}.
+</script>
+Vi kan helt eksplicit konstruere linjen gennem de to punkter som
+<span id="3.6"></span><div class="matematik"></div><script type="math/tex; mode=display">
+y = f(x) = y_1 \frac{x - x_2}{x_1 - x_2} + y_2 \frac{x - x_1}{x_2 - x_1}.
+\tag{3.6}</script>
+Funktionen <span class="matematik"></span><script type="math/tex">f(x)</script> i 
+<a href="#3.6">(3.6)</a> er et polynomium af grad en med
+<span class="matematik"></span><script type="math/tex">f(x_1) = y_1</script> og <span class="matematik"></span><script type="math/tex">f(x_2) = y_2</script>.
+</p>
+
+<p class="indent text-justify">
+Næsten analogt hermed går der en entydig parabel
+<div class="matematik"></div><script type="math/tex; mode=display">
+y = a x^2 + b x + c
+</script>
+gennem tre punkter <span class="matematik"></span><script type="math/tex">(x_1, y_1), (x_2, y_2)</script> og <span class="matematik"></span><script type="math/tex">(x_3, y_3)</script> med forskellige <span class="matematik"></span><script type="math/tex">x</script>-værdier:
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Linlign/parabel.svg">
+Her giver punkterne følgende tre ligninger
+<span id="3.7"></span><div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+x_1^2 a + x_1 b + c &= y_1\\
+x_2^2 a + x_2 b + c &= y_2\\
+x_3^2 a + x_3 b + c &= y_3
+\end{aligned}\tag{3.7}</script>
+i de ubekendte <span class="matematik"></span><script type="math/tex">a, b</script> og <span class="matematik"></span><script type="math/tex">c</script>, men det er ikke helt oplagt at ligningerne har en
+løsning. 
+</p>
+
+<p class="indent text-justify">
+Vi kan helt eksplicit konstruere parablen gennem de tre punkter som
+<span id="3.8"></span><div class="matematik"></div><script type="math/tex; mode=display">
+y = f(x) = y_1 \frac{(x - x_2)(x-x_3)}{(x_1 - x_2)(x_1-x_3)} + y_2 \frac{(x - x_1)(x - x_3)}{(x_2 - x_1)(x_2-x_3)} + y_3 \frac{(x - x_1)(x - x_2)}{(x_3 - x_1)(x_3-x_2)}
+\tag{3.8}</script>
+Læg igen mærke til dette fantastiske trick kopieret fra linjen ovenfor: funktionen <span class="matematik"></span><script type="math/tex">f(x)</script> i 
+<a href="#3.8">(3.8)</a> er et polynomium af grad to med
+<span class="matematik"></span><script type="math/tex">f(x_1) = y_1, f(x_2) = y_2</script> og <span class="matematik"></span><script type="math/tex">f(x_3) = y_3</script>. Samtidig giver dette et bevis
+for at ligningerne i <a href="#3.7">(3.7)</a> faktisk kan løses!
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/_kcg3rUegD4?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div> 
+Den ultimative generalisering er at til <span class="matematik"></span><script type="math/tex">n+1</script> punkter
+<span class="matematik"></span><script type="math/tex">(x_1, y_1), \cdots, (x_{n+1}, y_{n+1})</script> med forskellige <span class="matematik"></span><script type="math/tex">x</script>-værdier
+går grafen for præcis en funktion af formen (et polynomium af grad højst <span class="matematik"></span><script type="math/tex">n</script>)
+<div class="matematik"></div><script type="math/tex; mode=display">
+y = f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+</script>
+gennem punkterne. Tricket ovenfor i <a href="#3.8">(3.8)</a>, som forøvrigt kaldes <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial" target="_blank">Lagrange interpolation</a>, virker også i det generelle tilfælde.
+Nedenfor er et eksempel på 
+<span class="matematik"></span><script type="math/tex">5</script> punkter, som definerer et fjerdegradspolynomium:
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Linlign/quadric.svg">
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection_Kemisk_ligevægt">Kemisk ligevægt</h3>
+</p>
+
+<p class="indent text-justify">
+I kemiske reaktioner er et grundliggende princip massebevarelse. I
+nedenstående proces reagerer methan med oxygen og der opstår kuldioxid
+og vand som følge, men der er ubalance mellem masserne på hver
+side af pilen. 
+<div class="matematik"></div><script type="math/tex; mode=display">
+\mathrm{CH}_4 + \mathrm{O}_2\quad \longrightarrow\quad \mathrm{CO}_2 + \mathrm{H}_2\mathrm{O}
+</script>
+På venstresiden er der f.eks. fire hydrogenatomer, mens
+der på højresiden kun er to. Vi kan afstemme reaktionen ved
+at indføre fire variable <span class="matematik"></span><script type="math/tex">x, y, z, w</script>, som hver for sig angiver 
+mængden af de involverede molekyler:
+<span id="3.9"></span><div class="matematik"></div><script type="math/tex; mode=display">
+x \mathrm{CH}_4 + y \mathrm{O}_2\quad \longrightarrow\quad z \mathrm{CO}_2 + w \mathrm{H}_2\mathrm{O}
+\tag{3.9}</script>
+Ved at benytte at antallet af de enkelte atomer skal være bevaret får vi følgende
+lineære ligninger
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+x & & &- &z & & &=&0\\
+4x & & & & &- &2w &= &0\\
+&&2 y &- &2 z &- &w &= &0
+\end{matrix}
+</script>
+Igen er Gauss elimination nyttig. Vi ganger sidste ligning med <span class="matematik"></span><script type="math/tex">2</script> og trækker fra den 
+næstsidste ligning for at eliminere <span class="matematik"></span><script type="math/tex">w</script>:
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+x & & &- &z & & &=&0\\
+4x &- &4y &+ &4 z & &&= &0\\
+&&2 y &- &2 z &- &w &= &0
+\end{matrix}
+</script>
+Dernæst ganger vi første ligning med <span class="matematik"></span><script type="math/tex">4</script> og lægger til anden ligning:
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+x & & &- &z & & &=&0\\
+8x &- &4y &+ & & &&= &0\\
+&&2 y &- &2 z &- &w &= &0
+\end{matrix}
+</script>
+Nu ses at løsningerne til ligningen kun afhænger af den frie variabel <span class="matematik"></span><script type="math/tex">z</script>:
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&x&= &z\\
+&y &= &2 z\\
+&w &= &2 z
+\end{matrix}
+</script>
+Dvs der er uendeligt mange måder at balancere reaktionsskemaet <a href="#3.9">(3.9)</a> på afhængig af 
+valget af <span class="matematik"></span><script type="math/tex">z</script>. For <span class="matematik"></span><script type="math/tex">z=1</script> balancerer reaktionsskemaet som
+<div class="matematik"></div><script type="math/tex; mode=display">
+\mathrm{CH}_4 + 2 \mathrm{O}_2\quad \longrightarrow\quad  \mathrm{CO}_2 + 2 \mathrm{H}_2\mathrm{O}.
+</script>
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_En_meget_vigtig_matematisk_sætning">En meget vigtig matematisk sætning</h2>
+</p>
+
+<p class="indent text-justify">
+For at komme i gang med den lineære algebra, som egentlig blot er en fin ramme
+for studiet af lineære liginger, er der specielt et vigtigt resultat som skal vises.
+</p>
+
+<p class="indent text-justify">
+Lineære ligningssystemer med lutter nuller på højresiden kaldes <em>homogene</em>. Et eksempel kunne være
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&x &+ &y &+ &3 z &= &0\\
+&x &- &y &+ &2 z &= &0
+\end{matrix}
+</script>
+Sådanne ligningssystemer har altid løsningen, hvor alle de ubekendte er <span class="matematik"></span><script type="math/tex">0</script>. Denne
+løsning kan være den eneste som i tilfældet
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&x &+ &y &= 0\\
+&x &- &y &= 0
+\end{matrix}.
+</script>
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/pQ4kqc6ufZc?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div> 
+Det vigtige resultat er, at der altid er en løsning til et homogent
+ligningssystem forskellig fra nulløsningen, hvis <em>antallet af ubekendte
+er større end antallet af ligninger</em>, som f.eks. tilfældet <span class="matematik"></span><script type="math/tex">x + y = 0</script> med
+kun en ligning og to ubekendte.
+</p>
+
+<p class="indent text-justify">
+<div class="theorem">
+Et homogent lineært ligningssystem har altid en løsning forskellig fra nulløsningen, hvis
+antallet af ubekendte er større end antallet af ligninger.
+</div>
+</p>
+
+<p class="indent text-justify">
+<p class="Bevis"><a href="#2cf1e008-e1f4-4183-8050-3c226076b501" class="btn btn-default" data-toggle="collapse">Bevis</a></p><div id="2cf1e008-e1f4-4183-8050-3c226076b501" class="collapse">
+<div class="proof">
+Lad os antage vi kun har en ligning med <span class="matematik"></span><script type="math/tex">n>1</script> ubekendte skrevet som
+<span id="3.10"></span><div class="matematik"></div><script type="math/tex; mode=display">
+a_1 x_1 + \cdots + a_n x_n = 0.
+\tag{3.10}</script>
+Hvis alle <span class="matematik"></span><script type="math/tex">a_i = 0</script> for <span class="matematik"></span><script type="math/tex">i=1, \ldots, n</script> kan vi helt frit vælge <span class="matematik"></span><script type="math/tex">x_1, \ldots, x_n</script> som så vil være en løsning til <a href="#3.10">(3.10)</a>. Specielt har <a href="#3.10">(3.10)</a> en løsning forskellig for nulløsningen. 
+</p>
+
+<p class="indent text-justify">
+Vi kan derfor 
+uden tab af generalitet antage at <span class="matematik"></span><script type="math/tex">a_1\neq 0</script> og isolere <span class="matematik"></span><script type="math/tex">x_1</script> ud fra følgende formel
+<span id="3.11"></span><div class="matematik"></div><script type="math/tex; mode=display">
+x_1 = \frac{1}{a_1}(-a_2 x_2 -\cdots - a_n x_n).
+\tag{3.11}</script>
+Vi vælger nu de variable <span class="matematik"></span><script type="math/tex">x_2, \cdots, x_n</script> så mindst en af dem er <span class="matematik"></span><script type="math/tex">\neq 0</script> og fastlægger derefter <span class="matematik"></span><script type="math/tex">x_1</script> via <a href="#3.11">(3.11)</a>.  Herefter har vi en løsning <span class="matematik"></span><script type="math/tex">x_1, \ldots, x_n</script> til <a href="#3.10">(3.10)</a> forskellig fra nulløsningen. 
+</p>
+
+<p class="indent text-justify">
+Hvad gør vi med et ligningssystem med mere end en ligning?
+Lad os antage, at vi har <span class="matematik"></span><script type="math/tex">m</script> ligninger med <span class="matematik"></span><script type="math/tex">n</script> ubekendte, hvor <span class="matematik"></span><script type="math/tex">m>1</script> og <span class="matematik"></span><script type="math/tex">n>m</script>:
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+a_{11} x_1 +a_{12} x_2 + \cdots + a_{1 n} x_n &= 0\\
+a_{21} x_1 + a_{22} x_2 + \cdots + a_{2 n} x_n &= 0\\
+                                  &\vdots\\
+a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{m n} x_n &= 0
+\end{aligned}</script>
+</p>
+
+<p class="indent text-justify">
+Lad os stiltiende antage at sætningen er sand for homogene ligningssystemer med færre end <span class="matematik"></span><script type="math/tex">m</script> ligninger (vi har ovenfor bevist sætningen for et homogent ligningssystem med kun en ligning dvs for <span class="matematik"></span><script type="math/tex">m=1</script>).
+</p>
+
+<p class="indent text-justify">
+Hvis alle <span class="matematik"></span><script type="math/tex">a_{i1} = 0</script> for <span class="matematik"></span><script type="math/tex">i=1, \ldots, m</script>, så er <span class="matematik"></span><script type="math/tex">x_1 = 1</script> og <span class="matematik"></span><script type="math/tex">x_2 = \cdots = x_n = 0</script> en løsning
+forskellig fra nulløsningen. 
+Antag derfor at <span class="matematik"></span><script type="math/tex">a_{11}\neq 0</script>. Så kan vi ved Gauss elimination ud fra
+<span class="matematik"></span><script type="math/tex">a_{11}</script> i første ligning eliminere <span class="matematik"></span><script type="math/tex">x_1</script> i ligningerne nedenunder. Dette
+giver ligningssystemet
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+a_{11} x_1 + a_{12} x_2 +  \cdots + a_{1 n} x_n &= 0\\
+a_{22}' x_2+ \cdots + a_{2 n}' x_n &= 0\\
+                                  &\vdots\\
+a_{m2}' x_2 + \cdots + a_{m n}' x_n &= 0,
+\end{aligned}</script>
+hvor første ligning er uændret, men hvor Gauss elimination har ændret
+de <span class="matematik"></span><script type="math/tex">m-1</script> ligninger under den første. Vi kigger nu nærmere på det mindre ligningssystem
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+a_{22}' x_2+ \cdots + a_{2 n}' x_n &= 0\\
+                                  &\vdots\\
+a_{m2}' x_2 + \cdots + a_{m n}' x_n &= 0.
+\end{aligned}</script>
+Dette er et homogent ligningssystem med <span class="matematik"></span><script type="math/tex">m-1</script> ligninger og <span class="matematik"></span><script type="math/tex">n-1</script> ubekendte. 
+Da <span class="matematik"></span><script type="math/tex">m-1 < n-1</script> ved vi per vores antagelse at der findes en løsning <span class="matematik"></span><script type="math/tex">x_2, \ldots, x_n</script>
+forskellig fra nulløsningen til det mindre ligningssystem ovenfor. På samme måde
+som for <span class="matematik"></span><script type="math/tex">m=1</script> giver denne løsning en løsning <span class="matematik"></span><script type="math/tex">x_1, x_2, \ldots, x_n</script>
+forskellig fra nulløsningen til det større ligningssystem.
+</div>
+</div>
+</p>
+
+<p class="indent text-justify">
+Bevismetoden i beviset ovenfor kendes under betegnelsen <em>matematisk induktion</em>. Man begynder med det enkleste tilfælde med kun en ligning. Du kan ret nemt se hvordan beviset virker for et ligningssystem med to ligninger ved at reducere til det allerede beviste tilfælde med kun en ligning. For et ligningssystem med tre ligninger bevises sætningen ved at reducere til  tilfældet med to ligninger osv.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Opgaver">Opgaver</h2>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+</p>
+
+<p class="indent text-justify">
+<p class="Quizopgave"><a href="#d1ac24ad-cfb3-4727-9ff0-495fc153f622" class="btn btn-default" data-toggle="collapse">Quizopgave</a></p><div id="d1ac24ad-cfb3-4727-9ff0-495fc153f622" class="collapse">
+<div id="quiz3" style="width:100%;"><div class="row quizquestion">
+Hvor mange løsninger har ligningssystemet
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+x + y + z &= 0\\
+x - y + z &= 0\\
+x + y - z &= 0?
+\end{aligned}</script>
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+Ingen.
+</div><div class="col-xs-5 quizanswer" datav="T">
+Præcis en.
+</div><div class="col-xs-5 quizanswer" datav="F">
+Uendeligt mange.
+</div></div></div><button id="quizbutton3" class = "btn btn-default">Check</button><script>$("#quizbutton3").click(function(){quizshowanswers(quiz3, quizbutton3);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+</p>
+
+<p class="indent text-justify">
+<p class="Quizopgave"><a href="#170268da-6808-4635-8e85-5d0fcd7baa8e" class="btn btn-default" data-toggle="collapse">Quizopgave</a></p><div id="170268da-6808-4635-8e85-5d0fcd7baa8e" class="collapse">
+<div id="quiz4" style="width:100%;"><div class="row quizquestion">
+Hvor mange løsninger har ligningssystemet
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+x + y + z &= 0\\
+x - y + z &= 0\\
+5 x + y +5z &= 0?
+\end{aligned}</script>
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+Præcis en.
+</div><div class="col-xs-5 quizanswer" datav="F">
+Præcis to.
+</div><div class="col-xs-5 quizanswer" datav="T">
+Uendeligt mange.
+</div></div></div><button id="quizbutton4" class = "btn btn-default">Check</button><script>$("#quizbutton4").click(function(){quizshowanswers(quiz4, quizbutton4);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+</p>
+
+<p class="indent text-justify">
+Find samtlige løsninger til ligningssystemet
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+& x &+ &3 y &+ &z &= &2\\
+&-2 x &- &5 y &+ &3 z &= &4.
+\end{matrix}
+</script>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+</p>
+
+<p class="indent text-justify">
+Løs ligningssystemet
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+& x &+ & y &+ & z &= & 2\\
+& x &+ & y &- &i z &= &3-i\\
+&i x &+ & y &+& z &= &1+i
+\end{matrix}
+</script>
+ved hjælp af Gauss elimination, som forklaret i dette kapitel.
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+En mand kaster en stålkugle lodret ned fra toppen af en
+skyskraber på en planet i vores solsystem. Fra nabobygningen måles kuglens højde efter givne tidsrum:
+Efter 4 sekunder har kuglen en højde på 426  meter, efter 6
+sekunder har kuglen en højde på 369 meter og efter 9 sekunder har kuglen en
+højde på 256 meter.
+</p>
+
+<p class="indent text-justify">
+Hvor stor en hastighed blev stålkuglen kastet med til at begynde med? Hvad er
+tyngdeaccelerationen på planeten i forhold til målingerne? Hvilken planet
+befinder manden sig højst sandsynligt på?
+</p>
+
+<p class="indent text-justify">
+<p class="Vink"><a href="#06673d35-7e50-4295-95ec-3a85ece6405b" class="btn btn-default" data-toggle="collapse">Vink</a></p><div id="06673d35-7e50-4295-95ec-3a85ece6405b" class="collapse">
+NB: En passende fysisk model er at højden til tiden <span class="matematik"></span><script type="math/tex">t</script> er givet ud fra formlen
+<div class="matematik"></div><script type="math/tex; mode=display">
+h_0 - v_0 t - \frac{1}{2} a t^2,
+</script>
+hvor <span class="matematik"></span><script type="math/tex">h_0</script> er højden af bygningen, <span class="matematik"></span><script type="math/tex">v_0</script> begyndelseshastigheden og <span class="matematik"></span><script type="math/tex">a</script> tyngdeaccelerationen.
+</div>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+Find <span class="matematik"></span><script type="math/tex">a_0, a_1, a_2, a_3\in \mathbb{R}</script> så at
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+f(-2) &= -1\\
+f(-1) &= 1\\
+f(1) &= 1\\
+f(2) &= 1,
+\end{aligned}</script>
+hvor 
+<div class="matematik"></div><script type="math/tex; mode=display">
+f(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3.
+</script>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+Gør rede for at der til <span class="matematik"></span><script type="math/tex">n+1</script> punkter <span class="matematik"></span><script type="math/tex">(x_0, y_0), (x_1, y_1), \ldots, (x_n, y_n)</script> med forskellige <span class="matematik"></span><script type="math/tex">x</script>-værdier findes
+entydige tal <span class="matematik"></span><script type="math/tex">a_0, a_1, \ldots, a_n</script> så 
+<div class="matematik"></div><script type="math/tex; mode=display">
+f(x_0) = y_0, \quad f(x_1) = y_1, \quad \ldots\quad, f(x_n) = y_n,
+</script>
+hvor
+<div class="matematik"></div><script type="math/tex; mode=display">
+y = f(x) = a_0 + a_1 x + \cdots + a_n x^n.
+</script>
+Hvorfor medfører det at ligningssystemet
+<div class="matematik"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&a_0 &+ &x_0 a_1 &+ &\cdots &+&x_0^n a_n &= &y_0\\
+&a_0 &+ &x_1 a_1 &+ &\cdots &+&x_1^n a_n &= &y_1\\
+&&&&&&&&\vdots&\\
+&a_0 &+ &x_n a_1 &+ &\cdots &+&x_n^n a_n &= &y_n
+\end{matrix}
+</script>
+har en løsning i de ubekendte <span class="matematik"></span><script type="math/tex">a_0, a_1, \ldots, a_n</script>? Findes der kun en løsning her?
+<p class="Vink"><a href="#e0a35adb-2e39-4d7f-8483-5d761bca03ba" class="btn btn-default" data-toggle="collapse">Vink</a></p><div id="e0a35adb-2e39-4d7f-8483-5d761bca03ba" class="collapse">
+Eksistensen af <span class="matematik"></span><script type="math/tex">a_0, \ldots, a_n</script> i <span class="matematik"></span><script type="math/tex">f(x)</script> fremkommer ved at generalisere parabeltilfældet <a href="#3.8">(3.8)</a> ovenfor (prøv først med <span class="matematik"></span><script type="math/tex">n=3</script>).
+Et polynomium <span class="matematik"></span><script type="math/tex">f(x) = a_0 + a_1 x + \cdots + a_n x^n</script>, siges at have grad <span class="matematik"></span><script type="math/tex">n</script>, hvis <span class="matematik"></span><script type="math/tex">a_n\neq 0</script>. 
+Et generelt resultat om polynomier siger at et polynomium <span class="matematik"></span><script type="math/tex">f(x)</script> af grad <span class="matematik"></span><script type="math/tex">n\geq 0</script> højst kan have <span class="matematik"></span><script type="math/tex">n</script> rødder (en rod er et nulpunkt for <span class="matematik"></span><script type="math/tex">f(x)</script>).
+Dette resultat kan bruges til at bevise entydigheden af <span class="matematik"></span><script type="math/tex">a_0, \ldots, a_n</script>, feks. ved at antage eksistensen af et andet polynomium <span class="matematik"></span><script type="math/tex">g(x)</script>
+af grad <span class="matematik"></span><script type="math/tex">n</script>, som opfylder <span class="matematik"></span><script type="math/tex">g(x_0) = y_0, \ldots, g(x_n) = y_n</script> og så betragte polynomiet <span class="matematik"></span><script type="math/tex">f(x) - g(x)</script> (som har hvor mange rødder?).
+</div>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div></div>
+</div>
+
+</div>
+
+<!-- Til brug ved afklikning af svar i quiz -->
+<script>
+$(document).on('click', '.quizanswer',  function(){$(this).toggleClass("toggle");});
+</script>
+
+<!-- Feedback mht svar i quiz. Button deaktiveret i et stykke tid via setTimeout! -->
+
+<script>
+var quizshowanswers = function(quizid, quizbutton){
+//
+// Hmmmm, quizid.id i stedet for quizid !!!
+//
+    str = "#"+quizid.id+" .row .quizanswer"; 
+//    str = "#quiz1 .row .quizanswer";
+    $(str).each(
+    function(){
+    obj = $(this);
+    if (obj.attr("datav") == "F")
+      obj.addClass("quizwronganswer");
+    else
+      obj.addClass("quizrightanswer");
+    });
+    setTimeout(function(){
+    $(str).each(
+    function(){
+      obj=$(this);
+      if (obj.attr("datav") == "F")
+        obj.removeClass("quizwronganswer");
+      else
+        obj.removeClass("quizrightanswer");
+      obj.removeClass("toggle");
+      obj.addClass("quizanswer");
+      })}, 3000);
+
+    strbutton="#" + quizbutton.id;
+    //strbutton = "#quizbutton1";
+    $(strbutton).attr("disabled", true);
+    setTimeout(function(){
+    $(strbutton).attr("disabled", false);
+    }, 10000);
+    };
+</script>
+
+<!-- Model fra Bjørk -->
+
+<div id="myModal" class="modal">
+
+   <div class="modal-content" style="z-index:99">
+    <div class="document" style="z-index:99">
+      <span id="myCls" class="close">&times;</span>
+      <p id="myModalMessage" style="color: black">Inge aktuel sci2u quiz</p>
+      <div id="stepboardcontainer">
+        <div id="stepboardUdvikler" style="width: 100%; z-index:99"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+

@@ -1,0 +1,1089 @@
+<!doctype html>
+<head>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.css" integrity="sha384-BDqcjN11/6D69oC63ObubLHNvQR2fNjin6+AzxA3xalB0swTj17TxVV1tL1Q5Png" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.js" integrity="sha384-sKYm5us3z9/bRQA+cc3gPzqwI5RVgL8vJQx1lpBudr9IzHOR8fnFUH68dz1GsTQw" crossorigin="anonymous"></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+    
+    for(var i = 0; i < tex.length; ++i)
+       {
+         var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+      
+         var math = tex[i].previousSibling;
+         math.className = 'katex-render';
+        
+         var content = tex[i].textContent;
+
+	 katex.render(content, math, {
+	    displayMode: display,
+	    throwOnError: false,
+	    //macros: {"\\NN":"\\mathbb{N}",
+	    //	     "\\ZZ":"\\mathbb{Z}",
+	    //	     "\\QQ":"\\mathbb{Q}",
+	    //	     "\\RR":"\\mathbb{R}",
+	    //	     "\\CC":"\\mathbb{C}",
+	    //	     "\\tag":"\\pod\\text"}
+	    macros: {"\\tag":"\\pod\\text"} // Hack for \eqref!
+      });
+
+	tex[i].parentNode.removeChild(tex[i]);
+	
+    }
+    var eqno = document.querySelectorAll('.katex span > span.mspace.quad');
+    for(var i = 0; i < eqno.length; ++i)
+    {
+        if(eqno[i].parentNode.className)
+            continue;
+        var quad = eqno[i];
+        var span = quad.parentNode;
+        var text = span.nextSibling;
+        var pare = text.nextSibling;
+        span.removeChild(quad);
+        span.appendChild(text);
+        span.appendChild(pare);
+        span.className = 'eqno';
+    }
+});
+</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/math.css">
+
+</script>
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<style>
+      
+      html {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      }
+      .container {
+      max-width: 24cm;
+      }
+
+</style>
+
+<link rel="stylesheet" href="../css/nt0.css">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-1">
+	<div class="sidebar-nav" data-spy="affix">
+	  <!--<a href="../index.html"><i class="fa fa-book tocicon" style="color:black;"></i></a>-->
+	  <a href="../index.html"><i class="fa fa-th-list tocicon" style="color:#76323f;" title="Indholdsfortegnelse"></i></a>
+	</div>
+      </div>
+      <div class="col-xs-11">
+	
+
+</p>
+
+<p class="indent text-justify">
+
+
+
+
+
+
+</p>
+
+<p class="indent text-justify">
+
+
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<style> body{counter-reset: chapter 2;}</style>
+<h1 id="chapter_De_komplekse_tal"><span style="float:right;">De komplekse tal</span></h1> 
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/6WHkB_n2mos?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div> 
+</p>
+
+<p class="indent text-justify">
+<span id="kompltalafsnit"></span>
+</p>
+
+<p class="indent text-justify">
+Lad os vende tilbage til historien om ligninger og tal. Det vil føre
+for vidt at forklare, hvordan man systematisk indfører tal, som ikke
+behøver være brøker. Kort sagt laver man dem som uendelige decimaltal,
+men <a href="https://en.wikipedia.org/wiki/Construction_of_the_real_numbers" target="_blank">detaljerne</a> er ret kedelige og lidt besværlige. Så vi vil antage at    
+vi ved hvad (reelle) tal er. Man kan ikke finde et reelt tal, som løser
+ligningen
+<div class="matematik"></div><script type="math/tex; mode=display">
+x^2 + 1 = 0,
+</script>
+&mdash; intet reelt tal ganget med sig selv giver <span class="matematik"></span><script type="math/tex">-1</script>. Enhver
+enkel lommerregner vil blinke en fejlmeddelelse, hvis du forsøger at
+tage kvadratroden til <span class="matematik"></span><script type="math/tex">-1</script>. Derimod vil et moderne computer algebra
+system som <a href="https://en.wikipedia.org/wiki/Maple_(software)" target="_blank">Maple</a> eller 
+<a href="https://en.wikipedia.org/wiki/Wolfram_Mathematica" target="_blank">Mathematica</a>
+formentlig give dig symbolet <span class="matematik"></span><script type="math/tex">I</script> som output. Hvad er dette <span class="matematik"></span><script type="math/tex">I</script>?
+</p>
+
+<p class="indent text-justify">
+Lad os først komme ind på hvor anderledes (og mere spændende) de
+komplekse tal er med et eksempel fra computergrafik.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Mandelbrotmængden">Mandelbrotmængden</h2>
+</p>
+
+<p class="indent text-justify">
+Geometrisk opholder de komplekse tal sig i to dimensioner, mens
+de almindelige tal kun bevæger sig på en linje i en dimension.
+</p>
+
+<p class="indent text-justify">
+Man kan benytte de komplekse tal til at generere såkaldte
+fraktaler som
+<a href="https://en.wikipedia.org/wiki/Mandelbrot_set" target="_blank">Mandelbrotmængden</a>
+nedenfor. Mandelbrotmængden er blevet kaldt et af de smukkeste og mest
+komplicerede objekter i moderne matematik. I næste afsnit ser vi
+nærmere på addition og multiplikation af komplekse
+tal. Mandelbrotmængden er frembragt ene og alene ved at iterere
+multiplikationer og additioner med komplekse tal.
+</p>
+
+<p class="indent text-justify">
+
+
+<br> <br>
+<figure> <div class="container"
+style="position:relative; left:50%; margin-left:-300px; width: 600px;
+height:600px; border:1px solid black;"> <canvas id="overlayniels"
+style="z-index:2; position:absolute; left:0px; top:0px;" width="600px"
+height="600px"></canvas> <canvas id="sceneniels" style="z-index:1;
+position:absolute; left:0px; top:0px;" width="600px"
+height="600px"/></canvas> </div> <br>
+<figcaption style='position:relative; left:50%; margin-left:-300px;width:600px;'> <b>Interaktiv grafik: </b> Du kan udforske
+et område af Mandelbrotmængden ved at klikke og holde musen nede for
+at markere et <span style="border:2px; border-style:solid;
+border-color:#FF0000; padding:0.25em;">rødt rektangel</span> til at
+zoome ind på. Det bedste resultat fås ved at markere et kvadrat. Når
+du zoomer ind på mængden vil du opdage visuel matematisk skønhed og at
+figuren gentager sig selv.  </figcaption>
+</figure>
+<script src='../js/mandelbrot.js'></script> <br>
+
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/I9_zAXotgbg?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Regneregler">Regneregler</h2>
+</p>
+
+<p class="indent text-justify">
+Mandelbrotmængden fremkommer ved mange iterationer bestående af
+multiplikationer og additioner med komplekse tal. Vi har brug
+for at vide hvad komplekse tal er og hvordan man regner med dem.
+</p>
+
+<p class="indent text-justify">
+En specielt vigtig regneregel for reelle tal hedder den
+distributive lov. Den siger at
+<div class="matematik"></div><script type="math/tex; mode=display">
+x (y + z) = x y + x z
+</script>
+for <span class="matematik"></span><script type="math/tex">x, y, z\in \mathbb{R}</script>. En anden velkendt regel siger
+at faktorernes orden er ligegyldig eller at multiplikation
+er kommutativ dvs <span class="matematik"></span><script type="math/tex">x y = y x</script>.
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#2ed90434-efcc-479f-a42f-91b04e76e393" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="2ed90434-efcc-479f-a42f-91b04e76e393" class="collapse">
+Forklar så detaljeret som muligt, hvorfor
+<div class="matematik"></div><script type="math/tex; mode=display">
+(x + y) (z + w) = x z + y z + x w + y w
+</script>
+ved at bruge den distributive lov og kommutativitet
+for multiplikation.
+</div>
+</p>
+
+<p class="indent text-justify">
+Lad os antage at vi oven i de reelle tal kaster et
+opdigtet eller <em>imaginært</em> tal <span class="matematik"></span><script type="math/tex">i</script> ind, som har egenskaben at
+<div class="matematik"></div><script type="math/tex; mode=display">
+i^2 = -1.
+</script>
+Hvis <span class="matematik"></span><script type="math/tex">a, b, c, d</script> er reelle tal og vi antager
+at <span class="matematik"></span><script type="math/tex">i</script> adlyder de almindelige regneregler
+får vi følgende udregning:
+
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+
+\color{blue}{(a + b i) (c + d i)} &= (a+ b i) c + (a + b i) d i\\ 
+                    &= a c + b i c + a d i + b i d i\\
+                    &= a c + b c i + a d i + b d i^2\\
+                    &= a c + b c i + a d i - b d\\
+                    &= \color{blue}{(a c - b d) + (a d + b c) i}
+
+\end{aligned}</script>
+</p>
+
+<p class="indent text-justify">
+Dvs to tal på formen <span class="matematik"></span><script type="math/tex">x + y i</script>, hvor <span class="matematik"></span><script type="math/tex">x</script> og <span class="matematik"></span><script type="math/tex">y</script> er 
+reelle tal, ganger sammen til et tal af samme <em>standard form</em>.
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/_3V2woRQfSo?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+Faktisk kan man
+vise at, når man definerer multiplikation som ovenfor og addition som 
+<div class="matematik"></div><script type="math/tex; mode=display">
+(a + b i) + (c + d i) = (a + c) + (b + d)i,
+</script>
+så får man en mængde af nye tal, som opfylder alle velkendte regneregler for
+reelle tal, som f.eks.
+</p>
+
+<p class="indent text-justify">
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+x (y z) &= (x y) z\\
+x( y + z) &= x y + x z\\
+x y & = y x\\
+1 x &= x
+\end{aligned}</script>
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#541bb9bb-6c6b-4998-bc74-bc731bb50ce1" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="541bb9bb-6c6b-4998-bc74-bc731bb50ce1" class="collapse">
+Den ukronede konge blandt regnereglerne er reglen <span class="matematik"></span><script type="math/tex">x (y z) = (x y) z</script>, som
+kaldes den associative lov. Uformelt siger den at vi selv kan vælge
+hvordan vi udregner et produkt <span class="matematik"></span><script type="math/tex">x y z</script>: Det gør ikke nogen forskel om
+vi først ganger <span class="matematik"></span><script type="math/tex">x</script> sammen med <span class="matematik"></span><script type="math/tex">y</script> og så ganger <span class="matematik"></span><script type="math/tex">z</script> på eller
+om vi først ganger <span class="matematik"></span><script type="math/tex">y</script> sammen med <span class="matematik"></span><script type="math/tex">z</script> og så ganger <span class="matematik"></span><script type="math/tex">x</script> på. Det giver det samme resultat. Hvis vi ikke
+havde den associative lov ville (den aritmetiske) verden være kaotisk.
+</p>
+
+<p class="indent text-justify">
+<br>
+</p>
+
+<p class="indent text-justify">
+Faktisk kan vi allerede nu se at
+den associative lov gælder for vores nye tal af formen <span class="matematik"></span><script type="math/tex">a + b i</script>: Lad
+<span class="matematik"></span><script type="math/tex">x = a + b i, y = c + d i</script> og <span class="matematik"></span><script type="math/tex">z = e + f i</script>, hvor
+<span class="matematik"></span><script type="math/tex">a, b, c, d, e, f</script> er reelle tal.
+<ol><li>
+Udregn <span class="matematik"></span><script type="math/tex">u = y z</script> ved at sætte ind i formlen.
+</li><li>
+Udregn <span class="matematik"></span><script type="math/tex">v = x y</script> ved at sætte ind i formlen.
+</li><li>
+Udregn <span class="matematik"></span><script type="math/tex">x u</script> og <span class="matematik"></span><script type="math/tex">v z</script> ved at sætte ind i formlen.
+</li><li>
+Overbevis dig nu om at <span class="matematik"></span><script type="math/tex">x (y z) = (x y) z</script> dvs at <span class="matematik"></span><script type="math/tex">x u = v z</script>.
+</li></ol>
+</div>
+</p>
+
+<p class="indent text-justify">
+Hvorfor benyttes notationen <span class="matematik"></span><script type="math/tex">i</script> for <span class="matematik"></span><script type="math/tex">\sqrt{-1}</script>? Begrundelsen er
+historisk og
+daterer sig tilbage til <span class="matematik"></span><script type="math/tex">1500</script>-tallet, hvor den italienske matematiker
+<a href="https://en.wikipedia.org/wiki/Gerolamo_Cardano" target="_blank">Cardano</a> havde
+behov for at regne med opdigtede eller <em>imaginære</em> tal for at
+finde en formel til løsning af tredjegradsligninger.  Det komplekse
+tal <span class="matematik"></span><script type="math/tex">i</script> kaldes for <em>den imaginære enhed</em>.
+</p>
+
+<p class="indent text-justify">
+<div class="definition">
+De komplekse tal er mængden
+<div class="matematik"></div><script type="math/tex; mode=display">
+\mathbb{C} = \{x + y i \mid x, y\in \mathbb{R}\}, 
+</script>
+hvor <em>multiplikation</em> er givet som
+<div class="matematik"></div><script type="math/tex; mode=display">
+(a + b i) (c + d i) = (a c - b d) + (a d + b c) i
+</script>
+og <em>addition</em> som
+<div class="matematik"></div><script type="math/tex; mode=display">
+(a + b i) + (c + d i) = (a + c) + (b + d)i.
+</script>
+For et komplekst tal <span class="matematik"></span><script type="math/tex">z = x + i y</script> defineres 
+<ol><li>
+<em>Realdelen</em> som
+<div class="matematik"></div><script type="math/tex; mode=display">
+\mathrm{Re}(z) = x
+</script>
+</li><li>
+<em>Imaginærdelen</em> som
+<div class="matematik"></div><script type="math/tex; mode=display">
+\mathrm{Im}(z) = y.
+</script>
+</li><li>
+<em>Det komplekst konjugerede tal</em>
+<div class="matematik"></div><script type="math/tex; mode=display">
+\overline{z} = x - i y
+</script>
+</li></ol>
+</p>
+
+<p class="indent text-justify">
+To komplekse tal er identiske hvis og kun hvis deres real- og imaginærdele er ens.
+</p>
+
+<p class="indent text-justify">
+</div>
+</p>
+
+<p class="indent text-justify">
+Ved hjælp af formlen for multiplikation af komplekse tal ses for <span class="matematik"></span><script type="math/tex">z = c + d i</script>, at
+<div class="matematik"></div><script type="math/tex; mode=display">
+z \overline{z} = (c + d i) (c - d i) = c^2 + d^2
+</script>
+ved indsættelse af <span class="matematik"></span><script type="math/tex">a = c</script>, <span class="matematik"></span><script type="math/tex">b = d</script>, <span class="matematik"></span><script type="math/tex">c=c</script> og <span class="matematik"></span><script type="math/tex">d = -d</script>. Denne observation gør at vi kan udlede
+følgende divisionsformel:
+</p>
+
+<p class="indent text-justify">
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+
+\color{blue}{\frac{a + b i}{c + d i}}&= \frac{(c - d i)(a + b i)}{(c - d i)(c + d i)}\\
+                        &= \frac{(a c + b d) + (a d - b c)i} {c^2 + d^2}\\
+                        &= \color{blue}{\frac{a c + b d}{c^2 + d^2} + \frac{a d - b c}{c^2 + d^2} i}.
+
+\end{aligned}</script>
+</p>
+
+<p class="indent text-justify">
+Divisionen af to komplekse tal giver altså igen et komplekst tal. Vi antager at tælleren <span class="matematik"></span><script type="math/tex">c + d i</script> ikke er lig <span class="matematik"></span><script type="math/tex">0</script> dvs
+<span class="matematik"></span><script type="math/tex">c</script> og <span class="matematik"></span><script type="math/tex">d</script> ikke begge er <span class="matematik"></span><script type="math/tex">0</script> eller ækvivalent hermed at <span class="matematik"></span><script type="math/tex">c^2 + d^2 \neq 0</script>.
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/2WCToS0llzQ?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+
+En meget vigtig egenskab er at hvis <span class="matematik"></span><script type="math/tex">a + b i\neq 0</script>, så findes <span class="matematik"></span><script type="math/tex">c + d i</script> så 
+<span class="matematik"></span><script type="math/tex">(a+ b i) (c + d i) = 1</script>. Vi ved godt denne regel er korrekt for de reelle
+tal dvs, hvis <span class="matematik"></span><script type="math/tex">x \neq 0</script> så findes et reelt tal <span class="matematik"></span><script type="math/tex">y</script> så <span class="matematik"></span><script type="math/tex">x y = 1</script>. Her kan vi bare
+sætte <span class="matematik"></span><script type="math/tex">y = 1/x</script>. På samme måde kan vi sætte <span class="matematik"></span><script type="math/tex">c + d i = 1/(a + b i)</script>.
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#7d32f80e-55a1-4352-87a6-5f81f9b57e0c" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="7d32f80e-55a1-4352-87a6-5f81f9b57e0c" class="collapse">
+Find en formel for <span class="matematik"></span><script type="math/tex">1/(a + b i)</script>, hvor <span class="matematik"></span><script type="math/tex">a</script> og <span class="matematik"></span><script type="math/tex">b</script> ikke
+begge er <span class="matematik"></span><script type="math/tex">0</script>.
+</div>
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#982a9efa-39c5-48dc-b131-ab4e5ca011c1" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="982a9efa-39c5-48dc-b131-ab4e5ca011c1" class="collapse">
+</p>
+
+<p class="indent text-justify">
+<ol><li>
+Find <span class="matematik"></span><script type="math/tex">z\in \mathbb{C}</script>, som opfylder at <span class="matematik"></span><script type="math/tex">z (1 + i) = (1 + 2 i)</script>.
+</li><li>
+Find <span class="matematik"></span><script type="math/tex">z_1, z_2\in \mathbb{C}</script>, som opfylder
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+(1-2 i) z_1 + z_2 &= 8 + 4 i\\
+z_1 + i z_2 &= -3 + 5 i
+\end{aligned}</script>
+</li></ol>
+</p>
+
+<p class="indent text-justify">
+</div>
+</p>
+
+<p class="indent text-justify">
+
+<h2 id="section_Geometrisk_fortolkning_og_polær_form">Geometrisk fortolkning og polær form</h2>
+</p>
+
+<p class="indent text-justify">
+Den geometriske fortolkning af de komplekse tal
+blev først introduceret af den danske matematiker
+<a href="https://en.wikipedia.org/wiki/Caspar_Wessel" target="_blank">Caspar Wessel (1745-1818)</a>
+i 1797.
+</p>
+
+<p class="indent text-justify">
+Det forekommer ret naturligt at opfatte et komplekst tal <span class="matematik"></span><script type="math/tex">z = x + i y</script>, som
+punktet <span class="matematik"></span><script type="math/tex">(x, y)</script> i et koordinatsystem.
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Kompleksetal/Wessel.svg">
+</p>
+
+<p class="indent text-justify">
+
+Med dette geometriske billede ligger det lige for at indføre følgende
+definitioner.
+</p>
+
+<p class="indent text-justify">
+<div class="definition"><span id="dummy"></span>
+Lad <span class="mark"><span class="matematik"></span><script type="math/tex">z = x + i y</script></span> være et komplekst tal. 
+Længden af vektoren <span class="matematik"></span><script type="math/tex">(x, y)</script> kaldes <span class="mark">modulus
+for <span class="matematik"></span><script type="math/tex">z</script></span> og betegnes <span class="matematik"></span><script type="math/tex">\left\vert z \right\vert</script>. Vinklen
+som <span class="matematik"></span><script type="math/tex">(x, y)</script> danner med <span class="matematik"></span><script type="math/tex">x</script>-aksen kaldes <span class="mark">argumentet
+for <span class="matematik"></span><script type="math/tex">z</script></span> og defineres som en vinkel i intervallet <span class="matematik"></span><script type="math/tex">[0, 2\pi)</script>. 
+For et reelt tal <span class="matematik"></span><script type="math/tex">x\in \mathbb{R}</script> definerer vi det komplekse tal
+<span id="2.1"></span><div class="matematik"></div><script type="math/tex; mode=display">
+e^{i x} = \cos(x) + i \sin(x).
+\tag{2.1}</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+Læg mærke til at hvis <span class="matematik"></span><script type="math/tex">\theta</script> er argumentet for det komplekse tal <span class="matematik"></span><script type="math/tex">z</script>, så er
+<span id="2.2"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\frac{z}{\left\vert z \right\vert} = e^{i \theta}.
+\tag{2.2}</script>
+Det er fordi at <span class="matematik"></span><script type="math/tex">z/\left\vert z \right\vert</script> præcis svarer til vektoren <span class="matematik"></span><script type="math/tex">(x, y)</script> ganget
+med dens reciprokke længde. Denne vektor er en enhedsvektor, som
+danner vinklen <span class="matematik"></span><script type="math/tex">\theta</script> med <span class="matematik"></span><script type="math/tex">x</script>-aksen. Dvs den svarer præcis til det 
+komplekse tal <span class="matematik"></span><script type="math/tex">e^{i\theta}</script>.
+</p>
+
+<p class="indent text-justify">
+Ligningen <a href="#2.2">(2.2)</a> giver den smukke geometriske repræsentation
+<span id="2.3"></span><div class="matematik"></div><script type="math/tex; mode=display">
+z = \left\vert z \right\vert e^{i\theta}
+\tag{2.3}</script>
+af det komplekse tal <span class="matematik"></span><script type="math/tex">z</script>. Fremstillingen <a href="#2.3">(2.3)</a> kaldes for
+den polære form af <span class="matematik"></span><script type="math/tex">z</script>.
+</p>
+
+<p class="indent text-justify">
+Denne repræsentation fortjener at blive kaldt smuk, fordi
+den afspejler sig mirakuløst i multiplikationen af komplekse tal:
+Lad <span class="matematik"></span><script type="math/tex">z_1</script> og <span class="matematik"></span><script type="math/tex">z_2</script> være to komplekse tal med argumenter hhv <span class="matematik"></span><script type="math/tex">\theta_1</script> og 
+<span class="matematik"></span><script type="math/tex">\theta_2</script>. Så er
+<span id="2.4"></span><div class="matematik"></div><script type="math/tex; mode=display">
+z_1 z_2 = \left\vert z_1 \right\vert e^{i\theta_1} \left\vert z_2 \right\vert e^{i \theta_2} = \left\vert z_1 \right\vert \left\vert z_2 \right\vert e^{i\theta_1} e^{i \theta_2} =\left\vert z_1 \right\vert \left\vert z_2 \right\vert e^{i(\theta_1+ \theta_2)}.
+\tag{2.4}</script>
+</p>
+
+<p class="indent text-justify">
+Med ord har vi gjort rede for at
+<div class="frameit">
+Man multiplicerer to komplekse tal ved at multiplicere deres længder og addere deres argumenter.
+</div>
+</p>
+
+<p class="indent text-justify">
+Det sidste lighedstegn i <a href="#2.4">(2.4)</a> har vi rent faktisk ikke
+vist og det er da også et af hovedresultaterne:
+</p>
+
+<p class="indent text-justify">
+<div class="theorem"><span id="euleradd"></span>
+For to tal <span class="matematik"></span><script type="math/tex">x, y\in \mathbb{R}</script> gælder formlen
+<div class="matematik"></div><script type="math/tex; mode=display">
+e^{i x} e^{i y} = e^{i (x + y)}.
+</script>
+</div>
+<p class="Bevis"><a href="#c3824068-8ba8-4bab-a95b-78af3167f1b1" class="btn btn-default" data-toggle="collapse">Bevis</a></p><div id="c3824068-8ba8-4bab-a95b-78af3167f1b1" class="collapse">
+<div class="proof">
+  Vi bruger multiplikation af komplekse tal og ganger
+  <span class="matematik"></span><script type="math/tex">e^{i x} = \cos(x) + i \sin(x)</script> og <span class="matematik"></span><script type="math/tex">e^{i y} = \cos(y) + i\sin(y)</script>
+  sammen:
+</p>
+
+<p class="indent text-justify">
+<br><br>
+
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+&e^{i x} e^{i y} = (\cos(x) + i\sin(x)) (\cos(y) + i\sin(y)) =\\
+&\cos(x) \cos(y) - \sin(x) \sin(y) + i (\cos(x) \sin(y) + \sin(x) \cos(y))=\\
+&\cos(x + y) + i \sin(x + y) = e^{i (x+y)}. 
+\end{aligned}</script>
+Her forekommer miraklet i næstsidste og sidste linje ovenfor. Multiplikationen af komplekse tal
+indeholder <a href="talogvektorer.html#addcossin">additionsformlerne</a>:
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+\cos(x + y) &= \cos(x) \cos(y) - \sin(x) \sin(y)\\
+\sin(x + y) &= \cos(x) \sin(y) + \sin(x) \cos(y)
+\end{aligned}</script>
+for cosinus og sinus.
+</div>
+</div>
+</p>
+
+<p class="indent text-justify">
+Læg iøvrigt mærke til <a href="https://en.wikipedia.org/wiki/Euler%27s_identity" target="_blank">verdens smukkeste formel</a>:
+<div class="frameit">
+<div class="matematik"></div><script type="math/tex; mode=display">
+e^{i \pi} = -1.
+</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+Formlen kombinerer på minimal vis fire af de allervigtigste
+konstanter i matematikken: <span class="matematik"></span><script type="math/tex">e, i, \pi</script> og <span class="matematik"></span><script type="math/tex">1</script> og følger af
+definitionen i <a href="#2.1">(2.1)</a>.
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/6HTzvbPhtE0?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection_De_Moivres_formel">De Moivres formel</h3>
+</p>
+
+<p class="indent text-justify">
+<a href="https://en.wikipedia.org/wiki/Abraham_de_Moivre" target="_blank">Abraham de Moivre</a> var en fransk matematiker, som udover at beskæftige sig med sandsynlighedsteori også fik sit navn udødeliggjort gennem <em>De Moivres formel</em>. Denne formel siger i al sin enkelhed at der for et naturligt tal <span class="matematik"></span><script type="math/tex">n</script> og et reelt tal <span class="matematik"></span><script type="math/tex">x</script> gælder
+<div class="frameit">
+<span id="2.5"></span><div class="matematik"></div><script type="math/tex; mode=display">
+(\cos(x) + i \sin(x))^n = \cos(n x) + i \sin (n x).
+\tag{2.5}</script>
+</div>
+Det er ikke svært at bevise formlen via <a href="#euleradd">sætningen</a> ovenfor, som medfører at 
+<div class="matematik"></div><script type="math/tex; mode=display">
+(\cos(x) + i \sin(x))^n = (e^{i x})^n = e^{i n x} = \cos(n x) + i \sin( n x).
+</script>
+Ikke desto mindre er <a href="#2.5">(2.5)</a> et mirakel, som markerer den stærke
+forbindelse mellem komplekse tal og trigonometriske funktioner. For eksempel kan man
+benytte De Moivres formel til at udlede formler som 
+<span id="2.6"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\cos(3 x) = 4 \cos(x)^3 - 3 \cos(x).
+\tag{2.6}</script>
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/_Vp_f_JHz2g?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<p class="Quiz"><a href="#96890dc3-6248-4acf-be8b-dc3efac66dad" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="96890dc3-6248-4acf-be8b-dc3efac66dad" class="collapse">
+<div id="quiz1" style="width:100%;"><div class="row quizquestion">
+Hvad er <span class="matematik"></span><script type="math/tex">\cos(2 x)</script>?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">2 \sin(x) \cos(x) + 1</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="matematik"></span><script type="math/tex">2  \cos(x)^2 - 1</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+Ingen af de foregående svarmuligheder. 
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#013acf69-3858-4553-8923-44d60c216e32" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="013acf69-3858-4553-8923-44d60c216e32" class="collapse">
+Find en stamfunktion til <span class="matematik"></span><script type="math/tex">\cos(x)^3</script>.
+</div>
+</p>
+
+<p class="indent text-justify">
+
+<h2 id="section_Andengradsligningen_og_højeregradsligninger">Andengradsligningen og højeregradsligninger</h2>
+</p>
+
+<p class="indent text-justify">
+Lad os rette opmærksomheden mod ligningen
+<span id="2.7"></span><div class="matematik"></div><script type="math/tex; mode=display">
+z^n = 1,
+\tag{2.7}</script>
+hvor <span class="matematik"></span><script type="math/tex">n</script> er et naturligt tal.
+Hvis vi kun begrænser os til de reelle tal, har <a href="#2.7">(2.7)</a> højst to
+løsninger (feks for <span class="matematik"></span><script type="math/tex">n=2</script>) og nogle gange kun en (feks for <span class="matematik"></span><script type="math/tex">n=3</script>). I de komplekse tals domæne har vi to
+dimensioner og kan boltre os både lodret og vandret. 
+En løsning <span class="matematik"></span><script type="math/tex">z</script> til <a href="#2.7">(2.7)</a> bliver nødt til at have modulus <span class="matematik"></span><script type="math/tex">1</script> dvs <span class="matematik"></span><script type="math/tex">z = e^{i\varphi}</script> med <span class="matematik"></span><script type="math/tex">\varphi\in [0, 2\pi)</script>. Da
+<div class="matematik"></div><script type="math/tex; mode=display">
+z^n = e^{i n \varphi} = \cos(n \varphi) + i \sin (n \varphi) = 1
+</script>
+har vi altså <span class="matematik"></span><script type="math/tex">m 2 \pi = n \varphi</script> for et helt tal <span class="matematik"></span><script type="math/tex">m\in \mathbb{Z}</script>. 
+Hvis <span class="matematik"></span><script type="math/tex">\varphi</script> er argumentet for <span class="matematik"></span><script type="math/tex">z</script> har vi altså kun mulighederne
+<span class="matematik"></span><script type="math/tex">m = 0, 1, \ldots, n-1</script>.
+</p>
+
+<p class="indent text-justify">
+Dermed kan alle løsninger til 
+<a href="#2.7">(2.7)</a> skrives som
+passende potenser af <span class="matematik"></span><script type="math/tex">\epsilon_n = e^{i 2 \pi/n}</script>:
+<div class="matematik"></div><script type="math/tex; mode=display">
+\epsilon_n^m = e^{m \frac{2\pi i}{n}},
+</script>
+hvor <span class="matematik"></span><script type="math/tex">m = 0, 1, \ldots, n-1</script>. Vi har faktisk bevist at <a href="#2.7">(2.7)</a> altid har <span class="matematik"></span><script type="math/tex">n</script> forskellige
+løsninger over de komplekse tal.
+</p>
+
+<p class="indent text-justify">
+<p class="Eksempel"><a href="#d44463f8-1d9e-4248-a3c2-4e040fde630f" class="btn btn-default" data-toggle="collapse">Eksempel</a></p><div id="d44463f8-1d9e-4248-a3c2-4e040fde630f" class="collapse">
+</p>
+
+<p class="indent text-justify">
+Lad os som eksempel tage ligningen <span class="matematik"></span><script type="math/tex">z^3 = 1</script>. Den har løsningerne, som fremkommer ved at
+tredele enhedscirklen;
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Kompleksetal/unit3.svg">
+</p>
+
+<p class="indent text-justify">
+i <span class="matematik"></span><script type="math/tex">\mathbb{C}</script> dvs 
+</p>
+
+<p class="indent text-justify">
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+z_0 &= 1\\
+z_1 &= e^{i \frac{2 \pi}{3}} = -\frac{1}{2} + \frac{\sqrt{3}}{2} i\\
+z_2 &= e^{i \frac{4 \pi}{3}} = -\frac{1}{2} - \frac{\sqrt{3}}{2} i
+\end{aligned}</script>
+</p>
+
+<p class="indent text-justify">
+</div>
+</p>
+
+<p class="indent text-justify">
+<p class="Quiz"><a href="#9b7ec75a-47e2-43ca-9f09-228dd6af3e03" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="9b7ec75a-47e2-43ca-9f09-228dd6af3e03" class="collapse">
+<div id="quiz2" style="width:100%;"><div class="row quizquestion">
+Lad <span class="matematik"></span><script type="math/tex">z</script> være en løsning til <span class="matematik"></span><script type="math/tex">z^8 = 1</script>. Hvilke muligheder er der for <span class="matematik"></span><script type="math/tex">z</script>? 
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">|z| = 2</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="matematik"></span><script type="math/tex">z = i</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+Argumentet for <span class="matematik"></span><script type="math/tex">z</script> er <span class="matematik"></span><script type="math/tex">\pi/8</script>.
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">
+z = \frac{\sqrt{2}}{2} + i \frac{\sqrt{2}}{2}.
+</script>
+</div></div></div><button id="quizbutton2" class = "btn btn-default">Check</button><script>$("#quizbutton2").click(function(){quizshowanswers(quiz2, quizbutton2);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<span id="solveequ"></span>
+<div class="theorem">
+Lad <span class="matematik"></span><script type="math/tex">n</script> være et naturligt tal og <span class="matematik"></span><script type="math/tex">a = r e^{i \theta}</script> et komplekst tal med 
+modulus <span class="matematik"></span><script type="math/tex">r\neq 0</script> og argument <span class="matematik"></span><script type="math/tex">\theta</script>. Så har
+ligningen
+<span id="2.8"></span><div class="matematik"></div><script type="math/tex; mode=display">
+z^n = a
+\tag{2.8}</script>
+løsningen 
+<div class="matematik"></div><script type="math/tex; mode=display">
+\omega = \sqrt[n]{r} e^{i \frac{\theta}{n}}.
+</script>
+Ligningen <a href="#2.8">(2.8)</a> har <span class="matematik"></span><script type="math/tex">n</script> forskellige løsninger og de er
+<div class="matematik"></div><script type="math/tex; mode=display">
+\omega, \omega \epsilon_n , \ldots, \omega \epsilon_n^{n-1},
+</script>
+hvor <span class="matematik"></span><script type="math/tex">\epsilon_n = e^{i \frac{2\pi}{n}}</script>.
+</div>
+<p class="Bevis"><a href="#08eb9bd2-0c7d-4e6d-bbf3-2719fbc06d7e" class="btn btn-default" data-toggle="collapse">Bevis</a></p><div id="08eb9bd2-0c7d-4e6d-bbf3-2719fbc06d7e" class="collapse">
+<div class="proof">
+At opløfte et komplekst tal til <span class="matematik"></span><script type="math/tex">n</script>-te potens svarer til at
+opløfte dets modulus til <span class="matematik"></span><script type="math/tex">n</script>-te og gange dets argument 
+med <span class="matematik"></span><script type="math/tex">n</script>. Derfor er <span class="matematik"></span><script type="math/tex">\omega^n = r e^{i\theta}</script> og dermed en løsning
+til <span class="matematik"></span><script type="math/tex">z^n = a</script>. Antag nu at <span class="matematik"></span><script type="math/tex">u^n = a</script>. Så vil 
+<div class="matematik"></div><script type="math/tex; mode=display">
+\frac{u^n}{\omega^n} = \left(\frac{u}{\omega}\right)^n = 1.
+</script>
+Dermed vil <span class="matematik"></span><script type="math/tex">\frac{u}{\omega}</script> være en løsning til <span class="matematik"></span><script type="math/tex">z^n = 1</script>, hvorfor
+<div class="matematik"></div><script type="math/tex; mode=display">
+u = \omega \epsilon_n^m
+</script>
+for et eller andet <span class="matematik"></span><script type="math/tex">m</script> blandt <span class="matematik"></span><script type="math/tex">0, \ldots, n-1</script>. 
+</div>
+</div>
+</p>
+
+<p class="indent text-justify">
+
+<h3 id="subsection_Den_gode_gamle_andengradsligning">Den gode gamle andengradsligning</h3>
+</p>
+
+<p class="indent text-justify">
+Her støder vi på det verdensberømte trick (completing the square):
+<div class="matematik"></div><script type="math/tex; mode=display">
+a z^2 + b z + c = a\left(z + \frac{b}{2a}\right)^2 - \frac{b^2}{4 a} + c.
+</script>
+Ved en lettere omskrivning ses at løsninger til andengradsligningen
+<span class="matematik"></span><script type="math/tex">a z^2 + b z + c = 0</script> opfylder
+<div class="matematik"></div><script type="math/tex; mode=display">
+\left(z + \frac{b}{2 a}\right)^2 = \frac{b^2 - 4 a c}{4 a^2}.
+</script>
+Det giver så den klassiske formel
+<div class="matematik"></div><script type="math/tex; mode=display">
+z = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a},
+</script>
+som giver rigtig god mening også for komplekse tal <span class="matematik"></span><script type="math/tex">a, b, c</script>. Vi har nemlig 
+set i <a href="#solveequ">sætningen ovenfor</a> at ligningen 
+<span id="2.9"></span><div class="matematik"></div><script type="math/tex; mode=display">
+w^2 = b^2 - 4 a c
+\tag{2.9}</script>
+altid kan løses dvs
+andengradsligninger over de komplekse tal har altid løsninger! Det gør ikke nogen forskel
+hvilken af de to modsat rettede løsninger <span class="matematik"></span><script type="math/tex">w</script> vi vælger i <a href="#2.9">(2.9)</a> som 
+<span class="matematik"></span><script type="math/tex">\sqrt{b^2 - 4 a c}</script>. Den klassiske formel gælder stadig pga <span class="matematik"></span><script type="math/tex">\pm</script>.
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#db05b03e-acc9-4b0d-8026-155c38e1d11a" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="db05b03e-acc9-4b0d-8026-155c38e1d11a" class="collapse">
+Vis at <span class="matematik"></span><script type="math/tex">\epsilon_3 = e^{i \frac{2\pi}{3}}</script> er en løsning til andengradsligningen
+<div class="matematik"></div><script type="math/tex; mode=display">
+z^2 + z + 1 = 0.
+</script>
+Benyt dette til at finde et udtryk for sinus til <span class="matematik"></span><script type="math/tex">120</script> grader (<span class="matematik"></span><script type="math/tex">2\pi/3</script>)
+ved hjælp af løsningsformlen for andengradsligningen.
+</div>
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection_Algebraens_fundamentalsætning">Algebraens fundamentalsætning</h3>
+</p>
+
+<p class="indent text-justify">
+Vi så ovenfor at andengradsligninger altid har løsninger i
+de komplekse tal. Det helt enestående er at dette resultat
+også gælder for <span class="matematik"></span><script type="math/tex">n</script>-te grads ligninger dvs ligninger af
+formen
+<div class="matematik"></div><script type="math/tex; mode=display">
+a_n z^n + a_{n-1} z^{n-1} + \cdots + a_1 z + a_0 = 0,
+</script>
+hvor <span class="matematik"></span><script type="math/tex">a_n, \ldots, a_0\in\mathbb{C}</script> og <span class="matematik"></span><script type="math/tex">a_n\neq 0</script>. Vi har blot vist det for <span class="matematik"></span><script type="math/tex">n=2</script>, men
+det gælder for alle <span class="matematik"></span><script type="math/tex">n = 1, 2, 3, \ldots</script>!
+</p>
+
+<p class="indent text-justify">
+Denne perle kaldes for <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra" target="_blank">algebraens fundamentalsætning</a>. Det er spændende at læse om historien bag denne sætning. ￼
+</p>
+
+<p class="indent text-justify">
+Der er endnu ikke opdaget et algebraisk bevis for sætningen a la det vi lavede for <span class="matematik"></span><script type="math/tex">n=2</script>.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Om_komplekse_tal_og_periodiske_fænomener">Om komplekse tal og periodiske fænomener</h2>
+</p>
+
+<p class="indent text-justify">
+Cosinus og sinus er rasende interessante funktioner. De er
+matematikkens fremmeste våben i beskrivelsen af periodiske fænomener
+som feks planetbaner og bølgebevægelser. De bliver endnu mere anvendelige, 
+når man betragter dem ved hjælp af den komplekse eksponentialfunktion
+<span class="matematik"></span><script type="math/tex">e^{i x}</script>.
+</p>
+
+<p class="indent text-justify">
+En periodisk funktion <span class="matematik"></span><script type="math/tex">f(t)</script> er en funktion, som gentager sig selv
+efter et bestemt tidsrum <span class="matematik"></span><script type="math/tex">T</script> dvs <span class="matematik"></span><script type="math/tex">f(t) = f(t + T)</script>. For eksempel er
+både sinus og cosinus periodiske funktioner med periode <span class="matematik"></span><script type="math/tex">T = 2\pi</script>.
+</p>
+
+<p class="indent text-justify">
+Uden at afsløre den fulde
+sandhed kan jeg her skrive at man normalt kigger på cosinus og sinus
+funktioner på formen
+</p>
+
+<p class="indent text-justify">
+<span id="2.10"></span><div class="matematik"></div><script type="math/tex; mode=display">
+A \cos(N x)\qquad \mathrm{og} \qquad A \sin(N x),
+\tag{2.10}</script>
+hvor <span class="matematik"></span><script type="math/tex">A</script> er et tal, som angiver højden (amplituden) af bølgerne og <span class="matematik"></span><script type="math/tex">N</script>
+er et tal, som beskriver antal bølger per tidsenhed
+(frekvensen). Cosinus og sinusfunktionerne i <a href="#2.10">(2.10)</a> samles
+under et i funktionerne <span class="matematik"></span><script type="math/tex">A e^{i N x}</script>.
+</p>
+
+<p class="indent text-justify">
+Disse funktioner er byggeklodser for naturligt forekommende
+periodiske fænomener.
+</p>
+
+<p class="indent text-justify">
+Feks er den periodiske funktion <span class="matematik"></span><script type="math/tex">\cos(x)^3</script>:
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Kompleksetal/cosx3.png">
+</p>
+
+<p class="indent text-justify">
+sum af de to periodiske funktioner <span class="matematik"></span><script type="math/tex">\frac{1}{4} \cos(3 x)</script> og <span class="matematik"></span><script type="math/tex">\frac{3}{4} \cos(x)</script>:
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Kompleksetal/cosx3decomp.png">
+</p>
+
+<p class="indent text-justify">
+Dette kan aflæses af formlen i <a href="#2.6">(2.6)</a>, som vi netop fik ved hjælp af
+<div class="matematik"></div><script type="math/tex; mode=display">
+(e^{i x})^3 = e^{i (3 x)}.
+</script> 
+Vi vender tilbage til opløsningen af et signal (en periodisk funktion)
+i komponenterne <span class="matematik"></span><script type="math/tex">A e^{i N x}</script> senere. Faktisk er det sådan man
+digitaliserer feks musik.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Opgaver">Opgaver</h2>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3> <p class="Quizopgave"><a href="#3dfd4860-59ad-4ece-99aa-63864a173bfd" class="btn btn-default" data-toggle="collapse">Quizopgave</a></p><div id="3dfd4860-59ad-4ece-99aa-63864a173bfd" class="collapse">
+<div id="quiz3" style="width:100%;"><div class="row quizquestion">
+Hvad gælder om <span class="matematik"></span><script type="math/tex">z=(1-i)(2+i)</script>?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">z</script> svarer til at gange <span class="matematik"></span><script type="math/tex">2+i</script> med <span class="matematik"></span><script type="math/tex">\sqrt{2}</script> og derefter gange med <div class="matematik"></div><script type="math/tex; mode=display">e^{i \pi/4}</script>.
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="matematik"></div><script type="math/tex; mode=display">z=2-i</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">z = 3-i</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="matematik"></span><script type="math/tex">z</script> svarer til at gange <span class="matematik"></span><script type="math/tex">2+i</script> med <span class="matematik"></span><script type="math/tex">\sqrt{2}</script> og derefter med <div class="matematik"></div><script type="math/tex; mode=display">e^{i  7\pi /4}</script>. 
+</div></div></div><button id="quizbutton3" class = "btn btn-default">Check</button><script>$("#quizbutton3").click(function(){quizshowanswers(quiz3, quizbutton3);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+Gør rede for at <span class="matematik"></span><script type="math/tex">e^{i x} e^{-i x} = 1</script>, hvis <span class="matematik"></span><script type="math/tex">x\in \mathbb{R}</script>.
+Hvad er den polære form for <span class="matematik"></span><script type="math/tex">z^{-1} = 1/z</script>, hvis <span class="matematik"></span><script type="math/tex">z</script> har polær form
+<div class="matematik"></div><script type="math/tex; mode=display">
+z = r e^{i \theta}?
+</script>
+Hvad med den polære form for det konjugerede komplekse tal <span class="matematik"></span><script type="math/tex">\overline{z}</script>?
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+<p class="Quizopgave"><a href="#c1228000-c3d6-49b8-8c19-d430f377ff6c" class="btn btn-default" data-toggle="collapse">Quizopgave</a></p><div id="c1228000-c3d6-49b8-8c19-d430f377ff6c" class="collapse">
+<div id="quiz4" style="width:100%;"><div class="row quizquestion">
+Hvad gælder om <span class="matematik"></span><script type="math/tex">z=(2+i)/(1-i)</script>?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="T">
+<span class="matematik"></span><script type="math/tex">z</script> svarer til at dividere <span class="matematik"></span><script type="math/tex">2+i</script> med <span class="matematik"></span><script type="math/tex">\sqrt{2}</script> og derefter gange med <div class="matematik"></div><script type="math/tex; mode=display">e^{i \pi/4}</script>.
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">2 z=1+3 i</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="matematik"></div><script type="math/tex; mode=display">z = -1 + 3 i</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="matematik"></span><script type="math/tex">z</script> svarer til at gange <span class="matematik"></span><script type="math/tex">2+i</script> med <span class="matematik"></span><script type="math/tex">\sqrt{2}</script> og derefter med <div class="matematik"></div><script type="math/tex; mode=display">e^{- i  \pi /4}</script>. 
+</div></div></div><button id="quizbutton4" class = "btn btn-default">Check</button><script>$("#quizbutton4").click(function(){quizshowanswers(quiz4, quizbutton4);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+Løs andengradsligningen
+<div class="matematik"></div><script type="math/tex; mode=display">
+z^2 -(3+2i)z  + (1 + 3i) = 0.
+</script>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+Opskriv samtlige komplekse tal <span class="matematik"></span><script type="math/tex">z</script>, som løser ligningen
+<div class="matematik"></div><script type="math/tex; mode=display">
+z^6 = 64.
+</script>
+Hvilke af disse løsninger er reelle tal?
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+Find reelle tal <span class="matematik"></span><script type="math/tex">A</script> og <span class="matematik"></span><script type="math/tex">f</script> så at
+<div class="matematik"></div><script type="math/tex; mode=display">
+\cos(t) + \sin(t) = A \cos(t + f)
+</script>
+for alle <span class="matematik"></span><script type="math/tex">t</script> (<span class="matematik"></span><script type="math/tex">A</script> kaldes amplituden og <span class="matematik"></span><script type="math/tex">f</script> faseforskydningen af  "signalet"
+ på venstresiden).
+<p class="Vink"><a href="#bf75d209-a5ab-45cf-85c2-a9540e24af2f" class="btn btn-default" data-toggle="collapse">Vink</a></p><div id="bf75d209-a5ab-45cf-85c2-a9540e24af2f" class="collapse">
+Opfat venstresiden som realdelen af
+<div class="matematik"></div><script type="math/tex; mode=display">
+e^{i t} - i e^{i t}
+</script>
+og højresiden som realdelen af
+<div class="matematik"></div><script type="math/tex; mode=display">
+A e^{i (t + f)}. 
+</script>
+og regn med komplekse tal!
+</div>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="subsection__"> </h3>
+Generaliser den foregående opgave til at finde <span class="matematik"></span><script type="math/tex">C</script> og <span class="matematik"></span><script type="math/tex">f</script> ud fra <span class="matematik"></span><script type="math/tex">\omega, A</script> og <span class="matematik"></span><script type="math/tex">B</script> så 
+<div class="matematik"></div><script type="math/tex; mode=display">
+A \cos(\omega t) + B \sin(\omega t) = C \cos(\omega t + f).
+</script>
+</p>
+
+<p class="indent text-justify">
+<div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+<p class="indent text-justify">
+ 
+
+
+
+</p>
+
+<p class="indent text-justify">
+</div>
+</div>
+
+</div>
+
+<!-- Til brug ved afklikning af svar i quiz -->
+<script>
+$(document).on('click', '.quizanswer',  function(){$(this).toggleClass("toggle");});
+</script>
+
+<!-- Feedback mht svar i quiz. Button deaktiveret i et stykke tid via setTimeout! -->
+
+<script>
+var quizshowanswers = function(quizid, quizbutton){
+//
+// Hmmmm, quizid.id i stedet for quizid !!!
+//
+    str = "#"+quizid.id+" .row .quizanswer"; 
+//    str = "#quiz1 .row .quizanswer";
+    $(str).each(
+    function(){
+    obj = $(this);
+    if (obj.attr("datav") == "F")
+      obj.addClass("quizwronganswer");
+    else
+      obj.addClass("quizrightanswer");
+    });
+    setTimeout(function(){
+    $(str).each(
+    function(){
+      obj=$(this);
+      if (obj.attr("datav") == "F")
+        obj.removeClass("quizwronganswer");
+      else
+        obj.removeClass("quizrightanswer");
+      obj.removeClass("toggle");
+      obj.addClass("quizanswer");
+      })}, 3000);
+
+    strbutton="#" + quizbutton.id;
+    //strbutton = "#quizbutton1";
+    $(strbutton).attr("disabled", true);
+    setTimeout(function(){
+    $(strbutton).attr("disabled", false);
+    }, 10000);
+    };
+</script>
+
+<!-- Model fra Bjørk -->
+
+<div id="myModal" class="modal">
+
+   <div class="modal-content" style="z-index:99">
+    <div class="document" style="z-index:99">
+      <span id="myCls" class="close">&times;</span>
+      <p id="myModalMessage" style="color: black">Inge aktuel sci2u quiz</p>
+      <div id="stepboardcontainer">
+        <div id="stepboardUdvikler" style="width: 100%; z-index:99"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+

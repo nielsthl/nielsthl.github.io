@@ -1,0 +1,20 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}[2012/04/13]
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+\begin{tikzpicture}[scale=5]
+\draw[thick](0cm, 0cm) circle (1cm);
+\draw[->] (-1.2cm, 0cm) -- (1.2cm, 0cm) node[right, fill=white] {$x$};
+\draw[->] (0cm, -1.2cm) -- (0cm, 1.2cm) node[above, fill=white] {$y$};
+
+\draw (0cm, 0cm) -- (-0.5cm, 0.866cm);
+\draw [orange, thick, domain=0:120] plot ({0.3*cos(\x)}, {0.3*sin(\x)});
+\draw (0.01cm, 0.35cm) node[right] {$\theta+\pi/2$};
+
+%\draw[dashed] (-0.5cm, 0.866cm) -- (0cm, 0.866cm);
+%\draw[dashed] (-0.5cm, 0.866cm) -- (-0.5cm, 0cm);
+
+%\filldraw (0.866cm, 0.5cm) circle (0.01cm) node[right] {$(x, y)$};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,193 @@
+<!doctype html>
+<head>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.css" integrity="sha384-BDqcjN11/6D69oC63ObubLHNvQR2fNjin6+AzxA3xalB0swTj17TxVV1tL1Q5Png" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.js" integrity="sha384-sKYm5us3z9/bRQA+cc3gPzqwI5RVgL8vJQx1lpBudr9IzHOR8fnFUH68dz1GsTQw" crossorigin="anonymous"></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+    
+    for(var i = 0; i < tex.length; ++i)
+       {
+         var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+      
+         var math = tex[i].previousSibling;
+         math.className = 'katex-render';
+        
+         var content = tex[i].textContent;
+
+	 katex.render(content, math, {
+	    displayMode: display,
+	    throwOnError: false,
+	    //macros: {"\\NN":"\\mathbb{N}",
+	    //	     "\\ZZ":"\\mathbb{Z}",
+	    //	     "\\QQ":"\\mathbb{Q}",
+	    //	     "\\RR":"\\mathbb{R}",
+	    //	     "\\CC":"\\mathbb{C}",
+	    //	     "\\tag":"\\pod\\text"}
+	    macros: {"\\tag":"\\pod\\text"} // Hack for \eqref!
+      });
+
+	tex[i].parentNode.removeChild(tex[i]);
+	
+    }
+    var eqno = document.querySelectorAll('.katex span > span.mspace.quad');
+    for(var i = 0; i < eqno.length; ++i)
+    {
+        if(eqno[i].parentNode.className)
+            continue;
+        var quad = eqno[i];
+        var span = quad.parentNode;
+        var text = span.nextSibling;
+        var pare = text.nextSibling;
+        span.removeChild(quad);
+        span.appendChild(text);
+        span.appendChild(pare);
+        span.className = 'eqno';
+    }
+});
+</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/math.css">
+
+</script>
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<style>
+      
+      html {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      }
+      .container {
+      max-width: 24cm;
+      }
+
+</style>
+
+<link rel="stylesheet" href="../css/nt0.css">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-1">
+	<div class="sidebar-nav" data-spy="affix">
+	  <!--<a href="../index.html"><i class="fa fa-book tocicon" style="color:black;"></i></a>-->
+	  <a href="../index.html"><i class="fa fa-th-list tocicon" style="color:#76323f;" title="Indholdsfortegnelse"></i></a>
+	</div>
+      </div>
+      <div class="col-xs-11">
+	
+
+</p>
+
+<p class="indent text-justify">
+<style> body{counter-reset: chapter 11;}</style>
+<h1 id="chapter_Regnemaskinen_Wolfram_alpha"><span style="float:right;">Regnemaskinen Wolfram alpha</span></h1>
+</p>
+
+<p class="indent text-justify">
+Udregninger i lineær algebra kan foretages på nettet (se nedenfor) i
+f.eks. Wolfram language. Her er en
+mindre guide til 
+<a href="http://reference.wolfram.com/language/guide/MatricesAndLinearAlgebra.html" target="_blank">Matrices and Linear Algebra</a>.
+</p>
+
+<p class="indent text-justify">
+<h2 id="section_Computational_engine">Computational engine</h2>
+</p>
+
+<p class="indent text-justify">
+<div style="position:relative; left:-70px;"><iframe width="120%" height="600" src="https://www.wolframalpha.com/" ></iframe></div>
+</p>
+
+<p class="indent text-justify">
+</div>
+</div>
+
+</div>
+
+<!-- Til brug ved afklikning af svar i quiz -->
+<script>
+$(document).on('click', '.quizanswer',  function(){$(this).toggleClass("toggle");});
+</script>
+
+<!-- Feedback mht svar i quiz. Button deaktiveret i et stykke tid via setTimeout! -->
+
+<script>
+var quizshowanswers = function(quizid, quizbutton){
+//
+// Hmmmm, quizid.id i stedet for quizid !!!
+//
+    str = "#"+quizid.id+" .row .quizanswer"; 
+//    str = "#quiz1 .row .quizanswer";
+    $(str).each(
+    function(){
+    obj = $(this);
+    if (obj.attr("datav") == "F")
+      obj.addClass("quizwronganswer");
+    else
+      obj.addClass("quizrightanswer");
+    });
+    setTimeout(function(){
+    $(str).each(
+    function(){
+      obj=$(this);
+      if (obj.attr("datav") == "F")
+        obj.removeClass("quizwronganswer");
+      else
+        obj.removeClass("quizrightanswer");
+      obj.removeClass("toggle");
+      obj.addClass("quizanswer");
+      })}, 3000);
+
+    strbutton="#" + quizbutton.id;
+    //strbutton = "#quizbutton1";
+    $(strbutton).attr("disabled", true);
+    setTimeout(function(){
+    $(strbutton).attr("disabled", false);
+    }, 10000);
+    };
+</script>
+
+<!-- Model fra Bjørk -->
+
+<div id="myModal" class="modal">
+
+   <div class="modal-content" style="z-index:99">
+    <div class="document" style="z-index:99">
+      <span id="myCls" class="close">&times;</span>
+      <p id="myModalMessage" style="color: black">Inge aktuel sci2u quiz</p>
+      <div id="stepboardcontainer">
+        <div id="stepboardUdvikler" style="width: 100%; z-index:99"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+
