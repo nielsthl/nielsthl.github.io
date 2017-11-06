@@ -1,0 +1,6 @@
+/* Font from css in online notes of Nicolas Tessore: http://ntesso.re/notes/ */
+@import url("https://fonts.googleapis.com/css?family=PT+Serif|PT+Serif+Caption|PT+Mono|Source+Sans+Pro:200,400");
+
+body { font-family: "PT Serif", serif; letter-spacing: 0.02em; font-size:20px; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "PT Serif Caption", sans-serif; font-weight: normal; color: #76323f; letter-spacing: normal; }

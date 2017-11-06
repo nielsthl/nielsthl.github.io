@@ -1,0 +1,53 @@
+    h1, h2, h3 {color: #76323f;}
+
+    h1 {
+    font-size:50px;
+    text-align: center;
+    }
+
+    h2 {
+    font-size:25px;
+    color: black;
+    text-align: center;
+    }
+
+    body {
+    
+    font-family: 'Century Schoolbook L';
+    font-size: 18px;
+    line-height: 1.5;
+    }
+
+    img {
+    display:block;
+    margin:auto;
+    padding:30px;
+    max-width:100%;
+    height: auto;
+    align:middle;
+    }
+
+    .kap {color:black; font-size: 22px; padding-left:10px}
+    
+    .taet {
+	margin: 1px 0;
+    }
+
+    .center {
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+    }
+
+    .downtick {
+	font-size:30px;
+    }
+    
+    ul {
+    list-style-type: none;
+    }
+    a:link{
+    text-decoration: none;
+    }
+
+

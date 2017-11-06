@@ -1,0 +1,1462 @@
+<!doctype html>
+<head>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.css" integrity="sha384-BDqcjN11/6D69oC63ObubLHNvQR2fNjin6+AzxA3xalB0swTj17TxVV1tL1Q5Png" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.js" integrity="sha384-sKYm5us3z9/bRQA+cc3gPzqwI5RVgL8vJQx1lpBudr9IzHOR8fnFUH68dz1GsTQw" crossorigin="anonymous"></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+    
+    for(var i = 0; i < tex.length; ++i)
+       {
+         var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+      
+         var math = tex[i].previousSibling;
+         math.className = 'katex-render';
+        
+         var content = tex[i].textContent;
+
+	 katex.render(content, math, {
+	    displayMode: display,
+	    throwOnError: false,
+	    //macros: {"\\NN":"\\mathbb{N}",
+	    //	     "\\ZZ":"\\mathbb{Z}",
+	    //	     "\\QQ":"\\mathbb{Q}",
+	    //	     "\\RR":"\\mathbb{R}",
+	    //	     "\\CC":"\\mathbb{C}",
+	    //	     "\\tag":"\\pod\\text"}
+	    macros: {"\\tag":"\\pod\\text"} // Hack for \eqref!
+      });
+
+	tex[i].parentNode.removeChild(tex[i]);
+	
+    }
+    var eqno = document.querySelectorAll('.katex span > span.mspace.quad');
+    for(var i = 0; i < eqno.length; ++i)
+    {
+        if(eqno[i].parentNode.className)
+            continue;
+        var quad = eqno[i];
+        var span = quad.parentNode;
+        var text = span.nextSibling;
+        var pare = text.nextSibling;
+        span.removeChild(quad);
+        span.appendChild(text);
+        span.appendChild(pare);
+        span.className = 'eqno';
+    }
+});
+</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/math.css">
+
+</script>
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(".openbs").click(function(){
+        $(".collapse").collapse('show');
+    });
+    $(".closebs").click(function(){
+        $(".collapse").collapse('hide');
+    });
+
+});
+</script>
+
+
+<style>
+      
+      html {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      }
+      .container {
+      max-width: 24cm;
+      }
+
+</style>
+
+<link rel="stylesheet" href="../css/nt0.css">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-1">
+	<div class="sidebar-nav" data-spy="affix">
+	  <!--<a href="../index.html"><i class="fa fa-book tocicon" style="color:black;"></i></a>-->
+	    <a href="../index.html"><i class="fa fa-th-list tocicon" style="color:#76323f;" title="Indholdsfortegnelse"></i></a><br><br>
+	    <button class="openbs" title="Åbn alle knapper">+</button><br><br>
+	    <button class="closebs" title="Luk alle knapper">-</button>
+	</div>
+      </div>
+      <div class="col-xs-11">
+	
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+
+
+
+
+
+
+
+</p>
+
+<p class="indent text-justify">
+
+
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<style> body{counter-reset: chapter 1;}</style>
+</p>
+
+<p class="indent text-justify">
+<h1 id="af2be7b2-ba8e-4002-ab1a-4543b52073c0">1 <span style="float:right;">Om bitcoin og kryptovaluta</span></h1>
+</p>
+
+<p class="indent text-justify">
+<h2 id="f442a817-1328-4198-8762-90f262871205">1.1 Oplæg om kryptovaluta og matematik</h2>
+</p>
+
+<p class="indent text-justify">
+Dette oplæg fortæller om de matematiske principper bag kryptovalua
+og blockchain. Der er afsæt i følgende tre matematiske temaer.
+</p>
+
+<p class="indent text-justify">
+<ol><li>
+Kryptografiske hash-funktioner og proof of work.
+</li><li>
+Lidt sandsynlighedsregning omkring den geometriske fordeling.
+</li><li>
+Digital signatur og det diskrete logaritmeproblem.
+</li></ol>
+</p>
+
+<p class="indent text-justify">
+<h3 id="2edae4f4-45f6-4616-9fcb-28e470471b13">1.1.1 Diskret matematik i det supplerende stof</h3>
+</p>
+
+<p class="indent text-justify">
+Oplægget kan benyttes som inspiration til det supplerende stof omkring
+diskret matematik i gymnasieskolen. I denne kontekst er
+indfaldsvinklen et forløb i Euklids algoritme og regning med
+kongruenser med formålet at forstå den digitale signatur i RSA
+kryptosystemet. Alt efter niveau kan man vælge omfanget af talteorien.
+</p>
+
+<p class="indent text-justify">
+Denne vinkel er skitseret i afsnittet <a href="#diskrmat">Justerbar
+  talteori</a>. For at få en fornemmelse for nogle af
+elementerne i
+forløbet kan man kigge på Khan Academys <a href="https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic" target="_blank">online
+  forløb</a>
+om modulær aritmetik (med indbyggede opgaver).
+</p>
+
+<p class="indent text-justify">
+Den drivende motivation i forløbet kan feks være nødvendigheden af
+digital signatur i Bitcons blockchain, hvor sidstnævnte kan
+forklares til eleverne i overordnede termer evt med referencer
+til de adskillige YouTube videoer, der findes om blockchain.
+</p>
+
+<p class="indent text-justify">
+Mantraet er at eleverne skal undervises i tal for at have
+en overordnet forståelse for hvordan deres penge er beskyttet online.
+</p>
+
+<p class="indent text-justify">
+Oplægget kan også bruges som <a href="#geomford">eksempel på anvendelser af
+sandsynlighedsregning i kernestoffet</a>. Her er motivationen
+mining algoritmen i bitcoin.
+</p>
+
+<p class="indent text-justify">
+<h3 id="79493c0a-d784-485a-9b66-6c97b19bc19a">1.1.2 SRP</h3>
+</p>
+
+<p class="indent text-justify">
+Oplægget kan også benyttes som inspiration til et SRP forløb i
+gymnasiet, hvor man går dybere ind i den reelle kryptering, som
+bruges i bitcoin herunder <a href="#dlp">det diskrete logaritmeproblem</a>.
+</p>
+
+<p class="indent text-justify">
+<h3 id="eee8ca28-344f-428b-9603-d9c6585e05c0">1.1.3 Interaktiv feedback</h3>
+</p>
+
+<p class="indent text-justify">
+Jeg vil meget gerne have feedback på denne version af mit oplæg
+om bitcoin. Det er muligt at annotere dette interaktive kapitel.
+Se videoen nedenfor for yderligere instruktioner.
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/5SIoPZ-3oqA?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="15f98e52-b8e9-4a70-859c-0f19f4e81f8a">1.2 Introduktion</h2>
+</p>
+
+<p class="indent text-justify">
+I December 1998 blev
+<a href="https://en.wikipedia.org/wiki/PayPal" target="_blank">PayPal</a> oprettet som et
+medium til online betaling for e-handel på nettet.  Stifterne
+inkluderede veritable kendisser som <a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank">Elon
+  Musk</a> og <a href="https://en.wikipedia.org/wiki/Peter_Thiel" target="_blank">Peter
+  Thiel</a>. For at kunne hæve
+beløb fra PayPal er det nødvendigt at have sin egen bankkonto
+tilknyttet mht overførsler.
+</p>
+
+<p class="indent text-justify">
+Det har længe været en drøm i det kryptografiske samfund at kunne lave
+sikre internetpenge uden at involvere en tredjepart som PayPal eller
+en bank.  En person på nettet uden en bankkonto skal have mulighed for
+at modtage og sende penge til en hvilken som helst anden person på
+nettet uden at en tredjepart er involveret.
+</p>
+
+<p class="indent text-justify">
+<h2 id="1d2a4aa6-b7a6-4239-9330-735a721e45d5">1.3 Om bitcoins historie</h2>
+</p>
+
+<p class="indent text-justify">
+Denne drøm blev realiseret i et berømt <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">white
+  paper</a> af <a href="https://en.wikipedia.org/wiki/Satoshi_Nakamoto" target="_blank">Satoshi
+  Nakamoto</a> i 2008.
+Her blev det teoretiske fundament for den første kryptovaluta,
+<a href="https://en.wikipedia.org/wiki/Bitcoin" target="_blank">bitcoin</a>, lanceret. 
+</p>
+
+<p class="indent text-justify">
+Bitcoins historie frem til 2014 er glimrende illustreret på
+<a href="http://historyofbitcoin.org" target="_blank">http://historyofbitcoin.org/</a>.
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+Som en god introduktion til bitcoin kan anbefales <a href="https://en.wikipedia.org/wiki/Morgan_Spurlock" target="_blank">Morgan Spurlock</a>s dokumentarfilm om 
+bitcoin nedenfor.
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/27VZ6gYYNOA?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+Interessen for bitcoin er vokset eksplosivt det sidste stykke tid og
+fra at være kurssat til omkring 650 USD for et år siden ligger
+kursen nu (1/11/2017) omkring 6000 USD. 
+</p>
+
+<p class="indent text-justify">
+Det estimeres at den illusoriske Satoshi Nakamoto ejer en million
+bitcoins, hvilket i dag svarer til 6 milliarder dollars (nummer ca 239
+over verdens rigeste og rigere end Donald Trump, som angives til en
+net worth på 3,1 milliarder dollars på <a href="https://www.forbes.com/billionaires/list/" target="_blank">Forbes
+  listen</a> over verdens
+dollarmilliardærer).
+</p>
+
+<p class="indent text-justify">
+Kursudviklingen på bitcoin (BTC) kan
+udforskes via nedenstående interaktive graf.
+</p>
+
+<p class="indent text-justify">
+<div class="frameit">
+<script src="https://mining-profit.com/js/mp-btc-chart.js"></script>
+<script type="text/javascript">
+MiningProfitBTCChart.setInitialRange('1y');
+MiningProfitBTCChart.setInitialExchange('coinbase');
+MiningProfitBTCChart.draw();
+</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+Der er de sidste år kommet adskillige børser for kryptovalutaer i
+verden. Så vidt jeg ved er der endnu ikke en i Danmark, selvom det
+er muligt at købe feks bitcoins i Danmark (København).
+</p>
+
+<p class="indent text-justify">
+Der er livlig handel med bitcoins 24/7: <a href="https://www.gdax.com/trade/BTC-USD" target="_blank">https://www.gdax.com/trade/BTC-USD</a>.
+</p>
+
+<p class="indent text-justify">
+Bitcoin var den første decentraliserede kryptovaluta, men siden er <a href="https://coinmarketcap.com/all/views/all/" target="_blank">over 1000 kryptovalutaer
+  kommet til</a>.
+</p>
+
+<p class="indent text-justify">
+Hele maskineret drives af open source software (skrevet i C++), som kan hentes på 
+<a href="https://github.com/bitcoin" target="_blank">GitHub</a> af enhver med netadgang. 
+</p>
+
+<p class="indent text-justify">
+<h2 id="aea10021-9a89-49f6-a41f-b38e65eca295">1.4 Principperne bag</h2>
+</p>
+
+<p class="indent text-justify">
+I kryptovaluta og specielt bitcoin er regnskabet decentraliseret. Der
+er tale om en slags distribueret
+netbank, som i princippet ejes af alle på internettet, men med
+matematisk veldefinerede regler for bogføring af transaktioner.
+</p>
+
+<p class="indent text-justify">
+<div class="frameit">
+<img src="../img/distribueret.png">
+<figcaption>
+Det traditionelle finansielle system er afbildet i (A). Her
+  er der en central instans (en bank), som holder øje med
+  pengene. Afbildet i (C) er det distribuerede system, hvor alle med adgang til nettet kan agere bank og bogføre transaktioner.
+</figcaption>
+</div>
+</p>
+
+<p class="indent text-justify">
+Regnskabsbogen kaldes for
+<em>the blockchain</em>. Navnet skyldes at transaktioner organiseres i
+blokke, som er kædet sammen.
+</p>
+
+<p class="indent text-justify">
+<img src="../img/blockchain.jpg">
+</p>
+
+<p class="indent text-justify">
+Udfordringen er at få alle de distribuerede banker til at bogføre
+konsistent i en fælles veldefineret regnskabsbog. Lad os
+en gang for alle slå fast: Alle knuderne i netværket har adgang
+til hele blokkæden, alle transaktioner foretaget tilbage til den
+såkaldte <a href="https://en.bitcoin.it/wiki/Genesis_block" target="_blank">genesis block</a>.
+</p>
+
+<p class="indent text-justify">
+<h3 id="886086be-ac14-48a4-96ab-0c05e295ef68">1.4.1 Transaktioner er krypteret med digital signatur</h3>
+</p>
+
+<p class="indent text-justify">
+Bitcoin benytter et offentligt nøgle kryptosystem til brug ved digital
+signatur af transaktioner.
+</p>
+
+<p class="indent text-justify">
+Som bruger på bitcoin netværet har man en 160 bit <a href="https://en.bitcoin.it/wiki/Address" target="_blank">adresse</a> som feks
+<div class="matematik"></div><script type="math/tex; mode=display">
+{\tt 1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2}
+</script>
+En bitcoin adresse er genereret ud fra den offentlige nøgle, som er på 256 bits.
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#ec40ba0b-202e-4487-9e75-8f98cda04b4e" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="ec40ba0b-202e-4487-9e75-8f98cda04b4e" class="collapse">
+Den offentlige nøgle er konstant. Bitcoin adressen
+er associeret med den offentlige nøgle og kan (bør) genereres 
+på ny for hver transaktion. Hvordan hænger det sammen?
+Er det usikkert at nøjes med en konstant bitcoin adresse?
+</p>
+
+<p class="indent text-justify">
+Konsulter evt følgende <a href="https://en.bitcoin.it/wiki/Address_reuse" target="_blank">artikel</a>.
+</div>
+</p>
+
+<p class="indent text-justify">
+Denne adresse bruges af folk, der sender penge til en. En mere teknisk
+beskrivelse kan findes
+<a href="https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses" target="_blank">her</a>.
+Der er tale om en 160 bit hash af ens offentlige nøgle i
+<a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm" target="_blank">ECDSA</a>
+nøgleparret. Den private nøgle benyttes til digital signatur af ens
+transaktion, når man sender bitcoins over netværket. Nedenstående
+kan ikke indskærpes kraftigt nok!
+</p>
+
+<p class="indent text-justify">
+<div class="frameit">
+
+<b>
+Hvis man mister eller får stjålet sin private nøgle har man tabt alle sine bitcoins.
+</b>
+
+</div>
+</p>
+
+<p class="indent text-justify">
+En af de forhenværende større bitcoin børser <a href="https://en.wikipedia.org/wiki/Mt._Gox" target="_blank">Mt Gox</a> fik
+stjålet 850.000 bitcoins og gik konkurs i 2014.
+</p>
+
+<p class="indent text-justify">
+I bitcoin protokollen benyttes elliptisk kurve kryptografi. En af de
+smukkeste anvendelser af moderne algebraisk geometri. Det er kritisk
+at denne digitale signatur implementeres korrekt. Fejlagtige
+implementationer har ledt til <a href="https://www.theregister.co.uk/2013/08/12/android_bug_batters_bitcoin_wallets/" target="_blank">tyveri af
+  bitcoins</a>.
+</p>
+
+<p class="indent text-justify">
+Transaktioner underskrives af afsenderen med hans/hendes private nøgle, 
+organiseres med tidsstempel i blokke og kædes sammen.
+</p>
+
+<p class="indent text-justify">
+<img src="../img/bitcoinbc.png">
+</p>
+
+<p class="indent text-justify">
+Hvordan holder hele verden styr på dette? Hvordan bliver de enige om den
+samme blokkæde? Hvordan undgår man at en ondsindet person bruger den samme
+bitcoin to gange?
+</p>
+
+<p class="indent text-justify">
+Svarene på disse spørgsmål er det nyskabende i Nakamotos artikel. For
+at få godkendt en blok i blokkæden kræves at den er afsluttet med et
+såkaldt <em>proof of work</em>, som er arbejdet med at løse et
+tidskrævende matematisk problem hvis løsning nemt kan verificeres.
+</p>
+
+<p class="indent text-justify">
+Processen med at løse dette matematiske problem kaldes mining, fordi man
+får (miner) bitcoins ved at løse det. Faktisk er dette måden
+bitcoins bliver født på.
+</p>
+
+<p class="indent text-justify">
+<a href="https://en.bitcoin.it/wiki/https://en.bitcoin.it/wiki/Protocol_rules" target="_blank">Bitcoin protokollen</a> siger 
+at minere tjener 50 BTC for hver af de første 210.000 blokke, 
+25 BTC for de næste 210.000 blokke etc. Pt er belønningen 12.5 BTC
+for at mine en blok. 
+</p>
+
+<p class="indent text-justify">
+<p class="Quiz"><a href="#2543db08-28a1-47d9-b1a3-a823118cf970" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="2543db08-28a1-47d9-b1a3-a823118cf970" class="collapse">
+<div id="quiz1" style="width:100%;"><div class="row quizquestion">
+Med protokollen for udbetalingen af bitcoins for mining er
+der en øvre grænse for hvor mange bitcoins der vil
+være i fremtiden. Hvor stor er denne (mindste) øvre grænse?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+42.000.000 BTC
+</div><div class="col-xs-5 quizanswer" datav="T">
+21.000.000 BTC
+</div><div class="col-xs-5 quizanswer" datav="F">
+84.000.000 BTC
+</div><div class="col-xs-5 quizanswer" datav="F">
+100.000.000 BTC
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+Bitcoin er en levende organisme og transaktioner bliver foretaget hvert sekund og sat
+ind i the blockchain. Nedenfor vises transaktioner og mining live fra hjemmesiden
+<a href="https://blockexplorer.com" target="_blank">https://blockexplorer.com</a>.
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="650" src="https://blockexplorer.com" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p class="indent text-justify">
+<h3 id="2cc8178a-2952-4970-a9c0-74f04cdcc1a7">1.4.2 Udforskning af  the blockchain</h3>
+</p>
+
+<p class="indent text-justify">
+Man kan udforske alle blokke via følgende link: <a href="https://live.blockcypher.com" target="_blank">https://live.blockcypher.com</a>.
+</p>
+
+<p class="indent text-justify">
+<h2 id="68d31e2c-7cf7-46e9-a0b7-267724a90ef2">1.5 Mining</h2>
+</p>
+
+<p class="indent text-justify">
+<img src="../img/mining.jpg">
+</p>
+
+<p class="indent text-justify">
+Bitcoin skal svare til digitalt guld. En guldmønts værdi svarer til værdien af
+guldet, som indgår i den. En bitcoins værdi svarer til den mængde
+strøm, der medgår til at mine (lave) den. I dette afsnit
+kommer vi ind på hvad det vil sige at mine bitcoins.
+</p>
+
+<p class="indent text-justify">
+Ideen kommer fra en <a href="../pdf/pvp.pdf" target="_blank">artikel</a> fra 1993, hvor
+temaet er en protokol for at forhindre junk mail. Computeren skal
+løse et matematisk problem for at sende en email til modtageren (eller
+kontakte en server). En email har en
+standard header <span class="matematik"></span><script type="math/tex">h</script>, som består af en streng taget fra mængden <span class="matematik"></span><script type="math/tex">T</script> af
+strenge over et alfabet, som typisk er computerens synlige tegn. Headeren
+<span class="matematik"></span><script type="math/tex">h</script> kunne feks være
+<div class="matematik"></div><script type="math/tex; mode=display">
+{\tt 2017:11:1:13:20:niels@math.au.dk}
+</script>
+</p>
+
+<p class="indent text-justify">
+Antag
+nu vi har en uforudsigelig (hash) funktion
+<div class="matematik"></div><script type="math/tex; mode=display">
+f: T \rightarrow \{0, 1, 2, \ldots, N\},
+</script>
+hvor <span class="matematik"></span><script type="math/tex">N</script> er et stort tal (oftest <span class="matematik"></span><script type="math/tex">256</script> bits). 
+</p>
+
+<p class="indent text-justify">
+En uforudsigelig eller kryptografisk hash funktion er en
+hash-funktion, som er sværd at invertere. I forhold til bitcoin er
+<a href="https://en.wikipedia.org/wiki/SHA-2" target="_blank">SHA-256</a> den interessante
+kryptografiske hash-funktion. Det skal være umanerligt svært at finde
+to forskellige strenge <span class="matematik"></span><script type="math/tex">x</script> og <span class="matematik"></span><script type="math/tex">y</script> med <span class="matematik"></span><script type="math/tex">f(x) = f(y)</script> (et 
+sådant par kaldes en kollision for <span class="matematik"></span><script type="math/tex">f</script>). Prøv selv nedenfor ved
+at indtaste forskellige strenge for <span class="matematik"></span><script type="math/tex">x</script> og <span class="matematik"></span><script type="math/tex">y</script>!
+</p>
+
+<p class="indent text-justify">
+
+<script src="../js/sha256.js"></script>
+<br>
+x : <input size="50" type="text" id="sha256input1" onkeyup="updatesha256()">
+<br>
+<br>
+<div id="sha256output1" style="border:solid; padding-left:0.1cm;">
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+</div>
+<br>
+<br>
+y : <input size="50" type="text" id="sha256input2" onkeyup="updatesha256()">
+<br>
+<br>
+<div id="sha256output2" style="border:solid; padding-left: 0.1cm;">
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+</div>
+<br>
+<br>
+<script>
+function updatesha256(){
+  var txt1 = document.getElementById("sha256input1").value;
+  var txt2 = document.getElementById("sha256input2").value;
+  document.getElementById("sha256output1").innerHTML =
+  "<tt>"+ SHA256(txt1) + "</tt>";
+  document.getElementById("sha256output2").innerHTML =
+  "<tt>" + SHA256(txt2)+ "</tt>";
+  
+}
+</script>
+
+</p>
+
+<p class="indent text-justify">
+Opgaven går nu ud på
+at beregne en streng <span class="matematik"></span><script type="math/tex">\sigma</script>, så
+<div class="matematik"></div><script type="math/tex; mode=display">
+f(h\sigma) < M,
+</script>
+hvor <span class="matematik"></span><script type="math/tex">M < N</script> er et givet tal. Jo mindre <span class="matematik"></span><script type="math/tex">M</script> er, jo sværere er opgaven.
+Den svære matematiske opgave går ud på at finde <span class="matematik"></span><script type="math/tex">\sigma</script> så
+<div class="matematik"></div><script type="math/tex; mode=display">
+f({\tt 2017:11:1:13:20:niels@math.au.dk:}\sigma)
+</script>
+starter med et nærmere angivet antal nuller i hex-notation. 
+</p>
+
+<p class="indent text-justify">
+Nedenfor
+et interaktivt element, hvor proof of work illustreres i eksemplet
+ovenfor. Tryk på knappen for at starte arbejdet med at finde <span class="matematik"></span><script type="math/tex">\sigma</script>.
+Strengen markeret med blåt angiver den aktuelle rekord mht antal
+nuller i hash-funktionen <span class="matematik"></span><script type="math/tex">f</script>. Nullerne i hash-funktion er angivet med
+rødt i sidste linje.
+</p>
+
+<p class="indent text-justify">
+<div class="frameit">
+
+<script src="../js/sha256.js"></script>
+<div>Antal hashes: <span id="count"><tt>---</tt></span><button id="idpow" style="float:right;" onclick="startPOW()">Start Proof of Work</button></div>
+<div id="outputniels" style="clear:both;"><tt>2017:11:1:13:20:niels@math.au.dk:------------------------------</tt></div>
+<div id="recordnielstxt" style="color:blue;"><tt>---------------------------------------------------------------</tt></div>
+<div id="recordniels"><tt>---------------------------------------------------------------</tt></div>
+
+<script>
+function startPOW(){
+   record = 0;
+   counter = 0;
+   initstring = '2017:11:1:13:20:niels@math.au.dk:';
+   elementrandomtxt = document.getElementById("outputniels");
+   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+   elementrecordsha = document.getElementById("recordniels");
+   elementrecordniels = document.getElementById("recordnielstxt");
+   elementcounter = document.getElementById("count");
+
+   function step() {
+
+     var randomString = function(length) {
+       var text = "";
+       for(var i = 0; i < length; i++) {
+         text += possible.charAt(Math.floor(Math.random() * possible.length));
+       }
+       return text;
+     }
+     
+     randomstr = initstring + randomString(30);
+     sha = SHA256(randomstr);
+     counter++;
+     
+     elementrandomtxt.innerHTML = "<tt>"+randomstr+"</tt>";
+     elementcounter.innerHTML = "<tt>"+counter+"</tt>";
+     // Count number of leading zeros
+     for (var i = 0; i < sha.length; i++)
+        {
+          if (sha[i] !== '0')
+             break;
+        }
+     if (i > record)
+     {
+        record = i;
+        sha0 = sha.substring(0, i-1);
+        sha1 = sha.substring(i);
+        elementrecordniels.innerHTML = "<tt>"+randomstr+"</tt>";
+        elementrecordsha.innerHTML = '<tt><span style="color:red">'+sha0+'</span>'+sha1+'</tt>';
+      }
+      window.requestAnimationFrame(step); 
+    }
+    window.requestAnimationFrame(step); 
+}
+</script>
+
+</div>
+</p>
+
+<p class="indent text-justify">
+I det nuværende globale bitcoin mining netværk benyttes
+<a href="https://en.bitcoin.it/wiki/ASIC" target="_blank">specialiseret hardware</a>. Bitcoin
+mining er ikke længere for den almindelige borger, som det var
+tiltænkt fra starten. Nyere kryptovalutaer som
+<a href="https://getmonero.org/" target="_blank">Monero</a> og
+<a href="https://en.wikipedia.org/wiki/Ethereum" target="_blank">Ethereum</a> benytter
+<a href="https://github.com/ethereum/wiki/wiki/Mining" target="_blank">andre mining
+  algoritmer</a> så
+almindelige GPUer kan benyttes. Så sent som 24/10/2017 blev den
+alternative <a href="https://bitcoingold.org/" target="_blank">bitcoin gold</a>
+indført, som en fork fra den originale blockchain. Målet med 
+bitcoin gold er at gøre
+mining mere tilgængeligt.
+</p>
+
+<p class="indent text-justify">
+Javascript applikationen ovenfor har en meget langsom hash rate
+sammenlignet med feks det <a href="https://data.bitcoinity.org/bitcoin/hashrate/6m?c=m&g=15&t=a" target="_blank">globale bitcoin mining netværk</a>, som pt
+hasher
+<div class="matematik"></div><script type="math/tex; mode=display">
+{\tt 13.000.000.000.000.000.000}
+</script>
+gange i sekundet. Bitcoin parametrene justeres løbende så man opnår at det
+tager i gennemsnit 10 minutter at mine en blok.
+</p>
+
+<p class="indent text-justify">
+<p class="Quiz"><a href="#e091a918-2f3b-48d4-98de-480c526c16cf" class="btn btn-default" data-toggle="collapse">Quiz</a></p><div id="e091a918-2f3b-48d4-98de-480c526c16cf" class="collapse">
+<div id="quiz2" style="width:100%;"><div class="row quizquestion">
+Hvad er sandsynligheden for at output fra SHA-256 starter med <span class="matematik"></span><script type="math/tex">k</script> nuller ?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">
+\left(\frac{1}{16}\right)^k
+</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="matematik"></div><script type="math/tex; mode=display">
+\left(\frac{1}{32}\right)^k
+</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">
+\left(\frac{1}{64}\right)^k
+</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="matematik"></div><script type="math/tex; mode=display">
+\left(\frac{1}{8}\right)^k
+</script>
+</div></div></div><button id="quizbutton2" class = "btn btn-default">Check</button><script>$("#quizbutton2").click(function(){quizshowanswers(quiz2, quizbutton2);});</script>
+</div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="0b8da5a5-17f0-4ae0-bad9-53c7c3dcf9cb">1.5.1 Den geometriske fordeling anvendt på mining tid</h3><span id="geomford"></span>
+</p>
+
+<p class="indent text-justify">
+Betragt et stokastisk eksperiment, hvor sandsynligheden for succes er
+<span class="matematik"></span><script type="math/tex">p</script>. Antag nu at eksperimentet udføres indtil man får succes
+sammenfattet i den stokastiske variabel <span class="matematik"></span><script type="math/tex">X</script>. 
+</p>
+
+<p class="indent text-justify">
+Sandsynligheden for at
+eksperimentet stopper efter <span class="matematik"></span><script type="math/tex">k</script> trin er så
+<span id="1.1"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\Pr(X = k) = (1-p)^{k-1} p
+\tag{1.1}</script>
+svarende til ikke succesrigt udfald i de første
+<span class="matematik"></span><script type="math/tex">k-1</script> trin efterfulgt af succes i det <span class="matematik"></span><script type="math/tex">k</script>-te trin. Denne fordeling
+kaldes <a href="https://en.wikipedia.org/wiki/Geometric_distribution" target="_blank">den geometriske fordeling</a> med sandsynlighed <span class="matematik"></span><script type="math/tex">p</script>.
+</p>
+
+<p class="indent text-justify">
+Middelværdien for <span class="matematik"></span><script type="math/tex">X</script> er
+<div class="matematik"></div><script type="math/tex; mode=display">\begin{aligned}
+E(X) &= \sum_{k=1}^\infty k\, \Pr(X= k) = 
+p \sum_{k=1}^\infty k\, (1-p)^{k-1}\\
+&= p\, \frac{1}{(1 - (1-p))^2} = \frac{1}{p}
+\end{aligned}</script>
+Dette fortolkes som den gennemsnitlige ventetid på succes. Hvis man
+feks slår plat og krone med en fair mønt skal man gennemsnitligt vente
+to slag på krone.
+</p>
+
+<p class="indent text-justify">
+Formlen <a href="#1.1">(1.1)</a> giver også sandsynligheden for at man skal vente
+mere end <span class="matematik"></span><script type="math/tex">m</script> trin på succes som
+<div class="matematik"></div><script type="math/tex; mode=display">
+\Pr(X > m) = \sum_{k > m} (1-p)^{k-1} p = (1-p)^m.
+</script>
+Bemærk at
+<div class="matematik"></div><script type="math/tex; mode=display">
+(1-p)^m = e^{m \log(1-p)}\approx e^{-m p}.
+</script>
+Sidste approksimation holder for små <span class="matematik"></span><script type="math/tex">p</script> pga rækkeudviklingen
+<div class="matematik"></div><script type="math/tex; mode=display">
+\log(1-p) = -p - \frac{p^2}{2} - \frac{p^3}{3} - \cdots
+</script>
+Sandsynligheden for at vente længere end forventet ligger altså omkring
+<div class="matematik"></div><script type="math/tex; mode=display">
+e^{-1} \approx 0.367879\ldots
+</script>
+for små <span class="matematik"></span><script type="math/tex">p</script>.
+<p class="Opgave"><a href="#056d4008-a4df-4ea0-88c1-63d8e145ae74" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="056d4008-a4df-4ea0-88c1-63d8e145ae74" class="collapse">
+<ol><li>
+Hvor mange hashes kræves i gennemsnit for at ramme <span class="matematik"></span><script type="math/tex">4</script> nuller?
+</li><li> Find den seneste blok på
+  <a href="https://blockexplorer.com" target="_blank">https://blockexplorer.com</a>. Tæl
+  antallet af ledende nuller i BlockHashen. Hvis vi antager at det tog
+  10 minutter at lave BlockHashen som proof of work, hvor mange hashes
+  per sekund har nettet så formentlig gennemført?
+</li><li>
+Hvad sandsynligheden for at en mining tager 20 minutter?
+</li></ol>
+</div>
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<h2 id="493bf24d-8ec5-4bf7-a8c7-89306a87502c">1.6 Bitcoin forklaret af 3Blue1Brown</h2>
+</p>
+
+<p class="indent text-justify">
+YouTuberen <a href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw" target="_blank">3Blue1Brown</a> producerer fremragende
+videoer om matematik generelt. Nedenfor en video, hvor han forklarer bitcoin og blockchain meget
+pædagogisk.
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/bBC-nXj3Ng4?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+
+
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+
+
+
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+
+     
+
+
+
+
+</p>
+
+<p class="indent text-justify">
+<h2 id="fb576bf6-5793-458a-8a5c-5513703751c9">1.7 Justerbar talteori</h2><span id="diskrmat"></span>
+</p>
+
+<p class="indent text-justify">
+Et forløb i diskret matematik kan som overordnet motivation have 
+sikkerhed af penge online og man kan skrue på forløbet ud fra
+C, B og A-niveau. Man kan feks vælge at stoppe ved Euklids 
+algoritme og ikke give den fulde underbygning for
+digital signatur.
+</p>
+
+<p class="indent text-justify">
+<h3 id="5ac62296-a30a-43f2-a740-2339a5c873c0">1.7.1 Primtal</h3>
+</p>
+
+<p class="indent text-justify">
+Talteori er den del af matematikken, som beskæftiger sig med de
+naturlige tal <span class="matematik"></span><script type="math/tex">1, 2, 3, \ldots</script>. Her kan primtal passende 
+uddybes i starten af forløbet som en appetitvækker, måske med visualisering i
+form af Eratosthenes si (fra <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" target="_blank">Wikipedia</a>):
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Sieve.gif">
+</p>
+
+<p class="indent text-justify">
+Man kan illustrere Euklids vidunderlige bevis for at der er uendeligt
+mange primtal, skitsere primfaktorisering og antyde at <a href="https://en.wikipedia.org/wiki/Largest_known_prime_number" target="_blank">store
+  primtal</a>
+benyttes i <a href="https://www.extremetech.com/extreme/219570-what-are-prime-numbers-and-why-are-they-so-vital-to-modern-life" target="_blank">kryptografi</a>.
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<h3 id="ae8b1b02-0ab7-494c-a412-b155b8d35337">1.7.2 Største fælles divisor og Euklids algoritme</h3>
+</p>
+
+<p class="indent text-justify">
+Største fælles divisor <span class="matematik"></span><script type="math/tex">\mathrm{sfd}(m, n)</script> af to naturlige tal <span class="matematik"></span><script type="math/tex">m</script> og <span class="matematik"></span><script type="math/tex">n</script> introduceres på den
+enkleste måde, som det største naturlige tal, der går op i både
+<span class="matematik"></span><script type="math/tex">m</script> og <span class="matematik"></span><script type="math/tex">n</script>. Efter nogle indledende eksempler omkring største fælles
+divisor, kan man guide eleverne i retning af
+<div class="matematik"></div><script type="math/tex; mode=display">
+\mathrm{sfd}(m, n) = \mathrm{sfd}(m-n, n)
+</script>
+for <span class="matematik"></span><script type="math/tex">m > n</script> for at ende med
+<span id="1.2"></span><div class="matematik"></div><script type="math/tex; mode=display">
+\mathrm{sfd}(m, n) = \mathrm{sfd}(m-q n, n),
+\tag{1.2}</script>
+hvor 
+<span id="1.3"></span><div class="matematik"></div><script type="math/tex; mode=display">
+m = q n + r
+\tag{1.3}</script>
+er division af <span class="matematik"></span><script type="math/tex">m</script> med <span class="matematik"></span><script type="math/tex">n</script> med rest <span class="matematik"></span><script type="math/tex">r</script>. Dette er hjørnestenen 
+i Euklids algoritme.
+</p>
+
+<p class="indent text-justify">
+Man bør måske nævne at to tal er primiske, hvis deres største fælles
+divisor er <span class="matematik"></span><script type="math/tex">1</script> og nævne (vise ud fra Euklids algoritme) at et primtal
+går op i et produkt hvis og kun hvis det går op i en af faktorerne.
+</p>
+
+<p class="indent text-justify">
+<h3 id="a4867cc3-1d64-413c-b233-4156793493e9">1.7.3 Euklids udvidede algoritme</h3>
+</p>
+
+<p class="indent text-justify">
+Her kommer den første større pædagogiske udfordring: At forklare at
+Euklids algoritme faktisk giver mere end blot største fælles divisor
+<span class="matematik"></span><script type="math/tex">d</script> af <span class="matematik"></span><script type="math/tex">m</script> og <span class="matematik"></span><script type="math/tex">n</script>, men også to hele tal (som kan være negative) <span class="matematik"></span><script type="math/tex">a</script> og
+<span class="matematik"></span><script type="math/tex">b</script>, så
+<span id="1.4"></span><div class="matematik"></div><script type="math/tex; mode=display">
+a m + b n = d.
+\tag{1.4}</script>
+</p>
+
+<p class="indent text-justify">
+Man kan vælge at opstille Euklids algoritme i tabelform ud fra trin og
+skitsere, hvordan <span class="matematik"></span><script type="math/tex">a</script> og <span class="matematik"></span><script type="math/tex">b</script> bliver opdateret fra gang til gang. Et helt
+præcist bevis føler jeg ikke er nødvendigt her. Jeg tror de færreste 
+gymnasieelever vil kunne forstå notationen i det.
+</p>
+
+<p class="indent text-justify">
+
+</p>
+
+<p class="indent text-justify">
+<h3 id="d6523c45-01b5-4cac-8eaa-bff9a233fc65">1.7.4 Kongruensregning og endelig aritmetik</h3>
+</p>
+
+<p class="indent text-justify">
+Den oprindelige definition, som Gauss skrev ned er meget kortfattet:
+To tal (nu hele)  <span class="matematik"></span><script type="math/tex">a</script> og <span class="matematik"></span><script type="math/tex">b</script> er kongruente modulo <span class="matematik"></span><script type="math/tex">n</script>, hvis
+<span class="matematik"></span><script type="math/tex">n</script> går op i <span class="matematik"></span><script type="math/tex">a - b</script>. Dette skrives
+<div class="matematik"></div><script type="math/tex; mode=display">
+a \equiv b\, (\mathrm{mod\, } n) \qquad \Leftrightarrow \qquad n \mid a - b.
+</script>
+En første opgave kunne her være at se ud fra <a href="#1.3">(1.3)</a> at
+<div class="matematik"></div><script type="math/tex; mode=display">
+m \equiv r\, (\mathrm{mod\, } n).
+</script>
+Ethvert tal er kongruent med sin rest modulo <span class="matematik"></span><script type="math/tex">n</script>. Dette leder så frem
+til <em>endelig aritmetik</em> med kun <span class="matematik"></span><script type="math/tex">n</script> tal, hvor man indfører addition og multiplikation
+modulo <span class="matematik"></span><script type="math/tex">n</script>.
+</p>
+
+<p class="indent text-justify">
+<img src="../img/Modulo.png">
+<figcaption>
+Multiplikation modulo <span class="matematik"></span><script type="math/tex">13</script>.
+</figcaption>
+</p>
+
+<p class="indent text-justify">
+<div class="remark">
+  Hovedeksemplet skal her være algoritmen til at udregne <span class="matematik"></span><script type="math/tex">a^M</script> modulo
+  <span class="matematik"></span><script type="math/tex">n</script>, hvor <span class="matematik"></span><script type="math/tex">a^M</script> er et meget stort tal. Interessen kan skærpes ved
+  først at spørge: Er der en god ide til at løse følgende problem, når
+  man kun må bruge en enkel lommeregner og ikke Maple: Hvad er resten af
+<div class="matematik"></div><script type="math/tex; mode=display">
+12^{11}
+</script>
+divideret med <span class="matematik"></span><script type="math/tex">21</script>?
+</div>
+</p>
+
+<p class="indent text-justify">
+Khan Academy har et <a href="https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic" target="_blank">forløb</a> omkring modulær aritmetik, som også kommer ind på hurtig
+eksponentiering.
+</p>
+
+<p class="indent text-justify">
+<h3 id="8313133d-ad5b-436e-b29e-a68638bccdbf">1.7.5 Fermats lille sætning</h3>
+</p>
+
+<p class="indent text-justify">
+Fermats lille sætning siger at hvis <span class="matematik"></span><script type="math/tex">p</script> er et primtal, så gælder
+<div class="matematik"></div><script type="math/tex; mode=display">
+a^{p-1} \equiv 1\, (\mathrm{mod\, } p)
+</script>
+for alle tal <span class="matematik"></span><script type="math/tex">a</script>, som <span class="matematik"></span><script type="math/tex">p</script> ikke går op i. Dette resultat er
+adgangsbilletten til at forstå den digitale signatur i RSA.  Man kan
+lade eleverne eksperimentere (som i tabellen nedenfor) og undres over dette resultat.
+</p>
+
+<p class="indent text-justify">
+<img src="../img/euler.png">
+<figcaption>
+Fermats lille sætning for <span class="matematik"></span><script type="math/tex">a=5</script> og <span class="matematik"></span><script type="math/tex">p=23</script> fra <a href="http://cryptofundamentals.com" target="_blank">cryptofundamentals</a>.
+</figcaption>
+</p>
+
+<p class="indent text-justify">
+Et bevis kan gennemføres (hvis klassen er til det) ved at benytte at
+et primtal går op i et produkt hvis og kun hvis det går op i en af
+faktorerne.
+</p>
+
+<p class="indent text-justify">
+Nu er vi endelig fremme, hvor vi kan forklare den digitale signatur
+via talteori.
+</p>
+
+<p class="indent text-justify">
+<h2 id="86e7151d-1e64-40a1-8b53-6b82cc79842b">1.8 Digital signatur i RSA</h2>
+</p>
+
+<p class="indent text-justify">
+Begynd med at generere to meget store primtal <span class="matematik"></span><script type="math/tex">p</script> og <span class="matematik"></span><script type="math/tex">q</script> og
+lad <span class="matematik"></span><script type="math/tex">N = p q</script>. På siden 
+<a href="https://asecuritysite.com/encryption/random3?val=128" target="_blank">asecuritysite.com</a>
+kan man eksperimentere med at generere meget store primtal. Det er ikke
+muligt at gå i detaljer med det i gymnasiet, men de primtal er
+probabilistiske dvs de er ikke sikre primtal, men kun primtal med en
+vis sandsynlighed (dog meget, meget tæt på <span class="matematik"></span><script type="math/tex">1</script>).
+</p>
+
+<p class="indent text-justify">
+Meddelelser som skal krypteres oversættes til
+tal <span class="matematik"></span><script type="math/tex">X</script> så <span class="matematik"></span><script type="math/tex">0\leq X < N</script>.
+</p>
+
+<p class="indent text-justify">
+Talteorien, som gør at krypteringssystemet RSA
+virker er gemt i følgende resultat.
+</p>
+
+<p class="indent text-justify">
+<div class="theorem"><span id="rsavirker"></span>
+Lad <span class="matematik"></span><script type="math/tex">X</script> være et (helt) tal og <span class="matematik"></span><script type="math/tex">m</script> et naturligt tal. Så gælder
+<div class="matematik"></div><script type="math/tex; mode=display">
+X^{m (p-1)(q-1) + 1} \equiv X\, (\mathrm{mod\, } N),
+</script>
+</div>
+<p class="Bevis"><a href="#e25b01be-ed53-465b-9525-056ce1fc93f0" class="btn btn-default" data-toggle="collapse">Bevis</a></p><div id="e25b01be-ed53-465b-9525-056ce1fc93f0" class="collapse">
+<div class="proof">
+Her skal man dreje beviset for at komme til at benytte Fermats lille sætning.
+Første observation er at <span class="matematik"></span><script type="math/tex">N</script> går op i et tal hvis og kun hvis <span class="matematik"></span><script type="math/tex">p</script> og <span class="matematik"></span><script type="math/tex">q</script>
+gør det. Så vi kan nøjes med at bevise at
+<div class="matematik"></div><script type="math/tex; mode=display">
+X^{m (p-1)(q-1) + 1} \equiv X\, (\mathrm{mod\, } p).
+</script>
+(<span class="matematik"></span><script type="math/tex">q</script> behandles analogt). Hvis <span class="matematik"></span><script type="math/tex">p\mid X</script> er dette rigtigt. Hvis <span class="matematik"></span><script type="math/tex">p\nmid X</script> følger dette
+fra Fermats lille sætning på formen
+<div class="matematik"></div><script type="math/tex; mode=display">
+X^{m (p-1)(q-1)} = \left(X^{m (q-1)}\right)^{p-1} \equiv 1\, (\mathrm{mod\, } p).
+</script>
+</div>
+</div>
+</p>
+
+<p class="indent text-justify">
+RSA krypteringssystemet er et offentligt nøgle krypteringssystem. Den offentlige
+nøgle vælges som et tal <span class="matematik"></span><script type="math/tex">e</script> primisk med <span class="matematik"></span><script type="math/tex">(p-1)(q-1)</script> dvs
+<div class="matematik"></div><script type="math/tex; mode=display">
+\mathrm{sfd}(e, (p-1)(q-1)) = 1.
+</script>
+Vi kan så benytte Euklids udvidede algoritme til at finde tallene
+<span class="matematik"></span><script type="math/tex">d>0</script> og <span class="matematik"></span><script type="math/tex">k<0</script> så
+<span id="1.5"></span><div class="matematik"></div><script type="math/tex; mode=display">
+d e + k (p-1)(q-1) = 1,
+\tag{1.5}</script>
+jvf <a href="#1.4">(1.4)</a>. Den hemmelige nøgle er nu <span class="matematik"></span><script type="math/tex">d</script>.
+</p>
+
+<p class="indent text-justify">
+<h3 id="30f07278-7aa5-4dc4-b75c-832f0507bec3">1.8.1 Kryptering</h3>
+</p>
+
+<p class="indent text-justify">
+Krypteringen af meddelelsen <span class="matematik"></span><script type="math/tex">X</script>, hvor <span class="matematik"></span><script type="math/tex">0\leq X < N</script> finder sted med den offentlige nøgle <span class="matematik"></span><script type="math/tex">e</script>: 
+<div class="matematik"></div><script type="math/tex; mode=display">
+X\mapsto X^e \quad(\textrm{mod}\, N).
+</script>
+</p>
+
+<p class="indent text-justify">
+<h3 id="51c557c2-9f8c-44b3-9198-e31023728e6e">1.8.2 Dekryptering</h3>
+</p>
+
+<p class="indent text-justify">
+Dekryptering finder sted med den hemmelige nøgle <span class="matematik"></span><script type="math/tex">d</script>:
+<div class="matematik"></div><script type="math/tex; mode=display">
+X\mapsto X^d \quad(\textrm{mod}\, N).
+</script>
+</p>
+
+<p class="indent text-justify">
+<h3 id="7c78d49c-eb5d-4000-b1ad-7d5695b1c9b2">1.8.3 Hvorfor virker det?</h3>
+</p>
+
+<p class="indent text-justify">
+Pga <a href="#1.5">(1.5)</a> er 
+<div class="matematik"></div><script type="math/tex; mode=display">
+(X^e)^d = X^{d e} = X^{-k (p-1)(q-1)+1} \equiv X \quad(\textrm{mod}\, N)
+</script>
+ud fra Sætning <a href="#rsavirker">1.6</a>. Dvs modtageren af en meddelelse krypteret
+med vedkommendes offentlige nøgle <span class="matematik"></span><script type="math/tex">e</script> kan læses ud fra kendskab til
+den hemmelige nøgle <span class="matematik"></span><script type="math/tex">d</script>.
+</p>
+
+<p class="indent text-justify">
+Kryptering og dekryptering kan som sagt udregnes effektivt via
+<a href="https://en.wikipedia.org/wiki/Exponentiation_by_squaring" target="_blank"><em>exponentiation by
+    squaring</em></a>.
+</p>
+
+<p class="indent text-justify">
+<h3 id="7c8570cc-91a2-4826-8029-6d849aedd795">1.8.4 Digital signatur via RSA</h3>
+</p>
+
+<p class="indent text-justify">
+Digital signatur går ud på at underskrive et dokument elektronisk. Der er ikke
+tale om en almindelig underskrift. Underskriften afhænger af det underskrevne!
+</p>
+
+<p class="indent text-justify">
+I offentlig nøgle kryptografi skal alle have mulighed for at kunne
+checke at jeg er den retmæssige underskriver ved at benytte den offentlige
+nøgle.
+</p>
+
+<p class="indent text-justify">
+Princippet bag digital signatur via RSA er nogenlunde ligetil: En
+meddelelse <span class="matematik"></span><script type="math/tex">X</script> underskrives ved hjælp af den hemmelige nøgle <span class="matematik"></span><script type="math/tex">d</script> som parret
+<span class="matematik"></span><script type="math/tex">(X, S)</script>, hvor
+<div class="matematik"></div><script type="math/tex; mode=display">
+S = X^d\,(\mathrm{mod\, } N)
+</script> 
+Alle kan nu verificere med den offentlige nøgle <span class="matematik"></span><script type="math/tex">e</script> at
+underskriveren er den rette (kun underskriveren har kendskab til den hemmelige nøgle)
+ved at checke om
+<div class="matematik"></div><script type="math/tex; mode=display">
+S^e = X\, (\mathrm{mod\, } N).
+</script>
+</p>
+
+<p class="indent text-justify">
+Man plejer ikke at underskrive den (ofte lange) oprindelige
+meddelelse, men versionen som er blevet kørt gennem en
+kryptografisk hash funktion som SHA-256.
+</p>
+
+<p class="indent text-justify">
+<div class="remark">
+  <a href="https://www.nemid.nu/dk-da/om-nemid/historien_om_nemid/oces-standarden/oces-certifikatpolitikker/" target="_blank">Nem ID anvender pt</a> digital signatur med SHA-256 og RSA med mindst
+  2048 bits (dvs tallet <span class="matematik"></span><script type="math/tex">N</script> er <span class="matematik"></span><script type="math/tex">\geq 2^{2048}</script>). Du har som borger dog
+  ikke direkte adgang til din private nøgle, som opbevares på en
+  central server. Adgangen til nøglen er sikret gennem den velkendte
+  to-faktor autentifikationsløsning med nøgleviser/kort.
+</div>
+</p>
+
+<p class="indent text-justify">
+<img src="../img/rsajoke.png">
+</p>
+
+<p class="indent text-justify">
+Her er det lidt interessant at bemærke at krypteringen af bitcoin via
+det diskrete logaritmeproblem og elliptisk kurve kryptografi anses for at være
+stærkere end Nem IDs kryptering.
+</p>
+
+<p class="indent text-justify">
+Man kan evt illustrere i klassen at RSA og digital signatur går ud fra
+enorme tal i praksis ved at inddrage computere (CAS) som nedenfor.
+</p>
+
+<p class="indent text-justify">
+<div class="example">
+  Programmeringssproget <a href="https://www.python.org/" target="_blank">python</a> er frit
+  tilgængeligt for alle platforme og har et væld af nyttige
+  biblioteker, som feks <span class="matematik"></span><script type="math/tex">{\tt rsa}</script>:
+</p>
+
+<p class="indent text-justify">
+<pre class="prettyprint">
+Python 2.7.12 (default, Nov 19 2016, 06:48:10) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import rsa
+>>> (pub, priv) = rsa.newkeys(512)
+>>> pub
+PublicKey(773210119200510362244948221013384369395793712975685405379287359770670046558601102610
+1511729442512782385132059910405865820157668463435425587867747433155067, 65537)
+>>> priv
+PrivateKey(77321011920051036224494822101338436939579371297568540537928735977067004655860110261
+01511729442512782385132059910405865820157668463435425587867747433155067, 65537, 75125391077119
+3338515789903737556847363269000220329643910027952465892333386570357824688709264287340055431300
+5220241264198438070170490991336173806251072161, 4948461313383035895125571010215329187890541505
+284523843836126989339364176784221743, 15625263495733021897191462443560828458083733841982069207
+76444667133063669)
+</pre>
+</p>
+
+<p class="indent text-justify">
+Den offentlige nøgle har formen <span class="matematik"></span><script type="math/tex">{\tt PublicKey(N, e)}</script>. Den private nøgle har formen
+<span class="matematik"></span><script type="math/tex">{\tt PrivateKey(N, e, d, p, q)}</script>. Vi kan underskrive et dokument via den kryptografiske
+hash funktion SHA-256 og verificere den digitale signatur efterfølgende:
+</p>
+
+<p class="indent text-justify">
+<pre class="prettyprint">
+>>> transaktion = 'Overfør 1 bitcoin til Niels'
+>>> signature = rsa.sign(transaktion, priv, 'SHA-256')
+>>> rsa.verify(transaktion, signature, pub)
+True
+>>> transaktion = 'Overfør 2 bitcoins til Niels'
+>>> rsa.verify(transaktion, signature, pub)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python2.7/dist-packages/rsa/pkcs1.py", line 315, in verify
+    raise VerificationError('Verification failed')
+rsa.pkcs1.VerificationError: Verification failed
+</pre>
+</div>
+</p>
+
+<p class="indent text-justify">
+<h2 id="d25c944c-7140-4023-beb5-47e894db9018">1.9 Det diskrete logaritmeproblem</h2><span id="dlp"></span>
+</p>
+
+<p class="indent text-justify">
+Meget overordnet er det diskrete logaritme problem mht en given
+abelsk gruppe <span class="matematik"></span><script type="math/tex">G</script> at løse ligningen
+<span id="1.6"></span><div class="matematik"></div><script type="math/tex; mode=display">
+g^n = a
+\tag{1.6}</script>
+med <span class="matematik"></span><script type="math/tex">n\in \mathbb{N}</script> for givne <span class="matematik"></span><script type="math/tex">g, a\in G</script>. Hvis gruppen <span class="matematik"></span><script type="math/tex">G</script> er de
+positive reelle tal med multiplikation, så kan <a href="#1.6">(1.6)</a>
+løses som
+<div class="matematik"></div><script type="math/tex; mode=display">
+n = \frac{\log(a)}{\log(g)}.
+</script>
+</p>
+
+<p class="indent text-justify">
+Hvis <span class="matematik"></span><script type="math/tex">G</script> er en endelig abelsk gruppe er der oftest ingen analog 
+til den klassiske logaritme og løsningen af <a href="#1.6">(1.6)</a> anses
+for at være svær specielt for den multiplikative gruppe
+<div class="matematik"></div><script type="math/tex; mode=display">
+\left(\mathbb{Z}/p\mathbb{Z}\right)^* = \mathbb{Z}/p\mathbb{Z} \setminus \{0\},
+</script>
+hvor <span class="matematik"></span><script type="math/tex">p</script> er et stort primtal og som i bitcoins tilfælde
+for gruppen af punkter
+<div class="matematik"></div><script type="math/tex; mode=display">
+E(\mathbb{Z}/p\mathbb{Z})
+</script>
+over <span class="matematik"></span><script type="math/tex">\mathbb{Z}/p\mathbb{Z}</script> for en nøjere valgt elliptisk kurver <span class="matematik"></span><script type="math/tex">E</script>. For en
+endelig abelsk gruppe <span class="matematik"></span><script type="math/tex">G</script> kaldes <a href="#1.6">(1.6)</a> <em>det diskrete
+logaritmeproblem</em> i <span class="matematik"></span><script type="math/tex">G</script>.
+</p>
+
+<p class="indent text-justify">
+<div class="frameit">
+  I ovenstående formulering er den diskrete logaritme strengt taget ikke
+  veldefineret, når gruppen <span class="matematik"></span><script type="math/tex">G</script> er endelig. Med <span class="matematik"></span><script type="math/tex">m = |G|</script> har vi nemlig
+  <span class="matematik"></span><script type="math/tex">g^m = 1</script> og dermed
+  <div class="matematik"></div><script type="math/tex; mode=display">
+  g^n = g^{n + m} = g^{n + 2 m} = \cdots = a.
+  </script>
+  Den diskrete logaritme er det mindste <span class="matematik"></span><script type="math/tex">n</script>, som opfylder <a href="#1.6">(1.6)</a>.
+  Dette mindste <span class="matematik"></span><script type="math/tex">n</script> betegnes <span class="matematik"></span><script type="math/tex">\log_g(a)</script>.
+  </div>
+</p>
+
+<p class="indent text-justify">
+Lad os helt konkret kigge på gruppen <span class="matematik"></span><script type="math/tex">G = \mathbb{Z}/p \mathbb{Z}\setminus\{0\}</script>, hvor
+  <span class="matematik"></span><script type="math/tex">p</script> er primtallet <span class="matematik"></span><script type="math/tex">56509</script>. Her er <span class="matematik"></span><script type="math/tex">G</script> en gruppe mht multiplikation af restklasser og den er
+  cyklisk med frembringer <span class="matematik"></span><script type="math/tex">g = 2</script>. Hvad er
+  <div class="matematik"></div><script type="math/tex; mode=display">
+  \log_2(38679)?
+  </script>
+</p>
+
+<p class="indent text-justify">
+I princippet er der ikke andre metoder end at prøve sig frem med <span class="matematik"></span><script type="math/tex">2, 3, 4, \ldots</script>. Det glædede mig at opdage at problemet kan løses i WolframAlpha som
+  <div class="matematik"></div><script type="math/tex; mode=display">
+  {\tt MultiplicativeOrder[2, 56509, {38679}]}
+  </script>
+  Prøv selv i <a href="https://www.wolframalpha.com/" target="_blank">WolframAlpha</a>.
+</p>
+
+<p class="indent text-justify">
+Hvad giver 
+<div class="matematik"></div><script type="math/tex; mode=display">
+  {\tt MultiplicativeOrder[2, 56509]}
+  </script>
+  som resultat?
+</p>
+
+<p class="indent text-justify">
+Grunder til at det diskrete logaritmeproblem er svært at løse kan
+  man måske ane ved at kigge på potenser af <span class="matematik"></span><script type="math/tex">g</script> i gruppen
+  <span class="matematik"></span><script type="math/tex">\mathbb{Z}/p\mathbb{Z}\setminus\{0\}</script> for et mindre primtal <span class="matematik"></span><script type="math/tex">p</script>. Nedenfor et
+  snapshot taget fra bogen <em>An Introduction to Mathematical
+    Cryptography</em>, Hoffstein et al.
+</p>
+
+<p class="indent text-justify">
+<img src="../img/logchaos.png">
+</p>
+
+<p class="indent text-justify">
+Ren Kaos! Dog er den såkaldte Shanks baby-step giant-step algoritme en hurtigere metode
+  til at finde den diskrete logaritme gennegået i videoen nedenfor.
+</p>
+
+<p class="indent text-justify">
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/007MVsELvQw?rel=0" frameborder="0" allowfullscreen></iframe><div align="right" style="color:#76323f;">Kommentarer/spørgsmål?</div>
+</p>
+
+<p class="indent text-justify">
+Lad os se hvordan det diskrete logaritmeproblem kan bruges i kryptografi.
+</p>
+
+<p class="indent text-justify">
+<h3 id="f2370f11-aa8d-4bbf-815f-a8268404f25e">1.9.1 Elgamal kryptering</h3>
+</p>
+
+<p class="indent text-justify">
+El Gamal krypteringssystemet blev indført af <a href="https://en.wikipedia.org/wiki/Taher_Elgamal" target="_blank">Taher
+ Elgamal</a> i 1985. Det
+bygger på det diskrete logaritmeproblem.
+</p>
+
+<p class="indent text-justify">
+En bruger Bob vælger en hemmelig nøgle, som er et stort naturligt tal
+<span class="matematik"></span><script type="math/tex">a</script>. Dernæst offentliggøres <span class="matematik"></span><script type="math/tex">(g, B)</script> som den offentlige nøgle, hvor
+<div class="matematik"></div><script type="math/tex; mode=display">
+B = g^a.
+</script>
+Kryptosystemet bygger på at det er svært at finde <span class="matematik"></span><script type="math/tex">a</script> ud fra <span class="matematik"></span><script type="math/tex">B</script>
+i.e., det diskrete logaritmeproblem er svært i gruppen <span class="matematik"></span><script type="math/tex">G</script>.
+</p>
+
+<p class="indent text-justify">
+Alice sender en meddelelse <span class="matematik"></span><script type="math/tex">m\in G</script> til Bob ved først at generere et tilfældigt tal <span class="matematik"></span><script type="math/tex">k</script> (det er her yderst vigtigt at de genererede tal er naturligt tilfældige)
+og sender så parret
+<div class="matematik"></div><script type="math/tex; mode=display">
+(g^k, m B^k)
+</script>
+til Bob, som kan dekryptere det modtagne par <span class="matematik"></span><script type="math/tex">(S, T)</script> og finde
+den sendte meddelelse som
+<div class="matematik"></div><script type="math/tex; mode=display">
+T S^{-a} = m g^{a k} g^{-a k} = m.
+</script>
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#18a786fd-c550-4e7e-a185-f1231147c396" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="18a786fd-c550-4e7e-a185-f1231147c396" class="collapse">
+  Lad <span class="matematik"></span><script type="math/tex">G = \mathbb{Z}/p\mathbb{Z}\setminus \{0\}</script>, hvor <span class="matematik"></span><script type="math/tex">p = 467</script> og <span class="matematik"></span><script type="math/tex">g=2</script>. Hvis den
+  hemmelige nøgle er <span class="matematik"></span><script type="math/tex">a = 153</script>, hvad er da
+  <ol><li>
+    den offentlige nøgle?
+  </li><li>
+    indkodningen af meddelelsen <span class="matematik"></span><script type="math/tex">331</script> hvis det tilfældige tal er <span class="matematik"></span><script type="math/tex">k = 197</script>?
+  </li></ol>
+  Check også at dekrypteringen af den krypterede meddelelse ovenfor giver det rigtige.
+ </div>
+</p>
+
+<p class="indent text-justify">
+<h3 id="f4dffcce-57cd-4901-a7fd-d61c3d80afdf">1.9.2 Elgamal digital signatur</h3>
+</p>
+
+<p class="indent text-justify">
+Digital signatur mht det diskrete logaritmeproblem er en anelse mere
+kompliceret end for RSA. Udgangspunktet er stadig en
+hemmelig nøgle <span class="matematik"></span><script type="math/tex">a</script> og en offentlig nøgle <span class="matematik"></span><script type="math/tex">B = g^a</script>. Vi vil her
+tage udgangspunkt i gruppen
+<div class="matematik"></div><script type="math/tex; mode=display">
+G = \mathbb{Z}/p\mathbb{Z}\setminus\{0\}.
+</script>
+Hvis <span class="matematik"></span><script type="math/tex">G</script> er punkter på en elliptisk kurve modulo <span class="matematik"></span><script type="math/tex">p</script> som i bitcoins
+signeringsalgoritme er algoritmen en anelse mere kompliceret. De fleste
+moderne browsere har <a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm" target="_blank">ECDSA</a> indbygget.
+</p>
+
+<p class="indent text-justify">
+For flere detaljer omkring elliptisk kurve kryptografi er her
+et link til <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/" target="_blank">Cloudfares blog</a>.
+</p>
+
+<p class="indent text-justify">
+Hvad vil det sige at underskrive en meddelelse <span class="matematik"></span><script type="math/tex">D</script> med en digital
+signatur, som kommer fra den hemmelige nøgle <span class="matematik"></span><script type="math/tex">a</script>?
+</p>
+
+<p class="indent text-justify">
+Her er meddelelsen et tal <span class="matematik"></span><script type="math/tex">D</script>, som opfylder <span class="matematik"></span><script type="math/tex">1 < D < p</script>. Bob
+underskriver meddelelsen <span class="matematik"></span><script type="math/tex">D</script> med sin hemmelige nøgle som
+<div class="matematik"></div><script type="math/tex; mode=display">
+(g^k, (D - a g^k) k^{-1}),
+</script>
+hvor <span class="matematik"></span><script type="math/tex">k</script> igen er et kryptografisk sikkert tilfældigt tal. Den digitale
+signatur <span class="matematik"></span><script type="math/tex">(S_1, S_2)</script> kan nu verificeres gennem identiteten
+<div class="matematik"></div><script type="math/tex; mode=display">
+B^{S_1} S_1^{S_2} = g^{a S_1} g^{k (D - a S_1) k^{-1}} = g^D, 
+</script>
+hvor <span class="matematik"></span><script type="math/tex">B = g^a</script> er Bobs offentlige nøgle.
+</p>
+
+<p class="indent text-justify">
+<p class="Opgave"><a href="#ed154ee7-4af0-427d-acf9-c2fa4e8eb95b" class="btn btn-default" data-toggle="collapse">Opgave</a></p><div id="ed154ee7-4af0-427d-acf9-c2fa4e8eb95b" class="collapse">
+Lad <span class="matematik"></span><script type="math/tex">p = 21739</script>, <span class="matematik"></span><script type="math/tex">g = 7</script> og <span class="matematik"></span><script type="math/tex">a = 15140</script>. Udregn først den
+offentlige nøgle <span class="matematik"></span><script type="math/tex">B</script> hørende til disse oplysninger.
+Underskriv dernæest meddelelsen <span class="matematik"></span><script type="math/tex">D = 5331</script> ud fra
+det tilfældige tal <span class="matematik"></span><script type="math/tex">k = 10727</script>.
+</p>
+
+<p class="indent text-justify">
+Verificer til sidst at den digitale signatur er korrekt.
+</div>
+</p>
+
+<p class="indent text-justify">
+</div>
+</div>
+
+</div>
+
+<script src="../js/quiz.js"></script>
+
+<!-- Model fra Bjørk -->
+
+
+</body>
+
+
+
