@@ -1,0 +1,1493 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  languages : ["sage", "python"],
+  hide : ["permalink"] 
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#7a977ed6-1bf8-499c-b7fc-506c35756c5e"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#ff7143e4-cd82-4d70-9ed5-2479680bf96a">1.1 Computer algebra</a></li><li><a href="intro.html#39de153f-aa5e-4b65-9ed2-d14e6d319376">1.2 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#6d75d6a4-df56-4418-9e4e-6a6a4b686ea0">1.3 Sets</a></li><li><a href="intro.html#6840d0bf-1199-4802-81ce-b10388939d82">1.4 Ordering numbers</a></li><li><a href="intro.html#890c2aa3-4cb2-43fc-aec7-c38196270893">1.5 Propositional logic</a></li><li><a href="intro.html#14bd838c-3f52-4f1e-b242-0d437c9222e2">1.6 What is a mathematical proof?</a></li><li><a href="intro.html#1a4701cf-eb99-4da4-86d1-3072db2fdc87">1.7 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#6080b7d7-9dae-4421-bf75-dc2ee04432d9"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#6a7dde4b-d4b2-4e24-85f5-fa85cdd246c8">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#5d725c6c-5ab6-404c-be38-b7941c0c131f">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#f72100cb-475f-4e9c-9d80-d5bf44184aaf">2.3 Gauss elimination</a></li><li><a href="lineqs.html#c634b806-2ed8-4e90-bbc0-74fd5d06f66c">2.4 Polynomials</a></li><li><a href="lineqs.html#5961c502-8b65-46d3-a0c8-7a7bc5a0d038">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#ff2faea1-ff75-429b-9359-c3b0f606fcb3">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#d38dc3a6-f5ad-4878-84ab-288033cc61d1">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#ac78de01-faf4-4003-a06d-93bd0a049be0"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#4852f3d9-8469-484e-b7ad-fd763bb22be8">3.1 Matrices</a></li><li><a href="matrices.html#ed992999-6b80-44f7-9d04-5d6a54a786eb">3.2 Linear maps</a></li><li><a href="matrices.html#417e6feb-e87a-4e49-b109-69c0efc11f20">3.3 Matrix multiplication</a></li><li><a href="matrices.html#f1ee71a3-f246-4de5-a059-0857e89b250b">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#3ba68277-54c2-4417-8873-580221bf227c">3.5 The inverse matrix</a></li><li><a href="matrices.html#edae857a-385d-4193-a2ca-daff507009d4">3.6 The transposed matrix</a></li><li><a href="matrices.html#839cd3f2-52bf-43af-8af7-daa31bb1c266">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#60e76dc3-eb30-41ba-8542-172ddc1bc2a7"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#a9f6c300-8b17-4ff9-9584-14821bbe7c43">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#14942bc9-a19b-4efd-8a3a-12cf8cb0fe43">4.2 General definition</a></li><li><a href="whatisopt.html#29d4e276-f39d-4a07-a214-417d5dba2e09">4.3 Convex optimization</a></li><li><a href="whatisopt.html#20a70385-47c1-4b71-85b2-4baa80cba38d">4.4 Linear optimization</a></li><li><a href="whatisopt.html#63315831-1379-4a83-bc56-6b8b8eef2150">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#0ab99069-0424-4ec8-a0ba-5a8067629c6e">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#15dff35d-8cda-4b25-8751-6a59c8bc55a3"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#2e88a7de-ca93-46a4-8202-aa3c0add0f69">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#367157fb-a772-41c1-be77-fdd8d3e0cc1f">5.2 Higher dimensions</a></li><li><a href="euclidean.html#65523d91-2925-4c74-91f9-a5258c9f1af3">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#2bec1a82-9ba3-435d-bb8a-cea237b3fcd3">5.4 Sequences and limits</a></li><li><a href="euclidean.html#1a1ad702-0af7-45ef-abe2-b212777e81d9">5.5 Continuous functions</a></li><li><a href="euclidean.html#bae8f95a-2d6c-495a-a4d0-10f958e2ca12">5.6 Special subsets</a></li><li><a href="euclidean.html#cbd12a77-2916-4aca-aa99-246e17727e7c">5.7 The perceptron algorithm</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><h1 id="ac78de01-faf4-4003-a06d-93bd0a049be0">3<span style="float:right;">Matrices</span></h1><div style="margin-top:20px"></div>
+Handling linear equations and keeping track of the unknowns can be a pain. At
+a certain point one needs to simplify the notation. This is done introducing
+matrices. <div style="margin-top:20px"></div>For example, the system of equations
+<span id="equ3.1"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&&  &2y &+ &4z &= &-2\\
+&3x &+ &2y &+ &7z &= &4
+\end{matrix}
+\tag{3.1}</script>
+can be represented by the rectangular array (matrix)
+<span id="equ3.2"></span><div class="math"></div><script type="math/tex; mode=display"> 
+\begin{pmatrix}
+0 & 2 & 4 & -2\\
+3 & 2 & 7 & 4
+\end{pmatrix}
+\tag{3.2}</script>
+of numbers. Many of the operations we do to solve linear equations might as well be done on this array forgetting
+about the unknowns.<div style="margin-top:20px"></div><span id="sec3.1"></span><h2 id="4852f3d9-8469-484e-b7ad-fd763bb22be8">3.1 Matrices</h2><div style="margin-top:20px"></div><span id="sec3.1.1"></span><h3>3.1.1 Definitions</h3>
+A rectangular array of numbers is called a <em>matrix</em>. A matrix with <span class="math"></span><script type="math/tex">m</script> <em>rows</em> and <span class="math"></span><script type="math/tex">n</script> 
+<em>columns</em> is called an <span class="math"></span><script type="math/tex">m\times n</script> (<span class="math"></span><script type="math/tex">m</script> by <span class="math"></span><script type="math/tex">n</script>) matrix. 
+The notation for an <span class="math"></span><script type="math/tex">m\times n</script> matrix <span class="math"></span><script type="math/tex">A</script> is
+<span id="equ3.3"></span><div class="math"></div><script type="math/tex; mode=display">
+A =  
+\begin{pmatrix}
+a_{11} & \cdots &a_{1j}& \cdots& a_{1 n} \\
+\vdots & \ddots &\vdots & \ddots & \vdots\\
+a_{i1} & \cdots &a_{ij}& \cdots& a_{i n} \\
+\vdots & \ddots &\vdots & \ddots & \vdots\\
+a_{m1} & \cdots &a_{mj}& \cdots& a_{m n}
+\end{pmatrix},
+\tag{3.3}</script>
+where <span class="math"></span><script type="math/tex">A_{ij} = a_{i j}</script> denotes the number or <em>entry</em> in the  <span class="math"></span><script type="math/tex">i</script>-th row and <span class="math"></span><script type="math/tex">j</script>-th column. If the matrix in <a href=#equ3.2>(3.2)</a>
+is denoted <span class="math"></span><script type="math/tex">A</script>, then it has <span class="math"></span><script type="math/tex">2</script> rows and <span class="math"></span><script type="math/tex">4</script> columns with <span class="math"></span><script type="math/tex">A_{14} = -2</script>.<div style="margin-top:20px"></div>Two matrices are equal if they have the same number of rows and columns and their entries are
+identical.<div style="margin-top:20px"></div>Sage is built on top of python and has access to all its libraries. A
+very useful library for handling matrices is <tt>numpy</tt>. Here is how
+the matrix in <a href=#equ3.2>(3.2)</a> is entered in <tt>numpy</tt>.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import numpy as np
+
+m = np.matrix( [[0, 2, 4, -2], [3, 2, 7, 4]] )
+print(m)
+</script></div><div style="margin-top:20px"></div><ol class="number"><li>
+  A matrix is called  <em>quadratic</em> if it has an equal number of rows and columns.
+  The first two matrices below are quadratic, whereas the third is not.
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix} 1 \end{pmatrix}, \qquad
+\begin{pmatrix} 1 & 2 & 3\\ 4 & 5 & 6\\ 7 & 8 & 9\end{pmatrix}, \qquad
+\begin{pmatrix} 0 & 1 & 0\\ 1 & 0 & 1\end{pmatrix}.
+</script>
+</li><li> 
+
+The <em>diagonal</em> in a matrix is defined as the entries in the matrix with the same row- and column indices.
+Below we have a <span class="math"></span><script type="math/tex">3\times 4</script> matrix with the diagonal elements marked
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+\color{red}{1} & 3 & 0 & 1\\
+3 & \color{red}{2} & 1 & 5\\
+1 & 0 & \color{red}{3} & 6
+\end{pmatrix}.
+</script>
+A matrix is called a <em>diagonal matrix</em>, if all its entries outside the
+diagonal are <span class="math"></span><script type="math/tex">=0</script>. Below is an example of a square diagonal matrix
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+1 & 0 & 0\\
+0 & 2 & 0\\
+0 & 0 & 3
+\end{pmatrix}.
+</script>
+</li><li>
+A matrix is called a <em>row vector</em> if it has only one row. For example,
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+1 & 2 & 3
+\end{pmatrix}
+</script>
+is a row vector with three columns.
+</li><li>
+A matrix is called a <em>column vector</em> if it has only one column.
+For example, 
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+1\\ 2 \\ 3
+\end{pmatrix}
+</script>
+is a column vector with three rows.
+</li><li>
+  The rows in a matrix are called the  <em>row vectors</em> of the matrix.
+The <span class="math"></span><script type="math/tex">i</script>-th row in a matrix <span class="math"></span><script type="math/tex">A</script> is denoted <span class="math"></span><script type="math/tex">A_i</script>.
+The matrix <span class="math"></span><script type="math/tex">A</script> in <a href=#equ3.2>(3.2)</a> contains the row vectors
+<div class="math"></div><script type="math/tex; mode=display">
+A_1 = \begin{pmatrix}
+0 & 2 & 4 & -2
+\end{pmatrix}
+\qquad\text{and}\qquad
+A_2 = \begin{pmatrix}
+3 & 2 & 7 & 4
+\end{pmatrix}.
+</script>
+</li><li>
+  The columns in a matrix are called the <em>column vectors</em> of the matrix.
+The <span class="math"></span><script type="math/tex">j</script>-th column in a matrix <span class="math"></span><script type="math/tex">A</script> is denoted <span class="math"></span><script type="math/tex">A^j</script>.
+The matrix <span class="math"></span><script type="math/tex">A</script> in <a href=#equ3.2>(3.2)</a> contains the column vectors
+<div class="math"></div><script type="math/tex; mode=display">
+A^1 = \begin{pmatrix}
+0 \\ 3
+\end{pmatrix},\quad
+A^2 =\begin{pmatrix}
+2 \\ 2
+\end{pmatrix},\quad
+A^3 =\begin{pmatrix}
+4 \\ 7
+\end{pmatrix}\quad\text{and}\quad
+A^4 = \begin{pmatrix}
+-2 \\ 4
+\end{pmatrix}.
+</script><div style="margin-top:20px"></div></li><li>
+  A row- or column vector is referred to as a <em>vector</em>.
+</li><li>
+  Even though we have used the notation <span class="math"></span><script type="math/tex">\mathbb{R}^n</script> for the <span class="math"></span><script type="math/tex">n</script>-th cartesian product of <span class="math"></span><script type="math/tex">\mathbb{R}</script>, we
+  will use <span class="math"></span><script type="math/tex">\mathbb{R}^n</script> henceforth to denote the set of column vectors with <span class="math"></span><script type="math/tex">n</script> rows (entries). This
+  definition is almost identical with the previous one, except that the tuple is formatted as
+  a column vector.<div style="margin-top:20px"></div>Illustrated by an example, 
+  <div class="math"></div><script type="math/tex; mode=display">
+  \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} \in \mathbb{R}^3\qquad\text{instead of}\qquad (1, 2, 3)\in \mathbb{R}^3.
+  </script>
+</li></ol><div style="margin-top:20px"></div><span id="sec3.2"></span><h2 id="ed992999-6b80-44f7-9d04-5d6a54a786eb">3.2 Linear maps</h2><div style="margin-top:20px"></div>In the first chapter we encountered a miniature version of a neural
+network. Neural networks are generally incredibly complicated functions
+from <span class="math"></span><script type="math/tex">\mathbb{R}^n</script> to <span class="math"></span><script type="math/tex">\mathbb{R}^m</script>. The function <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}^2</script>
+given by
+<div class="math"></div><script type="math/tex; mode=display">
+f\begin{pmatrix}
+  x \\ y
+\end{pmatrix} =
+\begin{pmatrix}
+  x^7 y + \cos(x y) e^{x^2 + y^2 -1}\\
+  2 x y^2 - \sin(x + y) (x^3 + y^3)
+\end{pmatrix},
+</script>
+even though it looks complicated, is simple in comparison.<div style="margin-top:20px"></div>You probably agree that the function <span class="math"></span><script type="math/tex">g:\mathbb{R}^2\rightarrow \mathbb{R}^2</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+g\begin{pmatrix}
+  x \\ y
+\end{pmatrix} =
+\begin{pmatrix}
+  2 x + 3 y\\
+  3 x - 2 y
+\end{pmatrix}
+</script>
+is even simpler. This function (or map) is an example of a linear map.
+In general, a <em>linear map</em>
+<span class="math"></span><script type="math/tex">f: \mathbb{R}^n\rightarrow \mathbb{R}^m</script> has the form
+<div class="math"></div><script type="math/tex; mode=display">
+f\begin{pmatrix}
+  x_1 \\ \vdots \\ x_n
+\end{pmatrix} =
+\begin{pmatrix}
+  a_{11} x_1 + \cdots + a_{1 n} x_n\\
+  \vdots \\
+  a_{m1} x_1 + \cdots + a_{m n} x_n
+\end{pmatrix},
+</script>
+where <span class="math"></span><script type="math/tex">a_{11}, \dots, a_{mn}</script> are <span class="math"></span><script type="math/tex">m n</script> real numbers.<div style="margin-top:20px"></div>Using matrices we will use the notation
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}
+\end{pmatrix}
+\begin{pmatrix} x_1 \\ \vdots \\ x_n\end{pmatrix} =
+\begin{pmatrix}
+  a_{11} x_1 + \cdots + a_{1 n} x_n\\
+  \vdots \\
+  a_{m1} x_1 + \cdots + a_{m n} x_n
+\end{pmatrix}.
+</script><div style="margin-top:20px"></div>In this way, we can write the map <span class="math"></span><script type="math/tex">f</script> as
+<div class="math"></div><script type="math/tex; mode=display">
+f(v) = A v,
+</script>
+where <span class="math"></span><script type="math/tex">A</script> is the <span class="math"></span><script type="math/tex">m\times n</script> matrix
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}
+\end{pmatrix}
+</script>
+and <span class="math"></span><script type="math/tex">v</script> is the vector
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix} x_1 \\ \vdots \\ x_n\end{pmatrix}
+</script>
+in <span class="math"></span><script type="math/tex">\mathbb{R}^n</script>.<div style="margin-top:20px"></div>Basically a linear map is a system of linear equations without the right hand side (including <span class="math"></span><script type="math/tex">=</script>).
+In fact, we may write the system of linear equations in <a href=#equ3.1>(3.1)</a> as
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+0 & 2 & 4\\
+3 & 2 & 7
+\end{pmatrix}
+\begin{pmatrix}
+  x \\ y \\ z
+\end{pmatrix}
+=
+\begin{pmatrix}
+  -2 \\ 4
+\end{pmatrix}.
+</script>
+<span id="env3.1"></span><a class="Exerciseno" data-count="3.1"></a><a href="#bd51bcda-e517-45ca-bc55-474bbe424976" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=bd51bcda-e517-45ca-bc55-474bbe424976 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">f: \mathbb{R}^2\rightarrow \mathbb{R}^2</script> be the linear map given by the <span class="math"></span><script type="math/tex">2\times 2</script> matrix
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  1 & 2\\
+  3 & 4
+\end{pmatrix}.
+</script>
+Does there exist <span class="math"></span><script type="math/tex">u\in \mathbb{R}^2</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+f(u) = \begin{pmatrix} 3 \\ 7 \end{pmatrix}?
+</script>
+Quite generally, can we find <span class="math"></span><script type="math/tex">u\in \mathbb{R}^2</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+f(u) = \begin{pmatrix} b_1 \\ b_2 \end{pmatrix}?
+</script>
+for arbitrary <span class="math"></span><script type="math/tex">b_1, b_2\in \mathbb{R}</script>?
+</div><div style="margin-top:20px"></div><span id="env3.2"></span><a class="Exerciseno" data-count="3.2"></a><a href="#818b68be-2d5b-428d-9bd0-b327bfa4a13d" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=818b68be-2d5b-428d-9bd0-b327bfa4a13d class = "collapse Exercise envbuttons">  
+Suppose you know that <span class="math"></span><script type="math/tex">f: \mathbb{R}^n\rightarrow \mathbb{R}^m</script> is a linear map and
+that you have a black box giving you output <span class="math"></span><script type="math/tex">f(v)\in \mathbb{R}^m</script> if you
+supply the input <span class="math"></span><script type="math/tex">v\in \mathbb{R}^n</script>. How would you find
+the matrix defining <span class="math"></span><script type="math/tex">f</script>?
+</div><div style="margin-top:20px"></div><span id="sec3.3"></span><h2 id="417e6feb-e87a-4e49-b109-69c0efc11f20">3.3 Matrix multiplication</h2><div style="margin-top:20px"></div>Suppose we are given two linear maps <span class="math"></span><script type="math/tex">f: \mathbb{R}^2\rightarrow \mathbb{R}^2</script> and
+<span class="math"></span><script type="math/tex">g:\mathbb{R}^2\rightarrow \mathbb{R}^2</script>. Then it turns out that the composition
+<span class="math"></span><script type="math/tex">f\circ g: \mathbb{R}^2\rightarrow \mathbb{R}^2</script> is also a linear map. A word of advice:
+the computations below look large and intimidating. They are not. It
+is important that you carry them out on your own. Do not look and copy or tell
+yourself that it looks okay. Do the computations yourself and ask me
+or fellow students if you get stuck.<div style="margin-top:20px"></div>Let us look at an example. Suppose that
+<div class="math"></div><script type="math/tex; mode=display">
+g\begin{pmatrix} x\\ y \end{pmatrix} =
+\begin{pmatrix}
+  2 & 3 \\
+  -1 & -2
+\end{pmatrix}
+\begin{pmatrix}
+  x \\ y
+\end{pmatrix}\qquad
+\text{and}
+\qquad
+f\begin{pmatrix} u\\ v \end{pmatrix} =
+\begin{pmatrix}
+  1 & 2 \\
+  1 & -2
+\end{pmatrix}
+\begin{pmatrix}
+  u \\ v
+\end{pmatrix}.
+</script>
+Then
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+(f\circ g)\begin{pmatrix} x\\ y \end{pmatrix} &=
+f\left(g\begin{pmatrix} x\\ y \end{pmatrix}\right) =
+f\left(\begin{pmatrix}
+  2 & 3 \\
+  -1 & -2
+\end{pmatrix}
+\begin{pmatrix}
+  x \\ y
+\end{pmatrix}\right)
+=
+\begin{pmatrix}
+  1 & 2 \\
+  1 & -2
+\end{pmatrix}
+      \left(
+\begin{pmatrix}
+  2 & 3 \\
+  -1 & -2
+\end{pmatrix}
+\begin{pmatrix}
+  x \\ y
+\end{pmatrix}
+  \right)\\
+  \\
+  &= 
+\begin{pmatrix}
+  1 & 2 \\
+  1 & -2
+\end{pmatrix}
+\begin{pmatrix}
+  2 x + 3 y\\
+  -x - 2y
+\end{pmatrix} =
+  \begin{pmatrix}
+    - y \\
+    4 x + 7 y
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    0 & -1\\
+    4 & 7
+  \end{pmatrix}
+  \begin{pmatrix}
+    x \\ y
+  \end{pmatrix}.
+\end{aligned}</script><div style="margin-top:20px"></div>In terms of the matrices of the linear maps, we write this as
+<span id="equ3.4"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+1 & 2\\
+1 & -2
+\end{pmatrix}
+\begin{pmatrix}
+2 & 3\\
+-1 & -2
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & -1\\
+4 & 7
+\end{pmatrix}
+\tag{3.4}</script><div style="margin-top:20px"></div>There is nothing special about the numbers in this example. We might as well
+do the computation in general: suppose that<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+g\begin{pmatrix} x\\ y \end{pmatrix} =
+\begin{pmatrix}
+  b_{11} & b_{12} \\
+  b_{21} & b_{22}
+\end{pmatrix}
+\begin{pmatrix}
+  x \\ y
+\end{pmatrix}\qquad
+\text{and}
+\qquad
+f\begin{pmatrix} u\\ v \end{pmatrix} =
+\begin{pmatrix}
+  a_{11} & a_{12} \\
+  a_{21} & a_{22}
+\end{pmatrix}
+\begin{pmatrix}
+  u \\ v
+\end{pmatrix}.
+</script>
+Then
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+(f\circ g)\begin{pmatrix} x\\ y \end{pmatrix} &=
+f\left(g\begin{pmatrix} x\\ y \end{pmatrix}\right) =
+f\left(\begin{pmatrix}
+  b_{11} & b_{12} \\
+  b_{21} & b_{22}
+\end{pmatrix}
+\begin{pmatrix}
+  x \\ y
+\end{pmatrix}\right)
+=
+\begin{pmatrix}
+  a_{11} & a_{12} \\
+  a_{21} & a_{22}
+\end{pmatrix}
+      \left(
+\begin{pmatrix}
+  b_{11} & b_{12} \\
+  b_{21} & b_{22}
+\end{pmatrix}
+\begin{pmatrix}
+  x \\ y
+\end{pmatrix}
+  \right)\\
+  \\
+  &= 
+\begin{pmatrix}
+  a_{11} & a_{12} \\
+  a_{21} & a_{22}
+\end{pmatrix}
+\begin{pmatrix}
+  b_{11} x + b_{12} y\\
+  b_{21} x + b_{22} y
+\end{pmatrix} =
+  \begin{pmatrix}
+a_{11} (b_{11} x + b_{12} y) + a_{12} (b_{21} x + b_{22} y)\\
+a_{21} (b_{11} x + b_{12} y) + a_{22} (b_{21} x + b_{22} y) 
+\end{pmatrix}\\
+  \\
+  &=
+  \begin{pmatrix}
+(a_{11} b_{11} + a_{12} b_{21}) x + (a_{11}b_{12} + a_{12} b_{22}) y \\ 
+(a_{21} b_{11} + a_{22} b_{21}) x + (a_{21} b_{12} + a_{22} b_{22}) y 
+\end{pmatrix}\\
+  \\
+  &=
+  \begin{pmatrix}
+a_{11} b_{11} + a_{12} b_{21} & a_{11}b_{12} + a_{12} b_{22} \\ 
+a_{21} b_{11} + a_{22} b_{21} &  a_{21} b_{12} + a_{22} b_{22} 
+\end{pmatrix}
+\begin{pmatrix}
+  x \\ y
+\end{pmatrix}.
+\end{aligned}</script><div style="margin-top:20px"></div>Again, in terms of the matrices of the linear maps, we write this as
+<span id="equ3.5"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+a_{11} & a_{12}\\
+\color{blue}{a_{21}} & \color{red}{a_{22}}
+\end{pmatrix}
+\begin{pmatrix}
+\color{blue}{b_{11}} & b_{12}\\
+\color{red}{b_{21}} & b_{22}
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_{11} b_{11} + a_{12} b_{21} & a_{11} b_{12} + a_{12} b_{22}\\
+\color{blue}{a_{21} b_{11}} + \color{red}{a_{22} b_{21}} & a_{21} b_{12} + a_{22} b_{22}
+\end{pmatrix}
+\tag{3.5}</script><div style="margin-top:20px"></div>The equation above is the formula for matrix multiplication for two <span class="math"></span><script type="math/tex">2\times 2</script> matrices, precisely as
+it was introduced
+by <a href="https://en.wikipedia.org/wiki/Arthur_Cayley" target="_blank">Cayley</a> around <span class="math"></span><script type="math/tex">1857</script>.<div style="margin-top:20px"></div>Upon closer inspection (and colored in <a href=#equ3.5>(3.5)</a> for <span class="math"></span><script type="math/tex">i=2</script> and <span class="math"></span><script type="math/tex">j= 1</script>), you will see that
+the number in the <span class="math"></span><script type="math/tex">i</script>-th row and <span class="math"></span><script type="math/tex">j</script>-th column in the product matrix is the
+<em>row-column multiplication</em> between the <span class="math"></span><script type="math/tex">i</script>-th row and
+the <span class="math"></span><script type="math/tex">j</script>-th column in the two matrices:<div style="margin-top:20px"></div><div class="frameit">
+The <em>row-column multiplication</em> between a row vector
+<div class="math"></div><script type="math/tex; mode=display">
+x = (x_1 x_2 \dots x_n)\qquad\text{and a column vector}\qquad
+y = \begin{pmatrix}
+y_1 \\ y_2 \\ \vdots \\ y_n
+\end{pmatrix}
+</script>
+with the same number of entries is defined as
+<div class="math"></div><script type="math/tex; mode=display">
+x y = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n.
+</script>
+</div><div style="margin-top:20px"></div>
+<div class="emphasize"><span id="env3.3"></span><div class="definition" data-count="3.3">     
+  Let <span class="math"></span><script type="math/tex">A</script> be an  <span class="math"></span><script type="math/tex">\color{blue}{m}\times \color{brown}{n}</script> matrix and <span class="math"></span><script type="math/tex">B</script> an <span class="math"></span><script type="math/tex">\color{brown}{n}\times \color{red}{r}</script> matrix.
+  Then the matrix product <span class="math"></span><script type="math/tex">A B</script> is defined as the <span class="math"></span><script type="math/tex">\color{blue}{m}\times\color{red}{r}</script> matrix <span class="math"></span><script type="math/tex">C</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+C_{ij} = A_i B^j = A_{i1} B_{1j} + A_{i2} B_{2j} + \cdots + A_{in} B_{nj}
+</script>
+for <span class="math"></span><script type="math/tex">1\leq i \leq m</script> and <span class="math"></span><script type="math/tex">1\leq j \leq r</script>.
+</div></div><div style="margin-top:20px"></div><div class="frameit">
+If <span class="math"></span><script type="math/tex">A</script> is an  <span class="math"></span><script type="math/tex">m\times n</script> matrix and <span class="math"></span><script type="math/tex">B</script> is an  <span class="math"></span><script type="math/tex">r\times s</script>, then the matrix product <span class="math"></span><script type="math/tex">A B</script> only makes sense if
+<span class="math"></span><script type="math/tex">n = r</script>: the number of columns in <span class="math"></span><script type="math/tex">A</script> must equal the number of rows in <span class="math"></span><script type="math/tex">B</script>. 
+</div><div style="margin-top:20px"></div><span id="env3.4"></span><a class="Quizexerciseno" data-count="3.4"></a><a href="#eac125d6-74e1-4643-93f4-29830aef6dbf" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=eac125d6-74e1-4643-93f4-29830aef6dbf class = "collapse Quizexercise envbuttons">  
+<span id="{labelname}"></span><div id="quiz1" style="width:100%;"><div class="row quizquestion">
+Suppose that 
+<div class="math"></div><script type="math/tex; mode=display">
+A = \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0 \end{pmatrix}, \quad
+B = \begin{pmatrix} 1 & 0\\ 0 & 1\end{pmatrix}, \quad
+C = \begin{pmatrix} 1 & 1 & 1\end{pmatrix}, \quad\text{and}\quad
+D = \begin{pmatrix} 1 \\ 1 \\ 1\end{pmatrix}
+</script>
+Which of the matrix products below make sense?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">B A</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">A B</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">C D</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">D C</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">C A</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">A D</script>
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div><div style="margin-top:20px"></div><span id="env3.5"></span><div class="video" data-count="3.5">     
+  I have been told that my pronunciation of <em>column</em> in the video below is wrong. In the area of the US, where I got my PhD, people for some reason had this (Irish?)
+  <a href="https://en.wiktionary.org/wiki/column#Pronunciation" target="_blank">rare pronunciation</a>.<div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/KVpBEynN3IM?rel=0" frameborder="0" allowfullscreen></iframe>
+</div><div style="margin-top:20px"></div>Using matrix product notation, the system of linear equations in <a href=#equ3.1>(3.1)</a> can now
+be written as
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+0 & 2 & 4\\
+3 & 2 & 7
+\end{pmatrix} 
+\begin{pmatrix} x \\ y \\ z \end{pmatrix} = 
+\begin{pmatrix} -2 \\ 4 \end{pmatrix}
+</script>
+Here we multiply a <span class="math"></span><script type="math/tex">2\times 3</script> with a <span class="math"></span><script type="math/tex">3\times 1</script>
+matrix. The row-column multiplication gives the <span class="math"></span><script type="math/tex">2\times 1</script> matrix
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+2 y + 4 z\\
+3 x + 2 y + 7 z
+\end{pmatrix}.
+</script>
+This matrix must equal the <span class="math"></span><script type="math/tex">2\times 1</script> matrix on the right hand side
+for <a href=#equ3.1>(3.1)</a> to be true.
+This is in agreement with our convention for writing linear maps in 
+section <a href=#sec3.2 class="labelref">3.2</a>.<div style="margin-top:20px"></div><span id="env3.6"></span><a class="Quizexerciseno" data-count="3.6"></a><a href="#397b7023-6d34-4911-8b63-cd0ffcd6060e" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=397b7023-6d34-4911-8b63-cd0ffcd6060e class = "collapse Quizexercise envbuttons">  
+<span id="{labelname}"></span><div id="quiz2" style="width:100%;"><div class="row quizquestion">
+Suppose that
+<div class="math"></div><script type="math/tex; mode=display">
+A = 
+\begin{pmatrix}
+1 & 2 & 3\\
+0 & 1 & 2\\
+3 & x & 1
+\end{pmatrix},
+\quad
+B = 
+\begin{pmatrix}
+1& 1 & 1\\
+2 & 2 & 2\\
+0 & 1 & 1
+\end{pmatrix}\quad\text{and}\quad
+C = A B
+</script>
+Which ones of the statements below are true?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">C_{12} = 9</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">C_{23} = 4</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+If <span class="math"></span><script type="math/tex">C_{32} = 4</script>, then <span class="math"></span><script type="math/tex">x = 0</script>.
+</div><div class="col-xs-5 quizanswer" datav="F">
+If <span class="math"></span><script type="math/tex">C_{31} = -1</script>, then <span class="math"></span><script type="math/tex">x=-1</script>.
+</div></div></div><button id="quizbutton2" class = "btn btn-default">Check</button><script>$("#quizbutton2").click(function(){quizshowanswers(quiz2, quizbutton2);});</script>
+</div><div style="margin-top:20px"></div><span id="sec3.3.1"></span><h3>3.3.1 Matrix multiplication in <tt>numpy</tt></h3><div style="margin-top:20px"></div>Matrix multiplication <tt>numpy</tt> is represented via the operator <span class="math"></span><script type="math/tex">*</script>:<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import numpy as np
+A = np.matrix( [[1, 2], [1, -2]] )
+B = np.matrix( [[2, 3], [-1, -2]] )
+print("A =")
+print(A)
+print("B =")
+print(B)
+print("AB =")
+print(A*B)
+</script></div><div style="margin-top:20px"></div><span id="sec3.3.2"></span><h3>3.3.2 The identity matrix</h3><div style="margin-top:20px"></div>
+The identity matrix <span class="math"></span><script type="math/tex">I_n</script> of order <span class="math"></span><script type="math/tex">n</script> is the <span class="math"></span><script type="math/tex">n\times n</script> diagonal matrix with <span class="math"></span><script type="math/tex">1</script>
+in the diagonal. Below is the identity matrix of order <span class="math"></span><script type="math/tex">5</script>.
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+1 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+</script><div style="margin-top:20px"></div>The identity matrix <span class="math"></span><script type="math/tex">I_n</script> has the crucial property that 
+<span id="equ3.6"></span><div class="math"></div><script type="math/tex; mode=display">
+I_n A = A I_n = A
+\tag{3.6}</script>
+for all <span class="math"></span><script type="math/tex">n\times n</script> matrices <span class="math"></span><script type="math/tex">A</script>.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import numpy as np
+
+I3 = np.identity(3)
+A = np.matrix( [[1, 2, 3], [4, 5, 6], [7, 8, 9]] )
+print("The identity matrix of order 3 is I3 = ")
+print(I3)
+print("The matrix A is ")
+print(A)
+print("The matrix product I3 A is")
+print(I3*A)
+print("The matrix product A I3 is")
+print(A*I3)
+</script></div>
+
+<span id="env3.7"></span><a class="Exerciseno" data-count="3.7"></a><a href="#c7d4c5f0-0fd5-458d-b520-2a85c72d4e63" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c7d4c5f0-0fd5-458d-b520-2a85c72d4e63 class = "collapse Exercise envbuttons">  
+Prove that the two identities in <a href=#equ3.6>(3.6)</a> are true for <span class="math"></span><script type="math/tex">n\times n</script> matrices.
+</div><div style="margin-top:20px"></div><span id="sec3.3.3"></span><h3>3.3.3 Examples of matrix multiplication</h3>
+Matrix multiplication is omnipresent in mathematics. Below we give an example,
+which is a baby version of 
+Google's famous <a href="https://en.wikipedia.org/wiki/PageRank" target="_blank">page rank algorithm</a>.<div style="margin-top:20px"></div><span id="env3.8"></span><div class="example" data-count="3.8">     
+
+
+  Suppose that <span class="math"></span><script type="math/tex">20</script>% of the people living in the suburbs move to the big city and
+  that <span class="math"></span><script type="math/tex">30</script>% of the people living in the big city move to the suburbs per year.<div style="margin-top:20px"></div>Aiming for a model using probabilities, let us be a bit more precise.<div style="margin-top:20px"></div><ol class="lowerroman"><li>
+  If you live in the suburbs, the probability that you move to the big city is <span class="math"></span><script type="math/tex">0.2</script>,
+</li><li>
+  If you live in the suburbs, the probability that you do not move is <span class="math"></span><script type="math/tex">0.8</script>.
+</li><li>
+  If you live in the big city the probability that you move to the suburbs is <span class="math"></span><script type="math/tex">0.3</script>.
+</li><li>
+  If you live in the big city the probability that you do not move is <span class="math"></span><script type="math/tex">0.7</script>.
+</li></ol>
+All of the above probabilities are per year and can be illustrated in the diagram below<div style="margin-top:20px"></div><div class="centerimg"><img src="img/markov.svg" ></div><div style="margin-top:20px"></div>We are interested in predicting, using this model, how many people live
+in the big city and the suburbs given that we know how many people
+live in the big city, <span class="math"></span><script type="math/tex">x_0</script> and in the suburbs <span class="math"></span><script type="math/tex">y_0</script> to begin with i.e.,
+setting the time <span class="math"></span><script type="math/tex">t = 0</script> (years).<div style="margin-top:20px"></div>How many people <span class="math"></span><script type="math/tex">x_1</script> and <span class="math"></span><script type="math/tex">y_1</script> live in the two places after the first year (<span class="math"></span><script type="math/tex">t=1</script>)?<div style="margin-top:20px"></div>The population of the big city will decrease by <span class="math"></span><script type="math/tex">30%</script>, but there are newcomers amounting to
+<span class="math"></span><script type="math/tex">20%</script> of the population in the suburbs. Therefore
+<div class="math"></div><script type="math/tex; mode=display">
+x_1 = 0.7 x_0 + 0.2 y_0.
+</script>
+In the same way,
+<div class="math"></div><script type="math/tex; mode=display">
+y_1 = 0.3 x_0 + 0.8 y_0.
+</script>
+Using matrix multiplication, these two equations can be written
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix} x_1 \\ y_1 \end{pmatrix} = 
+\begin{pmatrix} 
+0.7 & 0.2\\
+0.3 & 0.8
+\end{pmatrix}
+\begin{pmatrix} x_0 \\ y_0 \end{pmatrix}.
+</script>
+For <span class="math"></span><script type="math/tex">t=2</script> years, we can repeat the procedure and the result becomes
+<span id="equ3.7"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+\begin{pmatrix} x_2 \\ y_2 \end{pmatrix} &= 
+\begin{pmatrix} 
+0.7 & 0.2\\
+0.3 & 0.8
+\end{pmatrix}
+\begin{pmatrix} x_1 \\ y_1 \end{pmatrix} =
+\begin{pmatrix} 
+0.7 & 0.2\\
+0.3 & 0.8
+\end{pmatrix}
+\left(\begin{pmatrix} 
+0.7 & 0.2\\
+0.3 & 0.8
+\end{pmatrix}
+\begin{pmatrix} x_0 \\ y_0 \end{pmatrix}\right)\\
+&=
+\left( 
+\begin{pmatrix} 
+0.7 & 0.2\\
+0.3 & 0.8
+\end{pmatrix}
+\begin{pmatrix} 
+0.7 & 0.2\\
+0.3 & 0.8
+\end{pmatrix}\right)
+\begin{pmatrix} x_0 \\ y_0 \end{pmatrix} = 
+P^2 \begin{pmatrix} x_0 \\ y_0 \end{pmatrix},
+\end{aligned}\tag{3.7}</script>
+where 
+<span id="equ3.8"></span><div class="math"></div><script type="math/tex; mode=display">
+P=\begin{pmatrix} 
+0.7 & 0.2\\
+0.3 & 0.8
+\end{pmatrix}.
+\tag{3.8}</script>
+In general we have the formula<div style="margin-top:20px"></div><div class="emphasize"><span id="equ3.9"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix} x_n \\ y_n \end{pmatrix} = 
+P^n
+\begin{pmatrix} x_0 \\ y_0 \end{pmatrix},
+\tag{3.9}</script></div><div style="margin-top:20px"></div>giving the distribution of the populations for <span class="math"></span><script type="math/tex">t = n</script>
+years. Let us experiment a little:
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+P^2 &= 
+\begin{pmatrix}
+0.55 & 0.3\\
+0.45 & 0.7
+\end{pmatrix}\\
+P^3 = P P^2 &=
+\begin{pmatrix} 
+0.475 & 0.35\\
+0.525 & 0.65
+\end{pmatrix}\\
+P^4 = P P^3 &=
+\begin{pmatrix} 
+0.4375 & 0.375\\
+0.5625 & 0.625
+\end{pmatrix}\\
+&\vdots\\
+P^{15} &= 
+\begin{pmatrix} 
+0.400018 & 0.399951\\
+0.599982 & 0.600012
+\end{pmatrix}\\
+P^{16} &= 
+\begin{pmatrix} 
+0.400009 & 0.399994\\
+0.599991 & 0.600006
+\end{pmatrix}
+\end{aligned}</script><div style="margin-top:20px"></div>It seems that the distribution stabilizes around <span class="math"></span><script type="math/tex">40%</script> living
+in the big city and <span class="math"></span><script type="math/tex">60%</script> living in the suburbs of the
+original total population.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import numpy as np
+
+P = np.matrix( [[0.7, 0.2], [0.3, 0.8]] )
+
+print(P**16)
+</script></div><div style="margin-top:20px"></div>The matrix <span class="math"></span><script type="math/tex">P</script> is an example of a stochastic <span class="math"></span><script type="math/tex">2\times 2</script> matrix. 
+In general, a square matrix is called a <em>stochastic matrix</em> if its entries are
+<span class="math"></span><script type="math/tex">\geq 0</script> and the sum of the entries in its column vectors are <span class="math"></span><script type="math/tex">1</script>.
+</div><div style="margin-top:20px"></div><a href="#1b0e4549-a11a-4af6-8f76-9c46a05236a2" class ="btn btn-default" data-toggle="collapse">A note on Google page rank</a><div id=1b0e4549-a11a-4af6-8f76-9c46a05236a2 class="collapse"><div style="margin-top:20px"></div>A simple example of the page rank algorithm is
+  given just above Section <a href="lineqs.html#sec2.4">2.4</a>. There you
+  encounter the equations
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    T_2 &= T_1 + \tfrac{1}{2} T_4\\
+    T_3 &= T_2\\
+    T_4 &= T_3\\
+    T_1 &= \tfrac{1}{2} T_4\\
+    T_1 + T_2 + T_3 + T_4 &= 1.
+  \end{aligned}</script><div style="margin-top:20px"></div>In terms of matrix multiplication the first four equations can be rewritten to
+  <div class="math"></div><script type="math/tex; mode=display">
+  \begin{pmatrix}
+    0 & 0 & 0 & \tfrac{1}{2} \\[5pt]
+    1 & 0 & 0 & \tfrac{1}{2}\\[5pt]
+    0 & 1 & 0 & 0 \\[5pt]
+    0 & 0 & 1 & 0 
+  \end{pmatrix}
+  \begin{pmatrix}
+    T_1 \\[5pt] T_2 \\[5pt] T_3 \\[5pt] T_4
+  \end{pmatrix} =
+  \begin{pmatrix}
+    T_1 \\[5pt] T_2 \\[5pt] T_3 \\[5pt] T_4
+  \end{pmatrix}.
+  </script>
+  Putting
+  <div class="math"></div><script type="math/tex; mode=display">
+  P = \begin{pmatrix}
+    0 & 0 & 0 & \tfrac{1}{2} \\[5pt]
+    1 & 0 & 0 & \tfrac{1}{2}\\[5pt]
+    0 & 1 & 0 & 0 \\[5pt]
+    0 & 0 & 1 & 0 
+  \end{pmatrix}
+  </script>
+  we get a stochastic matrix and  may again iterate and compute <span class="math"></span><script type="math/tex">P, P^2, P^3, \dots</script>.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import numpy as np
+P = np.matrix( [[0, 0, 0, 0.5], [1, 0, 0, 0.5], [0, 1, 0, 0], [0, 0, 1, 0]] )
+
+print(P**10)
+print(P**20)
+print(P**30)
+print(P**40)
+print(P**50)
+</script></div><div style="margin-top:20px"></div>Is there a connection between the entries of <span class="math"></span><script type="math/tex">P^N</script>, where <span class="math"></span><script type="math/tex">N</script> is very big and the solutions to the linear equations? 
+</div><div style="margin-top:20px"></div><span id="env3.9"></span><a class="Exerciseno" data-count="3.9"></a><a href="#d2ded34e-2137-4d15-93c5-14765f3a40eb" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=d2ded34e-2137-4d15-93c5-14765f3a40eb class = "collapse Exercise envbuttons">  
+In the end of Example <a href=#env3.8 class="labelref">3.8</a> (above) a stochastic matrix is defined. Show that
+the matrix product of two <span class="math"></span><script type="math/tex">n\times n</script> stochastic matrices is a stochastic matrix.
+</div><div style="margin-top:20px"></div>Below is an example, where  matrix multiplication occurs in networks.<div style="margin-top:20px"></div><span id="env3.10"></span><div class="example" data-count="3.10">     
+  Suppose we have five cities connected with roads as shown below<div style="margin-top:20px"></div><div class="centerimg"><img src="img/bygraf.svg" ></div><div style="margin-top:20px"></div>This network has a so called <span class="math"></span><script type="math/tex">5\times 5</script> <em>incidence matrix</em>, where city <span class="math"></span><script type="math/tex">i</script> is associated with the
+<span class="math"></span><script type="math/tex">i</script>-th row and <span class="math"></span><script type="math/tex">i</script>-th column. A <span class="math"></span><script type="math/tex">1</script> in the matrix in the <span class="math"></span><script type="math/tex">(i, j)</script> entry means that there is a road
+from city <span class="math"></span><script type="math/tex">i</script> to city <span class="math"></span><script type="math/tex">j</script>, whereas a <span class="math"></span><script type="math/tex">0</script> means that city <span class="math"></span><script type="math/tex">i</script> and city <span class="math"></span><script type="math/tex">j</script> are not connected by a road:
+<div class="math"></div><script type="math/tex; mode=display">
+A = \begin{pmatrix}
+0 & 1 & 1 & 0 & 0\\
+1 & 0 & 1 & 1 & 0\\
+1 & 1 & 0 & 1 & 1\\
+0 & 1 & 1 & 0 & 1\\
+0 & 0 & 1 & 1 & 0
+\end{pmatrix}.
+</script>
+Here
+<div class="math"></div><script type="math/tex; mode=display">
+A^2 =  
+\begin{pmatrix}
+2 & 1 & 1 & 2 & 1 \\
+1 & 3 & 2 & 1 & 2 \\
+1 & 2 & 4 & 2 & 1 \\
+2 & 1 & 2 & 3 & 1 \\
+1 & 2 & 1 & 1 & 2 
+\end{pmatrix}\quad\text{og}\quad
+A^3 =
+\begin{pmatrix}
+ 2 & 5 & 6 & 3 & 3 \\
+ 5 & 4 & 7 & 7 & 3 \\
+ 6 & 7 & 6 & 7 & 6 \\
+ 3 & 7 & 7 & 4 & 5 \\
+ 3 & 3 & 6 & 5 & 2 
+\end{pmatrix}.
+</script>
+What is the interpretation of <span class="math"></span><script type="math/tex">A^2, A^3</script> and  <span class="math"></span><script type="math/tex">A^n</script> in general?
+It turns out that the entry <span class="math"></span><script type="math/tex">(i, j)</script> in the matrix <span class="math"></span><script type="math/tex">A^n</script> exactly is
+the number of paths of length <span class="math"></span><script type="math/tex">n</script> from city <span class="math"></span><script type="math/tex">i</script> to city <span class="math"></span><script type="math/tex">j</script>.<div style="margin-top:20px"></div>For example, there are <span class="math"></span><script type="math/tex">3</script> paths from city <span class="math"></span><script type="math/tex">1</script> to city <span class="math"></span><script type="math/tex">5</script> of length <span class="math"></span><script type="math/tex">3</script>
+corresponding to the paths <span class="math"></span><script type="math/tex">1245, 1345, 1235</script>.  The <span class="math"></span><script type="math/tex">2</script> paths from city <span class="math"></span><script type="math/tex">1</script> to city <span class="math"></span><script type="math/tex">1</script> of
+length <span class="math"></span><script type="math/tex">3</script> are <span class="math"></span><script type="math/tex">1231, 1321</script> and the  <span class="math"></span><script type="math/tex">5</script> paths of length <span class="math"></span><script type="math/tex">3</script> from city <span class="math"></span><script type="math/tex">1</script> to city 
+<span class="math"></span><script type="math/tex">2</script> are <span class="math"></span><script type="math/tex">1342, 1242, 1312, 1212, 1232</script>.<div style="margin-top:20px"></div><a href="#acdda9c9-b968-451d-aaa7-5bd605fe246c" class ="btn btn-default" data-toggle="collapse">A deeper explanation</a><div id=acdda9c9-b968-451d-aaa7-5bd605fe246c class="collapse">
+Suppose that we have a network with <span class="math"></span><script type="math/tex">m</script> cities and incidence matrix <span class="math"></span><script type="math/tex">A</script>.<div style="margin-top:20px"></div>The general proof of the observations above in our special example, builds on the
+fact that 
+a path of length <span class="math"></span><script type="math/tex">n</script> from city <span class="math"></span><script type="math/tex">i</script> to city <span class="math"></span><script type="math/tex">j</script> has to end with a road from a neighboring city
+<span class="math"></span><script type="math/tex">k</script> to <span class="math"></span><script type="math/tex">j</script>.
+For every one of these neighboring cities, we may count the number of paths of length <span class="math"></span><script type="math/tex">n-1</script>
+from city <span class="math"></span><script type="math/tex">i</script>.
+If <span class="math"></span><script type="math/tex">A^{n-1}_{gh}</script> is the number of paths of length <span class="math"></span><script type="math/tex">n-1</script> from city <span class="math"></span><script type="math/tex">g</script> to city <span class="math"></span><script type="math/tex">h</script>,
+then matrix multiplication tells us that 
+<div class="math"></div><script type="math/tex; mode=display">
+A^n_{i j} = A^{n-1}_{i 1} A_{1 j} + \cdots + A^{n-1}_{i m} A_{m j} 
+</script>
+This number is exactly the number of paths of length <span class="math"></span><script type="math/tex">n</script> from city <span class="math"></span><script type="math/tex">i</script> to
+city <span class="math"></span><script type="math/tex">j</script>, since 
+<span class="math"></span><script type="math/tex">A_{k j} = 1</script> only when <span class="math"></span><script type="math/tex">k</script> is a neighboring city to city <span class="math"></span><script type="math/tex">j</script> (and <span class="math"></span><script type="math/tex">0</script> otherwise).
+</div>
+</div><div style="margin-top:20px"></div><span id="sec3.4"></span><h2 id="f1ee71a3-f246-4de5-a059-0857e89b250b">3.4 Matrix arithmetic</h2><div style="margin-top:20px"></div>Matrix multiplication is very different from ordinary multiplication of numbers:
+it is not <a href="https://en.wikipedia.org/wiki/Commutative_property" target="_blank">commutative</a>.
+Consider the matrices
+<div class="math"></div><script type="math/tex; mode=display">
+A=
+\begin{pmatrix}
+0 & 1\\
+0 & 0
+\end{pmatrix}\qquad\text{and}\qquad
+B = 
+\begin{pmatrix}
+0 & 0\\
+1 & 0
+\end{pmatrix}.
+</script>
+Then
+<div class="math"></div><script type="math/tex; mode=display">
+A B = \begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix}\qquad \text{and} \qquad 
+B A = \begin{pmatrix} 0 & 0 \\ 0 & 1\end{pmatrix}
+</script>
+i.e.., <span class="math"></span><script type="math/tex">A B \neq B A</script>. <div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import numpy as np
+
+A = np.matrix( [[1, 1], [0, 1]] )
+B = np.matrix( [[1, 0], [1, 1]] )
+print("A =")
+print(A)
+print("B =")
+print(B)
+print("AB=")
+print(A*B)
+print("BA=")
+print(B*A)
+</script></div><div style="margin-top:20px"></div>Addition of matrices is like ordinary addition, except that you add all the entries of
+the involved matrices.<div style="margin-top:20px"></div><span id="sec3.4.1"></span><h3>3.4.1 Matrix addition</h3><div style="margin-top:20px"></div>Addition of two matrices with the same number of rows and columns is defined below.
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+a_{11} & \cdots & a_{1 n} \\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{m n}
+\end{pmatrix} +
+\begin{pmatrix}
+b_{11} & \cdots& b_{1 n} \\
+\vdots & \ddots & \vdots\\
+b_{m1} & \cdots & b_{m n}
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_{11} + b_{11} & \cdots & a_{1 n} + b_{1n}\\
+\vdots & \ddots  & \vdots\\
+a_{m1}+b_{m1} & \cdots & a_{m n}+b_{mn}
+\end{pmatrix}.
+</script><div style="margin-top:20px"></div>The zero matrix is the (<span class="math"></span><script type="math/tex">m\times n</script>) matrix containing zero in all its entries. When its number of
+rows and columns are clear from the context it is simply denoted by <span class="math"></span><script type="math/tex">0</script>. For <span class="math"></span><script type="math/tex">2\times 3</script> matrices
+for example, we write
+<div class="math"></div><script type="math/tex; mode=display">
+0 =
+\begin{pmatrix}
+  0 & 0 & 0\\
+  0 & 0 & 0
+\end{pmatrix}.
+</script><div style="margin-top:20px"></div><span id="env3.11"></span><a class="Exerciseno" data-count="3.11"></a><a href="#621c844b-c93f-4208-bab8-efdadfd4deb4" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=621c844b-c93f-4208-bab8-efdadfd4deb4 class = "collapse Exercise envbuttons">  
+  Given an example of a non-zero <span class="math"></span><script type="math/tex">2\times 2</script> matrix, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  A^2 = 0.
+  </script>
+</div><div style="margin-top:20px"></div><span id="sec3.4.2"></span><h3>3.4.2 Multiplication of a number and a matrix</h3><div style="margin-top:20px"></div>A matrix may be multiplied by a number <span class="math"></span><script type="math/tex">\lambda</script> by multiplying each entry by the number:
+<div class="math"></div><script type="math/tex; mode=display">
+\lambda \begin{pmatrix}
+a_{11} & \cdots & a_{1 n} \\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{m n}
+\end{pmatrix} =
+\begin{pmatrix}
+\lambda a_{11} & \cdots & \lambda a_{1 n} \\
+\vdots & \ddots & \vdots\\
+\lambda a_{m1} & \cdots & \lambda a_{m n}
+\end{pmatrix}.
+</script><div style="margin-top:20px"></div><span id="env3.12"></span><a class="Exerciseno" data-count="3.12"></a><a href="#b064465b-b4e9-4c6b-854a-5ad60dfecec7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=b064465b-b4e9-4c6b-854a-5ad60dfecec7 class = "collapse Exercise envbuttons">  
+Does there exists a number  <span class="math"></span><script type="math/tex">\lambda</script>, such that 
+<div class="math"></div><script type="math/tex; mode=display">
+\lambda 
+\begin{pmatrix}
+1 & 2 & 3\\
+4 & 5 & 6
+\end{pmatrix} 
++
+\begin{pmatrix}
+0 & 0 & 0\\
+0 & 0 & 2
+\end{pmatrix} 
+= 
+\begin{pmatrix}
+2 & 4 & 6\\
+8 & 10 & 15
+\end{pmatrix}?
+</script>
+</div><div style="margin-top:20px"></div><span id="env3.13"></span><a class="Exerciseno" data-count="3.13"></a><a href="#18a773e1-8015-4a68-9244-e008ff673ff8" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=18a773e1-8015-4a68-9244-e008ff673ff8 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">A</script> be a <span class="math"></span><script type="math/tex">2\times 2</script> matrix, such that
+<div class="math"></div><script type="math/tex; mode=display">
+A B = B A,
+</script>
+for every other <span class="math"></span><script type="math/tex">2\times 2</script> matrix <span class="math"></span><script type="math/tex">B</script>. Show that <span class="math"></span><script type="math/tex">A</script> is a diagonal matrix of the form
+<div class="math"></div><script type="math/tex; mode=display">
+A =
+\begin{pmatrix}
+  a & 0\\
+  0 & a
+\end{pmatrix},
+</script>
+where <span class="math"></span><script type="math/tex">a\in \mathbb{R}</script> i.e., <span class="math"></span><script type="math/tex">A = a I_2</script>.
+</div><div style="margin-top:20px"></div><span id="sec3.4.3"></span><h3>3.4.3 The distributive law</h3><div style="margin-top:20px"></div>Ordinary numbers <span class="math"></span><script type="math/tex">a, b, c</script> satisfy
+<span class="math"></span><script type="math/tex">a (b + c) = a b + a c</script>. This rule also holds for
+matrices and is called the distributive law (multiplication
+is distributed over plus)<div style="margin-top:20px"></div><span id="env3.14"></span><div class="proposition" data-count="3.14">     
+Let <span class="math"></span><script type="math/tex">B</script> and <span class="math"></span><script type="math/tex">C</script> be <span class="math"></span><script type="math/tex">m\times n</script> matrices, <span class="math"></span><script type="math/tex">A</script> an <span class="math"></span><script type="math/tex">r\times m</script> matrix and <span class="math"></span><script type="math/tex">D</script> an <span class="math"></span><script type="math/tex">n\times s</script> matrix. Then
+<div class="math"></div><script type="math/tex; mode=display">
+A ( B + C) = A B + A C\qquad\text{and}\qquad (B + C) D = B D + C D.
+</script>
+</div>
+<a href="#442a8060-c2d7-4988-9d9e-26716f5233f7" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=442a8060-c2d7-4988-9d9e-26716f5233f7 class = "collapse Proof envbuttons">    
+  Let us start by looking at <span class="math"></span><script type="math/tex">A(B+C) = A B + A C</script>. 
+Here it suffices to do the proof, when <span class="math"></span><script type="math/tex">A</script> is a row vector and
+<span class="math"></span><script type="math/tex">B, C</script> column vectors, since
+<div class="math"></div><script type="math/tex; mode=display">
+(A (B+C))_{ij} = A_i (B+C)^j = A_i (B^j + C^j).
+</script>
+For <span class="math"></span><script type="math/tex">(B + C) A = B A + C A</script>, we may reduce to the case, where
+<span class="math"></span><script type="math/tex">B, C</script> are row vectors and  <span class="math"></span><script type="math/tex">D</script> a column vector, since
+<div class="math"></div><script type="math/tex; mode=display">
+((B+C) D)_{ij} = (B+C)_i D^j = (B_i + C_i) D^j.
+</script>
+Both of these cases follow using the distributive law for ordinary numbers.
+  </div><div style="margin-top:20px"></div><span id="env3.15"></span><a class="Exerciseno" data-count="3.15"></a><a href="#bf4f7cfc-dd63-4223-92ad-179c7b5a71d3" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=bf4f7cfc-dd63-4223-92ad-179c7b5a71d3 class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script> are two <span class="math"></span><script type="math/tex">2\times 2</script> matrices. Is it true that
+<div class="math"></div><script type="math/tex; mode=display">
+(A + B)^2 = A^2 + B^2 + 2 A B?
+</script>
+What about
+<div class="math"></div><script type="math/tex; mode=display">
+(A + B) (A - B) = A^2 - B^2?
+</script>
+</div><div style="margin-top:20px"></div><span id="sec3.4.4"></span><h3>3.4.4 The miraculous associative law</h3><div style="margin-top:20px"></div>It does not make sense to multiply three matrices <span class="math"></span><script type="math/tex">A, B</script> and <span class="math"></span><script type="math/tex">C</script>. We have only defined
+matrix multiplication for two matrices. There are two natural ways of evaluating
+<span class="math"></span><script type="math/tex">A B C</script>:
+<div class="math"></div><script type="math/tex; mode=display">
+( A B ) C\qquad \text{and}\qquad A (B C).
+</script><div style="margin-top:20px"></div>We can begin by multiplying <span class="math"></span><script type="math/tex">A</script> by <span class="math"></span><script type="math/tex">B</script> and then multiply <span class="math"></span><script type="math/tex">C</script> from the right.
+However, me may just as well start by multiplying <span class="math"></span><script type="math/tex">B</script> by <span class="math"></span><script type="math/tex">C</script> and then
+multiply <span class="math"></span><script type="math/tex">A</script> from the left.<div style="margin-top:20px"></div>It is in no way clear, that these two computations give the same result!<div style="margin-top:20px"></div>That this turns out to be true, is just one of many miracles in the universe (there is a
+rather cool mathematical explanation, though, addressed in an exercise below).<div style="margin-top:20px"></div><span id="env3.16"></span><div class="theorem" data-count="3.16">     
+Let <span class="math"></span><script type="math/tex">A</script> be an <span class="math"></span><script type="math/tex">m\times n</script> matrix, <span class="math"></span><script type="math/tex">B</script> an <span class="math"></span><script type="math/tex">n\times r</script> matrix and <span class="math"></span><script type="math/tex">C</script> an <span class="math"></span><script type="math/tex">r\times s</script> matrix. Then
+<div class="math"></div><script type="math/tex; mode=display">
+(A B) C = A (B C).
+</script>
+</div>
+<a href="#4d08c1d9-231c-4efa-8ee9-5d881a939dca" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=4d08c1d9-231c-4efa-8ee9-5d881a939dca class = "collapse Proof envbuttons">    
+  We must prove that 
+<div class="math"></div><script type="math/tex; mode=display">
+((A B) C)_{ij} = (A (B C))_{ij}
+</script>
+for <span class="math"></span><script type="math/tex">1\leq i \leq m</script> og <span class="math"></span><script type="math/tex">1\leq j \leq s</script>. The left hand side can be written
+<span id="equ3.10"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+(A B)_i C^j &= (A_i B^1, \dots, A_i B^r) C^j\\
+            &= (A_i B^1) C_{1j} + (A_i B^2) C_{2j} + \cdots + (A_i B^r) C_{rj}.
+\end{aligned}\tag{3.10}</script>
+The right hand side is 
+<span id="equ3.11"></span><div class="math"></div><script type="math/tex; mode=display">
+A_i (B C)^j = A_i \begin{pmatrix} B_1 C^j \\ \vdots \\ B_n C^j\end{pmatrix}
+            = A_{i1} (B_1 C^j) + \cdots + A_{in} (B_n C^j).
+          \tag{3.11}</script><div style="margin-top:20px"></div>Writing the row-column multiplications in <a href=#equ3.10>(3.10)</a>, we get
+<span id="equ3.12"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+&A_{i1} B_{11} C_{1j} + \cdots + A_{in} B_{n1} C_{1j} +\\
+&A_{i1} B_{12} C_{2j} + \cdots + A_{in} B_{n2} C_{2j} +\\
+&\vdots\\
+&A_{i1} B_{1r} C_{rj} + \cdots + A_{in} B_{nr} C_{rj}.
+\end{aligned}\tag{3.12}</script>
+          Writing the row-column multiplications in <a href=#equ3.11>(3.11)</a>, we get
+<span id="equ3.13"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+&A_{i1} B_{11} C_{1j} + \cdots + A_{i1} B_{1r} C_{rj} +\\
+&A_{i2} B_{21} C_{1j} + \cdots + A_{i2} B_{2r} C_{rj} +\\
+&\vdots\\
+&A_{in} B_{n1} C_{1j} + \cdots + A_{in} B_{nr} C_{rj}.
+\end{aligned}\tag{3.13}</script>
+The rows in the sum in  <a href=#equ3.12>(3.12)</a> correspond to the columns in the sum <a href=#equ3.13>(3.13)</a>.
+Therefore these sums are equal and <span class="math"></span><script type="math/tex">((A B) C)_{ij} = (A (B C))_{ij}</script>.
+  </div><div style="margin-top:20px"></div><span id="env3.17"></span><a class="Exerciseno" data-count="3.17"></a><a href="#12410b84-978a-47a3-b7ac-9561ad9bbb5e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=12410b84-978a-47a3-b7ac-9561ad9bbb5e class = "collapse Exercise envbuttons">  
+Verify the associative law for the three matrices
+<div class="math"></div><script type="math/tex; mode=display">
+A =
+\begin{pmatrix}
+  1 & 2\\
+  3 & 4
+\end{pmatrix}, \qquad
+B =
+\begin{pmatrix}
+  1 & 2 & 3\\
+  4 & 5 & 6
+\end{pmatrix}\qquad\text{and}\qquad
+C =
+\begin{pmatrix}
+  6 & 3\\
+  5 & 2\\
+  4 & 1
+\end{pmatrix}
+</script>
+by showing by explicit computation that
+<div class="math"></div><script type="math/tex; mode=display">
+(A B) C = A (B C).
+</script>
+</div><div style="margin-top:20px"></div><span id="env3.18"></span><a class="Exerciseno" data-count="3.18"></a><a href="#0a9442cc-f016-429d-93ed-3c4e663183cf" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=0a9442cc-f016-429d-93ed-3c4e663183cf class = "collapse Exercise envbuttons">  
+There is in fact a high tech explanation that the associative law for matrices holds. An explanation
+that makes the calculations in the above proof superfluous and shows the raw power of
+abstract mathematics: suppose that
+<span class="math"></span><script type="math/tex">f: \mathbb{R}^n\rightarrow \mathbb{R}^m, g:\mathbb{R}^r\rightarrow \mathbb{R}^n</script> and <span class="math"></span><script type="math/tex">h:\mathbb{R}^s\rightarrow \mathbb{R}^r</script> are linear maps.
+Then <span class="math"></span><script type="math/tex">f\circ (g\circ h)</script> and <span class="math"></span><script type="math/tex">(f\circ g)\circ h</script> are both linear maps from <span class="math"></span><script type="math/tex">\mathbb{R}^s\rightarrow \mathbb{R}^m</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+(f\circ (g\circ h))(x) = ((f\circ g)\circ h)(x) = f( g ( h (x)))
+</script>
+for every <span class="math"></span><script type="math/tex">x\in \mathbb{R}^s</script>. How does this relate to the associative law for matrix
+multiplication?
+</div><div style="margin-top:20px"></div><span id="sec3.5"></span><h2 id="3ba68277-54c2-4417-8873-580221bf227c">3.5 The inverse matrix</h2><div style="margin-top:20px"></div>You are allowed to divide by a number provided it is <span class="math"></span><script type="math/tex">\neq 0</script>. Does it makes sense
+to divide by matrices?<div style="margin-top:20px"></div>It does, but there are some matrices that correspond to the number <span class="math"></span><script type="math/tex">0</script> that we are not allowed
+to divide by.<div style="margin-top:20px"></div><span id="env3.19"></span><a class="Exerciseno" data-count="3.19"></a><a href="#53901670-17a0-441a-aaaa-afc602e82f0d" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=53901670-17a0-441a-aaaa-afc602e82f0d class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">A, B</script> and <span class="math"></span><script type="math/tex">C</script> be <span class="math"></span><script type="math/tex">n\times n</script> matrices. Show that
+<div class="math"></div><script type="math/tex; mode=display">
+B A = I_n
+</script>
+and
+<div class="math"></div><script type="math/tex; mode=display">
+A C = I_n
+</script>
+implies that <span class="math"></span><script type="math/tex">B = C</script>.
+</div><div style="margin-top:20px"></div><div style="margin-top:20px"></div><span id="env3.20"></span><div class="definition" data-count="3.20">     
+An <span class="math"></span><script type="math/tex">n\times n</script> matrix <span class="math"></span><script type="math/tex">A</script> is called invertible, if there exists an  <span class="math"></span><script type="math/tex">n\times n</script> matrix <span class="math"></span><script type="math/tex">B</script>, such that 
+<div class="math"></div><script type="math/tex; mode=display">
+A B = B A = I_n.
+</script>
+In this case, <span class="math"></span><script type="math/tex">B</script> is called the inverse matrix of <span class="math"></span><script type="math/tex">A</script> and denoted <span class="math"></span><script type="math/tex">A^{-1}</script>.
+</div><div style="margin-top:20px"></div>
+<span id="env3.21"></span><a class="Exerciseno" data-count="3.21"></a><a href="#e1f2decd-edcc-4421-bfa5-01027454d902" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=e1f2decd-edcc-4421-bfa5-01027454d902 class = "collapse Exercise envbuttons">  
+Show that a quadratic matrix with a column or row consisting entirely of zeros cannot
+be invertible.
+</div><div style="margin-top:20px"></div><span id="env3.22"></span><a class="Exerciseno" data-count="3.22"></a><a href="#fadaf804-63a4-426f-aa6d-e9e2b0f6f9ee" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=fadaf804-63a4-426f-aa6d-e9e2b0f6f9ee class = "collapse Exercise envbuttons">  
+Suppose that
+<div class="math"></div><script type="math/tex; mode=display">
+A = \begin{pmatrix}
+  a & b\\
+  c & d
+  \end{pmatrix}
+  </script>
+  with <span class="math"></span><script type="math/tex">D = a d - b c\neq 0</script>. Prove that <span class="math"></span><script type="math/tex">A</script> is invertible with
+  <div class="math"></div><script type="math/tex; mode=display">
+  A^{-1} = \frac{1}{D}\begin{pmatrix} d & -b\\ -c & a \end{pmatrix}.
+  </script>
+</div><div style="margin-top:20px"></div><span id="env3.23"></span><a class="Exerciseno" data-count="3.23"></a><a href="#25aa58a7-423c-4907-8fde-cd5d946feff6" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=25aa58a7-423c-4907-8fde-cd5d946feff6 class = "collapse Exercise envbuttons">  
+When is a quadratic diagonal matrix invertible? Look first at the <span class="math"></span><script type="math/tex">2\times 2</script> case:
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  a & 0\\
+  0 & d
+\end{pmatrix}.
+</script>
+</div><div style="margin-top:20px"></div>The inverse matrix can be computed in <tt>numpy</tt>:<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import numpy as np
+
+A = np.matrix( [[5, 3], [3, 2]] )
+print("The inverse of")
+print(A)
+print("is")
+print(A.I)
+
+</script></div><div style="margin-top:20px"></div>The inverse matrix enters the picture when solving <span class="math"></span><script type="math/tex">n</script> linear
+equations with <span class="math"></span><script type="math/tex">n</script> unknowns:
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+a_{11}x_1 + a_{12} x_2 + \cdots + a_{1n} x_n &= b_1\\
+&\vdots\\
+a_{n1} x_1 + a_{n2} x_2 + \cdots + a_{nn} x_n &= b_n
+\end{aligned}</script>
+can be rewritten using matrix notation as 
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+a_{11} &  \cdots & a_{1 n} \\
+\vdots & \ddots & \vdots\\
+a_{n1} & \cdots & a_{n n}
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\ \vdots \\ x_n
+\end{pmatrix}
+= 
+\begin{pmatrix}
+b_1 \\ \vdots \\ b_n
+\end{pmatrix}
+</script>
+or more compactly as <span class="math"></span><script type="math/tex">A x = b</script>.<div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">A</script> is invertible, then the associative law gives the following:
+
+<div class="frameit">
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+A x &= b \iff\\
+ A^{-1}  \left(A x\right) &= A^{-1} b \iff \\
+(A^{-1} A) x &= A^{-1} b \iff\\
+I x &= A^{-1} b\iff\\
+x &= A^{-1} b.\\ 
+\end{aligned}</script>
+</div><div style="margin-top:20px"></div>The inverse matrix gives the solution to the linear equations <span class="math"></span><script type="math/tex">A x = b</script> just by one matrix multiplication!<div style="margin-top:20px"></div><span id="env3.24"></span><div class="example" data-count="3.24">     
+  The system of linear equations
+<span id="equ3.14"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&5 x &+ &3 y &= &13\\
+&3 x &+&2 y &= &8
+\end{matrix}
+\tag{3.14}</script>
+can be rewritten using matrix multiplication to
+<div class="math"></div><script type="math/tex; mode=display">
+A v = b,
+</script>
+where
+<div class="math"></div><script type="math/tex; mode=display">
+A = \begin{pmatrix}
+5& 3 \\ 
+3 & 2
+\end{pmatrix}, \qquad
+v = 
+\begin{pmatrix} x \\ y \end{pmatrix}\qquad \text{and}\qquad
+b = \begin{pmatrix} 13 \\ 8 \end{pmatrix}.
+</script> <div style="margin-top:20px"></div>Here <span class="math"></span><script type="math/tex">A</script> is invertible and
+<div class="math"></div><script type="math/tex; mode=display">
+A^{-1} = 
+\begin{pmatrix}
+2 & -3\\
+-3 & 5
+\end{pmatrix}.
+</script>
+One simple matrix multiplication
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix} x \\ y \end{pmatrix} = 
+\begin{pmatrix}
+2 & -3\\
+-3 & 5
+\end{pmatrix} \begin{pmatrix} 13 \\ 8 \end{pmatrix} = 
+\begin{pmatrix} 2 \\ 1 \end{pmatrix}
+</script>
+shows the solution we expect from  <a href=#equ3.14>(3.14)</a>.
+</div><div style="margin-top:20px"></div>The product of two invertible matrices (when this makes sense)
+is an invertible matrix. This is the content of the following result.<div style="margin-top:20px"></div>
+<span id="env3.25"></span><div class="proposition" data-count="3.25">     
+The product <span class="math"></span><script type="math/tex">A B</script> of  two invertible matrices <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script> is invertible and
+<span class="math"></span><script type="math/tex">(A B)^{-1} = B^{-1} A^{-1}</script>.
+</div>
+<a href="#7f49d71d-aa83-4387-b78a-fe249610fee2" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=7f49d71d-aa83-4387-b78a-fe249610fee2 class = "collapse Proof envbuttons">    
+We must check that 
+<div class="math"></div><script type="math/tex; mode=display">
+(B^{-1} A^{-1}) (A B) = I\qquad\text{and}\qquad A B (B^{-1} A^{-1}) = I.
+</script>
+Let us check the first condition using the associative law:
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+(B^{-1} A^{-1}) (A B) &= ((B^{-1} A^{-1}) A) B\\
+                    &= (B^{-1} (A^{-1} A)) B \\
+                    &= (B^{-1} I) B = B^{-1} (I B) = B^{-1} B = I,
+\end{aligned}</script>
+where  <span class="math"></span><script type="math/tex">I</script> denotes the identity matrix. The condition <span class="math"></span><script type="math/tex">A B (B^{-1} A^{-1}) = I</script> is verified in the
+same way.
+  </div><div style="margin-top:20px"></div><span id="env3.26"></span><a class="Exerciseno" data-count="3.26"></a><a href="#cfbf4bb0-8e8d-46c8-ad5d-215a937b6483" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=cfbf4bb0-8e8d-46c8-ad5d-215a937b6483 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>We have defined a matrix <span class="math"></span><script type="math/tex">A</script> to be invertible if there exists a matrix <span class="math"></span><script type="math/tex">B</script>, such that
+  <span class="math"></span><script type="math/tex">A B = I</script> and <span class="math"></span><script type="math/tex">B A = I</script>. Suppose that only <span class="math"></span><script type="math/tex">B A = I</script>. Can we then conclude that <span class="math"></span><script type="math/tex">A B = I</script>?<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env3.27"></span><a class="Exerciseno" data-count="3.27"></a><a href="#94532cdc-2c46-44a9-b8e1-c74e18b26720" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=94532cdc-2c46-44a9-b8e1-c74e18b26720 class = "collapse Exercise envbuttons">  
+Let
+<div class="math"></div><script type="math/tex; mode=display">
+N =
+\begin{pmatrix}
+  0 & 1 & 1 & 1\\
+  0 & 0 & 1 & 1\\
+  0 & 0 & 0 & 1\\
+  0 & 0 & 0 & 0
+\end{pmatrix}.
+</script>
+Compute the powers <span class="math"></span><script type="math/tex">N^k</script> for <span class="math"></span><script type="math/tex">k\geq 2</script> i.e., <span class="math"></span><script type="math/tex">N^2, N^3, \dots</script>. Now let
+<div class="math"></div><script type="math/tex; mode=display">
+A = I + N,
+</script>
+where <span class="math"></span><script type="math/tex">I = I_4</script>.
+Show that <span class="math"></span><script type="math/tex">A</script> is invertible, and
+<div class="math"></div><script type="math/tex; mode=display">
+A^{-1} = I - N + N^2 - N^3.
+</script>
+Compute <span class="math"></span><script type="math/tex">A^{-1}</script>.<div style="margin-top:20px"></div>Do you see a way of generalizing this computation to 
+<span class="math"></span><script type="math/tex">n\times n</script> matrices <span class="math"></span><script type="math/tex">N</script> with a property shared by the
+<span class="math"></span><script type="math/tex">4\times 4</script> matrix above?<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec3.5.1"></span><h3>3.5.1 Well, how do I find the inverse of a matrix?</h3><div style="margin-top:20px"></div>Finding the inverse of a matrix or deciding that the matrix is not invertible is
+a matter of solving systems of linear equations.<div style="margin-top:20px"></div>Given an <span class="math"></span><script type="math/tex">n\times n</script> matrix <span class="math"></span><script type="math/tex">A</script>, we need to see if there exists an <span class="math"></span><script type="math/tex">n\times n</script> matrix
+<span class="math"></span><script type="math/tex">B</script>, such that
+<span id="equ3.15"></span><div class="math"></div><script type="math/tex; mode=display">
+A B = I,
+\tag{3.15}</script>
+where <span class="math"></span><script type="math/tex">I = I_n</script> is the identity matrix of order <span class="math"></span><script type="math/tex">n</script>. We can do this by
+computing the columns of <span class="math"></span><script type="math/tex">B</script>. From the definition in <a href=#equ3.15>(3.15)</a>, the
+<span class="math"></span><script type="math/tex">j</script>-th column <span class="math"></span><script type="math/tex">B^j</script> of <span class="math"></span><script type="math/tex">B</script> must satisfy
+<span id="equ3.16"></span><div class="math"></div><script type="math/tex; mode=display">
+A B^j = I^j.
+\tag{3.16}</script>
+This follows from the definition of matrix multiplication!<div style="margin-top:20px"></div>The identity in <a href=#equ3.16>(3.16)</a> is a system of <span class="math"></span><script type="math/tex">n</script> linear equations
+in <span class="math"></span><script type="math/tex">n</script> unknowns. The unknowns are the entries in the <span class="math"></span><script type="math/tex">j</script>-th column
+<span class="math"></span><script type="math/tex">B^j</script> of the inverse matrix <span class="math"></span><script type="math/tex">A^{-1}</script> (if it exists).<div style="margin-top:20px"></div><span id="env3.28"></span><div class="example" data-count="3.28">     
+  Suppose that <span class="math"></span><script type="math/tex">A</script> is a <span class="math"></span><script type="math/tex">2\times 2</script> matrix. Then the inverse matrix
+  <span class="math"></span><script type="math/tex">B</script> (if it exists) can be computed from the systems of linear
+  equations below.
+  <div class="math"></div><script type="math/tex; mode=display">
+  A B^1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}\qquad\text{and}\qquad A B^2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}.
+  </script>
+  Writing
+  <div class="math"></div><script type="math/tex; mode=display">
+  \begin{pmatrix} x \\ y \end{pmatrix} = B^1\qquad\text{and}\qquad \begin{pmatrix} u \\ v\end{pmatrix} = B^2
+  </script>
+  for the first and second columns, the systems of linear equations can be written as
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+  &A_{11} x &+  &A_{12} y &=  &1\\
+  &A_{21} x &+  &A_{22} y &=  &0
+\end{matrix}\qquad\text{and}\qquad
+\begin{matrix}
+  &A_{11} u &+  &A_{12} v &=  &0\\
+  &A_{21} u &+  &A_{22} v &=  &1
+\end{matrix},
+</script>
+where
+<div class="math"></div><script type="math/tex; mode=display">
+B =
+\begin{pmatrix}
+  x & u\\
+  y & v
+\end{pmatrix}.
+</script>
+A concrete example along with a useful way of keeping track of the computation is presented in the video below.<div style="margin-top:20px"></div><span id="env3.29"></span><div class="video" data-count="3.29">     
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/4BX3eW4qo3g?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div><div style="margin-top:20px"></div><span id="env3.30"></span><a class="Exerciseno" data-count="3.30"></a><a href="#c4063a47-d489-42e9-86b5-07b4b528afe1" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c4063a47-d489-42e9-86b5-07b4b528afe1 class = "collapse Exercise envbuttons">  
+Compute the inverse of the matrix
+<div class="math"></div><script type="math/tex; mode=display">
+A =
+\begin{pmatrix}
+  1 & 1 & 1\\
+  1 & 2 & 1\\
+  1 & 1 & 3
+\end{pmatrix}
+</script>
+by employing the method of solving linear equations above. Explain
+the steps in your computation. You may find it useful to collect
+inspiration from the video in Example <a href=#env3.28 class="labelref">3.28</a>.
+</div><div style="margin-top:20px"></div><span id="sec3.6"></span><h2 id="edae857a-385d-4193-a2ca-daff507009d4">3.6 The transposed matrix</h2><div style="margin-top:20px"></div>The transpose of an <span class="math"></span><script type="math/tex">m\times n</script> matrix <span class="math"></span><script type="math/tex">A</script> is the <span class="math"></span><script type="math/tex">n\times m</script> matrix <span class="math"></span><script type="math/tex">A^T</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+A^T_{i j} = A_{j i}.
+</script>
+As an example, we have
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+0 & 2 & 4 & -2\\
+3 & 2 & 7 & 4
+\end{pmatrix}^T =
+\begin{pmatrix}
+0 & 3\\
+2 & 2\\
+4 & 7\\
+-2 & 4
+\end{pmatrix}.
+</script>
+Notice also that <span class="math"></span><script type="math/tex">(A^T)^T = A</script> for an arbitrary matrix <span class="math"></span><script type="math/tex">A</script>.<div style="margin-top:20px"></div><span id="env3.31"></span><div class="proposition" data-count="3.31">     
+Let <span class="math"></span><script type="math/tex">A</script> be an <span class="math"></span><script type="math/tex">m\times r</script> matrix and <span class="math"></span><script type="math/tex">B</script> an <span class="math"></span><script type="math/tex">r\times n</script> matrix. Then
+<div class="math"></div><script type="math/tex; mode=display">
+(A B)^T = B^T A^T.
+</script>
+</div>
+<a href="#6cd7dce9-f834-4943-8c6f-238b92ece0b8" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=6cd7dce9-f834-4943-8c6f-238b92ece0b8 class = "collapse Proof envbuttons">    
+  By definition <span class="math"></span><script type="math/tex">(A B)^T_{i j} = (A B)_{j i}</script>. This entry is given
+  by row-column multiplication of the <span class="math"></span><script type="math/tex">j</script>-th row i <span class="math"></span><script type="math/tex">A</script> and 
+the <span class="math"></span><script type="math/tex">i</script>-th column in  <span class="math"></span><script type="math/tex">B</script>, which is the row-column multiplication of the
+<span class="math"></span><script type="math/tex">i</script>-th row  in <span class="math"></span><script type="math/tex">B^T</script> and the <span class="math"></span><script type="math/tex">j</script>-th column  in <span class="math"></span><script type="math/tex">A^T</script>.
+  </div><div style="margin-top:20px"></div><span id="env3.32"></span><a class="Exerciseno" data-count="3.32"></a><a href="#4b034e87-99d9-43c6-b262-263f44f43bf2" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4b034e87-99d9-43c6-b262-263f44f43bf2 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">A</script> be a quadratic matrix. Prove that <span class="math"></span><script type="math/tex">A</script> is invertible if and only if
+<span class="math"></span><script type="math/tex">A^T</script> is invertible.
+</div><div style="margin-top:20px"></div><span id="env3.33"></span><a class="Exerciseno" data-count="3.33"></a><a href="#e3bd69a9-1589-4480-adce-d3398374481f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=e3bd69a9-1589-4480-adce-d3398374481f class = "collapse Exercise envbuttons">   In the sage window below, you are supposed to experiment a
+bit by entering an arbitrary matrix <span class="math"></span><script type="math/tex">B</script> and studying the quadratic
+matrix <span class="math"></span><script type="math/tex">B B^T</script>. Is there anything special about this product?  Press
+the <em>Further explanation</em> button below the sage window to display
+the rest of the exercise after(!) you have completed your
+experimentation.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import numpy as np
+
+B = np.matrix( [[1, 2, 3], [4, 5, 6], [7, 8, 9]] )
+print("B is ")
+print(B)
+print("B times the transpose of B is ")
+print(B*np.transpose(B))
+</script></div><div style="margin-top:20px"></div><a href="#41060d69-7080-432d-9f6b-f13dac9893b8" class ="btn btn-default" data-toggle="collapse">Further explanation</a><div id=41060d69-7080-432d-9f6b-f13dac9893b8 class="collapse">
+  A quadratic matrix <span class="math"></span><script type="math/tex">A</script> is called symmetric if <span class="math"></span><script type="math/tex">A = A^T</script>. Prove that
+<div class="math"></div><script type="math/tex; mode=display">
+B B^T
+</script>
+is a symmetric matrix, where <span class="math"></span><script type="math/tex">B</script> is an arbitrary matrix.
+</div>
+</div><div style="margin-top:20px"></div><span id="sec3.7"></span><h2 id="839cd3f2-52bf-43af-8af7-daa31bb1c266">3.7 Symmetric matrices</h2><div style="margin-top:20px"></div>A (quadratic) matrix <span class="math"></span><script type="math/tex">A</script> is called symmetric if <span class="math"></span><script type="math/tex">A = A^T</script>. Visually,
+this means that <span class="math"></span><script type="math/tex">A</script> is symmetric around the diagonal like the
+<span class="math"></span><script type="math/tex">3\times 3</script> matrix
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  1 & \color{blue}{2} & 3\\
+  \color{blue}{2} & 5 & 4\\
+  3 & 4 & 6
+\end{pmatrix},
+</script>
+but not like the <span class="math"></span><script type="math/tex">3\times 3</script> matrix
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  1 & \color{blue}{2} & 3\\
+  \color{red}{4} & 5 & 6\\
+  7 & 8 & 9
+\end{pmatrix}.
+</script><div style="margin-top:20px"></div><span id="env3.34"></span><a class="Exerciseno" data-count="3.34"></a><a href="#763205ad-a58e-4ce4-9f9a-a4bd21446b0b" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=763205ad-a58e-4ce4-9f9a-a4bd21446b0b class = "collapse Exercise envbuttons">  
+Show that
+<div class="math"></div><script type="math/tex; mode=display">
+B^T A B
+</script>
+is a symmetric matrix, when <span class="math"></span><script type="math/tex">A</script> is a symmetric matrix and
+<span class="math"></span><script type="math/tex">B</script> is an arbitrary matrix. Both matrices are assumed
+quadratic of the same dimensions.
+</div><div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">A</script> is a symmetric <span class="math"></span><script type="math/tex">n\times n</script> matrix, we define the
+function <span class="math"></span><script type="math/tex">f_A: \mathbb{R}^n\rightarrow \mathbb{R}</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+f_A(v) = v^T A v.
+</script><div style="margin-top:20px"></div>This definition is rather compact. You are encouraged to see the video below
+for a specific example, when <span class="math"></span><script type="math/tex">A</script> is a <span class="math"></span><script type="math/tex">2\times 2</script> matrix.<div style="margin-top:20px"></div><span id="env3.35"></span><div class="video" data-count="3.35">     
+  <iframe width="100%" height="360" src="https://www.youtube.com/embed/YNwrLMJ8byM?rel=0" frameborder="0" allowfullscreen></iframe>
+</div><div style="margin-top:20px"></div>Inside the symmetric matrices we find two very important sub-classes
+of matrices: the positive definite and the positive semi-definite
+matrices. They correspond to positive and non-negative
+real numbers.<div style="margin-top:20px"></div><span id="sec3.7.1"></span><h3>3.7.1 Positive definite matrices</h3><div style="margin-top:20px"></div>A symmetric matrix <span class="math"></span><script type="math/tex">A</script> is called <em>positive definite</em> if
+<div class="math"></div><script type="math/tex; mode=display">
+f_A(v) > 0
+</script>
+for every <span class="math"></span><script type="math/tex">v\in \mathbb{R}^n\setminus\{0\}</script>.<div style="margin-top:20px"></div><span id="env3.36"></span><a class="Exerciseno" data-count="3.36"></a><a href="#0e0b0819-fcc6-432f-a46e-be15d636679d" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=0e0b0819-fcc6-432f-a46e-be15d636679d class = "collapse Exercise envbuttons">  
+Give examples of (non-zero) <span class="math"></span><script type="math/tex">1\times 1</script> and <span class="math"></span><script type="math/tex">2\times 2</script> matrices that are
+positive definite and ones the fail to be positive
+definite.<div style="margin-top:20px"></div>When is a <span class="math"></span><script type="math/tex">2\times 2</script> diagonal matrix positive definite?
+</div><div style="margin-top:20px"></div><span id="env3.37"></span><a class="Exerciseno" data-count="3.37"></a><a href="#9d6e2e95-a060-4aa7-9fd7-09caf57c9c57" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=9d6e2e95-a060-4aa7-9fd7-09caf57c9c57 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">A</script> be a symmetric <span class="math"></span><script type="math/tex">n\times n</script> matrix. Show that
+<span class="math"></span><script type="math/tex">A</script> is not positive definite if <span class="math"></span><script type="math/tex">A_{11} < 0</script>.
+</div><div style="margin-top:20px"></div><span id="sec3.7.2"></span><h3>3.7.2 Positive semi-definite matrices</h3><div style="margin-top:20px"></div>A symmetric matrix <span class="math"></span><script type="math/tex">A</script> is called <em>positive semi-definite</em> if
+<div class="math"></div><script type="math/tex; mode=display">
+f_A(v) \geq 0
+</script>
+for every <span class="math"></span><script type="math/tex">v\in \mathbb{R}^n</script>.<div style="margin-top:20px"></div>From the definitions it follows that a positive definite matrix is
+positive semi-definite.<div style="margin-top:20px"></div><span id="env3.38"></span><a class="Exerciseno" data-count="3.38"></a><a href="#ba3bbf1e-ae79-41d2-9418-fa4f56c6893a" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ba3bbf1e-ae79-41d2-9418-fa4f56c6893a class = "collapse Exercise envbuttons">  
+Give an example of a non-zero matrix that is positive semi-definite,
+but not positive definite.<div style="margin-top:20px"></div>When is a <span class="math"></span><script type="math/tex">2\times 2</script> diagonal matrix positive semi-definite?
+</div><div style="margin-top:20px"></div><span id="sec3.7.3"></span><h3>3.7.3 Symmetric reductions</h3><div style="margin-top:20px"></div>As you probably have noticed, it is rather straightforward to
+see when a diagonal matrix is positive (semi)definite. For a
+general symmetric matrix, one needs to transform to
+an equivalent diagonal matrix. This is done
+using the following result.<div style="margin-top:20px"></div><span id="env3.39"></span><div class="proposition" data-count="3.39">     
+  Let <span class="math"></span><script type="math/tex">A</script> be a symmetric <span class="math"></span><script type="math/tex">n\times n</script> matrix and <span class="math"></span><script type="math/tex">B</script> an
+  invertible <span class="math"></span><script type="math/tex">n\times n</script> matrix. Then <span class="math"></span><script type="math/tex">A</script> is
+  positive (semi) definite if and only if
+  <div class="math"></div><script type="math/tex; mode=display">
+  B^T A B
+  </script>
+  is positive (semi) definite.
+</div>
+  <a href="#79b84bed-33ab-42ba-b1a0-48fc65197f72" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=79b84bed-33ab-42ba-b1a0-48fc65197f72 class = "collapse Proof envbuttons">    
+    Every vector <span class="math"></span><script type="math/tex">v\in \mathbb{R}^n</script> is equal to <span class="math"></span><script type="math/tex">B u</script> for a unique <span class="math"></span><script type="math/tex">u\in \mathbb{R}^n</script>,
+    since <span class="math"></span><script type="math/tex">B</script> is invertible. So we get
+    <div class="math"></div><script type="math/tex; mode=display">
+    v^T A v = (B u)^T A (B u) = u^T (B^T A B) u.
+    </script>
+    This computation shows that <span class="math"></span><script type="math/tex">A</script> is positive (semi) definite if
+    <span class="math"></span><script type="math/tex">B^T A B</script> is positive semi-definite. The same
+    reasoning with <span class="math"></span><script type="math/tex">u = B^{-1} v</script> shows that <span class="math"></span><script type="math/tex">B^T A B</script> is
+    positive (semi) definite if <span class="math"></span><script type="math/tex">A</script> is positive (semi) definite.<div style="margin-top:20px"></div>Notice that it is important that <span class="math"></span><script type="math/tex">B v = 0</script> only happens
+    when <span class="math"></span><script type="math/tex">v=0</script>.
+    </div><div style="margin-top:20px"></div><span id="env3.40"></span><a class="Exerciseno" data-count="3.40"></a><a href="#3675aeb1-98c4-4b6a-a880-7df8b572e8c6" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=3675aeb1-98c4-4b6a-a880-7df8b572e8c6 class = "collapse Exercise envbuttons">  
+Let
+<div class="math"></div><script type="math/tex; mode=display">
+D =
+\begin{pmatrix}
+  d & 0\\
+  0 & e
+\end{pmatrix}
+</script>
+be a diagonal matrix. What conditions must the diagonal
+entries <span class="math"></span><script type="math/tex">d</script> and <span class="math"></span><script type="math/tex">e</script> satisfy in order for
+<span class="math"></span><script type="math/tex">D</script> to be positive definite?<div style="margin-top:20px"></div>Let
+<div class="math"></div><script type="math/tex; mode=display">
+A =
+\begin{pmatrix}
+  a & c\\
+  c & b
+\end{pmatrix}
+</script>
+denote a symmetric <span class="math"></span><script type="math/tex">2\times 2</script> matrix, where <span class="math"></span><script type="math/tex">a\neq 0</script>. Let
+<div class="math"></div><script type="math/tex; mode=display">
+B =
+\begin{pmatrix}
+  1 & -\frac{c}{a}\\
+  0 & 1
+\end{pmatrix}.
+</script>
+Show that <span class="math"></span><script type="math/tex">B</script> is invertible and compute
+<div class="math"></div><script type="math/tex; mode=display">
+B^T A B.
+</script>
+Use this to show that <span class="math"></span><script type="math/tex">A</script> is positive definite if and only if
+<span class="math"></span><script type="math/tex">a>0</script> and <span class="math"></span><script type="math/tex">a b - c^2 > 0</script>.<div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> be the function defined by
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = 2 x^2 + 3 y^2 + 4 x y.
+</script>
+Show that <span class="math"></span><script type="math/tex">f(x, y)\geq 0</script> for every <span class="math"></span><script type="math/tex">x, y\in \mathbb{R}</script>.
+</div><div style="margin-top:20px"></div></div></body>

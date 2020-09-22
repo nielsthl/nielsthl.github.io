@@ -1,0 +1,9 @@
+chapterno, @1@
+chapter, @The language of mathematics@, 7a977ed6-1bf8-499c-b7fc-506c35756c5e
+section, @Computer algebra@, ff7143e4-cd82-4d70-9ed5-2479680bf96a
+section, @Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\\neq</script>@, 39de153f-aa5e-4b65-9ed2-d14e6d319376
+section, @Sets@, 6d75d6a4-df56-4418-9e4e-6a6a4b686ea0
+section, @Ordering numbers@, 6840d0bf-1199-4802-81ce-b10388939d82
+section, @Propositional logic@, 890c2aa3-4cb2-43fc-aec7-c38196270893
+section, @What is a mathematical proof?@, 14bd838c-3f52-4f1e-b242-0d437c9222e2
+section, @The concept of a function@, 1a4701cf-eb99-4da4-86d1-3072db2fdc87

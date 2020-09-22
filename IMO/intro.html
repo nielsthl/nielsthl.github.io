@@ -1,0 +1,1238 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  languages : ["sage", "python"],
+  hide : ["permalink"] 
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#7a977ed6-1bf8-499c-b7fc-506c35756c5e"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#ff7143e4-cd82-4d70-9ed5-2479680bf96a">1.1 Computer algebra</a></li><li><a href="intro.html#39de153f-aa5e-4b65-9ed2-d14e6d319376">1.2 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#6d75d6a4-df56-4418-9e4e-6a6a4b686ea0">1.3 Sets</a></li><li><a href="intro.html#6840d0bf-1199-4802-81ce-b10388939d82">1.4 Ordering numbers</a></li><li><a href="intro.html#890c2aa3-4cb2-43fc-aec7-c38196270893">1.5 Propositional logic</a></li><li><a href="intro.html#14bd838c-3f52-4f1e-b242-0d437c9222e2">1.6 What is a mathematical proof?</a></li><li><a href="intro.html#1a4701cf-eb99-4da4-86d1-3072db2fdc87">1.7 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#6080b7d7-9dae-4421-bf75-dc2ee04432d9"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#6a7dde4b-d4b2-4e24-85f5-fa85cdd246c8">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#5d725c6c-5ab6-404c-be38-b7941c0c131f">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#f72100cb-475f-4e9c-9d80-d5bf44184aaf">2.3 Gauss elimination</a></li><li><a href="lineqs.html#c634b806-2ed8-4e90-bbc0-74fd5d06f66c">2.4 Polynomials</a></li><li><a href="lineqs.html#5961c502-8b65-46d3-a0c8-7a7bc5a0d038">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#ff2faea1-ff75-429b-9359-c3b0f606fcb3">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#d38dc3a6-f5ad-4878-84ab-288033cc61d1">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#ac78de01-faf4-4003-a06d-93bd0a049be0"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#4852f3d9-8469-484e-b7ad-fd763bb22be8">3.1 Matrices</a></li><li><a href="matrices.html#ed992999-6b80-44f7-9d04-5d6a54a786eb">3.2 Linear maps</a></li><li><a href="matrices.html#417e6feb-e87a-4e49-b109-69c0efc11f20">3.3 Matrix multiplication</a></li><li><a href="matrices.html#f1ee71a3-f246-4de5-a059-0857e89b250b">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#3ba68277-54c2-4417-8873-580221bf227c">3.5 The inverse matrix</a></li><li><a href="matrices.html#edae857a-385d-4193-a2ca-daff507009d4">3.6 The transposed matrix</a></li><li><a href="matrices.html#839cd3f2-52bf-43af-8af7-daa31bb1c266">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#60e76dc3-eb30-41ba-8542-172ddc1bc2a7"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#a9f6c300-8b17-4ff9-9584-14821bbe7c43">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#14942bc9-a19b-4efd-8a3a-12cf8cb0fe43">4.2 General definition</a></li><li><a href="whatisopt.html#29d4e276-f39d-4a07-a214-417d5dba2e09">4.3 Convex optimization</a></li><li><a href="whatisopt.html#20a70385-47c1-4b71-85b2-4baa80cba38d">4.4 Linear optimization</a></li><li><a href="whatisopt.html#63315831-1379-4a83-bc56-6b8b8eef2150">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#0ab99069-0424-4ec8-a0ba-5a8067629c6e">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#15dff35d-8cda-4b25-8751-6a59c8bc55a3"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#2e88a7de-ca93-46a4-8202-aa3c0add0f69">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#367157fb-a772-41c1-be77-fdd8d3e0cc1f">5.2 Higher dimensions</a></li><li><a href="euclidean.html#65523d91-2925-4c74-91f9-a5258c9f1af3">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#2bec1a82-9ba3-435d-bb8a-cea237b3fcd3">5.4 Sequences and limits</a></li><li><a href="euclidean.html#1a1ad702-0af7-45ef-abe2-b212777e81d9">5.5 Continuous functions</a></li><li><a href="euclidean.html#bae8f95a-2d6c-495a-a4d0-10f958e2ca12">5.6 Special subsets</a></li><li><a href="euclidean.html#cbd12a77-2916-4aca-aa99-246e17727e7c">5.7 The perceptron algorithm</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="7a977ed6-1bf8-499c-b7fc-506c35756c5e">1<span style="float:right;">The language of mathematics</span></h1><div style="margin-top:20px"></div>We need to introduce some formal notation to be able to talk clearly about mathematics and also in a reasonable way 
+formulate mathematical models of the real world. In modern mathematics the 
+concept of a set is crucial. It is <a href="https://en.wikipedia.org/wiki/Set_theory#Axiomatic_set_theory" target="_blank">a bit tricky</a> to define this precisely.
+We will go on and define the basic concepts of what is called 
+<a href="https://en.wikipedia.org/wiki/Naive_set_theory" target="_blank">naive set theory</a>.<div style="margin-top:20px"></div>Mathematics is hard and there are a lot of relevant and good questions
+to ask. For example, I do not agree that
+<a href="https://twitter.com/aIeturner/status/1298372968838508546" target="_blank"><div class="centerimg"><img src="img/tweetmath.png" width="50%"></div></a>
+is <em>the dumbest video ive ever seen</em>. In learning mathematics,
+there should be no place for arrogance and putting other people down.<div style="margin-top:20px"></div><a href="#ba8c94bd-32b2-44c9-929c-ce56e8781821" class ="btn btn-default" data-toggle="collapse">Emergency access</a><div id=ba8c94bd-32b2-44c9-929c-ce56e8781821 class="collapse">
+For some reason the Twitter account of Mohammed El Mocro (in the link above) has been suspended. Here is a salvaged copy of the original TikTok video that went viral.<div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/SqTtWIiS42o?rel=0" frameborder="0" allowfullscreen></iframe>
+<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec1.1"></span><h2 id="ff7143e4-cd82-4d70-9ed5-2479680bf96a">1.1 Computer algebra</h2><div style="margin-top:20px"></div>We will use the computer algebra system
+<a href="http://www.sagemath.org/" target="_blank">Sage</a> in exploring and experimenting
+with mathematics. This means that you will have to write small
+commands and code snippets. Sage is built on top of the very wide
+spread language
+<a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a>
+and you can in fact enter <span class="footnote">Python code<span class="footnotetext">One may also enter code in several other languages, but I have so far only set the interface up for Sage and Python</span></span> in
+the Sage input windows in this text. Below is an example of a basic
+graphics command in Sage.  Push the Compute button to evaluate.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+plot(sin(x) + cos(2*x), (x, 0, 2*pi))
+</script></div><div style="margin-top:20px"></div><span id="env1.1"></span><a class="Exerciseno" data-count="1.1"></a><a href="#5e104af3-b2b1-49db-bf7f-a6cf6f34cf0f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=5e104af3-b2b1-49db-bf7f-a6cf6f34cf0f class = "collapse Exercise envbuttons">  
+Did you notice that you can edit and enter new commands in the Sage window?
+Do the following problems using Sage based on the <a href="http://doc.sagemath.org/html/en/tutorial/tour.html" target="_blank">Sage guided tour</a>. <div style="margin-top:20px"></div><ol class="lowerroman"><li> Consider <span class="math"></span><script type="math/tex">f(x) = x \sin(1/x)</script>. Plot the graph of <span class="math"></span><script type="math/tex">f</script> from <span class="math"></span><script type="math/tex">0</script> to <span class="math"></span><script type="math/tex">0.1</script>. Computing <span class="math"></span><script type="math/tex">f(0)</script> does not make sense. Do you
+  see a way of assigning a natural value to <span class="math"></span><script type="math/tex">f(0)</script> using the graph?
+</li><li> Find an approximate solution with four decimals to the equation <span class="math"></span><script type="math/tex">\cos(x) = x</script>.<div style="margin-top:20px"></div><a href="#95fe5320-54ec-4425-84b9-52f4ff8254d4" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=95fe5320-54ec-4425-84b9-52f4ff8254d4 class = "collapse Hint envbuttons">    
+    This is an example of an equation, that can only be solved numerically.
+    Try first plotting the graph of <span class="math"></span><script type="math/tex">f(x) = x - \cos(x)</script> from <span class="math"></span><script type="math/tex">0</script> to <span class="math"></span><script type="math/tex">1</script>. Then use a
+    suitable function from the Sage guide.
+      </div>
+</li><li> Compute <span class="math"></span><script type="math/tex">\pi</script> with <span class="math"></span><script type="math/tex">100</script> decimals.
+</li></ol><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>
+
+
+<div style="margin-top:20px"></div><span id="sec1.2"></span><h2 id="39de153f-aa5e-4b65-9ed2-d14e6d319376">1.2 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></h2><div style="margin-top:20px"></div>Mathematics can be broadly viewed as handling objects precisely
+according to a specific system of rules. The first element
+of precision is in distinguishing the objects and deciding when
+they are the same. This calls for notation. If two objects
+<span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script> are the same, we write <span class="math"></span><script type="math/tex">x = y</script>. If they are different
+we write <span class="math"></span><script type="math/tex">x\neq y</script>.<div style="margin-top:20px"></div>You may laugh here, but identifying objects is really one of the fundamental tasks of mathematics.
+It is not always that easy. Even though objects appear different they are the same as
+in, for example
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{105}{189} = \frac{35}{63}\qquad\text{and}\qquad \sin\left(\frac{\pi}{2}\right) = 1.
+</script>
+The first example above is an identity of fractions (rational numbers). The second is
+an identity, which calls for knowledge of the sine function and real numbers. Each of these
+identities calls for some rather advanced mathematics.<div style="margin-top:20px"></div><span id="env1.2"></span><a class="Exerciseno" data-count="1.2"></a><a href="#59cb43cf-82a6-454e-977d-5ce2b001a025" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=59cb43cf-82a6-454e-977d-5ce2b001a025 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+var('a b')
+e = (a+b)^2
+e.expand()
+</script></div><div style="margin-top:20px"></div>Use the Sage window above to reason 
+about equality in the quiz below. In each case describe the objects i.e.,
+are they numbers, symbols, etc.? Also, please check your computations
+by hand with the old fashioned paper and pencil, especially <span class="math"></span><script type="math/tex">(a+b)(a-b)</script>.<div style="margin-top:20px"></div><span id="{labelname}"></span><div id="quiz1" style="width:100%;"><div class="row quizquestion">
+Click on the right equalities below.
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="T">
+<div class="math"></div><script type="math/tex; mode=display">a + b - 2 b = a - b</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="math"></div><script type="math/tex; mode=display">(a+b)^2 = a^2 + b^2</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="math"></div><script type="math/tex; mode=display">(a + b)(a - b) = a^2 - b^2</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="math"></div><script type="math/tex; mode=display">(a + b)^2 = a^2 + 2 a b +  b^2</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="math"></div><script type="math/tex; mode=display">(a+b)^3 = a^3 + 2 a^2 b + 2 a b^2 + b^3</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="math"></div><script type="math/tex; mode=display">\frac{3}{8} = \frac{5}{13}</script> 
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="math"></div><script type="math/tex; mode=display">
+\pi = \frac{22}{7}
+</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="math"></div><script type="math/tex; mode=display">
+\cos^2(\pi) + \sin^2(\pi) = 1
+</script>
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div><div style="margin-top:20px"></div><span id="env1.3"></span><a class="Exerciseno" data-count="1.3"></a><a href="#1e53dde4-cef4-469a-941a-d2d4abd0eda2" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=1e53dde4-cef4-469a-941a-d2d4abd0eda2 class = "collapse Exercise envbuttons">  
+You know that <span class="math"></span><script type="math/tex">(a+ b)^2 = a^2 + 2 a b + b^2</script>. Use Sage to find a similar identity
+for <span class="math"></span><script type="math/tex">(a + b)^4</script>.<div style="margin-top:20px"></div><a href="#41170833-3bc5-4f8f-bdc6-a26bde0fce83" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=41170833-3bc5-4f8f-bdc6-a26bde0fce83 class = "collapse Hint envbuttons">    
+  Go back and look at (the beginning of) Exercise <a href=#env1.2 class="labelref">1.2</a>.
+  </div>
+</div><div style="margin-top:20px"></div><span id="sec1.3"></span><h2 id="6d75d6a4-df56-4418-9e4e-6a6a4b686ea0">1.3 Sets</h2><div style="margin-top:20px"></div>A set is (informally) a collection of distinct objects or <em>elements</em>. <div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+  \text{Two sets are equal if they contain the same elements.}
+</script></div><div style="margin-top:20px"></div>An example of a set could be 
+the set <span class="math"></span><script type="math/tex">\{1,2,3\}</script> of natural numbers between <span class="math"></span><script type="math/tex">0</script> and <span class="math"></span><script type="math/tex">4</script>. Notice that we use the symbol
+"<span class="math"></span><script type="math/tex">\{</script>" to start the listing of elements in a set and the symbol "<span class="math"></span><script type="math/tex">\}</script>" to denote the end of the listing.
+Notice also that (by our definition of equality between sets), the order of the elements in the listing does not matter i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+\{1, 2, 3\} = \{2, 3, 1\}.
+</script>
+We are also not allowing duplicates like for
+example in the listing <span class="math"></span><script type="math/tex">\{1, 2, 2, 3, 3, 3\}</script> (such a thing is called a <a href="https://en.m.wikipedia.org/wiki/Multiset" target="_blank">multiset</a>).<div style="margin-top:20px"></div>An example of a set not involving numbers could be the set of letters 
+<div class="math"></div><script type="math/tex; mode=display">
+S=\{A, n, e, x, a, m, p, l, c, o, u, d, b, t, h, s, r, i\}
+</script> 
+used in this sentence. The number of elements in a set <span class="math"></span><script type="math/tex">S</script> is called the <em>cardinality</em> of the set.
+We will denote it by <span class="math"></span><script type="math/tex">|S|</script>.<div style="margin-top:20px"></div><span id="env1.4"></span><a class="Exerciseno" data-count="1.4"></a><a href="#4f8a0410-097d-468e-b60e-1031aecca579" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4f8a0410-097d-468e-b60e-1031aecca579 class = "collapse Exercise envbuttons">  
+Give a precise reason as to why the two sets <span class="math"></span><script type="math/tex">\{1, 2, 3\}</script> and <span class="math"></span><script type="math/tex">\{1, 2, 4\}</script> are not equal.
+Is it possible for a set with <span class="math"></span><script type="math/tex">5</script> elements to be equal to a set with <span class="math"></span><script type="math/tex">7</script> elements?
+</div><div style="margin-top:20px"></div>Sets may be explored using Sage. This is illustrated in the Sage snippet below.<div style="margin-top:20px"></div><p><pre>
+X = Set([1, 2, 3])
+Y = Set([2, 3, 1])
+print("X=Y is ", X==Y)
+
+S = Set(['A','n','e','x','a','m','p','l','c','o','u','d','b','t','h','s','r','i'])
+print("S = ", S) 
+print("The number of elements in S is |S|=", S.cardinality())
+</pre></p><div style="margin-top:20px"></div><span id="sec1.3.1"></span><h3>1.3.1 The empty set</h3><div style="margin-top:20px"></div>There is a unique set containing no or zero elements. This set is called the empty set and
+is denoted <span class="math"></span><script type="math/tex">\emptyset</script> i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+\emptyset = \{\}\qquad\text{and}\qquad |\emptyset| = 0.
+</script>
+The empty set and its cardinality may be explored using the Sage code below.<div style="margin-top:20px"></div><p><pre>
+emptyset = Set([])
+print(emptyset.cardinality())
+</pre></p><div style="margin-top:20px"></div><span id="sec1.3.2"></span><h3>1.3.2 Sets of numbers</h3><div style="margin-top:20px"></div>A set could also be the natural numbers (yes, I want <span class="math"></span><script type="math/tex">0</script> as a natural number:
+<span class="math"></span><script type="math/tex">0</script> is very natural, although it came late <a href="https://en.wikipedia.org/wiki/0" target="_blank">historically</a>)
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{N} = \{0, 1, 2, 3, \dots\},
+</script>
+or the set of integers
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots\}.
+</script>
+These sets are called infinite, since they contain infinitely many elements. Even though
+the natural numbers seem as easy as one, two three, they contain wonderful and deep
+mathematical mysteries, such as the nature and distribution of the prime numbers
+<span class="math"></span><script type="math/tex">2, 3, 5, 7, 11, 13, 17, \dots</script>. Also please respect, that the <a href="https://en.m.wikipedia.org/wiki/Negative_number" target="_blank">negative numbers</a> like
+<span class="math"></span><script type="math/tex">-3, -1\in \mathbb{Z}</script> have caused confusion for centuries.<div style="margin-top:20px"></div>We also have
+the set <span class="math"></span><script type="math/tex">\mathbb{Q}</script> of rational numbers (fractions) and the set
+<span class="math"></span><script type="math/tex">\mathbb{R}</script> of real numbers. The real numbers
+contains all the possible numbers that we encounter in 
+this course.<div style="margin-top:20px"></div>We will not define the
+arithmetic operations (like addition and multiplication) on <span class="math"></span><script type="math/tex">\mathbb{Z}, \mathbb{Q}</script>
+and <span class="math"></span><script type="math/tex">\mathbb{R}</script> 
+formally. I will assume that you know how to add and multiply fractions,
+and that you <b>do not make mistakes like</b>
+<div class="math"></div><script type="math/tex; mode=display">
+\color{red}
+\frac{1}{2} + \frac{2}{3} = \frac{1+2}{2+3}=\frac{3}{5}.
+</script>
+Similarly, I will assume that you know that a rational number stays the
+same, when the numerator and denominator is multiplied by the same non-zero 
+integer. For example,
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{1}{2} = \frac{3}{6}\qquad\text{and}\qquad \frac{2}{3} = \frac{4}{6}.
+</script>
+In fact, 
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{1}{2} + \frac{2}{3} = \frac{3}{6} + \frac{4}{6} = \frac{3 + 4}{6} = \frac{7}{6}.
+</script>
+The computation above says that it is straightforward to add pizza slices of the
+same size (one sixth), but that you need to think a bit when adding one half pizza slice and
+two pizza slices of size one third.<div style="margin-top:20px"></div><span id="env1.5"></span><a class="Quizexerciseno" data-count="1.5"></a><a href="#fed4330f-361f-42bc-a5de-dd9958386279" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=fed4330f-361f-42bc-a5de-dd9958386279 class = "collapse Quizexercise envbuttons">  
+  <span id="{labelname}"></span><div id="quiz2" style="width:100%;"><div class="row quizquestion">
+Click on the right equalities below. Do not use Sage (or any computer)!
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{1}{5} + \frac{1}{7} = \frac{1}{35}
+</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{3}{7} + \frac{4}{7} = 1
+</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{2}{3} + \frac{3}{2} - 2 = \frac{1}{6}
+</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{1}{3} + 2 = \frac{8}{3}.
+</script>
+</div></div></div><button id="quizbutton2" class = "btn btn-default">Check</button><script>$("#quizbutton2").click(function(){quizshowanswers(quiz2, quizbutton2);});</script>
+</div><div style="margin-top:20px"></div><span id="sec1.3.3"></span><h3>1.3.3 The symbols <span class="math"></span><script type="math/tex">\in</script> and <span class="math"></span><script type="math/tex">\notin</script></h3><div style="margin-top:20px"></div>The symbol <span class="math"></span><script type="math/tex">\in</script> is ubiquitous in set theory (and mathematics). 
+It means <em>belongs to</em> or <em>is an element of</em> as in 
+<span class="math"></span><script type="math/tex">x\in A</script>, where <span class="math"></span><script type="math/tex">x</script> is an element and <span class="math"></span><script type="math/tex">A</script> is a set. The symbol
+<span class="math"></span><script type="math/tex">\notin</script> means is <b>not</b> an element of as in
+<span class="math"></span><script type="math/tex">x\notin A</script> meaning <span class="math"></span><script type="math/tex">x</script> is not an element of <span class="math"></span><script type="math/tex">A</script>.<div style="margin-top:20px"></div><span id="env1.6"></span><a class="Quizexerciseno" data-count="1.6"></a><a href="#cbe0df36-d78f-4660-a134-e8f5898f982e" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=cbe0df36-d78f-4660-a134-e8f5898f982e class = "collapse Quizexercise envbuttons">  
+<div id="quiz3" style="width:100%;"><div class="row quizquestion">
+  <div class="orderquizanswer empty inlineblock" id="dq3_right1" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)"></div><span class="math"></span><script type="math/tex">\in</script><div class="orderquizanswer empty inlineblock" id="dq3_right2" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)"></div>, but <div class="orderquizanswer empty inlineblock" id="dq3_right3" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)"></div><span class="math"></span><script type="math/tex">\not\in</script><div class="orderquizanswer empty inlineblock" id="dq3_right4" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)"></div>. This exercise actually has <div class="orderquizanswer empty inlineblock" id="dq3_right5" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)"></div> possible correct solutions
+if <span class="math"></span><script type="math/tex">\{1, 2, 3\}</script> is in the second empty box and <span class="math"></span><script type="math/tex">\{4, 5, 6\}</script> in the fourth empty box.
+  </div><div class="row quizanswers"><div class="orderquizanswer inlineblock" id="dq3_left1" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)">
+  <span class="math"></span><script type="math/tex">\{1, 2, 3\}</script>
+  </div><div class="orderquizanswer inlineblock" id="dq3_left2" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)">
+  <span class="math"></span><script type="math/tex">\{4, 5, 6\}</script>
+  </div><div class="orderquizanswer inlineblock" id="dq3_left3" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)">
+  <span class="math"></span><script type="math/tex">0</script>
+  </div><div class="orderquizanswer inlineblock" id="dq3_left4" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)">
+  <span class="math"></span><script type="math/tex">1</script>
+  </div><div class="orderquizanswer inlineblock" id="dq3_left5" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)">
+  <span class="math"></span><script type="math/tex">3</script>
+  </div><div class="orderquizanswer inlineblock" id="dq3_left6" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)">
+  <span class="math"></span><script type="math/tex">6</script>
+  </div><div class="orderquizanswer inlineblock" id="dq3_left7" draggable="true" ondragstart="orderQuizStartDrag(3, event)" ondragover="orderQuizAllowDrop(3, event)" ondrop="orderQuizDrop(3, event)">
+  <span class="math"></span><script type="math/tex">7</script><div style="margin-top:20px"></div></div></div><div class="row"><span class="orderquizresult" id="dq3_result"><span class="orderquizfeedback hidden" datav="(is 41326)"><b class="correct"></b>  
+  <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 41526)"><b class="correct"></b>  
+  <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 41726)"><b class="correct"></b>  
+  <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 51326)"><b class="correct"></b>  
+  <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 51426)"><b class="correct"></b>  
+  <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 51726)"><b class="correct"></b>  
+  <span style="color:green;"><b>Correct!</b></span><div style="margin-top:20px"></div></span><span class="orderquizfeedback hidden" datav="default"><b class="wrong"></b> 
+  <span style="color:red;"><b>Nope. Try again!</b></span>
+</span></span></div></div>
+</div><div style="margin-top:20px"></div>Belongs to (<span class="math"></span><script type="math/tex">\in</script>) is straightforward in Sage:<div style="margin-top:20px"></div><p><pre>
+S = Set([1,2,3])
+print("S = ", S)
+print("The element 1 is in S: ", 1 in S)
+print("The element 4 is in S: ", 4 in S)
+</pre></p><div style="margin-top:20px"></div>
+<div style="margin-top:20px"></div>
+
+
+<div style="margin-top:20px"></div><span id="sec1.3.4"></span><h3>1.3.4 Subsets and the symbols <span class="math"></span><script type="math/tex">\subseteq</script> and <span class="math"></span><script type="math/tex">\not\subseteq</script></h3><div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script> are sets, then <span class="math"></span><script type="math/tex">A\subseteq B</script> means that
+every element of <span class="math"></span><script type="math/tex">A</script> is also an element of <span class="math"></span><script type="math/tex">B</script>. In this case we say
+that <em><span class="math"></span><script type="math/tex">A</script> is a subset of <span class="math"></span><script type="math/tex">B</script></em>.<div style="margin-top:20px"></div>We have
+for example that 
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{N} \subseteq \mathbb{Z}.
+</script>
+What does <span class="math"></span><script type="math/tex">A\not\subseteq B</script> mean? Here we have to be a little
+careful. We want this notation to mean that <span class="math"></span><script type="math/tex">A</script> is <b>not</b> a
+subset of <span class="math"></span><script type="math/tex">B</script>. In order for <span class="math"></span><script type="math/tex">A\subseteq B</script> to be
+false, there must exist <span class="math"></span><script type="math/tex">x\in A</script>, such that <span class="math"></span><script type="math/tex">x\notin B</script>. This
+is the meaning of <span class="math"></span><script type="math/tex">A\not\subseteq B</script>. For example, 
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{Z}\not\subseteq \mathbb{N},
+</script>
+since <span class="math"></span><script type="math/tex">-1\in \mathbb{Z}</script> and <span class="math"></span><script type="math/tex">-1\notin \mathbb{N}</script>.<div style="margin-top:20px"></div><span id="env1.7"></span><a class="Quizexerciseno" data-count="1.7"></a><a href="#efe754f2-a3ad-4ee6-a86d-b9791155995a" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=efe754f2-a3ad-4ee6-a86d-b9791155995a class = "collapse Quizexercise envbuttons">  
+<div id="quiz4" style="width:100%;"><div class="row quizquestion">
+  The set <div class="orderquizanswer empty inlineblock" id="dq4_right1" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)"></div> is not a subset of <span class="math"></span><script type="math/tex">A=</script><div class="orderquizanswer empty inlineblock" id="dq4_right2" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)"></div>, simply because <div class="orderquizanswer empty inlineblock" id="dq4_right3" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)"></div> does not belong to <span class="math"></span><script type="math/tex">A</script>.
+  This exercise actually has <div class="orderquizanswer empty inlineblock" id="dq4_right4" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)"></div> possible correct solutions.
+  </div><div class="row quizanswers"><div class="orderquizanswer inlineblock" id="dq4_left1" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)">
+  <span class="math"></span><script type="math/tex">\{1, 2, 3\}</script>
+  </div><div class="orderquizanswer inlineblock" id="dq4_left2" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)">
+  <span class="math"></span><script type="math/tex">\{-1, 1, 2, 3, 4\}</script>
+  </div><div class="orderquizanswer inlineblock" id="dq4_left3" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)">
+  <span class="math"></span><script type="math/tex">\{-1, 0, 1, 2, 4\}</script>
+  </div><div class="orderquizanswer inlineblock" id="dq4_left4" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)">
+  <span class="math"></span><script type="math/tex">3</script>
+  </div><div class="orderquizanswer inlineblock" id="dq4_left5" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)">
+  <span class="math"></span><script type="math/tex">-1</script>
+  </div><div class="orderquizanswer inlineblock" id="dq4_left6" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)">
+  <span class="math"></span><script type="math/tex">5</script>
+  </div><div class="orderquizanswer inlineblock" id="dq4_left7" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)">
+  <span class="math"></span><script type="math/tex">6</script>
+  </div><div class="orderquizanswer inlineblock" id="dq4_left8" draggable="true" ondragstart="orderQuizStartDrag(4, event)" ondragover="orderQuizAllowDrop(4, event)" ondrop="orderQuizDrop(4, event)">
+  <span class="math"></span><script type="math/tex">0</script>
+  </div></div><div class="row"><span class="orderquizresult" id="dq4_result"><span class="orderquizfeedback hidden" datav="(is 1347)"><b class="correct"></b>    <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 2157)"><b class="correct"></b>    <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 2347)"><b class="correct"></b>    <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 3287)"><b class="correct"></b>    <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 3157)"><b class="correct"></b>    <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="(is 3187)"><b class="correct"></b>    <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="default"><b class="wrong"></b> 
+  <span style="color:red;"><b>Nope. Try again!</b></span>
+</span></span></div></div>
+</div><div style="margin-top:20px"></div>Below Sage will list all subsets of the set <span class="math"></span><script type="math/tex">\{1, 2, 3\}</script>. Before pressing
+the Compute button, try to write them down on your own.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+X = Set([1,2,3])
+list(X.subsets())
+</script></div><div style="margin-top:20px"></div><span id="env1.8"></span><a class="Quizexerciseno" data-count="1.8"></a><a href="#5d41d80f-183b-4a44-9012-85571a254764" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=5d41d80f-183b-4a44-9012-85571a254764 class = "collapse Quizexercise envbuttons">  
+<div id="quiz5" style="width:100%;"><div class="row quizquestion">
+  The empty set has <div class="orderquizanswer empty inlineblock" id="dq5_right1" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)"></div> elements. A set with <div class="orderquizanswer empty inlineblock" id="dq5_right2" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)"></div> elements has <div class="orderquizanswer empty inlineblock" id="dq5_right3" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)"></div> subsets. In general a set with
+  <span class="math"></span><script type="math/tex">n</script> elements has <div class="orderquizanswer empty inlineblock" id="dq5_right4" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)"></div> subsets.
+  </div><div class="row quizanswers"><div class="orderquizanswer inlineblock" id="dq5_left1" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)">
+  <span class="math"></span><script type="math/tex">1</script>
+  </div><div class="orderquizanswer inlineblock" id="dq5_left2" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)">
+  <span class="math"></span><script type="math/tex">0</script>
+  </div><div class="orderquizanswer inlineblock" id="dq5_left3" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)">
+  <span class="math"></span><script type="math/tex">5</script>
+  </div><div class="orderquizanswer inlineblock" id="dq5_left4" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)">
+  <span class="math"></span><script type="math/tex">25</script>
+  </div><div class="orderquizanswer inlineblock" id="dq5_left5" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)">
+  <span class="math"></span><script type="math/tex">32</script>
+  </div><div class="orderquizanswer inlineblock" id="dq5_left6" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)">
+  <span class="math"></span><script type="math/tex">n^2</script>
+  </div><div class="orderquizanswer inlineblock" id="dq5_left7" draggable="true" ondragstart="orderQuizStartDrag(5, event)" ondragover="orderQuizAllowDrop(5, event)" ondrop="orderQuizDrop(5, event)">
+  <span class="math"></span><script type="math/tex">2^n</script>
+  </div></div><div class="row"><span class="orderquizresult" id="dq5_result"><span class="orderquizfeedback hidden" datav="(is 2357)"><b class="correct"></b> 
+  <span style="color:green;"><b>Correct!</b></span>
+  </span><span class="orderquizfeedback hidden" datav="default"><b class="wrong"></b> 
+  <span style="color:red;"><b>Nope. Try again!</b></span>
+</span></span></div></div>
+</div><div style="margin-top:20px"></div>It turns out that the empty set <span class="math"></span><script type="math/tex">\emptyset</script> is a subset of any set. Does this
+make sense?<div style="margin-top:20px"></div><span id="sec1.3.5"></span><h3>1.3.5 Intersections, unions and the symbols <span class="math"></span><script type="math/tex">\cap,\,\, \cup</script> and <span class="math"></span><script type="math/tex">\setminus</script></h3><div style="margin-top:20px"></div>Suppose that we have two sets <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script>. Then the <em>intersection</em> <span class="math"></span><script type="math/tex">A\cap B</script> is the
+set consisting of the elements in both <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script>. This is illustrated in the
+socalled <a href="https://en.wikipedia.org/wiki/Venn_diagram" target="_blank">Venn diagram</a> below.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/vennintersection.svg" ></div><div style="margin-top:20px"></div>The <em>union</em> <span class="math"></span><script type="math/tex">A\cup B</script> is the
+set consisting of the elements in <span class="math"></span><script type="math/tex">A</script> or <span class="math"></span><script type="math/tex">B</script>. To be more precise, an element is in
+<span class="math"></span><script type="math/tex">A\cup B</script> if it is in <span class="math"></span><script type="math/tex">A</script> or in <span class="math"></span><script type="math/tex">B</script> (or in both of them):<div style="margin-top:20px"></div><div class="centerimg"><img src="img/vennunion.svg" ></div><div style="margin-top:20px"></div>Lastly, the
+difference <span class="math"></span><script type="math/tex">A\setminus B</script> (between <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script>) consists of the elements
+in <span class="math"></span><script type="math/tex">A</script>, the are not contained in <span class="math"></span><script type="math/tex">B</script>:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/venndifference.svg" ></div><div style="margin-top:20px"></div>You should experiment using the Sage window below to get a feeling for these three operations.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+A = Set([1, 2, 3, 4, 5, 6, 7, 8, 9])
+B = Set([7, 8, 9, 10, 11, 12])
+print("A =", A)
+print("B =", B)
+print("The intersection of A and B is ", A.intersection(B))
+print("The union of A and B is ", A.union(B))
+print("The difference between A and B is ", A.difference(B))
+</script></div><div style="margin-top:20px"></div><span id="env1.9"></span><a class="Exerciseno" data-count="1.9"></a><a href="#426c4994-742d-4d63-ac78-39ada1c5fa64" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=426c4994-742d-4d63-ac78-39ada1c5fa64 class = "collapse Exercise envbuttons">  
+Given two sets <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script>, is it true that
+<span class="math"></span><script type="math/tex">A \cap B = B \cap A</script> and <span class="math"></span><script type="math/tex">A\cup B = B\cup A</script>?<div style="margin-top:20px"></div>What about <span class="math"></span><script type="math/tex">A\setminus B = B\setminus A</script>?<div style="margin-top:20px"></div>Suppose that <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script> are two finite sets. Is it true that
+<div class="math"></div><script type="math/tex; mode=display">
+|A\setminus B| = |A| - |B|?
+</script>
+What about
+<div class="math"></div><script type="math/tex; mode=display">
+|A\cup B| = |A| + |B|?
+</script>
+Seriously, both formulas are wrong. Can you come up with the correct
+version of the formula for <span class="math"></span><script type="math/tex">|A \cup B|</script>?<div style="margin-top:20px"></div>Use your correct formula to find a formula for
+<div class="math"></div><script type="math/tex; mode=display">
+|A\cup B \cup C|
+</script>
+viewing <span class="math"></span><script type="math/tex">A\cup B</script> as the first set and <span class="math"></span><script type="math/tex">C</script> as the second set. Here you need
+the formula
+<div class="math"></div><script type="math/tex; mode=display">
+(A\cup B)\cap C = (A\cap C) \cup (B\cap C).
+</script>
+Why is this formula true?
+</div><div style="margin-top:20px"></div><span id="env1.10"></span><a class="Exerciseno" data-count="1.10"></a><a href="#647880b1-dd83-428c-9c1b-18df256b03f8" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=647880b1-dd83-428c-9c1b-18df256b03f8 class = "collapse Exercise envbuttons">  
+There is one more operation called the symmetric difference between two sets <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script>. It is
+denoted <span class="math"></span><script type="math/tex">A\, \Delta\, B</script>. Experiment in the Sage window below to find out exactly what it does.
+Is it true that <span class="math"></span><script type="math/tex">A\, \Delta\, B = B\, \Delta\, A</script>?<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+A = Set([1,2,3,4])
+B = Set([4,5,6,7])
+print("A =", A)
+print("B =", B)
+print("The symmetric difference between A and B is ", A.symmetric_difference(B))
+</script></div>
+</div><div style="margin-top:20px"></div><a href="#ab2573e6-0803-4993-a3bc-d41ab8e0bfd0" class ="btn btn-default" data-toggle="collapse">CS test on sets</a><div id=ab2573e6-0803-4993-a3bc-d41ab8e0bfd0 class="collapse"><div style="margin-top:20px"></div>The following is an excerpt from the infamous <em>Beredskabsprøve Datalogi</em>.<div style="margin-top:20px"></div><span id="{labelname}"></span><div id="quiz6" style="width:100%;"><div class="row quizquestion">
+Let <span class="math"></span><script type="math/tex">X</script> and <span class="math"></span><script type="math/tex">Y</script> denote sets. Which of the following are true?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">X \cup X = X</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">X\cap X = X</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">X\setminus X = X</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">X\subseteq X\cap X</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">\emptyset \subseteq X</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+For some sets <span class="math"></span><script type="math/tex">X</script> and <span class="math"></span><script type="math/tex">Y</script> we can have
+<div class="math"></div><script type="math/tex; mode=display">
+X\cap Y = X\cup Y.
+</script>
+</div></div></div><button id="quizbutton3" class = "btn btn-default">Check</button><script>$("#quizbutton3").click(function(){quizshowanswers(quiz6, quizbutton3);});</script>
+</div><div style="margin-top:20px"></div><span id="sec1.3.6"></span><h3>1.3.6 Pairs, triples and tuples</h3><div style="margin-top:20px"></div>Given two sets <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script> we can form the new set <span class="math"></span><script type="math/tex">A\times B</script>,
+which is the set of pairs <span class="math"></span><script type="math/tex">(a, b)</script>, where <span class="math"></span><script type="math/tex">a\in A</script> and
+<span class="math"></span><script type="math/tex">b\in B</script>. For example,
+<div class="math"></div><script type="math/tex; mode=display">
+\{1, 2\}\times \{1, 2, 3\} = 
+\{(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)\}.
+</script>
+The set <span class="math"></span><script type="math/tex">A\times B</script> is also called the <a href="https://en.wikipedia.org/wiki/Cartesian_product" target="_blank">Cartesian
+  product</a> of <span class="math"></span><script type="math/tex">A</script> and
+<span class="math"></span><script type="math/tex">B</script>.<div style="margin-top:20px"></div><span id="env1.11"></span><a class="Exerciseno" data-count="1.11"></a><a href="#bdeac392-29a9-4891-a286-1d17030c5eda" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=bdeac392-29a9-4891-a286-1d17030c5eda class = "collapse Exercise envbuttons">  
+Consider two pairs <span class="math"></span><script type="math/tex">(a, b)</script> and <span class="math"></span><script type="math/tex">(c, d)</script>. What is a natural way of defining
+equality between these pairs i.e., <span class="math"></span><script type="math/tex">(a, b) = (c, d)</script>?
+</div><div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+A = Set([1, 2])
+B = Set([1, 2, 3])
+C = cartesian_product([A, B])
+print("A =", A)
+print("B =", B)
+print("The cartesian product of A and B is ", list(C))
+</script></div><div style="margin-top:20px"></div>There is no need to restrict ourselves to tuples. We might as well
+consider triples <span class="math"></span><script type="math/tex">A\times B\times C</script> i.e., 
+the set of all <span class="math"></span><script type="math/tex">(a, b, c)</script>, where <span class="math"></span><script type="math/tex">A</script>, <span class="math"></span><script type="math/tex">B</script> and <span class="math"></span><script type="math/tex">C</script> are sets, or
+for that matter tuples
+<div class="math"></div><script type="math/tex; mode=display">
+(a_1, a_2, \dots, a_n)\in A_1\times A_2\times \cdots \times A_n
+</script>
+of any length <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script>, where <span class="math"></span><script type="math/tex">a_1\in A_1, a_2\in A_2, 
+\dots, a_n\in A_n</script>. Based on the above example with tuples we have,
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+&\{0\}\times\{1, 2\}\times \{1, 2, 3\} = \\
+&\{(0, 1, 1), (0, 1, 2), (0, 1, 3), (0, 2, 1), (0, 2, 2), (0, 2, 3)\}.
+\end{aligned}</script><div style="margin-top:20px"></div>You may check this using the Sage snippet below.<div style="margin-top:20px"></div><p><pre>
+A = Set([0])
+B = Set([1, 2])
+C = Set([1, 2, 3])
+print("A =", A)
+print("B =", B)
+print("C =", C)
+D = cartesian_product([A, B, C])
+print("The cartesian product of A, B and C is ", list(D))
+</pre></p><div style="margin-top:20px"></div>For a given set <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script> we define <span class="math"></span><script type="math/tex">n</script>-fold cartesian product of <span class="math"></span><script type="math/tex">A</script> as
+<div class="math"></div><script type="math/tex; mode=display">
+A^n = \underbrace{A\times A\times \cdots \times A}_{n\text{ times}}.
+</script>
+<p><pre>
+A = Set([1,2])
+n = 3
+B = cartesian_product([A]*n)
+print("A =", A)
+print("n =", n)
+print("The n-fold cartesian product of A is ", list(B))
+</pre></p><div style="margin-top:20px"></div><span id="env1.12"></span><a class="Exerciseno" data-count="1.12"></a><a href="#4aad4f8e-fd3f-4913-af07-6868fd828c76" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4aad4f8e-fd3f-4913-af07-6868fd828c76 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script> be two sets. Is <span class="math"></span><script type="math/tex">A\times B = B \times A</script>?<div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">X</script> be any set. What is <span class="math"></span><script type="math/tex">\emptyset \times X</script>?<div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">A, B, C</script> and <span class="math"></span><script type="math/tex">D</script> be four sets. Is
+<div class="math"></div><script type="math/tex; mode=display">
+(A\times B)\setminus (C\times D) = (A\setminus C)\times (B\setminus D)?
+</script>
+</div><div style="margin-top:20px"></div><span id="sec1.4"></span><h2 id="6840d0bf-1199-4802-81ce-b10388939d82">1.4 Ordering numbers</h2><div style="margin-top:20px"></div>Let us be a little rigorous and introduce the (usual) ordering
+on our numbers with addition and multiplication using almost full blown
+mathematical formalities. First the formal definition for two
+integers <span class="math"></span><script type="math/tex">x, y\in \mathbb{Z}</script>:<div style="margin-top:20px"></div><div class="emphasize"><span id="equ1.1"></span><div class="math"></div><script type="math/tex; mode=display">
+x \leq y\qquad \text{ means that }\qquad y - x\in \mathbb{N}
+\tag{1.1}</script></div><div style="margin-top:20px"></div>Notice that <span class="math"></span><script type="math/tex">x = y</script> implies that <span class="math"></span><script type="math/tex">x\leq y</script> (and <span class="math"></span><script type="math/tex">y\leq x</script>).
+Along this line we also define <span class="math"></span><script type="math/tex">x < y</script> if <span class="math"></span><script type="math/tex">x \leq y</script> and <span class="math"></span><script type="math/tex">x\neq y</script>.<div style="margin-top:20px"></div><span id="env1.13"></span><a class="Quizexerciseno" data-count="1.13"></a><a href="#280a958a-032e-45a2-a828-71f730851a10" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=280a958a-032e-45a2-a828-71f730851a10 class = "collapse Quizexercise envbuttons">  
+<div id="quiz7" style="width:100%;"><div class="row quizquestion">
+  Assume that <span class="math"></span><script type="math/tex">x, y, z\in \mathbb{Z}</script> and that <span class="math"></span><script type="math/tex">x \leq y</script>. Then drag and drop the
+  elements from the left to the right below to explain that
+  <span class="math"></span><script type="math/tex">x + z \leq y + z</script>.
+  </div><div class="row"><div class="col-xs-5"><div class="row"><div class="orderquizanswer" id="dq7_left1" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)">   By assumption <span class="math"></span><script type="math/tex">x\leq y</script>.
+  </div><div class="orderquizanswer" id="dq7_left2" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)">   This means that <span class="math"></span><script type="math/tex">z - x + y\in \mathbb{N}</script>
+  </div><div class="orderquizanswer" id="dq7_left3" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)">   This means that <span class="math"></span><script type="math/tex">y - x\in \mathbb{N}</script>
+  </div><div class="orderquizanswer" id="dq7_left4" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)">   To show that <span class="math"></span><script type="math/tex">x + z \leq y + z</script>, we need to show that
+  <span class="math"></span><script type="math/tex">(y + z) - (x + z) \in \mathbb{N}</script>.
+  </div><div class="orderquizanswer" id="dq7_left5" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)">   But <span class="math"></span><script type="math/tex">(y + z) - (x + z) = y + z - x + z</script>. Therefore,
+  </div><div class="orderquizanswer" id="dq7_left6" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)">   But <span class="math"></span><script type="math/tex">(y + z) - (x + z) = y + z - x - z = y - x</script>. Therefore,
+  </div><div class="orderquizanswer" id="dq7_left7" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)">   <span class="math"></span><script type="math/tex">(y + z) - (x + z)\in \mathbb{N}</script>, since
+  </div><div class="orderquizanswer" id="dq7_left8" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)">   <span class="math"></span><script type="math/tex">y - x \in \mathbb{N}</script>
+  </div></div></div><div class="col-xs-5"><div class="row"><div class="orderquizanswer empty" id="dq7_right1" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)"></div><div class="orderquizanswer empty" id="dq7_right2" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)"></div><div class="orderquizanswer empty" id="dq7_right3" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)"></div><div class="orderquizanswer empty" id="dq7_right4" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)"></div><div class="orderquizanswer empty" id="dq7_right5" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)"></div><div class="orderquizanswer empty" id="dq7_right6" draggable="true" ondragstart="orderQuizStartDrag(7, event)" ondragover="orderQuizAllowDrop(7, event)" ondrop="orderQuizDrop(7, event)"></div></div></div></div><span class="orderquizresult" id="dq7_result"><span class="orderquizfeedback hidden" datav="(is 134678)"><b class="correct"></b> 
+  <span style="color:green;"><b>Spot on, my friend.</b></span><div style="margin-top:20px"></div></span><span class="orderquizfeedback hidden" datav="(is 467813)"><b class="correct"></b> 
+  <span style="color:green;"><b>This is right!</b></span><div style="margin-top:20px"></div></span><span class="orderquizfeedback hidden" datav="(is 413678)"><b class="correct"></b> 
+  <span style="color:green;"><b>This is right!</b></span><div style="margin-top:20px"></div></span><span class="orderquizfeedback hidden" datav="default"><b class="wrong"></b> 
+  <span style="color:red;"><b>Wrong order. Check the definition of <span class="math"></span><script type="math/tex">\leq</script> in <a href=#equ1.1>(1.1)</a> once more!</b></span>
+</span></span></div>
+</div><div style="margin-top:20px"></div>You can
+see that this definition agrees with our preconception that
+<span id="equ1.2"></span><div class="math"></div><script type="math/tex; mode=display">
+\cdots < -3 < -2 < -1 < 0 < 1 < 2 < \cdots
+\tag{1.2}</script><div style="margin-top:20px"></div><span id="env1.14"></span><a class="Exerciseno" data-count="1.14"></a><a href="#55e655ee-450b-416c-9fd6-7f5ccac82df2" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=55e655ee-450b-416c-9fd6-7f5ccac82df2 class = "collapse Exercise envbuttons">  
+  To be precise, writing <span class="math"></span><script type="math/tex">\cdots < -3 < -2 < -1 < 0 < 1 < 2 < \cdots</script> is nonsense, since <span class="math"></span><script type="math/tex">\leq</script> is only defined for two integers in <a href=#equ1.1>(1.1)</a>. How is one supposed to interpret <span class="math"></span><script type="math/tex">0 < 1 < 2</script> for example? Go ahead and write <a href=#equ1.2>(1.2)</a> the
+  right way. Also, suppose <span class="footnote">that<span class="footnotetext">As an example, this could be assuming <span class="math"></span><script type="math/tex">1 \leq 2</script> and <span class="math"></span><script type="math/tex">2 \leq 5</script> and then
+    arguing that <span class="math"></span><script type="math/tex">1\leq 5</script>.</span></span>
+  <div class="math"></div><script type="math/tex; mode=display">x \leq y\qquad\text{and}\qquad y\leq z
+  </script>
+  for three integers <span class="math"></span><script type="math/tex">x, y, z\in \mathbb{Z}</script>. Argue
+  from the definition in <a href=#equ1.1>(1.1)</a> that <span class="math"></span><script type="math/tex">x\leq z</script>.<div style="margin-top:20px"></div>How does Python/Sage interpret <span class="math"></span><script type="math/tex">-3 < -2 < -1< 0 < 1 < 2</script>? Find out using the Sage snippet below.<div style="margin-top:20px"></div><p><pre>
+print(-3 < -2 < -1 < 0 < 1 < 2)
+  </pre></p><div style="margin-top:20px"></div>What about <span class="math"></span><script type="math/tex">1 < 5 > 3 < 4</script>? 
+</div><div style="margin-top:20px"></div>Notice that the integers has huge holes. Given two integers <span class="math"></span><script type="math/tex">a, b\in \mathbb{Z}</script>, such
+that <span class="math"></span><script type="math/tex">a < b</script>, we cannot always find an integer <span class="math"></span><script type="math/tex">c\in \mathbb{Z}</script> in between <span class="math"></span><script type="math/tex">a</script> and <span class="math"></span><script type="math/tex">b</script>:
+<div class="math"></div><script type="math/tex; mode=display">
+a < c < b.
+</script><div style="margin-top:20px"></div>The rational numbers has the property that they do not have holes. We can
+always find an in between number such as <span class="math"></span><script type="math/tex">c</script> above. But we need a precise way
+of comparing rational numbers. A way to explain precisely why for example
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{2}{3}\,\, \leq \,\, \frac{5}{7}.
+</script>
+Of course, you can enter the two numbers a on computer and see that
+<span class="math"></span><script type="math/tex">\frac{2}{3}</script> is approximately <span class="math"></span><script type="math/tex">0.67</script> and <span class="math"></span><script type="math/tex">\frac{5}{7}</script>
+is approximately <span class="math"></span><script type="math/tex">0.71</script>, but we aim for the mathematical
+precise definition.<div style="margin-top:20px"></div>A
+rational number <span class="math"></span><script type="math/tex">\frac{p}{q}</script> consists of a numerator <span class="math"></span><script type="math/tex">p\in \mathbb{Z}</script> and a denominator
+<span class="math"></span><script type="math/tex">q\in \mathbb{Z}</script> with <span class="math"></span><script type="math/tex">q > 0</script>. We already know the criterion for two rational numbers
+<span class="math"></span><script type="math/tex">\frac{p}{q}</script> and <span class="math"></span><script type="math/tex">\frac{p'}{q'}</script>
+to be <span class="footnote">equal<span class="footnotetext">Technically speaking we are defining a socalled <em>equivalence relation</em> identifying the infinitely many ways of writing a rational number into one.</span></span>:<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\frac{p}{q}\, =\, \frac{p'}{q'}\qquad \text{ means that }\qquad p q' = p' q\qquad (\text{in }\mathbb{Z}).
+</script></div><div style="margin-top:20px"></div>We wish to compare the two rational numbers <span class="math"></span><script type="math/tex">\frac{p}{q}</script> and <span class="math"></span><script type="math/tex">\frac{p'}{q'}</script> deciding
+precisely how they are ordered:<div style="margin-top:20px"></div><div class="emphasize"><span id="equ1.3"></span><div class="math"></div><script type="math/tex; mode=display">
+\frac{p}{q}\, \leq\, \frac{p'}{q'}\qquad \text{ means that }\qquad p q' \leq p' q\qquad (\text{in }\mathbb{Z}).
+\tag{1.3}</script></div><div style="margin-top:20px"></div>As for the integers, we also define <span class="math"></span><script type="math/tex">x < y</script> if <span class="math"></span><script type="math/tex">x \leq y</script> and <span class="math"></span><script type="math/tex">x\neq y</script> for
+two rational numbers <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script>.<div style="margin-top:20px"></div>Using this definition, you can check that <span class="math"></span><script type="math/tex">\frac{2}{3} \leq \frac{5}{7}</script>, since
+<div class="math"></div><script type="math/tex; mode=display">
+2\cdot 7 < 3 \cdot 5.
+</script><div style="margin-top:20px"></div>An easy, but surprising, 
+way of finding a rational number strictly between these two is
+adding their numerators and denominators:
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{2}{3} < \frac{2 + 5}{3 + 7} < \frac{5}{7}.
+</script><div style="margin-top:20px"></div>We wil try to explain the first inequality in mathematical general terms going through a
+rather formal proof consisting of five steps. These steps are
+given in the quiz below. Your task is drag from the left and drop them to the right in an order, 
+so that the proof makes sense. <div style="margin-top:20px"></div>After that you are supposed, on your own, to write down a precise proof of
+the second inequality.<div style="margin-top:20px"></div><span id="env1.15"></span><a class="Quizexerciseno" data-count="1.15"></a><a href="#b9d4df76-6a88-4c79-8607-ccb2920306ff" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=b9d4df76-6a88-4c79-8607-ccb2920306ff class = "collapse Quizexercise envbuttons">  
+<div id="quiz8" style="width:100%;"><div class="row quizquestion">
+  Order the arguments below so that they constitute a coherent explanation of the
+  statement that if
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{a}{b} < \frac{c}{d},
+  </script>
+  then
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{a}{b} < \frac{a + c}{b + d}
+  </script><div style="margin-top:20px"></div></div><div class="row"><div class="col-xs-5"><div class="row"><div class="orderquizanswer" id="dq8_left1" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)">   By definition this means that <span class="math"></span><script type="math/tex">a d < b c</script>.<div style="margin-top:20px"></div></div><div class="orderquizanswer" id="dq8_left2" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)">   We are assuming that <span class="math"></span><script type="math/tex">\frac{a}{b} < \frac{c}{d}</script>. <div style="margin-top:20px"></div></div><div class="orderquizanswer" id="dq8_left3" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)">   For integers <span class="math"></span><script type="math/tex">x, y, z</script> we know that the rule
+  <span class="math"></span><script type="math/tex">
+  x ( y + z) = x y + x z
+  </script>
+  holds. Therefore
+  </div><div class="orderquizanswer" id="dq8_left4" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)">   we need to show that <span class="math"></span><script type="math/tex">a b + c d < b a + b c</script>.<div style="margin-top:20px"></div></div><div class="orderquizanswer" id="dq8_left5" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)">   Since <span class="math"></span><script type="math/tex">a b = b a</script> and <span class="math"></span><script type="math/tex">a b + a d < a b + b c</script> is a consequence of <span class="math"></span><script type="math/tex">a d < b c</script>, we are
+  done if we know this is true.
+  </div><div class="orderquizanswer" id="dq8_left6" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)">   However, this is a consequence of our assumption <span class="math"></span><script type="math/tex">\frac{a}{b} < \frac{c}{d}</script>.<div style="margin-top:20px"></div></div><div class="orderquizanswer" id="dq8_left7" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)">   To show that
+  <span class="math"></span><script type="math/tex">
+  \frac{a}{b} < \frac{a+c}{b + d},
+  </script>
+  we need to argue that <span class="math"></span><script type="math/tex">a (b + d) < b (a + c)</script>.<div style="margin-top:20px"></div></div><div class="orderquizanswer" id="dq8_left8" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)"><div style="margin-top:20px"></div>we need to show that <span class="math"></span><script type="math/tex">a b + a d < b a + b c</script>.<div style="margin-top:20px"></div></div></div></div><div class="col-xs-5"><div class="row"><div class="orderquizanswer empty" id="dq8_right1" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)"></div><div class="orderquizanswer empty" id="dq8_right2" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)"></div><div class="orderquizanswer empty" id="dq8_right3" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)"></div><div class="orderquizanswer empty" id="dq8_right4" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)"></div><div class="orderquizanswer empty" id="dq8_right5" draggable="true" ondragstart="orderQuizStartDrag(8, event)" ondragover="orderQuizAllowDrop(8, event)" ondrop="orderQuizDrop(8, event)"></div></div></div></div><span class="orderquizresult" id="dq8_result"><span class="orderquizfeedback hidden" datav="(is 73856)"><b class="correct"></b> 
+  <span style="color:green;"><b>Spot on, my friend!</b></span><div style="margin-top:20px"></div></span><span class="orderquizfeedback hidden" datav="(contains 4)"><b class="wrong"></b> 
+  <span style="color:red;"><b>You have not applied the formula for expanding <span class="math"></span><script type="math/tex">x(y + z)</script> correctly.</b></span><div style="margin-top:20px"></div></span><span class="orderquizfeedback hidden" datav="default"><b class="wrong"></b> 
+  <span style="color:red;"><b>Wrong order.</b></span><div style="margin-top:20px"></div></span></span></div>
+</div><div style="margin-top:20px"></div><span id="env1.16"></span><a class="Exerciseno" data-count="1.16"></a><a href="#934768fa-28d2-4fab-92d9-aaeae1f22aec" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=934768fa-28d2-4fab-92d9-aaeae1f22aec class = "collapse Exercise envbuttons">  
+Similarly to the quiz above, assume that  
+<div class="math"></div><script type="math/tex; mode=display">
+  \frac{a}{b} < \frac{c}{d}.
+  </script>
+  Write down a precise argument showing that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{a + c}{b + d} < \frac{c}{d}.
+  </script>
+  You may seek inspiration in Video <a href="intro.html#env1.25">1.25</a> for
+  how to mix math and words (even though
+  it is further ahead).
+  </div><div style="margin-top:20px"></div><span id="env1.17"></span><a class="Exerciseno" data-count="1.17"></a><a href="#49b10169-bb74-4c0c-8c20-6af28a2bfd21" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=49b10169-bb74-4c0c-8c20-6af28a2bfd21 class = "collapse Exercise envbuttons">  
+On <a href="https://twitter.com/Ramangupta4/status/1162999733142482945" target="_blank">Twitter</a>, Raman Gupta posted the note below<div style="margin-top:20px"></div><div class="centerimg"><img src="img/tweet.jpg" width="50%"></div><div style="margin-top:20px"></div>For a natural number <span class="math"></span><script type="math/tex">m\in \mathbb{N}</script>,
+<div class="math"></div><script type="math/tex; mode=display">
+m! = m (m-1) (m-2)\cdot \dots \cdot 2\cdot 1. 
+</script>
+For example, <span class="math"></span><script type="math/tex">3! = 6</script> and <span class="math"></span><script type="math/tex">5! = 120</script>. What is the answer for the
+question in the note?
+</div><div style="margin-top:20px"></div>The exercise below shows that our trick for finding rational numbers
+in between two given rational numbers can be made into a machine for
+generating all positive rational numbers!<div style="margin-top:20px"></div><span id="env1.18"></span><a class="Exerciseno" data-count="1.18"></a><a href="#14984ed0-f1a3-4df7-adc7-b6606c778b9f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=14984ed0-f1a3-4df7-adc7-b6606c778b9f class = "collapse Exercise envbuttons">  
+Can you spot the system in the fractions in the diagram below?
+<div class="centerimg"><img src="img/SternBrocotTree.svg" ></div>
+Once you see the system, extend the diagram with the next level downwards. Is every
+positive fraction present in this diagram if one keeps adding levels?<div style="margin-top:20px"></div><a href="#3bf8be47-a28b-4318-a5d6-c50557e3a563" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=3bf8be47-a28b-4318-a5d6-c50557e3a563 class = "collapse Hint envbuttons">    
+Suppose that
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{p}{q} < \frac{r}{s}
+</script>
+and <span class="math"></span><script type="math/tex">q r - s p = 1</script>. Then for
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{p}{q} <  \frac{p+r}{q+s} < \frac{r}{s},
+</script>
+we have <span class="math"></span><script type="math/tex">q (p+r) - (q+s) p = 1</script> and <span class="math"></span><script type="math/tex">(q+s) r - (p + r) s = 1</script>. If <span class="math"></span><script type="math/tex">\frac{a}{b}</script> is 
+a positive fraction, such that
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{p}{q} <  \frac{a}{b} < \frac{r}{s},
+</script>
+show that 
+<div class="math"></div><script type="math/tex; mode=display">
+a + b = (r+s)(qa−bp)+(p+q)(br−as)\geq p+q+r+s.
+</script>
+  </div>
+</div><div style="margin-top:20px"></div><span id="sec1.4.1"></span><h3>1.4.1 Subsets of numbers and first elements</h3><div style="margin-top:20px"></div>In a set equipped with an order, it is intuitively clear what a first element should be. For example,
+the natural numbers <span class="math"></span><script type="math/tex">\mathbb{N}</script> has <span class="math"></span><script type="math/tex">0</script> as its first element. On the other hand the set <span class="math"></span><script type="math/tex">\mathbb{Z}</script> of
+integers does not have a first element (it is ``infinite to the left'').<div style="margin-top:20px"></div>In fact every non-empty subset <span class="math"></span><script type="math/tex">S\subseteq \mathbb{N}</script> has
+a first element. This follows from a rather special property of <span class="math"></span><script type="math/tex">\mathbb{N}</script>: there
+can be only finitely many natural numbers smaller than a given one. This is
+not true for <span class="math"></span><script type="math/tex">\mathbb{Z}</script>. Here there are infinitely many integers smaller than
+any integer.<div style="margin-top:20px"></div><span id="env1.19"></span><a class="Exerciseno" data-count="1.19"></a><a href="#767e114a-fc99-451d-b976-8e85dd4c06ff" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=767e114a-fc99-451d-b976-8e85dd4c06ff class = "collapse Exercise envbuttons">  
+Consider the subset <span class="math"></span><script type="math/tex">S</script> of <span class="math"></span><script type="math/tex">\mathbb{Q}</script> consisting of positive fractions i.e., rational numbers  <span class="math"></span><script type="math/tex">>0</script>.
+Does this subset have a first element?
+</div><div style="margin-top:20px"></div><span id="sec1.5"></span><h2 id="890c2aa3-4cb2-43fc-aec7-c38196270893">1.5 Propositional logic</h2><div style="margin-top:20px"></div>We have seen quite a few mathematical statements that ended up 
+being true or false. Such statements are called <em>propositions</em>.
+Here are two examples of propositions usings sets (in Sage):<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+print(1 in Set([1,2,3]))
+A = Set([1, 2, 3])
+B = Set([2, 3, 4])
+print(A.intersection(B) == Set([2, 3])) 
+</script></div><div style="margin-top:20px"></div><span id="env1.20"></span><a class="Exerciseno" data-count="1.20"></a><a href="#6f3d7901-769f-445d-99bd-52b2e686aae1" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6f3d7901-769f-445d-99bd-52b2e686aae1 class = "collapse Exercise envbuttons">  
+What exactly are the two propositions in the above Sage window written
+up in mathematical terminology? Notice that the symbol == is
+a programming construct. It is not used in mathematics notation.
+</div><div style="margin-top:20px"></div>Propositions can be combined into
+new (compound) propositions. Take for example the propositions<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+&p: \text{it rains}\\
+&q: \text{it is cloudy}.
+\end{aligned}</script><div style="margin-top:20px"></div>Then (<span class="math"></span><script type="math/tex">p</script> and <span class="math"></span><script type="math/tex">q</script>) is a perfectly good
+  new proposition reading <em>it rains and it is cloudy</em>. The same goes for (if <span class="math"></span><script type="math/tex">p</script> then <span class="math"></span><script type="math/tex">q</script>), which reads
+  <em>if it rains then it is cloudy</em>. The proposition (if <span class="math"></span><script type="math/tex">q</script> then <span class="math"></span><script type="math/tex">p</script>) reads <em>if it is cloudy then
+    it rains</em>. This proposition is (clearly) false.<div style="margin-top:20px"></div>
+We need some notation to describe these compound propositions:
+
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{array}{ll}
+p \land q\qquad\qquad & \qquad\qquad p \text{ and } q\\
+\\
+p \lor q\qquad\qquad & \qquad\qquad p \text{ or } q\\
+\\
+p\implies q\qquad\qquad & \qquad\qquad \text{if } p \text{ then } q\\
+\\
+\neg p\qquad\qquad & \qquad\qquad \text{not } p
+\end{array}
+</script><div style="margin-top:20px"></div>The compound propositions are either true(<span class="math"></span><script type="math/tex">t</script>) or false (<span class="math"></span><script type="math/tex">f</script>) depending on
+<span class="math"></span><script type="math/tex">p</script> and <span class="math"></span><script type="math/tex">q</script>. The dependencies are displayed in the <em>truth tables</em> below.<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\def\arraystretch{1.2}
+      \begin{array}{c|c|c}
+        p & q  & p\land q  \\
+        \hline 
+        t & t  & t    \\
+        t & f & f\\
+        f & t & f\\
+        f & f & f
+      \end{array}\qquad
+      \begin{array}{c|c|c}
+        p & q  & p\lor q  \\
+        \hline
+        t & t  & t    \\
+        t & f & t\\
+        f & t & t\\
+        f & f & f
+      \end{array}
+      \qquad
+      \begin{array}{c|c|c}
+        p & q  & p\implies q  \\
+        \hline
+        t & t  & t    \\
+        t & f & f\\
+        f & t & t\\
+        f & f & t
+      \end{array}\qquad
+      \begin{array}{c|c}
+        p & \neg p \\
+        \hline
+        t & f\\
+        f & t
+      \end{array}
+  </script></div><div style="margin-top:20px"></div>The tables for the compound propositions <span class="math"></span><script type="math/tex">p\land q, p\lor q</script> and also
+<span class="math"></span><script type="math/tex">\neg p</script> are not too hard to grasp. The table for <span class="math"></span><script type="math/tex">p\implies q</script> 
+raises a few more questions. Why is <span class="math"></span><script type="math/tex">f\implies t</script> true?
+I will not go into this, but just point out that there are
+many explanations available online and, 
+perhaps more importantly, refer you to the exercise below.<div style="margin-top:20px"></div><span id="env1.21"></span><a class="Exerciseno" data-count="1.21"></a><a href="#e91015fe-a5af-44c6-9e00-22d6e89a3b17" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=e91015fe-a5af-44c6-9e00-22d6e89a3b17 class = "collapse Exercise envbuttons">  
+Suppose that we are presented with four cards
+<span id="equ1.4"></span><div class="math"></div><script type="math/tex; mode=display">
+\boxed{3}\qquad \fcolorbox{black}{red}{\phantom{3}}
+\qquad\boxed{4}\qquad \fcolorbox{black}{blue}{\phantom{4}}
+\tag{1.4}</script>
+with a (natural) number on the front and the color
+<span style="color:blue;">blue</span> or <span style="color:red;">red</span> on the back.
+In <a href=#equ1.4>(1.4)</a>, the first and third cards are shown with their fronts facing up and
+the second and fourth cards are shown with their backs facing up.<div style="margin-top:20px"></div>A claim (proposition) is made that if a card has an even number on the front, then it
+must have the color <span style="color:blue;">blue</span> on the back.<div style="margin-top:20px"></div>Your task is to verify this for the cards above. Of course you can
+do this by turning all four cards, but is there a way of checking this
+by turning less than four cards?<div style="margin-top:20px"></div>What if we add the claim, that if a card has the color 
+<span style="color:blue;">blue</span> on the back, then
+it must have an even number on the front?<div style="margin-top:20px"></div><a href="#7b9a1b24-ab08-4add-881d-f29c95caeb33" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=7b9a1b24-ab08-4add-881d-f29c95caeb33 class = "collapse Hint envbuttons">    
+  Find two propositions <span class="math"></span><script type="math/tex">p</script> and <span class="math"></span><script type="math/tex">q</script> so that the claim reads
+  <span class="math"></span><script type="math/tex">p\implies q</script>.
+  </div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env1.22"></span><a class="Exerciseno" data-count="1.22"></a><a href="#08fcb341-c70c-43f6-ab2e-2da133daa527" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=08fcb341-c70c-43f6-ab2e-2da133daa527 class = "collapse Exercise envbuttons">  
+Explain why Python/Sage thinks that <span class="footnote">the value<span class="footnotetext">Thanks to Gerth Brodal for pointing this out to me</span></span> of
+  <div class="math"></div><script type="math/tex; mode=display">
+  1 < 0 < 1/0
+  </script>
+  is False! Notice that you are dividing one by zero in the last "integer" above.
+</div><div style="margin-top:20px"></div>In the exercise below you will see for example that
+<span class="math"></span><script type="math/tex">p\implies q</script> is the same as <span class="math"></span><script type="math/tex">\neg q \implies \neg p</script>.<div style="margin-top:20px"></div><span id="env1.23"></span><a class="Exerciseno" data-count="1.23"></a><a href="#ca09be09-125a-4e55-9f02-5123fdd0f825" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ca09be09-125a-4e55-9f02-5123fdd0f825 class = "collapse Exercise envbuttons">  
+Two propositions are considered the same (<span class="math"></span><script type="math/tex">=</script>) if they have the same truth table. Verify, by
+filling out and comparing truth tables, that
+<ol class="lowerroman"><li>
+<span class="math"></span><script type="math/tex">\neg (p \land q) = (\neg p) \lor (\neg q)</script>
+</li><li>
+<span class="math"></span><script type="math/tex">\neg (p \lor q) = (\neg p) \land (\neg q)</script>
+</li><li>
+<span class="math"></span><script type="math/tex">p \implies q = (\neg q) \implies (\neg p)</script>
+</li><li>
+<span class="math"></span><script type="math/tex">p \implies q = (\neg p)\lor q</script>
+</li></ol>
+</div><div style="margin-top:20px"></div><span id="env1.24"></span><a class="Exerciseno" data-count="1.24"></a><a href="#05de376a-3055-4daf-bcfa-7f2998777bb7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=05de376a-3055-4daf-bcfa-7f2998777bb7 class = "collapse Exercise envbuttons">  
+Can you use the setup up in Exercise <a href=#env1.23 class="labelref">1.23</a> to verify that
+<div class="math"></div><script type="math/tex; mode=display">
+p\land (q \lor r) = (p\land q) \lor (p \land r)
+</script>
+for three propositions <span class="math"></span><script type="math/tex">p, q</script> and <span class="math"></span><script type="math/tex">r</script>? What about
+<span class="math"></span><script type="math/tex">
+p\lor (q \land r)?
+</script>
+</div><div style="margin-top:20px"></div>The notation <span class="math"></span><script type="math/tex">p \iff q</script> is used frequently. It means that both
+<span class="math"></span><script type="math/tex">p\implies q</script> and <span class="math"></span><script type="math/tex">q\implies p</script> are true i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+(p\implies q) \land (q\implies p).
+</script><div style="margin-top:20px"></div>
+
+
+
+<span id="sec1.5.1"></span><h3>1.5.1 The symbols <span class="math"></span><script type="math/tex">\exists, \forall</script> and propositions with variables</h3><div style="margin-top:20px"></div>In mathematics one usually reasons with propositions with variables.<div style="margin-top:20px"></div>In order to have a variable <span class="math"></span><script type="math/tex">x</script>, one must first specify to which set
+<span class="math"></span><script type="math/tex">S</script> the variable belongs. For example, the proposition <span class="math"></span><script type="math/tex">p(x)</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+x^2 > 0,
+</script>
+does not make sense if <span class="math"></span><script type="math/tex">x</script> is taken from the set of letters in the
+English alphabet (not unless you give an interpretation of <span class="math"></span><script type="math/tex">x^2</script>,
+<span class="math"></span><script type="math/tex">></script> and <span class="math"></span><script type="math/tex">0</script> in this set). However, if <span class="math"></span><script type="math/tex">x\in \mathbb{Z}</script>, then <span class="math"></span><script type="math/tex">p(x)</script>
+certainly makes sense. Whether <span class="math"></span><script type="math/tex">p(x)</script> is true depends on <span class="math"></span><script type="math/tex">x</script>.<div style="margin-top:20px"></div>For example, <span class="math"></span><script type="math/tex">p(0)</script> is false, whereas <span class="math"></span><script type="math/tex">p(-1)</script> is true. This leads us to
+the existential and universal quantifiers <span class="math"></span><script type="math/tex">\exists</script> and <span class="math"></span><script type="math/tex">\forall</script>.
+The former reads <em>there exists</em> and the latter <em>for every</em>.<div style="margin-top:20px"></div>For example, the proposition
+<div class="math"></div><script type="math/tex; mode=display">
+\exists x\in \mathbb{Z}: \neg p(x)
+</script>
+is true and so is
+<div class="math"></div><script type="math/tex; mode=display">
+\forall x\in \mathbb{Z}\setminus\{0\}: p(x).
+</script>
+Notice that the  symbol ":" above means <span class="footnote">"such that"<span class="footnotetext">Therefore  
+<span class="math"></span><script type="math/tex">\exists x\in \mathbb{Z}: \neg p(x)</script> reads "there exists <span class="math"></span><script type="math/tex">x</script> in <span class="math"></span><script type="math/tex">\mathbb{Z}</script>, such that
+<span class="math"></span><script type="math/tex">\neg p(x)</script> is true".</span></span>.<div style="margin-top:20px"></div>Also, <span class="math"></span><script type="math/tex">\forall x\in \mathbb{Z}: p(x)</script> is false, because
+<span class="math"></span><script type="math/tex">\exists x\in \mathbb{Z}: \neg p(x)</script> is true. In general,
+<div class="math"></div><script type="math/tex; mode=display">
+\neg\left(\forall x\in S: p(x)\right) = \exists x\in S: \neg p(x).
+</script>
+So we do not really need the quantifier <span class="math"></span><script type="math/tex">\forall</script>, when we have
+<span class="math"></span><script type="math/tex">\neg</script> and <span class="math"></span><script type="math/tex">\exists</script>, but <span class="math"></span><script type="math/tex">\forall</script> is convenient and used all
+the time.<div style="margin-top:20px"></div>The quantifiers are important to learn and apply when expressing
+mathematical ideas. So is the use of propositions with variables
+in writing up subsets: if <span class="math"></span><script type="math/tex">S</script> is a set, <span class="math"></span><script type="math/tex">x</script> a variable taking values
+in <span class="math"></span><script type="math/tex">S</script> and <span class="math"></span><script type="math/tex">p(x)</script> a proposition (making sense in <span class="math"></span><script type="math/tex">S</script>), then
+<div class="math"></div><script type="math/tex; mode=display">
+\{x\in S \mid p(x)\}
+</script>
+is the subset of the elements <span class="math"></span><script type="math/tex">x\in S</script>, such that <span class="math"></span><script type="math/tex">p(x)</script> is true.<div style="margin-top:20px"></div>For example, if <span class="math"></span><script type="math/tex">p(x) = x^2 > 0</script>, then
+<div class="math"></div><script type="math/tex; mode=display">
+\{x\in \mathbb{Z} \mid p(x)\} = \mathbb{Z}\setminus \{0\}.
+</script><div style="margin-top:20px"></div><a href="#4778df4d-1a44-4367-b73a-bc61fead4545" class ="btn btn-default" data-toggle="collapse">More from CS</a><div id=4778df4d-1a44-4367-b73a-bc61fead4545 class="collapse"><div style="margin-top:20px"></div>The following is yet another excerpt from the infamous <em>Beredskabsprøve Datalogi</em>.<div style="margin-top:20px"></div><span id="{labelname}"></span><div id="quiz9" style="width:100%;"><div class="row quizquestion">
+Which of the following are true?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">\forall x\in \mathbb{N}: x > 2</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">\exists x\in \mathbb{N}: x > 2</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">\forall x\in \emptyset: x = 7</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">\exists x\in \emptyset: x = 7</script>
+</div></div></div><button id="quizbutton4" class = "btn btn-default">Check</button><script>$("#quizbutton4").click(function(){quizshowanswers(quiz9, quizbutton4);});</script>
+</div><div style="margin-top:20px"></div><span id="sec1.5.2"></span><h3>1.5.2 The use of implication (<span class="math"></span><script type="math/tex">\implies</script>) and bi-implication (<span class="math"></span><script type="math/tex">\iff</script>)</h3><div style="margin-top:20px"></div>Usually <span class="math"></span><script type="math/tex">\implies</script> and <span class="math"></span><script type="math/tex">\iff</script> are applied to link propositions in a logical argument. An example
+is
+<div class="math"></div><script type="math/tex; mode=display">
+x \leq y \iff x + z \leq y + z
+</script>
+for integers <span class="math"></span><script type="math/tex">x, y, z</script>. To be completely precise, I should here write
+<div class="math"></div><script type="math/tex; mode=display">
+\forall x, y, z\in \mathbb{Z}: x \leq y \iff x + z \leq y + z,
+</script>
+but one often writes <span class="math"></span><script type="math/tex">\forall</script> with words as for example <em>for integers <span class="math"></span><script type="math/tex">x, y, z</script></em>.<div style="margin-top:20px"></div>Here <span class="math"></span><script type="math/tex">x \leq y\implies x + z \leq y + z</script> is true and similarly
+<span class="math"></span><script type="math/tex">x + z \leq y + z \implies x \leq y</script> (by using the definition (see <a href=#equ1.1>(1.1)</a>) of <span class="math"></span><script type="math/tex">\leq</script> in <span class="math"></span><script type="math/tex">\mathbb{Z}</script>). So the
+use of <span class="math"></span><script type="math/tex">\iff</script> is valid.<div style="margin-top:20px"></div>However, for <span class="math"></span><script type="math/tex">x \geq 0 \implies x^2 \geq 0</script> we cannot link the two propositions by <span class="math"></span><script type="math/tex">\iff</script>,
+simply because <span class="math"></span><script type="math/tex">x^2 \geq 0 \implies x \geq 0</script> is false.<div style="margin-top:20px"></div><span id="sec1.6"></span><h2 id="14bd838c-3f52-4f1e-b242-0d437c9222e2">1.6 What is a mathematical proof?</h2><div style="margin-top:20px"></div>Most professional mathematicians rarely think about the precise
+definition of a proof. During many years of training they have
+assimilated knowledge by experience. Therefore many proofs
+seem born out of witchcraft containing several magical
+devices.<div style="margin-top:20px"></div>However, many proofs appearing in
+respected mathematical journals, submitted by respected mathematicians, have turned out to contain
+errors. Recent developments in automated proof systems
+like <a href="https://en.wikipedia.org/wiki/Coq" target="_blank">Coq</a> show
+promise in checking proofs like for example the famous
+<a href="https://en.wikipedia.org/wiki/Four_color_theorem" target="_blank">four color theorem</a>.<div style="margin-top:20px"></div>Informally a proof of a proposition <span class="math"></span><script type="math/tex">q</script>, consists in arguing that an implication <span class="math"></span><script type="math/tex">p\implies q</script> is true by first assuming <span class="math"></span><script type="math/tex">p</script>. Usually this is done
+not only through one implication <span class="math"></span><script type="math/tex">p\implies q</script>, but through a series
+of intermediate implications
+<div class="math"></div><script type="math/tex; mode=display">
+p\implies q_1 \implies q_2 \implies q_3 \implies \cdots \implies q_N,
+</script>
+where the last proposition <span class="math"></span><script type="math/tex">q_N</script> is <span class="math"></span><script type="math/tex">q</script>. If <span class="math"></span><script type="math/tex">p</script> is true, this
+will constitute a proof that <span class="math"></span><script type="math/tex">q_N = q</script> is true. Just like in <a href=#equ1.2>(1.2)</a>,
+there is an imprecision here. Can you tell what it is?<div style="margin-top:20px"></div>In this section we will illustrate a simple mathematical proof of the
+proposition:
+<div class="math"></div><script type="math/tex; mode=display">
+\forall n\in \mathbb{N}: p(n)\implies p(n^2),
+</script>
+where <span class="math"></span><script type="math/tex">p(n) = (n\text{ is odd})</script> i.e., the square of an odd
+natural number has to be odd. This seems true for a first selection
+of examples: <span class="math"></span><script type="math/tex">3^2=9, 5^2=25, \dots</script>.<div style="margin-top:20px"></div>First we need to know what <span class="math"></span><script type="math/tex">p(n)</script> means. What does it mean
+exactly for a number to be odd? This means that it is
+not divisible by <span class="math"></span><script type="math/tex">2</script> or that there exists another
+natural number <span class="math"></span><script type="math/tex">a</script>, such that <span class="math"></span><script type="math/tex">n = 2 a + 1</script>. So
+<div class="math"></div><script type="math/tex; mode=display">
+p(n) = \exists a\in \mathbb{N}: n = 2 a + 1.
+</script>
+Therefore we need to show that
+<div class="math"></div><script type="math/tex; mode=display">
+\left(\exists a\in \mathbb{N}: n = 2 a + 1\right) \implies
+\left(\exists b\in \mathbb{N}: n^2 = 2 b + 1\right).
+</script>
+Notice that I had to change <span class="math"></span><script type="math/tex">a</script> into <span class="math"></span><script type="math/tex">b</script> in the second proposition above.
+The two variables are not the same: <span class="math"></span><script type="math/tex">a</script> is associated with <span class="math"></span><script type="math/tex">n</script> and
+<span class="math"></span><script type="math/tex">b</script> is associated with <span class="math"></span><script type="math/tex">n^2</script>.<div style="margin-top:20px"></div>Let us assume that <span class="math"></span><script type="math/tex">n = 2 a + 1</script>. Now we need to argue that <span class="math"></span><script type="math/tex">
+n^2 = 2 b + 1</script> for some <span class="math"></span><script type="math/tex">b\in \mathbb{N}</script>. You stare at this for a while
+and notice that we should use the assumption <span class="math"></span><script type="math/tex">n=2 a + 1</script> in
+computing <span class="math"></span><script type="math/tex">n^2</script>:
+<div class="math"></div><script type="math/tex; mode=display">
+n^2 = (2 a + 1)^2 = (2 a)^2 + 2 (2 a) + 1^2 = 4 a^2 + 4 a + 1 =
+2(2 a^2 + 2 a) + 1.
+</script>
+Thus, using our assumption we may conclude that if <span class="math"></span><script type="math/tex">n = 2 a + 1</script>, then
+<div class="math"></div><script type="math/tex; mode=display">
+n^2 = 2 b + 1,
+</script>
+where <span class="math"></span><script type="math/tex">b=2a^2+ 2 a</script>. This completes the proof.<div style="margin-top:20px"></div>The beauty here is that we have verified for all odd natural numbers
+that their square is odd. Not just a finite selection like
+<span class="math"></span><script type="math/tex">3, 7, 11, 13</script>.<div style="margin-top:20px"></div>Below I have given a very detailed walk through of the proof above. It
+examplifies how to write up the proof mixing words and mathematics. In
+many ways a proof is like a detailed argument in a court case, except
+that the rules of mathematics are universal. You need the absolute truth.<div style="margin-top:20px"></div><span id="env1.25"></span><div class="video" data-count="1.25">     
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/1tewESCAP2k?rel=0" frameborder="0" allowfullscreen></iframe>  
+</div><div style="margin-top:20px"></div><span id="sec1.6.1"></span><h3>1.6.1 Proof by contradiction</h3><div style="margin-top:20px"></div>A proposition <span class="math"></span><script type="math/tex">p</script> is either true or false. This seemingly obvious statement
+goes by the name of <span class="footnote">the law of excluded middle<span class="footnotetext">
+An application could be in proving the existence of irrational numbers <span class="math"></span><script type="math/tex">\alpha</script> and <span class="math"></span><script type="math/tex">\beta</script>, such that
+<span class="math"></span><script type="math/tex">\alpha^\beta</script> is rational. The law of excluded middle is here applied to the proposition
+<em><span class="math"></span><script type="math/tex">\sqrt{2}^{\sqrt{2}}</script> is rational</em>.</span></span>.<div style="margin-top:20px"></div>The law of excluded middle can be turned
+into a powerful proof technique called <em>proof by contradiction</em>.<div style="margin-top:20px"></div>Suppose we wish to establish that <span class="math"></span><script type="math/tex">p</script> is true. Then we turn things upside down by
+assuming that <span class="math"></span><script type="math/tex">p</script> is false i.e., that <span class="math"></span><script type="math/tex">\neg p</script> is true. If we then
+by logical deduction can show that
+<div class="math"></div><script type="math/tex; mode=display">
+\neg p \implies q,
+</script>
+for some proposition <span class="math"></span><script type="math/tex">q</script>, which is demonstrably false, then <span class="math"></span><script type="math/tex">\neg p</script> cannot be true (since
+true <span class="math"></span><script type="math/tex">\implies</script> false is false). Therefore <span class="math"></span><script type="math/tex">\neg p</script>
+must be false and <span class="math"></span><script type="math/tex">p</script> must be true. This technique is used all the time!<div style="margin-top:20px"></div><span id="env1.26"></span><a class="Exerciseno" data-count="1.26"></a><a href="#3fed8e27-b421-4283-bf11-43582c07e399" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=3fed8e27-b421-4283-bf11-43582c07e399 class = "collapse Exercise envbuttons">  
+We will give an example of a proof by contradiction using a previous exercise: show that
+the set
+<div class="math"></div><script type="math/tex; mode=display">
+S = \{x\in \mathbb{Q} \mid x > 0\}
+</script>
+does not have a first element. Recall the definition of a first element in
+the context of <span class="math"></span><script type="math/tex">S</script>: <span class="math"></span><script type="math/tex">x_0\in S</script> is a first element if 
+<div class="math"></div><script type="math/tex; mode=display">
+\forall x\in S: x_0 \leq x.
+</script>
+So if <span class="math"></span><script type="math/tex">x_0</script> is a first element in <span class="math"></span><script type="math/tex">S</script>, there cannot exist <span class="math"></span><script type="math/tex">x_1\in S</script>, such that
+<span class="math"></span><script type="math/tex">x_1 < x_0</script>.<div style="margin-top:20px"></div>The proof by contradiction  in this case, runs as follows. Assume that <span class="math"></span><script type="math/tex">S</script>
+has a first element <span class="math"></span><script type="math/tex">x_0 = \frac{p}{q}</script>. Then using <span class="math"></span><script type="math/tex">x_0</script> we can form
+<div class="math"></div><script type="math/tex; mode=display">
+x_1 = \frac{p}{q+1},
+</script>
+and you <span class="footnote">can check<span class="footnotetext">Check that <span class="math"></span><script type="math/tex">p q < p(q+1)</script>.</span></span> that <span class="math"></span><script type="math/tex">x_1\in S</script> and <span class="math"></span><script type="math/tex">x_1 < x_0</script> i.e., <span class="math"></span><script type="math/tex">x_0</script> is not a first
+element. So our assumption that <span class="math"></span><script type="math/tex">S</script> has a first element immediately leads
+to the conclusion that <span class="math"></span><script type="math/tex">S</script> does not have a first element. Therefore this
+assumption has to be false, and <span class="math"></span><script type="math/tex">S</script> cannot have a first element.
+</div><div style="margin-top:20px"></div><span id="env1.27"></span><a class="Exerciseno" data-count="1.27"></a><a href="#1326357f-bc32-45b3-9313-12a531570ca2" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=1326357f-bc32-45b3-9313-12a531570ca2 class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">q(n) = (n \text{ is even})</script>. Prove that
+<div class="math"></div><script type="math/tex; mode=display">
+\forall n\in \mathbb{N}: q(n^2) \implies q(n).
+</script>
+Suppose that
+<div class="math"></div><script type="math/tex; mode=display">
+\sqrt{2} = \frac{m}{n}.
+</script>
+Show that this implies <span class="math"></span><script type="math/tex">2 n^2 = m^2</script> and that <span class="math"></span><script type="math/tex">m</script> and <span class="math"></span><script type="math/tex">n</script> are even numbers.<div style="margin-top:20px"></div>Given the above, write up a precise proof that <span class="math"></span><script type="math/tex">\sqrt{2}\not\in \mathbb{Q}</script>
+using proof by contradiction.<div style="margin-top:20px"></div>You may wonder what is so special about rational numbers. Which property does
+<span class="math"></span><script type="math/tex">\sqrt{2}</script> break? You can explore this by looking at the decimal expansion of
+some fractions below.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+print("1/8 =", (1/8).n(digits=50))
+print("3/17 = ", (3/17).n(digits=50))
+print("5/7 = ", (5/7).n(digits=50))
+print("")
+print("sqrt(2) = ", sqrt(2).n(digits=100))
+</script></div><div style="margin-top:20px"></div>However, <span class="math"></span><script type="math/tex">\sqrt{2}</script> is an algebraic number being a root in the
+polynomial <span class="math"></span><script type="math/tex">x^2 - 2</script>. In general an algebraic number is a number,
+which is a root in a polynomial with coefficients in <span class="math"></span><script type="math/tex">\mathbb{Z}</script>.<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec1.6.2"></span><h3>1.6.2 Proof by induction</h3><div style="margin-top:20px"></div>A precocious Gauss proved the formula
+<span id="equ1.5"></span><div class="math"></div><script type="math/tex; mode=display">
+1 + 2 + \cdots + n = \frac{n(n+1)}{2}
+\tag{1.5}</script>
+at the age of seven diplaying remarkable ingenuity for his age. Lesser
+mortals usually use induction to prove this formula. Gauss was asked
+along with his classmates to compute the sum of all natural numbers
+<span class="math"></span><script type="math/tex">1, 2, \dots, 100</script>. Using his formula he quickly came up with the correct
+answer <span class="math"></span><script type="math/tex">5050</script>. His classmates had to work for the entire lesson.<div style="margin-top:20px"></div>Suppose that the formula in <a href=#equ1.5>(1.5)</a> is viewed as a
+proposition <span class="math"></span><script type="math/tex">p(n)</script>. To prove the formula we need to prove it for all
+natural numbers (you can easily see that <span class="math"></span><script type="math/tex">p(1)</script> and <span class="math"></span><script type="math/tex">p(2)</script> are true) i.e.,
+we need to prove
+<div class="math"></div><script type="math/tex; mode=display">
+\forall n\in \mathbb{N}: p(n).
+</script>
+An induction proof is a way of proving this statement by showing two things:
+<ol class="lowerroman"><li>
+  <span class="math"></span><script type="math/tex">p(1)</script>
+</li><li>
+  <span class="math"></span><script type="math/tex">\forall n\in \mathbb{N}: p(n)\implies p(n+1)</script>
+</li></ol>
+These two statements ensure that <span class="math"></span><script type="math/tex">p(1) \implies p(2)</script>. Therefore
+<span class="math"></span><script type="math/tex">p(2)</script> must be true, since we assumed <span class="math"></span><script type="math/tex">p(1)</script> true from the
+beginning. Similarly <span class="math"></span><script type="math/tex">p(2)\implies p(3)</script> ensures that <span class="math"></span><script type="math/tex">p(3)</script>
+is true. In fact we have proved <span class="math"></span><script type="math/tex">p(n)</script> for every <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script>
+using this technique. One can prove this using proof by
+contradiction and that every non-empty subset
+of <span class="math"></span><script type="math/tex">\mathbb{N}</script> has a first element (see subsection <a href=#sec1.4.1 class="labelref">1.4.1</a> and below).<div style="margin-top:20px"></div><a href="#6566aaf5-d2cc-47e2-817c-4e16e9d7d7c2" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=6566aaf5-d2cc-47e2-817c-4e16e9d7d7c2 class = "collapse Proof envbuttons">    
+Suppose by contradiction that there exists <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script>, such that
+<span class="math"></span><script type="math/tex">p(n)</script> is false. Then the subset
+<div class="math"></div><script type="math/tex; mode=display">
+S = \{n\in \mathbb{N} \mid \neg p(n)\}\subseteq \mathbb{N}
+</script>
+is non-empty. Therefore it has a first element <span class="math"></span><script type="math/tex">n_0\in S</script>. 
+Here <span class="math"></span><script type="math/tex">n_0 > 1</script>, since <span class="math"></span><script type="math/tex">p(1)</script> is assumed to be true. So we
+know that <span class="math"></span><script type="math/tex">p(n_0-1)</script> is true and that
+<span class="math"></span><script type="math/tex">p(n_0-1)\implies p(n_0)</script> is true. But the latter
+implication is a contradiction, since true implies
+false is false.
+  </div><div style="margin-top:20px"></div>Let us see how an induction proof plays out in the above example
+with the statement <span class="math"></span><script type="math/tex">p(n)</script> that
+<span id="equ1.6"></span><div class="math"></div><script type="math/tex; mode=display">
+1 + 2 + \cdots + n = \frac{n(n+1)}{2}.
+\tag{1.6}</script>
+Clearly <span class="math"></span><script type="math/tex">p(1)</script> is true. We need to prove <span class="math"></span><script type="math/tex">p(n)\implies p(n+1)</script>, so
+we assume that <span class="math"></span><script type="math/tex">p(n)</script> holds i.e., that <a href=#equ1.6>(1.6)</a> is true.
+Then we may add <span class="math"></span><script type="math/tex">n+1</script> to both sides of <a href=#equ1.6>(1.6)</a> to get
+<div class="math"></div><script type="math/tex; mode=display">
+1 + 2 + \cdots + n + (n+1) = \frac{n(n+1)}{2} + (n+1).
+</script>
+Here the right hand side can be rewritten as
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{n(n+1) + 2(n+1)}{2} = \frac{(n+1)(n+2)}{2},
+</script>
+which is exactly what we want. This is the conjectured formula for
+the sum of the numbers <span class="math"></span><script type="math/tex">1, 2, \dots, n, n+1</script>. Therefore
+we have proved that <span class="math"></span><script type="math/tex">p(n)\implies p(n+1)</script> and the induction
+proof is complete.<div style="margin-top:20px"></div><span id="env1.28"></span><div class="example" data-count="1.28">     
+  For a real number <span class="math"></span><script type="math/tex">r\neq 1</script>, the extremely useful formula
+  <span id="equ1.7"></span><div class="math"></div><script type="math/tex; mode=display">
+  1 + r + \cdots + r^n = \frac{1 - r^{n+1}}{1-r}
+  \tag{1.7}</script>
+  holds. Let us prove this formula by induction. For <span class="math"></span><script type="math/tex">n=1</script> this amounts to the identity
+  <div class="math"></div><script type="math/tex; mode=display">
+  1 + r = \frac{1-r^2}{1-r},
+  </script>
+  which is true since <span class="math"></span><script type="math/tex">1-r^2 = (1+r)(1-r)</script>. We let <span class="math"></span><script type="math/tex">p(n)</script> denote
+  the identity in <a href=#equ1.7>(1.7)</a>. We have seen that <span class="math"></span><script type="math/tex">p(1)</script> is true. The induction step
+  consists in proving <span class="math"></span><script type="math/tex">p(n)\implies p(n+1)</script>. We can prove this
+  by adding <span class="math"></span><script type="math/tex">r^{n+1}</script> to the right hand side in <a href=#equ1.7>(1.7)</a>:
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{1 - r^{n+1}}{1-r} + r^{n+1} = \frac{1 - r^{n+1} + (1-r) r^{n+1}}{1-r} = \frac{1 - r^{n+2}}{1-r}.
+  </script>
+<a href="#ecec5ba3-3f3d-4e5b-9987-6c82c30707af" class ="btn btn-default" data-toggle="collapse">Real life application</a><div id=ecec5ba3-3f3d-4e5b-9987-6c82c30707af class="collapse">
+    In order to pay for a house you borrow <span class="math"></span><script type="math/tex">P</script> DKK at an interest of
+    <span class="math"></span><script type="math/tex">r</script> per year. You want to pay off your debt over <span class="math"></span><script type="math/tex">N</script> years by
+    paying a fixed amount each year. How much is the fixed yearly
+    amount you need to pay?<div style="margin-top:20px"></div>Let us analyze the setup: suppose that the fixed yearly amount
+    is <span class="math"></span><script type="math/tex">Y</script>. We will find an equation giving us <span class="math"></span><script type="math/tex">Y</script> in terms of
+    <span class="math"></span><script type="math/tex">P, N</script> and <span class="math"></span><script type="math/tex">r</script>. Put <span class="math"></span><script type="math/tex">q = 1+ r</script>.<div style="margin-top:20px"></div>After one year you owe
+    <div class="math"></div><script type="math/tex; mode=display">
+    q P - Y.
+    </script>
+    After two years you owe
+    <div class="math"></div><script type="math/tex; mode=display">
+    q(q P - Y) - Y.
+    </script>
+    After three years you owe
+    <div class="math"></div><script type="math/tex; mode=display">
+    q ( q ( q P - Y) - Y) - Y.
+    </script>
+    In general after <span class="math"></span><script type="math/tex">n</script> years you owe
+    <div class="math"></div><script type="math/tex; mode=display">
+    q^n P - Y (1 + q + \cdots + q^{n-1}).
+    </script>
+    Since we want to be debt free after <span class="math"></span><script type="math/tex">N</script> years, the yearly payment will have to satisfy
+    <div class="math"></div><script type="math/tex; mode=display">
+    q^N P = Y ( 1 + q + \cdots + q^{N-1}).
+    </script>
+    By the formula <a href=#equ1.7>(1.7)</a>, we get
+    <div class="math"></div><script type="math/tex; mode=display">
+    q^N P = Y \frac{1-q^N}{1-q}.
+    </script>
+    Here <span class="math"></span><script type="math/tex">Y</script> can be isolated giving the formula
+    <div class="math"></div><script type="math/tex; mode=display">
+    Y = \frac{r P}{1 - \left(\frac{1}{1+r}\right)^N}.
+    </script>
+    With the current (August 2020) interest rate around one percent, you pay a fixed monthly
+    amount of around 3200 DKK for borrowing one million DKK over <span class="math"></span><script type="math/tex">30</script> years.
+  </div>
+</div><div style="margin-top:20px"></div><span id="env1.29"></span><a class="Exerciseno" data-count="1.29"></a><a href="#08d02d52-f5bf-4d26-abbc-daf6f033316d" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=08d02d52-f5bf-4d26-abbc-daf6f033316d class = "collapse Exercise envbuttons">  
+Prove by induction that the sum of the first <span class="math"></span><script type="math/tex">n</script> odd numbers is
+given by the formula
+<div class="math"></div><script type="math/tex; mode=display">
+1 + 3 + \cdots + (2 n - 1) = n^2,
+</script>
+i.e., for <span class="math"></span><script type="math/tex">n=5</script> we have
+<div class="math"></div><script type="math/tex; mode=display">
+1 + 3 + 5 + 7 + 9 = 25.
+</script>
+</div><div style="margin-top:20px"></div><span id="env1.30"></span><a class="Exerciseno" data-count="1.30"></a><a href="#9ff2d1ab-1f84-4e98-b9f9-e1046e48bc53" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=9ff2d1ab-1f84-4e98-b9f9-e1046e48bc53 class = "collapse Exercise envbuttons">  
+Prove by induction that
+<div class="math"></div><script type="math/tex; mode=display">
+1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n+1)(2n + 1)}{6}.
+</script>, 
+</div><div style="margin-top:20px"></div><span id="env1.31"></span><a class="Exerciseno" data-count="1.31"></a><a href="#a0cb0855-3d81-42ec-b52d-993e8bab7495" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=a0cb0855-3d81-42ec-b52d-993e8bab7495 class = "collapse Exercise envbuttons">  
+Prove using the idea of induction that
+<div class="math"></div><script type="math/tex; mode=display">
+2^n < n!
+</script>
+for <span class="math"></span><script type="math/tex">n\geq 4</script>.
+</div><div style="margin-top:20px"></div>The last exercise related to induction concerns the famous <a href="https://en.wikipedia.org/wiki/Pigeonhole_principle" target="_blank">pigeonhole principle</a>. The statement itself looks innocent, well almost ridiculous, but it is very <a href="https://mindyourdecisions.com/blog/2008/11/25/16-fun-applications-of-the-pigeonhole-principle/" target="_blank">powerful</a>. Even the go-to website 
+<a href="https://mathoverflow.net/" target="_blank">mathoverflow</a> for research mathematicians has 
+a quite nice <a href="https://mathoverflow.net/questions/4279/interesting-applications-of-the-pigeonhole-principle" target="_blank">thread</a> 
+about this.<div style="margin-top:20px"></div><span id="env1.32"></span><a class="Exerciseno" data-count="1.32"></a><a href="#aa5eff89-a08d-4cbe-8a28-b251ae6cb910" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=aa5eff89-a08d-4cbe-8a28-b251ae6cb910 class = "collapse Exercise envbuttons">  
+Prove the following by induction on <span class="math"></span><script type="math/tex">m</script>: if <span class="math"></span><script type="math/tex">n</script> items are put into <span class="math"></span><script type="math/tex">m</script> containers and 
+<span class="math"></span><script type="math/tex">n > m</script>, then at least one container must contain more than one item.
+</div><div style="margin-top:20px"></div><span id="sec1.7"></span><h2 id="1a4701cf-eb99-4da4-86d1-3072db2fdc87">1.7 The concept of a function</h2><div style="margin-top:20px"></div>A function is a crucial concept in mathematics. In Sage (actually python here) a simple function can be
+programmed like<div style="margin-top:20px"></div><p><pre>
+def f(n): return(n+1) 
+</pre></p><div style="margin-top:20px"></div>The code above seems to take a number and returns the number plus one. This (f) is in fact a function 
+taking as <em>input</em> a number and returning as <em>output</em> the number plus one. Notice that
+we do not even know which numbers we are talking about here. In mathematics we need to have
+a more precise notion of a function. <div style="margin-top:20px"></div>Mathematically a function <span class="math"></span><script type="math/tex">f</script> takes values from a set <span class="math"></span><script type="math/tex">S</script> and returns values in a set <span class="math"></span><script type="math/tex">T</script>. In details,
+it is denoted <span class="math"></span><script type="math/tex">f: S\rightarrow T</script> and the value associated with <span class="math"></span><script type="math/tex">s\in S</script> is denoted <span class="math"></span><script type="math/tex">f(s)\in T</script>.<div style="margin-top:20px"></div>The above python function could more formally be denoted as <span class="math"></span><script type="math/tex">f: \mathbb{Z}\rightarrow \mathbb{Z}</script> with
+<span class="math"></span><script type="math/tex">f(n) = n+1</script> if we are dealing with the integers, but we cannot tell from the code.<div style="margin-top:20px"></div><a href="#cc8d1c89-63f9-49a7-8fd0-a6e730616d57" class ="btn btn-default" data-toggle="collapse">Well, to be fair ...</a><div id=cc8d1c89-63f9-49a7-8fd0-a6e730616d57 class="collapse">
+To be completely fair, it is possible from Python version 3.5 to add type annotations to functions, so that we could write
+<p><pre>
+def f(n: int) -> int: return(n+1)
+</pre></p>
+in the Python code to state that the function should take values in the integers and return integers.
+</div><div style="margin-top:20px"></div>If you want the  super precise mathematical definition of a function, I
+will give it here.  A function <span class="math"></span><script type="math/tex">f: S\rightarrow T</script> is a subset
+<span class="math"></span><script type="math/tex">f\subseteq S\times T</script>, such that
+<span class="math"></span><script type="math/tex">(s, t_1)\in f \land (s, t_2)\in f \implies t_1 = t_2</script>. In words it states that a
+function <span class="math"></span><script type="math/tex">f: S\rightarrow T</script> is a subset <span class="math"></span><script type="math/tex">f</script> of <span class="math"></span><script type="math/tex">S\times T</script>, containing pairs
+having only one second coordinate for every first coordinate.<div style="margin-top:20px"></div>The everyday working definition of a
+function is more intuitive: a machine taking input from some set
+<span class="math"></span><script type="math/tex">S</script> and giving output in some set <span class="math"></span><script type="math/tex">T</script>. The uniqueness of the output
+is encoded in the mathematical definition of a function.<div style="margin-top:20px"></div><span id="env1.33"></span><a class="Exerciseno" data-count="1.33"></a><a href="#9b31f6d7-e519-4886-8bd5-8197db08b6a8" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=9b31f6d7-e519-4886-8bd5-8197db08b6a8 class = "collapse Exercise envbuttons">  
+Write down precisely how the truth table for <span class="math"></span><script type="math/tex">p\implies q</script> may
+be expressed in terms of a function <span class="math"></span><script type="math/tex">f: S\rightarrow T</script>. What are the sets <span class="math"></span><script type="math/tex">S</script> and <span class="math"></span><script type="math/tex">T</script> in this case?
+</div><div style="margin-top:20px"></div><span id="sec1.7.1"></span><h3>1.7.1 Composition of functions</h3><div style="margin-top:20px"></div>Given two functions <span class="math"></span><script type="math/tex">f: S\rightarrow T</script> and <span class="math"></span><script type="math/tex">g: U\rightarrow V</script>, where
+<span class="math"></span><script type="math/tex">V\subseteq S</script>, we define a new function <span class="math"></span><script type="math/tex">f\circ g: U \rightarrow T</script> by
+<div class="math"></div><script type="math/tex; mode=display">
+(f\circ g)(u) = f(g(u)).
+</script>
+This notion calls for some reflection. We have a total of four sets
+in this definition: <span class="math"></span><script type="math/tex">U, V, S</script> and <span class="math"></span><script type="math/tex">T</script> and, not to forget, the condition that
+<span class="math"></span><script type="math/tex">V\subseteq S</script>. If this last condition was not satisfied it would be
+meaningless to apply the function <span class="math"></span><script type="math/tex">f</script> to <span class="math"></span><script type="math/tex">g(u)</script>.
+I hope the diagram below helps the
+understanding.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/compositefunction.svg" ></div><div style="margin-top:20px"></div><span id="env1.34"></span><div class="remark" data-count="1.34">     
+  The concept of a function is powerful and underlies functional programming in computer science: every computation can be realized as applying a composition of functions to an argument. This is examplified in the computer language
+  <a href="https://www.haskell.org/" target="_blank">Haskell</a>.
+  </div><div style="margin-top:20px"></div><span id="env1.35"></span><a class="Exerciseno" data-count="1.35"></a><a href="#12562142-c728-4f3e-b69c-b5086eac6622" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=12562142-c728-4f3e-b69c-b5086eac6622 class = "collapse Exercise envbuttons">  
+Consider <span class="math"></span><script type="math/tex">f: \mathbb{R}\rightarrow \mathbb{R}^2</script> and <span class="math"></span><script type="math/tex">g: \mathbb{R}^2\rightarrow \mathbb{R}</script> given by
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  f(t) &= (t^2, t^3)\\
+  g((x, y)) &= \cos(x y) + x \sin(x + y).
+\end{aligned}</script>
+What is <span class="math"></span><script type="math/tex">(g\circ f)(t)</script> as a function from <span class="math"></span><script type="math/tex">\mathbb{R}</script> to <span class="math"></span><script type="math/tex">\mathbb{R}</script> in terms of <span class="math"></span><script type="math/tex">t</script>?
+</div><div style="margin-top:20px"></div><span id="sec1.7.2"></span><h3>1.7.2 Neural networks</h3><div style="margin-top:20px"></div>Having defined functions and composition of functions, we can deflate
+the term (deep) neural network, which is often clouded in
+magic and mystery.<div style="margin-top:20px"></div>A <em>neural network</em> is a special case of a function
+<span id="equ1.8"></span><div class="math"></div><script type="math/tex; mode=display">
+f: A\rightarrow B,
+\tag{1.8}</script>
+where <span class="math"></span><script type="math/tex">A\subseteq \mathbb{R}^m</script> and <span class="math"></span><script type="math/tex">B\subseteq \mathbb{R}^n</script>. Neural networks are
+often compositions of many intermediate functions called
+(hidden) layers.<div style="margin-top:20px"></div>A function such as <a href=#equ1.8>(1.8)</a> can
+be written
+<div class="math"></div><script type="math/tex; mode=display">
+f(x_1, \dots, x_m) = \left(
+f_1(x_1, \dots, x_m), \dots, f_n(x_1, \dots, x_m)\right),
+</script>
+where <span class="math"></span><script type="math/tex">f_1, \dots, f_n</script> are functions <span class="math"></span><script type="math/tex">A\rightarrow \mathbb{R}</script>.<div style="margin-top:20px"></div>In a neural
+network the functions <span class="math"></span><script type="math/tex">f_1, f_2, \dots, f_n</script> are viewed as neurons. Depending on their
+input they either fire or do not fire a signal. Classically this is
+modelled by the <a href="https://en.wikipedia.org/wiki/Perceptron" target="_blank">perceptron</a>,
+which is a function <span class="math"></span><script type="math/tex">p:\mathbb{R}^n\rightarrow \mathbb{R}</script> of the form
+<div class="math"></div><script type="math/tex; mode=display">
+p(x_1, \dots, x_n) =
+\begin{cases}
+  1 &\text{if } w_1 x_1 + \cdots + w_n x_n > b\\
+  0 &\text{if } w_1 x_1 + \cdots + w_n x_n \leq b
+\end{cases}
+</script>  
+  for fixed numbers <span class="math"></span><script type="math/tex">w_1, \dots, w_n</script> (called weights) and a number <span class="math"></span><script type="math/tex">b</script> (called the threshold).
+  If the weighted sum <span class="math"></span><script type="math/tex">w_1 x_1 + \cdots + w_n x_n</script> is above the threshold, the neuron
+  fires (returns the value <span class="math"></span><script type="math/tex">1</script>). If not it does not fire (returns the value <span class="math"></span><script type="math/tex">0</script>).<div style="margin-top:20px"></div><div class="centerimg"><img src="img/perceptron.svg" ></div><div style="margin-top:20px"></div><span id="env1.36"></span><a class="Exerciseno" data-count="1.36"></a><a href="#ffa4c005-d3e9-443d-a34d-807467109b80" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ffa4c005-d3e9-443d-a34d-807467109b80 class = "collapse Exercise envbuttons">  
+  Consider the three perceptrons <span class="math"></span><script type="math/tex">p_1, p_2, p_3: \mathbb{R}^2\rightarrow \mathbb{R}</script>, where
+  <div class="math"></div><script type="math/tex; mode=display">
+p_1(x, y) =
+\begin{cases}
+  1 &\text{if } -x-y > -\frac{3}{2}\\
+  0 &\text{if } -x-y \leq -\frac{3}{2}
+\end{cases},
+\qquad
+p_2(x, y) =
+\begin{cases}
+  1 &\text{if } x + y > \frac{1}{2}\\
+  0 &\text{if } x + y \leq \frac{1}{2}
+\end{cases},
+</script>
+and
+<div class="math"></div><script type="math/tex; mode=display">
+p_3(x, y) =
+\begin{cases}
+  1 &\text{if } x + y > \frac{3}{2}\\
+  0 &\text{if } x + y \leq \frac{3}{2}
+\end{cases}.
+</script>
+Let <span class="math"></span><script type="math/tex">f(x, y) = p_3 (p_1(x, y), p_2(x, y))</script>. Then <span class="math"></span><script type="math/tex">f</script> is
+a composite function <span class="math"></span><script type="math/tex">f = g\circ h</script> of two functions <span class="math"></span><script type="math/tex">h: \mathbb{R}^2\rightarrow \mathbb{R}^2</script>
+and <span class="math"></span><script type="math/tex">g: \mathbb{R}^2\rightarrow \mathbb{R}</script>. Write down these functions.<div style="margin-top:20px"></div>Compute
+<span class="math"></span><script type="math/tex">f(0, 0), f(1, 0), f(0, 1)</script> and <span class="math"></span><script type="math/tex">f(1, 1)</script>.<div style="margin-top:20px"></div>Relate the perceptrons <span class="math"></span><script type="math/tex"> p_1 </script> and <span class="math"></span><script type="math/tex"> p_2 </script> to the illustration
+below. What do you think the red and blue line illustrate?  What does
+it mean that a dot is solid compared to hollow? What is special
+about points between the red and blue lines?  Try to relate <span class="math"></span><script type="math/tex">f(0,0),
+f(1,0), f(0,1)</script> and <span class="math"></span><script type="math/tex">f(1,1)</script> to the illustration.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/whkperceptron.svg" ></div><div style="margin-top:20px"></div>(Illustration courtesy of William Heyman Krill).<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env1.37"></span><a class="Exerciseno" data-count="1.37"></a><a href="#79b287d7-0128-4dcd-b192-3c4b36825bdc" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=79b287d7-0128-4dcd-b192-3c4b36825bdc class = "collapse Exercise envbuttons">  
+  Give weights <span class="math"></span><script type="math/tex">w_1, w_2</script> and a threshold <span class="math"></span><script type="math/tex">b</script> for a perceptron <span class="math"></span><script type="math/tex">p:\mathbb{R}^2\rightarrow \mathbb{R}</script> that computes
+  the logical and function <span class="math"></span><script type="math/tex">\land</script> i.e, <span class="math"></span><script type="math/tex">p</script> must satisfy
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    p(0,0) &= 0\\
+    p(1, 0) &= 0\\
+    p(0,1) &= 0\\
+     p(1, 1) &= 1.
+  \end{aligned}</script>
+  Do the same for the logical or function <span class="math"></span><script type="math/tex">\lor</script>.
+  </div><div style="margin-top:20px"></div>The output of one neuron can be used as input for other neurons in a potentially extremely complicated network:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/deepneural.png" ></div><div style="margin-top:20px"></div>The diagram above represents a neural network, which is a function <span class="math"></span><script type="math/tex">\mathbb{R}^8\rightarrow \mathbb{R}^4</script>. This function
+  is actually a composition (represented by the hidden layers <span class="math"></span><script type="math/tex">1</script>, <span class="math"></span><script type="math/tex">2</script>, <span class="math"></span><script type="math/tex">3</script> and the output layer):
+  <div class="math"></div><script type="math/tex; mode=display">
+  \mathbb{R}^8\rightarrow \mathbb{R}^9 \rightarrow \mathbb{R}^9 \rightarrow \mathbb{R}^9 \rightarrow \mathbb{R}^4.
+  </script>
+  All of the nodes above, except the ones in the input layer, represent perceptrons.<div style="margin-top:20px"></div><span id="env1.38"></span><a class="Exerciseno" data-count="1.38"></a><a href="#6b85c34d-f515-403f-b284-132577ba06eb" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6b85c34d-f515-403f-b284-132577ba06eb class = "collapse Exercise envbuttons">   
+  Is it possible to find a perceptron <span class="math"></span><script type="math/tex">p:\mathbb{R}^2\rightarrow \mathbb{R}</script>, such that
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    p(0,0) &= 0\\
+    p(1, 0) &= 1\\
+    p(0,1) &= 1\\
+     p(1, 1) &= 0?
+  \end{aligned}</script>
+  What if you are allowed to use a neural network composed as <span class="math"></span><script type="math/tex">\mathbb{R}^2\rightarrow \mathbb{R}^2\rightarrow \mathbb{R}</script> (one hidden layer)
+  <div class="centerimg"><img src="img/xor.svg" ></div>?
+  </div><div style="margin-top:20px"></div>Mathematically there is no reason to use special functions such as perceptrons in each node. One also uses
+  a (smooth) version of the perceptron employing the <a href="https://en.wikipedia.org/wiki/Sigmoid_function" target="_blank">sigmoid function</a>.
+  With the notation above, this function is given as
+  <div class="math"></div><script type="math/tex; mode=display">
+  \sigma(x_1, \dots, x_n) = \frac{1}{1 + e^{-(w_1 x_1 + \cdots + w_n x_n) - b}},
+  </script><div style="margin-top:20px"></div></div></body>

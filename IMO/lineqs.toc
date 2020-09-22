@@ -1,0 +1,9 @@
+chapterno, @2@
+chapter, @Linear equations@, 6080b7d7-9dae-4421-bf75-dc2ee04432d9
+section, @One linear equation with one unknown@, 6a7dde4b-d4b2-4e24-85f5-fa85cdd246c8
+section, @Several linear equations with several unknowns@, 5d725c6c-5ab6-404c-be38-b7941c0c131f
+section, @Gauss elimination@, f72100cb-475f-4e9c-9d80-d5bf44184aaf
+section, @Polynomials@, c634b806-2ed8-4e90-bbc0-74fd5d06f66c
+section, @Applications to polynomials@, 5961c502-8b65-46d3-a0c8-7a7bc5a0d038
+section, @Shamir secret sharing@, ff2faea1-ff75-429b-9359-c3b0f606fcb3
+section, @Fitting data@, d38dc3a6-f5ad-4878-84ab-288033cc61d1

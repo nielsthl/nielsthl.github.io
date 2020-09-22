@@ -1,0 +1,1370 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  languages : ["sage", "python"],
+  hide : ["permalink"] 
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+
+
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#7a977ed6-1bf8-499c-b7fc-506c35756c5e"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#ff7143e4-cd82-4d70-9ed5-2479680bf96a">1.1 Computer algebra</a></li><li><a href="intro.html#39de153f-aa5e-4b65-9ed2-d14e6d319376">1.2 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#6d75d6a4-df56-4418-9e4e-6a6a4b686ea0">1.3 Sets</a></li><li><a href="intro.html#6840d0bf-1199-4802-81ce-b10388939d82">1.4 Ordering numbers</a></li><li><a href="intro.html#890c2aa3-4cb2-43fc-aec7-c38196270893">1.5 Propositional logic</a></li><li><a href="intro.html#14bd838c-3f52-4f1e-b242-0d437c9222e2">1.6 What is a mathematical proof?</a></li><li><a href="intro.html#1a4701cf-eb99-4da4-86d1-3072db2fdc87">1.7 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#6080b7d7-9dae-4421-bf75-dc2ee04432d9"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#6a7dde4b-d4b2-4e24-85f5-fa85cdd246c8">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#5d725c6c-5ab6-404c-be38-b7941c0c131f">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#f72100cb-475f-4e9c-9d80-d5bf44184aaf">2.3 Gauss elimination</a></li><li><a href="lineqs.html#c634b806-2ed8-4e90-bbc0-74fd5d06f66c">2.4 Polynomials</a></li><li><a href="lineqs.html#5961c502-8b65-46d3-a0c8-7a7bc5a0d038">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#ff2faea1-ff75-429b-9359-c3b0f606fcb3">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#d38dc3a6-f5ad-4878-84ab-288033cc61d1">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#ac78de01-faf4-4003-a06d-93bd0a049be0"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#4852f3d9-8469-484e-b7ad-fd763bb22be8">3.1 Matrices</a></li><li><a href="matrices.html#ed992999-6b80-44f7-9d04-5d6a54a786eb">3.2 Linear maps</a></li><li><a href="matrices.html#417e6feb-e87a-4e49-b109-69c0efc11f20">3.3 Matrix multiplication</a></li><li><a href="matrices.html#f1ee71a3-f246-4de5-a059-0857e89b250b">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#3ba68277-54c2-4417-8873-580221bf227c">3.5 The inverse matrix</a></li><li><a href="matrices.html#edae857a-385d-4193-a2ca-daff507009d4">3.6 The transposed matrix</a></li><li><a href="matrices.html#839cd3f2-52bf-43af-8af7-daa31bb1c266">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#60e76dc3-eb30-41ba-8542-172ddc1bc2a7"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#a9f6c300-8b17-4ff9-9584-14821bbe7c43">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#14942bc9-a19b-4efd-8a3a-12cf8cb0fe43">4.2 General definition</a></li><li><a href="whatisopt.html#29d4e276-f39d-4a07-a214-417d5dba2e09">4.3 Convex optimization</a></li><li><a href="whatisopt.html#20a70385-47c1-4b71-85b2-4baa80cba38d">4.4 Linear optimization</a></li><li><a href="whatisopt.html#63315831-1379-4a83-bc56-6b8b8eef2150">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#0ab99069-0424-4ec8-a0ba-5a8067629c6e">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#15dff35d-8cda-4b25-8751-6a59c8bc55a3"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#2e88a7de-ca93-46a4-8202-aa3c0add0f69">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#367157fb-a772-41c1-be77-fdd8d3e0cc1f">5.2 Higher dimensions</a></li><li><a href="euclidean.html#65523d91-2925-4c74-91f9-a5258c9f1af3">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#2bec1a82-9ba3-435d-bb8a-cea237b3fcd3">5.4 Sequences and limits</a></li><li><a href="euclidean.html#1a1ad702-0af7-45ef-abe2-b212777e81d9">5.5 Continuous functions</a></li><li><a href="euclidean.html#bae8f95a-2d6c-495a-a4d0-10f958e2ca12">5.6 Special subsets</a></li><li><a href="euclidean.html#cbd12a77-2916-4aca-aa99-246e17727e7c">5.7 The perceptron algorithm</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><h1 id="15dff35d-8cda-4b25-8751-6a59c8bc55a3">5<span style="float:right;">Euclidean vector spaces</span></h1><div style="margin-top:20px"></div>Big data are made up of many numbers in data sets. Such data sets can
+be represented as vectors in a high dimensional euclidean vector
+space. A vector is nothing but a list of numbers, but we need to talk
+mathematically about the size of a vector and perform operations on
+vectors. The purpose of this chapter is to set the stage for this,
+especially by introducing the dot product (or inner product) for
+vectors. Having a dot product is immensely useful and we give several
+applications like linear regression and the perceptron learning algorithm<div style="margin-top:20px"></div>In the last part of the chapter rudimentary basics of analysis
+are introduced like sequences, continuous functions, open, closed
+and compact subsets. Some results will in this context only
+be quoted and not proved.<div style="margin-top:20px"></div><span id="sec5.1"></span><h2 id="2e88a7de-ca93-46a4-8202-aa3c0add0f69">5.1 Vectors in the plane</h2><div style="margin-top:20px"></div>The dot product (or inner product) between two vectors <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^2</script> is
+given by
+<span id="equ5.1"></span><div class="math"></div><script type="math/tex; mode=display">
+u\cdot v = x_1 x_2 + y_1 y_2,
+\tag{5.1}</script>
+where
+<span id="equ5.2"></span><div class="math"></div><script type="math/tex; mode=display">
+u = \begin{pmatrix} x_1 \\ y_1 \end{pmatrix}\qquad\text{and}\qquad
+v = \begin{pmatrix} x_2 \\ y_2 \end{pmatrix}.
+\tag{5.2}</script>
+We may also interpret
+<span class="math"></span><script type="math/tex">u</script> and <span class="math"></span><script type="math/tex">v</script>  as <span class="math"></span><script type="math/tex">2\times 1</script> matrices (or column vectors).
+Then the dot product in
+<a href=#equ5.1>(5.1)</a> may be realized as the matrix product:
+<div class="math"></div><script type="math/tex; mode=display">
+u\cdot v = u^T v.
+</script>
+The length or <em>norm</em> of the vector <span class="math"></span><script type="math/tex">u\in \mathbb{R}^2</script> is given by
+<div class="math"></div><script type="math/tex; mode=display">
+\left\vert u \right\vert = \sqrt{u\cdot u} = \sqrt{u^T u} = \sqrt{x_1^2 + y_1^2}.
+</script>
+This follows from the <a href="https://en.wikipedia.org/wiki/Pythagorean_theorem" target="_blank">Pythagorean theorem</a>:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/Pythagoras.svg" ></div><div style="margin-top:20px"></div>Also, the cosine of the angle <span class="math"></span><script type="math/tex">\theta</script> between <span class="math"></span><script type="math/tex">u</script> and <span class="math"></span><script type="math/tex">v</script> is given by
+<div class="math"></div><script type="math/tex; mode=display">
+\cos(\theta) = \frac{u\cdot v}{\left\vert u \right\vert\left\vert v \right\vert}\qquad\text{or}\qquad u \cdot v = \left\vert u \right\vert \left\vert v \right\vert \cos(\theta).
+</script>
+We will not go into this formula. It is a byproduct of considering the projection a vector on
+another vector (see Exercise <a href="euclidean.html#env5.4">5.4</a>).<div style="margin-top:20px"></div><span id="sec5.2"></span><h2 id="367157fb-a772-41c1-be77-fdd8d3e0cc1f">5.2 Higher dimensions</h2><div style="margin-top:20px"></div>The notions of dot product, norm and the formula for cosine of the
+angle generalize immediately to vectors in dimensions
+higher than two.<div style="margin-top:20px"></div>We denote the set of column vectors with <span class="math"></span><script type="math/tex">d</script> rows
+by <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> and call it the euclidean vector space of
+dimension <span class="math"></span><script type="math/tex">d</script>. An element <span class="math"></span><script type="math/tex">v\in \mathbb{R}^d</script> is called a vector and it has
+the form (column vector with <span class="math"></span><script type="math/tex">d</script> entries)
+<div class="math"></div><script type="math/tex; mode=display">
+v =
+\begin{pmatrix}
+  x_1 \\
+  x_2 \\
+  \vdots
+  \\
+  x_d
+\end{pmatrix}.
+</script><div style="margin-top:20px"></div>A vector in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> is a model for a data set in real life. A collection
+of <span class="math"></span><script type="math/tex">d</script> numbers, which could signify <span class="math"></span><script type="math/tex">d</script> measurements. You will see
+an example of this below, where a vector represents a data set
+counting words in a string.<div style="margin-top:20px"></div>Being column vectors, vectors in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> can be added and multiplied by
+numbers:
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  x_1 \\
+  x_2 \\
+  \vdots
+  \\
+  x_d
+\end{pmatrix} + 
+\begin{pmatrix}
+  y_1 \\
+  y_2 \\
+  \vdots
+  \\
+  y_d
+\end{pmatrix}
+=
+\begin{pmatrix}
+  x_1 + y_1 \\
+  x_2 + y_2\\
+  \vdots
+  \\
+  x_d + y_d
+\end{pmatrix}\qquad\qquad
+\lambda
+\begin{pmatrix}
+  x_1 \\
+  x_2 \\
+  \vdots
+  \\
+  x_d
+\end{pmatrix} =
+\begin{pmatrix}
+  \lambda x_1 \\
+  \lambda x_2 \\
+  \vdots
+  \\
+  \lambda x_d
+\end{pmatrix}.
+</script><div style="margin-top:20px"></div>The dot product generalizes as follows to higher dimensions.<div style="margin-top:20px"></div><span id="sec5.2.1"></span><h3>5.2.1 Dot product and norm</h3><div style="margin-top:20px"></div><span id="env5.1"></span><div class="definition" data-count="5.1">     
+The dot product of
+<div class="math"></div><script type="math/tex; mode=display">
+u =
+\begin{pmatrix}
+  x_1 \\
+  x_2 \\
+  \vdots
+  \\
+  x_d
+\end{pmatrix}\qquad
+\text{and}
+\qquad
+u =
+\begin{pmatrix}
+  y_1 \\
+  y_2 \\
+  \vdots
+  \\
+  y_d
+\end{pmatrix}
+</script>
+is defined by
+<span id="equ5.3"></span><div class="math"></div><script type="math/tex; mode=display">
+u\cdot v = u^T v = x_1 y_1 + x_2 y_2 + \cdots + x_d y_d.
+\tag{5.3}</script><div style="margin-top:20px"></div>The norm of <span class="math"></span><script type="math/tex">u\in \mathbb{R}^d</script> is defined by
+<span id="equ5.4"></span><div class="math"></div><script type="math/tex; mode=display">
+\left\vert u \right\vert = \sqrt{u\cdot u} = \sqrt{x_1^2 + x_2^2 + \cdots + x_d^2}.
+\tag{5.4}</script><div style="margin-top:20px"></div>A vector <span class="math"></span><script type="math/tex">e\in \mathbb{R}^d</script> with <span class="math"></span><script type="math/tex">\left\vert e \right\vert=1</script> is called a <em>unit vector</em>.<div style="margin-top:20px"></div>Two vectors <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script> are called <em>orthogonal</em> if <span class="math"></span><script type="math/tex">u\cdot v = 0</script>. We write
+this as <span class="math"></span><script type="math/tex">u \perp v</script>.<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env5.2"></span><a class="Exerciseno" data-count="5.2"></a><a href="#3f8a44d6-946d-4fcc-9910-5fff3fde721a" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=3f8a44d6-946d-4fcc-9910-5fff3fde721a class = "collapse Exercise envbuttons">  
+Use the definition in <a href=#equ5.3>(5.3)</a> to show that
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  u\cdot (v + w) &= u\cdot v + u\cdot w\\
+  (\lambda u)\cdot v &= u\cdot (\lambda v) = \lambda (u\cdot v)
+\end{aligned}</script>
+for <span class="math"></span><script type="math/tex">u, v, w\in \mathbb{R}^d</script> and <span class="math"></span><script type="math/tex">\lambda\in\mathbb{R}</script>.
+</div><div style="margin-top:20px"></div><span id="env5.3"></span><a class="Exerciseno" data-count="5.3"></a><a href="#c1710692-fb0f-488e-88b2-be3f8aa1e393" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c1710692-fb0f-488e-88b2-be3f8aa1e393 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">u\in \mathbb{R}^d</script> be a nonzero vector and <span class="math"></span><script type="math/tex">\lambda\in \mathbb{R}</script>. Use the definition
+in <a href=#equ5.4>(5.4)</a> to show that
+<span class="math"></span><script type="math/tex">|\lambda u| = |\lambda| \, |u|</script> and that
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{1}{|u|} u
+</script>
+is a unit vector.<div style="margin-top:20px"></div><a href="#2e49d5ef-7a06-4dd4-998b-af2bba126e6b" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=2e49d5ef-7a06-4dd4-998b-af2bba126e6b class="collapse">
+You could perhaps use Exercise <a href=#env5.2 class="labelref">5.2</a> to do this.   
+</div>
+</div><div style="margin-top:20px"></div><span id="env5.4"></span><a class="Exerciseno" data-count="5.4"></a><a href="#b9c6bd3b-e503-4c69-98c4-53536f8d71e9" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=b9c6bd3b-e503-4c69-98c4-53536f8d71e9 class = "collapse Exercise envbuttons">  
+Given two vectors <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script> with <span class="math"></span><script type="math/tex">v\neq 0</script>, find <span class="math"></span><script type="math/tex">\lambda\in \mathbb{R}</script>, such
+that <span class="math"></span><script type="math/tex">u - \lambda v</script> and <span class="math"></span><script type="math/tex">v</script> are orthogonal, i.e.
+<div class="math"></div><script type="math/tex; mode=display">
+(u - \lambda v) \cdot v = 0.
+</script><div style="margin-top:20px"></div>For <span class="math"></span><script type="math/tex">d=2</script>,
+sketch that if <span class="math"></span><script type="math/tex">u - \lambda v</script> and <span class="math"></span><script type="math/tex">v</script> are orthogonal, then
+<span class="math"></span><script type="math/tex">u, \lambda v</script> and <span class="math"></span><script type="math/tex">u-\lambda v</script> are the sides in a right triangle.
+In this case, if <span class="math"></span><script type="math/tex">\theta</script> is the angle between <span class="math"></span><script type="math/tex">u</script> and <span class="math"></span><script type="math/tex">v</script>, show that
+<div class="math"></div><script type="math/tex; mode=display">
+\left\vert u \right\vert \cos(\theta) = \left\vert v \right\vert \lambda.
+</script>
+Use this to show that
+<div class="math"></div><script type="math/tex; mode=display">
+u\cdot v = \left\vert u \right\vert \left\vert v \right\vert \cos(\theta).
+</script>
+Finally show that
+<div class="math"></div><script type="math/tex; mode=display">
+\cos(A - B) = \cos(A) \cos(B) + \sin(A) \sin(B),
+</script>
+where <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script> are two angles.<div style="margin-top:20px"></div><a href="#e9a9672c-1a43-421a-aa56-37b2c40086d8" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=e9a9672c-1a43-421a-aa56-37b2c40086d8 class = "collapse Hint envbuttons">    
+In the last question, you could use that the vectors
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  \cos(A)\\ \sin(A)
+\end{pmatrix}\qquad\text{and}\qquad
+\begin{pmatrix}
+  \cos(B)\\ \sin(B)
+\end{pmatrix}
+</script>
+are unit vectors.
+  </div>
+</div><div style="margin-top:20px"></div><span id="env5.5"></span><a class="Exerciseno" data-count="5.5"></a><a href="#4204c133-f8ff-420e-8088-d34db9c77c01" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4204c133-f8ff-420e-8088-d34db9c77c01 class = "collapse Exercise envbuttons">  
+Given two vectors <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script>, solve the minimization problem
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{Minimize} &\left\vert u - \lambda v \right\vert&\\
+  &\text{with constraint}\\
+  &&\lambda\in\mathbb{R}.
+\end{aligned}</script><div style="margin-top:20px"></div><a href="#819751ed-79cf-4edb-9385-18df7b38b688" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=819751ed-79cf-4edb-9385-18df7b38b688 class = "collapse Hint envbuttons">    
+  First convince yourself that <span class="math"></span><script type="math/tex">\lambda</script> minimizes <span class="math"></span><script type="math/tex">\left\vert u - \lambda v \right\vert</script>
+  if and only if it minimizes
+  <div class="math"></div><script type="math/tex; mode=display">
+  (u - \lambda v)\cdot (u - \lambda v) = \left\vert v \right\vert^2 \lambda^2 - 2 (u\cdot v)\lambda + \left\vert u \right\vert^2,
+  </script>
+  which happens to be a quadratic polynomial in <span class="math"></span><script type="math/tex">\lambda</script>.
+  </div>
+</div><div style="margin-top:20px"></div><span id="env5.6"></span><a class="Quizexerciseno" data-count="5.6"></a><a href="#9cc0ac90-a6be-43bb-83d7-29e4e292293b" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=9cc0ac90-a6be-43bb-83d7-29e4e292293b class = "collapse Quizexercise envbuttons">  
+<span id="{labelname}"></span><div id="quiz1" style="width:100%;"><div class="row quizquestion">
+Let <span class="math"></span><script type="math/tex">d</script> denote the distance from <span class="math"></span><script type="math/tex">(1, 1)</script> to the line through <span class="math"></span><script type="math/tex">(0, 0)</script> and <span class="math"></span><script type="math/tex">(2, 1)</script>. What is true about <span class="math"></span><script type="math/tex">d</script>?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+<div class="math"></div><script type="math/tex; mode=display">
+d = \frac{1}{2}.
+</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="math"></div><script type="math/tex; mode=display">
+d = 0.447214.
+</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<div class="math"></div><script type="math/tex; mode=display">
+d = \frac{\sqrt{5}}{5}.
+</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<div class="math"></div><script type="math/tex; mode=display">
+d = \frac{2}{\sqrt{5}}.
+</script>
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div><div style="margin-top:20px"></div><span id="env5.7"></span><div class="example" data-count="5.7">     <div style="margin-top:20px"></div>Already at this point we have the necessary definitions for sneak previewing the
+perceptron algorithm outlined more generally at the end of the chapter.
+In terms of the dot product, the central problem turns into the following:<div style="margin-top:20px"></div>  Given finitely many vectors <span class="math"></span><script type="math/tex">v_1, \dots, v_n\in \mathbb{R}^d</script>, can we find
+  <span class="math"></span><script type="math/tex">\alpha\in \mathbb{R}^d</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \alpha\cdot v_i > 0
+  </script>
+  for every <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>?
+<div style="margin-top:20px"></div><span id="env5.8"></span><a class="Exerciseno" data-count="5.8"></a><a href="#90493a40-95d2-44c5-bd35-af133254e157" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=90493a40-95d2-44c5-bd35-af133254e157 class = "collapse Exercise envbuttons">  
+Come up with a simple example, where this problem is unsolvable.
+</div><div style="margin-top:20px"></div><span id="env5.9"></span><a class="Exerciseno" data-count="5.9"></a><a href="#e6986c38-ea70-4a3c-a795-a57e7823940a" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=e6986c38-ea70-4a3c-a795-a57e7823940a class = "collapse Exercise envbuttons">  
+Suppose that there exists <span class="math"></span><script type="math/tex">\alpha\in \mathbb{R}^d</script>, such that
+<span class="math"></span><script type="math/tex">\alpha\cdot v_i > 0</script> for every <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>. Show then that
+there exists <span class="math"></span><script type="math/tex">\alpha^*\in \mathbb{R}^d</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+\alpha^* \cdot v_i \geq 1
+</script>
+for every <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>.<div style="margin-top:20px"></div><a href="#35af1111-1578-4291-8705-161a6de22276" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=35af1111-1578-4291-8705-161a6de22276 class="collapse">
+  Let <span class="math"></span><script type="math/tex">\mu = \min(\alpha\cdot v_1, \dots, \alpha\cdot v_n)</script>. Show that
+  <span class="math"></span><script type="math/tex">\alpha^* = \frac{1}{\mu} \alpha</script> works.
+</div>
+</div><div style="margin-top:20px"></div>In case the problem is solvable, the following
+ridiculously simple algorithm works for finding <span class="math"></span><script type="math/tex">\alpha</script>:<div style="margin-top:20px"></div><div class="frameit">
+  <ol class="lowerroman"><li> Begin by putting <span class="math"></span><script type="math/tex">\alpha = 0</script>.
+  </li><li> If there exists <span class="math"></span><script type="math/tex">v_i\in \{v_1, \dots, v_n\}</script> with <span class="math"></span><script type="math/tex">\alpha\cdot v_i \leq 0</script>, then replace
+    <span class="math"></span><script type="math/tex">\alpha</script> by <span class="math"></span><script type="math/tex">\alpha + v_i</script> and repeat this step. Otherwise <span class="math"></span><script type="math/tex">\alpha</script> is the desired output vector.
+  </li></ol><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>
+Let us try out the algorithm on the simple example of just
+two points in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+v_1 = \begin{pmatrix} -1 \\ \hphantom{-} 1 \end{pmatrix}\qquad\text{and}\qquad v_2 =
+\begin{pmatrix} 1 \\ 0 \end{pmatrix}.
+</script><div style="margin-top:20px"></div>In this case the algorithm proceeds as pictured below.<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\alpha = \begin{pmatrix} 0 \\ 0 \end{pmatrix}\xrightarrow{+v_1} \begin{pmatrix} -1 \\ \hphantom{-} 1 \end{pmatrix} \xrightarrow{+v_2} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \xrightarrow{+v_2}\begin{pmatrix} 1 \\ 1 \end{pmatrix} \xrightarrow{+v_1}\begin{pmatrix} 0 \\ 2 \end{pmatrix} \xrightarrow{+v_2} \begin{pmatrix} 1 \\ 2 \end{pmatrix}.
+</script><div style="margin-top:20px"></div>It patiently crawls its way ending with the vector <span class="math"></span><script type="math/tex">\alpha = \begin{pmatrix} 1 \\ 2 \end{pmatrix}</script>, which
+satisfies <span class="math"></span><script type="math/tex">\alpha\cdot v_1 > 0</script> and <span class="math"></span><script type="math/tex">\alpha\cdot v_2 > 0</script>.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/perceptronsimple.png" ></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec5.2.2"></span><h3>5.2.2 Pythagoras and the least squares method</h3><div style="margin-top:20px"></div>The result below is a generalization of the theorem of Pythagoras about right
+triangles to higher dimensions.<div style="margin-top:20px"></div><span id="env5.10"></span><div class="proposition" data-count="5.10">     
+  If <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script> and <span class="math"></span><script type="math/tex">u\perp v</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left\vert u + v \right\vert^2 = \left\vert u \right\vert^2 + \left\vert v \right\vert^2.
+  </script>
+</div><div style="margin-top:20px"></div><a href="#7cc9124f-0ea3-40f3-b803-45122cc31bcf" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=7cc9124f-0ea3-40f3-b803-45122cc31bcf class = "collapse Proof envbuttons">    
+    This follows from
+    <div class="math"></div><script type="math/tex; mode=display">
+    (u + v)\cdot(u+v) = u\cdot u + u\cdot v + v\cdot u + v\cdot v = u\cdot u + v\cdot v = \left\vert u \right\vert^2 + \left\vert v \right\vert^2,
+    </script>
+    since <span class="math"></span><script type="math/tex">u \cdot v = v\cdot u = 0</script>.
+    </div><div style="margin-top:20px"></div>The dot product and the norm have a vast number of applications. One of them is the
+method of least squares: suppose that you are presented with a system
+<span id="equ5.5"></span><div class="math"></div><script type="math/tex; mode=display">
+A x = b
+\tag{5.5}</script>
+of linear equations, where <span class="math"></span><script type="math/tex">A</script> is an <span class="math"></span><script type="math/tex">m\times n</script> matrix.<div style="margin-top:20px"></div>You may not be able to solve <a href=#equ5.5>(5.5)</a>. There could be for example
+<span class="math"></span><script type="math/tex">17</script> equations and only <span class="math"></span><script type="math/tex">2</script> unknowns making it impoosible for all the equations to hold.
+As an example, the system<div style="margin-top:20px"></div><div style="margin-top:20px"></div><span id="equ5.6"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+\phantom{-} 1 & \phantom{-} 1\\
+\phantom{-} 1 & -1\\
+-1 & \phantom{-} 1
+\end{pmatrix} \begin{pmatrix} x \\ y\end{pmatrix} = \begin{pmatrix} 3 \\ 1 \\ 1 \end{pmatrix}
+\tag{5.6}</script>
+of three linear equations and two unknowns does not have any solutions.<div style="margin-top:20px"></div>The method of (linear) least squares seeks the best approximate solution <span class="math"></span><script type="math/tex">x_0</script> to <a href=#equ5.5>(5.5)</a> as a
+solution to the minimization problem<div style="margin-top:20px"></div><span id="equ5.7"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{Minimize} &\left\vert b - A x \right\vert^2&\\
+  &\text{with constraint}\\
+  &&x\in\mathbb{R}^n.
+\end{aligned}\tag{5.7}</script><div style="margin-top:20px"></div>There is a surprising way of finding optimal solutions to <a href=#equ5.7>(5.7)</a>:<div style="margin-top:20px"></div><span id="env5.11"></span><div class="theorem" data-count="5.11">     
+  If <span class="math"></span><script type="math/tex">x_0\in\mathbb{R}^n</script> is a solution to the system
+  <div class="math"></div><script type="math/tex; mode=display">
+  (A^T A) x = A^T b
+  </script>
+  of <span class="math"></span><script type="math/tex">n</script> linear equations with <span class="math"></span><script type="math/tex">n</script> unknowns,
+  then <span class="math"></span><script type="math/tex">x_0</script> is an optimal solution to <a href=#equ5.7>(5.7)</a>.
+</div><div style="margin-top:20px"></div><a href="#3ac16dd3-9ad6-4585-bef6-df2222dccd60" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=3ac16dd3-9ad6-4585-bef6-df2222dccd60 class = "collapse Proof envbuttons">    
+    Suppose we know that <span class="math"></span><script type="math/tex">b - A x_0</script> is orthogonal to <span class="math"></span><script type="math/tex">A v</script> for every <span class="math"></span><script type="math/tex">v\in \mathbb{R}^n</script>. Then
+    <div class="math"></div><script type="math/tex; mode=display">
+    \left\vert b - A x \right\vert^2 = \left\vert b - A x_0 + A(x_0 - x) \right\vert^2 = \left\vert b - A x_0 \right\vert^2 + \left\vert A(x-x_0) \right\vert^2
+    </script>
+    for every <span class="math"></span><script type="math/tex">x\in \mathbb{R}^n</script>
+    by Proposition <a href=#env5.10 class="labelref">5.10</a>. So, in the case that
+    <span class="math"></span><script type="math/tex">b - A x_0 \perp A v</script> for every <span class="math"></span><script type="math/tex">v\in \mathbb{R}^n</script> we have
+    <div class="math"></div><script type="math/tex; mode=display">
+    \left\vert b - A x \right\vert^2 \geq \left\vert b - A x_0 \right\vert^2
+    </script>
+    for every <span class="math"></span><script type="math/tex">x\in \mathbb{R}^n</script> proving that <span class="math"></span><script type="math/tex">x_0</script> is an optimal solution to
+    <a href=#equ5.7>(5.7)</a>.<div style="margin-top:20px"></div>Now <span class="math"></span><script type="math/tex">b - A x_0</script> is orthogonal to <span class="math"></span><script type="math/tex">A v</script> for every <span class="math"></span><script type="math/tex">v\in \mathbb{R}^n</script> if and
+    only if <span class="math"></span><script type="math/tex">b - A x_0</script> is orthogonal to all of the column vectors in <span class="math"></span><script type="math/tex">A</script>. This is satisfied if and only if the dot products of <span class="math"></span><script type="math/tex">b - A x_0</script> with all
+    the column vectors of <span class="math"></span><script type="math/tex">A</script> are zero, which translates into
+    <div class="math"></div><script type="math/tex; mode=display">
+    A^T(b - A x_0) = 0
+    </script>
+    or <span class="math"></span><script type="math/tex">(A^T A) x_0 = A^T b</script>.
+    </div><div style="margin-top:20px"></div>In a future course on linear algebra you will see that the system of linear equations in
+Theorem <a href=#env5.11 class="labelref">5.11</a> is always solvable i.e., an optimal solution to <a href=#equ5.7>(5.7)</a> can
+always be found in this way.<div style="margin-top:20px"></div><span id="env5.12"></span><a class="Exerciseno" data-count="5.12"></a><a href="#72f25710-e135-49c4-b6fe-91a39ca1e29e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=72f25710-e135-49c4-b6fe-91a39ca1e29e class = "collapse Exercise envbuttons">  
+Show that <a href=#equ5.6>(5.6)</a> has no solutions. Compute the best approximate solution to <a href=#equ5.6>(5.6)</a> 
+using Theorem <a href=#env5.11 class="labelref">5.11</a>.
+</div><div style="margin-top:20px"></div><span id="env5.13"></span><div class="example" data-count="5.13">     
+  The classical application of the least squares method is to find
+the best line <span class="math"></span><script type="math/tex">y = \alpha x + \beta</script> through a given set of points
+<div class="math"></div><script type="math/tex; mode=display">
+(x_1, y_1), \quad (x_1, y_1), \quad \dots \quad, (x_n, y_n)
+</script>
+in the plane <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>.<div style="margin-top:20px"></div>Usually we cannot find a line matching the points precisely. This corresponds to the fact that
+the system of equations
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+x_1 & 1\\
+x_2 & 1\\
+\vdots & \vdots\\
+x_n & 1
+\end{pmatrix}
+\begin{pmatrix}
+\alpha \\ \beta
+\end{pmatrix}
+= 
+\begin{pmatrix}
+y_1 \\
+y_2 \\
+\vdots \\
+y_n
+\end{pmatrix}
+</script>
+has no solutions.<div style="margin-top:20px"></div>Working with the least squares solution, we try to compute the best
+line <span class="math"></span><script type="math/tex">y = \alpha x + \beta</script> in the sense that
+<div class="math"></div><script type="math/tex; mode=display">
+(y_1 -\alpha x_1 -\beta)^2 + (y_2 -\alpha x_2 -\beta)^2 + \cdots +
+(y_n -\alpha x_n -\beta)^2 
+</script>
+is minimized.<div style="margin-top:20px"></div><span id="env5.14"></span><div class="figure" data-count="5.14">     
+<div class="centerimg"><img src="img/linreg.png" ></div>
+<figcaption>Best fit of line to random points from <a href="https://en.wikipedia.org/wiki/Least_squares" target="_blank">Wikipedia</a>.</figcaption>
+</div><div style="margin-top:20px"></div>We might as well have asked for the best quadratic polynomial 
+<div class="math"></div><script type="math/tex; mode=display">
+y = \alpha x^2 + \beta x + \gamma 
+</script>
+passing through the points
+<div class="math"></div><script type="math/tex; mode=display">
+(x_1, y_1), \quad (x_1, y_1), \quad \dots \quad, (x_n, y_n)
+</script>
+in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>.<div style="margin-top:20px"></div>The same method gives us the system
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+x_1^2 & x_1 & 1\\
+x_2 ^2 & x_2 & 1\\
+\vdots & \vdots\\
+x_n^2 & x_n & 1
+\end{pmatrix}
+\begin{pmatrix}
+\alpha \\ \beta \\ \gamma
+\end{pmatrix}
+= 
+\begin{pmatrix}
+y_1 \\
+y_2 \\
+\vdots \\
+y_n
+\end{pmatrix}
+</script>
+of linear equations.<div style="margin-top:20px"></div><span id="env5.15"></span><div class="figure" data-count="5.15">     
+<div class="centerimg"><img src="img/parabelfit.png" ></div>
+<figcaption>Best fit of quadratic polynomial to random points from  <a href="https://en.wikipedia.org/wiki/Least_squares" target="_blank">Wikipedia</a>.</figcaption>
+</div><div style="margin-top:20px"></div>The method generalizes naturally to finding the best polynomial of degree <span class="math"></span><script type="math/tex">m</script>
+<div class="math"></div><script type="math/tex; mode=display">
+y = a_m x^m + a_{m-1} x^{m-1} + \cdots + a_1 x + a_0 
+</script>
+through a given set of points.
+</div><div style="margin-top:20px"></div><span id="env5.16"></span><a class="Exerciseno" data-count="5.16"></a><a href="#dac03973-6705-44d1-9532-ea584d06e343" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=dac03973-6705-44d1-9532-ea584d06e343 class = "collapse Exercise envbuttons">  
+Find the best line <span class="math"></span><script type="math/tex">y = \alpha x + \beta</script> through the points
+<span class="math"></span><script type="math/tex">(1, 2), (2,1)</script> og <span class="math"></span><script type="math/tex">(4,3)</script> and the best quadratic polynomial
+<span class="math"></span><script type="math/tex"> y = a x^2 + b x + c</script> through the points
+<span class="math"></span><script type="math/tex">(-2, 2), (-1, 1), (0,0), (1,1)</script> and <span class="math"></span><script type="math/tex">(2,2)</script>.<div style="margin-top:20px"></div>It is important here, that you write down the relevant system
+of linear equations according to Theorem <a href=#env5.11 class="labelref">5.11</a>.
+It is however ok to solve the equations
+on a computer (or check your best fit on <a href="https://www.wolframalpha.com/" target="_blank">WolframAlpha</a>).<div style="margin-top:20px"></div>Also, you can get a graphical illustration of your result in the sage window below.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+pts = [(-2, 2), (-1, 1), (0, 0), (1, 1), (2, 2)]
+a = 1
+b = 1
+c = 1
+show(points(pts, pointsize=30) + plot(a*x^2 + b*x + c, (x, -2.5, 2.5)))
+</script></div>
+</div><div style="margin-top:20px"></div><span id="env5.17"></span><a class="Exerciseno" data-count="5.17"></a><a href="#0b77db96-5f2f-42b5-a2b5-d9132b070225" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=0b77db96-5f2f-42b5-a2b5-d9132b070225 class = "collapse Exercise envbuttons">  
+A circle with center <span class="math"></span><script type="math/tex">(a, b)</script> and radius <span class="math"></span><script type="math/tex">r</script> is given by the equation<div style="margin-top:20px"></div><span id="equ5.8"></span><div class="math"></div><script type="math/tex; mode=display">
+(x - a)^2 + (y - b)^2 = r^2.
+\tag{5.8}</script><div style="margin-top:20px"></div><ol class="number"><li>
+  Explain how <a href=#equ5.8>(5.8)</a> can be rewritten to the equation
+<span id="equ5.9"></span><div class="math"></div><script type="math/tex; mode=display">
+2 a x + 2 b y + c = x^2 + y^2,
+\tag{5.9}</script>
+where <span class="math"></span><script type="math/tex">c = r^2 - a^2 - b^2</script>.<div style="margin-top:20px"></div></li><li>
+  Explain how fitting a circle to the points <span class="math"></span><script type="math/tex">(x_1, y_1), \dots, (x_n, y_n)</script>
+  in the least squares context using <a href=#equ5.9>(5.9)</a> leads to the system
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+2 x_1 & 2 y_1 & 1\\
+2 x_2 & 2 y_2 & 1\\
+\vdots &\vdots &\vdots\\
+2 x_n & 2 y_n & 1
+\end{pmatrix}
+\begin{pmatrix}
+a \\
+b \\
+c
+\end{pmatrix}
+=
+\begin{pmatrix}
+x_1^2 + y_1^2\\
+x_2^2 + y_2^2\\
+\vdots \\
+x_n^2 + y_n^2
+\end{pmatrix},
+</script>
+of linear equations.<div style="margin-top:20px"></div></li><li><div style="margin-top:20px"></div>Compute the best circle through the points
+<div class="math"></div><script type="math/tex; mode=display">
+(0, 2),\quad (0, 3),\quad  (2,0)\quad\text{og}\quad (3, 1)
+</script> 
+by giving the center coordinates and radius with two decimals.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/circlefit.png" ></div><div style="margin-top:20px"></div></li></ol><div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+pts = [(0, 2), (0, 3), (2, 0), (3, 1)]
+
+x = 2
+y = 2
+r = 2
+
+show(points(pts, pointsize=30) + circle((x, y), r))
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec5.2.3"></span><h3>5.2.3 The Cauchy-Schwarz inequality</h3><div style="margin-top:20px"></div>Even though the generalizations of the dot product and norm to higher
+dimensions amount to just adding some coordinates, they entail
+a rather stunning result called the <a href="https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality" target="_blank">Cauchy-Schwarz inequality</a>. The
+proof is not long, but revolves around a rather beautiful trick.<div style="margin-top:20px"></div><span id="env5.18"></span><div class="theorem" data-count="5.18">     
+  For two vectors <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script>,
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left\vert u\cdot v \right\vert \leq \left\vert u \right\vert \left\vert v \right\vert.
+  </script>
+</div>
+  <a href="#37d94938-90be-461d-861b-003234cf64ff" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=37d94938-90be-461d-861b-003234cf64ff class = "collapse Proof envbuttons">    
+    We consider the function <span class="math"></span><script type="math/tex">q:\mathbb{R}\rightarrow \mathbb{R}</script> given by
+    <div class="math"></div><script type="math/tex; mode=display">
+    q(x) = (x u + v)\cdot (x u + v) = \left\vert u \right\vert^2 x^2 + 2 (u\cdot v) x + \left\vert v \right\vert^2
+    </script>
+    Then <span class="math"></span><script type="math/tex">q(x)</script> is a quadratic polynomial with <span class="math"></span><script type="math/tex">q(x)\geq 0</script>. Therefore
+    its discriminant must be <span class="math"></span><script type="math/tex">\leq 0</script> i.e.,
+    <div class="math"></div><script type="math/tex; mode=display">
+    4 (u\cdot v)^2 - 4 \left\vert u \right\vert^2 \left\vert v \right\vert^2 \leq 0,
+    </script>  
+    which gives the result.
+    </div><div style="margin-top:20px"></div>The Cauchy-Schwarz inequality
+implies that 
+<div class="math"></div><script type="math/tex; mode=display">
+-1 \leq \frac{u\cdot v}{|u|\, |v|} \leq 1
+</script>
+for two vectors <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script> and it makes sense to define the angle
+<span class="math"></span><script type="math/tex">\theta</script> between these vectors by
+<span id="equ5.10"></span><div class="math"></div><script type="math/tex; mode=display">
+\cos(\theta) = 
+\frac{u \cdot v}{|u|\, |v|}.
+\tag{5.10}</script><div style="margin-top:20px"></div><span id="env5.19"></span><a class="Exerciseno" data-count="5.19"></a><a href="#37231108-11bd-45d5-9907-42612e3f2541" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=37231108-11bd-45d5-9907-42612e3f2541 class = "collapse Exercise envbuttons">  
+It seems that
+<div class="math"></div><script type="math/tex; mode=display">
+2 (x^2 + y^2) \geq (x + y)^2
+</script>
+for arbitrary two numbers <span class="math"></span><script type="math/tex">x, y\in \mathbb{R}</script>, since
+<div class="math"></div><script type="math/tex; mode=display">
+2(x^2 + y^2) - (x + y)^2 = x^2 + y^2 - 2 x y = (x - y)^2.
+</script><div style="margin-top:20px"></div>Why is
+<div class="math"></div><script type="math/tex; mode=display">
+n (x_1^2 + \cdots + x_n^2) \geq (x_1 + \cdots + x_n)^2
+</script>
+for arbitary <span class="math"></span><script type="math/tex">n</script> numbers <span class="math"></span><script type="math/tex">x_1, \dots, x_n\in \mathbb{R}</script>?
+</div><div style="margin-top:20px"></div><span id="env5.20"></span><div class="example" data-count="5.20">     <div style="margin-top:20px"></div>When vectors are interpreted as data sets,
+  the number in <a href=#equ5.10>(5.10)</a> is known as the <em>cosine similarity</em>
+and measures the correlation between the two data sets
+<span class="math"></span><script type="math/tex">u</script> and <span class="math"></span><script type="math/tex">v</script>.<div style="margin-top:20px"></div>An application could be the similarity between two strings.
+Consider the two strings 
+"<em>Mathematics is fun and matrices are useful</em>"
+and
+"<em>Mathematics is fun and matrices are applicable</em>".<div style="margin-top:20px"></div>From the words in the two strings we form the following vectors in <span class="math"></span><script type="math/tex">\mathbb{R}^8</script>.<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\begin{array}{lll}
+  \text{Mathematics} & 1 & 1\\[0.5em]
+  \text{is} & 1& 1\\[0.5em]
+  \text{fun} & 1 & 1\\[0.5em]
+  \text{and} & 1 & 1\\[0.5em]
+  \text{matrices} & 1 & 1\\[0.5em]
+  \text{applicable} & 0 & 1\\[0.5em]
+  \text{useful} & 1 & 0\\[0.5em]
+  \text{are} & 1 & 1
+\end{array}
+</script><div style="margin-top:20px"></div>where every word in the two strings has an entry counting the number of
+occurences in the string. A measure for the equality between
+the two strings is the cosine of the angle between the two vectors.<div style="margin-top:20px"></div>The closer the cosine gets to <span class="math"></span><script type="math/tex">1</script> (corresponding to an angle of <span class="math"></span><script type="math/tex">0</script>
+degrees), the more similar we consider the strings.<div style="margin-top:20px"></div>In the above case the cosine similarity is approximately <span class="math"></span><script type="math/tex">0.86</script>.<div style="margin-top:20px"></div>Below is a snippet of python code (using <tt>numpy</tt>) for computing the cosine similarity of two strings, where
+words are separated by blanks. It can be extended in many ways.<div style="margin-top:20px"></div>
+
+
+<div class="sage"><script type="text/x-sage">
+import numpy as np
+from numpy.linalg import norm
+
+def cosinesim(str1, str2):
+  words1 = str1.split()
+  words2 = str2.split()
+  words12 = list(set().union(words1, words2))
+  v1 = np.array([words1.count(w) for w in words12])
+  v2 = np.array([words2.count(w) for w in words12])
+  return (np.dot(v1, v2)/(norm(v1)*norm(v2)))
+
+str1 = "Mathematics is fun and matrices are useful"
+str2 = "Mathematics is fun and matrices are applicable"
+
+print("The cosine similarity between")
+print(str1)
+print("and")
+print(str2)
+print("is")
+print(cosinesim(str1, str2))
+</script></div><div style="margin-top:20px"></div>This application is based on rather basic mathematics, but we do get a quantitative measure for
+how close two strings are. This is a crude tool applicable for flagging potential plagiarism.<div style="margin-top:20px"></div>The cosine similarity is implemented in the python machine
+learning library <a href="https://scikit-learn.org/stable/" target="_blank"><tt>sci-kit-learn</tt></a>.<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec5.2.4"></span><h3>5.2.4 Distance of vectors and the triangle inequality</h3><div style="margin-top:20px"></div>We know how to measure the size of a vector <span class="math"></span><script type="math/tex">u\in \mathbb{R}^d</script> by its norm <span class="math"></span><script type="math/tex">\left\vert u \right\vert</script>. We need
+to measure how close two vectors <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script> are i.e., we
+need to measure their <em>distance</em>. A perfectly good
+measure for the distance from <span class="math"></span><script type="math/tex">u</script> to <span class="math"></span><script type="math/tex">v</script> is the norm
+<div class="math"></div><script type="math/tex; mode=display">
+\left\vert u-v \right\vert.
+</script>
+You can see from <a href=#equ5.4>(5.4)</a> that <span class="math"></span><script type="math/tex">|u-v|</script> is small implies that
+the coordinates of <span class="math"></span><script type="math/tex">u</script> and <span class="math"></span><script type="math/tex">v</script> are close. Also we want <span class="math"></span><script type="math/tex">u = v</script> if
+their distance is zero. This is satisfied. Similarly we want
+the distance from <span class="math"></span><script type="math/tex">u</script> to <span class="math"></span><script type="math/tex">v</script> to equal the distance from <span class="math"></span><script type="math/tex">v</script> to <span class="math"></span><script type="math/tex">u</script>. This is true,
+since <span class="math"></span><script type="math/tex">\left\vert x \right\vert = \left\vert -x \right\vert</script> for any vector <span class="math"></span><script type="math/tex">x\in \mathbb{R}^d</script>.<div style="margin-top:20px"></div><span id="env5.21"></span><a class="Exerciseno" data-count="5.21"></a><a href="#c38a9ce5-1d41-43e2-ad3d-19f006e73253" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c38a9ce5-1d41-43e2-ad3d-19f006e73253 class = "collapse Exercise envbuttons">  
+Show the above, that <span class="math"></span><script type="math/tex">\left\vert x \right\vert = \left\vert -x \right\vert</script> for any vector <span class="math"></span><script type="math/tex">x\in \mathbb{R}^d</script>. Explain why
+this implies <span class="math"></span><script type="math/tex">\left\vert u - v \right\vert = \left\vert v - u \right\vert</script> for every <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script>.
+</div><div style="margin-top:20px"></div>One other, not so obvious property, is the <a href="https://en.wikipedia.org/wiki/Triangle_inequality" target="_blank">triangle inequality</a>.<div style="margin-top:20px"></div><span id="env5.22"></span><div class="theorem" data-count="5.22">     
+  For two vectors <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script>,
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left\vert u + v \right\vert \leq \left\vert u \right\vert + \left\vert v \right\vert.
+  </script>
+  </div>
+    <a href="#24ea317c-9312-465f-8755-9e4e10821dcc" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=24ea317c-9312-465f-8755-9e4e10821dcc class = "collapse Proof envbuttons">    
+      From the Cauchy-Schwarz inequality (Theorem <a href=#env5.18 class="labelref">5.18</a>) it follows that 
+      <div class="math"></div><script type="math/tex; mode=display">
+      \left\vert u+v \right\vert^2 = (u+v)\cdot (u+v) = \left\vert u \right\vert^2 + 2 u\cdot v + \left\vert v \right\vert^2 \leq \left\vert u \right\vert^2 + 2 \left\vert u \right\vert\left\vert v \right\vert + \left\vert v \right\vert^2.
+      </script>
+      Since the right hand side of this inequality is <span class="math"></span><script type="math/tex">(\left\vert u \right\vert + \left\vert v \right\vert)^2</script>, the result follows.
+      </div><div style="margin-top:20px"></div>Why is this result called the triangle inequality? A consequence is that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left\vert u - v \right\vert  = \left\vert (u - w) + (w - v) \right\vert \leq \left\vert u - w \right\vert + \left\vert w - v \right\vert,
+  </script>
+  i.e., that the distance from <span class="math"></span><script type="math/tex">u</script> to <span class="math"></span><script type="math/tex">v</script> is always less than or equal to
+  the distance from <span class="math"></span><script type="math/tex">u</script> to <span class="math"></span><script type="math/tex">w</script> plus the distance from <span class="math"></span><script type="math/tex">w</script> to <span class="math"></span><script type="math/tex">v</script>, where
+  <span class="math"></span><script type="math/tex">w</script> is a third vector.<div style="margin-top:20px"></div>In boiled down terms: the length of any one side in a triangle is
+  less than or equal to the sum of the lengths of the two other sides.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/triangleineq.svg" ></div><div style="margin-top:20px"></div>The triangle inequality implies that
+<span id="equ5.11"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  \left\vert \left\vert x \right\vert-\left\vert y \right\vert \right\vert &\leq \left\vert x - y \right\vert\\
+  \left\vert \left\vert x \right\vert-\left\vert y \right\vert \right\vert &\leq \left\vert x + y \right\vert
+\end{aligned}\tag{5.11}</script>
+for every <span class="math"></span><script type="math/tex">x, y\in \mathbb{R}^d</script>.<div style="margin-top:20px"></div><span id="env5.23"></span><a class="Exerciseno" data-count="5.23"></a><a href="#98380444-9a00-48da-8a3d-27d0792277eb" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=98380444-9a00-48da-8a3d-27d0792277eb class = "collapse Exercise envbuttons">  
+  Show how <a href=#equ5.11>(5.11)</a> follows from Theorem <a href=#env5.22 class="labelref">5.22</a>. 
+</div><div style="margin-top:20px"></div><span id="sec5.3"></span><h2 id="65523d91-2925-4c74-91f9-a5258c9f1af3">5.3 An important remark about the real numbers</h2><div style="margin-top:20px"></div>In the beginning of this course, we postulated the existence of the real
+numbers <span class="math"></span><script type="math/tex">\mathbb{R}</script> as an extension of the rational numbers <span class="math"></span><script type="math/tex">\mathbb{Q}</script> with their ordering <span class="math"></span><script type="math/tex">\leq</script>.<div style="margin-top:20px"></div>The rational numbers had the glaring defect that the graph of the function <span class="math"></span><script type="math/tex">f:\mathbb{Q}\rightarrow \mathbb{Q}</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = x^2 - 2
+</script>
+does not intersect the <span class="math"></span><script type="math/tex">x</script>-axis between <span class="math"></span><script type="math/tex">1</script> and <span class="math"></span><script type="math/tex">2</script> in spite of the
+fact that <span class="math"></span><script type="math/tex">f(1) = -1</script> and <span class="math"></span><script type="math/tex">f(2) = 2</script>.<div style="margin-top:20px"></div>It seems from the sage plot below, that the graph intersects the
+<span class="math"></span><script type="math/tex">x</script>-axis around <span class="math"></span><script type="math/tex">x_0\approx 1.4</script>, but it really does not happen!
+Your computer and its screen only
+handles rational numbers.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+  plot(x**2 -2, (x, 1, 2))
+</script></div><div style="margin-top:20px"></div>Surely the most natural property for a well behaved function
+(like <span class="math"></span><script type="math/tex">f(x) = x^2 - 2</script>) is that it must intersect the <span class="math"></span><script type="math/tex">x</script>-axis
+in a point <span class="math"></span><script type="math/tex">x_0</script> with <span class="math"></span><script type="math/tex">a < x_0 < b</script> if <span class="math"></span><script type="math/tex">f(a) < 0</script> and <span class="math"></span><script type="math/tex">f(b) > 0</script>.<div style="margin-top:20px"></div>I will not be completely precise about how to repair this defect about the
+rational numbers <span class="math"></span><script type="math/tex">\mathbb{Q}</script>, but
+just state one exceedingly important property about the real numbers <span class="math"></span><script type="math/tex">\mathbb{R}</script>. In fact this
+one property guarantees that <span class="math"></span><script type="math/tex">\mathbb{R}</script> does not have any holes
+as in the graph above.<div style="margin-top:20px"></div><span id="sec5.3.1"></span><h3>5.3.1 Supremum</h3><div style="margin-top:20px"></div>A subset <span class="math"></span><script type="math/tex">S</script> of <span class="math"></span><script type="math/tex">\mathbb{R}</script> is called <em>bounded from above</em> if there exists
+<span class="math"></span><script type="math/tex">M\in \mathbb{R}</script>, such that <span class="math"></span><script type="math/tex">x\leq M</script> for every <span class="math"></span><script type="math/tex">x\in S</script>. Here <span class="math"></span><script type="math/tex">M</script> is
+called an <em>upper bound</em> for <span class="math"></span><script type="math/tex">S</script>.<div style="margin-top:20px"></div><span id="env5.24"></span><a class="Exerciseno" data-count="5.24"></a><a href="#4d3801e8-66ca-4008-8702-b48594f407aa" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4d3801e8-66ca-4008-8702-b48594f407aa class = "collapse Exercise envbuttons">  
+Give an example of a subset of the real numbers, which is not bounded from
+above and one that is.
+</div><div style="margin-top:20px"></div>The real numbers satisfies that for every subset <span class="math"></span><script type="math/tex">S\subseteq \mathbb{R}</script> bounded from above,
+ there exists a smallest upper bound denoted <span class="math"></span><script type="math/tex">\operatorname{sup}(S)</script> called
+the <em>supremum</em> of <span class="math"></span><script type="math/tex">S</script>. In precise terms,
+<ol class="lowerroman"><li>
+  <span class="math"></span><script type="math/tex">\operatorname{sup}(S)\geq x</script> for every <span class="math"></span><script type="math/tex">x\in S</script> 
+</li><li>
+  If we move a little to the left of <span class="math"></span><script type="math/tex">\operatorname{sup}(S)</script> we encounter
+  elements from <span class="math"></span><script type="math/tex">S</script>: for every <span class="math"></span><script type="math/tex">\epsilon > 0</script>, there exists <span class="math"></span><script type="math/tex">x\in S</script>,
+  such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \operatorname{sup}(S)-\epsilon < x \leq \operatorname{sup}(S).
+  </script>
+</li></ol><div style="margin-top:20px"></div><div class="centerimg"><img src="img/supremum.png" ></div><div style="margin-top:20px"></div>Notice that we may have <span class="math"></span><script type="math/tex">\operatorname{sup}(S)\not\in S</script>.<div style="margin-top:20px"></div><span id="sec5.3.2"></span><h3>5.3.2 Infimum</h3><div style="margin-top:20px"></div>In the same way a subset <span class="math"></span><script type="math/tex">S</script> of <span class="math"></span><script type="math/tex">\mathbb{R}</script> is called <em>bounded from below</em>, if
+there exists <span class="math"></span><script type="math/tex">m\in \mathbb{R}</script>, such that <span class="math"></span><script type="math/tex">m \leq x</script> for
+every <span class="math"></span><script type="math/tex">x\in S</script>. Every subset <span class="math"></span><script type="math/tex">S</script> bounded from below has
+a largest lower bound denoted <span class="math"></span><script type="math/tex">\operatorname{inf}(S)</script> called the <em>infimum</em> of <span class="math"></span><script type="math/tex">S</script>.
+In precise terms,
+<ol class="lowerroman"><li>
+  <span class="math"></span><script type="math/tex">\operatorname{inf}(S)\leq x</script> for every <span class="math"></span><script type="math/tex">x\in S</script> 
+</li><li>
+  If we move a little to the right of <span class="math"></span><script type="math/tex">\operatorname{inf}(S)</script> we encounter
+  elements from <span class="math"></span><script type="math/tex">S</script>: for every <span class="math"></span><script type="math/tex">\epsilon > 0</script>, there exists <span class="math"></span><script type="math/tex">x\in S</script>,
+  such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \operatorname{inf}(S) \leq x < \operatorname{inf}(S) + \epsilon.
+  </script>
+</li></ol><div style="margin-top:20px"></div><span id="env5.25"></span><a class="Exerciseno" data-count="5.25"></a><a href="#f87618df-cfa3-4d11-8476-e84c6fa9fc13" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=f87618df-cfa3-4d11-8476-e84c6fa9fc13 class = "collapse Exercise envbuttons">  
+Give a simple example of a subset <span class="math"></span><script type="math/tex">S\subseteq \mathbb{R}</script> bounded from above, where
+<span class="math"></span><script type="math/tex">\operatorname{sup}(S)\not\in S</script>.<div style="margin-top:20px"></div>Show that the subset <span class="math"></span><script type="math/tex">S = \{x\in \mathbb{Q} \mid x^2 < 2\}</script> of <span class="math"></span><script type="math/tex">\mathbb{R}</script> is bounded from above and below and
+  that <span class="math"></span><script type="math/tex">\operatorname{sup}(S)\not\in \mathbb{Q}</script> and <span class="math"></span><script type="math/tex">\operatorname{inf}(S)\not\in \mathbb{Q}</script>.
+</div><div style="margin-top:20px"></div><span id="env5.26"></span><a class="Exerciseno" data-count="5.26"></a><a href="#d0e2e631-af71-46de-aba2-4e1a1c8a58df" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=d0e2e631-af71-46de-aba2-4e1a1c8a58df class = "collapse Exercise envbuttons">  
+Show that <span class="math"></span><script type="math/tex">S</script> is infinite if <span class="math"></span><script type="math/tex">\operatorname{sup}(S)\not\in S</script>.
+</div><div style="margin-top:20px"></div><span id="sec5.4"></span><h2 id="2bec1a82-9ba3-435d-bb8a-cea237b3fcd3">5.4 Sequences and limits</h2><div style="margin-top:20px"></div>In order to do analysis on <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> we need to introduce sequences of vectors.
+In a sense we are going from the finite world to the infinite world. A sequence
+in  <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> is an <em>infinite</em> list of vectors
+<div class="math"></div><script type="math/tex; mode=display">
+v_1, v_2, v_3, \dots
+</script>
+in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>, where repetitions are allowed. Such a sequence is denoted <span class="math"></span><script type="math/tex">(v_n)</script>.<div style="margin-top:20px"></div>In order to define a sequence we just need to tell what its <span class="math"></span><script type="math/tex">n</script>-th element is. So
+in abstract terms a sequence in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> is nothing but a function <span class="math"></span><script type="math/tex">\mathbb{N}\rightarrow \mathbb{R}^d</script>.<div style="margin-top:20px"></div>Below we give two examples of sequences in <span class="math"></span><script type="math/tex">\mathbb{R}</script>.
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+&(x_n): 1, 2, 3, 4, \dots\\
+&(y_n): 1, \tfrac{1}{2}, \tfrac{1}{3}, \tfrac{1}{4}, \dots
+\end{aligned}</script>
+The first sequence is given by <span class="math"></span><script type="math/tex">x_n = n</script> and the second <span class="math"></span><script type="math/tex">y_n = \frac{1}{n}</script> for <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script>. The first sequence
+explodes to infinity, whereas the second sequence gets closer and closer to <span class="math"></span><script type="math/tex">0</script>. In the latter case we
+write
+<div class="math"></div><script type="math/tex; mode=display">
+\lim_{n\to\infty} y_n = 0.
+</script>
+What does it mean that a sequence <span class="math"></span><script type="math/tex">(v_n)</script> of vectors in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>  has limit <span class="math"></span><script type="math/tex">v\in \mathbb{R}^d</script>? Intuitively,
+we can get <span class="math"></span><script type="math/tex">v_n</script> as close to <span class="math"></span><script type="math/tex">v</script> as we want by choosing
+<span class="math"></span><script type="math/tex">n\in \mathbb{N}</script> sufficiently big. Here is the precise way of saying this:
+<span id="equ5.12"></span><div class="math"></div><script type="math/tex; mode=display">
+\forall \epsilon > 0\, \exists N\in \mathbb{N}: n\geq N\implies \left\vert v_n - v \right\vert < \epsilon.
+\tag{5.12}</script>
+If a sequence <span class="math"></span><script type="math/tex">(v_n)</script> has a limit <span class="math"></span><script type="math/tex">v</script>, then we write
+<div class="math"></div><script type="math/tex; mode=display">
+\lim_{n\to\infty} v_n = v.
+</script><div style="margin-top:20px"></div>A sequence is called convergent if it has a limit. If a sequence is convergent, then it can have
+only one limit. You can not have a convergent sequence with two different limits!<div style="margin-top:20px"></div><span id="env5.27"></span><a class="Exerciseno" data-count="5.27"></a><a href="#9c429942-89bd-49bb-94e8-13a77d08a097" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=9c429942-89bd-49bb-94e8-13a77d08a097 class = "collapse Exercise envbuttons">  
+Give a precise proof of the fact that a convergent sequence <span class="math"></span><script type="math/tex">(x_n)</script> can only have
+one limit using proof by contradiction i.e., start by assuming that
+it has two different limits <span class="math"></span><script type="math/tex">x\neq y</script>. Then show that 
+<div class="math"></div><script type="math/tex; mode=display">
+\forall \epsilon > 0\, \exists N\in \mathbb{N}: n\geq N\implies \left\vert x_n - y \right\vert < \epsilon.
+</script>
+cannot be true by showing that
+<div class="math"></div><script type="math/tex; mode=display">
+\exists \epsilon > 0\, \forall N\in \mathbb{N}: \exists n\geq N\implies \left\vert x_n - y \right\vert \geq \epsilon.
+</script>
+<div class="hint">
+  Try <span class="math"></span><script type="math/tex">\epsilon = \left\vert x-y \right\vert/2</script> in the definition of <span class="math"></span><script type="math/tex">x</script> being a limit and apply <a href=#equ5.11>(5.11)</a> to
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left\vert x_n - y \right\vert = \left\vert x_n - x + x - y \right\vert.
+  </script>
+</div>
+</div><div style="margin-top:20px"></div>Now, that we have the definition of a convergent sequence, we go on to use it in a rather
+typical proof of a rather typical result. In this (typical) proof we first handle the
+infinite and then the finite.<div style="margin-top:20px"></div><span id="env5.28"></span><div class="proposition" data-count="5.28">     
+  A convergent sequence <span class="math"></span><script type="math/tex">(x_n)</script> is bounded i.e., there exists <span class="math"></span><script type="math/tex">M\in \mathbb{R}</script>, such that
+  <span class="math"></span><script type="math/tex">|x_n| \leq M</script> for every <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script>.
+</div>
+  <a href="#2f8dcdbc-cb2b-4fe3-adcb-08f02e888189" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=2f8dcdbc-cb2b-4fe3-adcb-08f02e888189 class = "collapse Proof envbuttons">    
+    Let <span class="math"></span><script type="math/tex">x</script> denote the limit of <span class="math"></span><script type="math/tex">(x_n)</script>. Then for <span class="math"></span><script type="math/tex">\epsilon = 1</script>, we may find
+    <span class="math"></span><script type="math/tex">N\in \mathbb{N}</script>, such that <span class="math"></span><script type="math/tex">\left\vert x - x_n \right\vert < 1</script> for <span class="math"></span><script type="math/tex">n\geq N</script>. Therefore
+    <span class="math"></span><script type="math/tex">\left\vert x_n \right\vert < \left\vert x \right\vert + 1</script> for <span class="math"></span><script type="math/tex">n\geq N</script> by <a href=#equ5.11>(5.11)</a>. Let
+    <span class="math"></span><script type="math/tex">M_1 = \max\{\left\vert x_0 \right\vert, \dots, \left\vert x_N \right\vert\}</script> and then letting
+    <span class="math"></span><script type="math/tex">M = \max\{M_1, \left\vert x \right\vert + 1\}</script>, we see that <span class="math"></span><script type="math/tex">\left\vert x_n \right\vert \leq M</script>
+    for every <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script>.
+    </div><div style="margin-top:20px"></div>
+<span id="env5.29"></span><a class="Quizexerciseno" data-count="5.29"></a><a href="#95fd1671-9de2-4af3-b365-7d0ec2cfbe38" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=95fd1671-9de2-4af3-b365-7d0ec2cfbe38 class = "collapse Quizexercise envbuttons">  
+<span id="{labelname}"></span><div id="quiz2" style="width:100%;"><div class="row quizquestion">
+  What is the limit of the sequence
+  <div class="math"></div><script type="math/tex; mode=display">
+  \phantom{-} 1, -1, \phantom{-} 1, -1, \phantom{-} 1, -1, \dots ?
+  </script>
+  </div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+  <div class="math"></div><script type="math/tex; mode=display">1</script>
+  </div><div class="col-xs-5 quizanswer" datav="F">
+  <div class="math"></div><script type="math/tex; mode=display">-1</script>
+  </div><div class="col-xs-5 quizanswer" datav="T">
+  It does not have a limit.
+  </div><div class="col-xs-5 quizanswer" datav="F">
+  <div class="math"></div><script type="math/tex; mode=display">0</script>
+</div></div></div><button id="quizbutton2" class = "btn btn-default">Check</button><script>$("#quizbutton2").click(function(){quizshowanswers(quiz2, quizbutton2);});</script>
+</div><div style="margin-top:20px"></div>Sage may be helpful in computing limits (see below).<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+n = var('n')
+assume(n>0)
+sequence = n/(n+1)
+limit(sequence, n=infinity)
+</script></div><div style="margin-top:20px"></div>For convergent sequences we have the following result.<div style="margin-top:20px"></div><span id="env5.30"></span><div class="proposition" data-count="5.30">     
+Let <span class="math"></span><script type="math/tex">(x_n)</script> and <span class="math"></span><script type="math/tex">(y_n)</script> be convergent sequences in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> with limits
+<span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script> respectively. Then
+<ol class="lowerroman"><li>
+the sequence <span class="math"></span><script type="math/tex">(x_n + y_n)</script> is convergent with limit <span class="math"></span><script type="math/tex">x + y</script>.
+</li><li>
+the sequence <span class="math"></span><script type="math/tex">(x_n y_n)</script> is convergent with limit <span class="math"></span><script type="math/tex">x y</script> (if <span class="math"></span><script type="math/tex">d=1</script>)
+</li><li>
+the sequence <span class="math"></span><script type="math/tex">(x_n/y_n)</script> is convergent with limit <span class="math"></span><script type="math/tex">x/y</script> provided
+that <span class="math"></span><script type="math/tex">y\neq 0</script> and <span class="math"></span><script type="math/tex">y_n \neq 0</script> for every <span class="math"></span><script type="math/tex">n\in\mathbb{N}</script> (if <span class="math"></span><script type="math/tex">d=1</script>).
+</li></ol>
+</div>
+  <a href="#ec5d95c4-a8b4-4e37-a3d9-6b534778ddf8" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=ec5d95c4-a8b4-4e37-a3d9-6b534778ddf8 class = "collapse Proof envbuttons">    
+    I will give the proof of <a href=#(&#8562;.) class="labelref">(&#8562;.)</a>. By definition (see
+    <a href=#equ5.12>(5.12)</a>) we are given <span class="math"></span><script type="math/tex">\epsilon > 0</script> and we must find
+    <span class="math"></span><script type="math/tex">N\in \mathbb{N}</script>, such that
+    <div class="math"></div><script type="math/tex; mode=display">
+    \left\vert x y - x_n y_n \right\vert < \epsilon
+    </script>
+    for <span class="math"></span><script type="math/tex">n\geq N</script>. An old trick shows that
+    <div class="math"></div><script type="math/tex; mode=display">
+    \left\vert x y - x_n y_n \right\vert = \left\vert (x-x_n) y + (y - y_n) x_n \right\vert.
+    </script>
+    Therefore we may find <span class="math"></span><script type="math/tex">M > 0</script> so that 
+    <div class="math"></div><script type="math/tex; mode=display">
+    \left\vert x y - x_n y_n \right\vert \leq \left\vert (x-x_n) \right\vert\left\vert y \right\vert + \left\vert y - y_n \right\vert\left\vert  x_n \right\vert \leq \left\vert x-x_n \right\vert M + \left\vert y-y_n \right\vert M,
+    </script>
+    where <span class="math"></span><script type="math/tex">y \leq M</script> and <span class="math"></span><script type="math/tex">\left\vert x_n \right\vert\leq M</script> for every <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script> (see Proposition <a href=#env5.28 class="labelref">5.28</a>).
+    We are assuming the <span class="math"></span><script type="math/tex">(x_n)</script> and <span class="math"></span><script type="math/tex">(y_n)</script> are convergent sequences. Therefore we may find
+    <span class="math"></span><script type="math/tex">N_1</script> and <span class="math"></span><script type="math/tex">N_2</script> in <span class="math"></span><script type="math/tex">\mathbb{N}</script>, so that
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+      \left\vert x - x_n \right\vert &< \frac{\epsilon}{2 M}\qquad\text{for}\qquad n \geq N_1\\
+      \left\vert y - y_n \right\vert &< \frac{\epsilon}{2 M}\qquad\text{for}\qquad n \geq N_2.
+    \end{aligned}</script>
+    Choosing <span class="math"></span><script type="math/tex">N = \max\{N_1, N_2\}</script>, we get
+    <div class="math"></div><script type="math/tex; mode=display">
+    \left\vert x y - x_n y_n \right\vert \leq \left\vert x-x_n \right\vert M + \left\vert y-y_n \right\vert M \leq \frac{\epsilon}{2 M} M + \frac{\epsilon}{2 M} M = \epsilon,
+    </script>
+    for <span class="math"></span><script type="math/tex">n\geq N</script>.
+    </div><div style="margin-top:20px"></div><span id="env5.31"></span><a class="Exerciseno" data-count="5.31"></a><a href="#a85d223a-a608-45f5-b17a-4bfca474578c" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=a85d223a-a608-45f5-b17a-4bfca474578c class = "collapse Exercise envbuttons">  
+The proof of <a href=#(&#8561;.) class="labelref">(&#8561;.)</a> in Proposition <a href=#env5.30 class="labelref">5.30</a> is much less involved
+than the given proof of <a href=#(&#8562;.) class="labelref">(&#8562;.)</a> in the same result. In the proof of
+<a href=#(&#8562;.) class="labelref">(&#8562;.)</a> we used a trick using <span class="math"></span><script type="math/tex">\frac{\epsilon}{2M}</script>. Use the same
+trick with <span class="math"></span><script type="math/tex">\frac{\epsilon}{2}</script> and the triangle inequality to prove
+<a href=#(&#8561;.) class="labelref">(&#8561;.)</a>.
+<div class="hint">
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left\vert x + y - (x_n + y_n) \right\vert = \left\vert (x - x_n) + (y - y_n) \right\vert \leq \left\vert x - x_n \right\vert + \left\vert y - y_n \right\vert. 
+  </script>
+</div>
+</div><div style="margin-top:20px"></div><span id="env5.32"></span><a class="Quizexerciseno" data-count="5.32"></a><a href="#4f53211f-5594-46c5-83a1-a7e3f9d0cd51" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=4f53211f-5594-46c5-83a1-a7e3f9d0cd51 class = "collapse Quizexercise envbuttons">  
+  <span id="{labelname}"></span><div id="quiz3" style="width:100%;"><div class="row quizquestion">
+    What is the limit of the sequence <span class="math"></span><script type="math/tex">(x_n)</script> given by
+    <div class="math"></div><script type="math/tex; mode=display">
+    x_n = \frac{3 n^2 + 17 n + 5}{2 n^2 + 3 n + 2}?
+    </script>
+    </div><div class="row"><div class="col-xs-5 quizanswer" datav="F">
+    <div class="math"></div><script type="math/tex; mode=display">0</script>
+    </div><div class="col-xs-5 quizanswer" datav="F">
+    It does not have a limit
+    </div><div class="col-xs-5 quizanswer" datav="T">
+    <div class="math"></div><script type="math/tex; mode=display">1.5</script>
+    </div><div class="col-xs-5 quizanswer" datav="F">
+    <div class="math"></div><script type="math/tex; mode=display">\frac{17}{5}</script>
+  </div></div></div><button id="quizbutton3" class = "btn btn-default">Check</button><script>$("#quizbutton3").click(function(){quizshowanswers(quiz3, quizbutton3);});</script>
+</div><div style="margin-top:20px"></div><span id="env5.33"></span><a class="Exerciseno" data-count="5.33"></a><a href="#8790d77d-e0f4-4ae1-adfc-64ba4fa301e2" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=8790d77d-e0f4-4ae1-adfc-64ba4fa301e2 class = "collapse Exercise envbuttons">  
+Consider the sequence <span class="math"></span><script type="math/tex">(x_n)</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+x_n = \left(1 + \frac{1}{n}\right)^n.
+</script>
+Carry out a computer experiment in sage below to find the limit
+of <span class="math"></span><script type="math/tex">(x_n)</script>. Can you prove what you observe in
+the experiment?<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+def exp(n):
+  print("(1 + 1/n)^n is =")
+  print((1 + 1/float(n))**n)
+  print("for n = ", n)
+
+exp(100)  
+</script></div><div style="margin-top:20px"></div><div class="hint">
+  <div class="math"></div><script type="math/tex; mode=display">
+  n \ln\left(1 + \frac{1}{n}\right) =
+  \frac{\ln\left(1 + \frac{1}{n}\right) - \ln(1)}{\frac{1}{n}}
+</script>
+</div>
+</div><div style="margin-top:20px"></div><div style="margin-top:20px"></div><span id="env5.34"></span><a class="Exerciseno" data-count="5.34"></a><a href="#db458ab1-fdd5-457b-aa99-245d095e22fb" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=db458ab1-fdd5-457b-aa99-245d095e22fb class = "collapse Exercise envbuttons">  
+Assume that <span class="math"></span><script type="math/tex">(x_n)</script> is a convergent series in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>. Show that
+<span class="math"></span><script type="math/tex">(\left\vert x_n \right\vert)</script> is a convergent sequence in <span class="math"></span><script type="math/tex">\mathbb{R}</script>.
+</div><div style="margin-top:20px"></div><span id="env5.35"></span><a class="Exerciseno" data-count="5.35"></a><a href="#dd09d81d-7e4e-4ac8-b09a-60ea71afcdf6" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=dd09d81d-7e4e-4ac8-b09a-60ea71afcdf6 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">(x_n)</script> be a sequence bounded below with the property that
+<div class="math"></div><script type="math/tex; mode=display">
+x_1 \geq x_2 \geq x_3 \geq \cdots
+</script>
+Show that <span class="math"></span><script type="math/tex">\operatorname{inf}\{x_n \mid n\in \mathbb{N}\}</script> is the limit of <span class="math"></span><script type="math/tex">(x_n)</script>.<div style="margin-top:20px"></div>Similarly let <span class="math"></span><script type="math/tex">(z_n)</script> be a sequence bounded above with the property that
+<div class="math"></div><script type="math/tex; mode=display">
+z_1 \leq z_2 \leq z_3 \leq \cdots
+</script>
+Show that <span class="math"></span><script type="math/tex">\operatorname{sup}\{z_n \mid n\in \mathbb{N}\}</script> is the limit of <span class="math"></span><script type="math/tex">(z_n)</script>.
+</div><div style="margin-top:20px"></div><span id="env5.36"></span><a class="Exerciseno" data-count="5.36"></a><a href="#84d0d47b-aa4f-450a-a594-f47f0e90cc57" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=84d0d47b-aa4f-450a-a594-f47f0e90cc57 class = "collapse Exercise envbuttons">  
+<ol class="lowerroman"><li> Show that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \sqrt{a b} \leq \frac{a+b}{2},
+  </script>
+  for <span class="math"></span><script type="math/tex">0\leq a \leq b</script>.
+</li><li>
+  Prove that <span class="math"></span><script type="math/tex">a < \sqrt{a b}</script> and <span class="math"></span><script type="math/tex">(a+b)/2 < b</script> for <span class="math"></span><script type="math/tex">0\leq a < b</script>.
+</li><li>
+  Start with two numbers <span class="math"></span><script type="math/tex">a</script> and <span class="math"></span><script type="math/tex">b</script> with <span class="math"></span><script type="math/tex">0\leq a\leq b</script> and define
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    a_{n+1} &= \sqrt{a_n b_n}\\
+    b_ {n+1} &= (a_n + b_n)/2,
+  \end{aligned}</script>
+  where <span class="math"></span><script type="math/tex">a_0 = a</script> and <span class="math"></span><script type="math/tex">b_0 = b</script>. Carry out computer experiments in the sage (python) window below
+  to analyze the sequences <span class="math"></span><script type="math/tex">a_0, a_1, \dots</script> and <span class="math"></span><script type="math/tex">b_0, b_1, \dots</script>
+  for different values of <span class="math"></span><script type="math/tex">a_0</script> and <span class="math"></span><script type="math/tex">b_0</script>.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import math
+
+a0 = 1
+b0 = 2
+print("Input a=", a0, " and b=", b0)
+print("Iterating towards ag mean:")
+
+for i in range(10):
+  print(a0, b0)
+  a1 = math.sqrt(a0*b0)
+  b1 = (a0 + b0)/float(2)
+  a0 = a1
+  b0 = b1
+</script></div>
+</li><li>
+  Prove for <span class="math"></span><script type="math/tex">n\geq 1</script> that
+  <div class="math"></div><script type="math/tex; mode=display">
+  b_n - a_n < \left(\frac{1}{2}\right)^n (b-a)
+  </script>
+  if <span class="math"></span><script type="math/tex">a\neq b</script>.
+</li><li>
+  Let <span class="math"></span><script type="math/tex">s = \lim_{n\to \infty} a_n</script> and <span class="math"></span><script type="math/tex">t=\lim_{n\to \infty} b_n</script>.
+  Show that the limits exist and that <span class="math"></span><script type="math/tex">s = t</script>.
+</li></ol>
+The common limit <span class="math"></span><script type="math/tex">M(a, b)</script> of the sequences <span class="math"></span><script type="math/tex">(a_n)</script> and
+<span class="math"></span><script type="math/tex">(b_n)</script> is called the <a href="https://en.wikipedia.org/wiki/Arithmetic%E2%80%93geometric_mean" target="_blank">arithmetic-geometric mean</a> of <span class="math"></span><script type="math/tex">a</script> and <span class="math"></span><script type="math/tex">b</script>.
+Just for the fun of it, here is a cool way of computing <span class="math"></span><script type="math/tex">\pi</script>
+involving this quantity:
+<div class="math"></div><script type="math/tex; mode=display">
+\pi = \frac{4 M(1, \frac{1}{\sqrt{2}})^2}{1 - \sum_{n=1}^\infty 2^ {n+1}(b_n^2 - a_n^2)}.
+</script>
+</div><div style="margin-top:20px"></div><span id="sec5.4.1"></span><h3>5.4.1 Infinite series</h3><div style="margin-top:20px"></div>Given a sequence <span class="math"></span><script type="math/tex">(x_m)</script> in <span class="math"></span><script type="math/tex">\mathbb{R}</script> we may form the new sequence given by the sums
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  s_1 &= x_1\\
+  s_2 &= x_1 + x_2\\
+      &\vdots\\
+  s_n &= x_1 + x_2 + \cdots + x_n\\
+  &\vdots       
+\end{aligned}</script>
+Such a sequence is called an infinite series. It is denoted
+<div class="math"></div><script type="math/tex; mode=display">
+\sum_{n=1}^\infty x_n
+</script>
+and is defined to converge if the sequence <span class="math"></span><script type="math/tex">(s_n)</script> converges.<div style="margin-top:20px"></div>Infinite series give rise to very beautiful identities like
+<div class="math"></div><script type="math/tex; mode=display">
+\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}.
+</script><div style="margin-top:20px"></div>We will not go deeper into the rich theory of infinite series, but
+settle at defining a widely used infinite series called the
+<em>geometric series</em>.  Let <span class="math"></span><script type="math/tex">q\in \mathbb{R}</script> with <span class="math"></span><script type="math/tex">\left\vert q \right\vert < 1</script>. We saw in
+the first chapter that
+<div class="math"></div><script type="math/tex; mode=display">
+1 + q + \cdots + q^n = \frac{1 - q^{n+1}}{1-q}
+</script>
+for any number <span class="math"></span><script type="math/tex">q\neq 1</script>. If <span class="math"></span><script type="math/tex">\left\vert q \right\vert < 1</script>, then <span class="math"></span><script type="math/tex">\lim_{n\to\infty} q^n = 0</script>.<div style="margin-top:20px"></div><span id="env5.37"></span><a class="Exerciseno" data-count="5.37"></a><a href="#ab142b4a-7eff-44fa-aa59-648b35a025c5" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ab142b4a-7eff-44fa-aa59-648b35a025c5 class = "collapse Exercise envbuttons">  
+Show that <span class="math"></span><script type="math/tex">\lim_{n\to\infty} q^n = 0</script> if <span class="math"></span><script type="math/tex">\left\vert q \right\vert < 1</script>.
+</div><div style="margin-top:20px"></div>Therefore
+<span id="equ5.13"></span><div class="math"></div><script type="math/tex; mode=display">
+  \sum_{n=0}^\infty q^n = \frac{1}{1-q}.
+\tag{5.13}</script>
+The series in <a href=#equ5.13>(5.13)</a> is called the geometric series.<div style="margin-top:20px"></div><span id="env5.38"></span><a class="Exerciseno" data-count="5.38"></a><a href="#3da51f17-4936-4922-b4e0-90e227f62d6f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=3da51f17-4936-4922-b4e0-90e227f62d6f class = "collapse Exercise envbuttons">  
+Compute the (infinite) sums
+<ol class="lowerroman"><li>
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots
+  </script>
+</li><li>
+  <div class="math"></div><script type="math/tex; mode=display">
+  1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \cdots
+  </script>
+</li></ol>
+</div><div style="margin-top:20px"></div><span id="env5.39"></span><a class="Exerciseno" data-count="5.39"></a><a href="#614883e3-8edd-4507-831a-2f9830d2f028" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=614883e3-8edd-4507-831a-2f9830d2f028 class = "collapse Exercise envbuttons">  
+The series given by <span class="math"></span><script type="math/tex">x_n = \frac{1}{n}</script> i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+s_n = 1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n}
+</script>
+is called the <em>harmonic series</em>. Explore the growth of the harmonic series as a function of <span class="math"></span><script type="math/tex">n</script>
+using the sage window below.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+n = 100
+print("The sum of the first ", n , " terms in the harmonic series is ", sum(1/float(i) for i in range(1, n+1)))
+</script></div><div style="margin-top:20px"></div>What does this <a href="https://twitter.com/TamasGorbe/status/1174406602998341632/video/1" target="_blank">video</a>
+on twitter have to do with the harmonic series?<div style="margin-top:20px"></div>Suppose that the inequality
+<span id="equ5.14"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+\ln(n) = \int_1^n \frac{1}{x} d x \leq 1 + \frac{1}{2} + \cdots + \frac{1}{n}
+\end{aligned}\tag{5.14}</script>
+holds. What does <a href=#equ5.14>(5.14)</a> imply for the harmonic series? Is <a href=#equ5.14>(5.14)</a> true? Compare
+with the graphs in the sage window below.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+n = 1000
+
+print("Graphs of the sum of the harmonic series and the (natural) logarithm (red) up to n=", n)
+x = var('x')
+g = Graphics()
+g += plot(harmonic_number(x), (x, 1, n))
+g += plot(log(x), (x, 1, n), color='red')
+g.show()
+</script></div><div style="margin-top:20px"></div>Use the sage window below to investigate if the sequence <span class="math"></span><script type="math/tex">e_n</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+e(n) = 1 + \frac{1}{2} + \cdots + \frac{1}{n} - \ln(n)
+</script>
+converges. In particular, make a clever statement about the convergence by studying a finite table
+of
+<div class="math"></div><script type="math/tex; mode=display">
+e(1), e(2), e(3), \dots
+</script>
+observing <span class="math"></span><script type="math/tex">e(n) - e(n+1)</script> for <span class="math"></span><script type="math/tex">n = 1, 2, 3, \dots</script>.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+def euler(n):
+  return harmonic_number(float(n)) - log(float(n))
+
+n = 100
+print("e(n) is ", euler(n), " for n=", n )
+</script></div>
+</div><div style="margin-top:20px"></div><span id="sec5.5"></span><h2 id="1a1ad702-0af7-45ef-abe2-b212777e81d9">5.5 Continuous functions</h2><div style="margin-top:20px"></div><span id="env5.40"></span><div class="definition" data-count="5.40">     
+A function <span class="math"></span><script type="math/tex">f: S\rightarrow T</script>, where <span class="math"></span><script type="math/tex">S \subseteq \mathbb{R}^d</script> and <span class="math"></span><script type="math/tex">T\subseteq \mathbb{R}^e</script> is
+called <em>continuous</em> if for every
+convergent sequence <span class="math"></span><script type="math/tex">(v_n)</script> in <span class="math"></span><script type="math/tex">S</script> with limit <span class="math"></span><script type="math/tex">v\in S</script>, <span class="math"></span><script type="math/tex">(f(v_n))</script> is a
+convergent sequence with limit <span class="math"></span><script type="math/tex">f(v)</script>.
+</div><div style="margin-top:20px"></div>The above is the formal definition of a continuous function. It is short and sweet. To
+get an understanding, you should study the mother of all examples of 
+non-continuous functions given below:
+<span id="equ5.15"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x) =
+\begin{cases}
+  0 &\text{if } x > 0\\
+  1 &\text{if } x \leq 0
+\end{cases}.
+\tag{5.15}</script><div style="margin-top:20px"></div>This is a function from <span class="math"></span><script type="math/tex">\mathbb{R}</script> to <span class="math"></span><script type="math/tex">\mathbb{R}</script>. It is impossible to plot it
+without lifting the pencil or defining such a beast without using a
+bracket as in <a href=#equ5.15>(5.15)</a>.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/noncont.png" ></div><div style="margin-top:20px"></div>Almost all functions we encounter will be continuous. The function <span class="math"></span><script type="math/tex">f</script> above is an
+anomaly.<div style="margin-top:20px"></div>To get continuous functions from functions already known to be continuous we 
+may use the result below.<div style="margin-top:20px"></div><span id="env5.41"></span><div class="proposition" data-count="5.41">     
+Let <span class="math"></span><script type="math/tex">f, g: U\rightarrow \mathbb{R}</script> be functions defined on a subset <span class="math"></span><script type="math/tex">U\subset \mathbb{R}^d</script>. If
+<span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script> are continuous, then the functions
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+(f + g): U\rightarrow \mathbb{R}\qquad\text{given by}\quad &(f + g)(x) = f(x) + g(x)\\
+(f g): U\rightarrow \mathbb{R}\qquad\text{given by}\quad &(f g)(x) = f(x) g(x)\\
+(f/g): V\rightarrow \mathbb{R}\qquad\text{given by}\quad &(f/g)(x) = f(x)/g(x)
+\end{aligned}</script>
+are continuous functions, where <span class="math"></span><script type="math/tex">V = \{x\in U\mid g(x)\neq 0\}</script> (the last function is
+defined only if <span class="math"></span><script type="math/tex">g(x)\neq 0</script>).
+</div><div style="margin-top:20px"></div><a href="#9fd7c1e0-0714-412d-9347-d2e25f4c8e5c" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=9fd7c1e0-0714-412d-9347-d2e25f4c8e5c class = "collapse Proof envbuttons">    
+This result is a consequence of the definition of continuity and Proposition <a href=#env5.30 class="labelref">5.30</a>.
+  </div><div style="margin-top:20px"></div>We are now in position to prove a famous result from 1817 due til <a href="https://en.wikipedia.org/wiki/Bernard_Bolzano" target="_blank">Bolzano</a>. <div style="margin-top:20px"></div><span id="env5.42"></span><div class="theorem" data-count="5.42">     
+  Let <span class="math"></span><script type="math/tex">f: [a, b]\rightarrow \mathbb{R}</script> be a continuous function, where <span class="math"></span><script type="math/tex">a < b</script>. If
+  <span class="math"></span><script type="math/tex">f(a) < 0</script> and <span class="math"></span><script type="math/tex">f(b) > 0</script>, then there exists <span class="math"></span><script type="math/tex">x_0</script> with <span class="math"></span><script type="math/tex">a < x_0 < b</script>, such
+  that <span class="math"></span><script type="math/tex">f(x_0) = 0</script>.
+</div><div style="margin-top:20px"></div><a href="#bce33fa8-9a49-4bd1-a071-9c13a1d970ec" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=bce33fa8-9a49-4bd1-a071-9c13a1d970ec class = "collapse Proof envbuttons">    
+    This is proved using the supremum property of the real numbers. The subset
+    <div class="math"></div><script type="math/tex; mode=display">
+    S = \{x\in [a, b]\mid f(x) \leq 0\}
+    </script>
+    is non-empty (since <span class="math"></span><script type="math/tex">a\in S</script>) and bounded from above. We let <span class="math"></span><script type="math/tex">c = \operatorname{sup}(S)</script>.<div style="margin-top:20px"></div>We will need the following observation about the continuous function <span class="math"></span><script type="math/tex">f</script>:
+    If <span class="math"></span><script type="math/tex">f(z) < 0</script> for <span class="math"></span><script type="math/tex">a \leq z < b</script>, then there exists a small
+    <span class="math"></span><script type="math/tex">\delta > 0</script>, such that
+    <div class="math"></div><script type="math/tex; mode=display">
+    f(x) < 0
+    </script>
+    for every <span class="math"></span><script type="math/tex">x\in [z, z+\delta]</script>.<div style="margin-top:20px"></div>Similarly if <span class="math"></span><script type="math/tex">f(z) > 0</script> for <span class="math"></span><script type="math/tex">a <  z \leq b</script>, then there exists a small
+    <span class="math"></span><script type="math/tex">\delta > 0</script>, such that
+    <div class="math"></div><script type="math/tex; mode=display">
+    f(x) > 0
+    </script>
+    for every <span class="math"></span><script type="math/tex">x\in [z - \delta, z]</script>.<div style="margin-top:20px"></div>These observations imply that <span class="math"></span><script type="math/tex">a < c < b</script> by the definition
+    of supremum. Similarly we cannot according to these
+    observations have <span class="math"></span><script type="math/tex">f(c) < 0</script> or <span class="math"></span><script type="math/tex">f(c) > 0</script>.<div style="margin-top:20px"></div>The only possibility remaining is <span class="math"></span><script type="math/tex">f(c) = 0</script>.
+    </div><div style="margin-top:20px"></div>By Proposition <a href=#env5.41 class="labelref">5.41</a>, polynomials are continuous functions.<div style="margin-top:20px"></div>Now, as promised previously, we state and prove the following result.<div style="margin-top:20px"></div><span id="env5.43"></span><div class="proposition" data-count="5.43">     
+Let
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = a_n x^n + \cdots + a_1 x + a_0
+</script>
+be a polynomial of odd degree, i.e. <span class="math"></span><script type="math/tex">n</script> is odd. Then <span class="math"></span><script type="math/tex">f</script> has a root,
+i.e. there exists <span class="math"></span><script type="math/tex">x_0\in\mathbb{R}</script>, such that <span class="math"></span><script type="math/tex">f(x_0) = 0</script>.
+</div>
+<a href="#fc84f578-a614-4d79-a062-61ec21b6079f" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=fc84f578-a614-4d79-a062-61ec21b6079f class = "collapse Proof envbuttons">    
+We will assume that <span class="math"></span><script type="math/tex">a_n > 0</script> (if not, just multiply <span class="math"></span><script type="math/tex">f</script> by <span class="math"></span><script type="math/tex">-1</script>). Consider <span class="math"></span><script type="math/tex">f(x)</script> written as
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = x^n \left(a_n + \frac{a_{n-1}}{x} + \cdots + \frac{a_1}{x^{n-1}} + \frac{a_0}{x^n}\right).
+</script>
+By choosing <span class="math"></span><script type="math/tex">c</script> negative with <span class="math"></span><script type="math/tex">\left\vert c \right\vert</script> extremely big, we have <span class="math"></span><script type="math/tex">f(c) < 0</script>, 
+since <span class="math"></span><script type="math/tex">c^n</script> is negative and 
+<div class="math"></div><script type="math/tex; mode=display">
+a_n + \frac{a_{n-1}}{c} + \cdots + \frac{a_1}{c^{n-1}} + \frac{a_0}{c^n} > 0
+</script>
+as <span class="math"></span><script type="math/tex">a_n</script> is positive. Notice here that the terms
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{a_{n-1}}{c} + \cdots + \frac{a_1}{c^{n-1}} + \frac{a_0}{c^n} 
+</script>
+are extremely small, when <span class="math"></span><script type="math/tex">\left\vert c \right\vert</script> is extremely big.<div style="margin-top:20px"></div>Similarly by choosing
+<span class="math"></span><script type="math/tex">d</script> positive and tremendously big, we have <span class="math"></span><script type="math/tex">f(d) > 0</script>.
+By Theorem <a href=#env5.42 class="labelref">5.42</a>, there exists <span class="math"></span><script type="math/tex">x_0</script> with <span class="math"></span><script type="math/tex">c < x_0 < d</script> with
+<span class="math"></span><script type="math/tex">f(x_0) = 0</script>.
+  </div><div style="margin-top:20px"></div><span id="sec5.6"></span><h2 id="bae8f95a-2d6c-495a-a4d0-10f958e2ca12">5.6 Special subsets</h2><div style="margin-top:20px"></div><span id="sec5.6.1"></span><h3>5.6.1 Preimages</h3><div style="margin-top:20px"></div>Before defining (and more importantly giving examples of) closed subsets, we will
+define abstractly the preimage of a subset of a function. So consider a
+function
+<div class="math"></div><script type="math/tex; mode=display">
+f: A \rightarrow B,
+</script>
+where <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script> are sets. If <span class="math"></span><script type="math/tex">C\subseteq B</script> is a subset of <span class="math"></span><script type="math/tex">B</script>, then the
+preimage of <span class="math"></span><script type="math/tex">B</script> under <span class="math"></span><script type="math/tex">f</script> is defined by
+<div class="math"></div><script type="math/tex; mode=display">
+f^{-1}(C) = \{x\in A \mid f(x)\in C\}.
+</script><div style="margin-top:20px"></div><span id="sec5.6.2"></span><h3>5.6.2 Closed subsets</h3><div style="margin-top:20px"></div>A subset <span class="math"></span><script type="math/tex">F\subseteq \mathbb{R}^d</script> is called closed if it contains all its limit vectors. This
+means that if <span class="math"></span><script type="math/tex">(v_n)</script> is a convergent sequence contained in <span class="math"></span><script type="math/tex">F</script>, then its limit must
+be contained in <span class="math"></span><script type="math/tex">F</script>.<div style="margin-top:20px"></div>We can immediately come up with a non-closed subset using the definition. Consider the subset
+<div class="math"></div><script type="math/tex; mode=display">
+S = \{x\in \mathbb{R} \mid x > 0\}\subset \mathbb{R}.
+</script>
+Here <span class="math"></span><script type="math/tex">\left(\frac{1}{n}\right)</script> is a convergent sequence, whose elements all are
+contained in <span class="math"></span><script type="math/tex">S</script>, but its limit <span class="math"></span><script type="math/tex">0</script> is outside <span class="math"></span><script type="math/tex">S</script>.
+We have, however, the following important result relating to this example.<div style="margin-top:20px"></div><span id="env5.44"></span><div class="proposition" data-count="5.44">     
+  The following subsets
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    [a, b] &= \{x\in \mathbb{R} \mid a \leq x \leq b\} \\
+    [a, \infty) &= \{x\in \mathbb{R} \mid a \leq x\}\\
+    (-\infty, a] &= \{x\in \mathbb{R} \mid x \leq a\}
+  \end{aligned}</script>
+  are closed subsets of <span class="math"></span><script type="math/tex">\mathbb{R}</script> for every <span class="math"></span><script type="math/tex">a, b\in \mathbb{R}</script>.
+</div><div style="margin-top:20px"></div>Also, important are the following two results.<div style="margin-top:20px"></div><span id="env5.45"></span><div class="proposition" data-count="5.45">     
+  Let <span class="math"></span><script type="math/tex">F_1, F_2, \dots, F_n</script> be finitely many closed subsets of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>. Then their
+  intersection
+  <div class="math"></div><script type="math/tex; mode=display">
+  F_1 \cap F_2 \cap \cdots \cap F_n
+  </script>
+  is a closed subset of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>.
+</div><div style="margin-top:20px"></div><div class="emphasize"><span id="env5.46"></span><div class="proposition" data-count="5.46">     
+  If <span class="math"></span><script type="math/tex">F\subseteq \mathbb{R}^e</script> is a closed subset and <span class="math"></span><script type="math/tex">f: \mathbb{R}^d\rightarrow \mathbb{R}^e</script>
+  a continuous function, then the preimage
+  <div class="math"></div><script type="math/tex; mode=display">
+  f^{-1}(F)
+  </script>
+  is a closed subsets of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>.
+</div></div><div style="margin-top:20px"></div><span id="env5.47"></span><div class="example" data-count="5.47">     
+  The function <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> given by <span class="math"></span><script type="math/tex">f(x, y) = x^2 + y^2</script> is
+  continuous. Therefore the set
+  <div class="math"></div><script type="math/tex; mode=display">
+  \{(x, y)\in \mathbb{R}^2\mid x^2 + y^2 \geq 1\} = f^{-1}([1, \infty))
+  </script>
+  is closed.
+  </div><div style="margin-top:20px"></div><span id="sec5.6.3"></span><h3>5.6.3 Open subsets</h3><div style="margin-top:20px"></div>A subset <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^d</script> is called <em>open</em> if <span class="math"></span><script type="math/tex">\mathbb{R}^d\setminus U</script> is closed.<div style="margin-top:20px"></div><span id="env5.48"></span><a class="Exerciseno" data-count="5.48"></a><a href="#4003928f-5c80-4277-9a28-575b91766f6e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4003928f-5c80-4277-9a28-575b91766f6e class = "collapse Exercise envbuttons">  
+  Let <span class="math"></span><script type="math/tex">(a, b) =\{x \in \mathbb{R} \mid a < x < b\}</script> for <span class="math"></span><script type="math/tex">a, b\in \mathbb{R}</script>, where <span class="math"></span><script type="math/tex">a < b</script>.
+  Show that <span class="math"></span><script type="math/tex">(a, b)</script> is an open subset of <span class="math"></span><script type="math/tex">\mathbb{R}</script>.
+  </div><div style="margin-top:20px"></div>We have the following result, which we will not prove.<div style="margin-top:20px"></div><span id="env5.49"></span><div class="theorem" data-count="5.49">     
+  Let <span class="math"></span><script type="math/tex">O\subseteq \mathbb{R}^d</script> be an open convex subset. Then a convex function <span class="math"></span><script type="math/tex">f:O\rightarrow \mathbb{R}</script>
+  is continuous.
+</div><div style="margin-top:20px"></div><span id="env5.50"></span><a class="Exerciseno" data-count="5.50"></a><a href="#f0684707-6945-4b8a-a487-6d85eda57369" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=f0684707-6945-4b8a-a487-6d85eda57369 class = "collapse Exercise envbuttons">  
+Give an example for <span class="math"></span><script type="math/tex">d=1</script> that Theorem <a href=#env5.49 class="labelref">5.49</a> fails if <span class="math"></span><script type="math/tex">O</script> is not
+assumed open.
+</div><div style="margin-top:20px"></div><span id="sec5.6.4"></span><h3>5.6.4 Convex closed subsets</h3><div style="margin-top:20px"></div>Closed convex subsets are quite special. They have the following
+interesting property, which we do not have time (unfortunately) to prove.<div style="margin-top:20px"></div><span id="env5.51"></span><div class="theorem" data-count="5.51">     
+  Let <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^d</script> be a closed convex subset and <span class="math"></span><script type="math/tex">y\in \mathbb{R}^d</script>. Then
+  there exists a point <span class="math"></span><script type="math/tex">x_0\in C</script> closest to <span class="math"></span><script type="math/tex">y</script> i.e.,
+  <div class="math"></div><script type="math/tex; mode=display">
+    \left\vert  x_0 - y  \right\vert \leq \left\vert  x - y  \right\vert
+  </script>
+  for every <span class="math"></span><script type="math/tex">x\in C</script>. This point is uniquely given by the property
+  that
+  <div class="math"></div><script type="math/tex; mode=display">
+    (x - x_0)\cdot (x_0 - y) \geq 0
+  </script>
+  for every <span class="math"></span><script type="math/tex">x\in C</script>.
+</div><div style="margin-top:20px"></div><div class="centerimg"><img src="img/convexclosest.png" ></div>  <div style="margin-top:20px"></div>One may readily apply this result to prove that if <span class="math"></span><script type="math/tex">y\not\in C</script>, then there exists
+a hyperplane given by <span class="math"></span><script type="math/tex">\alpha^T x = \beta</script> for <span class="math"></span><script type="math/tex">\alpha\in\mathbb{R}^d\setminus\{0\}</script> and
+<span class="math"></span><script type="math/tex">\beta\in \mathbb{R}</script>, such that
+<span class="math"></span><script type="math/tex">\alpha^T y < \beta</script> and 
+<div class="math"></div><script type="math/tex; mode=display">
+\alpha^T x > \beta
+</script>
+for every <span class="math"></span><script type="math/tex">x\in C</script>.<div style="margin-top:20px"></div><span id="env5.52"></span><a class="Exerciseno" data-count="5.52"></a><a href="#90a22236-8cf0-40e7-b521-bc3d57002fe7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=90a22236-8cf0-40e7-b521-bc3d57002fe7 class = "collapse Exercise envbuttons">  
+Apply Theorem <a href=#env5.51 class="labelref">5.51</a> to prove the
+above existence of <span class="math"></span><script type="math/tex">\alpha\in \mathbb{R}^d\setminus\{0\}</script> and <span class="math"></span><script type="math/tex">\beta\in \mathbb{R}</script> by
+using <span class="math"></span><script type="math/tex">\alpha = x_0 - y</script> and
+<div class="math"></div><script type="math/tex; mode=display">
+(x - x_0)\cdot (x_0 - y) = (x-\alpha -y)\cdot \alpha = \alpha^T x - \left\vert \alpha \right\vert^2 -\alpha^T y\geq 0
+</script>
+for every <span class="math"></span><script type="math/tex">x\in C</script>. Show that <span class="math"></span><script type="math/tex">\beta = \alpha^T y + \left\vert \alpha \right\vert^2/2</script> works i.e. for these
+values of <span class="math"></span><script type="math/tex">\alpha</script> and <span class="math"></span><script type="math/tex">\beta</script> we really do have
+<span class="math"></span><script type="math/tex">\alpha^T y < \beta</script> and 
+<div class="math"></div><script type="math/tex; mode=display">
+\alpha^T x > \beta
+</script>
+for every <span class="math"></span><script type="math/tex">x\in C</script>.
+</div><div style="margin-top:20px"></div><span id="sec5.6.5"></span><h3>5.6.5 Bounded subsets</h3><div style="margin-top:20px"></div>A subset <span class="math"></span><script type="math/tex">S \subseteq \mathbb{R}^d</script> is called bounded if there is an upper limit on the norm
+of the vectors contained in it i.e., there must exist a  positive number <span class="math"></span><script type="math/tex">M</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+\left\vert u \right\vert\leq M,
+</script>
+for every <span class="math"></span><script type="math/tex">u\in S</script>. The subset <span class="math"></span><script type="math/tex">\mathbb{N}</script> of <span class="math"></span><script type="math/tex">\mathbb{R}</script> is not bounded, whereas the subset
+<span class="math"></span><script type="math/tex">\{1, \frac{1}{2}, \frac{1}{3}, \dots\}</script> is.<div style="margin-top:20px"></div><span id="sec5.6.6"></span><h3>5.6.6 Compact subsets and a basic optimization result</h3><div style="margin-top:20px"></div>A subset is called compact if it is bounded and closed.<div style="margin-top:20px"></div><div class="emphasize"><span id="env5.53"></span><div class="theorem" data-count="5.53">     
+  Let <span class="math"></span><script type="math/tex">K</script> be a compact subset of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> and <span class="math"></span><script type="math/tex">f: K\rightarrow \mathbb{R}</script>
+  a continuous function. Then there exists <span class="math"></span><script type="math/tex">v\in K</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(v) \leq f(x),
+  </script>
+  for every <span class="math"></span><script type="math/tex">x\in K</script>.
+</div></div><div style="margin-top:20px"></div>This is a rather stunning result! You are guaranteed solutions to
+optimization problems of the type<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{Minimize} &f(x)&\\
+  &\text{with constraint}\\
+  &&x\in K,
+\end{aligned}</script><div style="margin-top:20px"></div>where <span class="math"></span><script type="math/tex">K</script> is a compact subset and <span class="math"></span><script type="math/tex">f: K\rightarrow \mathbb{R}</script> a continuous function.<div style="margin-top:20px"></div><span id="sec5.7"></span><h2 id="cbd12a77-2916-4aca-aa99-246e17727e7c">5.7 The perceptron algorithm</h2><div style="margin-top:20px"></div>The perceptron algorithm is a fancy name for a surprisingly simple
+algorithm for computing a hyperplane that divides binary labeled
+points.<div style="margin-top:20px"></div>We will assume that <span class="math"></span><script type="math/tex">x_1, \dots, x_n</script> are
+points in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> each of which is labeled by
+a number <span class="math"></span><script type="math/tex">l_i\in \{-1, 1\}</script>.<div style="margin-top:20px"></div>Assuming that you can find a (separating) hyperplane <span class="math"></span><script type="math/tex">\alpha^T v = \beta</script>,
+such that
+<div class="math"></div><script type="math/tex; mode=display">
+\alpha^T x_i > \beta\qquad\text{if}\qquad l_i = 1
+</script>
+and
+<div class="math"></div><script type="math/tex; mode=display">
+\alpha^T x_i < \beta\qquad\text{if}\qquad l_i = -1.
+</script><div style="margin-top:20px"></div><div class="centerimg"><img src="img/perceptronsephyp.png" ></div><div style="margin-top:20px"></div>We are interested in given the points and their labels in
+computing <span class="math"></span><script type="math/tex">\alpha\in \mathbb{R}^d</script> and <span class="math"></span><script type="math/tex">\beta\in \mathbb{R}</script>. In machine learning
+the term <em>training the algorithm</em> is used pointing
+towards using the hyperplane for future points not in
+the initial data set.<div style="margin-top:20px"></div><span id="sec5.7.1"></span><h3>5.7.1 Add a dimension to make it easier</h3><div style="margin-top:20px"></div>An extremely useful trick is to add one more dimension
+and study the problem in <span class="math"></span><script type="math/tex">\mathbb{R}^{d+1}.</script> We replace
+each point<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+x_i\in \mathbb{R}^d\qquad\text{ by }\qquad \hat{x_i} = (l_i x_i, l_i)\in \mathbb{R}^{d+1}.
+</script><div style="margin-top:20px"></div>The original problem is now equivalent to finding <span class="math"></span><script type="math/tex">\hat{\alpha}\in \mathbb{R}^{d+1}\setminus\{0\}</script>,
+such that
+<span id="equ5.16"></span><div class="math"></div><script type="math/tex; mode=display">
+\hat{\alpha}^T \hat{x_i} > 0
+\tag{5.16}</script>
+for every <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>. If such an <span class="math"></span><script type="math/tex">\hat{\alpha} = (\alpha_1, \dots, \alpha_d, t)^T</script> can
+be found, then we may take <span class="math"></span><script type="math/tex">\alpha = (\alpha_1, \dots, \alpha_d)^T</script> and <span class="math"></span><script type="math/tex">\beta = -t</script> as
+a solution to our original problem.
+On the other hand, if <span class="math"></span><script type="math/tex">\alpha</script> and <span class="math"></span><script type="math/tex">\beta</script> solve our original problem, then
+<span class="math"></span><script type="math/tex">\hat{\alpha} = (\alpha, -\beta)</script> solves <a href=#equ5.16>(5.16)</a>.<div style="margin-top:20px"></div>We have reduced our original problem to a simpler problem in
+one more dimension. We will focus on this problem (now <span class="math"></span><script type="math/tex">d+1</script> is
+replaced by <span class="math"></span><script type="math/tex">d</script>):<div style="margin-top:20px"></div>Suppose that we are given points <span class="math"></span><script type="math/tex">x_1, \dots, x_n\in \mathbb{R}^d</script> and
+there exists <span class="math"></span><script type="math/tex">\alpha\in \mathbb{R}^d\setminus \{0\}</script>, such that
+<span class="math"></span><script type="math/tex">\alpha^T x_i > 0</script> for every <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>. Geometrically
+this means that all the points are on one side of the
+hyperplane <span class="math"></span><script type="math/tex">\alpha^T v = 0</script>.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/perceptronsephpplusone.png" ></div><div style="margin-top:20px"></div>We are interested in computing such an <span class="math"></span><script type="math/tex">\alpha</script>. This is exactly
+what is done by the simple
+algorithm presented in Example <a href=#env5.7 class="labelref">5.7</a>.<div style="margin-top:20px"></div><span id="env5.54"></span><div class="example" data-count="5.54">     
+Consider the points
+<div class="math"></div><script type="math/tex; mode=display">
+v_1 = \begin{pmatrix} 0 \\ 0 \end{pmatrix},\qquad v_2=\begin{pmatrix} 1 \\ 1 \end{pmatrix}\qquad\text{and}\qquad v_3=\begin{pmatrix} \hphantom{-} 1 \\ -1 \end{pmatrix}
+</script>
+in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>, where <span class="math"></span><script type="math/tex">v_1</script> and <span class="math"></span><script type="math/tex">v_2</script> are labeled by <span class="math"></span><script type="math/tex">+1</script> and <span class="math"></span><script type="math/tex">v_3</script> is labeled by <span class="math"></span><script type="math/tex">-1</script>. Then
+<div class="math"></div><script type="math/tex; mode=display">
+\hat{v}_1 = \begin{pmatrix} 0 \\ 0 \\ 1\end{pmatrix},\qquad \hat{v}_2 = \begin{pmatrix} 1 \\ 1 \\ 1\end{pmatrix}\qquad
+\text{and}\qquad \hat{v}_3 = \begin{pmatrix} -1 \\ \hphantom{-} 1 \\ -1\end{pmatrix}.
+</script>
+Now we run the simple algorithm from Example <a href=#env5.7 class="labelref">5.7</a>:
+<div class="math"></div><script type="math/tex; mode=display">
+\hat{\alpha} = \begin{pmatrix} 0 \\ 0 \\ 0\end{pmatrix}\xrightarrow{+\hat{v}_1} \begin{pmatrix} 0 \\ 0 \\ 1\end{pmatrix} \xrightarrow{+\hat{v}_3} \begin{pmatrix} -1 \\ \hphantom{-} 1 \\ \hphantom{-} 0\end{pmatrix} \xrightarrow{+\hat{v}_1} \begin{pmatrix} -1 \\ \hphantom{-} 1 \\ \hphantom{-} 1\end{pmatrix}.
+</script><div style="margin-top:20px"></div>From the last vector we see that <span class="math"></span><script type="math/tex">\alpha = \begin{pmatrix} -1 \\ \hphantom{-} 1 \end{pmatrix}</script> and <span class="math"></span><script type="math/tex">\beta = -1</script> determine
+a separating hyperplane (line) of the labeled points.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/perceptronplane.png" ></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env5.55"></span><a class="Exerciseno" data-count="5.55"></a><a href="#09d005a9-c500-43fb-a3c0-acb1bb60a758" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=09d005a9-c500-43fb-a3c0-acb1bb60a758 class = "collapse Exercise envbuttons">  
+Consider the points
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+0 \\ 0
+\end{pmatrix},\qquad
+\begin{pmatrix}
+0 \\ 1
+\end{pmatrix},\qquad
+
+\begin{pmatrix}
+1 \\ 1
+\end{pmatrix},\qquad\text{and}\qquad
+\begin{pmatrix}
+1 \\ 0
+\end{pmatrix}
+</script>
+in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>, where the first point is labeled with <span class="math"></span><script type="math/tex">-1</script> and the rest by <span class="math"></span><script type="math/tex">1</script>.
+Use the perceptron algorithm to compute a separating hyperplane.<div style="margin-top:20px"></div>What happens when you run the perceptron algorithm on the above
+points, but where the label of
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  1 \\ 1
+\end{pmatrix}
+</script>
+is changed from <span class="math"></span><script type="math/tex">1</script> to <span class="math"></span><script type="math/tex">-1</script>?
+</div><div style="margin-top:20px"></div><a href="#1dfe273c-16e2-4ef2-90e6-904f344ddb70" class ="btn btn-default" data-toggle="collapse">Why does the simple algorithm work?</a><div id=1dfe273c-16e2-4ef2-90e6-904f344ddb70 class="collapse">
+  We will assume that there exists <span class="math"></span><script type="math/tex">\alpha\in \mathbb{R}^d</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \alpha^T x_i > 0
+  </script>
+  for every <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>. This is equivalent to the existence of <span class="math"></span><script type="math/tex">\alpha^*\in \mathbb{R}^d</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  (\alpha^*)^T x_i \geq 1
+  </script>
+  for every <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>. Let <span class="math"></span><script type="math/tex">r = \max\{\left\vert x_1 \right\vert, \dots, \left\vert x_n \right\vert\}</script>. The basic insight
+  is the following
+  <span id="env5.56"></span><div class="proposition" data-count="5.56">     
+    After <span class="math"></span><script type="math/tex">m</script> replacements of <span class="math"></span><script type="math/tex">\alpha</script> in the algorithm, we have
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+      \alpha^T \alpha^* &\geq m \\
+      m r^2 &\geq \left\vert \alpha \right\vert^2.
+    \end{aligned}</script>
+  </div>
+  <a href="#ce631a7f-f8b6-481a-a913-8ca0bbb00b1f" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=ce631a7f-f8b6-481a-a913-8ca0bbb00b1f class = "collapse Proof envbuttons">    
+    These statements follow from the inequalities
+    <div class="math"></div><script type="math/tex; mode=display">
+    (\alpha + x_i)^T \alpha^* = \alpha^T \alpha^* + x_i^T \alpha^* \geq \alpha^T \alpha^* + 1
+    </script>
+    and
+    <div class="math"></div><script type="math/tex; mode=display">
+    (\alpha + x_i)^T (\alpha + x_i) = \left\vert \alpha \right\vert^2 + 2 x_i^T \alpha + \left\vert x_i \right\vert^2 \leq \left\vert \alpha \right\vert^2 +
+    \left\vert x_i \right\vert^2 \leq \left\vert \alpha \right\vert^2 + r^2.
+    </script>
+    </div><div style="margin-top:20px"></div>Proposition <a href=#env5.56 class="labelref">5.56</a> implies that
+<div class="math"></div><script type="math/tex; mode=display">
+m \leq \left\vert \alpha \right\vert \left\vert \alpha^* \right\vert \leq \sqrt{m} r \left\vert \alpha^* \right\vert.
+</script>
+Therefore we get <span class="math"></span><script type="math/tex">m\leq r^2 \left\vert \alpha^* \right\vert^2</script> and there is an upper bound on the number of
+iterations used in the second step. At a certain iteration within this bound
+we must have <span class="math"></span><script type="math/tex">\alpha^T x_i > 0</script> for every <span class="math"></span><script type="math/tex">i=1, \dots, n</script>.
+</div><div style="margin-top:20px"></div>Below is an implementation of the perceptron (learning) algorithm
+in python with input from Example <a href=#env5.54 class="labelref">5.54</a>.<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+import numpy as np
+
+vectors = [[0,0], [1,1], [1,-1]]
+labels = [1, 1, -1]
+
+def liftvectors(vectors, labels):
+    return [list(map(lambda t: x[1]*t, x[0]))+[x[1]] for x in zip(vectors, labels)]
+
+def perceptron(inputvectors):
+    alpha = np.array(len(inputvectors[0])*[0])
+    vectors = list(map(np.array, inputvectors))
+    done = False
+    while not done:
+        done = True
+        for v in vectors:
+            if np.dot(alpha, v) <= 0:
+               alpha = np.add(alpha, v)  
+               done = False
+               break
+    return alpha
+
+print("The (normal) vector alpha in dimension one more is:")
+
+perceptron(liftvectors(vectors, labels))    
+</script></div><div style="margin-top:20px"></div><span id="env5.57"></span><a class="Exerciseno" data-count="5.57"></a><a href="#4e50faa6-cdae-4963-8efc-8fa3595526a4" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4e50faa6-cdae-4963-8efc-8fa3595526a4 class = "collapse Exercise envbuttons">  
+For python aficionados: why does the above code stop working when
+<blockquote>
+  <tt>vectors = list(map(np.array, inputvectors))</tt>
+</blockquote>
+is replaced by
+<blockquote>
+  <tt>vectors = map(np.array, inputvectors)</tt>
+</blockquote>
+?
+</div><div style="margin-top:20px"></div></div></body>

@@ -1,0 +1,9 @@
+chapterno, @3@
+chapter, @Matrices@, ac78de01-faf4-4003-a06d-93bd0a049be0
+section, @Matrices@, 4852f3d9-8469-484e-b7ad-fd763bb22be8
+section, @Linear maps@, ed992999-6b80-44f7-9d04-5d6a54a786eb
+section, @Matrix multiplication@, 417e6feb-e87a-4e49-b109-69c0efc11f20
+section, @Matrix arithmetic@, f1ee71a3-f246-4de5-a059-0857e89b250b
+section, @The inverse matrix@, 3ba68277-54c2-4417-8873-580221bf227c
+section, @The transposed matrix@, edae857a-385d-4193-a2ca-daff507009d4
+section, @Symmetric matrices@, 839cd3f2-52bf-43af-8af7-daa31bb1c266

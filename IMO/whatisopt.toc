@@ -1,0 +1,8 @@
+chapterno, @4@
+chapter, @What is optimization?@, 60e76dc3-eb30-41ba-8542-172ddc1bc2a7
+section, @What is an optimization problem?@, a9f6c300-8b17-4ff9-9584-14821bbe7c43
+section, @General definition@, 14942bc9-a19b-4efd-8a3a-12cf8cb0fe43
+section, @Convex optimization@, 29d4e276-f39d-4a07-a214-417d5dba2e09
+section, @Linear optimization@, 20a70385-47c1-4b71-85b2-4baa80cba38d
+section, @Fourier-Motzkin elimination@, 63315831-1379-4a83-bc56-6b8b8eef2150
+section, @Application in machine learning and data science@, 0ab99069-0424-4ec8-a0ba-5a8067629c6e

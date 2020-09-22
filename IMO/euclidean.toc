@@ -1,0 +1,9 @@
+chapterno, @5@
+chapter, @Euclidean vector spaces@, 15dff35d-8cda-4b25-8751-6a59c8bc55a3
+section, @Vectors in the plane@, 2e88a7de-ca93-46a4-8202-aa3c0add0f69
+section, @Higher dimensions@, 367157fb-a772-41c1-be77-fdd8d3e0cc1f
+section, @An important remark about the real numbers@, 65523d91-2925-4c74-91f9-a5258c9f1af3
+section, @Sequences and limits@, 2bec1a82-9ba3-435d-bb8a-cea237b3fcd3
+section, @Continuous functions@, 1a1ad702-0af7-45ef-abe2-b212777e81d9
+section, @Special subsets@, bae8f95a-2d6c-495a-a4d0-10f958e2ca12
+section, @The perceptron algorithm@, cbd12a77-2916-4aca-aa99-246e17727e7c

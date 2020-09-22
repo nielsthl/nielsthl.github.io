@@ -1,0 +1,21 @@
+<p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+</p>
+<h1>Afleveringsopgave 5</h1>
+<p>Se Afleveringsopgaver i venstremenuen. Vi er nu noget frem til
+introduktionen til optimering. En elegant og enkelt algoritme (Fourier-Motzkin
+elimination) til
+løsning af lineære optimeringsproblemer er temaet for afleveringsopgaven.
+</p>
+<h1>MatLab</h1>
+<p>Der er meget lidt aktivitet i virtuelt MatLab. Du kan få hjælp her. Spørg løs!</p>
+<h1>Teoretiske øvelser</h1>
+<p>Opgaverne er kategoriseret efter sværhedsgrad. <b>Basale opgaver</b> bør man have set på inden og løst. Man bør som minimum have brugt god hjernekraft og mindst to timer med egne nedskrevne noter på <b>Opgaver</b>. Det er ok, hvis man ikke har nået <b>Svære opgaver</b>. Der er heller ikke noget krav om at man når <b>Svære opgaver</b> til øvelsestimerne. Vigtige opgaver er markeret med <b>boldface</b>.</p>
+<p><b>Basale opgaver</b>: 4.3, 4.5, 4.6, 4.23</p>
+<p><b>Opgaver</b>: 4.8, 4.11, 4.12. 4.16, 4.17, 4.20, <b>4.21</b>, 4.23, 4.25, <b>4.27</b></p>
+<p><b>Svære opgaver</b>: 4.28</p>
+<h1>Forelæsninger</h1>
+<h3>Onsdag</h3>
+<p>Starten af <a href="https://edtech.dk/IMO/euclidean.html" target="_blank">Kapitel 5</a> i de interaktive noter om euklidiske vektorrum. Fokus er prikproduktet og dets mange anvendelser.</p>
+<h3>Fredag</h3>
+<p><a href="https://edtech.dk/IMO/euclidean.html" target="_blank">Kapitel 5</a> i de interaktive noter frem til de reelle tal midt i kapitlet.</p>
