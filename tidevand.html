@@ -7,15 +7,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<style>
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+</style>
+
 <script src="tidevand.js"></script>
 </head>
 
 <html>
 <body>
-<canvas id="canvas" width="2000" height="2000"></canvas>
+<canvas id="canvas"></canvas>
 
 <script>
 var ctx = document.getElementById("canvas").getContext("2d");
+ctx.width = window.innerWidth();
+ctx.height = window.innerHeight();
+
 var dato = new Date();
 var d = dato.getDate(); // 1 - 31 !!
 var m = dato.getMonth(); // 0 = Jan !!
