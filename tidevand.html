@@ -39,12 +39,14 @@ var options = {
       fontColor: "#111"
     },
     legend: {
-      display: true,
+      display: false,
+      /*
       position: "bottom",
       labels: {
         fontColor: "#333",
         fontSize: 16
       }
+      */
     },
     scales: {
 	xAxes: [{
@@ -71,7 +73,7 @@ var chart = new Chart(ctx, {
         datasets: [{
 	    fill: false,
             data: tabel,
-	    label: 'cm'
+	    //label: ''
         }]
     },
     options: options
