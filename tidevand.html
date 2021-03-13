@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<script src="tidevand.js"></script>
+</head>
+
+<html>
+<body>
+<!--<canvas id="canvas" width="690" height="651"></canvas>-->
+
+<canvas id="canvas" width="2000" height="2000"></canvas>
+
+<script>
+var ctx = document.getElementById("canvas").getContext("2d");
+var dato = new Date();
+var d = dato.getDate(); // 1 - 31 !!
+var m = dato.getMonth(); // 0 = Jan !!
+var tabel = lookup(m+1, d);
+var xtick;
+var h;
+
+ctx.moveTo(0, -tabel[0]*10 + 200);
+for (xtick = 0; xtick < dataPointsPerDay; xtick++){
+    if (xtick % 6 == 0)
+       ctx.fillText(xtick/6 ,xtick*4, 200);
+    ctx.lineTo(xtick*4, -tabel[xtick]*10 + 200);
+    }
+ctx.stroke();
+ctx.font = "20px Arial";
+ctx.fillText("Tidevand Als Odde: " + d + "/" + (m+1), 100, 20);
+
+
+</script>
+
+</body>
+</html>
