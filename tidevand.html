@@ -21,7 +21,11 @@
 var dato = new Date();
 var d = dato.getDate(); // 1 - 31 !!
 var m = dato.getMonth(); // 0 = Jan !!
+var weekday = ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"];
+var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var tabel = lookup(m+1, d);
+var ugedag = dato.getDay();
+var year = "/2021"
 
 var labels = [];
 var i,j;
@@ -30,7 +34,7 @@ for (i = 0; i < 24; i++)
   for (j = 0; j < 6; j++) 
      labels.push(i.toString() + ":" + (10*j).toString())
 
-var ovsk = "Tidevand, Als Odde: " + d.toString() + "/" + (m+1).toString();
+var ovsk = "Tidevand, Als Odde, " + weekday[ugedag] + " " + d.toString() + "/" + (m+1).toString()+year;
 
 var options = {
     responsive: true,
@@ -83,18 +87,20 @@ var chart = new Chart(ctx, {
     options: options
 });
 
-var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
 function advanceDay(){
   if (m == 11 && d == 31) // m = 11 is December. No advance on last day.
     return;
+  if (ugedag == 6)
+     ugedag = 0;
+  else
+     ugedag += 1;
   if (d == months[m]){
     m += 1;
     d = 1;
   }
   else
     d += 1;	 
-  ovsk = "Tidevand, Als Odde: " + d.toString() + "/" + (m+1).toString();
+  ovsk = "Tidevand, Als Odde, " + weekday[ugedag] + " " + d.toString() + "/" + (m+1).toString()+year;
   tabel = lookup(m+1, d);
   chart.data.datasets[0].data = tabel;
   chart.options.title.text = ovsk;
@@ -109,9 +115,13 @@ function decreaseDay(){
     d = months[m];
   }
   else
-    d -= 1;	 
-  ovsk = "Tidevand, Als Odde: " + d.toString() + "/" + (m+1).toString();
-  tabel = lookup(m+1, d);
+    d -= 1;
+  if (ugedag == 0)
+     ugedag = 6;
+  else
+     ugedag -=1;
+  ovsk = "Tidevand, Als Odde, " + weekday[ugedag] + " " + d.toString() + "/" + (m+1).toString()+year;
+    tabel = lookup(m+1, d);
   chart.data.datasets[0].data = tabel;
   chart.options.title.text = ovsk;
   chart.update();
