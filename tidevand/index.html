@@ -13,6 +13,7 @@
 
 <html>
 <body>
+<button onclick="decreaseDay()">-</button><button onclick="advanceDay()">+</button> 
 <canvas id="myChart"></canvas>
 <script>
 //options
@@ -29,10 +30,12 @@ for (i = 0; i < 24; i++)
   for (j = 0; j < 6; j++) 
      labels.push(i.toString() + ":" + (10*j).toString())
 
+var ovsk = "Tidevand, Als Odde: " + d.toString() + "/" + (m+1).toString();
+
 var options = {
     responsive: true,
     title: {
-      text : "Tidevand, Als Odde: " + d.toString() + "/" + (m+1).toString() ,   
+      text : ovsk,
       display: true,
       position: "top",
       fontSize: 15,
@@ -67,6 +70,7 @@ var options = {
 
 
 var ctx = document.getElementById('myChart').getContext('2d');
+
 var chart = new Chart(ctx, {
     type: 'line',
     data:{
@@ -79,6 +83,41 @@ var chart = new Chart(ctx, {
     },
     options: options
     });
+
+var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+function advanceDay(){
+  if (m == 11 && d == 31) // m = 11 is December. No advance on last day.
+    return;
+  if (d == months[m]){
+    m += 1;
+    d = 1;
+  }
+  else
+    d += 1;	 
+  ovsk = "Tidevand, Als Odde: " + d.toString() + "/" + (m+1).toString();
+  tabel = lookup(m+1, d);
+  chart.data.datasets[0].data = tabel;
+  chart.options.title.text = ovsk;
+  chart.update();
+};
+
+function decreaseDay(){
+  if (m == 0 && d == 1) // m = 0 is January. No decrease on first day.
+    return;
+  if (d == 1){
+    m -= 1;
+    d = months[m];
+  }
+  else
+    d -= 1;	 
+  ovsk = "Tidevand, Als Odde: " + d.toString() + "/" + (m+1).toString();
+  tabel = lookup(m+1, d);
+  chart.data.datasets[0].data = tabel;
+  chart.options.title.text = ovsk;
+  chart.update();
+};
+
 </script>
 </body>
 </html>
