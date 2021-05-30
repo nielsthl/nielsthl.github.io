@@ -1,0 +1,213 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python"],
+  hide : ["permalink"] 
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#51274bf0-f343-411d-9c81-905f8c73dcd0"><b>1</b> Introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#e52d087a-8c14-4be7-a12f-006b609979cf">1.1 Prerequisites</a></li><li><a href="intro.html#d852af7a-5381-4ba0-97a7-051256d1bdc5">1.2 Tinkering</a></li><li><a href="intro.html#9fcfeaa6-9e17-4354-9bdc-56dbc6696a4d">1.3 Basic design</a></li></ul><li><a class="kap" href="installuse.html#45bfc6aa-0db9-492a-978d-607b3fa3e4b0"><b>2</b> Installation and use</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="installuse.html#bedc3026-868c-434d-9675-8d8404eb29b0">2.1 Installation</a></li><li><a href="installuse.html#fc86a14c-297b-439f-b7a3-aac8148f5ba8">2.2 Basic use</a></li><li><a href="installuse.html#b8a65099-2515-411d-ad8a-cd26b969c884">2.3 Beginning and working on your own project</a></li><li><a href="installuse.html#056001c0-c5a8-4a5a-beee-4c00750f2e6a">2.4 Sharing and uploading your notes</a></li></ul><li><a class="kap" href="functions.html#4fc9938e-cd01-40dc-aff5-c895d9ae0fe1"><b>3</b> Functions in QaDiL</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="functions.html#65200740-9206-4405-8c40-74311f8cee44">3.1 Format of output/inclusion of preamble files</a></li><li><a href="functions.html#30fb40b2-9251-4824-a9e4-adbd378493a0">3.2 LaTeX and non-LaTeX commands</a></li><li><a href="functions.html#9bb331d8-e4fb-4512-8e89-034150e7f913">3.3 List of functions</a></li><li><a href="functions.html#43b45179-490b-40ca-8004-84b44d846025">3.4 Interactive functions (non-LaTeX) functions</a></li></ul><li><a class="kap" href="usefulmacros.html#a413c113-f55a-4814-898b-7a83496b7361"><b>4</b> Useful macros</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="usefulmacros.html#60972ab4-d172-41ba-be57-078a49cd6188">4.1 Embedding of videos</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="45bfc6aa-0db9-492a-978d-607b3fa3e4b0">2<span style="float:right;">Installation and use</span></h1><div style="margin-top:20px"></div><span id="sec2.1"></span><h2 id="bedc3026-868c-434d-9675-8d8404eb29b0">2.1 Installation</h2><div style="margin-top:20px"></div>Download the zip file <a href="https://edtech.dk/QaDiL.zip" target="_blank">https://edtech.dk/QaDiL.zip</a>. This zip file unzips into<div style="margin-top:20px"></div><p><pre><code>QaDiL/
+|__LICENSE  
+|__qadil/
+|__Notes/
+|  |__Generic/
+</code></pre></p><div style="margin-top:20px"></div>The <tt>Notes</tt> directory above contains a directory of the (example)
+project (set of notes) <tt>Generic</tt>. The <tt>qadil</tt> directory contains the <tt>python</tt>
+code comprising QaDiL.<div style="margin-top:20px"></div><span id="sec2.1.1"></span><h3>2.1.1 Does the setup work out of the box?</h3><div style="margin-top:20px"></div>If your setup with <tt>python</tt> and <tt>make</tt> works, the commands
+<p><pre><code>cd QaDiL/Notes/Generic
+make
+</code></pre></p>
+should render compiled (html) versions
+of the files <tt>index.tex</tt> and <tt>intro.tex</tt>. The compiled files <tt>index.html</tt> and
+<tt>intro.html</tt> can then be viewed with any browser. Opening the file <tt>index.html</tt> from
+your browser, you should see<div style="margin-top:20px"></div><div class="centerimg"><img src="img/generic.png" ></div><div style="margin-top:20px"></div>If you experience problems at this point,
+you need to make sure that <tt>python3</tt> and  <tt>make</tt> are installed and that the supplied 
+<tt>Makefile</tt> is compatible with <tt>make</tt> on your system.<div style="margin-top:20px"></div>Linux and MacOS are born with <tt>python3</tt> and <tt>make</tt> installed. Windows needs to have <tt>make</tt> installed. This can be done by downloading the Setup program labeled <em>Complete package, except sources</em> from<div style="margin-top:20px"></div><center>
+<a href="http://gnuwin32.sourceforge.net/packages/make.htm" target="_blank">http://gnuwin32.sourceforge.net/packages/make.htm</a>
+</center><div style="margin-top:20px"></div>This is admittedly old school (the file dates back to 2006). But <a href="https://en.wikipedia.org/wiki/Make_(software)" target="_blank"><tt>make</tt></a> is superb software invented in 1976 and still in use.<div style="margin-top:20px"></div><span id="sec2.2"></span><h2 id="fc86a14c-297b-439f-b7a3-aac8148f5ba8">2.2 Basic use</h2><div style="margin-top:20px"></div>The project directory <tt>Generic</tt> has the following
+content<div style="margin-top:20px"></div><p><pre><code>Generic/
+|__Makefile
+|__index.tex
+|__intro.tex
+|__css/
+|  |__iLaTeXen.css
+|  |__index.css
+|__img/
+|__|__(image/png files here)
+|__js/
+|__|__openclosebuttons.js
+|__|__orderquiz.js
+|__|__quiz.js
+|__|__sagecell.js
+|__|__sidebar.js
+</code></pre></p><div style="margin-top:20px"></div>and serves as a template for a new project/set of notes. The file <tt>index.tex</tt> contains
+the front page and <tt>intro.tex</tt> is an example of a chapter in the notes.<div style="margin-top:20px"></div><span id="sec2.2.1"></span><h3>2.2.1 Compilation</h3><div style="margin-top:20px"></div>The compilation of the notes is governed by <tt>Makefile</tt>, which for <tt>Generic/</tt> looks like<div style="margin-top:20px"></div><p><pre><code>COMPILER = ../../qadil/qadil.py
+GENTOC = ../../qadil/gentoc.py
+GENLABELS = ../../qadil/genlbls.py
+
+all: book labels toc
+book: index.html intro.html 
+labels:
+	python3 $(GENLABELS) .
+toc:
+	python3 $(GENTOC) .
+%.html: %.tex
+	python3 $<
+clean:
+	rm -f *.html *.toc *.lbl *~
+zip:
+	zip -r Generic.zip *.html img/ js/ css/
+</code></pre></p><div style="margin-top:20px"></div>The entries <tt>index.html</tt> and <tt>intro.html</tt> at <tt>book: </tt> indicate that the project contains
+the front page file <tt>index.tex</tt> and the chapter file <tt>intro.tex</tt>. The <tt>make</tt>
+magic is contained in<div style="margin-top:20px"></div><p><pre><code>%.html: %.tex
+	python3 $<
+</code></pre></p><div style="margin-top:20px"></div>The upshot is that if <tt>name.tex</tt> has been changed more recently than <tt>name.html</tt>, then
+<tt>name.tex</tt> is automatically compiled into
+<tt>name.html</tt> when running <tt>make</tt>.<div style="margin-top:20px"></div><span id="sec2.3"></span><h2 id="b8a65099-2515-411d-ad8a-cd26b969c884">2.3 Beginning and working on your own project</h2><div style="margin-top:20px"></div>A simple way to begin or initialize your own project is to clone the <tt>Generic</tt> directory.
+Suppose you wish to start a project called <tt>Math101</tt>. The first step is to run
+the command<div style="margin-top:20px"></div><p><pre><code>cp -R Generic Math101
+</code></pre></p><div style="margin-top:20px"></div>on MacOS/Linux or <div style="margin-top:20px"></div><p><pre><code>xcopy /E /I Generic Math101
+</code></pre></p><div style="margin-top:20px"></div>on Windows systems.<div style="margin-top:20px"></div>Then your directory <tt>Math101</tt> resides along <tt>Generic</tt> and
+looks like<div style="margin-top:20px"></div><p><pre><code>Generic/
+|  
+Math101/
+|__Makefile
+|__index.tex
+|__intro.tex
+|__css/
+|  |__iLaTeXen.css
+|  |__index.css
+|__img/
+|__|__(image files/png files here)
+|__js/
+|__|__openclosebuttons.js
+|__|__orderquiz.js
+|__|__quiz.js
+|__|__sagecell.js
+|__|__sidebar.js
+</code></pre></p><div style="margin-top:20px"></div>The cover file <tt>index.tex</tt> can now be modified reflecting your project/notes. Suppose that
+your project involves the files <tt>chapter1.tex</tt> and <tt>chapter2.tex</tt>. Then
+the <tt>Makefile</tt> is changed into<div style="margin-top:20px"></div><p><pre><code>COMPILER = ../../qadil/qadil.py
+GENTOC = ../../qadil/gentoc.py
+GENLABELS = ../../qadil/genlbls.py
+
+all: book labels toc
+book: index.html chapter1.html chapter2.html 
+labels:
+	python3 $(GENLABELS) .
+toc:
+	python3 $(GENTOC) .
+%.html: %.tex
+	python3 $<
+clean:
+	rm -f *.html *.toc *.lbl *~
+zip:
+	zip -r Math101.zip *.html img/ js/ css/  
+</code></pre></p><div style="margin-top:20px"></div>The <tt>zip</tt> file in the <tt>Makefile</tt> is used for sharing your notes on a web server.<div style="margin-top:20px"></div><span id="sec2.4"></span><h2 id="056001c0-c5a8-4a5a-beee-4c00750f2e6a">2.4 Sharing and uploading your notes</h2><div style="margin-top:20px"></div>When your notes are ready for publication on a web server, you go through the following steps in
+the project directory <tt>Math101</tt> (as an example).<div style="margin-top:20px"></div><p><pre><code>make clean
+make all
+make zip
+</code></pre></p><div style="margin-top:20px"></div>This gives you the file <tt>Math101.zip</tt>. If your notes are made available through
+the URL <tt>https://edtech.dk/Math101</tt>, then you need access to the root directory
+of the web server (say <tt>/var/www</tt>). From there the directory <tt>Math101</tt>
+must exist. From the root of<div style="margin-top:20px"></div><p><pre><code>/var/www/Math101
+</code></pre></p><div style="margin-top:20px"></div>you simply unzip <tt>Math101.zip</tt>. Then (the cover/front page of) your notes can be
+accessed through<div style="margin-top:20px"></div><p><pre><code>https://edtech.dk/Math101  
+</code></pre></p><div style="margin-top:20px"></div></div></body>

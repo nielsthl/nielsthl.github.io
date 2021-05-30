@@ -1,0 +1,119 @@
+<!doctype html>
+<head>
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python"],
+  hide : ["permalink"] 
+  });
+</script>
+
+
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#51274bf0-f343-411d-9c81-905f8c73dcd0"><b>1</b> Introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#e52d087a-8c14-4be7-a12f-006b609979cf">1.1 Prerequisites</a></li><li><a href="intro.html#d852af7a-5381-4ba0-97a7-051256d1bdc5">1.2 Tinkering</a></li><li><a href="intro.html#9fcfeaa6-9e17-4354-9bdc-56dbc6696a4d">1.3 Basic design</a></li></ul><li><a class="kap" href="installuse.html#45bfc6aa-0db9-492a-978d-607b3fa3e4b0"><b>2</b> Installation and use</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="installuse.html#bedc3026-868c-434d-9675-8d8404eb29b0">2.1 Installation</a></li><li><a href="installuse.html#fc86a14c-297b-439f-b7a3-aac8148f5ba8">2.2 Basic use</a></li><li><a href="installuse.html#b8a65099-2515-411d-ad8a-cd26b969c884">2.3 Beginning and working on your own project</a></li><li><a href="installuse.html#056001c0-c5a8-4a5a-beee-4c00750f2e6a">2.4 Sharing and uploading your notes</a></li></ul><li><a class="kap" href="functions.html#4fc9938e-cd01-40dc-aff5-c895d9ae0fe1"><b>3</b> Functions in QaDiL</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="functions.html#65200740-9206-4405-8c40-74311f8cee44">3.1 Format of output/inclusion of preamble files</a></li><li><a href="functions.html#30fb40b2-9251-4824-a9e4-adbd378493a0">3.2 LaTeX and non-LaTeX commands</a></li><li><a href="functions.html#9bb331d8-e4fb-4512-8e89-034150e7f913">3.3 List of functions</a></li><li><a href="functions.html#43b45179-490b-40ca-8004-84b44d846025">3.4 Interactive functions (non-LaTeX) functions</a></li></ul><li><a class="kap" href="usefulmacros.html#a413c113-f55a-4814-898b-7a83496b7361"><b>4</b> Useful macros</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="usefulmacros.html#60972ab4-d172-41ba-be57-078a49cd6188">4.1 Embedding of videos</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><br><br><h1 text-align:center;>QaDiL - Quick and Dirty interactive LaTeX</h1><h2 text-align:center;><a href="https://pure.au.dk/portal/en/persons/niels-lauritzen(c1dbb897-3979-4ea4-86e4-afcf92e4d05a).html" target="_blank">Niels Lauritzen</a></h2><div style="margin-top:20px"></div><p style="margin-left: 3cm; margin-right: 3cm;">
+  A LaTeX like system using <a href="https://katex.org" target="_blank">KaTeX</a> and <a href="https://sagecell.sagemath.org/" target="_blank">SageMathCell</a> for fast production of (mathematics) <tt>html</tt>-notes with interactive elements. Use requires (installation of) <tt>python</tt> and <tt>make</tt> and knowledge of editing LaTeX with a (plain) text editor. Preview of <tt>html</tt> can be done in any browser. See below for an example. The upper left hand burger contains further information.
+</p><div style="margin-top:20px"></div><p style="margin-bottom: 2cm;"></p><div style="margin-top:20px"></div><p><pre><code>\chapterno{1}
+\chapter{A quiz on a famous integral}
+\begin{quiz}
+  \question What is
+  \begin{equation*}[emph]
+  \int_{-\infty}^{\infty} e^{-x^2} d x?
+  \end{equation*}
+  Click on the right answer below. 
+  \answer{F} $$2 \sqrt{\pi}$$
+  \answer{T} $$\sqrt{\pi}$$
+  \answer{F} $$\pi$$
+\end{quiz}
+
+The proof is hidden in the button below:
+
+\begin{proof}[showhide]
+  See the \url{Gaussian integral}{https://en.wikipedia.org/wiki/Gaussian_integral} article.
+\end{proof}
+
+You may want to seek help from \url{Sage}{https://en.wikipedia.org/wiki/SageMath}:
+
+\begin{sage}
+integrate(exp(-x**2), x, -infinity, infinity)
+\end{sage}
+</code></pre></p><div style="margin-top:20px"></div><p style="margin-bottom: 2cm;"></p><div style="margin-top:20px"></div>
+<h1 style="text-align: left;">1<span style = "float:right;">A quiz on a famous integral</span></h1>
+<div style="margin-top:20px"></div><span id="{labelname}"></span><div id="quiz1" style="width:100%;"><div class="row quizquestion"> What is
+  <div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+  \int_{-\infty}^{\infty} e^{-x^2} d x?
+  </script></div>
+  Click on the right answer below.
+  </div><div class="row"><div class="col-xs-5 quizanswer" datav="F"> <div class="math"></div><script type="math/tex; mode=display">2 \sqrt{\pi}</script>
+  </div><div class="col-xs-5 quizanswer" datav="T"> <div class="math"></div><script type="math/tex; mode=display">\sqrt{\pi}</script>
+  </div><div class="col-xs-5 quizanswer" datav="F"> <div class="math"></div><script type="math/tex; mode=display">\pi</script>
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script><div style="margin-top:20px"></div>The proof is hidden in the button below:<div style="margin-top:20px"></div><a href="#4bfee202-d02e-4dec-90a4-77af866e1ad5" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=4bfee202-d02e-4dec-90a4-77af866e1ad5 class = "collapse Proof envbuttons">    
+  See the <a href="https://en.wikipedia.org/wiki/Gaussian_integral" target="_blank">Gaussian integral</a> article.
+  </div><div style="margin-top:20px"></div>You may want to seek help from <a href="https://en.wikipedia.org/wiki/SageMath" target="_blank">Sage</a>:<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+integrate(exp(-x**2), x, -infinity, infinity)
+</script></div><div style="margin-top:20px"></div></div></body><div style="margin-top:20px"></div>

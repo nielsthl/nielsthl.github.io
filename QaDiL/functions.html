@@ -1,0 +1,465 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python"],
+  hide : ["permalink"] 
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#51274bf0-f343-411d-9c81-905f8c73dcd0"><b>1</b> Introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#e52d087a-8c14-4be7-a12f-006b609979cf">1.1 Prerequisites</a></li><li><a href="intro.html#d852af7a-5381-4ba0-97a7-051256d1bdc5">1.2 Tinkering</a></li><li><a href="intro.html#9fcfeaa6-9e17-4354-9bdc-56dbc6696a4d">1.3 Basic design</a></li></ul><li><a class="kap" href="installuse.html#45bfc6aa-0db9-492a-978d-607b3fa3e4b0"><b>2</b> Installation and use</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="installuse.html#bedc3026-868c-434d-9675-8d8404eb29b0">2.1 Installation</a></li><li><a href="installuse.html#fc86a14c-297b-439f-b7a3-aac8148f5ba8">2.2 Basic use</a></li><li><a href="installuse.html#b8a65099-2515-411d-ad8a-cd26b969c884">2.3 Beginning and working on your own project</a></li><li><a href="installuse.html#056001c0-c5a8-4a5a-beee-4c00750f2e6a">2.4 Sharing and uploading your notes</a></li></ul><li><a class="kap" href="functions.html#4fc9938e-cd01-40dc-aff5-c895d9ae0fe1"><b>3</b> Functions in QaDiL</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="functions.html#65200740-9206-4405-8c40-74311f8cee44">3.1 Format of output/inclusion of preamble files</a></li><li><a href="functions.html#30fb40b2-9251-4824-a9e4-adbd378493a0">3.2 LaTeX and non-LaTeX commands</a></li><li><a href="functions.html#9bb331d8-e4fb-4512-8e89-034150e7f913">3.3 List of functions</a></li><li><a href="functions.html#43b45179-490b-40ca-8004-84b44d846025">3.4 Interactive functions (non-LaTeX) functions</a></li></ul><li><a class="kap" href="usefulmacros.html#a413c113-f55a-4814-898b-7a83496b7361"><b>4</b> Useful macros</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="usefulmacros.html#60972ab4-d172-41ba-be57-078a49cd6188">4.1 Embedding of videos</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="4fc9938e-cd01-40dc-aff5-c895d9ae0fe1">3<span style="float:right;">Functions in QaDiL</span></h1><div style="margin-top:20px"></div>The QaDiL functions are either control sequences or environments modelled from LaTeX syntax. A
+control sequence could be<div style="margin-top:20px"></div><p><pre><code>\newcommand{\test}[1]{\textbf{#1}}
+</code></pre></p><div style="margin-top:20px"></div>An environment is viewed as a function (or control sequence) with a body, such as<div style="margin-top:20px"></div><p><pre><code>\begin{proof}[showhide]
+Left as an exercise.
+\end{proof}
+</code></pre></p><div style="margin-top:20px"></div>Each QaDiL function can have an arbitary number of parameters in <tt>{</tt>} and optional parameters in <tt>[]</tt>. The <tt>proof</tt> environment above has the optional parameter <tt>showhide</tt>, which outputs the proof in a show/hide button in html. <div style="margin-top:20px"></div><span id="sec3.1"></span><h2 id="65200740-9206-4405-8c40-74311f8cee44">3.1 Format of output/inclusion of preamble files</h2><div style="margin-top:20px"></div>The format of the output is enitrely controlled by inclusion of <tt>css</tt> files in <tt><project>/css</tt>. Initially a project comes with the <tt>css</tt> file <tt>css/iLaTeXen.css</tt>. This file contains generic setup for the
+english language, formatting of environments, fonts etc. It is included with<div style="margin-top:20px"></div><p><pre><code>...
+\htmlpath{../../qadil/htmlinclude/}
+\includehtml{iLaTeXen}
+... other inclusions of files ...
+\begin{document}
+...
+\end{document}
+</code></pre></p><div style="margin-top:20px"></div>The parameter <tt>iLaTeXen</tt> points to the file<div style="margin-top:20px"></div><p><pre><code>QaDiL/qadil/htmlinclude/iLaTeXen
+</code></pre></p><div style="margin-top:20px"></div>This file contains raw <tt>html</tt> code for inclusion.<div style="margin-top:20px"></div><span id="sec3.2"></span><h2 id="30fb40b2-9251-4824-a9e4-adbd378493a0">3.2 LaTeX and non-LaTeX commands</h2><div style="margin-top:20px"></div>Below we give a list of the implemented functions.  Many of these are standard LaTeX commands with an important difference.
+An extra optional parameter can be added to control <tt>html</tt> output. For example, the optional parameter
+<tt>showhide</tt> can be added to the (generic) environment <tt>definition</tt>:<div style="margin-top:20px"></div><p><pre><code>\begin{theorem}[showhide]
+This is a complicated theorem.
+\end{theorem}
+</code></pre></p><div style="margin-top:20px"></div><span id="env3.1"></span><a class="Theoremno" data-count="3.1"></a><a href="#de14a6cc-5ecf-48d7-9676-e9dc018a3618" class ="btn btn-default Theorembutton" data-toggle="collapse"></a><div id=de14a6cc-5ecf-48d7-9676-e9dc018a3618 class = "collapse Theorem envbuttons">  
+This is a complicated theorem.
+</div><div style="margin-top:20px"></div>It is rarely useful to hide the statement of a theorem in a button. It is more useful to hide the proof
+in a button in case you want the reader to skip details on first readings.<div style="margin-top:20px"></div><p><pre><code>\begin{proof}[showhide]
+This is a complicated proof. Skip on first reading.
+\end{proof}
+</code></pre></p><div style="margin-top:20px"></div><a href="#992668c8-6aa3-48e2-ae86-d334800d0043" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=992668c8-6aa3-48e2-ae86-d334800d0043 class = "collapse Proof envbuttons">    
+This is a complicated proof. Skip on first reading.
+  </div><div style="margin-top:20px"></div>Another optional parameter (<tt>emph</tt>) is used to emphasize an environment:<div style="margin-top:20px"></div><p><pre><code>\begin{theorem}[emph]
+This is another complicated theorem.
+\end{theorem}
+</code></pre></p><div style="margin-top:20px"></div><div class="emphasize"><span id="env3.2"></span><div class="theorem" data-count="3.2">     
+This is another complicated theorem.
+</div></div><div style="margin-top:20px"></div>The output is completely controlled through classes in the associated <tt>css</tt> file <tt>iLaTeXen.css</tt>. <div style="margin-top:20px"></div><a href="#919135c5-bb15-46ed-a78f-6b7d35634b62" class ="btn btn-default" data-toggle="collapse">Entries in <tt>css</tt> related to <tt>showhide</tt>, <tt>theorem</tt> and <tt>proof</tt></a><div id=919135c5-bb15-46ed-a78f-6b7d35634b62 class="collapse">
+<p><pre><code>.Proof:after{
+     font-weight: bold;
+     content: "QED.";
+     float: right;
+}
+
+
+.Proofbutton:before {
+    content: "Proof";
+}
+		      
+.proof {
+  display: block;
+  padding-bottom: 20px;
+}
+
+.proof:before {
+    content: "Proof.";
+    font-style: italic;
+}
+
+.proof:after {
+  font-weight: bold;
+  content: "QED.";
+  float: right;
+}
+
+.Theorembutton:before {
+    content: " Theorem";
+}
+
+.Theoremno:before {
+    font-weight: bold;
+    font-style: normal;
+    content: "(" attr(data-count) ")  ";
+}
+
+.theorem {
+  display: block;
+  margin: 12px 0;
+}
+
+.theorem:before {
+    display:block;
+    content: "(" attr(data-count) ") THEOREM.";
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+</code></pre></p>  
+</div><div style="margin-top:20px"></div><a href="#ed0db98f-3674-4b00-864f-3fd9df8d0518" class ="btn btn-default" data-toggle="collapse">Entries in <tt>css</tt> related to <tt>emph</tt></a><div id=ed0db98f-3674-4b00-864f-3fd9df8d0518 class="collapse">
+<p><pre><code>.emphasize {
+  display: block;
+  margin: 12px 0;
+  font-style: normal;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px; 
+  background-color: #f8f2ed;
+  padding: 10px;
+}
+</code></pre></p>
+</div><div style="margin-top:20px"></div><span id="sec3.3"></span><h2 id="9bb331d8-e4fb-4512-8e89-034150e7f913">3.3 List of functions</h2><div style="margin-top:20px"></div>The following control sequences/environments are currently implemented in QaDiL (the ones marked with * are specifically for <tt>html</tt> output).<div style="margin-top:20px"></div><p><pre><code>align (env)
+align* (env)
+author (cs)
+bye (cs)
+caption (cs)
+center (env)
+changemargin (env)
+chapter (cs)
+chaptername (cs)
+chapterno (cs)
+code (env)
+corollary (env)
+definition (env)
+documentclass (cs)
+document (env)
+emph (optional)
+enumerate (env)
+eqref (cs)
+exercise (env)
+example (env)
+equation (env)
+equation* (env)
+figure (env)
+footnote (cs)*
+frameit (env)
+hideinbutton (env)*
+hint (env)
+htmlpath (cs)*
+includegraphics (cs)
+includehtml (cs)*
+index (cs)
+itemize (env)
+label (cs)
+lemma (env)
+maketitle (cs)
+newcommand (cs)
+orderquiz (env)*
+paraquiz (env)*
+proof (env)
+proposition (env)
+quiz (env)*
+quizexercise (env)*
+quote (env)
+ref (cs)
+remark (env)
+sage (env)*
+section (cs)
+section* (cs)
+subsection (cs)
+textbf (cs)
+textcolor (cs)
+textit (cs)
+texttt (cs)
+theorem (cs)
+title (cs)
+url (cs)*
+video (cs)*
+vspace (cs)
+</code></pre></p><div style="margin-top:20px"></div><span id="sec3.4"></span><h2 id="43b45179-490b-40ca-8004-84b44d846025">3.4 Interactive functions (non-LaTeX) functions</h2><div style="margin-top:20px"></div>Below we document the functions in <a href=#sec3.3 class="labelref">3.3</a>, which are specifically
+designed for output in <tt>html</tt>:<div style="margin-top:20px"></div><span id="sec3.4.1"></span><h3>3.4.1 footnote</h3><div style="margin-top:20px"></div>We explain the use of <tt>footnote</tt> by way of the example below. The first parameter
+is the text snippet for hovering over with the mouse. The second parameter is the
+content of the footnote.<div style="margin-top:20px"></div><p><pre><code>It is in fact true that \footnote{one and one is two}{You write this as $1 + 1 = 2$. It is formally hard to explain.}.  
+</code></pre></p><div style="margin-top:20px"></div><div class="frameit">
+It is in fact true that <span class="footnote">one and one is two<span class="footnotetext">You write this as <span class="math"></span><script type="math/tex">1 + 1 = 2</script>. It is formally hard to explain.</span></span>.  
+</div><div style="margin-top:20px"></div>Technically the behavior of <tt>footnote</tt> is governed by the <tt>.footnote</tt> and <tt>.footnotetext</tt>
+entries in the <tt>iLaTeXen.css</tt> file. It can be modified in many ways.<div style="margin-top:20px"></div><a href="#dda3a7b1-13bc-451f-affb-8a1c32295ce0" class ="btn btn-default" data-toggle="collapse">Entries in <tt>iLaTeXen.css</tt></a><div id=dda3a7b1-13bc-451f-affb-8a1c32295ce0 class="collapse">
+<p><pre><code>.footnote {
+    color: #ca0020;
+}
+
+.footnote .footnotetext {
+    z-index: -1;
+    opacity: 0;
+    position: fixed;
+    left: 15px;
+    bottom: 20px;
+    margin-left: 0px;
+    margin-right: 18px;
+    padding: 7px 10px;
+    border-radius: 4px;
+    border:1px solid #DCA;
+    color: black;
+    font-size: 15px;
+    background-color: #FEF6BB;
+}
+
+.footnote:hover .footnotetext{
+    z-index: 9;
+    opacity: 1;
+}
+</code></pre></p>
+</div><div style="margin-top:20px"></div><span id="sec3.4.2"></span><h3>3.4.2 hideinbutton</h3><div style="margin-top:20px"></div>The <tt>hideinbutton</tt> environment is for hiding material in the text, that can perhaps be skipped on a
+first reading. An example is the button in <a href=#sec3.4.1 class="labelref">3.4.1</a> above listing entries in a <tt>css</tt> file.
+Here is another example.<div style="margin-top:20px"></div><p><pre><code>If you wish, you can read the explanation below.
+
+\begin{hideinbutton}{Explanation}
+You can hide elements in \texttt{html}.
+\end{hideinbutton}
+</code></pre></p><div style="margin-top:20px"></div><div class="frameit">
+If you wish, you can read the explanation below.<div style="margin-top:20px"></div><a href="#72753d8b-a230-4308-9b51-a822daf877db" class ="btn btn-default" data-toggle="collapse">Explanation</a><div id=72753d8b-a230-4308-9b51-a822daf877db class="collapse">
+You can hide elements in <tt>html</tt>.
+</div>  
+</div><div style="margin-top:20px"></div>The function <tt>hideinbutton</tt> is an interface to the class <tt>collapse</tt> in <tt>Bootstrap</tt>.
+This is hardwired into the python code in QaDiL.<div style="margin-top:20px"></div>As an educator one often poses an exercise, which is a little too hard, but which can
+be solved by the student after a few hints. Initially you do not want these
+hints to be displayed for the students. Here <tt>hideinbutton</tt>
+comes in handy.<div style="margin-top:20px"></div><p><pre><code>\begin{theorem}[emph]\label{opencvxcont}
+A convex function defined on an open convex subset is continuous.
+\end{theorem}
+
+\begin{exercise}[showhide]
+Give an example showing that Theorem \ref{opencvxcont} is not true if the convex function
+is defined on a closed convex subset.
+
+\begin{hideinbutton}{Hint}
+Try to come up with an example like $f: [0, 1] \rightarrow \RR$. Look at
+the end point $0$.
+    
+    \begin{hideinbutton}{Hint}
+      Well, try out
+      $$
+      f(x) =
+      \begin{cases}
+        1&\text{if } x = 0\\
+        x&\text{if } x > 0
+      \end{cases}
+      $$
+    \end{hideinbutton}
+\end{hideinbutton}
+\end{exercise}
+</code></pre></p><div style="margin-top:20px"></div><div class="frameit">
+<div class="emphasize"><span id="env3.3"></span><div class="theorem" data-count="3.3">     
+A convex function defined on an open convex subset is continuous.
+</div></div><div style="margin-top:20px"></div><span id="env3.4"></span><a class="Exerciseno" data-count="3.4"></a><a href="#57f55029-249f-4f4a-9c57-c22e7dfd3483" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=57f55029-249f-4f4a-9c57-c22e7dfd3483 class = "collapse Exercise envbuttons">  
+Give an example showing that Theorem <a href=#env3.3 class="labelref">3.3</a> is not true if the convex function
+is defined on a closed convex subset.<div style="margin-top:20px"></div><a href="#479be25f-85f5-4283-b871-d2a897115c8d" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=479be25f-85f5-4283-b871-d2a897115c8d class="collapse">
+Try to come up with an example like <span class="math"></span><script type="math/tex">f: [0, 1] \rightarrow \mathbb{R}</script>. Look at
+the end point <span class="math"></span><script type="math/tex">0</script>.<div style="margin-top:20px"></div><a href="#ece619e2-88b1-408c-9267-91fd943bc895" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=ece619e2-88b1-408c-9267-91fd943bc895 class="collapse">
+      Well, try out
+      <div class="math"></div><script type="math/tex; mode=display">
+      f(x) =
+      \begin{cases}
+        1&\text{if } x = 0\\
+        x&\text{if } x > 0
+      \end{cases}
+      </script>
+    </div>
+</div>
+</div>
+</div><div style="margin-top:20px"></div><span id="sec3.4.3"></span><h3>3.4.3 htmlpath</h3><div style="margin-top:20px"></div><tt>htmlpath</tt> is a function for defining the location
+of <tt>html</tt> files (se <a href="functions.html#sec3.4.4">3.4.4</a> below) for inclusion.<div style="margin-top:20px"></div><p><pre><code>\includehtml{../../qadil/htmlinclude}  
+</code></pre></p><div style="margin-top:20px"></div><span id="sec3.4.4"></span><h3>3.4.4 includehtml</h3><div style="margin-top:20px"></div><tt>includehtml</tt> is for inclusion of raw <tt>html</tt> in
+the beginning of the document. The <tt>html</tt> files
+for inclusion is contained in the
+location defined by <tt>htmlpath</tt>.<div style="margin-top:20px"></div>If you wish to use (student) annotation, you use<div style="margin-top:20px"></div><p><pre><code>\includehtml{hypothesis}
+</code></pre></p> <div style="margin-top:20px"></div>for inclusion of the raw <tt>html</tt> file <tt>hypothesis</tt>:<div style="margin-top:20px"></div><p><pre><code>&lt;script async defer src="https://hypothes.is/embed.js"&gt;&lt;/script&gt;
+</code></pre></p><div style="margin-top:20px"></div>Below is a list of the currently provided raw <tt>html</tt> files for inclusion
+in the beginning of the document. These files are all located in
+<tt>QaDiL/qadil/htmlinclude/</tt>.<div style="margin-top:20px"></div><p><pre><code>bootstrap3.3.7
+bootstrap4.3.1
+font-awesome4.7.0
+hypothesis
+iLaTeXen
+index
+jquery3.1.0
+katex0.10.2
+katex0.12.0
+metainfo
+openclosebuttons
+orderquiz
+quiz
+sagecell
+sidebar
+</code></pre></p><div style="margin-top:20px"></div><span id="sec3.4.5"></span><h3>3.4.5 orderquiz</h3><div style="margin-top:20px"></div>Let me at this point refer to the <a href="http://funbyjohn.com/digitaliseringAfLinAlg/environments/Chapters/orderquiz.html" target="_blank">documention in Danish</a>.<div style="margin-top:20px"></div><span id="sec3.4.6"></span><h3>3.4.6 paraquiz</h3><div style="margin-top:20px"></div>Let me at this point refer to the <a href="http://funbyjohn.com/digitaliseringAfLinAlg/environments/Chapters/paraquiz.html" target="_blank">documention in Danish</a>.<div style="margin-top:20px"></div><span id="sec3.4.7"></span><h3>3.4.7 quiz</h3><div style="margin-top:20px"></div>This the basic <tt>quiz</tt> environment for defining mutiple choice quizzes with multiple true/false answers. The
+example below is hopefully self explanatory.<div style="margin-top:20px"></div><p><pre><code>\begin{quizexercise}[showhide]
+\begin{quiz}
+\question
+Suppose that 
+$$
+A = \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0 \end{pmatrix}, \quad
+B = \begin{pmatrix} 1 & 0\\ 0 & 1\end{pmatrix}, \quad
+C = \begin{pmatrix} 1 & 1 & 1\end{pmatrix}, \quad\text{and}\quad
+D = \begin{pmatrix} 1 \\ 1 \\ 1\end{pmatrix}
+$$
+Which of the matrix products below make sense?
+\answer{T}
+$B A$
+\answer{F}
+$A B$
+\answer{T}
+$C D$
+\answer{T}
+$D C$
+\answer{F}
+$C A$
+\answer{T}
+$A D$
+\end{quiz}
+\end{quizexercise}
+</code></pre></p><div style="margin-top:20px"></div><div class="frameit">
+  <span id="env3.5"></span><a class="Quizexerciseno" data-count="3.5"></a><a href="#8903fe9a-9241-44d3-8cb9-b342d7251177" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=8903fe9a-9241-44d3-8cb9-b342d7251177 class = "collapse Quizexercise envbuttons">  
+<span id="{labelname}"></span><div id="quiz1" style="width:100%;"><div class="row quizquestion">
+Suppose that 
+<div class="math"></div><script type="math/tex; mode=display">
+A = \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0 \end{pmatrix}, \quad
+B = \begin{pmatrix} 1 & 0\\ 0 & 1\end{pmatrix}, \quad
+C = \begin{pmatrix} 1 & 1 & 1\end{pmatrix}, \quad\text{and}\quad
+D = \begin{pmatrix} 1 \\ 1 \\ 1\end{pmatrix}
+</script>
+Which of the matrix products below make sense?
+</div><div class="row"><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">B A</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">A B</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">C D</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">D C</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">C A</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">A D</script>
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div>
+</div><div style="margin-top:20px"></div><span id="sec3.4.8"></span><h3>3.4.8 quizexercise</h3><div style="margin-top:20px"></div>See use of <tt>quizexercise</tt> in <a href=#sec3.4.7 class="labelref">3.4.7</a> above.<div style="margin-top:20px"></div><span id="sec3.4.9"></span><h3>3.4.9 sage</h3><div style="margin-top:20px"></div><a href="http://www.sagemath.org" target="_blank">Sage</a> is the computer algebra plugin for QaDiL. A lot of thanks to
+the developers of <a href="https://sagecell.sagemath.org/" target="_blank">SageCell</a> for making this plugin
+possible!<div style="margin-top:20px"></div><p><pre><code>\begin{sage}
+plot(sin(x) + cos(2*x), (x, 0, 2*pi))    
+\end{sage}    
+</code></pre></p><div style="margin-top:20px"></div><div class="frameit">
+<div class="sage"><script type="text/x-sage">
+plot(sin(x) + cos(2*x), (x, 0, 2*pi))    
+</script></div>    
+</div><div style="margin-top:20px"></div>QaDiL is set up only with <tt>Sage</tt> og <tt>python</tt>. You can modify
+this in the <tt>html</tt> include file <tt>sagecell</tt>:<div style="margin-top:20px"></div><p><pre><code>&lt;script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  languages : ["sage", "python"],
+  hide : ["permalink"] 
+  });
+&lt;/script&gt;
+</code></pre></p><div style="margin-top:20px"></div>Notice in particular that cells can be linked so that computations are remembered in the document (see links below). This
+is done by adding
+<p><pre><code>linked: true,
+</code></pre></p>
+above.<div style="margin-top:20px"></div>See <a href="https://sagecell.sagemath.org/" target="_blank">SageCell</a> and also <a href="https://github.com/sagemath/sagecell/blob/master/doc/embedding.rst" target="_blank">GitHub</a>.<div style="margin-top:20px"></div>The following languages are available:<div style="margin-top:20px"></div><p><pre><code>Sage
+Gap
+GP
+HTML
+Macaulay2
+Maxima
+Octave
+Python
+R
+Singular
+</code></pre></p><div style="margin-top:20px"></div><span id="sec3.4.10"></span><h3>3.4.10 url</h3><div style="margin-top:20px"></div><p><pre><code>The mathematical rockstar \url{Carl Friedrich Gauss}{https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss} used the method
+to determine the orbit for the asteroid \url{Pallas}{https://en.wikipedia.org/wiki/2_Pallas}.  
+</code></pre></p><div style="margin-top:20px"></div><div class="frameit">
+The mathematical rockstar <a href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss" target="_blank">Carl Friedrich Gauss</a> used the method
+to determine the orbit for the asteroid <a href="https://en.wikipedia.org/wiki/2_Pallas" target="_blank">Pallas</a>.  
+</div><div style="margin-top:20px"></div></div></body>
