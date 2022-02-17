@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>File:Sieve of Eratosthenes animation.gif - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ef899dc7-5aee-4ec8-9e39-c1e9da1426ec","wgCSPNonce":false,"wgCanonicalNamespace":"File","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":6,"wgPageName":"File:Sieve_of_Eratosthenes_animation.gif","wgTitle":"Sieve of Eratosthenes animation.gif","wgCurRevisionId":573709971,"wgRevisionId":573709971,"wgArticleId":34821852,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Mathematics portal selected pictures","Featured pictures","Wikipedia Picture of the day files","Featured animations"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"File:Sieve_of_Eratosthenes_animation.gif",
+"wgRelevantArticleId":34821852,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRestrictionUpload":[],"wgFlaggedRevsParams":{"tags":{"status":{"levels":-1}}},"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":200,"wgNoticeProject":"wikipedia","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":10,"wgULSCurrentAutonym":"English","wgEditSubmitButtonLabelPublish":true,"wgCentralAuthMobileDomain":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":true,"wgGENewcomerTasksGuidanceEnabled":true,"wgGEAskQuestionEnabled":false,"wgGELinkRecommendationsFrontendEnabled":false};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready",
+"ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","mediawiki.interface.helpers.styles":"ready","filepage":"ready","mediawiki.action.view.filepage":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.wikimediaBadges":"ready","ext.uls.interlanguage":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","jquery.makeCollapsible","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.cx.eventlogging.campaigns","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.centralauth.centralautologin","ext.popups","ext.uls.compactlinks","ext.uls.interface"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cfilepage%7Cjquery.makeCollapsible.styles%7Cmediawiki.action.view.filepage%7Cmediawiki.interface.helpers.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<link rel="stylesheet" href="https://commons.wikimedia.org/w/index.php?title=MediaWiki:Filepage.css&amp;action=raw&amp;ctype=text/css"/>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.38.0-wmf.21"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="995"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif"/>
+<meta property="og:image:width" content="800"/>
+<meta property="og:image:height" content="663"/>
+<meta property="og:image:width" content="640"/>
+<meta property="og:image:height" content="531"/>
+<meta property="og:title" content="File:Sieve of Eratosthenes animation.gif - Wikipedia"/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/File:Sieve_of_Eratosthenes_animation.gif"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=File:Sieve_of_Eratosthenes_animation.gif&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/File:Sieve_of_Eratosthenes_animation.gif"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-6 ns-subject mw-editable page-File_Sieve_of_Eratosthenes_animation_gif rootpage-File_Sieve_of_Eratosthenes_animation_gif skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><!-- CentralNotice --></div>
+	<div class="mw-indicators">
+	<div id="mw-indicator-commons-icon" class="mw-indicator"><a href="https://commons.wikimedia.org/wiki/File:Sieve_of_Eratosthenes_animation.gif" title="This is a file from the Wikimedia Commons"><img alt="This is a file from the Wikimedia Commons" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/15px-Commons-logo.svg.png" decoding="async" width="15" height="20" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/22px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></a></div>
+	<div id="mw-indicator-featured-star" class="mw-indicator"><a href="/wiki/Wikipedia:Featured_pictures" title="This is a featured picture. Click here for more information."><img alt="This is a featured picture. Click here for more information." src="//upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/20px-Cscr-featured.svg.png" decoding="async" width="20" height="19" srcset="//upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/30px-Cscr-featured.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/40px-Cscr-featured.svg.png 2x" data-file-width="462" data-file-height="438" /></a></div>
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">File:Sieve of Eratosthenes animation.gif</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><ul id="filetoc"><li><a href="#file">File</a></li>
+<li><a href="#filehistory">File history</a></li>
+<li><a href="#filelinks">File usage</a></li>
+<li><a href="#globalusage">Global file usage</a></li></ul><div class="fullImageLink" id="file"><a href="//upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif"><img alt="File:Sieve of Eratosthenes animation.gif" src="//upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" decoding="async" width="445" height="369" data-file-width="445" data-file-height="369" /></a><div class="mw-filepage-resolutioninfo">No higher resolution available.</div></div>
+<div class="fullMedia"><p><a href="//upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" class="internal" title="Sieve of Eratosthenes animation.gif">Sieve_of_Eratosthenes_animation.gif</a> &#8206;<span class="fileInfo">(445 × 369 pixels, file size: 154 KB, MIME type: <span class="mime-type">image/gif</span>, looped, 159 frames, 37 s)</span>
+</p></div><div class="sharedUploadNotice">
+<table id="mw-sharedupload" class="plainlinks fmbox fmbox-system" role="presentation"><tbody><tr><td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" title="Wikimedia Commons logo" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td><td class="mbox-text" style="text-align: center;">This is a file from the <a href="https://commons.wikimedia.org/wiki/Main_Page" class="extiw" title="commons:Main Page">Wikimedia Commons</a>. Information from its <b><a href="https://commons.wikimedia.org/wiki/File:Sieve_of_Eratosthenes_animation.gif" class="extiw" title="commons:File:Sieve of Eratosthenes animation.gif">description page there</a></b> is shown below.<br /><span style="font-size: smaller;">Commons is a freely licensed media file repository. <a href="https://commons.wikimedia.org/wiki/Commons:Welcome" class="extiw" title="commons:Commons:Welcome">You can help</a>.</span></td></tr></tbody></table>
+</div>
+<div id="mw-imagepage-content" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="plainlinks imbox imbox-featured" role="presentation"><tbody><tr><td class="mbox-image"><a href="/wiki/File:Nuvola_apps_edu_mathematics_blue-p.svg" class="image" title="Mathematics icon"><img alt="Mathematics icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/24px-Nuvola_apps_edu_mathematics_blue-p.svg.png" decoding="async" width="24" height="24" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/36px-Nuvola_apps_edu_mathematics_blue-p.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/48px-Nuvola_apps_edu_mathematics_blue-p.svg.png 2x" data-file-width="128" data-file-height="128" /></a></td><td class="mbox-text">This image was selected as <b><a href="/wiki/Portal:Mathematics/Featured_picture_archive" title="Portal:Mathematics/Featured picture archive">picture of the month</a></b> on the <a href="/wiki/Portal:Mathematics" title="Portal:Mathematics">Mathematics Portal</a> for March 2009.</td></tr></tbody></table>
+<div style="display:none; right:10px;" class="featured-picture metadata topicon" id="featured-star"><a href="/wiki/Wikipedia:Featured_pictures" title="This picture has been featured on Wikipedia and is considered one of the best images Wikipedia has to offer. For more information, click here."><img alt="This picture has been featured on Wikipedia and is considered one of the best images Wikipedia has to offer. For more information, click here." src="//upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/14px-Cscr-featured.svg.png" decoding="async" width="14" height="13" srcset="//upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/21px-Cscr-featured.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/28px-Cscr-featured.svg.png 2x" data-file-width="462" data-file-height="438" /></a></div><table class="plainlinks imbox imbox-featured" role="presentation"><tbody><tr><td class="mbox-image"><a href="/wiki/File:Cscr-featured.svg" class="image" title="Featured picture star"><img alt="Featured picture star" src="//upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/50px-Cscr-featured.svg.png" decoding="async" width="50" height="47" srcset="//upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/75px-Cscr-featured.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/e/e7/Cscr-featured.svg/100px-Cscr-featured.svg.png 2x" data-file-width="462" data-file-height="438" /></a></td><td class="mbox-text">This is a <a href="/wiki/Wikipedia:Featured_pictures" title="Wikipedia:Featured pictures">featured picture</a>, which means that <a href="/wiki/Wikipedia:Featured_picture_candidates" title="Wikipedia:Featured picture candidates">members of the community</a> have <i><b><a href="/wiki/Wikipedia:Featured_picture_candidates/Sieve_of_Eratosthenes" title="Wikipedia:Featured picture candidates/Sieve of Eratosthenes">identified</a></b></i> it as one of the finest images on the English Wikipedia, adding significantly to its accompanying article.  If you have a different image of similar quality, be sure to <a href="/wiki/Special:Upload" title="Special:Upload">upload</a> it using the proper <a href="/wiki/Wikipedia:File_copyright_tags" title="Wikipedia:File copyright tags">free license tag</a>, <a href="/wiki/Wikipedia:Extended_image_syntax" title="Wikipedia:Extended image syntax">add</a> it to a relevant article, and <a href="/wiki/Wikipedia:Featured_picture_candidates" title="Wikipedia:Featured picture candidates">nominate it</a>.</td></tr></tbody></table>
+<table class="plainlinks imbox imbox-featured" role="presentation"><tbody><tr><td class="mbox-image"><a href="/wiki/File:Wikipedia-logo-v2.svg" class="image" title="Wikipedia logo"><img alt="Wikipedia logo" src="//upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/24px-Wikipedia-logo-v2.svg.png" decoding="async" width="24" height="22" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/36px-Wikipedia-logo-v2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/48px-Wikipedia-logo-v2.svg.png 2x" data-file-width="103" data-file-height="94" /></a></td><td class="mbox-text">This image was selected as <b><a href="/wiki/Wikipedia:Picture_of_the_day" title="Wikipedia:Picture of the day">picture of the day</a></b> on the <a href="/wiki/English_Wikipedia" title="English Wikipedia">English Wikipedia</a> for <a href="/wiki/Template:POTD/2008-01-31" title="Template:POTD/2008-01-31">January 31, 2008</a>.</td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Parsed by mw1434
+Cached time: 20220206231222
+Cache expiry: 1814400
+Reduced expiry: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.065 seconds
+Real time usage: 0.094 seconds
+Preprocessor visited node count: 212/1000000
+Post‐expand include size: 6789/2097152 bytes
+Template argument size: 819/2097152 bytes
+Highest expansion depth: 10/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+Lua time usage: 0.020/10.000 seconds
+Lua memory usage: 1047109/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   81.956      1 -total
+ 43.41%   35.575      1 Portal:Mathematics/Featured_picture_template
+ 43.37%   35.547      1 Template:FeaturedPicture
+ 42.94%   35.191      3 Template:Imbox
+ 31.77%   26.035      3 Template:File_other
+ 29.18%   23.913      1 Template:Top_icon
+ 23.34%   19.129      1 Template:Category_handler
+  8.18%    6.702      1 Template:Picture_of_the_day
+  6.06%    4.964      1 Template:If_in_page
+  4.72%    3.866      1 Template:FeaturedAnimation
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:34821852-0!canonical and timestamp 20220206231222 and revision id 573709971. Serialized with JSON.
+ -->
+</div></div><div id="shared-image-desc"><div class="mw-parser-output"><div class="layouttemplate" style="clear:both; direction: ltr">
+<table style="width:100%; margin:0.5em auto; border-spacing:8px; background: #f7f8ff; border: 2px solid #5580b4;"><tbody><tr><td><a href="//commons.wikimedia.org/wiki/File:Gnome-x-office-drawing.svg" class="image"><img alt="Gnome-x-office-drawing.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gnome-x-office-drawing.svg/70px-Gnome-x-office-drawing.svg.png" decoding="async" width="70" height="70" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gnome-x-office-drawing.svg/105px-Gnome-x-office-drawing.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gnome-x-office-drawing.svg/140px-Gnome-x-office-drawing.svg.png 2x" data-file-width="48" data-file-height="48"></a>
+</td>
+<td><div lang="en" dir="ltr" class="description en" style="display:inline;"><a href="//commons.wikimedia.org/wiki/File:Sieve_of_Eratosthenes_animation.svg" title="File:Sieve of Eratosthenes animation.svg">File:Sieve of Eratosthenes animation.svg</a> is a vector version of this file. It should be used in place of this GIF file when not inferior.</div><div style="clear:both;"></div>
+<hr><div style="margin-left:auto margin-right:auto; text-align:center; font-size:90%;">File:Sieve of Eratosthenes animation.gif → <a href="//commons.wikimedia.org/wiki/File:Sieve_of_Eratosthenes_animation.svg" title="File:Sieve of Eratosthenes animation.svg">File:Sieve of Eratosthenes animation.svg</a></div><span id="field-vva" title="Sieve of Eratosthenes animation.svg"></span>
+<hr><div style="font-size:90%;"><div lang="en" dir="ltr" class="description en" style="display:inline;">For more information, see <a href="//commons.wikimedia.org/wiki/Help:SVG" title="Help:SVG">Help:SVG</a>.</div></div>
+<hr><div lang="">
+<table class="mw-collapsible mw-collapsed" style="background:#FFF;border:1px solid #AAA;clear:both;color:#222;margin:auto;padding:1px;width:100%"><tbody><tr><th style="background:#F0F2F5;color:#000;font-size:88%;text-align:centerpadding-left:.5em;padding-right:.2em;"><span style="font-weight:normal"><a href="//commons.wikimedia.org/wiki/Template:Vector_version_available/lang" title="Template:Vector version available/lang">In other languages</a></span>
+</th></tr><tr><td class="mw-collapsible-content" style="font-size:88%;border:none;padding:0;">
+<p><span style="font-size:small;line-height:1.4" class="plainlinks noprint"><a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/als"><bdi class="language lang-als" lang="als">Alemannisch</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/en-gb"><bdi class="language lang-en-gb" lang="en-gb">British English</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ca"><bdi class="language lang-ca" lang="ca">català</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/id"><bdi class="language lang-id" lang="id">Bahasa Indonesia</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/da"><bdi class="language lang-da" lang="da">dansk</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/cs"><bdi class="language lang-cs" lang="cs">čeština</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/de"><bdi class="language lang-de" lang="de">Deutsch</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ms"><bdi class="language lang-ms" lang="ms">Bahasa Melayu</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/scn"><bdi class="language lang-scn" lang="scn">sicilianu</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/it"><bdi class="language lang-it" lang="it">italiano</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ru"><bdi class="language lang-ru" lang="ru">русский</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/et"><bdi class="language lang-et" lang="et">eesti</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ro"><bdi class="language lang-ro" lang="ro">română</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/io"><bdi class="language lang-io" lang="io">Ido</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/eo"><bdi class="language lang-eo" lang="eo">Esperanto</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/be-tarask"><bdi class="language lang-be-tarask" lang="be-tarask">беларуская (тарашкевіца)</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/sco"><bdi class="language lang-sco" lang="sco">Scots</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/vi"><bdi class="language lang-vi" lang="vi">Tiếng Việt</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/pt"><bdi class="language lang-pt" lang="pt">português</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/eu"><bdi class="language lang-eu" lang="eu">euskara</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/en"><bdi class="language lang-en" lang="en">English</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/hu"><bdi class="language lang-hu" lang="hu">magyar</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/vec"><bdi class="language lang-vec" lang="vec">vèneto</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/nl"><bdi class="language lang-nl" lang="nl">Nederlands</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/pt-br"><bdi class="language lang-pt-br" lang="pt-br">português do Brasil</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/tr"><bdi class="language lang-tr" lang="tr">Türkçe</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/sl"><bdi class="language lang-sl" lang="sl">slovenščina</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/pl"><bdi class="language lang-pl" lang="pl">polski</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/gl"><bdi class="language lang-gl" lang="gl">galego</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/el"><bdi class="language lang-el" lang="el">Ελληνικά</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/lt"><bdi class="language lang-lt" lang="lt">lietuvių</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/sk"><bdi class="language lang-sk" lang="sk">slovenčina</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/mk"><bdi class="language lang-mk" lang="mk">македонски</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/nb"><bdi class="language lang-nb" lang="nb">norsk bokmål</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/es"><bdi class="language lang-es" lang="es">español</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/no"><bdi class="language lang-no" lang="no">norsk</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/sv"><bdi class="language lang-sv" lang="sv">svenska</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/hr"><bdi class="language lang-hr" lang="hr">hrvatski</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/fy"><bdi class="language lang-fy" lang="fy">Frysk</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/fr"><bdi class="language lang-fr" lang="fr">français</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/bg"><bdi class="language lang-bg" lang="bg">български</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/fi"><bdi class="language lang-fi" lang="fi">suomi</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ce"><bdi class="language lang-ce" lang="ce">нохчийн</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/nds"><bdi class="language lang-nds" lang="nds">Plattdüütsch</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/oc"><bdi class="language lang-oc" lang="oc">occitan</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/nn"><bdi class="language lang-nn" lang="nn">norsk nynorsk</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/sr"><bdi class="language lang-sr" lang="sr">српски / srpski</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/tt"><bdi class="language lang-tt" lang="tt">татарча/tatarça</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/uk"><bdi class="language lang-uk" lang="uk">українська</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ka"><bdi class="language lang-ka" lang="ka">ქართული</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/hy"><bdi class="language lang-hy" lang="hy">հայերեն</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/bn"><bdi class="language lang-bn" lang="bn">বাংলা</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ta"><bdi class="language lang-ta" lang="ta">தமிழ்</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ml"><bdi class="language lang-ml" lang="ml">മലയാളം</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/th"><bdi class="language lang-th" lang="th">ไทย</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ko"><bdi class="language lang-ko" lang="ko">한국어</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ja"><bdi class="language lang-ja" lang="ja">日本語</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/zh"><bdi class="language lang-zh" lang="zh">中文</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/zh-cn"><bdi class="language lang-zh-cn" lang="zh-cn">中文（中国大陆）</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/zh-tw"><bdi class="language lang-zh-tw" lang="zh-tw">中文（台灣）</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/zh-sg"><bdi class="language lang-zh-sg" lang="zh-sg">中文（新加坡）</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/zh-hans"><bdi class="language lang-zh-hans" lang="zh-hans">中文（简体）</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/zh-hant"><bdi class="language lang-zh-hant" lang="zh-hant">中文（繁體）</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/zh-my"><bdi class="language lang-zh-my" lang="zh-my">中文（马来西亚）</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/he"><bdi class="language lang-he" lang="he">עברית</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/ar"><bdi class="language lang-ar" lang="ar">العربية</bdi></a> <b>∙</b> <a class="external text" href="https://commons.wikimedia.org/wiki/Template:Vector_version_available/fa"><bdi class="language lang-fa" lang="fa">فارسی</bdi></a> <b>∙</b> <small class="plainlinks"><a class="external text" href="https://commons.wikimedia.org/w/index.php?title=Template:Vector_version_available/lang&amp;action=edit">+/−</a></small></span>
+</p>
+</td></tr></tbody></table></div>
+</td>
+<td style="background:transparent; text-align:center; vertical-align:middle"><div class="wpImageAnnotatorControl wpImageAnnotatorOff"><div class="com-checker" style="display:inline-block;-moz-box-shadow: 1px 3px 5px #888; -webkit-box-shadow: 1px 3px 5px #888; box-shadow: 1px 3px 5px #888;"><a href="//commons.wikimedia.org/wiki/File:Sieve_of_Eratosthenes_animation.svg" class="image" title="New SVG image"><img alt="New SVG image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sieve_of_Eratosthenes_animation.svg/150px-Sieve_of_Eratosthenes_animation.svg.png" decoding="async" width="150" height="124" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sieve_of_Eratosthenes_animation.svg/225px-Sieve_of_Eratosthenes_animation.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sieve_of_Eratosthenes_animation.svg/300px-Sieve_of_Eratosthenes_animation.svg.png 2x" data-file-width="445" data-file-height="369"></a></div></div>
+</td></tr></tbody></table><p><span class="layouttemplateargs" style="display:none;speak:none;" title="template=Vector+version+available 1%3DSieve+of+Eratosthenes+animation.svg 2%3D 3%3D"> </span>
+</p>
+</div>
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<div class="hproduct commons-file-information-table">
+<table class="fileinfotpl-type-information toccolours vevent mw-content-ltr" style="width: 100%; direction: ltr;" cellpadding="4"><tbody><tr style="vertical-align: top"><td id="fileinfotpl_desc" class="fileinfo-paramfield" lang="en">Description<span class="summary fn" style="display:none">Sieve of Eratosthenes animation.gif</span></td>
+<td class="description">
+<div class="description mw-content-ltr en" dir="ltr" lang="en"><span class="language en" title="English"><b>English: </b></span> Animation that visualizes the "Sieve of Eratosthenes" algorithm.<br>
+The <b><a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" class="extiw" title="w:Sieve of Eratosthenes">Sieve of Eratosthenes</a></b> is an method for efficiently finding all <a href="https://en.wikipedia.org/wiki/prime_number" class="extiw" title="w:prime number">prime numbers</a> up to a number, 120 in this case, by eliminating (colouring in) all multiples of successive primes. It uses the common optimisation of starting at <i>p</i><sup>2</sup> for each prime <i>p</i>, as all non-primes (composites) up to <i>p</i><sup>2</sup> were found in previous passes. Because of this it needs only consider primes up to 7, because the square of the next prime 11 is 121, larger than any number here.</div></td>
+</tr><tr style="vertical-align: top"><td id="fileinfotpl_src" class="fileinfo-paramfield" lang="en">Source</td>
+<td>
+<span class="int-own-work" lang="en">Own work</span>, Original image at <b><a href="//commons.wikimedia.org/wiki/File:Animation_Sieve_of_Eratosth.gif" title="File:Animation Sieve of Eratosth.gif">Image:Animation_Sieve_of_Eratosth.gif</a></b></td>
+</tr><tr style="vertical-align: top"><td id="fileinfotpl_aut" class="fileinfo-paramfield" lang="en">Author</td>
+<td>
+<a href="https://en.wikipedia.org/wiki/de:User:SKopp" class="extiw" title="w:de:User:SKopp">SKopp</a> at <a href="https://en.wikipedia.org/wiki/de:" class="extiw" title="w:de:">German Wikipedia</a></td>
+</tr></tbody></table></div>
+<div id="assessments" dir="ltr" lang="en">
+<table cellspacing="0" cellpadding="0" style="background:transparent;margin:0.5em auto; width:100%"><tbody><tr><td>
+<table style="clear:both;margin:0em auto;width:100%; box-sizing: border-box; border:2px solid #E5D4A1;background-color:#FAF5E6; direction:ltr;"><tbody><tr><td>
+<table style="background:transparent; width:100%;"><tbody><tr><td style="width:40px;text-align:center;" rowspan="2">
+</td>
+<td>
+</td>
+<td style="width:30px;text-align:center;" rowspan="2">
+<p><img alt="Wikipedia" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/30px-Wikipedia-logo-v2.svg.png" decoding="async" title="Wikipedia" width="30" height="27" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/45px-Wikipedia-logo-v2.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/60px-Wikipedia-logo-v2.svg.png 2x" data-file-width="103" data-file-height="94"></p>
+</td></tr><tr><td><img alt="Cscr-featured.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Cscr-featured.svg/20px-Cscr-featured.svg.png" decoding="async" width="20" height="19" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Cscr-featured.svg/30px-Cscr-featured.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Cscr-featured.svg/40px-Cscr-featured.svg.png 2x" data-file-width="462" data-file-height="438"> This is a <b>featured picture</b> on the English language Wikipedia (<a href="https://en.wikipedia.org/wiki/en:Wikipedia:Featured_pictures" class="extiw" title="w:en:Wikipedia:Featured pictures">Featured pictures</a>) and is considered one of the finest images. See its nomination <a href="https://en.wikipedia.org/wiki/en:Wikipedia:Featured_picture_candidates/Sieve_of_Eratosthenes" class="extiw" title="w:en:Wikipedia:Featured picture candidates/Sieve of Eratosthenes">here</a>.<br><hr><p>If you think this file should be featured on Wikimedia Commons as well, feel free to <a href="//commons.wikimedia.org/wiki/Commons:Featured_picture_candidates" title="Commons:Featured picture candidates">nominate it</a>.<br>
+If you have an image of similar quality that can be published under a <a href="//commons.wikimedia.org/wiki/Commons:Licensing" title="Commons:Licensing">suitable copyright license</a>, be sure to <a href="//commons.wikimedia.org/wiki/Special:Upload" title="Special:Upload">upload</a> it, <a href="//commons.wikimedia.org/wiki/Commons:Copyright_tags" title="Commons:Copyright tags">tag</a> it, and <a href="//commons.wikimedia.org/wiki/Commons:Featured_picture_candidates" title="Commons:Featured picture candidates">nominate it</a>.<br></p>
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>
+<h2><span class="mw-headline" id="Licensing">Licensing</span></h2>
+<table cellspacing="8" cellpadding="0" style="width:100%; clear:both; margin:0.5em auto; background-color:#f9f9f9; border:2px solid #e0e0e0; direction: ltr;" lang="en" class="layouttemplate licensetpl"><tbody><tr><td><img alt="GNU head" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Heckert_GNU_white.svg/64px-Heckert_GNU_white.svg.png" decoding="async" title="GNU head" width="64" height="63" class="noviewer" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Heckert_GNU_white.svg/96px-Heckert_GNU_white.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Heckert_GNU_white.svg/128px-Heckert_GNU_white.svg.png 2x" data-file-width="535" data-file-height="523"></td>
+<td>Permission is granted to copy, distribute and/or modify this document under the terms of the <b><a href="https://en.wikipedia.org/wiki/en:GNU_Free_Documentation_License" class="extiw" title="w:en:GNU Free Documentation License">GNU Free Documentation License</a></b>, Version 1.2 or any later version published by the <a href="https://en.wikipedia.org/wiki/en:Free_Software_Foundation" class="extiw" title="w:en:Free Software Foundation">Free Software Foundation</a>; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled <i><a href="//commons.wikimedia.org/wiki/Commons:GNU_Free_Documentation_License,_version_1.2" title="Commons:GNU Free Documentation License, version 1.2">GNU Free Documentation License</a></i>.<span class="licensetpl_link" style="display:none;">http://www.gnu.org/copyleft/fdl.html</span><span class="licensetpl_short" style="display:none;">GFDL</span><span class="licensetpl_long" style="display:none;">GNU Free Documentation License</span><span class="licensetpl_link_req" style="display:none;">true</span><span class="licensetpl_attr_req" style="display:none;">true</span>
+</td></tr></tbody></table><table style="width:100%; clear:both; text-align:center; margin:0.5em auto; background-color:#f9f9f9; border:2px solid #e0e0e0; padding: 0; border-spacing: 8px;" class="layouttemplate licensetpl mw-content-ltr" lang="en"><tbody><tr><td style="width:90px;" rowspan="4"><img alt="w:en:Creative Commons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/90px-CC_some_rights_reserved.svg.png" decoding="async" title="w:en:Creative Commons" width="90" height="36" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/135px-CC_some_rights_reserved.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/180px-CC_some_rights_reserved.svg.png 2x" data-file-width="744" data-file-height="300"><br><img alt="attribution" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/24px-Cc-by_new_white.svg.png" decoding="async" title="attribution" width="24" height="24" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/36px-Cc-by_new_white.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/48px-Cc-by_new_white.svg.png 2x" data-file-width="64" data-file-height="64"> <img alt="share alike" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cc-sa.svg/24px-Cc-sa.svg.png" decoding="async" title="share alike" width="24" height="24" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cc-sa.svg/36px-Cc-sa.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cc-sa.svg/48px-Cc-sa.svg.png 2x" data-file-width="64" data-file-height="64"></td>
+<td>This file is licensed under the <a href="https://en.wikipedia.org/wiki/en:Creative_Commons" class="extiw" title="w:en:Creative Commons">Creative Commons</a> <a rel="nofollow" class="external text" href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Attribution-Share Alike 3.0 Unported</a> license.
+</td>
+<td style="width:90px;" rowspan="4">
+</td></tr><tr style="text-align:center;"><td>
+</td></tr><tr style="text-align:left;"><td>
+<dl><dd>You are free:
+<ul><li><b>to share</b> – to copy, distribute and transmit the work</li>
+<li><b>to remix</b> – to adapt the work</li></ul></dd>
+<dd>Under the following conditions:
+<ul><li><b>attribution</b> – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li>
+<li><b>share alike</b> – If you remix, transform, or build upon the material, you must distribute your contributions under the <a rel="nofollow" class="external text" href="https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses">same or compatible license</a> as the original.</li></ul></dd></dl></td></tr><tr style="text-align:center;"><td><span style="font-size:90%;">This licensing tag was added to this file as part of the GFDL <a href="https://meta.wikimedia.org/wiki/Licensing_update" class="extiw" title="meta:Licensing update">licensing update</a>.</span><span class="licensetpl_link" style="display:none;">http://creativecommons.org/licenses/by-sa/3.0/</span><span class="licensetpl_short" style="display:none;">CC-BY-SA-3.0</span><span class="licensetpl_long" style="display:none;">Creative Commons Attribution-Share Alike 3.0</span><span class="licensetpl_link_req" style="display:none;">true</span><span class="licensetpl_attr_req" style="display:none;">true</span>
+</td></tr></tbody></table><h1 class="mw-slot-header"><mediainfoslotheader></mediainfoslotheader></h1><mediainfoview style="display: none"><mediainfoviewcaptions><div class="wbmi-entityview-captionsPanel oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><h3 class="wbmi-entityview-captions-header">Captions</h3><div class="wbmi-entityview-caption oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">English</label><div lang="en" dir="ltr" class="wbmi-caption-value wbmi-entityview-emptyCaption">Add a one-line explanation of what this file represents</div></div><div style="display:none;" class="wbmi-entityview-caption wbmi-entityview-hideable oo-ui-layout oo-ui-horizontalLayout"><label class="wbmi-language-label oo-ui-widget oo-ui-widget-enabled oo-ui-labelElement-label oo-ui-labelElement oo-ui-labelWidget">Arabic</label><div lang="ar" dir="rtl" class="wbmi-caption-value">Visual representation of Eratosthenes prime finding algorithm at work</div></div></div></mediainfoviewcaptions><mediainfoviewstatements><div id="P180" data-property="P180" data-statements="[]" data-formatvalue="[]" class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P180 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h3 class="wbmi-statements-title">Items portrayed in this file</h3><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P180" href="https://www.wikidata.org/wiki/Special:EntityPage/P180">depicts</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"></div></div></div><div id="P6216" data-property="P6216" data-statements='[{"mainsnak":{"snaktype":"value","property":"P6216","hash":"5570347fdc76d2a80732f51ea10ee4b144a084e0","datavalue":{"value":{"entity-type":"item","numeric-id":50423863,"id":"Q50423863"},"type":"wikibase-entityid"}},"type":"statement","id":"M2810935$008B5342-3D83-463F-84A4-3A0AE94B1F10","rank":"normal"}]' data-formatvalue='{"{\"value\":{\"entity-type\":\"property\",\"numeric-id\":6216,\"id\":\"P6216\"},\"type\":\"wikibase-entityid\"}":{"text\/html":{"en":{"":"&lt;a target=\"_blank\" title=\"d:Special:EntityPage\/P6216\" href=\"https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P6216\"&gt;copyright status&lt;\/a&gt;"}},"text\/plain":{"en":{"":"copyright status"}}},"{\"value\":{\"entity-type\":\"item\",\"numeric-id\":50423863,\"id\":\"Q50423863\"},\"type\":\"wikibase-entityid\"}":{"text\/html":{"en":{"P6216":"&lt;a target=\"_blank\" title=\"d:Special:EntityPage\/Q50423863\" href=\"https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/Q50423863\"&gt;copyrighted&lt;\/a&gt;"}},"text\/plain":{"en":{"P6216":"copyrighted"}}}}' class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P6216 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P6216" href="https://www.wikidata.org/wiki/Special:EntityPage/P6216">copyright status</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"><div class="wbmi-item wbmi-item-read"><div data-guid="M2810935$008B5342-3D83-463F-84A4-3A0AE94B1F10" class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/Q50423863" href="https://www.wikidata.org/wiki/Special:EntityPage/Q50423863">copyrighted</a></bdi></h4></div></div></div></div></div></div></div></div><div id="P275" data-property="P275" data-statements='[{"mainsnak":{"snaktype":"value","property":"P275","hash":"a35b4558d66c92eacbe2f569697ffb1934e0316e","datavalue":{"value":{"entity-type":"item","numeric-id":14946043,"id":"Q14946043"},"type":"wikibase-entityid"}},"type":"statement","id":"M2810935$01220BF0-BB43-4F96-BFAD-461B30C81427","rank":"normal"},{"mainsnak":{"snaktype":"value","property":"P275","hash":"4315b8c41a664bcb36dc3783262461e54b0ddf16","datavalue":{"value":{"entity-type":"item","numeric-id":50829104,"id":"Q50829104"},"type":"wikibase-entityid"}},"type":"statement","id":"M2810935$880709BE-5AB2-49FF-92EA-97758C1FAC02","rank":"normal"}]' data-formatvalue='{"{\"value\":{\"entity-type\":\"property\",\"numeric-id\":275,\"id\":\"P275\"},\"type\":\"wikibase-entityid\"}":{"text\/html":{"en":{"":"&lt;a target=\"_blank\" title=\"d:Special:EntityPage\/P275\" href=\"https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/P275\"&gt;copyright license&lt;\/a&gt;"}},"text\/plain":{"en":{"":"copyright license"}}},"{\"value\":{\"entity-type\":\"item\",\"numeric-id\":14946043,\"id\":\"Q14946043\"},\"type\":\"wikibase-entityid\"}":{"text\/html":{"en":{"P275":"&lt;a target=\"_blank\" title=\"d:Special:EntityPage\/Q14946043\" href=\"https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/Q14946043\"&gt;Creative Commons Attribution-ShareAlike 3.0 Unported&lt;\/a&gt;"}},"text\/plain":{"en":{"P275":"Creative Commons Attribution-ShareAlike 3.0 Unported"}}},"{\"value\":{\"entity-type\":\"item\",\"numeric-id\":50829104,\"id\":\"Q50829104\"},\"type\":\"wikibase-entityid\"}":{"text\/html":{"en":{"P275":"&lt;a target=\"_blank\" title=\"d:Special:EntityPage\/Q50829104\" href=\"https:\/\/www.wikidata.org\/wiki\/Special:EntityPage\/Q50829104\"&gt;GNU Free Documentation License, version 1.2 or later&lt;\/a&gt;"}},"text\/plain":{"en":{"P275":"GNU Free Documentation License, version 1.2 or later"}}}}' class="wbmi-entityview-statementsGroup wbmi-entityview-statementsGroup-P275 oo-ui-layout oo-ui-panelLayout oo-ui-panelLayout-framed"><div class="wbmi-statements-widget"><div class="wbmi-statement-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/P275" href="https://www.wikidata.org/wiki/Special:EntityPage/P275">copyright license</a></bdi></h4></div></div></div><div class="wbmi-content-items-group"><div class="wbmi-item wbmi-item-read"><div data-guid="M2810935$01220BF0-BB43-4F96-BFAD-461B30C81427" class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/Q14946043" href="https://www.wikidata.org/wiki/Special:EntityPage/Q14946043">Creative Commons Attribution-ShareAlike 3.0 Unported</a></bdi></h4></div></div></div></div></div><div class="wbmi-item wbmi-item-read"><div data-guid="M2810935$880709BE-5AB2-49FF-92EA-97758C1FAC02" class="wbmi-item-container"><div class="wbmi-entity-header"><div class="wbmi-entity-data"><div class="wbmi-entity-title"><h4 class="wbmi-entity-label"><bdi><a target="_blank" title="d:Special:EntityPage/Q50829104" href="https://www.wikidata.org/wiki/Special:EntityPage/Q50829104">GNU Free Documentation License, version 1.2 or later</a></bdi></h4></div></div></div></div></div></div></div></div></mediainfoviewstatements></mediainfoview><!-- 
+NewPP limit report
+Parsed by mw1330
+Cached time: 20220214094318
+Cache expiry: 1814400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.355 seconds
+Real time usage: 0.433 seconds
+Preprocessor visited node count: 6230/1000000
+Post‐expand include size: 103601/2097152 bytes
+Template argument size: 26679/2097152 bytes
+Highest expansion depth: 17/100
+Expensive parser function count: 3/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 14/5000000 bytes
+Lua time usage: 0.087/10.000 seconds
+Lua memory usage: 1554400/52428800 bytes
+Number of Wikibase entities loaded: 1/400
+--><!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  379.113      1 -total
+ 39.93%  151.398      1 Template:Assessments
+ 27.61%  104.688      3 Template:Autotranslate
+ 25.97%   98.450      1 Template:Vector_version_available
+ 25.87%   98.095      1 Template:Assessments/Blank
+ 23.95%   90.802     37 Template:Assessments/wikipedia
+ 23.26%   88.173      1 Template:Information
+ 17.00%   64.466     38 Template:Assessments/category
+ 13.39%   50.749      1 Template:Vector_version_available/layout
+ 10.60%   40.169      1 Template:GFDL
+--><!-- Saved in parser cache with key commonswiki:pcache:idhash:2810935-0!wb=3 and timestamp 20220214094318 and revision id 628806226. Serialized with JSON.
+ --></div></div>
+<h2 id="filehistory">File history</h2>
+<div id="mw-imagepage-section-filehistory">
+<p>Click on a date/time to view the file as it appeared at that time.
+</p>
+<table class="wikitable filehistory">
+<tr><th></th><th>Date/Time</th><th>Thumbnail</th><th>Dimensions</th><th>User</th><th>Comment</th></tr>
+<tr><td>current</td><td class="filehistory-selected" style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif">16:30, 22 November 2011</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif"><img alt="Thumbnail for version as of 16:30, 22 November 2011" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sieve_of_Eratosthenes_animation.gif/120px-Sieve_of_Eratosthenes_animation.gif" decoding="async" width="120" height="100" data-file-width="445" data-file-height="369" /></a></td><td>445 × 369 <span style="white-space: nowrap;">(154 KB)</span></td><td>WillNess</td><td dir="ltr">Reverted to version as of 14:52, 31 October 2011 - as per dicussion </td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20111122163028%21Sieve_of_Eratosthenes_animation.gif">15:09, 5 November 2011</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20111122163028%21Sieve_of_Eratosthenes_animation.gif"><img alt="Thumbnail for version as of 15:09, 5 November 2011" src="//upload.wikimedia.org/wikipedia/commons/thumb/archive/b/b9/20111122163028%21Sieve_of_Eratosthenes_animation.gif/120px-Sieve_of_Eratosthenes_animation.gif" decoding="async" width="120" height="100" data-file-width="445" data-file-height="369" /></a></td><td>445 × 369 <span style="white-space: nowrap;">(52 KB)</span></td><td>Travürsa</td><td dir="ltr">Reverted to version as of 16:23, 22 February 2009. File:Sieve of Eratosthenes animation.gif has no discussion page. How can it possibly be &quot;too different from that discussed&quot;?</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20111105150923%21Sieve_of_Eratosthenes_animation.gif">14:52, 31 October 2011</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20111105150923%21Sieve_of_Eratosthenes_animation.gif"><img alt="Thumbnail for version as of 14:52, 31 October 2011" src="//upload.wikimedia.org/wikipedia/commons/thumb/archive/b/b9/20111105150923%21Sieve_of_Eratosthenes_animation.gif/120px-Sieve_of_Eratosthenes_animation.gif" decoding="async" width="120" height="100" data-file-width="445" data-file-height="369" /></a></td><td>445 × 369 <span style="white-space: nowrap;">(154 KB)</span></td><td>JohnBlackburne</td><td dir="ltr">Reverted to version as of 14:19, 25 September 2007: restore FP version, as revision is too different from that discussed</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20111031145200%21Sieve_of_Eratosthenes_animation.gif">16:23, 22 February 2009</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20111031145200%21Sieve_of_Eratosthenes_animation.gif"><img alt="Thumbnail for version as of 16:23, 22 February 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/archive/b/b9/20111031145200%21Sieve_of_Eratosthenes_animation.gif/120px-Sieve_of_Eratosthenes_animation.gif" decoding="async" width="120" height="100" data-file-width="445" data-file-height="369" /></a></td><td>445 × 369 <span style="white-space: nowrap;">(52 KB)</span></td><td>6Sixx</td><td dir="ltr">optimize</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20090222162351%21Sieve_of_Eratosthenes_animation.gif">14:24, 22 February 2009</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20090222162351%21Sieve_of_Eratosthenes_animation.gif"><img alt="Thumbnail for version as of 14:24, 22 February 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/archive/b/b9/20090222162351%21Sieve_of_Eratosthenes_animation.gif/120px-Sieve_of_Eratosthenes_animation.gif" decoding="async" width="120" height="100" data-file-width="445" data-file-height="369" /></a></td><td>445 × 369 <span style="white-space: nowrap;">(121 KB)</span></td><td>6Sixx</td><td dir="ltr">forgot a single frame</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20090222142403%21Sieve_of_Eratosthenes_animation.gif">14:10, 22 February 2009</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20090222142403%21Sieve_of_Eratosthenes_animation.gif"><img alt="Thumbnail for version as of 14:10, 22 February 2009" src="//upload.wikimedia.org/wikipedia/commons/thumb/archive/b/b9/20090222142403%21Sieve_of_Eratosthenes_animation.gif/120px-Sieve_of_Eratosthenes_animation.gif" decoding="async" width="120" height="100" data-file-width="445" data-file-height="369" /></a></td><td>445 × 369 <span style="white-space: nowrap;">(122 KB)</span></td><td>6Sixx</td><td dir="ltr">Removing frames overlapping inconsistency</td></tr>
+<tr><td></td><td style="white-space: nowrap;"><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20090222141031%21Sieve_of_Eratosthenes_animation.gif">14:19, 25 September 2007</a></td><td><a href="//upload.wikimedia.org/wikipedia/commons/archive/b/b9/20090222141031%21Sieve_of_Eratosthenes_animation.gif"><img alt="Thumbnail for version as of 14:19, 25 September 2007" src="//upload.wikimedia.org/wikipedia/commons/thumb/archive/b/b9/20090222141031%21Sieve_of_Eratosthenes_animation.gif/120px-Sieve_of_Eratosthenes_animation.gif" decoding="async" width="120" height="100" data-file-width="445" data-file-height="369" /></a></td><td>445 × 369 <span style="white-space: nowrap;">(154 KB)</span></td><td>Brian0918</td><td dir="ltr">== Summary == Animation that visualizes the &quot;Sieve of Eratosthenes&quot; algorithm. Original image at &#039;&#039;&#039;<a href="/wiki/File:Animation_Sieve_of_Eratosth.gif" title="File:Animation Sieve of Eratosth.gif">Image:Animation_Sieve_of_Eratosth.gif</a>&#039;&#039;&#039;  Original by <a href="https://de.wikipedia.org/wiki/Benutzer:SKopp" class="extiw" title="de:Benutzer:SKopp">SKopp</a> (selfmade) == Licensing == {{GFDL}}  <a href="/w/index.php?title=Category:Eratosthenes&amp;action=edit&amp;redlink=1" class="new" title="Category:Eratosthenes (page does not exist)">category:Eratosthenes</a></td></tr>
+</table>
+
+</div>
+<h2 id="filelinks">File usage</h2>
+<div id='mw-imagepage-section-linkstoimage'>
+<div class="linkstoimage" id="linkstoimage">The following pages on the English Wikipedia use this file (pages on other projects are not listed):</div><ul class="mw-imagepage-linkstoimage">
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Eratosthenes" title="Eratosthenes">Eratosthenes</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Prime_number" title="Prime number">Prime number</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Proof_of_the_Euler_product_formula_for_the_Riemann_zeta_function" title="Proof of the Euler product formula for the Riemann zeta function">Proof of the Euler product formula for the Riemann zeta function</a></li>
+<li class="mw-imagepage-linkstoimage-ns0"><a href="/wiki/Sieve_of_Eratosthenes" title="Sieve of Eratosthenes">Sieve of Eratosthenes</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/User:CarefulCounting" title="User:CarefulCounting">User:CarefulCounting</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/User:Duncanyuenyuching/Userboxes/math/set/fav/P" title="User:Duncanyuenyuching/Userboxes/math/set/fav/P">User:Duncanyuenyuching/Userboxes/math/set/fav/P</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/User:GTAVCV20022013" title="User:GTAVCV20022013">User:GTAVCV20022013</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/User:MPerel" title="User:MPerel">User:MPerel</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/User:Sebastien_Palcoux" title="User:Sebastien Palcoux">User:Sebastien Palcoux</a></li>
+<li class="mw-imagepage-linkstoimage-ns2"><a href="/wiki/User:WillNess/Sieve_of_Eratosthenes" title="User:WillNess/Sieve of Eratosthenes">User:WillNess/Sieve of Eratosthenes</a></li>
+<li class="mw-imagepage-linkstoimage-ns3"><a href="/wiki/User_talk:Froth/Archive_5" title="User talk:Froth/Archive 5">User talk:Froth/Archive 5</a></li>
+<li class="mw-imagepage-linkstoimage-ns3"><a href="/wiki/User_talk:NancyHeise/Archive_3" title="User talk:NancyHeise/Archive 3">User talk:NancyHeise/Archive 3</a></li>
+<li class="mw-imagepage-linkstoimage-ns3"><a href="/wiki/User_talk:SKopp" title="User talk:SKopp">User talk:SKopp</a></li>
+<li class="mw-imagepage-linkstoimage-ns4"><a href="/wiki/Wikipedia:Featured_picture_candidates/October-2007" title="Wikipedia:Featured picture candidates/October-2007">Wikipedia:Featured picture candidates/October-2007</a></li>
+<li class="mw-imagepage-linkstoimage-ns4"><a href="/wiki/Wikipedia:Featured_picture_candidates/Sieve_of_Eratosthenes" title="Wikipedia:Featured picture candidates/Sieve of Eratosthenes">Wikipedia:Featured picture candidates/Sieve of Eratosthenes</a></li>
+<li class="mw-imagepage-linkstoimage-ns4"><a href="/wiki/Wikipedia:Featured_pictures/Sciences/Mathematics" title="Wikipedia:Featured pictures/Sciences/Mathematics">Wikipedia:Featured pictures/Sciences/Mathematics</a></li>
+<li class="mw-imagepage-linkstoimage-ns4"><a href="/wiki/Wikipedia:Featured_pictures_thumbs/08" title="Wikipedia:Featured pictures thumbs/08">Wikipedia:Featured pictures thumbs/08</a></li>
+<li class="mw-imagepage-linkstoimage-ns4"><a href="/wiki/Wikipedia:Today%27s_featured_picture_(animation)/January_31,_2008" title="Wikipedia:Today&#039;s featured picture (animation)/January 31, 2008">Wikipedia:Today&#039;s featured picture (animation)/January 31, 2008</a></li>
+<li class="mw-imagepage-linkstoimage-ns4"><a href="/wiki/Wikipedia:Wikipedia_Signpost/2007-10-08/Features_and_admins" title="Wikipedia:Wikipedia Signpost/2007-10-08/Features and admins">Wikipedia:Wikipedia Signpost/2007-10-08/Features and admins</a></li>
+<li class="mw-imagepage-linkstoimage-ns4"><a href="/wiki/Wikipedia:Wikipedia_Signpost/2007-10-08/SPV" title="Wikipedia:Wikipedia Signpost/2007-10-08/SPV">Wikipedia:Wikipedia Signpost/2007-10-08/SPV</a></li>
+<li class="mw-imagepage-linkstoimage-ns10"><a href="/wiki/Template:POTD/2008-01-31" title="Template:POTD/2008-01-31">Template:POTD/2008-01-31</a></li>
+<li class="mw-imagepage-linkstoimage-ns100"><a href="/wiki/Portal:Mathematics/Featured_picture/2009_03" title="Portal:Mathematics/Featured picture/2009 03">Portal:Mathematics/Featured picture/2009 03</a></li>
+<li class="mw-imagepage-linkstoimage-ns100"><a href="/wiki/Portal:Mathematics/Featured_picture_archive" title="Portal:Mathematics/Featured picture archive">Portal:Mathematics/Featured picture archive</a></li>
+<li class="mw-imagepage-linkstoimage-ns100"><a href="/wiki/Portal:Mathematics/Recognized_content" title="Portal:Mathematics/Recognized content">Portal:Mathematics/Recognized content</a></li>
+</ul>
+</div>
+<h2 id="globalusage">Global file usage</h2>
+<div id="mw-imagepage-section-globalusage"><p>The following other wikis use this file:
+</p><ul>
+<li class='mw-gu-onwiki-ar_wikipedia_org'>Usage on ar.wikipedia.org
+<ul>	<li><a class="external" href="https://ar.wikipedia.org/wiki/%D8%B9%D8%AF%D8%AF_%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A">عدد طبيعي</a></li>
+	<li><a class="external" href="https://ar.wikipedia.org/wiki/%D8%B9%D8%AF%D8%AF_%D8%A3%D9%88%D9%84%D9%8A">عدد أولي</a></li>
+	<li><a class="external" href="https://ar.wikipedia.org/wiki/%D8%BA%D8%B1%D8%A8%D8%A7%D9%84_%D8%A5%D8%B1%D8%A7%D8%AA%D9%88%D8%B3%D8%AA%D9%8A%D9%86%D8%B3">غربال إراتوستينس</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-ast_wikipedia_org'>Usage on ast.wikipedia.org
+<ul>	<li><a class="external" href="https://ast.wikipedia.org/wiki/N%C3%BAmberu_primu">Númberu primu</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-az_wikipedia_org'>Usage on az.wikipedia.org
+<ul>	<li><a class="external" href="https://az.wikipedia.org/wiki/Eratosfen_%C9%99l%C9%99yi">Eratosfen ələyi</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-be_wikipedia_org'>Usage on be.wikipedia.org
+<ul>	<li><a class="external" href="https://be.wikipedia.org/wiki/%D0%94%D0%B7%D1%8D%D1%82%D0%B0-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%8B%D1%8F_%D0%A0%D1%8B%D0%BC%D0%B0%D0%BD%D0%B0">Дзэта-функцыя Рымана</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-bg_wikipedia_org'>Usage on bg.wikipedia.org
+<ul>	<li><a class="external" href="https://bg.wikipedia.org/wiki/%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BE_%D0%BD%D0%B0_%D0%95%D1%80%D0%B0%D1%82%D0%BE%D1%81%D1%82%D0%B5%D0%BD">Решето на Ератостен</a></li>
+	<li><a class="external" href="https://bg.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D1%8A%D0%BA_%D0%BD%D0%B0_%D0%BF%D1%8A%D1%80%D0%B2%D0%B8%D1%82%D0%B5_1000_%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%B8_%D1%87%D0%B8%D1%81%D0%BB%D0%B0">Списък на първите 1000 прости числа</a></li>
+	<li><a class="external" href="https://bg.wikipedia.org/wiki/%D0%9F%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%B8%D1%82%D0%B5%D0%BB:Topi2003">Потребител:Topi2003</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-bn_wikipedia_org'>Usage on bn.wikipedia.org
+<ul>	<li><a class="external" href="https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8C%E0%A6%B2%E0%A6%BF%E0%A6%95_%E0%A6%B8%E0%A6%82%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE">মৌলিক সংখ্যা</a></li>
+	<li><a class="external" href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%AC%E0%A7%87%E0%A6%B6%E0%A6%A6%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B0:%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4/%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A6%BF%E0%A6%A4_%E0%A6%A8%E0%A6%BF%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7/%E0%A6%B8%E0%A6%82%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%B9%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%BE">প্রবেশদ্বার:গণিত/নির্বাচিত নিবন্ধ/সংগ্রহশালা</a></li>
+	<li><a class="external" href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%AC%E0%A7%87%E0%A6%B6%E0%A6%A6%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B0:%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4/%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A6%BF%E0%A6%A4_%E0%A6%A8%E0%A6%BF%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7/%E0%A6%A1%E0%A6%BF%E0%A6%B8%E0%A7%87%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A6%B0">প্রবেশদ্বার:গণিত/নির্বাচিত নিবন্ধ/ডিসেম্বর</a></li>
+	<li><a class="external" href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%AC%E0%A7%87%E0%A6%B6%E0%A6%A6%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B0:%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4/%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A6%BF%E0%A6%A4_%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A6%B0/%E0%A6%B8%E0%A7%87%E0%A6%AA%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A6%B0">প্রবেশদ্বার:গণিত/নির্বাচিত চিত্র/সেপ্টেম্বর</a></li>
+	<li><a class="external" href="https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B0%E0%A6%BE%E0%A6%A4%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A7%87%E0%A6%A8%E0%A7%87%E0%A6%B8_%E0%A6%9B%E0%A6%BE%E0%A6%95%E0%A6%A8%E0%A6%BF">এরাতোস্থেনেস ছাকনি</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-bs_wikipedia_org'>Usage on bs.wikipedia.org
+<ul>	<li><a class="external" href="https://bs.wikipedia.org/wiki/Eratostenovo_sito">Eratostenovo sito</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-ca_wikipedia_org'>Usage on ca.wikipedia.org
+<ul>	<li><a class="external" href="https://ca.wikipedia.org/wiki/Nombre_primer">Nombre primer</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-cs_wikipedia_org'>Usage on cs.wikipedia.org
+<ul>	<li><a class="external" href="https://cs.wikipedia.org/wiki/Eratosthenovo_s%C3%ADto">Eratosthenovo síto</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-de_wikipedia_org'>Usage on de.wikipedia.org
+<ul>	<li><a class="external" href="https://de.wikipedia.org/wiki/Primzahl">Primzahl</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-de_wikibooks_org'>Usage on de.wikibooks.org
+<ul>	<li><a class="external" href="https://de.wikibooks.org/wiki/Religionskritik:_Gott">Religionskritik: Gott</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-dv_wikipedia_org'>Usage on dv.wikipedia.org
+<ul>	<li><a class="external" href="https://dv.wikipedia.org/wiki/%DE%87%DE%AC%DE%83%DE%A6%DE%93%DE%AE%DE%90%DE%B0%DE%8C%DE%A6%DE%82%DE%A9%DE%92%DE%B0">އެރަޓޮސްތަނީޒް</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-el_wikipedia_org'>Usage on el.wikipedia.org
+<ul>	<li><a class="external" href="https://el.wikipedia.org/wiki/%CE%9A%CF%8C%CF%83%CE%BA%CE%B9%CE%BD%CE%BF_%CF%84%CE%BF%CF%85_%CE%95%CF%81%CE%B1%CF%84%CE%BF%CF%83%CE%B8%CE%AD%CE%BD%CE%B7">Κόσκινο του Ερατοσθένη</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-en_wikibooks_org'>Usage on en.wikibooks.org
+<ul>	<li><a class="external" href="https://en.wikibooks.org/wiki/Visual_Basic_for_Applications/Print_version">Visual Basic for Applications/Print version</a></li>
+	<li><a class="external" href="https://en.wikibooks.org/wiki/Visual_Basic_for_Applications/Listing_Prime_Numbers">Visual Basic for Applications/Listing Prime Numbers</a></li>
+	<li><a class="external" href="https://en.wikibooks.org/wiki/Visual_Basic_for_Applications/Printable_version">Visual Basic for Applications/Printable version</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-es_wikipedia_org'>Usage on es.wikipedia.org
+<ul>	<li><a class="external" href="https://es.wikipedia.org/wiki/N%C3%BAmero_primo">Número primo</a></li>
+	<li><a class="external" href="https://es.wikipedia.org/wiki/Criba_de_Erat%C3%B3stenes">Criba de Eratóstenes</a></li>
+	<li><a class="external" href="https://es.wikipedia.org/wiki/Categor%C3%ADa:Teor%C3%ADa_de_n%C3%BAmeros">Categoría:Teoría de números</a></li>
+	<li><a class="external" href="https://es.wikipedia.org/wiki/Portal:Matem%C3%A1tica/Imagen_archivo_1-2009">Portal:Matemática/Imagen archivo 1-2009</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-et_wikipedia_org'>Usage on et.wikipedia.org
+<ul>	<li><a class="external" href="https://et.wikipedia.org/wiki/Algarv">Algarv</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-eu_wikipedia_org'>Usage on eu.wikipedia.org
+<ul>	<li><a class="external" href="https://eu.wikipedia.org/wiki/Txikipedia:Zenbaki_lehen">Txikipedia:Zenbaki lehen</a></li>
+	<li><a class="external" href="https://eu.wikipedia.org/wiki/Eratostenesen_bahea">Eratostenesen bahea</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-fa_wikipedia_org'>Usage on fa.wikipedia.org
+<ul>	<li><a class="external" href="https://fa.wikipedia.org/wiki/%D8%B9%D8%AF%D8%AF_%D8%A7%D9%88%D9%84">عدد اول</a></li>
+	<li><a class="external" href="https://fa.wikipedia.org/wiki/%D8%BA%D8%B1%D8%A8%D8%A7%D9%84_%D8%A7%D8%B1%D8%A7%D8%AA%D9%88%D8%B3%D8%AA%D9%86">غربال اراتوستن</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-fa_wikibooks_org'>Usage on fa.wikibooks.org
+<ul>	<li><a class="external" href="https://fa.wikibooks.org/wiki/%D8%A7%D9%84%DA%AF%D9%88:%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA1">الگو:مقالات1</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-fiu-vro_wikipedia_org'>Usage on fiu-vro.wikipedia.org
+<ul>	<li><a class="external" href="https://fiu-vro.wikipedia.org/wiki/Algarv">Algarv</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-fr_wikipedia_org'>Usage on fr.wikipedia.org
+<ul>	<li><a class="external" href="https://fr.wikipedia.org/wiki/Produit_eul%C3%A9rien">Produit eulérien</a></li>
+	<li><a class="external" href="https://fr.wikipedia.org/wiki/Projet:Impression/Featured_pictures/3">Projet:Impression/Featured pictures/3</a></li>
+	<li><a class="external" href="https://fr.wikipedia.org/wiki/Utilisateur:Sebastien_Palcoux">Utilisateur:Sebastien Palcoux</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-gu_wikipedia_org'>Usage on gu.wikipedia.org
+<ul>	<li><a class="external" href="https://gu.wikipedia.org/wiki/%E0%AA%85%E0%AA%B5%E0%AA%BF%E0%AA%AD%E0%AA%BE%E0%AA%9C%E0%AB%8D%E0%AA%AF_%E0%AA%B8%E0%AA%82%E0%AA%96%E0%AB%8D%E0%AA%AF%E0%AA%BE">અવિભાજ્ય સંખ્યા</a></li>
+	<li><a class="external" href="https://gu.wikipedia.org/wiki/%E0%AA%B8%E0%AA%AD%E0%AB%8D%E0%AA%AF:Ravijoshi/%E0%AA%85%E0%AA%B5%E0%AA%BF%E0%AA%AD%E0%AA%BE%E0%AA%9C%E0%AB%8D%E0%AA%AF_%E0%AA%B8%E0%AA%82%E0%AA%96%E0%AB%8D%E0%AA%AF%E0%AA%BE">સભ્ય:Ravijoshi/અવિભાજ્ય સંખ્યા</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-he_wikipedia_org'>Usage on he.wikipedia.org
+<ul>	<li><a class="external" href="https://he.wikipedia.org/wiki/%D7%94%D7%A0%D7%A4%D7%94_%D7%A9%D7%9C_%D7%90%D7%A8%D7%98%D7%95%D7%A1%D7%AA%D7%A0%D7%A1">הנפה של ארטוסתנס</a></li>
+	<li><a class="external" href="https://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8_%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99">מספר ראשוני</a></li>
+	<li><a class="external" href="https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%A8%D7%98%D7%9C:%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94/%D7%90%D7%A0%D7%99%D7%9E%D7%A6%D7%99%D7%94_%D7%A0%D7%91%D7%97%D7%A8%D7%AA/14">פורטל:מתמטיקה/אנימציה נבחרת/14</a></li>
+	<li><a class="external" href="https://he.wikipedia.org/wiki/%D7%95%D7%99%D7%A7%D7%99%D7%A4%D7%93%D7%99%D7%94:%D7%9E%D7%95%D7%A2%D7%93%D7%95%D7%A0%D7%99%D7%9D/%D7%97%D7%91%D7%95%D7%A8%D7%AA_%D7%90%D7%95%D7%99%D7%9C%D7%A8/%D7%99%D7%91%D7%95%D7%90_%D7%AA%D7%9E%D7%95%D7%A0%D7%94_%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%AA_%D7%9E%D7%94%D7%95%D7%99%D7%A7%D7%99_%D7%94%D7%90%D7%A0%D7%92%D7%9C%D7%99%D7%AA">ויקיפדיה:מועדונים/חבורת אוילר/יבוא תמונה מתמטית מהויקי האנגלית</a></li>
+	<li><a class="external" href="https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%A8%D7%98%D7%9C:%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94/%D7%90%D7%A0%D7%99%D7%9E%D7%A6%D7%99%D7%94_%D7%A0%D7%91%D7%97%D7%A8%D7%AA">פורטל:מתמטיקה/אנימציה נבחרת</a></li>
+	<li><a class="external" href="https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%A8%D7%98%D7%9C:%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94/%D7%90%D7%A0%D7%99%D7%9E%D7%A6%D7%99%D7%94_%D7%A0%D7%91%D7%97%D7%A8%D7%AA/%D7%92%D7%9C%D7%A8%D7%99%D7%94">פורטל:מתמטיקה/אנימציה נבחרת/גלריה</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-he_wikibooks_org'>Usage on he.wikibooks.org
+<ul>	<li><a class="external" href="https://he.wikibooks.org/wiki/%D7%97%D7%A9%D7%91%D7%95%D7%9F/%D7%9E%D7%A1%D7%A4%D7%A8%D7%99%D7%9D_%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%99%D7%9D">חשבון/מספרים ראשוניים</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-hi_wikipedia_org'>Usage on hi.wikipedia.org
+<ul>	<li><a class="external" href="https://hi.wikipedia.org/wiki/%E0%A4%8F%E0%A4%B0%E0%A5%87%E0%A4%9F%E0%A5%8B%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%87%E0%A4%A8%E0%A5%87%E0%A4%9C">एरेटोस्थेनेज</a></li>
+</ul></li>
+<li class='mw-gu-onwiki-hr_wikipedia_org'>Usage on hr.wikipedia.org
+<ul>	<li><a class="external" href="https://hr.wikipedia.org/wiki/Prosti_broj">Prosti broj</a></li>
+	<li><a class="external" href="https://hr.wikipedia.org/wiki/Eratostenovo_sito">Eratostenovo sito</a></li>
+</ul></li>
+</ul>
+<p>View <a href="/wiki/Special:GlobalUsage/Sieve_of_Eratosthenes_animation.gif" title="Special:GlobalUsage/Sieve of Eratosthenes animation.gif">more global usage</a> of this file.
+</p></div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=File:Sieve_of_Eratosthenes_animation.gif&amp;oldid=573709971">https://en.wikipedia.org/w/index.php?title=File:Sieve_of_Eratosthenes_animation.gif&amp;oldid=573709971</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Mathematics_portal_selected_pictures" title="Category:Mathematics portal selected pictures">Mathematics portal selected pictures</a></li><li><a href="/wiki/Category:Featured_pictures" title="Category:Featured pictures">Featured pictures</a></li><li><a href="/wiki/Category:Wikipedia_Picture_of_the_day_files" title="Category:Wikipedia Picture of the day files">Wikipedia Picture of the day files</a></li><li><a href="/wiki/Category:Featured_animations" title="Category:Featured animations">Featured animations</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage" class="mw-list-item"><span>Not logged in</span></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=File%3ASieve+of+Eratosthenes+animation.gif" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=File%3ASieve+of+Eratosthenes+animation.gif" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-image" class="selected mw-list-item"><a href="/wiki/File:Sieve_of_Eratosthenes_animation.gif" title="View the file page [c]" accesskey="c"><span>File</span></a></li><li id="ca-talk" class="mw-list-item"><a href="/wiki/File_talk:Sieve_of_Eratosthenes_animation.gif" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="/wiki/File:Sieve_of_Eratosthenes_animation.gif"><span>Read</span></a></li><li id="ca-view-foreign" class="mw-list-item"><a href="https://commons.wikimedia.org/wiki/File:Sieve_of_Eratosthenes_animation.gif"><span>View on Commons</span></a></li><li id="ca-edit" class="mw-list-item"><a href="/w/index.php?title=File:Sieve_of_Eratosthenes_animation.gif&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit local description</span></a></li><li id="ca-history" class="mw-list-item"><a href="/w/index.php?title=File:Sieve_of_Eratosthenes_animation.gif&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="/w/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search Wikipedia for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="/wiki/Main_Page"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" icon="home" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" icon="die" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" icon="help" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" icon="recentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/File:Sieve_of_Eratosthenes_animation.gif" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/File:Sieve_of_Eratosthenes_animation.gif" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=File:Sieve_of_Eratosthenes_animation.gif&amp;oldid=573709971" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=File:Sieve_of_Eratosthenes_animation.gif&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-electronpdfservice-sidebar-portlet-heading" class="mw-portlet mw-portlet-electronpdfservice-sidebar-portlet-heading vector-menu vector-menu-portal portal" aria-labelledby="p-electronpdfservice-sidebar-portlet-heading-label" role="navigation" 
+	 >
+	<h3 id="p-electronpdfservice-sidebar-portlet-heading-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="electron-print_pdf" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=File%3ASieve_of_Eratosthenes_animation.gif&amp;action=show-download-screen"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label" aria-label="" class="vector-menu-heading">
+		<span class="vector-menu-heading-label">Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		<div class="after-portlet after-portlet-lang"><span class="uls-after-portlet-link"></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 19 September 2013, at 23:00<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=File:Sieve_of_Eratosthenes_animation.gif&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.001","walltime":"0.001","ppvisitednodes":{"value":3,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":1,"limit":100},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"origin":"mw1455","timestamp":"20220216135515","ttl":1814400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":206,"wgHostname":"mw1455"});});</script>
+</body>
+</html>

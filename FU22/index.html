@@ -1,0 +1,376 @@
+<!doctype html>
+<head>
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  /* languages : ["macaulay2","sage", "python", ], */
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body><div class="container"><div class="row"><div class="col-xs-1"></div><div class="col-xs-11"><div style="margin-top:20px"></div><div class="slide"><div style="margin-top:20px"></div><br><br><h1 text-align:center;>Primtal og andre af naturens hemmeligheder</h1><h2 text-align:center;>Niels Lauritzen, Aarhus Universitet</h2><div style="margin-top:20px"></div><p style="margin-bottom: 2cm;"></p><div style="margin-top:20px"></div><div class="centerimg"><img src="img/batboy.jpg" width="80%"></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide"><div style="margin-top:20px"></div><h2>De naturlige tal</h2><div style="margin-top:20px"></div>Berømt citat af <a href="https://en.wikipedia.org/wiki/Leopold_Kronecker" target="_blank">Kronecker</a>.<div style="margin-top:20px"></div><div class="emphasize"><blockquote>
+  Die ganzen Zahlen har der liebe Gott gemacht, alles andere ist Menschenwerk.
+  </blockquote></div><div style="margin-top:20px"></div><h2>Definitioner</h2><div style="margin-top:20px"></div><ul><li>
+  De naturlige tal <span class="bubblelabel">er</span><span class="bubblecontent">Hov! Lærte vi ikke i skolen at de starter med <span class="math"></span><script type="math/tex">1</script>?</span> <span class="math"></span><script type="math/tex">0, 1, 2, 3, \dots</script>. De betegnes med symbolet <span class="math"></span><script type="math/tex">\mathbb{N}</script> (blackboard bold). <div style="margin-top:20px"></div></li><li>
+  Vi siger at <span class="math"></span><script type="math/tex">d</script> går op i <span class="math"></span><script type="math/tex">b</script> og skriver <span class="math"></span><script type="math/tex">d \mid b</script>, hvis der findes <span class="math"></span><script type="math/tex">a</script>
+  så <span class="math"></span><script type="math/tex">b = a d.</script> Eksempler: <span class="math"></span><script type="math/tex">3 \mid 15</script> og <span class="math"></span><script type="math/tex">n \mid 0</script> for alle <span class="math"></span><script type="math/tex">n</script>!<div style="margin-top:20px"></div></li><li>
+Et primtal er et naturligt tal med præcis to divisorer. Med denne definition er <span class="math"></span><script type="math/tex">1</script> er altsa ikke et primtal!
+<div class="math"></div><script type="math/tex; mode=display">
+2, 3, 5, 7, 11, 13, 17, 19, \dots
+</script><div style="margin-top:20px"></div>Disse tal er de smukkeste, men samtidig også særdeles mystiske objekter i matematikken.
+</li></ul><div style="margin-top:20px"></div>Det naturlige tal <span class="math"></span><script type="math/tex">0</script> har en meget interessant <a href="https://en.wikipedia.org/wiki/0" target="_blank">historie</a>.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/zero.jpg" ></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Eratosthenes' si</h2><div style="margin-top:20px"></div><div class="centerimg"><img src="img/sieve.jpg" width="70%"></div><div style="margin-top:20px"></div>
+Se <a href="http://www.hbmeyer.de/eratosiv.htm" target="_blank">Javascript animation</a><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2><a href="https://en.wikipedia.org/wiki/Eratosthenes" target="_blank">Eratosthenes (276 -- 194)</a></h2><div style="margin-top:20px"></div><center>
+<div class="centerimg"><img src="img/Eratosthenes.jpg" width="70%"></div>
+</center>
+</div><div style="margin-top:20px"></div><div class="slide">
+<h2>Matematikkens forunderlige styrke!</h2><div style="margin-top:20px"></div><div class="centerimg"><img src="img/earth.jpg" width="50%"></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2><a href="https://en.wikipedia.org/wiki/Carl_Sagan" target="_blank">Carl Sagan (1934-1996)</a></h2>
+<center>
+<div class="centerimg"><img src="img/sagan.jpg" width="90%"></div>
+</center>
+</div><div style="margin-top:20px"></div><div class="slide">
+  <h2>Cosmos (1980)</h2><div style="margin-top:20px"></div><a href="https://en.wikipedia.org/wiki/Cosmos:_A_Personal_Voyage" target="_blank">Naturvidenskabelig formidling</a> i verdensklasse!<div style="margin-top:20px"></div><p style="margin-bottom: 2cm;"></p><div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/f-ppBtuc_wQ?rel=0" frameborder="0" allowfullscreen></iframe>
+</div><div style="margin-top:20px"></div><div class="slide">
+<h2>Euklids elementer og primtal</h2><div style="margin-top:20px"></div><div class="centerimg"><img src="img/euclid.jpg" ></div><div style="margin-top:20px"></div><center>
+  <a href="https://www.claymath.org/library/historical/euclid/files/elem.9.20.html" target="_blank">Bog IX, Proposition 20</a>
+</center><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2><a href="https://en.wikipedia.org/wiki/Mersenne_prime" target="_blank">Mersenne primtal</a></h2><div style="margin-top:20px"></div>Primtal på formen <span class="math"></span><script type="math/tex">M_n = 2^n-1</script>.<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\def\arraystretch{1.5}
+\begin{array}{c|ccccccc}
+n & 1 & 2 & 3 & 4 & 5 & 6 & 7\\ \hline
+M_n & 1 & \color{red}{3} & \color{red}{7} & 15 & \color{red}{31} & 63 & \color{red}{127} 
+\end{array},
+</script><div style="margin-top:20px"></div><div class="centerimg"><img src="img/uiuc.gif" width="80%"></div><div style="margin-top:20px"></div><center>
+  <a href="https://en.wikipedia.org/wiki/Donald_B._Gillies" target="_blank">Donald B. Gillies</a> opdagede tre nye Mersenne primtal. Poststemplet
+  fra <a href="https://uiuc.edu" target="_blank">UIUC</a> blev udskiftet senere efter <a href="https://en.wikipedia.org/wiki/Four_color_theorem" target="_blank">firefarve problemets</a> <span class="bubblelabel">løsning</span><span class="bubblecontent">Gillies boede tre huse væk fra Appel i Urbana</span>.
+</center><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Lad os (eller computeren) regne</h2><div style="margin-top:20px"></div>Vi benytter computeralgebrasystemet <a href="https://www.sagemath.org/" target="_blank">Sage</a> til at regne med.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/sagemath.png" ></div><div style="margin-top:20px"></div><p style="margin-bottom: 2cm;"></p><div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+n = 11213;
+2^n-1
+</script></div><div style="margin-top:20px"></div><a href="#5a0ad109-4fc7-4884-bd10-e640c976e11e" class ="btn btn-default" data-toggle="collapse">Opgave</a><div id=5a0ad109-4fc7-4884-bd10-e640c976e11e class="collapse">
+Hvor mange cifre har <span class="math"></span><script type="math/tex">M_{11213}</script>?<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+log(2^11213-1, 10).n()
+</script></div><div style="margin-top:20px"></div>Er <span class="math"></span><script type="math/tex">M_n = 2^n-1</script> et primtal, hvis <span class="math"></span><script type="math/tex">n</script> er et primtal? Er <span class="math"></span><script type="math/tex">n</script> et primtal, hvis <span class="math"></span><script type="math/tex">M_n</script> er et primtal?
+</div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide"><div style="margin-top:20px"></div><h2><a href="https://en.wikipedia.org/wiki/Largest_known_prime_number" target="_blank">Verdens største primtal</a></h2><div style="margin-top:20px"></div><div class="centerimg"><img src="img/bigprime.jpg" ></div><div style="margin-top:20px"></div><h2>
+<a href="https://www.theregister.com/2019/01/03/largest_prime_number/" target="_blank">Florida man stumbles on biggest prime number ..</a>
+</h2><div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+n = 82589933
+factor(n)
+#(n*log(2, 10)).n()
+#int((n*log(2, 10)).n())
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide"><div style="margin-top:20px"></div><h2>Pas på med computermatematik!</h2><div style="margin-top:20px"></div><a href="wolframalpha.com" target="_blank">WolframAlpha</a> er et meget brugt CAS værktøj på
+gymnasiet og universitetet. Her en lille morsomhed fra mit
+indledende matematikkursus <a href="https://edtech.dk/IMO21" target="_blank">IMO</a>:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/WolframAlphaFails.png" ></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Entydig faktorisering og <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)" target="_blank">krypto</a></h2>
+<div class="math"></div><script type="math/tex; mode=display">
+2\cdot 3 \cdot 11\neq 5\cdot 13
+</script>
+<div class="centerimg"><img src="img/gauss.jpg" width="40%"></div><div style="margin-top:20px"></div><center>
+<a href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss" target="_blank">Gauss (1777--1855)</a>
+</center><div style="margin-top:20px"></div>
+<div class="sage"><script type="text/x-sage">
+import rsa
+(pub, priv) = rsa.newkeys(128)  # 128 bits, mindste antal = 16
+print("Hemmeligt primtal p = ", priv.p)
+print("Hemmeligt primtal q = ", priv.q)
+print("Offentlig nøgle n = ", priv.n)
+print("Check: n = p q = ", priv.p * priv.q)
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div style="margin-top:20px"></div>
+
+
+<div class="slide">
+<h2>Euler og den harmoniske række</h2><div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+1 + \frac{1}{2} + \frac{1}{3} + \cdots = \infty
+</script><div style="margin-top:20px"></div><div class="centerimg"><img src="img/Euler.jpg" width="50%"></div><div style="margin-top:20px"></div><center>
+<a href="https://en.wikipedia.org/wiki/Leonhard_Euler" target="_blank">Euler (1707 (15/4) - 1783)</a>
+</center><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Hvor langt kan man nå ud?</h2><div style="margin-top:20px"></div><div class="centerimg"><img src="img/bricks.jpg" ></div><div style="margin-top:20px"></div><p style="margin-bottom: 3cm;"></p><div style="margin-top:20px"></div><center>
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/vWHgazhwxu8?rel=0" frameborder="0" allowfullscreen></iframe>
+</center><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Lidt finansiel matematik</h2><div style="margin-top:20px"></div>Med en rente på <span class="math"></span><script type="math/tex">r = 5</script> procent per år, hvad er <span class="math"></span><script type="math/tex">100</script> kroner udbetalt om to år værd?<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+  x (1 + r)^2 = 100 \quad\implies \quad x = \frac{100}{(1 + r)^2} = 100 q^2, \qquad\text{hvor}\qquad q = \frac{1}{1+r}.  
+</script></div><div style="margin-top:20px"></div>Værdien af løbende udbetalinger af <span class="math"></span><script type="math/tex">100</script> kroner hvert år<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+L = 100(q + q^2 + q^3 + ) = ?
+</script></div><div style="margin-top:20px"></div>Formel for den <a href="https://en.wikipedia.org/wiki/Geometric_series" target="_blank">geometriske række</a>:<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+1 + q + q^2 +  = \frac{1}{1-q}\qquad\text{dvs}\qquad L = 100\frac{q}{1 - q} =  2000, \quad\text{for } r = 0.05.
+</script></div><div style="margin-top:20px"></div><p style="margin-bottom: 1cm;"></p><div style="margin-top:20px"></div><h2>Euler var ikke bange af sig ...</h2><div style="margin-top:20px"></div>Entydig primtalsfaktorisering giver ...<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4}+\cdots = \frac{1}{1 - \frac{1}{2}}\,\,
+\frac{1}{1 - \frac{1}{3}}\,\,\frac{1}{1 - \frac{1}{5}}\cdots 
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide"><div style="margin-top:20px"></div><h2>En funktion på de reelle tal!!!</h2><div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\zeta(s) = 1 + \frac{1}{2^s} + \frac{1}{3^s} + \frac{1}{4^s}+\cdots = \frac{1}{1 - \frac{1}{2^s}}\,\, \frac{1}{1 - \frac{1}{3^s}}\,\,\frac{1}{1 - \frac{1}{5^s}}\cdots 
+</script></div><div style="margin-top:20px"></div>Her er <span class="math"></span><script type="math/tex">\zeta(1) = \infty</script>, men faktisk er <span class="math"></span><script type="math/tex">\zeta(s) < \infty</script> for <span class="math"></span><script type="math/tex">s > 1</script>.<div style="margin-top:20px"></div>Som Euler <a href="https://en.wikipedia.org/wiki/Basel_problem" target="_blank">viste</a><div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\zeta(2) = \frac{\pi^2}{6}.
+</script></div><div style="margin-top:20px"></div>På YouTube lærer man at<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\zeta(-1) = 1 + 2 + 3 + \cdots = -\frac{1}{12}
+</script></div><div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/w-I6XTVZXww?rel=0" frameborder="0" allowfullscreen></iframe><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>
+
+
+
+<div style="margin-top:20px"></div><div class="slide"><div style="margin-top:20px"></div><h2>Rentes regning</h2><div style="margin-top:20px"></div><span class="math"></span><script type="math/tex">1000</script> kroner bliver med <span class="math"></span><script type="math/tex">10</script> procent i rente om året til <div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+1000 (1 + 0.1) = 1100 \text{ kroner}.
+</script></div><div style="margin-top:20px"></div>Hvis renten tilskrives månedligt bliver det<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+1000 (1 + \frac{0.1}{12})^{12} = 1104.71 \text{ kroner}
+</script></div><div style="margin-top:20px"></div>Hvis renten tilskrives dagligt bliver det<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+1000 (1 + \frac{0.1}{365})^{365} = 1105.16 \text{ kroner}
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Eksponentialfunktionen er helt central</h2><div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+e^x = \lim_{n\to \infty}(1 + \frac{x}{n})^n = (1 + \frac{x}{\infty})^\infty.
+</script></div><div style="margin-top:20px"></div>Renten tilskrevet hvert <em>nanosekund</em> giver <div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+100\, e^{0.1} = 1105.17 \text{ kroner}.
+</script></div><div style="margin-top:20px"></div><p style="margin-bottom: 2cm;"></p><div style="margin-top:20px"></div><div class="emphasize"><blockquote>
+Dvs hvis renten tilskrives hvert nanosekund, tjener vi omkring <span class="math"></span><script type="math/tex">5</script> kroner i
+forhold til den årlige rentetilskrivning.
+</blockquote></div><div style="margin-top:20px"></div>Beregning af <span class="math"></span><script type="math/tex">e = e^1</script>:<div style="margin-top:20px"></div><div class="sage"><script type="text/x-sage">
+def exp(n):
+  print("(1 + 1/n)^n is =")
+  print((1 + 1/float(n))**n)
+  print("for n = ", n)
+
+exp(100)
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Hvordan udregnes <span class="math"></span><script type="math/tex">2^{\sqrt{2}}</script>??</h2><div style="margin-top:20px"></div>Husk på regnereglen<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+(a^b)^{^c} = a^{b c}
+</script></div><div style="margin-top:20px"></div>Logaritmen er defineret ved<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+n = e^{\log(n)}.
+</script></div><div style="margin-top:20px"></div>Derfor er<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+n^x = (e^{\log(n)})^{^x} = e^{x \log(n)}
+</script></div><div style="margin-top:20px"></div>og<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+2^{\sqrt{2}} = e^{\sqrt{2} \log(2)}
+</script></div><div style="margin-top:20px"></div>Udregningen kun mulig gennem eksponentialfunktionen i modsætning til<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+  2^{-\frac{4}{5}} = \frac{1}{2^{\frac{4}{5}}} = \frac{1}{\sqrt[5]{2}^4}.
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2><span class="math"></span><script type="math/tex">f(x) = e^x</script> for <span class="math"></span><script type="math/tex">x\in \mathbb{R}</script></h2><div style="margin-top:20px"></div>Funktionen <span class="math"></span><script type="math/tex">f(x) = e^x</script> er nu defineret for alle
+tal <span class="math"></span><script type="math/tex">x\in \mathbb{R}</script>. Faktisk kan kan udregne<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+</script></div><div style="margin-top:20px"></div><h2>Hvad med de komplekse tal?</h2><div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\mathbb{C} = \{a + b i \mid a, b\in \mathbb{R}\}?
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Et dansk islæt!</h2>
+<div class="centerimg"><img src="img/wessel.jpg" ></div>
+<center>
+<a href="https://en.wikipedia.org/wiki/Caspar_Wessel" target="_blank">Caspar Wessel (1745 - 1818)</a>.
+</center><div style="margin-top:20px"></div>Foreslog den geometriske fortolkning af komplekse tal.<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Umulighed eller elegant abstraktion?</h2><div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\sqrt{-1}?
+</script></div><div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+i = \sqrt{-1}\quad\text{eller}\quad i^2 = -1
+</script></div><div style="margin-top:20px"></div><h2>Regneregler?</h2><div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+(a + b i)(c + d i) = ?
+</script></div>
+</div><div style="margin-top:20px"></div><div class="slide">
+<h2>Mirakuløse uendelige formler!!</h2><div style="margin-top:20px"></div>Vi har set, at<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+e^x = (1 + \frac{x}{\infty})^\infty = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!}+\cdots
+</script></div><div style="margin-top:20px"></div>For de trigonometriske funktioner har vi<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots
+</script></div><div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots
+</script></div>
+</div><div style="margin-top:20px"></div><div class="slide">
+<h2>Den smukkeste identitet i verden!</h2><div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+e^{i\, x} = \cos(x) + i \sin(x)
+</script></div><div style="margin-top:20px"></div><div class="centerimg"><img src="img/Euler.jpg" width="50%"></div><div style="margin-top:20px"></div><center>
+<span class="math"></span><script type="math/tex">e^{i \pi} + 1 = 0</script>
+</center>
+</div><div style="margin-top:20px"></div><div class="slide">
+<h2>Potenser som er komplekse tal!</h2><div style="margin-top:20px"></div>For<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+s = x + i y
+</script></div><div style="margin-top:20px"></div>er<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+n^s &= e^{s \log(n)} = e^{(x + i y) \log(n)} = \cdots \\
+&= n^x \left(\cos(\log(n) y) + i \sin(\log(n) y)\right)
+\end{aligned}</script><div style="margin-top:20px"></div>Dette giver zeta-funktionen for (næsten alle) komplekse tal <span class="math"></span><script type="math/tex">s = x + i y\in \mathbb{C}</script>:<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\zeta(s) = 1 + \frac{1}{2^s} + \frac{1}{3^s} + \cdots = \frac{1}{1 - \frac{1}{2^s}}\,\,
+\frac{1}{1 - \frac{1}{3^s}}\,\,\frac{1}{1 - \frac{1}{5^s}}\cdots 
+</script></div><div style="margin-top:20px"></div>Eneste undtagelse er <span class="math"></span><script type="math/tex">s=1</script>.<div style="margin-top:20px"></div><div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/TNMBaD6PaYA?rel=0" frameborder="0" allowfullscreen></iframe><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Bernhard Riemann (1826 - 1866)</h2>
+<center>
+<div class="centerimg"><img src="img/riemann.jpg" ></div>
+</center>
+</div><div style="margin-top:20px"></div><div class="slide">
+<h2>Den banebrydende artikel</h2>
+<em>Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse</em>
+<center>
+<div class="centerimg"><img src="img/riemannpaper.jpg" ></div>\quad <b>(1859)</b>
+</center>
+</div><div style="margin-top:20px"></div><div class="slide">
+<h2><a href="http://claymath.org/millennium-problems/riemann-hypothesis" target="_blank">Riemann hypotesen</a></h2><div style="margin-top:20px"></div>Alle nulpunkter for <span class="math"></span><script type="math/tex">\zeta(s)</script> ligger på en bestemt lodret linje:
+<div class="math"></div><script type="math/tex; mode=display">
+\zeta(x + i y) = 0 \implies x = \frac{1}{2}.
+</script><div style="margin-top:20px"></div><div class="centerimg"><img src="img/RHdollars.jpg" ></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Hvad har det at gøre med primtal?</h2><div style="margin-top:20px"></div><span class="math"></span><script type="math/tex">\pi(x) = </script> antallet af primtal <span class="math"></span><script type="math/tex">\leq x</script>:<div style="margin-top:20px"></div><center>
+<div class="math"></div><script type="math/tex; mode=display">
+\def\arraystretch{2}
+\begin{array}{r|r|r}
+  x & \pi(x) & \pi(x)/x \\
+  \hline
+10 & 4 & 0.400\\
+100 & 25 & 0.250\\
+1000 & 168 & 0.170\\
+10000 & 1229 & 0.120\\
+100000 & 9592 & 0.090\\
+1000000 & 78498 & 0.080\\
+10000000 & 664579 & 0.066\\
+100000000 & 5761455 & 0.058\\
+1000000000 & 50847534 & 0.051
+\end{array},
+</script>
+</center><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div class="slide">
+<h2>Er der en lovmæssighed?</h2><div style="margin-top:20px"></div>Gauss opdagede ved at studere tabeller (som <span class="math"></span><script type="math/tex">14</script>-årig!!!):<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\def\arraystretch{2}
+\begin{array}{r|r|r|r}
+  x & \pi(x) & \pi(x)/x & 1/\log(x) \\
+\hline
+10 & 4 & 0.4 & 0.43\\
+100 & 25 & 0.25 & 0.22\\
+1000 & 168 & 0.17 & 0.14\\
+10000 & 1229 & 0.12 & 0.11\\
+100000 & 9592 & 0.09 & 0.09\\
+1000000 & 78498 & 0.08 & 0.07\\
+10000000 & 664579 & 0.066 & 0.062\\
+100000000 & 5761455 & 0.058 & 0.054\\
+1000000000 & 50847534 & 0.051 & 0.048
+\end{array}
+</script>
+</div><div style="margin-top:20px"></div>
+ 
+<div style="margin-top:20px"></div><div class="slide">
+<h2>Gauss og Riemann</h2><div style="margin-top:20px"></div>Gauss opdagede at<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+x/\pi(x) \sim \log(x)\qquad \text{eller}\qquad
+\pi(x) \sim x/\log(x)
+</script></div><div style="margin-top:20px"></div>
+<div style="margin-top:20px"></div>En bedre approksimation er<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\operatorname{Li}(x) = \int_2^x \frac{dt}{\log(t)}
+</script></div><div style="margin-top:20px"></div>og endnu bedre er Riemanns approksimation<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+\operatorname{R}(x) = \operatorname{Li}(x) - \frac{1}{2}\operatorname{Li}(\sqrt{x}) - \frac{1}{3}\operatorname{Li}(\sqrt[3]{x}) - \cdots
+</script></div>
+</div><div style="margin-top:20px"></div><div class="slide">
+<h2>Approksimationer til <span class="math"></span><script type="math/tex">\pi(x)</script></h2>
+<div class="math"></div><script type="math/tex; mode=display">
+\def\arraystretch{2}
+\begin{array}{r|r|r|r|r}
+x & \pi(x) & x/\log(x) & \operatorname{Li}(x) & \operatorname{R}(x)\\
+\hline
+10 & 4 & 4.3 & 6.2 & 4.6\\
+100 & 25 & 21.7 & 30.1 & 25.7\\
+1000 & 168 & 144.8 & 177.6 & 168.4\\
+10000 & 1229 & 1085.7 & 1246.1 & 1226.9\\
+100000 & 9592 & 8685.9 & 9629.8 & 9587.4\\
+1000000 & 78498 & 72382.4 & 78627.5 & 78527.4\\
+10000000 & 664579 & 620421 & 664918 & 664667
+\end{array}
+</script>
+</div><div style="margin-top:20px"></div><div class="slide">
+<h2>Det største tal i verden!</h2><div style="margin-top:20px"></div>Det ser ud til at <span class="math"></span><script type="math/tex">\pi(x)</script> altid er mindre end <span class="math"></span><script type="math/tex">\operatorname{Li}(x)</script>, eller ... 
+Faktisk kan man vise at der findes et tal <span class="math"></span><script type="math/tex">y</script> mindre end
+<div class="math"></div><script type="math/tex; mode=display">
+10 ^{\displaystyle 10^{\displaystyle 10^{\displaystyle 34}}}
+</script>
+med <span class="math"></span><script type="math/tex">\pi(y) > Li(y)</script>.
+</div><div style="margin-top:20px"></div>
+<div class="slide">
+<h2>Primtal, Riemann hypotesen og kernefysik</h2><div style="margin-top:20px"></div>Hvis Riemann hypotesen holder, så gælder en meget veldefineret ulighed omkring
+primtallenes fordeling:<div style="margin-top:20px"></div><div class="emphasize"><div class="math"></div><script type="math/tex; mode=display">
+|\pi(x) - \operatorname{Li}(x)| < \frac{1}{8\pi} \sqrt{x} \log(x)\quad \text{for } x\geq 2657.
+</script></div><div style="margin-top:20px"></div><center>
+<div class="centerimg"><img src="img/FreemanDyson.jpg" width="35%"></div>
+<a href="https://en.wikipedia.org/wiki/Freeman_Dyson" target="_blank">Freeman Dyson</a>
+</center><div style="margin-top:20px"></div><a href="https://www.ias.edu/ideas/2013/primes-random-matrices" target="_blank">Videnskabsmænd mødes og sød musik opstår!</a><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div></div></div></div></body>
