@@ -1,0 +1,20 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}
+\makeatletter
+\begin{document}
+
+\begin{center}
+\begin{picture}(7,7)(-1,-1)
+\put(0.9,1.9){$\bullet$}
+\put(1.9,1.9){$\bullet$}
+\put(2.9,0.9){$\bullet$}
+\put(3.9,0.9){$\bullet$}
+\put(0,0){\vector(1,0){7}}
+\put(0,0){\vector(0,1){7}}
+\multiput(1,0)(1,0){6}{\vrule height 5pt width 0.5pt}
+\multiput(0,1)(0,1){6}{\vrule height 0.5pt width 5pt}
+\end{picture}
+\end{center}
+
+
+\end{document}
+
