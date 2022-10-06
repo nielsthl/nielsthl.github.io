@@ -1,0 +1,976 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#d18525bd-21a5-41ca-a6c9-435f5e80ebc8"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#84293252-091a-4bd6-8420-5c926c75655f">1.1 Black box warnings</a></li><li><a href="intro.html#9e24f323-6129-4c4b-bdb5-3d37178d2cf3">1.2 Computer algebra</a></li><li><a href="intro.html#e6e4791e-da74-40a4-9179-699e396e0c10">1.3 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#989eb4f9-0c24-4968-8474-ff88f78211da">1.4 Sets</a></li><li><a href="intro.html#d7bfe49c-e3b1-45dc-89dc-221b4e4070e6">1.5 Ordering numbers</a></li><li><a href="intro.html#6046b5a7-f2ab-46ad-b30d-03726d1c97c2">1.6 Propositional logic</a></li><li><a href="intro.html#2c4e2db0-16c0-4c28-9f9c-b0c0ba39e808">1.7 What is a mathematical proof?</a></li><li><a href="intro.html#2e752521-508c-450e-afac-58ae1714824b">1.8 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#d2d16c27-e943-40e2-9c73-9178d50a30a5"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#e480027e-be85-432f-a0e2-3d01cfac5aa3">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#6e7cd607-ddbc-4e02-97ff-af1efcf62a7d">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#e7412929-670c-43d7-a06f-5151ac44ae99">2.3 Gauss elimination</a></li><li><a href="lineqs.html#02783bc1-c735-415a-a7eb-d5d0cdb5f379">2.4 Polynomials</a></li><li><a href="lineqs.html#ec7bc6ca-41ff-4859-8dae-cc7ea2782037">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#86197728-3be4-4717-8473-79f5da549846">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#dd7e78d9-eb78-4814-94e1-b24f7788f256">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#7f638cce-1eaf-4dd4-9308-d1a1066d0db4"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#24e8d058-ce8a-40ce-8dc7-97b48515813e">3.1 Matrices</a></li><li><a href="matrices.html#f53de099-3178-429b-9455-771cceb404cc">3.2 Linear maps</a></li><li><a href="matrices.html#f49476d9-000a-4455-a5be-e3001e060398">3.3 Matrix multiplication</a></li><li><a href="matrices.html#f640ffa9-14b3-4caf-9f29-dfc8b20dada7">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#7bbc7818-e0fd-4c21-83ff-65ff7a06f761">3.5 The inverse matrix</a></li><li><a href="matrices.html#65b019c8-8201-4a70-8a1d-b7bd64f71447">3.6 The transposed matrix</a></li><li><a href="matrices.html#848011e8-2f0e-4005-b01e-82cf1210f261">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#4aeb17ed-d009-41c6-b493-d6ea039d4ea3"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#5f37b886-c4d7-4c34-bcbf-c4ff2bc3b0cf">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#01a17a09-0906-4b03-b585-c154bd0721b1">4.2 General definition</a></li><li><a href="whatisopt.html#faa99c2f-a26f-45fc-8937-0ac8555c7d3f">4.3 Convex optimization</a></li><li><a href="whatisopt.html#42420195-ad18-4a5c-b030-23966f5641b8">4.4 Linear optimization</a></li><li><a href="whatisopt.html#ac3b2fea-3c25-436a-88a4-7cce36c51de4">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#04dfed3c-b03a-40d7-a5d9-160a2a154b43">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#83a0ca96-be78-4426-a318-9b524a33b846"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#ac598a35-5cfe-4661-8658-e8b248b31487">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#a4be2e2b-d56d-4667-8a18-4a9ce187347c">5.2 Higher dimensions</a></li><li><a href="euclidean.html#d74a8fd0-47f5-4471-9837-7e1447237ff8">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#bf5f6c66-b579-47ad-8e27-2a5d7fb6523e">5.4 Sequences and limits in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script></a></li><li><a href="euclidean.html#2c47e595-1786-4af1-bbeb-5617dc14b29b">5.5 Continuous functions</a></li></ul><li><a class="kap" href="convexfunctions.html#6fa64746-818b-4d61-9017-79b6da4c3707"><b>6</b> Convex functions</a></li><a href="#kap6" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap6" class="collapse"><li><a href="convexfunctions.html#ed7238ae-913e-42bb-8b31-753a717a1fc6">6.1 Strictly convex functions</a></li><li><a href="convexfunctions.html#93b466ab-55da-491d-b794-880a1d273a22">6.2 Why are convex functions interesting?</a></li><li><a href="convexfunctions.html#557dc72a-982a-428f-900c-9722ced4b857">6.3 Differentiable functions</a></li><li><a href="convexfunctions.html#5f39bf22-b3c6-4f84-8a50-2372a3876d22">6.4 Taylor polynomials</a></li><li><a href="convexfunctions.html#7d1283a3-bc50-4986-99a6-c35547866fb8">6.5 Differentiable convex functions</a></li></ul><li><a class="kap" href="diffseveral.html#16117d38-d573-4415-afec-943ca1f5ba26"><b>7</b> Several variables</a></li><a href="#kap7" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap7" class="collapse"><li><a href="diffseveral.html#6e0c75e7-044e-48d5-b1e2-82914bc5da4c">7.1 Introduction</a></li><li><a href="diffseveral.html#e855b99c-322b-4f20-8767-5b7108a1c569">7.2 Vector functions</a></li><li><a href="diffseveral.html#37a281fd-c431-49ba-8f73-95d8f37e70cf">7.3 Differentiability</a></li><li><a href="diffseveral.html#77441575-aa92-46c3-97f8-d186ed1ffc20">7.4 Newton-Raphson in several variables!</a></li><li><a href="diffseveral.html#e49eab96-ef54-4850-af9a-88668dff7da8">7.5 Local extrema in several variables</a></li><li><a href="diffseveral.html#d1d96b66-b334-46dc-883b-cadb9221c7d2">7.6 The chain rule</a></li><li><a href="diffseveral.html#90935317-caa2-4ed2-abe0-f51fe48a79ce">7.7 Logistic regression</a></li><li><a href="diffseveral.html#d0fd8187-fe38-437a-b8b8-279854b0768e">7.8 3Blue1Brown</a></li><li><a href="diffseveral.html#d29e7407-1f20-49cf-a696-0cd1e7064b7c">7.9 Lagrange multipliers</a></li><li><a href="diffseveral.html#2413292c-d3e8-4f94-95d6-bc1b720f8f04">7.10 The interior and the boundary of a subset</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><h1 id="d2d16c27-e943-40e2-9c73-9178d50a30a5">2<span style="float:right;">Linear equations</span></h1><div style="margin-top:20px"></div>
+Modern mathematical terminology may seem abstract, but a lot of it comes from
+equation solving. We will talk about linear equations in this chapter to
+motivate the concept of matrices in the next chapter.<div style="margin-top:20px"></div>Linear equations are equations, where the unknowns
+only appear to the first power. For example,
+<span class="math"></span><script type="math/tex">x^2 + x + 1 = 0</script> is not a linear equation in the unknown <span class="math"></span><script type="math/tex">x</script>, since <span class="math"></span><script type="math/tex">x</script> to the second power (<span class="math"></span><script type="math/tex">x^2</script>) appears in the equation,  whereas
+<span class="math"></span><script type="math/tex">2 x - 3 = 1</script> is.
+We may also consider several linear equations with several unknowns, such as
+<span id="equ2.1"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+x + y + z &= 3\\
+x - y + z &= 1\\ 
+x + y - z &= 1
+\end{aligned}\tag{2.1}</script><div style="margin-top:20px"></div>consisting of three linear equations with the three unknowns <span class="math"></span><script type="math/tex">x</script>, <span class="math"></span><script type="math/tex">y</script> and <span class="math"></span><script type="math/tex">z</script>.<div style="margin-top:20px"></div><span id="env2.1"></span><a class="Exerciseno" data-count="2.1"></a><a href="#2b274bd2-c0cc-423b-8dff-ee2d47f5abff" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=2b274bd2-c0cc-423b-8dff-ee2d47f5abff class = "collapse Exercise envbuttons">  
+Try to come up with a solution to <a href=#equ2.1>(2.1)</a> i.e., find
+numbers <span class="math"></span><script type="math/tex">x, y, z</script> satisfying all three equations. Do not use a computer.
+Is there more than one solution?<div style="margin-top:20px"></div>Write down two linear equations with two unknowns, which do not
+have a solution.
+</div><div style="margin-top:20px"></div>Do the exercise above, before you evaluate the Sage code below, which uses
+the dreaded solve function. The solve function should always be used as a last resort.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+x, y, z = var('x, y, z')
+solve([x+y+z == 3, x - y + z == 1, x + y - z == 1],
+x, y, z)
+</script></div><div style="margin-top:20px"></div><span id="sec2.1"></span><h2 id="e480027e-be85-432f-a0e2-3d01cfac5aa3">2.1 One linear equation with one unknown</h2><div style="margin-top:20px"></div>Very simple rules apply when solving linear equations.<div style="margin-top:20px"></div>Consider as an example the linear equation <span class="math"></span><script type="math/tex">2 x - 3 = 1</script> in the unknown <span class="math"></span><script type="math/tex">x</script>.
+Solving this equation amounts to reducing to an expression <span class="math"></span><script type="math/tex">x=</script> a number. This
+is called <em>isolating</em> <span class="math"></span><script type="math/tex">x</script>. The process is very mechanical:
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+2 x - 3 &= 1\\
+&\Updownarrow\\
+2 x - 3 + 3 &= 1 + 3\\
+&\Updownarrow\\
+2 x &= 4\\
+&\Updownarrow\\
+\left(\frac{1}{2}\right) 2 x &= \left(\frac{1}{2}\right) 4\\ 
+&\Updownarrow\\
+x &= 2
+\end{aligned}</script>
+If you look closely, you will see that we have used the rules
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+&a=b\qquad \iff \qquad a + c = b + c\\
+&a=b\qquad \iff \qquad t a = t b,
+\end{aligned}</script>
+where <span class="math"></span><script type="math/tex">a, b, c</script> are numbers and <span class="math"></span><script type="math/tex">t</script> is a number <span class="math"></span><script type="math/tex">\neq 0</script>.<div style="margin-top:20px"></div><span id="env2.2"></span><a class="Exerciseno" data-count="2.2"></a><a href="#2325f110-e9e6-4a63-b03f-5abce39c8bfd" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=2325f110-e9e6-4a63-b03f-5abce39c8bfd class = "collapse Exercise envbuttons">  
+Point out the mistake(s) in the <span class="bubblelabel footnotecolor">argument</span><span class="bubblecontent"><span class="bubbleinnercontent">This teaser was presented at the workshop for new teaching assistants, August 2020.</span></span> below showing that <span class="math"></span><script type="math/tex">2 = 1</script>.
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  a &= b \iff \\
+  a^2 &= a b \iff\\
+  a^2 - b^2 &= a b - b^2 \iff \\
+  (a + b)(a - b) &= b (a - b) \iff\\
+  a + b &= b \iff \\
+  2 b &= b \iff \\
+  2 &= 1.
+\end{aligned}</script>
+</div><div style="margin-top:20px"></div><span id="env2.3"></span><a class="Quizexerciseno" data-count="2.3"></a><a href="#ab2d695c-1830-451f-8f64-42bab2c33e28" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=ab2d695c-1830-451f-8f64-42bab2c33e28 class = "collapse Quizexercise envbuttons">  
+<span id="{labelname}"></span><div id="quiz1" style="width:100%;"><div class="row quizquestion">
+A saline solution is a mixture of <span class="math"></span><script type="math/tex">0.9</script>% sodium chloride in water. Suppose that you have
+<span class="math"></span><script type="math/tex">2</script> liters of water containing <span class="math"></span><script type="math/tex">9</script>% sodium chloride. How many liters of
+distilled water (<span class="math"></span><script type="math/tex">0</script> percent sodium chloride)
+do you need to add to get a saline solution.
+</div><div class="row quizboxes"><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">4.5</script> liter
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">10</script> liter
+</div><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">18</script> liter
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div><div style="margin-top:20px"></div><span id="env2.4"></span><a class="Exerciseno" data-count="2.4"></a><a href="#ad707cf6-8301-4be4-8e37-538ae5d351a6" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ad707cf6-8301-4be4-8e37-538ae5d351a6 class = "collapse Exercise envbuttons">  
+Diophantus's youth lasted <span class="math"></span><script type="math/tex">1/6</script> of his life. He grew a beard after <span class="math"></span><script type="math/tex">1/12</script> more. After <span class="math"></span><script type="math/tex">1/7</script> more
+he got married. Five years later he had a son. The son lived half as long as the father
+and Diophantus died four years after the son. At what age did Diophantus die?<div style="margin-top:20px"></div><a href="#a0f1d2f6-ed6b-41c9-a736-c942d30926a4" class ="btn btn-default" data-toggle="collapse">Link/Hint</a><div id=a0f1d2f6-ed6b-41c9-a736-c942d30926a4 class="collapse">
+  You can read about Diophantus and the solution to the puzzle in the <a href="https://en.wikipedia.org/wiki/Diophantus" target="_blank">Wikipedia entry</a> about him. Please
+  try solving the problem on your own first.
+</div>
+</div><div style="margin-top:20px"></div><span id="sec2.2"></span><h2 id="6e7cd607-ddbc-4e02-97ff-af1efcf62a7d">2.2 Several linear equations with several unknowns</h2><div style="margin-top:20px"></div>The linear equation <span class="math"></span><script type="math/tex">2 x - 3 = 1</script> has only one unknown with the unique solution
+<span class="math"></span><script type="math/tex">x=2</script>. <em>If one linear equation has more than one unknown, then it has
+  infinitely many solutions</em>. Consider as an example the linear equation
+<span class="math"></span><script type="math/tex">2 x - 3 y = 1</script> with the unknowns <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script>.
+Using the procedure as before, we get
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+2 x - 3 y &= 1\\
+&\Updownarrow\\
+x &= \frac{1}{2} + \frac{3}{2} y
+\end{aligned}</script>
+Here we are free to choose <span class="math"></span><script type="math/tex">y</script> in infinitely many ways giving
+infinitely many solutions <span class="math"></span><script type="math/tex">(x, y)\in \mathbb{R}^2</script>.<div style="margin-top:20px"></div><span id="sec2.2.1"></span><h3>2.2.1 Several equations</h3><div style="margin-top:20px"></div>Several equations with several unknowns also make sense. Consider
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+x + y &= 3\\
+2 x - 3 y &= 1
+\end{aligned}</script>
+Two numbers <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script> form a solution <span class="math"></span><script type="math/tex">(x, y)\in \mathbb{R}^2</script> if both equations are satisfied.
+From the example above, we know that 
+<span id="equ2.2"></span><div class="math"></div><script type="math/tex; mode=display">
+x = \color{blue}{\frac{1}{2} + \frac{3}{2} y}. 
+\tag{2.2}</script>
+This can be inserted for <span class="math"></span><script type="math/tex">x</script> in the first equation and we get
+<div class="math"></div><script type="math/tex; mode=display">
+3 = x + y = \color{blue}{\frac{1}{2} + \frac{3}{2} y} + y = \frac{1}{2} + \frac{5}{2} y.
+</script>
+Here we end up with one linear equation in one variable <span class="math"></span><script type="math/tex">y</script>.
+The solution is <span class="math"></span><script type="math/tex">y=1</script>, which is inserted in the equation <a href=#equ2.2>(2.2)</a> giving
+<span class="math"></span><script type="math/tex">x = 2</script>. Therefore the solution to the equations is <span class="math"></span><script type="math/tex">(x, y) = (2, 1)</script>.<div style="margin-top:20px"></div><span id="env2.5"></span><a class="Quizexerciseno" data-count="2.5"></a><a href="#81177585-19b7-4bbd-ad30-ae922e3e7ce8" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=81177585-19b7-4bbd-ad30-ae922e3e7ce8 class = "collapse Quizexercise envbuttons">  
+<span id="{labelname}"></span><div id="quiz2" style="width:100%;"><div class="row quizquestion">
+  <a href="https://en.wikipedia.org/wiki/Kona_coffee" target="_blank">Kona coffee</a> is a delicacy priced at <span class="math"></span><script type="math/tex">200</script> kroner for <span class="math"></span><script type="math/tex">400</script> grams.
+  A standard <span class="math"></span><script type="math/tex">500</script> gram bag of Arabica beans is priced at <span class="math"></span><script type="math/tex">60</script> kroner.<div style="margin-top:20px"></div>A merchant wishes to mix coffee beans of these sorts aiming for a price of
+  <span class="math"></span><script type="math/tex">75</script> kroner for <span class="math"></span><script type="math/tex">400</script> grams. Which one of the percentages below
+  comes closest to the content of Kona coffee in the mixture?<div style="margin-top:20px"></div></div><div class="row quizboxes"><div class="col-xs-5 quizanswer" datav="T">
+<span class="math"></span><script type="math/tex">18%</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">5%</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">30%</script>
+</div><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">12%</script>
+</div></div></div><button id="quizbutton2" class = "btn btn-default">Check</button><script>$("#quizbutton2").click(function(){quizshowanswers(quiz2, quizbutton2);});</script>
+</div><div style="margin-top:20px"></div><span id="sec2.3"></span><h2 id="e7412929-670c-43d7-a06f-5151ac44ae99">2.3 Gauss elimination</h2><div style="margin-top:20px"></div>When solving systems of several linear equations, it is natural to
+fix one of the equations, isolate an unknown and then insert
+in the other equations.<div style="margin-top:20px"></div>Let us study this procedure focusing on an example with
+two equations and three unknowns:
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+x + 2 y + z &= 8\\
+2 x + y + z &= 7
+\end{aligned}</script>
+In the first equation we isolate <span class="math"></span><script type="math/tex">x = 8 - 2 y - z</script>, which is then inserted into the second
+equation:
+<div class="math"></div><script type="math/tex; mode=display">
+2 x + y + z = 2(8 - 2 y - z) + y + z = - 3 y - z + 16 = 7 \implies -3 y - z = -9. 
+</script>
+It makes perfect sense to multiply the first equations by <span class="math"></span><script type="math/tex">2</script> and subtract from the second
+equations. This operation gives
+<div class="math"></div><script type="math/tex; mode=display">
+-3 y -  z = -9.
+</script>
+It is not a coincidence that these two operations give the same result.<div style="margin-top:20px"></div><span id="env2.6"></span><div class="theorem" data-count="2.6">     
+Suppose that  
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+a_1 x_1 + a_2 x_2 + \cdots + a_n x_n &= c_1\\
+b_1 x_1 + b_2 x_2 + \cdots + b_n x_n &= c_2
+\end{aligned}</script>
+are two linear equations in the unknowns <span class="math"></span><script type="math/tex">x_1, \dots, x_n</script> with
+<span class="math"></span><script type="math/tex">a_1\neq 0</script>. The equation gotten by first isolating
+<span class="math"></span><script type="math/tex">x_1</script> in the first equation and then inserting in the second equation
+is identical to the equation you get by adding the first equation multiplied 
+by <span class="math"></span><script type="math/tex">-b_1/a_1</script> to the second equation.
+</div>
+<a href="#85bdebce-7bbc-4c7f-98f2-540868e47b36" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=85bdebce-7bbc-4c7f-98f2-540868e47b36 class = "collapse Proof envbuttons">    
+  Isolating <span class="math"></span><script type="math/tex">x_1</script> in the first equation inserted in the second equation gives
+  the equation
+<span id="equ2.3"></span><div class="math"></div><script type="math/tex; mode=display">
+b_1\left(\frac{c_1}{a_1} - \frac{a_2}{a_1} x_2 - \cdots -\frac{a_n}{a_1} x_n\right) + b_2 x_2 + \cdots + b_n x_n = c_2
+\tag{2.3}</script>
+Adding <span class="math"></span><script type="math/tex">-b_1/a_1</script> multiplied to the first equation to the second equation gives
+<span id="equ2.4"></span><div class="math"></div><script type="math/tex; mode=display">
+\left(b_2 - \frac{b_1 a_2}{a_1}\right) x_2 + \cdots +
+\left(b_n - \frac{b_1 a_n}{a_1}\right) x_n = c_2 - \frac{b_1}{a_1} c_1
+\tag{2.4}</script>
+Using basic arithmetic you can see that <a href=#equ2.3>(2.3)</a> can be rewritten to
+<a href=#equ2.4>(2.4)</a>. 
+  </div><div style="margin-top:20px"></div>Multiplying an equation by a number and then adding to another equation
+is easier to handle than the method of isolating and inserting. We have
+showed above that they produce the same result. Below is
+an extended example.<div style="margin-top:20px"></div><span id="env2.7"></span><a class="Exampleno" data-count="2.7"></a><a href="#223e2a6e-6d69-4d70-a108-c81686ae45dd" class ="btn btn-default Examplebutton" data-toggle="collapse"></a><div id=223e2a6e-6d69-4d70-a108-c81686ae45dd class = "collapse Example envbuttons">  
+We wish to solve the system of equations<div style="margin-top:20px"></div><span id="equ2.5"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&2 x &+ &y &+ &z &= 7\\
+&x &+ &2y &+ &z &= 8\\
+&x &+ &y &+ &2 z &= 9
+\end{matrix}.
+\tag{2.5}</script><div style="margin-top:20px"></div>The first step is subtracting the third equation from the second:
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&2 x &+ &y &+ &z &= 7\\
+&x &+ &2y &+ &z &= 8\\
+&x &+ &y &+ &2 z &= 9
+\end{matrix}\quad\iff
+\begin{matrix}
+&2 x &+ &y &+ &z &= 7\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}
+</script>
+Then we multiply the third equation by <span class="math"></span><script type="math/tex">2</script> and subtract from the first:
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+&2 x &+ &y &+ &z &= 7\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}
+\quad\iff
+\begin{matrix}
+& &-  &y &- &3 z &= -11\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}
+</script>
+Finally we add the second equation to the first:
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+& &-  &y &- &3 z &= -11\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}\quad\iff
+\begin{matrix}
+& &  & &- &4 z &= -12\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix}
+</script>
+We have now reduced the original system of equations <a href=#equ2.5>(2.5)</a> to
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+& &  & &- &4 z &= -12\\
+& &  &y &- &z &= -1\\
+&x &+  &y &+ &2 z &= 9
+\end{matrix},
+</script>
+where the first equation shows that <span class="math"></span><script type="math/tex">z = 3</script>. Now <span class="math"></span><script type="math/tex">z = 3</script> can be inserted into
+the second equation, giving <span class="math"></span><script type="math/tex">y - 3 = -1</script>, which is solved by <span class="math"></span><script type="math/tex">y=2</script>.
+Finally 
+<span class="math"></span><script type="math/tex">y = 2</script> and <span class="math"></span><script type="math/tex">z=3</script> are inserted into the third equations giving the equation
+<span class="math"></span><script type="math/tex">x + 8 = 9</script>, which is solved by <span class="math"></span><script type="math/tex">x=1</script>.<div style="margin-top:20px"></div>One very important observation here is that <span class="math"></span><script type="math/tex">x=1, y=2</script> and <span class="math"></span><script type="math/tex">z=3</script> is the only
+solution to  <a href=#equ2.5>(2.5)</a>. This is a logical consequence of the
+bi-implication arrows <span class="math"></span><script type="math/tex">\iff</script> throughout the above calculations.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+x, y, z = var('x, y, z')
+solve(
+[2*x+y+z == 7,
+x + 2*y + z == 8,
+x + y + 2*z == 9],
+x, y, z)
+</script></div>
+
+</div><div style="margin-top:20px"></div>The elimination or substitution method for solving systems of linear equations
+is old and well known.
+<a href="https://en.wikipedia.org/wiki/Isaac_Newton" target="_blank">Sir Isaac Newton</a> described in <span class="math"></span><script type="math/tex">1720</script>
+the methods eloquently as follows.<div style="margin-top:20px"></div><blockquote>
+  <em>And you are to know, that by each Æquation one unknown Quantity may
+  be taken away, and consequently, when there are as many Æquations
+  and unknown Quantities, all at length may be reduc'd into one, in
+  which there shall be only one Quantity unknown.</em>
+</blockquote><div style="margin-top:20px"></div>The mathematical rockstar <a href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss" target="_blank">Carl Friedrich
+  Gauss</a> used the method
+to determine the orbit for the asteroid
+<a href="https://en.wikipedia.org/wiki/2_Pallas" target="_blank">Pallas</a>. The mathematical analysis
+of the observations lead him to the famous <a href="https://en.wikipedia.org/wiki/Least_squares" target="_blank">least squares method</a> and
+a system of six linear equations with six unknowns.<div style="margin-top:20px"></div>The method is known today by the term <em>Gaussian elimination</em> even though Gauss
+was not the first to introduce it. In fact it appeared already in <em>The Nine Chapters
+  on the Mathematical Art</em>, which is an ancient Chinese mathematics book compiled over several
+centuries from the 10th century BCE to the 2nd century CE. This book contains
+several practical problems and their solutions. An example is
+<blockquote>
+  There are three categories of corn. Three bundles of the first class,
+  two of the second and one of the third make <span class="math"></span><script type="math/tex">39</script> measures. Two of the
+  first, three of the second, and one of the third make <span class="math"></span><script type="math/tex">34</script> measures. Finally
+  one of the first, two of the second and three of the third make <span class="math"></span><script type="math/tex">26</script> measures.
+  How many measures of graín are contained in one bundle of each class?
+</blockquote><div style="margin-top:20px"></div><span id="env2.8"></span><a class="Quizexerciseno" data-count="2.8"></a><a href="#75f47b47-4283-4394-bdba-1d034203594a" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=75f47b47-4283-4394-bdba-1d034203594a class = "collapse Quizexercise envbuttons">  
+ <span id="{labelname}"></span><div id="quiz3" style="width:100%;"><div class="row quizquestion">
+How many solutions does the system of equations below have?
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+x + y + z &= 0\\
+x - y + z &= 0\\
+x + y - z &= 0
+\end{aligned}</script>
+</div><div class="row quizboxes"><div class="col-xs-5 quizanswer" datav="F">
+None.
+</div><div class="col-xs-5 quizanswer" datav="T">
+Precisely one.
+</div><div class="col-xs-5 quizanswer" datav="F">
+Infinitely many.
+</div></div></div><button id="quizbutton3" class = "btn btn-default">Check</button><script>$("#quizbutton3").click(function(){quizshowanswers(quiz3, quizbutton3);});</script>
+</div><div style="margin-top:20px"></div><span id="env2.9"></span><a class="Quizexerciseno" data-count="2.9"></a><a href="#c871974a-ced2-42ff-91f5-b3335b7e0ce8" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=c871974a-ced2-42ff-91f5-b3335b7e0ce8 class = "collapse Quizexercise envbuttons">  
+How many solutions does the system of equations below have?
+  <span id="{labelname}"></span><div id="quiz4" style="width:100%;"><div class="row quizquestion"><div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+x + y + z &= 0\\
+x - y + z &= 0\\
+5 x + y +5z &= 0
+\end{aligned}</script>
+</div><div class="row quizboxes"><div class="col-xs-5 quizanswer" datav="F">
+Precisely one.
+</div><div class="col-xs-5 quizanswer" datav="F">
+Precisely two.
+</div><div class="col-xs-5 quizanswer" datav="T">
+Infinitely many.
+</div></div></div><button id="quizbutton4" class = "btn btn-default">Check</button><script>$("#quizbutton4").click(function(){quizshowanswers(quiz4, quizbutton4);});</script>
+</div><div style="margin-top:20px"></div><span id="env2.10"></span><a class="Exerciseno" data-count="2.10"></a><a href="#bcb88fd7-b511-4bf2-8586-c8895db80662" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=bcb88fd7-b511-4bf2-8586-c8895db80662 class = "collapse Exercise envbuttons">  
+Find the solutions to
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+& x &+ &3 y &+ &z &= &2\\
+&-2 x &- &5 y &+ &3 z &= &4.
+\end{matrix}
+</script>
+by expressing <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script> in terms of <span class="math"></span><script type="math/tex">z</script> i.e., isolate <span class="math"></span><script type="math/tex">x</script> on the
+left hand side, such that
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  x &= \dots\\
+  y &= \dots,
+\end{aligned}</script>
+where <span class="math"></span><script type="math/tex">\dots</script> indicate an expression only in the unknown <span class="math"></span><script type="math/tex">z</script>.
+</div><div style="margin-top:20px"></div><span id="env2.11"></span><a class="Exerciseno" data-count="2.11"></a><a href="#b288790a-d451-4061-9d76-7492d1d8643f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=b288790a-d451-4061-9d76-7492d1d8643f class = "collapse Exercise envbuttons">  
+Your enemy transmits secret codes <span class="math"></span><script type="math/tex">(x_1, x_2, x_3, x_4)</script> consisting of four integers <span class="math"></span><script type="math/tex">x_1, x_2, x_3, x_4</script> over the internet. He does
+not transmit the code itself but an encrypted version <span class="math"></span><script type="math/tex">(y_1, y_2, y_3, y_4)</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+  y_1 &= &2 x_1 &+ &x_2 &+ &3 x_3 &+  &4 x_4\\
+  y_2 &= &x_1 &+ &2 x_2 &+ &3 x_3 &+  &4 x_4\\
+  y_3 &= &3 x_1 &+ &3 x_2 &+ &x_3 &+  &x_4\\
+  y_4 &= &4 x_1 &+ &4 x_2 &+ &2 x_3 &+  &3 x_4
+\end{matrix}.
+</script>
+You have knowledge of the encryption method above and by listening in on
+a recent communication, you learn that the encryption
+<span class="math"></span><script type="math/tex">(15, 16, 12, 20)</script> was sent. What was the original secret code before the encryption?<div style="margin-top:20px"></div><a href="#800375b7-7df1-4d2e-8158-a4ddfb09d39a" class ="btn btn-default" data-toggle="collapse">Extra credit</a><div id=800375b7-7df1-4d2e-8158-a4ddfb09d39a class="collapse">
+  Suppose that you only know that the encryption scheme is
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+  y_1 &= &a_{11} x_1 &+ & a_{12} x_2 &+ &a_{13} x_3 &+  &a_{14} x_4\\
+  y_2 &= &a_{21} x_1 &+ &a_{22} x_2 &+ &a_{23} x_3 &+  &a_{24} x_4\\
+  y_3 &= &a_{31} x_1 &+ &a_{32} x_2 &+ &a_{33} x_3 &+  &a_{34} x_4\\
+  y_4 &= &a_{41} x_1 &+ &a_{42} x_2 &+ &a_{43} x_3 &+  &a_{44} x_4
+\end{matrix},
+</script>
+and that you have no knowledge of the numbers <span class="math"></span><script type="math/tex">a_{11}, \dots, a_{44}</script>.
+How many transmissions do you need to know at the minimum to find
+these encryption numbers?
+</div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env2.12"></span><a class="Exerciseno" data-count="2.12"></a><a href="#22cc3aa3-f6f0-410e-839e-122ca177ce76" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=22cc3aa3-f6f0-410e-839e-122ca177ce76 class = "collapse Exercise envbuttons">  
+The diagram below shows a network of roads and <span class="math"></span><script type="math/tex">6</script> intersections.
+Every road is labeled by a number indicating the average number
+of cars per hour on the road. Some of these numbers 
+<span class="math"></span><script type="math/tex">f_1, \dots, f_7</script> are unknowns. Write up a system of linear
+equations for finding <span class="math"></span><script type="math/tex">f_1, \dots, f_7</script>. <div style="margin-top:20px"></div><div class="centerimg"><img src="img/trafik.png" ></div><div style="margin-top:20px"></div>Compute
+<span class="math"></span><script type="math/tex">f_1, f_2, f_3, f_4, f_5, f_6</script> supposing that <span class="math"></span><script type="math/tex">f_1=200</script> and <span class="math"></span><script type="math/tex">f_7=100</script>.
+</div><div style="margin-top:20px"></div><span id="env2.13"></span><div class="example" data-count="2.13">     <div style="margin-top:20px"></div>This example relates to the famous Google page rank algorithm.  <div style="margin-top:20px"></div><div class="centerimg"><img src="img/pagerankgraph.png" ></div><div style="margin-top:20px"></div>Suppose we have a very simple internet with only four webpages
+  as depicted above with arrows indicating that a webpage links to another.<div style="margin-top:20px"></div>We wish to study traffic in this network in the sense that we let a random
+  websurfer jump from a given webpage to another by selecting a link randomly.<div style="margin-top:20px"></div>If you look at the network without the punctured red arrow, it is almost clear
+  the a random websurfer will spend <span class="math"></span><script type="math/tex">25</script> % of the time uniformly in each of the
+  four nodes.<div style="margin-top:20px"></div>However, if we introduce the puntured red arrow, then the percentages in
+  each node are given by the linear equations above. Here it turns out that
+  website <span class="math"></span><script type="math/tex">1</script> only gets around <span class="math"></span><script type="math/tex">14</script> % of the time (the other websites get double this time each).<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><a href="#2f0bdedc-87b0-40d2-bbc8-f315e9ef5d43" class ="btn btn-default" data-toggle="collapse">Mentimeter</a><div id=2f0bdedc-87b0-40d2-bbc8-f315e9ef5d43 class="collapse">
+  <a href="https://www.mentimeter.com/s/7c8b86cdd0b5cff4cfb8624e160bbb78/ef1e63c4e082" target="_blank">Page rank quiz</a>
+  </div><div style="margin-top:20px"></div><span id="env2.14"></span><div class="example" data-count="2.14">     
+You may try out the python code below to simulate a random tour
+of the small internet in Example <a href=#env2.13 class="labelref">2.13</a>.<div style="margin-top:20px"></div><div class=sagepython><script type="text/x-sage">
+import random
+
+# Incidence matrix
+
+A = [[0,1,0,0], [0,0,0,1], [1,1,0,0], [0,0,1,0]]
+
+def neighbors(n):
+    return [i for i, e in enumerate(A[n]) if e != 0]
+
+def simulate(n, num): # Simulate random walk num times from node n in matrix A
+    count = [0] * len(A)
+    node = n
+    count[n] = 1
+    for i in range(num):
+        node = random.choice(neighbors(node))
+        count[node] += 1
+    return count
+
+print(simulate(0, 1000))        
+</script></div><div style="margin-top:20px"></div>The list (or matrix)
+<p><pre><code>A = [[0,1,0,0], [0,0,0,1], [1,1,0,0], [0,0,1,0]]
+</code></pre></p>
+encodes the graph of links between the four nodes <span class="math"></span><script type="math/tex">0, 1, 2, 3</script>. From
+<span class="math"></span><script type="math/tex">A</script> you can see that <span class="math"></span><script type="math/tex">2</script> links to <span class="math"></span><script type="math/tex">0</script> and <span class="math"></span><script type="math/tex">1</script> and that
+<span class="math"></span><script type="math/tex">0</script> links to <span class="math"></span><script type="math/tex">1</script>. The command<div style="margin-top:20px"></div><p><pre><code>simulate(0, 1000)
+</code></pre></p><div style="margin-top:20px"></div>simulates a random surf with <span class="math"></span><script type="math/tex">1.000</script> clicks starting in node <span class="math"></span><script type="math/tex">0</script>.<div style="margin-top:20px"></div>The linear equations really seem to give the right result!
+</div><div style="margin-top:20px"></div><span id="sec2.4"></span><h2 id="02783bc1-c735-415a-a7eb-d5d0cdb5f379">2.4 Polynomials</h2><div style="margin-top:20px"></div>Before going further into examples of linear equations we need to introduce (non-linear)
+functions called <em>polynomials</em>. A polynomial of degree <span class="math"></span><script type="math/tex">n</script> is a function <span class="math"></span><script type="math/tex">f:\mathbb{R}\rightarrow \mathbb{R}</script>
+of the form
+<span id="equ2.6"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0,
+\tag{2.6}</script>
+where <span class="math"></span><script type="math/tex">a_0, \dots, a_n</script> are real numbers and <span class="math"></span><script type="math/tex">a_n\neq 0</script>. We call <span class="math"></span><script type="math/tex">a_0, \dots, a_n</script>
+the <em>coefficients</em> of <span class="math"></span><script type="math/tex">f</script>.
+The degree of the polynomial <span class="math"></span><script type="math/tex">f</script> is denoted
+<span class="math"></span><script type="math/tex">\deg(f)</script>. As an example,
+<div class="math"></div><script type="math/tex; mode=display">
+x^3 - 2 x + 17
+</script>
+is a polynomial of degree <span class="math"></span><script type="math/tex">3</script> with
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  a_3 &= 1\\
+  a_2 &= 0\\
+  a_1 &= -2\\
+  a_0 &= 17.
+\end{aligned}</script><div style="margin-top:20px"></div>In addition to the polynomials defined in <a href=#equ2.6>(2.6)</a> with <span class="math"></span><script type="math/tex">a_n\neq 0</script>,
+we also view the function <span class="math"></span><script type="math/tex">f(x) = 0</script> as a polynomial, called the <em>zero polynomial</em>.
+The zero polynomial does <span class="bubblelabel footnotecolor">not</span><span class="bubblecontent"><span class="bubbleinnercontent">All its coefficients are zero!</span></span> have a degree.<div style="margin-top:20px"></div>The set of all polynomials is denoted
+<span class="math"></span><script type="math/tex">\mathbb{R}[x]</script>, so that for example it makes sense to write
+<div class="math"></div><script type="math/tex; mode=display">
+x^2 - 5 x + 6\in \mathbb{R}[x].
+</script>
+It is probably the most natural functions from <span class="math"></span><script type="math/tex">\mathbb{R}</script> to <span class="math"></span><script type="math/tex">\mathbb{R}</script> you can come up with.
+If you look at <a href=#equ2.6>(2.6)</a>, you will see that the output is formed by using
+addition and multiplication (by <span class="math"></span><script type="math/tex">x</script> and selected real numbers).<div style="margin-top:20px"></div><div style="margin-top:20px"></div>You can compute with polynomials treating the <em>variable</em> <span class="math"></span><script type="math/tex">x</script> as
+a number. For example,
+<div class="math"></div><script type="math/tex; mode=display">
+(3 x^2 + 2 x + 1) (2 x + 1) = 6 x^3 + 7 x^2 + 4 x + 1.
+</script>
+In general a polynomial of degree <span class="math"></span><script type="math/tex">m</script> times a polynomial of degree <span class="math"></span><script type="math/tex">n</script> is a
+polynomial of degree <span class="math"></span><script type="math/tex">m+n</script>.<div style="margin-top:20px"></div>In the sage window below we encounter for the first time the <tt>sympy</tt> library. The
+input format and commands for handling polynomials should be clear from the context.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+from sympy import expand
+from sympy.abc import x
+f = 3*x**2 + 2*x + 1
+g = 2*x + 1
+expand(f*g)
+</script></div><div style="margin-top:20px"></div>You have already seen polynomials
+of degree one. They have the form
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = a x + b,
+</script>
+where <span class="math"></span><script type="math/tex">a</script> and <span class="math"></span><script type="math/tex">b</script> are real numbers and <span class="math"></span><script type="math/tex">a\neq 0</script>. Similarly
+polynomials of degree two are called quadratic polynomials. They look
+like
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = a x^2 + b x + c,
+</script>
+where <span class="math"></span><script type="math/tex">a, b</script> and <span class="math"></span><script type="math/tex">c</script> are real numbers and <span class="math"></span><script type="math/tex">a\neq 0</script>. <div style="margin-top:20px"></div>To get a feeling for the behavior of polynomials you should experiment in the sage
+window below. Try varying the degree and the coefficients of the polynomial in the plot.
+Also adjust the plot interval for the right view.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+  plot(x**4 - 10*x**3 + 35*x**2 - 50*x + 24, (x, 0.5, 4.5))
+</script></div><div style="margin-top:20px"></div><span id="env2.15"></span><a class="Exerciseno" data-count="2.15"></a><a href="#ad814049-0217-4181-948c-322795893f71" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ad814049-0217-4181-948c-322795893f71 class = "collapse Exercise envbuttons">  
+Suppose that
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = a x^2 + b x + c.
+</script>
+To compute <span class="math"></span><script type="math/tex">f(x)</script> it seems that you need <span class="math"></span><script type="math/tex">3</script> multiplications
+(<span class="math"></span><script type="math/tex">a\cdot x\cdot x</script> and <span class="math"></span><script type="math/tex">b\cdot x</script>) and <span class="math"></span><script type="math/tex">2</script> additions.
+Can you compute <span class="math"></span><script type="math/tex">f(x)</script> with only <span class="math"></span><script type="math/tex">2</script> multiplications and <span class="math"></span><script type="math/tex">2</script> additions?<div style="margin-top:20px"></div>Try to generalize to the computation of <span class="math"></span><script type="math/tex">f(x)</script>, where <span class="math"></span><script type="math/tex">f</script> is a polynomial
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0,
+</script>
+of degree <span class="math"></span><script type="math/tex">n</script> (you should only need <span class="math"></span><script type="math/tex">n</script> multiplications and <span class="math"></span><script type="math/tex">n</script> additions here).
+</div><div style="margin-top:20px"></div><span id="sec2.4.1"></span><h3>2.4.1 Polynomial division</h3><div style="margin-top:20px"></div>Division is sometimes referred to as long division when
+focusing on the method for division. Let us look
+at the situation for integers first.<div style="margin-top:20px"></div>The remainder of 
+<span class="math"></span><script type="math/tex">14</script> divided by <span class="math"></span><script type="math/tex">4</script> is <span class="math"></span><script type="math/tex">2</script>, since
+<div class="math"></div><script type="math/tex; mode=display">
+14 = 3\cdot 4 + 2.
+</script>
+Here the remainder <span class="math"></span><script type="math/tex">2</script> is strictly less than the divisor <span class="math"></span><script type="math/tex">4</script>.<div style="margin-top:20px"></div>For polynomials we have a similar situation, where the degree
+is taken into account. For example, the remainder of
+<span class="math"></span><script type="math/tex">x^3 + x + 1</script> divided by <span class="math"></span><script type="math/tex">x^2 + x + 1</script> is <span class="math"></span><script type="math/tex">x+2</script>, since
+<span id="equ2.7"></span><div class="math"></div><script type="math/tex; mode=display">
+x^3 + x + 1 = (x-1)(x^2 + x + 1) + (x+2).
+\tag{2.7}</script>
+Here the degree of the remainder <span class="math"></span><script type="math/tex">1</script> is strictly less 
+than the degree of the divisor <span class="math"></span><script type="math/tex">2</script>.<div style="margin-top:20px"></div>The Python library <a href="https://www.sympy.org/" target="_blank"><tt>sympy</tt></a> contains a
+wealth of functions for symbolic mathematics. In the window
+below, it is shown how the polynomial division <a href=#equ2.7>(2.7)</a>
+is computed using the
+<a href="https://docs.sympy.org/latest/modules/polys/index.html" target="_blank">Polynomial Manipulaton</a> section
+of the <tt>sympy</tt> documentation.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+from sympy import div
+from sympy.abc import x
+div(x**3+x+1, x**2+x+1)
+</script></div><div style="margin-top:20px"></div>The (division) algorithm for carrying out (long) division of
+polynomials is explained by an example in the video below.<div style="margin-top:20px"></div><span id="env2.16"></span><div class="video" data-count="2.16">     
+<iframe width="100%" height="360" src="https://www.youtube.com/embed/SLIEUcOwVxA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div><div style="margin-top:20px"></div><span id="env2.17"></span><a class="Exerciseno" data-count="2.17"></a><a href="#5ea06394-b285-4d0e-ba21-170811a35af6" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=5ea06394-b285-4d0e-ba21-170811a35af6 class = "collapse Exercise envbuttons">  
+Watch the five minute video above and
+carry out (do not use a computer) the polynomial division alluded to in <a href=#equ2.7>(2.7)</a>.
+</div><div style="margin-top:20px"></div>The general result about division of polynomials is given below.<div style="margin-top:20px"></div><div class="emphasize"><span id="env2.18"></span><div class="genericenv" data-count="2.18" data-name="THEOREM">     
+Let <span class="math"></span><script type="math/tex">d(x)\in \mathbb{R}[x]</script> be a non-zero polynomial. Then 
+for every polynomial <span class="math"></span><script type="math/tex">f(x)\in \mathbb{R}[x]</script>, there exists
+polynomials <span class="math"></span><script type="math/tex">q(x), r(x)\in \mathbb{R}[x]</script>, such that
+<span id="equ2.8"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x) = q(x) d(x) + r(x),
+\tag{2.8}</script>
+where <span class="math"></span><script type="math/tex">r(x) = 0</script> or <span class="math"></span><script type="math/tex">\deg(r(x)) < \deg(d(x))</script>.
+</div></div>
+<a href="#80ebbded-67bf-46d0-8bda-524530297156" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=80ebbded-67bf-46d0-8bda-524530297156 class = "collapse Proof envbuttons">    
+We will prove this using induction on <span class="math"></span><script type="math/tex">n = \deg(f)</script>. Suppose that
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = a_n x^n + \cdots\qquad\text{and}\qquad d(x) = b_m x^m + \cdots
+</script>
+In general if <span class="math"></span><script type="math/tex">\deg(d(x)) = m > n</script>, then
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = 0\cdot d(x) + f(x)
+</script>
+satisfies the assumptions for the identity in <a href=#equ2.8>(2.8)</a> with
+<span class="math"></span><script type="math/tex"> q(x) = 0</script> and <span class="math"></span><script type="math/tex">r(x) = f(x)</script>.<div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">m\leq n</script>, then <span class="math"></span><script type="math/tex">f(x) - a_n b_m^{-1} x^{n-m} d(x)</script> is a polynomial of
+degree <span class="math"></span><script type="math/tex"><n</script>. So by induction we may find polynomials <span class="math"></span><script type="math/tex">q_0(x)</script> and <span class="math"></span><script type="math/tex">r_0(x)</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) - a_n b_m^{-1} x^{n-m} d(x) = q_0(x) d(x) + r_0(x).
+</script>
+Therefore
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = (q_0(x) + a_n b_m^{-1} x^{n-m})d(x) + r_0(x)
+</script>
+giving the desired result with <span class="math"></span><script type="math/tex">q(x) = q_0(x) + a_n b_m^{-1} x^{n-m}</script> and <span class="math"></span><script type="math/tex">r(x) = r_0(x)</script>. 
+  </div><div style="margin-top:20px"></div><span id="sec2.4.2"></span><h3>2.4.2 Roots of polynomials</h3><div style="margin-top:20px"></div>A real number <span class="math"></span><script type="math/tex">\alpha\in \mathbb{R}</script> is called a <em>root</em> of the polynomial <span class="math"></span><script type="math/tex">f(x)\in \mathbb{R}[x]</script> if
+<span class="math"></span><script type="math/tex">f(\alpha) = 0</script>. This is a very fundamental definition. It is mirrored beautifully in the following
+result.<div style="margin-top:20px"></div><span id="env2.19"></span><div class="proposition" data-count="2.19">     
+A real number <span class="math"></span><script type="math/tex">\alpha</script> is a root of the polynomial <span class="math"></span><script type="math/tex">f(x)\in \mathbb{R}[x]</script> if and only if
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = q(x) (x-\alpha),
+</script>
+for some polynomial <span class="math"></span><script type="math/tex">q(x)\in \mathbb{R}[x]</script>.
+</div>
+<a href="#2ea03bfc-4199-4d70-b8c8-74d5604dd83c" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=2ea03bfc-4199-4d70-b8c8-74d5604dd83c class = "collapse Proof envbuttons">    
+By Theorem <a href=#env2.18 class="labelref">2.18</a>, we may write
+<span id="equ2.9"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x) = q(x)(x-\alpha) + r(x),
+\tag{2.9}</script>
+where <span class="math"></span><script type="math/tex">r(x)= 0</script> or <span class="math"></span><script type="math/tex">r(x)</script> is a non-zero polynomial of degree zero i.e., a  non-zero
+constant. Now the result follows, since <span class="math"></span><script type="math/tex">f(\alpha) = q(\alpha)(\alpha - \alpha) + r(\alpha) = r(\alpha)</script> 
+using <a href=#equ2.9>(2.9)</a>.
+  </div><div style="margin-top:20px"></div><span id="env2.20"></span><a class="Exerciseno" data-count="2.20"></a><a href="#3cc8d691-f8cb-42d0-b9fd-90d9b6f3a930" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=3cc8d691-f8cb-42d0-b9fd-90d9b6f3a930 class = "collapse Exercise envbuttons">  
+Is there an easy way of deciding if a polynomial <span class="math"></span><script type="math/tex">d(x) = a x + b</script> of degree one divides
+a polynomial <span class="math"></span><script type="math/tex">f(x)</script> without performing the (long) division of <span class="math"></span><script type="math/tex">f(x)</script> by
+<span class="math"></span><script type="math/tex">d(x)</script>. Here divides means that <span class="math"></span><script type="math/tex">f(x) = q(x) d(x)</script> for some polynomial <span class="math"></span><script type="math/tex">q(x)</script>.
+</div><div style="margin-top:20px"></div>A quadratic polynomial
+<div class="math"></div><script type="math/tex; mode=display">
+a x^2 + b x + c
+</script>
+has at most two roots given
+by the formula (one root for <span class="math"></span><script type="math/tex">+</script> and one for <span class="math"></span><script type="math/tex">-</script> in <span class="math"></span><script type="math/tex">\pm</script> below)
+<span id="equ2.10"></span><div class="math"></div><script type="math/tex; mode=display">
+\frac{-b\pm \sqrt{b^2 - 4 a c}}{2 a},
+\tag{2.10}</script>
+if its <em>discriminant</em> <span class="math"></span><script type="math/tex">b^2 - 4 a c</script> is <span class="math"></span><script type="math/tex">\geq 0</script>.<div style="margin-top:20px"></div><div class="frameit">
+  Deriving the formula <a href=#equ2.10>(2.10)</a> comes from a classical algebraic trick called <em>completing the square</em>. Looking
+  at the quadratic equation <span class="math"></span><script type="math/tex">a x^2 + b x + c = 0</script>, what bothers us is the term <span class="math"></span><script type="math/tex">b x</script>. If <span class="math"></span><script type="math/tex">b=0</script> we could solve the equation rewriting to
+  <div class="math"></div><script type="math/tex; mode=display">
+  x^2 = -\frac{c}{a}
+  </script>
+  and then taking square roots. The first step in this direction is rewriting
+  the equation
+  <div class="math"></div><script type="math/tex; mode=display">
+  a x^2 + b x + c = 0
+  </script>
+  to
+  <span id="equ2.11"></span><div class="math"></div><script type="math/tex; mode=display">
+  x^2 + \frac{b}{a} x = -\frac{c}{a}.
+  \tag{2.11}</script>
+  We would like to add a number <span class="math"></span><script type="math/tex">d^2</script> to both sides of <a href=#equ2.11>(2.11)</a> so that the left hand side comes to look like
+  <span id="equ2.12"></span><div class="math"></div><script type="math/tex; mode=display">
+    (x + d)^2 = x^2 + 2 x d + d^2.
+  \tag{2.12}</script>
+    This is what is called completing the square.<div style="margin-top:20px"></div>Comparing the left hand side of <a href=#equ2.11>(2.11)</a> with the right hand side of <a href=#equ2.12>(2.12)</a>, we find that 
+  <div class="math"></div><script type="math/tex; mode=display">
+  d = \frac{b}{2 a}
+  </script>
+  works.
+  Therefore <a href=#equ2.11>(2.11)</a> implies
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left( x + \frac{b}{2a}\right)^2 = -\frac{c}{a} + \left(\frac{b}{2 a}\right)^2.
+  </script>
+  This identity can be rewritten into the formula <a href=#equ2.10>(2.10)</a> for solving the
+  quadratic equation.
+  </div><div style="margin-top:20px"></div>For polynomials of degree three (cubic
+polynomials) there is a <a href="https://en.wikipedia.org/wiki/Cubic_function#General_solution_to_the_cubic_equation_with_real_coefficients" target="_blank">formula</a>, but these days nobody remembers it. Also for polynomials of
+degree four (quartic polynomials) there is a <a href="https://en.wikipedia.org/wiki/Quartic_function#Solution" target="_blank">formula</a>. But for polynomials of degree five (quintic polynomials) and up, one can prove
+that <a href="https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem" target="_blank">a formula cannot exist</a>!<div style="margin-top:20px"></div>An exceedingly important result is quoted and proved below: the degree of a polynomial is
+  an upper bound for its number of roots.<div style="margin-top:20px"></div><div class="emphasize"><span id="env2.21"></span><div class="genericenv" data-count="2.21" data-name="THEOREM">     
+  A non-zero polynomial <span class="math"></span><script type="math/tex">f(x)\in \mathbb{R}[x]</script> of degree <span class="math"></span><script type="math/tex">n > 0</script> can have at most <span class="math"></span><script type="math/tex">n</script> roots.
+</div></div>
+<a href="#6cb5d66b-208f-48f0-b798-3020722a5d35" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=6cb5d66b-208f-48f0-b798-3020722a5d35 class = "collapse Proof envbuttons">    
+We will prove this by induction starting with <span class="math"></span><script type="math/tex">n = 1</script>. Here
+<span class="math"></span><script type="math/tex">f(x) = a x + b</script> for <span class="math"></span><script type="math/tex">a, b\in \mathbb{R}[x]</script> and
+<div class="math"></div><script type="math/tex; mode=display">
+f(\alpha) = 0\iff \alpha = - a^{-1} b.
+</script>
+Therefore <span class="math"></span><script type="math/tex">f(x)</script> has precisely one root. Suppose now that we have proved that
+polynomials of degree <span class="math"></span><script type="math/tex">n</script> has at most <span class="math"></span><script type="math/tex">n</script> roots. Assume that 
+<span class="math"></span><script type="math/tex">f(x)</script> is a polynomial of degree <span class="math"></span><script type="math/tex">n + 1</script>. If <span class="math"></span><script type="math/tex">f(x)</script> has no roots,
+we are done with the proof. Suppose that <span class="math"></span><script type="math/tex">f(\alpha) = 0</script> i.e.,
+<span class="math"></span><script type="math/tex">\alpha</script> is a root in <span class="math"></span><script type="math/tex">f</script>. Then
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = q(x) (x-\alpha)
+</script>
+by Proposition <a href=#env2.19 class="labelref">2.19</a>. Here <span class="math"></span><script type="math/tex">q(x)</script> has to be a polynomial of degree <span class="math"></span><script type="math/tex">n</script> and
+therefore by induction, <span class="math"></span><script type="math/tex">q(x)</script> has at most <span class="math"></span><script type="math/tex">n</script> roots. However, if <span class="math"></span><script type="math/tex">f(\beta) = q(\beta) (\beta - \alpha) = 0</script>,
+then either <span class="math"></span><script type="math/tex">\beta = \alpha</script> or <span class="math"></span><script type="math/tex">q(\beta) = 0</script>. We have proved that 
+<span class="math"></span><script type="math/tex">f(x)</script> cannot have more than <span class="math"></span><script type="math/tex">n+1</script> roots.
+  </div><div style="margin-top:20px"></div><span id="env2.22"></span><div class="remark" data-count="2.22">     
+  Theorem <a href=#env2.21 class="labelref">2.21</a> has a few interesting consequences. First it implies that two
+  identical polynomials i.e., <span class="math"></span><script type="math/tex">f(x) = g(x)</script> for every <span class="math"></span><script type="math/tex">x\in \mathbb{R}</script> must have
+  the same coefficients.<div style="margin-top:20px"></div>Secondly if two polynomials <span class="math"></span><script type="math/tex">f(x)</script> and <span class="math"></span><script type="math/tex">g(x)</script> of degree <span class="math"></span><script type="math/tex">n</script> satisfy
+  <span class="math"></span><script type="math/tex">f(x_i) = g(x_i)</script> for distinct points <span class="math"></span><script type="math/tex">x_1, \dots, x_{n+1}</script>, then
+  <span class="math"></span><script type="math/tex">f(x) = g(x)</script>.
+</div><div style="margin-top:20px"></div><span id="env2.23"></span><a class="Exerciseno" data-count="2.23"></a><a href="#6a0d289b-c41a-4672-8fc7-0afafdec28cb" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6a0d289b-c41a-4672-8fc7-0afafdec28cb class = "collapse Exercise envbuttons">  
+In Remark <a href=#env2.22 class="labelref">2.22</a> it is stated that if two polynomials <span class="math"></span><script type="math/tex">f(x)</script> and <span class="math"></span><script type="math/tex">g(x)</script> of degree <span class="math"></span><script type="math/tex">n</script> satisfy
+  <span class="math"></span><script type="math/tex">f(x_i) = g(x_i)</script> for distinct points <span class="math"></span><script type="math/tex">x_1, \dots, x_{n+1}</script>, then
+  <span class="math"></span><script type="math/tex">f(x) = g(x)</script>. How does this follow from Theorem <a href=#env2.21 class="labelref">2.21</a>?
+</div><div style="margin-top:20px"></div>It might happen that a  polynomial of degree <span class="math"></span><script type="math/tex">n</script> has precisely <span class="math"></span><script type="math/tex">n</script> roots, but it could have less or
+even no roots: the polynomials
+<div class="math"></div><script type="math/tex; mode=display">
+x^2 + 1, x^4 + 1, x^6 + 1, \dots
+</script>
+have no roots, whereas for example
+<div class="math"></div><script type="math/tex; mode=display">
+x^2 - 2 x + 1
+</script>
+is a quadratic polynomial with only one root. However polynomials of degree <span class="math"></span><script type="math/tex">1, 3, 5, \dots</script> always have at 
+least one root.<div style="margin-top:20px"></div><div class="emphasize"><span id="env2.24"></span><div class="genericenv" data-count="2.24" data-name="THEOREM">     
+A polynomial of odd degree always has a root.
+</div></div><div style="margin-top:20px"></div>The proof of this result is beyond our scope now and will have to wait for tools from analysis.<div style="margin-top:20px"></div><span id="env2.25"></span><a class="Exerciseno" data-count="2.25"></a><a href="#6a42d0e0-9cc0-45be-96d3-b79b5b234d96" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6a42d0e0-9cc0-45be-96d3-b79b5b234d96 class = "collapse Exercise envbuttons">  
+Compute (without using a computer!) the roots of the quartic
+<div class="math"></div><script type="math/tex; mode=display">
+x^4 - 5x^2 + 6.
+</script>
+</div><div style="margin-top:20px"></div><span id="env2.26"></span><a class="Exerciseno" data-count="2.26"></a><a href="#0982fdf9-ded7-49e5-a7dd-4e77353ffc40" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=0982fdf9-ded7-49e5-a7dd-4e77353ffc40 class = "collapse Exercise envbuttons">  
+Give an example of a polynomial of degree <span class="math"></span><script type="math/tex">17</script> with precisely one root.
+</div><div style="margin-top:20px"></div><span id="env2.27"></span><a class="Exerciseno" data-count="2.27"></a><a href="#df3aa95b-d4d5-4fd5-9394-8824a782febf" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=df3aa95b-d4d5-4fd5-9394-8824a782febf class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">\alpha, \beta</script> are two roots of the quadratic polynomial
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = x^2 + b x + c.
+</script>
+How can <span class="math"></span><script type="math/tex">b</script> and <span class="math"></span><script type="math/tex">c</script> be computed in terms of <span class="math"></span><script type="math/tex">\alpha</script> and <span class="math"></span><script type="math/tex">\beta</script>?
+Show concretely how this can be applied to the polynomial
+<span class="math"></span><script type="math/tex">g(x) = x^2 - 5 x + 6</script>: if you know that <span class="math"></span><script type="math/tex">g(2) = 0</script> how can you easily
+find the other root?<div style="margin-top:20px"></div><div class="hint">
+Show that <span class="math"></span><script type="math/tex">f(x) = (x-\alpha)(x-\beta)</script> and use this.  
+</div>
+</div><div style="margin-top:20px"></div><span id="sec2.5"></span><h2 id="ec7bc6ca-41ff-4859-8dae-cc7ea2782037">2.5 Applications to polynomials</h2><div style="margin-top:20px"></div>A line in the plane is given by its equation <span class="math"></span><script type="math/tex">y = a x + b</script>, where <span class="math"></span><script type="math/tex">a</script> is the slope 
+and <span class="math"></span><script type="math/tex">b</script> is the intersection with the <span class="math"></span><script type="math/tex">y</script>-axis. Two lines in the plane
+are either parallel or intersect in a single point.<div style="margin-top:20px"></div><span id="env2.28"></span><a class="Exerciseno" data-count="2.28"></a><a href="#dbad4a59-7a86-497a-b37f-485a172d10cd" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=dbad4a59-7a86-497a-b37f-485a172d10cd class = "collapse Exercise envbuttons">  
+The two lines <span class="math"></span><script type="math/tex">y = x+1</script> and <span class="math"></span><script type="math/tex">y=-x+2</script> have a single point
+of intersection. Compute this point.<div style="margin-top:20px"></div>Give an example of two parallel lines and their equations.
+</div><div style="margin-top:20px"></div>Through two (distinct) points <span class="math"></span><script type="math/tex">(x_1, y_1)</script> and <span class="math"></span><script type="math/tex">(x_2, y_2)</script> with <span class="math"></span><script type="math/tex">x_1\neq x_2</script> passes a unique line <div style="margin-top:20px"></div>    <div class="centerimg"><img src="img/linje.svg" width="50%"></div>
+
+You can find the equation for this line by solving
+two equations with two unknowns <span class="math"></span><script type="math/tex">a</script> and <span class="math"></span><script type="math/tex">b</script>:
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+x_1 a + b &= y_1\\
+x_2 a + b &= y_2
+\end{aligned}</script>
+We might as well apply Gauss elimination to solve this system. First we
+subtract the second equation from the first. This gives
+<span class="math"></span><script type="math/tex">(x_1 - x_2) a = y_1 - y_2</script>. Therefore
+<div class="math"></div><script type="math/tex; mode=display">
+a = \frac{y_1 - y_2}{x_1 - x_2}.
+</script>
+Inserting this <span class="math"></span><script type="math/tex">a</script> in the first equation we get
+<div class="math"></div><script type="math/tex; mode=display">
+b = \frac{x_1 y_2 -x_2 y_1}{x_1 - x_2}.
+</script>
+We can also in a quite explicit way just write
+<span id="equ2.13"></span><div class="math"></div><script type="math/tex; mode=display">
+y = f(x) = y_1 \frac{x - x_2}{x_1 - x_2} + y_2 \frac{x - x_1}{x_2 - x_1}.
+\tag{2.13}</script>
+The function <span class="math"></span><script type="math/tex">f(x)</script> in 
+<a href=#equ2.13>(2.13)</a> is a polynomial of degree one with
+<span class="math"></span><script type="math/tex">f(x_1) = y_1</script> and <span class="math"></span><script type="math/tex">f(x_2) = y_2</script>.<div style="margin-top:20px"></div>In almost the same way we may find a unique quadratic polynomial
+<div class="math"></div><script type="math/tex; mode=display">
+y = a x^2 + b x + c
+</script>
+through three points <span class="math"></span><script type="math/tex">(x_1, y_1), (x_2, y_2)</script> and <span class="math"></span><script type="math/tex">(x_3, y_3)</script> with distinct <span class="math"></span><script type="math/tex">x</script>-values:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/parabel.svg" width="50%"></div><div style="margin-top:20px"></div>Here we end up with three linear equations in the unknowns <span class="math"></span><script type="math/tex">a, b</script> and <span class="math"></span><script type="math/tex">c</script>:
+<span id="equ2.14"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+x_1^2 a + x_1 b + c &= y_1\\
+x_2^2 a + x_2 b + c &= y_2\\
+x_3^2 a + x_3 b + c &= y_3
+\end{aligned}\tag{2.14}</script>
+It is not immediately obvious that this system of equations has a solution. But watch the following trick evolve.<div style="margin-top:20px"></div>We may explicitly construct the quadratic polynomial passing through the three points as
+<span id="equ2.15"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  y = f(x) = &y_1 \frac{(x - x_2)(x-x_3)}{(x_1 - x_2)(x_1-x_3)} + y_2 \frac{(x - x_1)(x - x_3)}{(x_2 - x_1)(x_2-x_3)}\\
+  &+ y_3 \frac{(x - x_1)(x - x_2)}{(x_3 - x_1)(x_3-x_2)}
+\end{aligned}\tag{2.15}</script>
+Take a moment and verify that <span class="math"></span><script type="math/tex">f(x_1) = y_1, f(x_2) = y_2</script> and <span class="math"></span><script type="math/tex">f(x_3)= y_3</script>. This also proves that
+the system of equations in <a href=#equ2.14>(2.14)</a> can be solved.<div style="margin-top:20px"></div><span id="env2.29"></span><div class="remark" data-count="2.29">     
+Notice in <a href=#equ2.15>(2.15)</a> that
+<div class="math"></div><script type="math/tex; mode=display">
+y = y_1 L_1(x) + y_2 L_2(x) + y_3 L_3(x),
+</script>
+where (for example)  <span class="math"></span><script type="math/tex">L_1</script> is a polynomial of degree two satisfying
+<div class="math"></div><script type="math/tex; mode=display">
+L_1(x_1)=1,\quad L_1(x_2)=0, \quad\text{and}\quad L_1(x_3)=0.
+</script> 
+What about <span class="math"></span><script type="math/tex">L_2</script> and <span class="math"></span><script type="math/tex">L_3</script> with respect to <span class="math"></span><script type="math/tex">x_1, x_2</script> and <span class="math"></span><script type="math/tex">x_3</script>?
+</div><div style="margin-top:20px"></div><span id="env2.30"></span><a class="Exerciseno" data-count="2.30"></a><a href="#1bae5329-3156-4a9e-ac75-3f6f5574eca4" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=1bae5329-3156-4a9e-ac75-3f6f5574eca4 class = "collapse Exercise envbuttons">  
+Compute the polynomial you get when you apply <a href=#equ2.15>(2.15)</a> to <span class="math"></span><script type="math/tex">x_1 = 1, x_2 = 2, x_3= 3</script> and
+<span class="math"></span><script type="math/tex">y_1 = 1, y_2 = 2, y_3 = 3</script>. How do you explain this result in terms of the
+points <span class="math"></span><script type="math/tex">(x_1, y_1), (x_2, y_2)</script> and <span class="math"></span><script type="math/tex">(x_3, y_3)</script> plotted in plane?
+</div><div style="margin-top:20px"></div>The natural generalization is that there exists a unique polynomial of degree <span class="math"></span><script type="math/tex">\leq n</script> passing through <span class="math"></span><script type="math/tex">n+1</script> points
+<span class="math"></span><script type="math/tex">(x_1, y_1), \dots, (x_{n+1}, y_{n+1})</script> with distinct <span class="math"></span><script type="math/tex">x</script>-values.<div style="margin-top:20px"></div>The rather miraculous trick above in <a href=#equ2.15>(2.15)</a> is called <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial" target="_blank">Lagrange interpolation</a> and can be generalized to polynomials of arbitrary degree.
+Below is an example of five points defining a unique polynomial of degree four.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/quartic.svg" width="35%"></div><div style="margin-top:20px"></div><span id="sec2.5.1"></span><h3>2.5.1 The magic of Lagrange polynomials</h3><div style="margin-top:20px"></div><span id="env2.31"></span><div class="example" data-count="2.31">     
+  Let us explain with a simple numerical example what happens in <a href=#equ2.15>(2.15)</a>.  Suppose we wish to find a polynomial <span class="math"></span><script type="math/tex">f(x) = a_0 + a_1 x + a_2 x^2</script> through the
+  points
+  <div class="math"></div><script type="math/tex; mode=display">
+  (1, 2), \qquad (2, 3)\qquad \text{and} \qquad (3, 5).
+  </script>
+  More precisely we wish to find numbers <span class="math"></span><script type="math/tex">a_0, a_1</script> and <span class="math"></span><script type="math/tex">a_2</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    f(1) &= a_0 + a_1 + a_2 = 2\\
+    f(2) &= a_0 + 2 a_1 + 4 a_2 = 3\\
+    f(3) &= a_0 + 3 a_1 + 9 a_2 = 5.
+  \end{aligned}</script><div style="margin-top:20px"></div>This is a system of three linear equations which in this case has a unique solution in
+  <span class="math"></span><script type="math/tex">a_0, a_1</script> and <span class="math"></span><script type="math/tex">a_2</script>.<div style="margin-top:20px"></div>We may, however, attack this problem in another way. Suppose that <span class="math"></span><script type="math/tex">L_1(x), L_2(x)</script> and
+  <span class="math"></span><script type="math/tex">L_3(x)</script> are polynomials of degree at most two, such that<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    L_1(1) = 1\qquad L_1(2) = 0 \qquad L_1(3) = 0\\
+    L_1(2) = 0\qquad L_2(2) = 1 \qquad L_2(3) = 0\\
+    L_3(1) = 0\qquad L_3(2) = 0 \qquad L_3(3) = 1
+  \end{aligned}</script><div style="margin-top:20px"></div>Then
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x) = 2 L_1(x) + 3 L_2(x) + 5 L_3(x)
+  </script>
+  really is the polynomial we wish to find.
+  The insight is that these <span class="math"></span><script type="math/tex">L_1(x), L_2(x)</script> and <span class="math"></span><script type="math/tex">L_3(x)</script> can be explicitly written down as<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    L_1(x) &= \frac{(x-2)(x-3)}{(1-2)(1-3)}\\
+    L_2(x) &= \frac{(x-1)(x-3)}{(2-1)(2-3)}\\
+    L_3(x) &= \frac{(x-1)(x-2)}{(3-1)(3-2)}.
+  \end{aligned}</script><div style="margin-top:20px"></div></div>  <div style="margin-top:20px"></div>Example <a href=#env2.31 class="labelref">2.31</a> can be generalized: suppose we have <span class="math"></span><script type="math/tex">n</script> numbers<div style="margin-top:20px"></div><span id="equ2.16"></span><div class="math"></div><script type="math/tex; mode=display">
+x_1, x_2, \dots, x_n.
+\tag{2.16}</script>
+Then these numbers give <span class="math"></span><script type="math/tex">n</script> polynomials each of degree <span class="math"></span><script type="math/tex">n-1</script>:
+<div class="math"></div><script type="math/tex; mode=display">
+L_i(x) = \frac{1}{C_i} (x-x_1) \cdots (x-x_{i-1})(x-x_{i+1}) \cdots (x - x_n),
+</script>
+where
+<span class="math"></span><script type="math/tex">C_i = (x_i-x_1) \cdots (x_i-x_{i-1})(x_i-x_{i+1}) \cdots (x_i - x_n)</script> for
+<span class="math"></span><script type="math/tex">i = 1, \dots, n</script>.<div style="margin-top:20px"></div>The polynomial <span class="math"></span><script type="math/tex">L_i(x)</script> is called the <span class="math"></span><script type="math/tex">i</script>-th
+<a href="https://en.wikipedia.org/wiki/Lagrange_polynomial" target="_blank">Lagrange basis polynomial</a>
+associated to the <span class="math"></span><script type="math/tex">n</script> numbers <span class="math"></span><script type="math/tex">x_1, \dots, x_n</script>.
+It satisfies
+<span class="math"></span><script type="math/tex">L_i(x_1) = \cdots = L_i(x_{i-1}) = 0</script>, <span class="math"></span><script type="math/tex">L_i(x_i) = 1</script> and
+<span class="math"></span><script type="math/tex">L_i(x_{i+1}) = \cdots = L_i(x_n) = 0</script> i.e., <span class="math"></span><script type="math/tex">L_i(x)</script> is equal to zero
+evaluated at all of the numbers <span class="math"></span><script type="math/tex">x_1, \dots, x_n</script> except at <span class="math"></span><script type="math/tex">x_i</script>
+where it evaluates to <span class="math"></span><script type="math/tex">1</script>.<div style="margin-top:20px"></div>The Lagrange basis polynomials allow us to construct a polynomial <span class="math"></span><script type="math/tex">f</script> of degree <span class="math"></span><script type="math/tex">\leq n</script> through
+<span class="math"></span><script type="math/tex">n+1</script> points <span class="math"></span><script type="math/tex">(x_1, y_1), \dots, (x_{n+1}, y_{n+1})</script> i.e., a polynomial <span class="math"></span><script type="math/tex">f</script> such that
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  f(x_1) &= y_1\\
+         &\vdots\\
+  f(x_{n+1}) &= y_{n+1}
+\end{aligned}</script>
+simply as
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = y_1 L_1(x) + \cdots + y_{n+1} L_{n+1}(x).
+</script>
+However, <span class="math"></span><script type="math/tex">f(x)</script> does not have to have degree <span class="math"></span><script type="math/tex">n</script>. For example, it could come out as a line through
+three points <span class="math"></span><script type="math/tex">(x_1, y_1), (x_2, y_2)</script> and <span class="math"></span><script type="math/tex">(x_3, y_3)</script> (see Exercise <a href=#env2.30 class="labelref">2.30</a>).<div style="margin-top:20px"></div><span id="env2.32"></span><a class="Exerciseno" data-count="2.32"></a><a href="#a42b59cc-de4a-4ed5-a17f-7f0631216df7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=a42b59cc-de4a-4ed5-a17f-7f0631216df7 class = "collapse Exercise envbuttons">  
+Compute <span class="math"></span><script type="math/tex">a_0, a_1, a_2, a_3\in \mathbb{R}</script> so that
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+f(-2) &= -1\\
+f(-1) &= 1\\
+f(1) &= 1\\
+f(2) &= 1,
+\end{aligned}</script>
+where
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3.
+</script>
+You can do this either by Lagrange interpolation or by solving linear equations. Which one
+do you prefer?
+</div><div style="margin-top:20px"></div><span id="env2.33"></span><div class="example" data-count="2.33">     <div style="margin-top:20px"></div>Can you predict the next number in the sequence starting with
+<span id="equ2.17"></span><div class="math"></div><script type="math/tex; mode=display">
+15,\quad 34,\quad 65,\quad 111,\quad 175,\quad 260,\quad 369?
+\tag{2.17}</script><div style="margin-top:20px"></div>This question <span class="bubblelabel footnotecolor">was posed</span><span class="bubblecontent"><span class="bubbleinnercontent">Thanks to Tobias Bendsen Poulsen for notifying me about this.</span></span> by the tutors in a class session for new computer science students. Let us put the sequence <a href=#equ2.17>(2.17)</a> inside a table like<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\def\arraystretch{1.5}
+\begin{array}{c|ccccccc}
+n & 1 & 2 & 3 & 4 & 5 & 6 & 7\\ \hline
+f(n) & 15 & 34 & 65 & 111 & 175 & 260 & 369
+\end{array},
+</script><div style="margin-top:20px"></div>where <span class="math"></span><script type="math/tex">f:\mathbb{N}\rightarrow \mathbb{N}</script> is the secret function responsible for the sequence. We would like to compute <span class="math"></span><script type="math/tex">f(8)</script>. Assuming that the <span class="math"></span><script type="math/tex">f(n)</script> is a polynomial function, we may simply compute the unique polynomial of  degree <span class="math"></span><script type="math/tex">\leq 6</script> through the <span class="math"></span><script type="math/tex">7</script> points
+<div class="math"></div><script type="math/tex; mode=display">
+(1, 15),\quad (2, 34),\quad (3, 65),\quad (4, 111),\quad (5, 175),\quad (6, 260),\quad (7, 369).
+</script><div style="margin-top:20px"></div>We know how to do this either by solving linear equations or computing with Lagrange polynomials. It turns out that Sage has built in functions helping us here.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+R = PolynomialRing(QQ, 'x')
+f = R.lagrange_polynomial([(1, 15), (2, 34), (3, 65), (4, 111), (5, 175), (6, 260), (7, 369)])
+f(8)
+</script></div><div style="margin-top:20px"></div>Press the button to see what next number is in the sequence (computed using the secret polynomial). See also the
+description of <a href="https://en.wikipedia.org/wiki/Neville%27s_algorithm" target="_blank">Neville's algorithm</a> in Wikipedia for an easier approach to
+computing <span class="math"></span><script type="math/tex">f(8)</script>.<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec2.6"></span><h2 id="86197728-3be4-4717-8473-79f5da549846">2.6 Shamir secret sharing</h2><div style="margin-top:20px"></div>Lagrange interpolation is used in cryptography in <a href="https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing" target="_blank">Shamir's secret sharing</a>. Secret sharing is important in many practical situations. Here is an example quoted from Wikipedia:
+  <blockquote>
+    A company needs to secure their vault's passcode. They could
+    encrypt it, but what if the beholder of the secret key is
+    unavailable or turns rogue?<div style="margin-top:20px"></div>One needs to distribute the secret. This is where SSS comes in. It
+    can be used to encrypt the vault's passcode and generate a certain
+    number of shares, where a certain number of shares can be
+    allocated to each executive within the company. Now, only if they
+    pool their shares can they unlock the vault. The threshold can be
+    appropriately set for the number of executives, so the vault is
+    always able to be accessed by the authorized individuals. Should a
+    share or two fall into the wrong hands, they couldn't open the
+    passcode unless the other executives cooperated.
+  </blockquote><div style="margin-top:20px"></div>The mathematics that takes care of this is surprisingly simple. Suppose the secret is the
+  number <span class="math"></span><script type="math/tex">a_0</script>. Then we construct the polynomial
+  <span id="equ2.18"></span><div class="math"></div><script type="math/tex; mode=display">
+  f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_m x^m
+  \tag{2.18}</script>
+  for some other numbers <span class="math"></span><script type="math/tex">a_1, \dots, a_m</script>.  We know that this
+  polynomial is uniquely given by its values in <span class="math"></span><script type="math/tex">m+1</script> distinct numbers
+  (see Remark <a href=#env2.22 class="labelref">2.22</a>). So if there are <span class="math"></span><script type="math/tex">n</script> trusted people
+  we could distribute the shares
+  <div class="math"></div><script type="math/tex; mode=display">
+  (1, f(1)), (2, f(2)), \dots, (n, f(n))
+  </script>
+  to them. Here we suppose that <span class="math"></span><script type="math/tex">n > m</script>. In this setting, if there are less than <span class="math"></span><script type="math/tex">m+1</script> of
+  the people present they cannot open the vault. If <span class="math"></span><script type="math/tex">m+1</script> or more people are present they
+  can reconstruct the polynomial in <a href=#equ2.18>(2.18)</a>, find the secret code <span class="math"></span><script type="math/tex">a_0</script> and open
+  the vault.<div style="margin-top:20px"></div><span id="env2.34"></span><a class="Exerciseno" data-count="2.34"></a><a href="#43fa61eb-1933-46d0-8d86-4d2bfebb4e37" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=43fa61eb-1933-46d0-8d86-4d2bfebb4e37 class = "collapse Exercise envbuttons">  
+  You are in a study group consisting of four people. The
+  professor has decided that you submit your project using a
+  secret code that is distributed to the group members with Shamir
+  secret sharing. At least three group members need to agree on
+  submission.<div style="margin-top:20px"></div>On the day of the deadline three group members with shares
+  <div class="math"></div><script type="math/tex; mode=display">
+  (1, 7035),\quad (2, 19748)\quad\text{and}\quad (3, 39373)
+  </script>
+  are present. What is the secret code they may use to submit their
+  project?
+  </div><div style="margin-top:20px"></div><span id="sec2.7"></span><h2 id="dd7e78d9-eb78-4814-94e1-b24f7788f256">2.7 Fitting data</h2><div style="margin-top:20px"></div>Given a data set
+<div class="math"></div><script type="math/tex; mode=display">
+\mathcal{D} = \{ (x_1,y_1), (x_2,y_2), \dots, (x_n, y_n) \}
+</script>
+one
+would often like to find a model (i.e. some function) that describes
+the data well. With Lagrange interpolation we can find a polynomial
+<span class="math"></span><script type="math/tex">f</script> fitting the sample data <span class="math"></span><script type="math/tex">\mathcal{D}</script> perfectly, i.e. satisfying
+<span class="math"></span><script type="math/tex">f(x_i) = y_i</script> for <span class="math"></span><script type="math/tex">i = 1, 2, \dots n</script>. Is <span class="math"></span><script type="math/tex"> f </script> an optimal model? For
+the given data set it seems so, but we have been a bit imprecise in
+formulating the goal of a model.<div style="margin-top:20px"></div>Actually, we are not very interested in modeling the data at hand
+with extreme precision. What we want is a model that fits new data
+well. Let us look at a concrete example.<div style="margin-top:20px"></div>Consider the data set
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  \mathcal{D} = \{ {}& (0, 0.06), (0.5, 0.33), (1, 0.56), (1.5, 1.35), (2, 1.48),  (2.5, 1.15), \\
+  &(3, 1.45), (3.5, 1.12), (4, 0.68), (4.5, 0.22), (5, -0.10) \} 
+  \end{aligned}</script><div style="margin-top:20px"></div>The data points <span class="math"></span><script type="math/tex"> (x_i,y_i) </script>, <span class="math"></span><script type="math/tex"> i=1,2,\dots,11 </script>, were generated as
+  <span class="math"></span><script type="math/tex"> (x_i, p(x_i) + \epsilon_i) </script> where <span class="math"></span><script type="math/tex"> p(x) = -0.2 x^2 + x</script> is a
+  quadratic polynomial and <span class="math"></span><script type="math/tex"> \epsilon_i \in [-0.4,0.4]</script> is a random
+  number to simulate noise. The polynomial <span class="math"></span><script type="math/tex"> p </script> is the best possible
+  model for unknown data as there will always by noise that can not be
+  modeled. In real life <span class="math"></span><script type="math/tex"> p </script> is what needs to be modeled based on
+  the available data.<div style="margin-top:20px"></div>In the figure below is a fit with a degree <span class="math"></span><script type="math/tex">2</script> and degree <span class="math"></span><script type="math/tex">10</script>
+  polynomial respectively. As we see, the degree <span class="math"></span><script type="math/tex">2</script> polynomial is
+  pretty close to the target <span class="math"></span><script type="math/tex">p</script> compared to the degree 10 polynomial
+  that nevertheless fits the data <span class="math"></span><script type="math/tex">\mathcal{D}</script> perfectly. Generally a
+  simple model is preferred over a complex, as the latter will have a
+  tendency to fit noise. This phenomenon is called
+  <a href="https://en.wikipedia.org/wiki/Overfitting" target="_blank">overfitting</a> and is
+  an extremely important topic.<div style="margin-top:20px"></div>An interactive version of this illustration with a little more bells and whistles can be found <a href="https://www.geogebra.org/m/hxwqrk4h" target="_blank">here</a>.<div style="margin-top:20px"></div><span id="env2.35"></span><div class="figure" data-count="2.35">     
+  
+  <div class="centerimg"><img src="img/overfitting.png" width="50%"></div>
+    <figcaption>Fitting a degree <span class="math"></span><script type="math/tex">2</script> polynomial (in red) and a degree <span class="math"></span><script type="math/tex">10</script> polynomial (in blue) to the sample data <span class="math"></span><script type="math/tex"> \mathcal{D} </script>. The target function <span class="math"></span><script type="math/tex">p</script> is the dashed curve. We see that the simple quadratic fit is much closer to the target function and hence performes better on new data.</figcaption>
+      </div><div style="margin-top:20px"></div>In later chapters we will see how the degree <span class="math"></span><script type="math/tex">2</script> polynomial fit was
+  obtained. This is a nice example of a convex
+  optimization problem.
+  </div></body>

@@ -1,0 +1,763 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#d18525bd-21a5-41ca-a6c9-435f5e80ebc8"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#84293252-091a-4bd6-8420-5c926c75655f">1.1 Black box warnings</a></li><li><a href="intro.html#9e24f323-6129-4c4b-bdb5-3d37178d2cf3">1.2 Computer algebra</a></li><li><a href="intro.html#e6e4791e-da74-40a4-9179-699e396e0c10">1.3 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#989eb4f9-0c24-4968-8474-ff88f78211da">1.4 Sets</a></li><li><a href="intro.html#d7bfe49c-e3b1-45dc-89dc-221b4e4070e6">1.5 Ordering numbers</a></li><li><a href="intro.html#6046b5a7-f2ab-46ad-b30d-03726d1c97c2">1.6 Propositional logic</a></li><li><a href="intro.html#2c4e2db0-16c0-4c28-9f9c-b0c0ba39e808">1.7 What is a mathematical proof?</a></li><li><a href="intro.html#2e752521-508c-450e-afac-58ae1714824b">1.8 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#d2d16c27-e943-40e2-9c73-9178d50a30a5"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#e480027e-be85-432f-a0e2-3d01cfac5aa3">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#6e7cd607-ddbc-4e02-97ff-af1efcf62a7d">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#e7412929-670c-43d7-a06f-5151ac44ae99">2.3 Gauss elimination</a></li><li><a href="lineqs.html#02783bc1-c735-415a-a7eb-d5d0cdb5f379">2.4 Polynomials</a></li><li><a href="lineqs.html#ec7bc6ca-41ff-4859-8dae-cc7ea2782037">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#86197728-3be4-4717-8473-79f5da549846">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#dd7e78d9-eb78-4814-94e1-b24f7788f256">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#7f638cce-1eaf-4dd4-9308-d1a1066d0db4"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#24e8d058-ce8a-40ce-8dc7-97b48515813e">3.1 Matrices</a></li><li><a href="matrices.html#f53de099-3178-429b-9455-771cceb404cc">3.2 Linear maps</a></li><li><a href="matrices.html#f49476d9-000a-4455-a5be-e3001e060398">3.3 Matrix multiplication</a></li><li><a href="matrices.html#f640ffa9-14b3-4caf-9f29-dfc8b20dada7">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#7bbc7818-e0fd-4c21-83ff-65ff7a06f761">3.5 The inverse matrix</a></li><li><a href="matrices.html#65b019c8-8201-4a70-8a1d-b7bd64f71447">3.6 The transposed matrix</a></li><li><a href="matrices.html#848011e8-2f0e-4005-b01e-82cf1210f261">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#4aeb17ed-d009-41c6-b493-d6ea039d4ea3"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#5f37b886-c4d7-4c34-bcbf-c4ff2bc3b0cf">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#01a17a09-0906-4b03-b585-c154bd0721b1">4.2 General definition</a></li><li><a href="whatisopt.html#faa99c2f-a26f-45fc-8937-0ac8555c7d3f">4.3 Convex optimization</a></li><li><a href="whatisopt.html#42420195-ad18-4a5c-b030-23966f5641b8">4.4 Linear optimization</a></li><li><a href="whatisopt.html#ac3b2fea-3c25-436a-88a4-7cce36c51de4">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#04dfed3c-b03a-40d7-a5d9-160a2a154b43">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#83a0ca96-be78-4426-a318-9b524a33b846"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#ac598a35-5cfe-4661-8658-e8b248b31487">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#a4be2e2b-d56d-4667-8a18-4a9ce187347c">5.2 Higher dimensions</a></li><li><a href="euclidean.html#d74a8fd0-47f5-4471-9837-7e1447237ff8">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#bf5f6c66-b579-47ad-8e27-2a5d7fb6523e">5.4 Sequences and limits in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script></a></li><li><a href="euclidean.html#2c47e595-1786-4af1-bbeb-5617dc14b29b">5.5 Continuous functions</a></li></ul><li><a class="kap" href="convexfunctions.html#6fa64746-818b-4d61-9017-79b6da4c3707"><b>6</b> Convex functions</a></li><a href="#kap6" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap6" class="collapse"><li><a href="convexfunctions.html#ed7238ae-913e-42bb-8b31-753a717a1fc6">6.1 Strictly convex functions</a></li><li><a href="convexfunctions.html#93b466ab-55da-491d-b794-880a1d273a22">6.2 Why are convex functions interesting?</a></li><li><a href="convexfunctions.html#557dc72a-982a-428f-900c-9722ced4b857">6.3 Differentiable functions</a></li><li><a href="convexfunctions.html#5f39bf22-b3c6-4f84-8a50-2372a3876d22">6.4 Taylor polynomials</a></li><li><a href="convexfunctions.html#7d1283a3-bc50-4986-99a6-c35547866fb8">6.5 Differentiable convex functions</a></li></ul><li><a class="kap" href="diffseveral.html#16117d38-d573-4415-afec-943ca1f5ba26"><b>7</b> Several variables</a></li><a href="#kap7" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap7" class="collapse"><li><a href="diffseveral.html#6e0c75e7-044e-48d5-b1e2-82914bc5da4c">7.1 Introduction</a></li><li><a href="diffseveral.html#e855b99c-322b-4f20-8767-5b7108a1c569">7.2 Vector functions</a></li><li><a href="diffseveral.html#37a281fd-c431-49ba-8f73-95d8f37e70cf">7.3 Differentiability</a></li><li><a href="diffseveral.html#77441575-aa92-46c3-97f8-d186ed1ffc20">7.4 Newton-Raphson in several variables!</a></li><li><a href="diffseveral.html#e49eab96-ef54-4850-af9a-88668dff7da8">7.5 Local extrema in several variables</a></li><li><a href="diffseveral.html#d1d96b66-b334-46dc-883b-cadb9221c7d2">7.6 The chain rule</a></li><li><a href="diffseveral.html#90935317-caa2-4ed2-abe0-f51fe48a79ce">7.7 Logistic regression</a></li><li><a href="diffseveral.html#d0fd8187-fe38-437a-b8b8-279854b0768e">7.8 3Blue1Brown</a></li><li><a href="diffseveral.html#d29e7407-1f20-49cf-a696-0cd1e7064b7c">7.9 Lagrange multipliers</a></li><li><a href="diffseveral.html#2413292c-d3e8-4f94-95d6-bc1b720f8f04">7.10 The interior and the boundary of a subset</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div>
+<h1 id="6fa64746-818b-4d61-9017-79b6da4c3707">6<span style="float:right;">Convex functions</span></h1><div style="margin-top:20px"></div>In this chapter we will dive deeper into convex functions. 
+The main focus will be convex functions defined on intervals (convex subsets) of the
+real numbers i.e. convex functions in just one variable. Along the way, differentiability is
+introduced along with several classical results. We will sketch surrounding ideas, but skip 
+proofs of some of the main results.
+
+In this chapter <span class="math"></span><script type="math/tex">\log(x)</script> denotes the logarithm with base <span class="math"></span><script type="math/tex">e</script>.<div style="margin-top:20px"></div><a href="#44066774-4fa9-44af-ac76-704fa505127e" class ="btn btn-default" data-toggle="collapse">Mentimeter</a><div id=44066774-4fa9-44af-ac76-704fa505127e class="collapse">
+  <a href="https://www.mentimeter.com/s/3581a5faedaac8956e9f4d5a2aa58afa/b146e8b6c037" target="_blank">Refresher</a>
+</div><div style="margin-top:20px"></div><span id="sec6.1"></span><h2 id="ed7238ae-913e-42bb-8b31-753a717a1fc6">6.1 Strictly convex functions</h2><div style="margin-top:20px"></div>Below we strengthen Definition <a href="whatisopt.html#env4.23">4.23</a> of a convex function.<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.1"></span><div class="genericenv" data-count="6.1" data-name="DEFINITION">     
+  Let <span class="math"></span><script type="math/tex">C \subseteq \mathbb{R}^d</script> be a convex subset.
+    A <em>strictly convex function</em> is a convex function <span class="math"></span><script type="math/tex">f: C\rightarrow \mathbb{R}</script>, such that
+    <div class="math"></div><script type="math/tex; mode=display">
+    f((1 - t) x + t y) < (1-t) f(x) + t f(y)
+    </script>
+    for every number <span class="math"></span><script type="math/tex">t</script> with <span class="math"></span><script type="math/tex">0< t < 1</script> and <span class="math"></span><script type="math/tex">x\neq y</script>. 
+  </div></div><div style="margin-top:20px"></div><div class="frameit">  
+  <span id="env6.2"></span><div class="figure" data-count="6.2">     
+    <div class="centerimg"><img src="img/strconvex.png" ></div><div style="margin-top:20px"></div>Strictly convex function. The line segment between <span class="math"></span><script type="math/tex">(x, f(x))</script> and <span class="math"></span><script type="math/tex">(y, f(y))</script> lies <em>strictly</em> (<span class="math"></span><script type="math/tex"><</script>) above
+the graph of  <span class="math"></span><script type="math/tex">f</script>.
+  </div>
+  </div><div style="margin-top:20px"></div><span id="env6.3"></span><div class="example" data-count="6.3">     
+    Consider the line (function) <span class="math"></span><script type="math/tex">f:\mathbb{R}\rightarrow \mathbb{R}</script> given by
+    <div class="math"></div><script type="math/tex; mode=display">
+    f(x) = a x + b
+    </script>
+    for <span class="math"></span><script type="math/tex">a, b\in \mathbb{R}</script>.
+    This function is convex, since we can formally write for every <span class="math"></span><script type="math/tex">t\in \mathbb{R}</script>:
+    <span id="equ6.1"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+      f((1-t) x + t y) &= a ((1-t) x + t y) + b \\
+                       &= a ((1-t) x) + (1-t)b + a (t y) + t b\\
+                       &= (1-t)(a x + b) + t(a y + b)\\
+                       &= (1-t) f(x) + t f(y).
+    \end{aligned}\tag{6.1}</script>
+    However, the computation in <a href=#equ6.1>(6.1)</a> also shows why
+    there is no chance that <span class="math"></span><script type="math/tex">f(x)</script> is strictly convex. Intuitively,
+    the graph of convex functions need to bend and curve a bit to
+    be strictly convex. No lines should occur in their graphs. 
+  </div><div style="margin-top:20px"></div><span id="env6.4"></span><a class="Exerciseno" data-count="6.4"></a><a href="#bbdad93b-8d8b-4dbd-b53a-f4b2fec8a557" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=bbdad93b-8d8b-4dbd-b53a-f4b2fec8a557 class = "collapse Exercise envbuttons">  
+  Let <span class="math"></span><script type="math/tex">f</script> be a convex function. Show <span class="math"></span><script type="math/tex">f</script> is strictly convex if and only if
+  <div class="math"></div><script type="math/tex; mode=display">
+  f((1-t) x + t y) = (1-t) f(x) + t f(y)
+  </script>
+  for <span class="math"></span><script type="math/tex">0 < t < 1</script> implies that <span class="math"></span><script type="math/tex">x=y</script>.
+  </div><div style="margin-top:20px"></div><span id="env6.5"></span><a class="Exerciseno" data-count="6.5"></a><a href="#c42b3c2c-163b-4963-9863-d25abbb38774" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c42b3c2c-163b-4963-9863-d25abbb38774 class = "collapse Exercise envbuttons">  
+  Give an example of a non-constant convex function <span class="math"></span><script type="math/tex">f:\mathbb{R}\rightarrow \mathbb{R}</script>, which is not strictly convex. Show in
+  details that <span class="math"></span><script type="math/tex">f(x) = x^2</script> is a strictly convex function.<div style="margin-top:20px"></div><a href="#849c31f2-cc85-42a4-af4f-ff3c2f8dcf2a" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=849c31f2-cc85-42a4-af4f-ff3c2f8dcf2a class="collapse">
+    Look back to the relevant part of Exercise <a href="whatisopt.html#env4.25">4.25</a> for
+    dealing with <span class="math"></span><script type="math/tex">f(x) = x^2</script>.
+    </div>
+  </div><div style="margin-top:20px"></div>      <div style="margin-top:20px"></div>
+  <div style="margin-top:20px"></div>
+
+  
+  
+
+
+  
+
+<div style="margin-top:20px"></div><span id="sec6.2"></span><h2 id="93b466ab-55da-491d-b794-880a1d273a22">6.2 Why are convex functions interesting?</h2><div style="margin-top:20px"></div>We begin this section by giving the following result without proof.<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.6"></span><div class="genericenv" data-count="6.6" data-name="THEOREM">     
+    A convex function defined on an open convex subset is continuous.
+  </div></div><div style="margin-top:20px"></div><span id="env6.7"></span><a class="Exerciseno" data-count="6.7"></a><a href="#9fcb6f7e-f35b-406e-9643-03b98e93203a" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=9fcb6f7e-f35b-406e-9643-03b98e93203a class = "collapse Exercise envbuttons">  
+  Give an example showing that Theorem <a href=#env6.6 class="labelref">6.6</a> is not true if the convex function
+  is defined on a closed convex subset.<div style="margin-top:20px"></div><a href="#b38e305f-468f-4315-85d2-58571899bae4" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=b38e305f-468f-4315-85d2-58571899bae4 class="collapse">
+    Try to come up with an example like <span class="math"></span><script type="math/tex">f: [0, 1] \rightarrow \mathbb{R}</script>. Look at
+    the end point <span class="math"></span><script type="math/tex">0</script>.<div style="margin-top:20px"></div><a href="#f18b805a-dd7c-4b00-b7b4-639923e8c209" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=f18b805a-dd7c-4b00-b7b4-639923e8c209 class="collapse">
+      Well, try out
+      <div class="math"></div><script type="math/tex; mode=display">
+      f(x) =
+      \begin{cases}
+        1&\text{if } x = 0\\
+        x&\text{if } x > 0
+      \end{cases}
+      </script>
+    </div>
+    </div>
+  </div><div style="margin-top:20px"></div>Let us now define precisely what is meant by a local vs a global minimum
+for a function.<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.8"></span><div class="genericenv" data-count="6.8" data-name="DEFINITION">     
+Let <span class="math"></span><script type="math/tex">f: S\rightarrow \mathbb{R}</script> be a function, where <span class="math"></span><script type="math/tex">S\subseteq\mathbb{R}^d</script> is an
+arbitrary subset (not necessarily convex, open or closed). Then
+<span class="math"></span><script type="math/tex">x_0\in S</script> is called a <em>local minimum</em> for <span class="math"></span><script type="math/tex">f</script> if
+<div class="math"></div><script type="math/tex; mode=display">
+f(x_0)\leq f(x)
+</script>
+for every <span class="math"></span><script type="math/tex">x\in S</script>, which is sufficiently close to <span class="math"></span><script type="math/tex">x_0</script>. Being
+sufficiently close to means that <span class="math"></span><script type="math/tex">x\in S</script> satisfies
+<div class="math"></div><script type="math/tex; mode=display">
+| x - x_0 | < \epsilon
+</script>
+for some fixed <span class="math"></span><script type="math/tex">\epsilon > 0</script>.<div style="margin-top:20px"></div>In a much stronger notion, <span class="math"></span><script type="math/tex">x_0\in S</script> is called a <em>global minimum</em> if
+<div class="math"></div><script type="math/tex; mode=display">
+f(x_0) \leq f(x)
+</script>
+for every <span class="math"></span><script type="math/tex">x\in S</script> (not just locally).
+</div></div><div style="margin-top:20px"></div><div class="frameit">
+<span id="env6.9"></span><div class="figure" data-count="6.9">     
+<div class="centerimg"><img src="img/localglobalmin.png" ></div><div style="margin-top:20px"></div>Graph of function defined on an interval. This function has a local minimum, which is not
+a global minimum.
+</div>
+</div><div style="margin-top:20px"></div><span id="env6.10"></span><a class="Exerciseno" data-count="6.10"></a><a href="#36706bdc-c5a5-41aa-a65f-73740e6b7cad" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=36706bdc-c5a5-41aa-a65f-73740e6b7cad class = "collapse Exercise envbuttons">  
+Give an example of a local minimum that is not a global minimum for a precisely specified function.
+Also give
+an example of a global minimum, which is not uniquely defined (again for a precisely specified function).
+Uniquely defined means that there is precisely one <span class="math"></span><script type="math/tex">x_0</script>, such that <span class="math"></span><script type="math/tex">f(x_0)</script> is minimal.
+</div><div style="margin-top:20px"></div>We might as well have talked about maximum instead of minimum above.<div style="margin-top:20px"></div><span id="env6.11"></span><a class="Exerciseno" data-count="6.11"></a><a href="#658a865b-fdc2-4692-a3b2-6f5bf2b7a6f2" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=658a865b-fdc2-4692-a3b2-6f5bf2b7a6f2 class = "collapse Exercise envbuttons">  
+Reformulate Definition <a href=#env6.8 class="labelref">6.8</a> in order to define
+a local and a global maximum.
+</div><div style="margin-top:20px"></div>A <em>local extremum</em> is a point <span class="math"></span><script type="math/tex">x_0\in S</script>, which is either a
+local minimum or a local maximum.<div style="margin-top:20px"></div>Convex functions <span class="math"></span><script type="math/tex">f: C\rightarrow \mathbb{R}</script> are interesting, because of the local
+nature of the minimization problem<div style="margin-top:20px"></div><span id="equ6.2"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x)\\
+    &\text{with constraint}\\
+    &&x\in C
+\end{aligned}\tag{6.2}</script><div style="margin-top:20px"></div>If you run into a local minimum in <a href=#equ6.2>(6.2)</a>,
+then you are sure that it also is a global minimum! This is the
+content of the result below. <div style="margin-top:20px"></div><div class="emphasize"><span id="env6.12"></span><div class="genericenv" data-count="6.12" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">f: C\rightarrow \mathbb{R}</script> be a convex function defined on a convex subset <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^d</script>. If <span class="math"></span><script type="math/tex">x_0\in C</script> is a
+  local minimum, then <span class="math"></span><script type="math/tex">x_0</script> is a global minimum. If <span class="math"></span><script type="math/tex">f</script> is strictly
+  convex, then a global minimum for <span class="math"></span><script type="math/tex">f</script> is unique.
+</div></div>
+<a href="#6a15b450-65f6-4de0-8822-87c027447dfd" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=6a15b450-65f6-4de0-8822-87c027447dfd class = "collapse Proof envbuttons">    
+ By the definition of local minimum in Definition <a href=#env6.8 class="labelref">6.8</a>, there exists <span class="math"></span><script type="math/tex">\epsilon > 0</script>, such that <span class="math"></span><script type="math/tex">f(x_0)\leq
+  f(x)</script>, when <span class="math"></span><script type="math/tex">x \in C</script> and <span class="math"></span><script type="math/tex">\left\vert  x - x_0  \right\vert< \epsilon</script>. Suppose that
+  <span class="math"></span><script type="math/tex">x_0</script> is not a global minimum. Then there exists <span class="math"></span><script type="math/tex">x_1\in C</script> with
+  <span class="math"></span><script type="math/tex">f(x_1) < f(x_0)</script>. Consider the point
+  <div class="math"></div><script type="math/tex; mode=display">
+    x_t = (1 - t) x_0 + t x_1\in C,
+  </script>
+  where <span class="math"></span><script type="math/tex">0 < t < 1</script>. Then
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x_t) \leq (1-t) f(x_0) + t f(x_1) < (1-t) f(x_0) + t f(x_0) =
+    f(x_0).
+  </script>
+  Since <span class="math"></span><script type="math/tex">\left\vert  x_t - x_0  \right\vert = t \left\vert  x_1 - x_0  \right\vert</script>, we can choose <span class="math"></span><script type="math/tex">t >
+  0</script> sufficiently small such that <span class="math"></span><script type="math/tex">\left\vert  x_t - x_0  \right\vert < \epsilon</script>
+  implying <span class="math"></span><script type="math/tex">f(x_0)\leq f(x_t)</script>, since <span class="math"></span><script type="math/tex">x_0</script> is a local minimum. This
+  contradicts that <span class="math"></span><script type="math/tex">f(x_t) < f(x_0)</script> for every <span class="math"></span><script type="math/tex">0 < t < 1</script>.  Let <span class="math"></span><script type="math/tex">f</script>
+  be strictly convex and let <span class="math"></span><script type="math/tex">x_0</script> be a global minimum for <span class="math"></span><script type="math/tex">f</script>. If
+  <span class="math"></span><script type="math/tex">x_1\in C</script>, <span class="math"></span><script type="math/tex">x_1\neq x_0</script> and <span class="math"></span><script type="math/tex">f(x_1) = f(x_0)</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+    f((1-\lambda) x_0 + \lambda x_1) < (1-\lambda) f(x_0) + \lambda f(x_1)
+    = f(x_0)
+  </script>
+  for <span class="math"></span><script type="math/tex">0 < \lambda < 1</script>. This would contradict that global minimality
+  of <span class="math"></span><script type="math/tex">x_0</script>, since <span class="math"></span><script type="math/tex">x_0\neq (1-\lambda)x_0 + \lambda x_1\in C</script> for <span class="math"></span><script type="math/tex">0<
+  \lambda < 1</script>.
+  </div><div style="margin-top:20px"></div>The following little result turns out to be very useful and
+also very intuitive and drawable! It is a key component
+in characterizing convex differentiable
+functions <span class="math"></span><script type="math/tex">f(x)</script> in terms of <span class="math"></span><script type="math/tex">f''(x)</script>. We will not give the proof here.<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.13"></span><div class="genericenv" data-count="6.13" data-name="LEMMA">     
+  Let <span class="math"></span><script type="math/tex">f:[a,b]\rightarrow \mathbb{R}</script> be a convex function. Then
+  <div class="math"></div><script type="math/tex; mode=display">
+    \frac{f(x) - f(a)}{x - a} \leq
+    \frac{f(b)-f(a)}{b - a} \leq \frac{f(b)-f(x)}{b - x}
+  </script>
+  for <span class="math"></span><script type="math/tex">a < x < b</script>.
+</div></div><div style="margin-top:20px"></div><div class="frameit">
+<span id="env6.14"></span><div class="figure" data-count="6.14">     <div style="margin-top:20px"></div><div class="centerimg"><img src="img/geomlemmaconv.png" ></div><div style="margin-top:20px"></div>The result in Lemma <a href=#env6.13 class="labelref">6.13</a> is depicted above. A formal proof can be
+given from first principles only using Definition <a href="whatisopt.html#env4.23">4.23</a>.
+</div>
+</div><div style="margin-top:20px"></div><span id="sec6.3"></span><h2 id="557dc72a-982a-428f-900c-9722ced4b857">6.3 Differentiable functions</h2><div style="margin-top:20px"></div>To appreciate the depth of the notion of differentiability, you should
+read the story (joke, actually) in the second paragraph of <a href="http://www.feynmanlectures.caltech.edu/I_08.html" target="_blank">section
+  8-2</a> in volume I
+of the famous <a href="http://www.feynmanlectures.caltech.edu/" target="_blank">Feynman Lectures on Physics</a>. Below is a
+  photograph of the <a href="https://en.wikipedia.org/wiki/Richard_Feynman" target="_blank">master explainer</a> in action.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/Feynman.jpeg" ></div><div style="margin-top:20px"></div><span id="sec6.3.1"></span><h3>6.3.1 Definition</h3><div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">f:(a, b)\rightarrow \mathbb{R}</script> be a function defined on the open interval <span class="math"></span><script type="math/tex">(a, b)\subset \mathbb{R}</script>.
+The notion of <span class="math"></span><script type="math/tex">f</script> being differentiable at a point <span class="math"></span><script type="math/tex">x_0\in (a, b)</script>
+can be glanced from the drawing below<div style="margin-top:20px"></div><div class="centerimg"><img src="img/limitslope.png" ></div><div style="margin-top:20px"></div>where we informally let <span class="math"></span><script type="math/tex">x</script> approach <span class="math"></span><script type="math/tex">x_0</script> and look at the limiting
+value of the slope. Newton used to say many hundred years ago, that
+the derivative of <span class="math"></span><script type="math/tex">f</script> at <span class="math"></span><script type="math/tex">x_0</script> is the value of this slope just before
+<span class="math"></span><script type="math/tex">x</script> becomes <span class="math"></span><script type="math/tex">x_0</script>. In modern day mathematical (obfuscated?) parlance, this
+gets translated into the following.<div style="margin-top:20px"></div><blockquote>
+  The function <span class="math"></span><script type="math/tex">f</script> is differentiable at <span class="math"></span><script type="math/tex">x_0</script> if there exists a number
+<span class="math"></span><script type="math/tex">c\in \mathbb{R}</script>, such that for every <span class="math"></span><script type="math/tex">\epsilon > 0</script> there exists <span class="math"></span><script type="math/tex">\delta</script>
+with
+<span id="equ6.3"></span><div class="math"></div><script type="math/tex; mode=display">
+  \left| \frac{f(x) - f(x_0)}{x-x_0} - c \right| < \epsilon
+\tag{6.3}</script>
+for every <span class="math"></span><script type="math/tex">x</script> satisfying <span class="math"></span><script type="math/tex">|x-x_0 |<\delta</script>. 
+</blockquote><div style="margin-top:20px"></div>We will use a somewhat more operational definition below in terms
+of continuous functions <span class="math"></span><script type="math/tex">\epsilon</script> defined around <span class="math"></span><script type="math/tex">0</script> with
+<span class="math"></span><script type="math/tex">\epsilon(0) = 0</script>. This looks difficult, but it is
+actually a clever way of approaching differentiability (and more 
+in the spirit of Newton).<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.15"></span><div class="genericenv" data-count="6.15" data-name="DEFINITION">     
+The function <span class="math"></span><script type="math/tex">f</script> is differentiable at <span class="math"></span><script type="math/tex">x_0</script> if 
+for some <span class="math"></span><script type="math/tex">\delta>0</script>, there exists a function <span class="math"></span><script type="math/tex">\epsilon: (-\delta, \delta)
+\rightarrow \mathbb{R}</script> continuous at <span class="math"></span><script type="math/tex">0</script> with <span class="math"></span><script type="math/tex">\epsilon(0) = 0</script>
+and a number <span class="math"></span><script type="math/tex">c</script>, such that
+<span id="equ6.4"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x_0 + h) - f(x_0) = c h + \epsilon(h) h
+\tag{6.4}</script>
+for <span class="math"></span><script type="math/tex">x_0 + h\in (a, b)</script> and <span class="math"></span><script type="math/tex">h\in (-\delta, \delta)</script>. The number
+<span class="math"></span><script type="math/tex">c</script> is denoted <span class="math"></span><script type="math/tex">f'(x_0)</script> and called <em>the derivative</em> of
+<span class="math"></span><script type="math/tex">f</script> at <span class="math"></span><script type="math/tex">x_0</script>; <span class="math"></span><script type="math/tex">f</script> is called <em>differentiable</em> if
+its derivative exists at every <span class="math"></span><script type="math/tex">x_0\in (a, b)</script>.
+</div></div><div style="margin-top:20px"></div><div class="emphasize"><span id="env6.16"></span><div class="genericenv" data-count="6.16" data-name="REMARK">     
+  If a function <span class="math"></span><script type="math/tex">f:(a, b)\rightarrow \mathbb{R}</script> is
+  differentiable, we get a new function
+  <span class="math"></span><script type="math/tex">f':(a, b)\rightarrow \mathbb{R}</script> giving the (first) derivative at
+  a point as output. We may ask again if this function
+  is differentiable. If this is so, we may define a
+  function <span class="math"></span><script type="math/tex">f'':(a, b)\rightarrow \mathbb{R}</script> given by
+  <span class="math"></span><script type="math/tex">f''(x) = (f')'(x)</script> called the second derivative. This
+  procedure may be continued. We use the notation
+  <span class="math"></span><script type="math/tex">f^{(n)}</script> for the <span class="math"></span><script type="math/tex">n</script>-th derivative.
+</div></div><div style="margin-top:20px"></div><span id="env6.17"></span><div class="example" data-count="6.17">     
+Let us apply Definition <a href=#env6.15 class="labelref">6.15</a> to the function <span class="math"></span><script type="math/tex">f(x) = x^2</script> at
+the point <span class="math"></span><script type="math/tex">x_0</script>. Here
+<div class="math"></div><script type="math/tex; mode=display">
+(x_0 + h)^2 - x_0^2 = 2 x_0 h + h^2.
+</script>
+Here you immediately see that <span class="math"></span><script type="math/tex">f'(x_0) = 2 x_0</script> with
+<span class="math"></span><script type="math/tex">\epsilon(h) = h</script>.
+</div><div style="margin-top:20px"></div><span id="env6.18"></span><a class="Exerciseno" data-count="6.18"></a><a href="#ef9f0154-1f3d-4fd9-bf7e-00ca00b2d4e7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ef9f0154-1f3d-4fd9-bf7e-00ca00b2d4e7 class = "collapse Exercise envbuttons">  
+Use Definition <a href=#env6.15 class="labelref">6.15</a> to formally show that <span class="math"></span><script type="math/tex">f'(x) = 3 x^2</script>
+if <span class="math"></span><script type="math/tex">f(x) = x^3</script>.
+</div><div style="margin-top:20px"></div><div class="emphasize"><span id="env6.19"></span><div class="genericenv" data-count="6.19" data-name="REMARK">     <div style="margin-top:20px"></div>In operating with differentiable functions you are supposed to draw on
+your previous knowledge. I have summarized some of this knowledge below (even though we will give hints below as how to prove some of the rules).<div style="margin-top:20px"></div><ol class="number"><li id="ite6.1">
+  If <span class="math"></span><script type="math/tex">f(x) = a g(x)</script>, where <span class="math"></span><script type="math/tex">a\in \mathbb{R}</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">f'(x) = a g'(x)</script>.
+</li><li id="ite6.2">
+If <span class="math"></span><script type="math/tex">f(x) = x^n</script>, where <span class="math"></span><script type="math/tex">n \in \mathbb{N}</script>, then <div class="math"></div><script type="math/tex; mode=display">f'(x) = n x^{n-1}.</script>
+</li><li id="ite6.3"> 
+If <span class="math"></span><script type="math/tex">f(x) = e^x</script>, then  <div class="math"></div><script type="math/tex; mode=display">f'(x) = f(x) = e^x.</script>
+</li><li id="ite6.4">
+If <span class="math"></span><script type="math/tex">f(x) = \log(x)</script>, then <div class="math"></div><script type="math/tex; mode=display">f'(x) = 1/x.</script>
+</li><li id="ite6.5">
+If <span class="math"></span><script type="math/tex">f(x) = \sin(x)</script>, then <div class="math"></div><script type="math/tex; mode=display">f'(x) = \cos(x).</script>
+</li><li id="ite6.6">
+If <span class="math"></span><script type="math/tex">f(x) = \cos(x)</script>, then <div class="math"></div><script type="math/tex; mode=display">f'(x) = -\sin(x).</script>
+</li><li id="ite6.7">
+  If <span class="math"></span><script type="math/tex">f(x)</script> and <span class="math"></span><script type="math/tex">g(x)</script> are differentiable functions, then the derivative of their product is
+  <div class="math"></div><script type="math/tex; mode=display">
+  (f g)'(x) = f'(x) g(x) + f(x) g'(x).
+  </script>
+</li><li id="ite6.8">
+   If <span class="math"></span><script type="math/tex">f(x)</script> and <span class="math"></span><script type="math/tex">g(x)</script> are differentiable functions, then the derivative of their quotient is
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x) g(x) - f(x) g'(x)}{g(x)^2}.
+  </script>
+</li><li id="ite6.9">
+     If <span class="math"></span><script type="math/tex">f(x)</script> and <span class="math"></span><script type="math/tex">g(x)</script> are composable differentiable functions, then the derivative of their composite is
+  <div class="math"></div><script type="math/tex; mode=display">
+  (f\circ g)'(x) = f'(g(x)) g'(x).
+  </script> 
+</li></ol>
+</div></div><div style="margin-top:20px"></div><span id="env6.20"></span><a class="Exerciseno" data-count="6.20"></a><a href="#016e4eb0-47d5-4636-9634-8ef74a6f8c64" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=016e4eb0-47d5-4636-9634-8ef74a6f8c64 class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">f(x) = \sin(x)</script>. What is
+<div class="math"></div><script type="math/tex; mode=display">
+f^{(17)}(x)?
+</script>
+</div><div style="margin-top:20px"></div><span id="sec6.3.2"></span><h3>6.3.2 Recall the derivative of a product?</h3><div style="margin-top:20px"></div>From high school you know that the derivative of a product of two functions <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script>
+is given by the formula<div style="margin-top:20px"></div><span id="equ6.5"></span><div class="math"></div><script type="math/tex; mode=display">
+(f g)'(x) = f'(x) g(x) + f(x) g'(x).
+\tag{6.5}</script><div style="margin-top:20px"></div>We can use the <span class="math"></span><script type="math/tex">\epsilon</script>-definition <a href=#equ6.4>(6.4)</a> to derive the product rule
+in <a href=#equ6.5>(6.5)</a>. The computation below is a bit cumbersome, but actually quite
+doable. We assume to begin with that <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script> are differentiable at <span class="math"></span><script type="math/tex">x_0</script>
+according to <a href=#equ6.4>(6.4)</a> i.e.,<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  f(x_0 + h) &= f(x_0) + f'(x_0)h + \epsilon_f(h) h\\
+  g(x_0 + h) &= g(x_0) + g'(x_0)h + \epsilon_g(h) h.\\
+\end{aligned}</script>
+Then we start the computation:
+<span id="equ6.6"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+&(f g)(x_0 + h) = f(x_0 + h) g(x_0 + h) =\\
+  &(f(x_0) + f'(x_0)h + \epsilon_f(h) h)\,\, (g(x_0) + g'(x_0) h + \epsilon_g(h) h) =\\
+  &f(x_0) g(x_0) + (f'(x_0) g(x_0)  + f(x_0) g'(x_0)) h + \epsilon(h) h,
+\end{aligned}\tag{6.6}</script>
+where the function
+<span id="equ6.7"></span><div class="math"></div><script type="math/tex; mode=display">
+\epsilon(h) = f(x_0) \epsilon_g(h) + f'(x_0) g'(x_0) h + f'(x_0) \epsilon_g(h) h + \epsilon_f(h) g'(x_0) +
+\epsilon_f(h) g'(x_0) h + \epsilon_f(h) \epsilon_g(h) h
+\tag{6.7}</script>
+is seen to be continuous at <span class="math"></span><script type="math/tex">h=0</script> with <span class="math"></span><script type="math/tex">\epsilon(0) = 0</script>.
+The end result of this computation shows that <span class="math"></span><script type="math/tex">f g</script> is differentiable at <span class="math"></span><script type="math/tex">x_0</script> with
+<span id="equ6.8"></span><div class="math"></div><script type="math/tex; mode=display">
+(f g)'(x_0) = f'(x_0) g(x_0) + f(x_0) g'(x_0)
+\tag{6.8}</script>
+again according to <a href=#equ6.4>(6.4)</a>.<div style="margin-top:20px"></div><span id="env6.21"></span><a class="Exerciseno" data-count="6.21"></a><a href="#544ade31-36c0-43e3-b5b4-82dad81a8bd9" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=544ade31-36c0-43e3-b5b4-82dad81a8bd9 class = "collapse Exercise envbuttons">  
+Show that the <span class="math"></span><script type="math/tex">\epsilon</script> function defined in <a href=#equ6.7>(6.7)</a> satisfies the
+relevant conditions in Definition <a href=#env6.15 class="labelref">6.15</a>.
+</div><div style="margin-top:20px"></div>The formula for the derivative of a fraction i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+\left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x) g(x) - f(x) g'(x)}{g(x)^2}
+</script>
+can be derived using a neat little trick. This is the topic of the following exercise.<div style="margin-top:20px"></div><span id="env6.22"></span><a class="Exerciseno" data-count="6.22"></a><a href="#38e06a34-efce-4a56-920d-b3c7762009b7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=38e06a34-efce-4a56-920d-b3c7762009b7 class = "collapse Exercise envbuttons">  
+Show how the product rule may be used to derive the rule for finding the derivative of
+a fraction:
+<div class="math"></div><script type="math/tex; mode=display">
+\left(\frac{f}{g}\right)'(x_0) = \dfrac{f'(x_0) g(x_0) - f(x_0) g'(x_0)}{g(x_0)^2}.
+</script><div style="margin-top:20px"></div><a href="#20ee7769-546d-4196-9c05-aa8ecdf45bc9" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=20ee7769-546d-4196-9c05-aa8ecdf45bc9 class="collapse">
+  <div class="math"></div><script type="math/tex; mode=display">
+  f'(x) = \left(g(x) \left(\frac{f(x)}{g(x)}\right)\right)'.
+  </script>
+  </div>
+</div>
+<span id="sec6.3.3"></span><h3>6.3.3 Recall the one variable chain rule?</h3><div style="margin-top:20px"></div>The formula for the derivative of a composite function is given by
+<div class="math"></div><script type="math/tex; mode=display">
+(f\circ g)'(x_0) = f'(g(x_0)) g'(x_0),
+</script>
+where <span class="math"></span><script type="math/tex">g(x_0)</script> is in the domain of <span class="math"></span><script type="math/tex">f</script>. Let us see how <a href=#equ6.4>(6.4)</a>
+applies in showing this.<div style="margin-top:20px"></div>Suppose that <span class="math"></span><script type="math/tex">f</script> is differentiable at <span class="math"></span><script type="math/tex">g(x_0)</script> and <span class="math"></span><script type="math/tex">g</script> is
+differentiable at <span class="math"></span><script type="math/tex">x_0</script>, then we can mess around a bit
+with the <span class="math"></span><script type="math/tex">\epsilon</script>-functions for <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script> for
+the composite function <span class="math"></span><script type="math/tex">f(g(x))</script> around <span class="math"></span><script type="math/tex">x_0</script>:
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+f(g(x_0 + h)) &= f(g(x_0) + g'(x_0) h + h \epsilon_g(h))\\
+  &= f(g(x_0)) + f'(g(x_0)) g'(x_0) h + \epsilon(h) h,
+\end{aligned}</script>
+where (take a deep breath)
+<div class="math"></div><script type="math/tex; mode=display">
+\epsilon(h) = f'(g(x_0)) \epsilon_g(h) + \epsilon_f(g'(x_0) h + \epsilon_g(h)h) g'(x_0).
+</script>
+Here <span class="math"></span><script type="math/tex">\epsilon</script> is seen to be continuous at <span class="math"></span><script type="math/tex">0</script> with <span class="math"></span><script type="math/tex">\epsilon(0)=0</script> i.e.,
+the composition <span class="math"></span><script type="math/tex">f(g(x))</script> is differentiable at <span class="math"></span><script type="math/tex">x_0</script> with
+derivative
+<span id="equ6.9"></span><div class="math"></div><script type="math/tex; mode=display">
+(f\circ g)'(x_0) = f'(g(x_0)) g'(x_0).
+\tag{6.9}</script><div style="margin-top:20px"></div>The formula <a href=#equ6.9>(6.9)</a> is extremely important and useful. We give some applications in
+the exercises below.<div style="margin-top:20px"></div><span id="env6.23"></span><a class="Exerciseno" data-count="6.23"></a><a href="#8f3fb55f-9018-4571-b6d6-135a86c10f2f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=8f3fb55f-9018-4571-b6d6-135a86c10f2f class = "collapse Exercise envbuttons">  
+Compute the derivative of the function <span class="math"></span><script type="math/tex">f: (0, \pi) \rightarrow \mathbb{R}</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = \dfrac{1}{\sqrt{\sin(x)}}
+</script>
+using only paper and pencil! You can check your result afterwards using a computer.
+</div><div style="margin-top:20px"></div><span id="env6.24"></span><a class="Exerciseno" data-count="6.24"></a><a href="#025b4ac3-08f5-441e-9465-169d3e890de8" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=025b4ac3-08f5-441e-9465-169d3e890de8 class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">g</script> and <span class="math"></span><script type="math/tex">f</script> are inverse functions i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+f(g(x)) = x\qquad \text{and} \qquad g( f(x)) = x.
+</script>
+If you know the derivative of <span class="math"></span><script type="math/tex">f</script>, how can you use the chain rule
+to get the derivative of <span class="math"></span><script type="math/tex">g</script>? Illustrate with examples like
+<span class="math"></span><script type="math/tex">f(x) = x^2</script> and <span class="math"></span><script type="math/tex">g(x) = \sqrt{x}</script>, <span class="math"></span><script type="math/tex">f(x) = e^x</script> and <span class="math"></span><script type="math/tex">g(x) = \log(x)</script>.
+</div><div style="margin-top:20px"></div><span id="env6.25"></span><a class="Exerciseno" data-count="6.25"></a><a href="#fb3a8ca8-1944-42d2-9785-f08efa5e4a5d" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=fb3a8ca8-1944-42d2-9785-f08efa5e4a5d class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">f:\mathbb{R}\rightarrow \mathbb{R}</script> is a convex function. We know that
+<span class="math"></span><script type="math/tex">f</script> is continuous, but is <span class="math"></span><script type="math/tex">f</script> differentiable at every point <span class="math"></span><script type="math/tex">x_0\in \mathbb{R}</script>?<div style="margin-top:20px"></div><a href="#d48d7ed5-7ad9-4b4d-9992-f14db41c304d" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=d48d7ed5-7ad9-4b4d-9992-f14db41c304d class="collapse">
+  Nope. This is wrong. Come up with a convex function <span class="math"></span><script type="math/tex">f</script> and a point <span class="math"></span><script type="math/tex">x_0</script>,
+  such that <span class="math"></span><script type="math/tex">f</script> is not differentiable at <span class="math"></span><script type="math/tex">x_0</script>.
+</div>
+</div><div style="margin-top:20px"></div><span id="sec6.3.4"></span><h3>6.3.4 The Newton-Raphson method for finding roots</h3><div style="margin-top:20px"></div>We begin this section with a surprising example.<div style="margin-top:20px"></div><span id="env6.26"></span><div class="example" data-count="6.26">     
+Suppose that <span class="math"></span><script type="math/tex">a> 0</script> and we wish to compute <span class="math"></span><script type="math/tex">\sqrt{a}</script>. To do this we may focus on the
+quadratic equation <span class="math"></span><script type="math/tex">f(x) = x^2 - a = 0</script> and attempt to compute an approximate value <span class="math"></span><script type="math/tex">x_0\geq 0</script>,
+such that <span class="math"></span><script type="math/tex">f(x_0)</script> is close to <span class="math"></span><script type="math/tex">0</script>. Let me at this point disclose that there is
+a very effective iterative scheme for doing this. You start by putting <span class="math"></span><script type="math/tex">x_0 = a</script> and then iterate
+using the formula
+<span id="equ6.10"></span><div class="math"></div><script type="math/tex; mode=display">
+x_{i+1} = \frac{1}{2}\left(x_i + \frac{a}{x_i}\right)
+\tag{6.10}</script>
+to get better and better approximations <span class="math"></span><script type="math/tex">x_0, x_1, x_2, \dots</script> to <span class="math"></span><script type="math/tex">\sqrt{a}</script>. <div style="margin-top:20px"></div><p><div style="float:right;"><a href="#3d20c32f-6394-4ab7-afae-eddfd720b1ad" class="btn btn-default"data-toggle="collapse"><span class="glyphicon glyphicon-eye-open"></span><span class="glyphicon glyphicon-eye-open"></span></a></div><div style="clear: both;"></div></p><div id="3d20c32f-6394-4ab7-afae-eddfd720b1ad" class="collapse">
+The formula in <a href=#equ6.10>(6.10)</a> is derived from 
+<div class="math"></div><script type="math/tex; mode=display">
+x_{i+1} = x_i - \frac{f(x_i)}{f'(x_i)},
+</script>
+where <span class="math"></span><script type="math/tex">f(x) = x^2 - a</script>.
+</div><div style="margin-top:20px"></div>You can try out <a href=#equ6.10>(6.10)</a>
+below.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+a = 2.0 
+# Note a = 2.0 instead of a = 2. We need Sage to output decimal numbers - not fractions.
+numberOfIter = 10 
+
+def onestep(x):
+  return (x + a/x)/2
+
+z = a
+for i in range(numberOfIter):
+  z = onestep(z)
+  print(z)
+</script></div>
+</div><div style="margin-top:20px"></div>I have been in complete awe of the <a href="https://en.wikipedia.org/wiki/Newton%27s_method" target="_blank">Newton-Raphson method</a> since my early youth. It is
+an algorithm, where the notion of differentiability really shines.<div style="margin-top:20px"></div>The method
+comes from Definition <a href=#env6.15 class="labelref">6.15</a> with <span class="math"></span><script type="math/tex">h = x - x_0</script>:
+we are assuming that <span class="math"></span><script type="math/tex">x_0</script> is very close to <span class="math"></span><script type="math/tex">x</script>, where <span class="math"></span><script type="math/tex">f(x) = 0</script>. Then
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) - f(x_0) = f'(x_0) (x- x_0) + \text{a very small number}.
+</script>
+Ignoring the very small number and solving this equation for <span class="math"></span><script type="math/tex">x</script> we get
+<div class="math"></div><script type="math/tex; mode=display">
+x = x_0 - \frac{f(x_0)}{f'(x_0)}.
+</script><div style="margin-top:20px"></div>In the Sage window below, I have entered the algorithm starting
+in <span class="math"></span><script type="math/tex">x_0 = 0</script> running ten iterations for finding a zero for
+<span class="math"></span><script type="math/tex">f(x) = \cos(x) - x</script>.<div style="margin-top:20px"></div><a href="#617dfa58-7a27-4e7b-b8da-4fdaefa7a54e" class ="btn btn-default" data-toggle="collapse">Graph</a><div id=617dfa58-7a27-4e7b-b8da-4fdaefa7a54e class="collapse">
+  <div class=sage><script type="text/x-sage">
+    plot(cos(x) - x, (x, 0, 2*pi))
+  </script></div>
+</div><div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+x = var('x')
+f(x) = cos(x) - x
+df = diff(f, x)
+NR(x) = x - f(x)/df(x)
+
+x0 = 0 # initial value
+n = 10 # number of iterations
+
+for i in range(n):
+  print( x0)
+  x0 = N(NR(x0), digits = 10)
+</script></div><div style="margin-top:20px"></div>
+<span id="env6.27"></span><a class="Exerciseno" data-count="6.27"></a><a href="#00216b62-299d-4e69-8c7b-f1b9e81fbdf0" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=00216b62-299d-4e69-8c7b-f1b9e81fbdf0 class = "collapse Exercise envbuttons">  
+Give an example, where the Newton-Raphson method cycles between points
+and never finds the desired zero. Perhaps a drawing will help here.
+</div><div style="margin-top:20px"></div>The Newton-Raphson converges rapidly in most cases. Of course, it
+breaks down violently if it runs into a <em>critical point</em> i.e.,
+a point <span class="math"></span><script type="math/tex">x</script>, such that <span class="math"></span><script type="math/tex">f'(x) = 0</script>.<div style="margin-top:20px"></div>William Cook has made some nice Sage code available for
+<a href="https://billcookmath.com/sage/calculus/Newtons_method.html" target="_blank">experimentation</a> with Newton's method.<div style="margin-top:20px"></div><span id="env6.28"></span><div class="example" data-count="6.28">     
+  The formula (see button in Example <a href="intro.html#env1.60">1.60</a>)
+  for the (monthly) payment <span class="math"></span><script type="math/tex">Y</script> on a (car) loan over <span class="math"></span><script type="math/tex">N</script> payments with
+  a down payment of <span class="math"></span><script type="math/tex">P</script> and an interest rate of <span class="math"></span><script type="math/tex">r</script> (per payment or term) is given by the formula
+    <div class="math"></div><script type="math/tex; mode=display">
+    Y = \frac{r P}{1 - \left(\frac{1}{1+r}\right)^N}.
+    </script>
+    There is no explicit formula for calculating <span class="math"></span><script type="math/tex">r</script> given <span class="math"></span><script type="math/tex">Y, P</script> and <span class="math"></span><script type="math/tex">N</script>. Here
+    the Newton-Raphson method is invaluable for estimating <span class="math"></span><script type="math/tex">r</script> by approximating a
+    zero for the function
+    <div class="math"></div><script type="math/tex; mode=display">
+    r(x) = Y - \frac{x P}{1 - \left(\frac{1}{1+x}\right)^N}.
+    </script>
+</div><div style="margin-top:20px"></div><span id="env6.29"></span><a class="Exerciseno" data-count="6.29"></a><a href="#4339a097-3cb2-4886-a2e7-cdb94082c3ed" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4339a097-3cb2-4886-a2e7-cdb94082c3ed class = "collapse Exercise envbuttons">  
+Your bank promises you a loan of <span class="math"></span><script type="math/tex">1.000.000</script> DKK with yearly payments
+of <span class="math"></span><script type="math/tex">45.000</script> DKK over <span class="math"></span><script type="math/tex">30</script> years. At the same time it claims that
+its interest rate is very favorable at only <span class="math"></span><script type="math/tex">1.0</script>%. Here the bank is
+wrong! What is the
+real interest rate?
+How much money do you save (compared to the original offer from the bank) if you insist that the bank offers you
+the promised interest rate of <span class="math"></span><script type="math/tex">1.0</script>%?
+</div><div style="margin-top:20px"></div><span id="sec6.3.5"></span><h3>6.3.5 Critical points and extrema</h3><div style="margin-top:20px"></div><div class="emphasize"><span id="env6.30"></span><div class="genericenv" data-count="6.30" data-name="DEFINITION">     
+  A critical point for a differentiable function <span class="math"></span><script type="math/tex">f:(a, b)\rightarrow \mathbb{R}</script> is
+  a point <span class="math"></span><script type="math/tex">x_0\in (a, b)</script> with
+  <div class="math"></div><script type="math/tex; mode=display">
+  f'(x_0) = 0.
+  </script>
+</div></div><div style="margin-top:20px"></div>The crucial result here is the following. It seems to date back to Fermat (see <a href="https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)" target="_blank">Fermat's theorem</a>).<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.31"></span><div class="genericenv" data-count="6.31" data-name="LEMMA">     
+  Let <span class="math"></span><script type="math/tex">f : (a, b)\rightarrow \mathbb{R}</script> be a differentiable function. If
+  <span class="math"></span><script type="math/tex">x_0</script> is a local extremum for <span class="math"></span><script type="math/tex">f</script>, then <span class="math"></span><script type="math/tex">x_0</script> is critical point i.e., <span class="math"></span><script type="math/tex">f'(x_0) = 0</script>.
+</div></div>
+<a href="#0a06cbb3-ba3b-41c0-a343-ef2fb1fb2048" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=0a06cbb3-ba3b-41c0-a343-ef2fb1fb2048 class = "collapse Proof envbuttons">    
+ Suppose that <span class="math"></span><script type="math/tex">\xi</script> is a local maximum and that
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(\xi + h) - f(\xi) = f'(\xi) h + \epsilon(h) h
+  </script>
+  according to <a href=#equ6.4>(6.4)</a>. If <span class="math"></span><script type="math/tex">f'(\xi)>0</script>, then we can choose
+  <span class="math"></span><script type="math/tex">\delta >0</script> sufficiently small, such that <span class="math"></span><script type="math/tex">\left\vert  \epsilon(h)  \right\vert <
+  f'(x_0)</script> if <span class="math"></span><script type="math/tex">0\leq h < \delta</script>, since <span class="math"></span><script type="math/tex">\epsilon(0) = 0</script> and
+  <span class="math"></span><script type="math/tex">\epsilon </script> is continuous in <span class="math"></span><script type="math/tex">0</script>. Therefore
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(\xi +  h) - f(\xi) = (f'(\xi) + \epsilon(h)) h > 0,
+  </script> 
+  contradicting that <span class="math"></span><script type="math/tex">\xi</script> is a local maximum.  The proof is similar
+  for <span class="math"></span><script type="math/tex">f'(\xi) < 0</script> and if <span class="math"></span><script type="math/tex">\xi</script> is a local minimum.
+  </div><div style="margin-top:20px"></div><span id="env6.32"></span><a class="Exerciseno" data-count="6.32"></a><a href="#76f204b3-79eb-4aaa-a6b8-036b502828a7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=76f204b3-79eb-4aaa-a6b8-036b502828a7 class = "collapse Exercise envbuttons">  
+Is the converse of the above lemma true i.e., if <span class="math"></span><script type="math/tex">f'(x_0) = 0</script> is
+<span class="math"></span><script type="math/tex">x_0</script> a local extremum?
+</div><div style="margin-top:20px"></div>Theorem <a href="convexfunctions.html#env6.33">6.33</a> below is called the mean value theorem. It is a consequence of Lemma <a href=#env6.31 class="labelref">6.31</a>
+and the extremely important Theorem <a href="euclidean.html#env5.76">5.76</a> about continuous functions
+on compact subsets attaining their maxima and minima!<div style="margin-top:20px"></div>
+
+
+<div class="frameit">
+<span id="env6.33"></span><div class="theorem" data-count="6.33">     
+  Let <span class="math"></span><script type="math/tex">f:[a, b]\rightarrow \mathbb{R}</script> be continuous and differentiable
+  on <span class="math"></span><script type="math/tex">(a, b)</script>. Then there exists <span class="math"></span><script type="math/tex">x_0\in (a, b)</script> such that
+  <div class="math"></div><script type="math/tex; mode=display">
+    f'(x_0) = \frac{f(b) - f(a)}{b - a}.
+  </script>
+</div>
+</div><div style="margin-top:20px"></div><span id="sec6.3.6"></span><h3>6.3.6 Increasing functions</h3><div style="margin-top:20px"></div>The definition below is much simpler than the definition of differentiability.<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.34"></span><div class="genericenv" data-count="6.34" data-name="DEFINITION">     
+A function <span class="math"></span><script type="math/tex">f:S\rightarrow \mathbb{R}</script> with <span class="math"></span><script type="math/tex">S\subseteq \mathbb{R}</script> is called
+  <em>increasing</em> if
+  <div class="math"></div><script type="math/tex; mode=display">
+    x\leq y\Rightarrow f(x) \leq f(y)
+  </script>
+  and <em>strictly increasing</em> if 
+  <div class="math"></div><script type="math/tex; mode=display">
+    x< y\Rightarrow f(x) < f(y)
+  </script>
+  for <span class="math"></span><script type="math/tex">x, y\in S</script>.
+</div></div><div style="margin-top:20px"></div><span id="env6.35"></span><a class="Exerciseno" data-count="6.35"></a><a href="#d9a1b90d-2354-4ab6-901e-bd85b3c1abde" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=d9a1b90d-2354-4ab6-901e-bd85b3c1abde class = "collapse Exercise envbuttons">  
+Give an example of an increasing function.
+Give an example of an increasing function that is not strictly increasing.
+</div><div style="margin-top:20px"></div>The following very important result is a consequence of Theorem <a href=#env6.33 class="labelref">6.33</a>. You probably already know this result from your previous (danish) education (monotoniforhold!).<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.36"></span><div class="genericenv" data-count="6.36" data-name="PROPOSITION">     
+  Let <span class="math"></span><script type="math/tex">f : (a, b)\rightarrow \mathbb{R}</script> be a differentiable function.
+  Then
+  <span class="math"></span><script type="math/tex">f</script> is increasing if and only if <span class="math"></span><script type="math/tex">f'(x)\geq 0</script> for every <span class="math"></span><script type="math/tex">x\in (a,
+  b)</script>.  If <span class="math"></span><script type="math/tex">f'(x)> 0</script> for every <span class="math"></span><script type="math/tex">x\in (a, b)</script>, then <span class="math"></span><script type="math/tex">f</script> is strictly
+  increasing.
+</div></div><div style="margin-top:20px"></div>
+
+<span id="env6.37"></span><a class="Exerciseno" data-count="6.37"></a><a href="#015e7550-7196-49c5-ba85-36bc35945129" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=015e7550-7196-49c5-ba85-36bc35945129 class = "collapse Exercise envbuttons">  
+Show that <span class="math"></span><script type="math/tex">f(x) = x^3</script> is strictly increasing i.e., 
+<div class="math"></div><script type="math/tex; mode=display">
+x < y \implies x^3 < y^3.
+</script>
+<a href="#a8e25ad2-d2e2-4430-b885-5cb8226be533" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=a8e25ad2-d2e2-4430-b885-5cb8226be533 class="collapse">
+<div class="math"></div><script type="math/tex; mode=display">
+y^3 - x^3 = (y - x) (y^2 + x y + x^2),
+</script>
+but why is <span class="math"></span><script type="math/tex">y^2 + x y + x^2</script> always <span class="math"></span><script type="math/tex">> 0</script> except when <span class="math"></span><script type="math/tex">x = y = 0</script>?
+</div>
+</div><div style="margin-top:20px"></div><span id="env6.38"></span><a class="Exerciseno" data-count="6.38"></a><a href="#7a5bd84b-bae0-4c08-a0f4-fd99a160e5f0" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=7a5bd84b-bae0-4c08-a0f4-fd99a160e5f0 class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">f: [a, b] \rightarrow \mathbb{R}</script> is a continuous function, such that
+<span class="math"></span><script type="math/tex">f</script> is differentiable on the open interval <span class="math"></span><script type="math/tex">(a, b)</script>. Is <span class="math"></span><script type="math/tex">f</script> increasing
+on <span class="math"></span><script type="math/tex">[a, b]</script> if <span class="math"></span><script type="math/tex">f'(x)\geq 0</script> for every <span class="math"></span><script type="math/tex">x\in (a, b)</script>?
+</div><div style="margin-top:20px"></div><span id="env6.39"></span><a class="Exerciseno" data-count="6.39"></a><a href="#6fa4de90-9380-4b93-96eb-f4a5b4b762cc" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6fa4de90-9380-4b93-96eb-f4a5b4b762cc class = "collapse Exercise envbuttons">  
+Is it possible for a strictly increasing function <span class="math"></span><script type="math/tex">f: \mathbb{R} \rightarrow \mathbb{R}</script> to be bounded i.e., does
+there exist a (positive) number <span class="math"></span><script type="math/tex">M</script>, such that <span class="math"></span><script type="math/tex">|f(x)| \leq M</script> for every <span class="math"></span><script type="math/tex">x\in \mathbb{R}</script>?<div style="margin-top:20px"></div><a href="#0508eedf-2f57-4511-866d-f7bc892fa5f8" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=0508eedf-2f57-4511-866d-f7bc892fa5f8 class="collapse">
+  Have a look at
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x) = \dfrac{1}{1 + e^{-x}}.
+  </script><div style="margin-top:20px"></div></div>
+</div><div style="margin-top:20px"></div><span id="sec6.4"></span><h2 id="5f39bf22-b3c6-4f84-8a50-2372a3876d22">6.4 Taylor polynomials</h2><div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">x_0</script> is a critical point for <span class="math"></span><script type="math/tex">f</script> we cannot conclude that <span class="math"></span><script type="math/tex">x_0</script> is a local extremum. We know
+that <span class="math"></span><script type="math/tex">f'(x_0)=0</script> and we can get more information out of <span class="math"></span><script type="math/tex">f</script> by exploring the signs of
+<div class="math"></div><script type="math/tex; mode=display">
+f''(x_0), f'''(x_0), \dots
+</script><div style="margin-top:20px"></div>Suppose that 
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
+</script>
+is a polynomial, then
+<span id="equ6.11"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x) = f(0) + f'(0) x + \frac{f''(0)}{2} x^2 + \cdots + \frac{f^{(n)}(0)}{n!} x^n.
+\tag{6.11}</script><div style="margin-top:20px"></div>For nice functions like <span class="math"></span><script type="math/tex">f(x) = e^x</script> we can play this game ad infinitum. In fact in this
+way we get the beautiful infinite series
+<div class="math"></div><script type="math/tex; mode=display">
+e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \cdots + \frac{x^n}{n!} + \cdots.
+</script><div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">f</script> is an <span class="math"></span><script type="math/tex">n</script> times differentiable function defined at <span class="math"></span><script type="math/tex">0</script>, we call
+the polynomial in <a href=#equ6.11>(6.11)</a> the Taylor polynomial about the point <span class="math"></span><script type="math/tex">0</script> of degree <span class="math"></span><script type="math/tex">n</script> associated
+with the <span class="math"></span><script type="math/tex">f</script>. Similarly, one may also define the Taylor polynomial of order <span class="math"></span><script type="math/tex">n</script> about a point <span class="math"></span><script type="math/tex">a</script> by
+<div class="math"></div><script type="math/tex; mode=display">
+f(a) + f'(a) (x-a) + \frac{f''(a)}{2} (x-a)^2 + \cdots + \frac{f^{(n)}(a)}{n!} (x-a)^n.
+</script>
+Taylor polynomials can be used to approximate more complicated functions such as
+<span class="math"></span><script type="math/tex">\cos(x)</script> and <span class="math"></span><script type="math/tex">\sin (x)</script> with a well defined error term. This is cool classical
+mathematics. Unfortunately we do not have time to go deeper into
+<a href="https://en.wikipedia.org/wiki/Taylor%27s_theorem" target="_blank">Taylor's theorem</a>, which states this
+in precise terms.<div style="margin-top:20px"></div><span id="env6.40"></span><a class="Exerciseno" data-count="6.40"></a><a href="#19ad281a-65fa-4a54-b768-a8b5742e222e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=19ad281a-65fa-4a54-b768-a8b5742e222e class = "collapse Exercise envbuttons">  
+Compute the Taylor polynomial for <span class="math"></span><script type="math/tex">f(x) = \cos(x)</script> up to degree <span class="math"></span><script type="math/tex">10</script>.
+</div><div style="margin-top:20px"></div><span id="env6.41"></span><a class="Exerciseno" data-count="6.41"></a><a href="#93b7c836-4de4-4402-98ec-3e4cd77a4ca1" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=93b7c836-4de4-4402-98ec-3e4cd77a4ca1 class = "collapse Exercise envbuttons">  
+Suppose you have a number <span class="math"></span><script type="math/tex">i</script> that satisfies
+<div class="math"></div><script type="math/tex; mode=display">
+i^2 = -1.
+</script>
+Can you make sense of the formula
+<div class="math"></div><script type="math/tex; mode=display">
+e^{i x} = \cos(x) + i \sin(x)
+</script>
+using Taylor polynomials?
+</div><div style="margin-top:20px"></div>In the context of optimization, the following
+result becomes important. We will not give the proof, but only notice that Theorem
+<a href=#env6.33 class="labelref">6.33</a> also here plays an important role.<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.42"></span><div class="genericenv" data-count="6.42" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">x_0</script> be a critical point of an <span class="math"></span><script type="math/tex">n+1</script> times differentiable
+  function <span class="math"></span><script type="math/tex">f:(a, b)\rightarrow \mathbb{R}</script>, such that <span class="math"></span><script type="math/tex">f^{(n+1)}</script>
+  is a continuous function,
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    f''(x_0) &= 0\\
+    f'''(x_0) &= 0\\
+&\vdots\\
+   f^{(n-1)}(x_0) &= 0
+  \end{aligned}</script>
+  and <span class="math"></span><script type="math/tex">f^{(n)}(x_0)\neq 0</script>. If <span class="math"></span><script type="math/tex">n</script> is even, then <span class="math"></span><script type="math/tex">x_0</script> is a local
+  minimum if <span class="math"></span><script type="math/tex">f^{(n)}(x_0) > 0</script> and a local maximum if
+  <span class="math"></span><script type="math/tex">f^{(n)}(x_0)<0</script>. If <span class="math"></span><script type="math/tex">n</script> is odd, then <span class="math"></span><script type="math/tex">x_0</script> is not a local extremum.
+</div></div><div style="margin-top:20px"></div><span id="env6.43"></span><div class="example" data-count="6.43">     
+  Let us apply Theorem <a href=#env6.42 class="labelref">6.42</a> to the function
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x) = a x^2 + b x + c,
+  </script>
+  where <span class="math"></span><script type="math/tex">a\neq 0</script>. Here <span class="math"></span><script type="math/tex">f'(x) = 2 a x + b</script> and
+  <div class="math"></div><script type="math/tex; mode=display">
+  x_0 = - \frac{b}{2 a}
+  </script>
+  is a critical point (why?). Since
+  <div class="math"></div><script type="math/tex; mode=display">
+  f''(x_0) = 2 a,
+  </script>
+  we see that <span class="math"></span><script type="math/tex">x_0</script> is a local minimum if <span class="math"></span><script type="math/tex">a > 0</script> and a local maximum if
+  <span class="math"></span><script type="math/tex">a < 0</script>.
+</div><div style="margin-top:20px"></div><span id="env6.44"></span><a class="Exerciseno" data-count="6.44"></a><a href="#8539b90a-50d1-4d34-b87a-3eb2c5381995" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=8539b90a-50d1-4d34-b87a-3eb2c5381995 class = "collapse Exercise envbuttons">  
+Have you seen Example <a href=#env6.43 class="labelref">6.43</a> elsewhere, perhaps in a more
+geometric setting? What type of curve is the graph of <span class="math"></span><script type="math/tex">f(x)</script>? Here you may consult
+your previous mathematical knowledge.<div style="margin-top:20px"></div>What is the outcome, when you apply Theorem <a href=#env6.42 class="labelref">6.42</a> to the
+function <span class="math"></span><script type="math/tex">f(x) = x^3</script> at <span class="math"></span><script type="math/tex">x_0 = 0</script>?
+</div><div style="margin-top:20px"></div><span id="env6.45"></span><a class="Exerciseno" data-count="6.45"></a><a href="#8b05b781-06e5-44b3-93f5-ac989fd063bf" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=8b05b781-06e5-44b3-93f5-ac989fd063bf class = "collapse Exercise envbuttons">  
+Show that <span class="math"></span><script type="math/tex">x_0=0</script> is a critical point of the function <span class="math"></span><script type="math/tex">f: (-\frac{1}{2}, \infty)\rightarrow \mathbb{R}</script>
+defined by
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = e^x + \log(1 + 2 x) - 3 x.
+</script>
+Use Theorem <a href=#env6.42 class="labelref">6.42</a> in deciding if it is a local
+maximum or minimum or neither.<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec6.5"></span><h2 id="7d1283a3-bc50-4986-99a6-c35547866fb8">6.5 Differentiable convex functions</h2><div style="margin-top:20px"></div>The following theorem is proved using Lemma <a href=#env6.13 class="labelref">6.13</a> and
+Theorem <a href=#env6.33 class="labelref">6.33</a>. It immediately implies Corollary <a href="convexfunctions.html#env6.47">6.47</a>,
+which is the result mostly used.<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.46"></span><div class="genericenv" data-count="6.46" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">f:(a, b)\rightarrow \mathbb{R}</script> be a
+  differentiable function. Then <span class="math"></span><script type="math/tex">f</script> is convex if and only if <span class="math"></span><script type="math/tex">f'</script> is
+  increasing.  If <span class="math"></span><script type="math/tex">f'</script> is strictly increasing, then <span class="math"></span><script type="math/tex">f</script> is strictly
+  convex.
+</div></div><div style="margin-top:20px"></div>
+Theorem <a href=#env6.46 class="labelref">6.46</a> leads to the following all important result.<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.47"></span><div class="genericenv" data-count="6.47" data-name="COROLLARY">     
+  Let <span class="math"></span><script type="math/tex">f:(a, b)\rightarrow \mathbb{R}</script> be a twice differentiable
+  function. Then <span class="math"></span><script type="math/tex">f</script> is convex if and only if <span class="math"></span><script type="math/tex">f''(x)\geq 0</script> for every
+  <span class="math"></span><script type="math/tex">x\in (a, b)</script>. If <span class="math"></span><script type="math/tex">f''(x) > 0</script> for every <span class="math"></span><script type="math/tex">x\in (a, b)</script>, then <span class="math"></span><script type="math/tex">f</script> is
+  strictly convex.
+</div></div><div style="margin-top:20px"></div><div class="frameit">
+<span id="env6.48"></span><div class="remark" data-count="6.48">     
+Wait! Stop! Why did I not write <span class="math"></span><script type="math/tex">f''(x) > 0</script> if and only if 
+<span class="math"></span><script type="math/tex">f</script> is strictly convex?
+</div>
+</div><div style="margin-top:20px"></div><a href="#657a0299-e8ce-4ff0-8c86-b583b4c40ec1" class ="btn btn-default" data-toggle="collapse">Mentimeter</a><div id=657a0299-e8ce-4ff0-8c86-b583b4c40ec1 class="collapse">
+<a href="https://www.mentimeter.com/s/8d2ddfb80a447c194ed85576e4a3ee9b/cf8c27f497a4" target="_blank">Zooming in on <span class="math"></span><script type="math/tex">f(x) = x^3</script></a>
+</div><div style="margin-top:20px"></div><span id="env6.49"></span><a class="Exerciseno" data-count="6.49"></a><a href="#0b3622e0-ce6d-42c1-a089-16f15e21ada5" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=0b3622e0-ce6d-42c1-a089-16f15e21ada5 class = "collapse Exercise envbuttons">  
+Can you deduce from Corollary <a href=#env6.47 class="labelref">6.47</a> that the function
+<span class="math"></span><script type="math/tex">f: \mathbb{R} \rightarrow \mathbb{R}</script> given by <span class="math"></span><script type="math/tex">f(x) = x^4</script> is a
+strictly convex function? Compare with Exercise <a href="whatisopt.html#env4.25">4.25</a>.
+</div><div style="margin-top:20px"></div><span id="env6.50"></span><a class="Exerciseno" data-count="6.50"></a><a href="#39781bc2-cb04-4988-a6e2-d0cd28c2cb9e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=39781bc2-cb04-4988-a6e2-d0cd28c2cb9e class = "collapse Exercise envbuttons">  
+Show that <span class="math"></span><script type="math/tex">f(x) = e^x</script> is a strictly convex function <span class="math"></span><script type="math/tex">f: \mathbb{R}\rightarrow \mathbb{R}</script>.<div style="margin-top:20px"></div>Show that <span class="math"></span><script type="math/tex">f(x) = -\log(x)</script> is a strictly convex function
+<span class="math"></span><script type="math/tex">f: (0, \infty) \rightarrow \mathbb{R}</script>.
+</div><div style="margin-top:20px"></div><span id="env6.51"></span><a class="Exerciseno" data-count="6.51"></a><a href="#07cef74d-b6d2-42e4-977a-f7773b76d30e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=07cef74d-b6d2-42e4-977a-f7773b76d30e class = "collapse Exercise envbuttons">  
+Show that <span class="math"></span><script type="math/tex">f: \{x\in \mathbb{R} \mid x \geq 0\}\rightarrow \mathbb{R}</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = -\sqrt{x}
+</script>
+is a strictly convex function.
+</div><div style="margin-top:20px"></div>Another nice application of Lemma <a href=#env6.13 class="labelref">6.13</a> (and Theorem <a href=#env6.46 class="labelref">6.46</a>) is the following.<div style="margin-top:20px"></div><div class="emphasize"><span id="env6.52"></span><div class="genericenv" data-count="6.52" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">f:(a, b)\rightarrow \mathbb{R}</script> be a differentiable function. Then <span class="math"></span><script type="math/tex">f</script>
+  is convex if and only if
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(y) \geq f(x) + f'(x)(y-x)
+  </script> 
+  for every <span class="math"></span><script type="math/tex">x, y\in (a, b)</script>.
+</div></div><div style="margin-top:20px"></div><span id="env6.53"></span><a class="Exerciseno" data-count="6.53"></a><a href="#e2ce8bd1-cfdc-4b3f-8c99-53e01da36432" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=e2ce8bd1-cfdc-4b3f-8c99-53e01da36432 class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">f:(a, b)\rightarrow \mathbb{R}</script> is a differentiable
+convex function and <span class="math"></span><script type="math/tex">x_0\in (a, b)</script> is a critical point for
+<span class="math"></span><script type="math/tex">f</script>. What can you say about <span class="math"></span><script type="math/tex">x_0</script> using Theorem <a href=#env6.52 class="labelref">6.52</a>?
+</div><div style="margin-top:20px"></div></div></body>
