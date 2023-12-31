@@ -1,0 +1,62 @@
+<!doctype html>
+<head>
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<script src="js/sidebar.js"></script>
+
+
+
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#006d74a3-2d1f-4b10-b24c-37560502324f"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#6eaa1609-7074-4d00-aa72-5cd54ef4a24a">1.1 Black box warnings</a></li><li><a href="intro.html#c2cbbb02-0276-4ce0-a901-610faab6b812">1.2 Computer algebra</a></li><li><a href="intro.html#c6cdba52-7276-4db8-a2b8-7b920c49e0a3">1.3 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#f843e6e0-51ec-4d30-bdca-7d7c0d65b2b4">1.4 Sets</a></li><li><a href="intro.html#5a199e30-ea07-404f-87b3-8dca740580e7">1.5 Ordering numbers</a></li><li><a href="intro.html#98c264f9-b21b-4887-b862-6b14a8c6b715">1.6 Propositional logic</a></li><li><a href="intro.html#96873e91-8ccf-4678-a266-c16638ce7ed9">1.7 What is a mathematical proof?</a></li><li><a href="intro.html#cb119b82-1051-4dac-b94f-81ecb346b47b">1.8 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#e18d3854-9e17-4ce6-9cbe-f20aa5413f48"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#b5b22ce9-83eb-4971-b842-02bd99dd01fe">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#bd72d81e-802d-40f1-8e5a-9e0a966b5394">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#1519df08-6fa8-4aa0-936d-81a5c67947ef">2.3 Gauss elimination</a></li><li><a href="lineqs.html#408bfec6-58eb-4c0b-9b03-a09807caf3fb">2.4 Polynomials</a></li><li><a href="lineqs.html#e310ba8f-3d3e-4dfe-9fd1-896b50494fc6">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#bdc72d0f-7748-4776-b854-726ff83ad9d0">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#cd57f44e-44a3-4df8-b0f1-af79172b7d75">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#999d29d6-cc98-42a0-bfeb-d89aff2ad728"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#acea57dc-a493-4260-b445-f776b821ad36">3.1 Matrices</a></li><li><a href="matrices.html#20342fc3-09a2-4c9b-82c7-fa3dad20ccab">3.2 Linear maps</a></li><li><a href="matrices.html#f332c88c-8268-4602-928e-ac8687e75bea">3.3 Matrix multiplication</a></li><li><a href="matrices.html#53360251-42af-4a10-8b09-cbc76db0cf9a">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#5b178149-5b14-49e5-876c-afc87af74857">3.5 The inverse matrix</a></li><li><a href="matrices.html#25536c85-160f-462f-99cb-6a6dad75ba0d">3.6 The transposed matrix</a></li><li><a href="matrices.html#59c55165-0cb1-409a-b428-ab189cfb72d7">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#5f94c5a1-3a60-417c-91fa-8e2af76995a6"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#1f20cd20-f831-4fea-9515-9304b9d3fb14">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#fdf66530-fea8-4312-8e27-a65fbee5087b">4.2 General definition</a></li><li><a href="whatisopt.html#ab530ba9-0621-4662-a880-4afbf29fbf8a">4.3 Convex optimization</a></li><li><a href="whatisopt.html#b078a91f-1c19-4a67-bd47-39ef7c01d833">4.4 Linear optimization</a></li><li><a href="whatisopt.html#76ea50d6-77b7-4148-a13e-261de3d6aa0d">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#7198d8d0-6cb4-43ec-964a-112bdb113873">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#7004cde2-baf5-4631-a27e-f05a9e7adf92"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#343af046-e32a-457c-9137-485a8fc2710c">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#ca688149-f0c2-448a-9937-c652974e129f">5.2 Higher dimensions</a></li><li><a href="euclidean.html#d814e2f3-ca31-4d44-bef0-1973205eedff">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#19070637-799f-4d34-8233-8007b99a483d">5.4 Sequences and limits in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script></a></li><li><a href="euclidean.html#51aa864a-2904-4648-96dc-ade30de2ea1a">5.5 Continuous functions</a></li></ul><li><a class="kap" href="convexfunctions.html#5bd7c54f-91ea-4145-bb20-db7e92fb84d7"><b>6</b> Convex functions</a></li><a href="#kap6" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap6" class="collapse"><li><a href="convexfunctions.html#957624e7-479d-480d-9d65-9159ff51a5df">6.1 Strictly convex functions</a></li><li><a href="convexfunctions.html#d742dd52-fcd3-42d6-8b0e-ced92f89c2ca">6.2 Why are convex functions interesting?</a></li><li><a href="convexfunctions.html#d33ee78c-606b-4136-b52b-7f68a83ffbc3">6.3 Differentiable functions</a></li><li><a href="convexfunctions.html#c071e099-4a00-406b-8419-f6cbbea15131">6.4 Taylor polynomials</a></li><li><a href="convexfunctions.html#acc2d9f5-37e6-4ae5-b93a-6ae1661d8c1a">6.5 Differentiable convex functions</a></li></ul><li><a class="kap" href="diffseveral.html#ec344e7f-5efd-4fc8-a3d7-28caea0e2df7"><b>7</b> Several variables</a></li><a href="#kap7" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap7" class="collapse"><li><a href="diffseveral.html#f25eba08-b8e6-4682-9e42-9726432a3078">7.1 Introduction</a></li><li><a href="diffseveral.html#82042f45-9fe3-4165-89b1-d3cf33b126bb">7.2 Vector functions</a></li><li><a href="diffseveral.html#71f2df16-f0b4-431a-8127-9059314ecea5">7.3 Differentiability</a></li><li><a href="diffseveral.html#7cae04b8-b49b-4a3e-994d-c37b48809426">7.4 Newton-Raphson in several variables!</a></li><li><a href="diffseveral.html#cb4d570d-77dc-481e-bd49-df2631c4763a">7.5 Local extrema in several variables</a></li><li><a href="diffseveral.html#14dc8d71-f553-40ea-aa1a-32dc51db63c2">7.6 The chain rule</a></li><li><a href="diffseveral.html#8fe04136-d8ac-49f4-aa68-822690597bad">7.7 Logistic regression</a></li><li><a href="diffseveral.html#4b2d9442-1e84-4f6d-bf0e-1b0d0e67ce1b">7.8 3Blue1Brown</a></li><li><a href="diffseveral.html#798828ad-b196-4fe3-9a1c-d287e53461fd">7.9 Lagrange multipliers</a></li><li><a href="diffseveral.html#714939c5-f53a-46c0-a517-145ded0716ed">7.10 The interior and the boundary of a subset</a></li></ul><li><a class="kap" href="hessian.html#1d4d7f52-ef3b-49d7-96c5-7063208a6d0a"><b>8</b> The Hessian</a></li><a href="#kap8" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap8" class="collapse"><li><a href="hessian.html#47ffb3a0-adab-46bc-b7e2-4cd37e11148b">8.1 Introduction</a></li><li><a href="hessian.html#1ee906f0-0750-4478-9ab1-069565010997">8.2 Several variables</a></li><li><a href="hessian.html#3a13db0d-01e4-496f-8c2c-61e30b8755db">8.3 Newton's method for finding critical points</a></li><li><a href="hessian.html#9d4eeaaa-0155-4a4c-9e11-ea4fa32e48ff">8.4 The Taylor series in several variables</a></li><li><a href="hessian.html#1d424597-f73f-4ab5-b5f1-d9a4e1bb9681">8.5 Convex functions of several variables</a></li><li><a href="hessian.html#ccfc9e26-749e-4bc9-870a-dd59ac1a2188">8.6 How to decide the definiteness of a matrix</a></li></ul><li><a class="kap" href="convexoptimization.html#d3beb991-21bd-4e49-8500-2df3ec89eb97"><b>9</b> Convex optimization</a></li><a href="#kap9" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap9" class="collapse"><li><a href="convexoptimization.html#a39d1aa3-34ea-40a0-803d-381fc2f5548c">9.1 Finding the best hyperplane separating data</a></li><li><a href="convexoptimization.html#3c57808a-288d-4cc8-b91d-6fbef44f983c">9.2 Logarithmic barrier functions</a></li><li><a href="convexoptimization.html#d0332f83-5f95-4d0c-aa6e-c907cac6bb9f">9.3 A geometric optimality criterion</a></li><li><a href="convexoptimization.html#9bcbcfae-3dc8-4743-87b7-090021b8b7da">9.4 KKT</a></li><li><a href="convexoptimization.html#61952270-997d-4c6c-b743-4ca48cc2320f">9.5 Computing with KKT</a></li><li><a href="convexoptimization.html#294fa246-3df7-40dc-bb89-d9287b8b9bfa">9.6 Optimization exercises</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><br><br><h1 text-align:center;>Introduction to Mathematics and Optimization</h1><h2 text-align:center;>Niels Lauritzen</h2><div style="margin-top:20px"></div><p style="margin-bottom: 2cm;"></p><div style="margin-top:20px"></div><div class="centerimg"><img src="img/ChatGPTsimpleexample.png" ></div><div style="margin-top:20px"></div></div></body><div style="margin-top:20px"></div>

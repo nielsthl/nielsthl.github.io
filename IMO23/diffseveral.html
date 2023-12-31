@@ -1,0 +1,1417 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#006d74a3-2d1f-4b10-b24c-37560502324f"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#6eaa1609-7074-4d00-aa72-5cd54ef4a24a">1.1 Black box warnings</a></li><li><a href="intro.html#c2cbbb02-0276-4ce0-a901-610faab6b812">1.2 Computer algebra</a></li><li><a href="intro.html#c6cdba52-7276-4db8-a2b8-7b920c49e0a3">1.3 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#f843e6e0-51ec-4d30-bdca-7d7c0d65b2b4">1.4 Sets</a></li><li><a href="intro.html#5a199e30-ea07-404f-87b3-8dca740580e7">1.5 Ordering numbers</a></li><li><a href="intro.html#98c264f9-b21b-4887-b862-6b14a8c6b715">1.6 Propositional logic</a></li><li><a href="intro.html#96873e91-8ccf-4678-a266-c16638ce7ed9">1.7 What is a mathematical proof?</a></li><li><a href="intro.html#cb119b82-1051-4dac-b94f-81ecb346b47b">1.8 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#e18d3854-9e17-4ce6-9cbe-f20aa5413f48"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#b5b22ce9-83eb-4971-b842-02bd99dd01fe">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#bd72d81e-802d-40f1-8e5a-9e0a966b5394">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#1519df08-6fa8-4aa0-936d-81a5c67947ef">2.3 Gauss elimination</a></li><li><a href="lineqs.html#408bfec6-58eb-4c0b-9b03-a09807caf3fb">2.4 Polynomials</a></li><li><a href="lineqs.html#e310ba8f-3d3e-4dfe-9fd1-896b50494fc6">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#bdc72d0f-7748-4776-b854-726ff83ad9d0">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#cd57f44e-44a3-4df8-b0f1-af79172b7d75">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#999d29d6-cc98-42a0-bfeb-d89aff2ad728"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#acea57dc-a493-4260-b445-f776b821ad36">3.1 Matrices</a></li><li><a href="matrices.html#20342fc3-09a2-4c9b-82c7-fa3dad20ccab">3.2 Linear maps</a></li><li><a href="matrices.html#f332c88c-8268-4602-928e-ac8687e75bea">3.3 Matrix multiplication</a></li><li><a href="matrices.html#53360251-42af-4a10-8b09-cbc76db0cf9a">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#5b178149-5b14-49e5-876c-afc87af74857">3.5 The inverse matrix</a></li><li><a href="matrices.html#25536c85-160f-462f-99cb-6a6dad75ba0d">3.6 The transposed matrix</a></li><li><a href="matrices.html#59c55165-0cb1-409a-b428-ab189cfb72d7">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#5f94c5a1-3a60-417c-91fa-8e2af76995a6"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#1f20cd20-f831-4fea-9515-9304b9d3fb14">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#fdf66530-fea8-4312-8e27-a65fbee5087b">4.2 General definition</a></li><li><a href="whatisopt.html#ab530ba9-0621-4662-a880-4afbf29fbf8a">4.3 Convex optimization</a></li><li><a href="whatisopt.html#b078a91f-1c19-4a67-bd47-39ef7c01d833">4.4 Linear optimization</a></li><li><a href="whatisopt.html#76ea50d6-77b7-4148-a13e-261de3d6aa0d">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#7198d8d0-6cb4-43ec-964a-112bdb113873">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#7004cde2-baf5-4631-a27e-f05a9e7adf92"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#343af046-e32a-457c-9137-485a8fc2710c">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#ca688149-f0c2-448a-9937-c652974e129f">5.2 Higher dimensions</a></li><li><a href="euclidean.html#d814e2f3-ca31-4d44-bef0-1973205eedff">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#19070637-799f-4d34-8233-8007b99a483d">5.4 Sequences and limits in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script></a></li><li><a href="euclidean.html#51aa864a-2904-4648-96dc-ade30de2ea1a">5.5 Continuous functions</a></li></ul><li><a class="kap" href="convexfunctions.html#5bd7c54f-91ea-4145-bb20-db7e92fb84d7"><b>6</b> Convex functions</a></li><a href="#kap6" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap6" class="collapse"><li><a href="convexfunctions.html#957624e7-479d-480d-9d65-9159ff51a5df">6.1 Strictly convex functions</a></li><li><a href="convexfunctions.html#d742dd52-fcd3-42d6-8b0e-ced92f89c2ca">6.2 Why are convex functions interesting?</a></li><li><a href="convexfunctions.html#d33ee78c-606b-4136-b52b-7f68a83ffbc3">6.3 Differentiable functions</a></li><li><a href="convexfunctions.html#c071e099-4a00-406b-8419-f6cbbea15131">6.4 Taylor polynomials</a></li><li><a href="convexfunctions.html#acc2d9f5-37e6-4ae5-b93a-6ae1661d8c1a">6.5 Differentiable convex functions</a></li></ul><li><a class="kap" href="diffseveral.html#ec344e7f-5efd-4fc8-a3d7-28caea0e2df7"><b>7</b> Several variables</a></li><a href="#kap7" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap7" class="collapse"><li><a href="diffseveral.html#f25eba08-b8e6-4682-9e42-9726432a3078">7.1 Introduction</a></li><li><a href="diffseveral.html#82042f45-9fe3-4165-89b1-d3cf33b126bb">7.2 Vector functions</a></li><li><a href="diffseveral.html#71f2df16-f0b4-431a-8127-9059314ecea5">7.3 Differentiability</a></li><li><a href="diffseveral.html#7cae04b8-b49b-4a3e-994d-c37b48809426">7.4 Newton-Raphson in several variables!</a></li><li><a href="diffseveral.html#cb4d570d-77dc-481e-bd49-df2631c4763a">7.5 Local extrema in several variables</a></li><li><a href="diffseveral.html#14dc8d71-f553-40ea-aa1a-32dc51db63c2">7.6 The chain rule</a></li><li><a href="diffseveral.html#8fe04136-d8ac-49f4-aa68-822690597bad">7.7 Logistic regression</a></li><li><a href="diffseveral.html#4b2d9442-1e84-4f6d-bf0e-1b0d0e67ce1b">7.8 3Blue1Brown</a></li><li><a href="diffseveral.html#798828ad-b196-4fe3-9a1c-d287e53461fd">7.9 Lagrange multipliers</a></li><li><a href="diffseveral.html#714939c5-f53a-46c0-a517-145ded0716ed">7.10 The interior and the boundary of a subset</a></li></ul><li><a class="kap" href="hessian.html#1d4d7f52-ef3b-49d7-96c5-7063208a6d0a"><b>8</b> The Hessian</a></li><a href="#kap8" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap8" class="collapse"><li><a href="hessian.html#47ffb3a0-adab-46bc-b7e2-4cd37e11148b">8.1 Introduction</a></li><li><a href="hessian.html#1ee906f0-0750-4478-9ab1-069565010997">8.2 Several variables</a></li><li><a href="hessian.html#3a13db0d-01e4-496f-8c2c-61e30b8755db">8.3 Newton's method for finding critical points</a></li><li><a href="hessian.html#9d4eeaaa-0155-4a4c-9e11-ea4fa32e48ff">8.4 The Taylor series in several variables</a></li><li><a href="hessian.html#1d424597-f73f-4ab5-b5f1-d9a4e1bb9681">8.5 Convex functions of several variables</a></li><li><a href="hessian.html#ccfc9e26-749e-4bc9-870a-dd59ac1a2188">8.6 How to decide the definiteness of a matrix</a></li></ul><li><a class="kap" href="convexoptimization.html#d3beb991-21bd-4e49-8500-2df3ec89eb97"><b>9</b> Convex optimization</a></li><a href="#kap9" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap9" class="collapse"><li><a href="convexoptimization.html#a39d1aa3-34ea-40a0-803d-381fc2f5548c">9.1 Finding the best hyperplane separating data</a></li><li><a href="convexoptimization.html#3c57808a-288d-4cc8-b91d-6fbef44f983c">9.2 Logarithmic barrier functions</a></li><li><a href="convexoptimization.html#d0332f83-5f95-4d0c-aa6e-c907cac6bb9f">9.3 A geometric optimality criterion</a></li><li><a href="convexoptimization.html#9bcbcfae-3dc8-4743-87b7-090021b8b7da">9.4 KKT</a></li><li><a href="convexoptimization.html#61952270-997d-4c6c-b743-4ca48cc2320f">9.5 Computing with KKT</a></li><li><a href="convexoptimization.html#294fa246-3df7-40dc-bb89-d9287b8b9bfa">9.6 Optimization exercises</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div>
+<h1 id="ec344e7f-5efd-4fc8-a3d7-28caea0e2df7">7<span style="float:right;">Several variables</span></h1><div style="margin-top:20px"></div>A function of several variables usually refers to a function
+<span id="equ7.1"></span><div class="math"></div><script type="math/tex; mode=display">
+f: \mathbb{R}^n \rightarrow \mathbb{R},
+\tag{7.1}</script>
+where <span class="math"></span><script type="math/tex">n > 1</script> is a natural number. We have already seen functions
+of several variables with <span class="math"></span><script type="math/tex">n>1</script>. In particular, in Chapter <a href="whatisopt.html#sec4.">4</a>, we
+saw linear functions (in connection with linear programming) like
+<span id="equ7.2"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x_1, x_2) = 3 x_1 + 2 x_2.
+\tag{7.2}</script>
+This is a rather simple function of several variables with <span class="math"></span><script type="math/tex">n=2</script> in <a href=#equ7.1>(7.1)</a>.
+In general functions as in <a href=#equ7.1>(7.1)</a> can be wildly complicated. One of the main purposes
+of this chapter is to zero in on the class of differentiable functions in <a href=#equ7.1>(7.1)</a>. In
+Chapter <a href="convexfunctions.html#sec6.">6</a> we defined what it means for a function of
+one variable to be differentiable. This was inspired by a drawing of the graph of the
+function. In several variables (for <span class="math"></span><script type="math/tex">n > 1</script>) one has to be a bit clever in the definition
+of differentiability. The upshot is that the derivative at a point now is a row vector (or more generally a matrix)
+instead of being a single number. As an example, using notation that we introduce in this chapter,
+the derivative of the function in <a href=#equ7.2>(7.2)</a> at <span class="math"></span><script type="math/tex">(0, 0)</script> is
+<div class="math"></div><script type="math/tex; mode=display">
+\left(\frac{\partial f}{\partial x_1}\quad \frac{\partial f}{\partial x_2}\right) = \left(3\quad 2\right).
+</script>
+This notation means that partial differentiation with respect to a variable occurs i.e., one fixes
+the variable and computes the derivative with respect to this variable viewing all the other variables as constants.<div style="margin-top:20px"></div>First some treasured memories from the author's past.<div style="margin-top:20px"></div><span id="sec7.1"></span><h2 id="f25eba08-b8e6-4682-9e42-9726432a3078">7.1 Introduction</h2><div style="margin-top:20px"></div>Many years ago (1986-89), I had a job as a financial analyst in a bank working (often late at night)
+with a spectacular view of Copenhagen from the office circled below.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/Nordea.png" ></div><div style="margin-top:20px"></div>This was long before a
+financial analyst became a <a href="https://en.wikipedia.org/wiki/Quantitative_analysis_(finance)" target="_blank">quant</a> and machine learning became a buzz word. Digging through my
+old notes from that time, I found the outlines below.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/nlpb.png" ></div><div style="margin-top:20px"></div>These were notes I made in connection with modelling the yield curve
+for zero coupon bonds.  I had to fit a very non-linear function in
+<em>several variables</em> to financial data and had to use effective
+numerical tools (and <span class="bubblelabel footnotecolor">programming them</span><span class="bubblecontent"><span class="bubbleinnercontent"><div class="centerimg"><img src="img/apl.png" ></div></span></span> in 
+<a href="https://en.wikipedia.org/wiki/APL_(programming_language)" target="_blank">APL</a>). Tools
+that are also used today in machine learning and data science. <div style="margin-top:20px"></div>Ultimately we are interested in solving optimization problems like
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x_1, \dots, x_n)\\
+    &\text{with constraint}\\
+    &&(x_1, \dots, x_n)\in C,
+  \end{aligned}</script>
+  where <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^n</script> and <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}</script> is a differentiable (read nice for now) function.<div style="margin-top:20px"></div>Training neural networks is a fancy name for solving an optimization problem, where
+  usually <span class="math"></span><script type="math/tex">C = \mathbb{R}^n</script> and <span class="math"></span><script type="math/tex">f</script> is built just like in the least squares method from some
+  data points. The difference is that in neural networks, <span class="math"></span><script type="math/tex">f</script> is an incredibly complicated
+  (differentiable) function composed of several intermediate functions. We do not, as in the method of
+  least squares, have an explicit formula for finding a minimum. We have to
+  rely on iterative methods. One such method is called <em>gradient descent</em>.<div style="margin-top:20px"></div>Let me illustrate this in the simplest case, where <span class="math"></span><script type="math/tex">n=1</script>. The general case is conceptually very similar
+  (see Lemma <a href="diffseveral.html#env7.19">7.19</a>).<div style="margin-top:20px"></div>Suppose that
+  <span class="math"></span><script type="math/tex">f</script> is differentiable at <span class="math"></span><script type="math/tex">x_0</script> with <span class="math"></span><script type="math/tex">f'(x_0)\neq 0</script> and we wish to
+  solve the minimization problem
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x)\\
+    &\text{with constraint}\\
+    &&x\in \mathbb{R}.
+  \end{aligned}</script>
+  Solving the equation <span class="math"></span><script type="math/tex">f'(x) = 0</script> (to find potential minima) may
+  be difficult. Instead we try something else.<div style="margin-top:20px"></div>We know for sure that <span class="math"></span><script type="math/tex">x_0</script> is not a local minimum (why?). It turns out that we can
+  move a little bit in the <span class="bubblelabel footnotecolor">direction</span><span class="bubblecontent"><span class="bubbleinnercontent">Left if <span class="math"></span><script type="math/tex">f'(x_0) > 0</script> and right if <span class="math"></span><script type="math/tex">f'(x_0) < 0</script>.</span></span> of <span class="math"></span><script type="math/tex">-f'(x_0)</script>  and get a better candidate for
+  a minimum than <span class="math"></span><script type="math/tex">x_0</script> i.e., for small <span class="math"></span><script type="math/tex">\lambda > 0</script> and <span class="math"></span><script type="math/tex">h = -\lambda f'(x_0)</script> we have
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x_0 + h) - f(x_0) < 0. 
+  </script>
+  This is a <span class="bubblelabel footnotecolor">consequence</span><span class="bubblecontent"><span class="bubbleinnercontent">If you use the definition of differentiability with <span class="math"></span><script type="math/tex">h = -\lambda f'(x_0)</script>, you will see that
+    <div class="math"></div><script type="math/tex; mode=display">f(x_0 + h) - f(x_0) = - \lambda( f'(x_0)^2 + \epsilon(-\lambda f'(x_0)) f'(x_0)).</script> For small <span class="math"></span><script type="math/tex">\lambda > 0</script> this shows that <span class="math"></span><script type="math/tex">f(x_0 + h) - f(x_0) < 0</script>, as <span class="math"></span><script type="math/tex">f'(x_0)^2 > 0</script>.</span></span> of the definition of <span class="math"></span><script type="math/tex">f</script> being differentiable at <span class="math"></span><script type="math/tex">x_0</script> with
+  <span class="math"></span><script type="math/tex">f'(x_0)\neq 0</script>.<div style="margin-top:20px"></div>    
+  The process is then repeated putting <span class="math"></span><script type="math/tex">x_0 := x_0 + h</script> until the absolute value of <span class="math"></span><script type="math/tex">f'(x_0)</script> is
+  sufficiently small (indicating that we are close to a point <span class="math"></span><script type="math/tex">x</script> with <span class="math"></span><script type="math/tex">f'(x) = 0</script>).<div style="margin-top:20px"></div>The number <span class="math"></span><script type="math/tex">\lambda > 0</script> is called 
+  the <a href="https://en.wikipedia.org/wiki/Learning_rate" target="_blank">learning rate</a>
+  in machine learning.<div style="margin-top:20px"></div><span id="env7.1"></span><a class="Exerciseno" data-count="7.1"></a><a href="#cf24e7c6-cef8-4655-b24d-fc5ede8dd81f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=cf24e7c6-cef8-4655-b24d-fc5ede8dd81f class = "collapse Exercise envbuttons">  
+  Illustrate the gradient descent method for <span class="math"></span><script type="math/tex">f(x) = x^2</script>. Pay attention to
+  the learning rate <span class="math"></span><script type="math/tex">\lambda > 0</script>. How big is <span class="math"></span><script type="math/tex">\lambda</script> allowed to be, when
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x_0 + h) - f(x_0) < 0
+  </script>
+  is required and <span class="math"></span><script type="math/tex">h = -\lambda f'(x_0)</script>?
+  </div><div style="margin-top:20px"></div><span id="env7.2"></span><a class="Exerciseno" data-count="7.2"></a><a href="#47dc808b-e006-44cd-b73a-b928160b3f94" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=47dc808b-e006-44cd-b73a-b928160b3f94 class = "collapse Exercise envbuttons">  
+  This is a hands-on exercise: carry out the gradient descent method
+  numerically for the function
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x) = (x-1)^4 + \sin(x)^2
+  </script>
+  to solve the minimization problem
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x)\\
+    &\text{with constraint}\\
+    &&x\in \mathbb{R}
+  \end{aligned}</script>
+  starting with <span class="math"></span><script type="math/tex">x_0=1</script>.<div style="margin-top:20px"></div><a href="#6cd9647b-52cb-4b44-bec3-0ba60c575f23" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=6cd9647b-52cb-4b44-bec3-0ba60c575f23 class="collapse">
+    It is not clear how to choose the step size here. Proceed by letting <span class="math"></span><script type="math/tex">k</script> be the
+    smallest natural number, such that
+    <div class="math"></div><script type="math/tex; mode=display">
+    f(x_0 - 2^{-k} f'(x_0)) < f(x_0).
+    </script>
+    Stop the process, when <span class="math"></span><script type="math/tex">|f'(x_0)| < 0.001</script>.<div style="margin-top:20px"></div><a href="#018b262c-85df-49cb-92a9-bbd25cdaaba2" class ="btn btn-default" data-toggle="collapse">Helpful code</a><div id=018b262c-85df-49cb-92a9-bbd25cdaaba2 class="collapse">
+      <div class=sage><script type="text/x-sage">
+def f(x):
+  f = (x-1)^4 + sin(x)^2
+  return f.n()
+
+def fm(x):
+  fm = 4*(x-1)^3 + 2*sin(x)*cos(x)
+  return fm.n()
+
+x0 = 1
+
+print(f(x0))
+for k in range(5):
+  x1 = x0 - 2^(-k)*fm(x0)
+  x2 = x1.n()
+  print((k, x2, f(x2), fm(x2)))
+</script></div>
+</div>
+</div><div style="margin-top:20px"></div>Is <span class="math"></span><script type="math/tex">f</script> a convex function?<div style="margin-top:20px"></div>Explain how the <span class="bubblelabel footnotecolor"><a href="https://en.wikipedia.org/wiki/Newton%27s_method" target="_blank">Newton-Raphson method</a></span><span class="bubblecontent"><span class="bubbleinnercontent">This is an iterative method for approximating a zero for a differentiable function <span class="math"></span><script type="math/tex">g(x)</script>. It works by guessing <span class="math"></span><script type="math/tex">x_0</script> and then iterating <span class="math"></span><script type="math/tex">x_{i+1} = x_i - g(x_i)/g'(x_i)</script> to get a sequence <span class="math"></span><script type="math/tex">x_0, x_1, \dots</script> approximating a zero <span class="math"></span><script type="math/tex">z</script> (<span class="math"></span><script type="math/tex">g(z) = 0</script>).</span></span> may be used to solve the minimization problem and
+  compute the minimum also using this method.<div style="margin-top:20px"></div><a href="#39977352-7f54-4db9-b0c8-4e7eeab013b5" class ="btn btn-default" data-toggle="collapse">Helpful code</a><div id=39977352-7f54-4db9-b0c8-4e7eeab013b5 class="collapse">
+<div class=sage><script type="text/x-sage">
+def fm(x):
+  fm = 4*(x-1)^3 + 2*sin(x)*cos(x)
+  return fm.n()  
+
+def fmm(x):
+  fmm = 12*(x-1)^2 + 2*cos(x)^2 - 2*sin(x)^2
+  return fmm.n()
+
+def newtononestep(x0):
+  newt = x0 - fm(x0)/fmm(x0)
+  x1 = newt.n()
+  return (x1, fm(x1))
+
+newtononestep(1) 
+</script></div>      
+  </div><div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+    plot((x-1)^4 + sin(x)^2, (x, 0, 1))
+    </script></div>
+  </div><div style="margin-top:20px"></div>Recall the definition of a function <span class="math"></span><script type="math/tex">f:\mathbb{R}\rightarrow \mathbb{R}</script> being
+differentiable at a point <span class="math"></span><script type="math/tex">x_0\in \mathbb{R}</script> with derivative <span class="math"></span><script type="math/tex">c = f'(x_0)</script>. Here we measured
+the change <span class="math"></span><script type="math/tex">f(x_0+h) - f(x_0)</script> of <span class="math"></span><script type="math/tex">f</script> in terms of the change <span class="math"></span><script type="math/tex">h</script> (in <span class="math"></span><script type="math/tex">x</script>). It had to have
+the form
+<span id="equ7.3"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x_0+h) - f(x_0) = c\, h + \epsilon(h) h,
+\tag{7.3}</script>
+where <span class="math"></span><script type="math/tex">\epsilon:(-\delta, \delta)\rightarrow \mathbb{R}</script> is a function
+continuous in <span class="math"></span><script type="math/tex">0</script> with <span class="math"></span><script type="math/tex">\epsilon(0) = 0</script> and <span class="math"></span><script type="math/tex">\delta>0</script> small.
+If you divide both sides of <a href=#equ7.3>(7.3)</a> by <span class="math"></span><script type="math/tex">h</script> you recover
+the usual more geometric definition of differentiability as
+a limiting slope:
+<span id="equ7.4"></span><div class="math"></div><script type="math/tex; mode=display">
+\lim_{h\to 0}\, \frac{f(x_0 + h) - f(x_0)}{h} = c = f'(x_0).
+\tag{7.4}</script><div style="margin-top:20px"></div>We wish to define differentiability at <span class="math"></span><script type="math/tex">x_0\in \mathbb{R}^n</script> for a function
+<span class="math"></span><script type="math/tex">f: \mathbb{R}^n\rightarrow \mathbb{R}^m</script>. In this setting the quotient
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{f(x_0 + h) - f(x_0)}{h} 
+</script>
+in <a href=#equ7.4>(7.4)</a> does not make any sense. There is no way we can divide
+a vector <span class="math"></span><script type="math/tex">f(x_0 + h) - f(x_0)\in \mathbb{R}^m</script> by a vector <span class="math"></span><script type="math/tex">h\in \mathbb{R}^n</script>, unless
+of course <span class="math"></span><script type="math/tex">m = n = 1</script> as in <a href=#equ7.4>(7.4)</a>, where we faced
+usual numbers.<div style="margin-top:20px"></div>The natural thing here is to generalize the definition in <a href=#equ7.3>(7.3)</a>.
+First let us recall what functions <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}^m</script> look like.<div style="margin-top:20px"></div><span id="sec7.2"></span><h2 id="82042f45-9fe3-4165-89b1-d3cf33b126bb">7.2 Vector functions</h2><div style="margin-top:20px"></div>A function <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}^m</script> takes a vector
+<span class="math"></span><script type="math/tex">(x_1, \dots, x_n)\in \mathbb{R}^n</script> as input and gives a
+vector <span class="math"></span><script type="math/tex">(y_1, \dots, y_m)\in \mathbb{R}^m</script> as output. This means
+that every coordinate <span class="math"></span><script type="math/tex">y_1, \dots, y_m</script> in the output
+must be a function of <span class="math"></span><script type="math/tex">x_1, \dots, x_n</script> i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+y_i = f_i(x_1, \dots, x_n)
+</script>
+for <span class="math"></span><script type="math/tex">i = 1, \dots, m</script>. So in total, we may write <span class="math"></span><script type="math/tex">f</script> as
+<span id="equ7.5"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x_1, \dots, x_n) =
+\begin{pmatrix}
+  f_1(x_1, \dots, x_n)\\
+  \vdots \\
+  f_m(x_1, \dots, x_n)
+\end{pmatrix}.
+\tag{7.5}</script><div style="margin-top:20px"></div>Each of the (coordinate) functions <span class="math"></span><script type="math/tex">f_i</script> are functions from
+<span class="math"></span><script type="math/tex">\mathbb{R}^n</script> to <span class="math"></span><script type="math/tex">\mathbb{R}</script>.<div style="margin-top:20px"></div><span id="env7.3"></span><a class="Exerciseno" data-count="7.3"></a><a href="#c8244bca-ef3c-4967-8566-44dca9cfa5de" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c8244bca-ef3c-4967-8566-44dca9cfa5de class = "collapse Exercise envbuttons">  
+Look back at Exercise <a href="intro.html#env1.82">1.82</a>. Write down precisely the
+vector function <span class="math"></span><script type="math/tex">h:\mathbb{R}^2\rightarrow \mathbb{R}^2</script> occuring there.
+</div><div style="margin-top:20px"></div><span id="env7.4"></span><a class="Exerciseno" data-count="7.4"></a><a href="#8d81de45-fe6f-4a71-9ac5-e65f04424a64" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=8d81de45-fe6f-4a71-9ac5-e65f04424a64 class = "collapse Exercise envbuttons">  
+The function <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}^2</script> is rotating
+a vector <span class="math"></span><script type="math/tex">90</script> degress counter clockwise. What are
+<span class="math"></span><script type="math/tex">f_1</script> and <span class="math"></span><script type="math/tex">f_2</script> in
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) =
+\begin{pmatrix}
+  f_1(x, y)\\
+  f_2(x, y)
+\end{pmatrix}?
+</script>
+<a href="#6210cef9-0ec0-4fb3-bb40-0dad2c218149" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=6210cef9-0ec0-4fb3-bb40-0dad2c218149 class="collapse">
+Try rotating some specific vectors like <span class="math"></span><script type="math/tex">(1, 0), (0, 1), (1, 1)</script> <span class="math"></span><script type="math/tex">90</script> degrees.
+Do you see a pattern?
+</div>
+</div><div style="margin-top:20px"></div><span id="sec7.3"></span><h2 id="71f2df16-f0b4-431a-8127-9059314ecea5">7.3 Differentiability</h2><div style="margin-top:20px"></div>The definition of differentiability for a function
+<span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}^m</script> mimics <a href=#equ7.3>(7.3)</a>, except
+that <span class="math"></span><script type="math/tex">\epsilon(h) h</script> is replaced by <span class="math"></span><script type="math/tex">\epsilon(h) |h|</script>. Also
+the open interval <span class="math"></span><script type="math/tex">(a, b)</script> is replaced by an open subset <span class="math"></span><script type="math/tex">U</script> and
+the (open) interval <span class="math"></span><script type="math/tex">(-\delta, \delta)</script> is replaced by
+an open subset <span class="math"></span><script type="math/tex">O</script> containing <span class="math"></span><script type="math/tex">0</script>.
+
+Notice, however, that now the derivate is a matrix!<div style="margin-top:20px"></div><div class="emphasize"><span id="env7.5"></span><div class="genericenv" data-count="7.5" data-name="DEFINITION">     
+Let <span class="math"></span><script type="math/tex">f:U\rightarrow \mathbb{R}^m</script> be a
+  function with <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script> an open subset.  Then <span class="math"></span><script type="math/tex">f</script> is
+  <em>differentiable</em> at <span class="math"></span><script type="math/tex">x_0\in U</script> if there exists<div style="margin-top:20px"></div><ol class="lowerroman"><li id="ite7.1">
+  an <span class="math"></span><script type="math/tex">m\times n</script>
+  matrix <span class="math"></span><script type="math/tex">C</script>,
+</li><li id="ite7.2">
+  an open subset <span class="math"></span><script type="math/tex">O\subseteq \mathbb{R}^n</script> with <span class="math"></span><script type="math/tex">0\in O</script>, such that <span class="math"></span><script type="math/tex">x_0+h\in U</script> for every <span class="math"></span><script type="math/tex">h\in O</script>,
+</li><li id="ite7.3">
+  a function <span class="math"></span><script type="math/tex">\epsilon: O\rightarrow \mathbb{R}^m</script> continuous at <span class="math"></span><script type="math/tex">0</script> with <span class="math"></span><script type="math/tex">\epsilon(0) = 0</script>,
+</li></ol>
+  such that
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x_0 + h) - f(x_0) = C\, h + \epsilon(h)\, \left\vert  h  \right\vert,
+  </script>
+  In this case,
+  the <span class="math"></span><script type="math/tex">m\times n</script> matrix <span class="math"></span><script type="math/tex">C</script> is called the (matrix) derivative of
+  <span class="math"></span><script type="math/tex">f</script> at <span class="math"></span><script type="math/tex">x_0</script> and denoted by <span class="math"></span><script type="math/tex">f'(x_0)</script>.<div style="margin-top:20px"></div>The function <span class="math"></span><script type="math/tex">f</script> is called
+  differentiable if it is differentiable at every <span class="math"></span><script type="math/tex">x\in U</script>.
+</div></div><div style="margin-top:20px"></div>How do we compute the matrix derivative <span class="math"></span><script type="math/tex">C</script> in the above definition?
+We need to look at the representation of <span class="math"></span><script type="math/tex">f</script> in <a href=#equ7.5>(7.5)</a> and
+introduce the partial derivatives.<div style="margin-top:20px"></div><span id="sec7.3.1"></span><h3>7.3.1 Partial derivatives</h3><div style="margin-top:20px"></div>A function of one variable <span class="math"></span><script type="math/tex">x</script> has a derivative with respect to <span class="math"></span><script type="math/tex">x</script>. For a function of several
+variables <span class="math"></span><script type="math/tex">x_1, \dots, x_n</script> we have a well defined derivative with respect to each of these
+variables. These are called the partial derivatives (if they exist) and they are defined below.<div style="margin-top:20px"></div><div class="emphasize"><span id="env7.6"></span><div class="genericenv" data-count="7.6" data-name="DEFINITION">     
+  Let <span class="math"></span><script type="math/tex">f: U\rightarrow \mathbb{R}</script> be a function, where <span class="math"></span><script type="math/tex">U</script> is an open subset
+  of <span class="math"></span><script type="math/tex">\mathbb{R}^n</script>. Fix a point <span class="math"></span><script type="math/tex">v = (a_1, a_2, \dots, a_n)\in U</script> and let
+  <div class="math"></div><script type="math/tex; mode=display">
+  p_i = f(a_1, \dots, a_{i-1}, x, a_{i+1}, \dots, a_n)
+  </script>
+  for <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>. If <span class="math"></span><script type="math/tex">p_i</script> is differentiable at <span class="math"></span><script type="math/tex">x = a_i</script> according to Definition <a href=#equ7.3 class="labelref">7.3</a>, then
+  we say that the  <em>partial derivative</em>
+  of <span class="math"></span><script type="math/tex">f</script> with respect to <span class="math"></span><script type="math/tex">x_i</script> exists at <span class="math"></span><script type="math/tex">v\in U</script> and use the notation
+  <div class="math"></div><script type="math/tex; mode=display">
+    \frac{\partial f}{\partial x_i}(v) := p_i'(a_i).
+  </script>
+</div></div><div style="margin-top:20px"></div><div class="frameit">
+<span id="env7.7"></span><div class="remark" data-count="7.7">     
+  The partial derivative with respect to a specific variable is computed by
+  letting all the other variables appear as constants.
+  
+
+
+
+
+</div>
+</div><div style="margin-top:20px"></div>To get a feeling for the definition and computation of partial derivatives, take a look at the
+example below, where we compute using the classical (geometric) definition of the one
+variable derivative.<div style="margin-top:20px"></div><span id="env7.8"></span><div class="example" data-count="7.8">     
+  Consider the function <span class="math"></span><script type="math/tex">f: \mathbb{R}^2 \rightarrow \mathbb{R}</script> given by
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x_1, x_2) = x_1 x_2^2 + x_1.
+  </script>
+  Then
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    \frac{\partial f}{\partial x_2}(v) &=
+    \lim_{\delta\to 0}\frac{f(x_1, x_2 + \delta) - f(x_1, x_2)}{\delta}\\
+    & = \lim_{\delta\to 0}
+    \frac{x_1 (x_2+\delta)^2 + x_1 - (x_1 x_2^2 + x_1)}{\delta}\\
+    &= x_1 \lim_{\delta\to 0}\frac{(x_2+\delta)^2 - x_2^2}{\delta} =
+    x_1\, \lim_{\delta\to 0} (2 x_2 + \delta) = 2 x_1 x_2,
+  \end{aligned}</script>
+  where <span class="math"></span><script type="math/tex">v = (x_1, x_2)</script>. This example illustrates that
+  <span class="math"></span><script type="math/tex">\frac{\partial f}{\partial x_i}</script> can be computed just like in the
+  one variable case, when the other variables (<span class="math"></span><script type="math/tex">\neq x_i</script>) are treated
+  as constants. Notice that
+  <div class="math"></div><script type="math/tex; mode=display">
+    \frac{\partial}{\partial x_1}\frac{\partial f}{\partial x_2} =
+    \frac{\partial }{\partial x_2}\frac{\partial f}{ \partial x_1} = 2
+    x_2. 
+  </script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>Partial derivatives behave almost like the usual derivatives of one
+variable functions. You simply fix one variable that you
+consider the "real" variable and treat the other variables as constants.<div style="margin-top:20px"></div><span id="env7.9"></span><div class="example" data-count="7.9">     
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{\partial}{\partial x}\left( \sin(x y) + x^2 y^2 + y\right) = y \cos(x y) + 2 x y^2.
+  </script>
+</div><div style="margin-top:20px"></div>Below are examples of Sage code computing partial derivatives. Notice that the
+variables must be declared first.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+x1, x2 = var('x1, x2')
+f = x1*x2^2 + x1
+print(f.diff(x2)) # Compute partial derivative of f with respect to x2
+print(f.diff(x2).diff(x1)) # Symmetry of partial derivatives
+print(f.diff(x1).diff(x2)) # Symmetry of partial derivatives
+</script></div><div style="margin-top:20px"></div>The Sage computations above point to a mysterious result. It seems that
+it makes no difference if you compute the partial derivative with respect to <span class="math"></span><script type="math/tex">x_1</script> and
+then with respect to <span class="math"></span><script type="math/tex">x_2</script> or the other way around. You could, just for fun, try this
+out on the more complicated function
+<div class="math"></div><script type="math/tex; mode=display">
+f(x_1, x_2) = x_1 x_2^2 + \cos(\sin(x_1 x_2) + \log(x_1^{17} x_2)).
+</script>
+The surprising general result is formulated in Theorem <a href="diffseveral.html#env7.13">7.13</a> below.<div style="margin-top:20px"></div><span id="env7.10"></span><a class="Exerciseno" data-count="7.10"></a><a href="#e560e229-2cf1-45ff-996b-f1cb18995989" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=e560e229-2cf1-45ff-996b-f1cb18995989 class = "collapse Exercise envbuttons">  
+Use the Sage window above to verify the computation of the partial
+derivative in Example <a href=#env7.9 class="labelref">7.9</a>.
+</div><div style="margin-top:20px"></div>The following result tells us how to compute the matrix derivative.<div style="margin-top:20px"></div><div class="emphasize"><span id="env7.11"></span><div class="genericenv" data-count="7.11" data-name="PROPOSITION">     
+  Let <span class="math"></span><script type="math/tex">f:U\rightarrow \mathbb{R}^m</script> be a function with <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script> an
+  open subset. If <span class="math"></span><script type="math/tex">f</script> is differentiable at <span class="math"></span><script type="math/tex">x_0\in U</script>, then the
+  partial derivatives
+  <div class="math"></div><script type="math/tex; mode=display">
+    \frac{\partial f_i}{\partial x_j}(x_0)
+  </script>
+  exist for <span class="math"></span><script type="math/tex">i = 1, \dots, m</script> and <span class="math"></span><script type="math/tex">j = 1, \dots, n</script> and the matrix <span class="math"></span><script type="math/tex">C</script>
+  in Definition <a href=#env7.5 class="labelref">7.5</a> is
+  <div class="math"></div><script type="math/tex; mode=display">
+    C =
+    \begin{pmatrix}
+      \dfrac{\partial f_1}{\partial x_1}(x_0) & \cdots &
+      \dfrac{\partial f_1}{\partial x_n}(x_0)\\
+      \vdots & \ddots & \vdots \\
+      \dfrac{\partial f_m}{\partial x_1}(x_0) & \cdots &
+      \dfrac{\partial f_m}{\partial x_n}(x_0)
+    \end{pmatrix}.
+  </script>
+</div></div>
+  <a href="#ac83fc59-e5ff-498d-8e1c-0e16ee68be90" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=ac83fc59-e5ff-498d-8e1c-0e16ee68be90 class = "collapse Proof envbuttons">    
+    The <span class="math"></span><script type="math/tex">j</script>-th column in <span class="math"></span><script type="math/tex">C</script> is <span class="math"></span><script type="math/tex">C e_j</script>. Putting <span class="math"></span><script type="math/tex">h = \delta e_j</script> for
+  <span class="math"></span><script type="math/tex">\delta\in \mathbb{R}</script> in Definition <a href=#env7.5 class="labelref">7.5</a> gives
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x_0 + \delta e_j) - f(x_0) = \delta C e_j + \epsilon(\delta e_j)
+    \left\vert  \delta  \right\vert.
+  </script>
+  The <span class="math"></span><script type="math/tex">i</script>-th coordinate of this identity of <span class="math"></span><script type="math/tex">m</script>-dimensional vectors
+  can be written
+  <span id="equ7.6"></span><div class="math"></div><script type="math/tex; mode=display">
+    f_i(x_0 + \delta e_j) - f_i(x_0) = \delta C_{i j} + \tilde{\epsilon}_i(\delta)
+    \delta
+  \tag{7.6}</script>
+  where
+  <div class="math"></div><script type="math/tex; mode=display">
+    \tilde{\epsilon}_i(\delta) = 
+    \begin{cases}
+      \epsilon_i(\delta e_j) \dfrac{\left\vert  \delta  \right\vert}{\delta} &\text{if } \delta\neq 0 \\
+      0 &\text{if } \delta = 0
+    \end{cases}
+  </script>
+  and <a href=#equ7.6>(7.6)</a> shows that <span class="math"></span><script type="math/tex">C_{ij} = \frac{\partial f_i}{\partial x_j}(x_0)</script>.
+      </div><div style="margin-top:20px"></div><span id="env7.12"></span><a class="Exerciseno" data-count="7.12"></a><a href="#e376aa50-1739-49db-8573-99d21a34364e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=e376aa50-1739-49db-8573-99d21a34364e class = "collapse Exercise envbuttons">  
+Compute the matrix derivative of the vector function in Exercise <a href=#env7.4 class="labelref">7.4</a>.
+</div><div style="margin-top:20px"></div>For a function <span class="math"></span><script type="math/tex">f:U\rightarrow \mathbb{R}</script> with <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script>
+an open subset, the partial derivative, if it exists for every <span class="math"></span><script type="math/tex">x\in
+U</script>, is a new function
+<div class="math"></div><script type="math/tex; mode=display">
+  \frac{\partial f}{\partial x_j} : U\rightarrow \mathbb{R}.
+</script>
+We will use the notation
+<div class="math"></div><script type="math/tex; mode=display">
+  \frac{\partial^2 f}{\partial x_i \partial x_j}
+  :=\frac{\partial}{\partial x_i} \frac{\partial f}{\partial x_j}
+</script>
+for the <em>iterated (second order) partial derivative</em>.<div style="margin-top:20px"></div>The first part of following result is a converse to
+Proposition <a href=#env7.11 class="labelref">7.11</a>. The second part contains the surprising
+<em>symmetry of the second order partial derivatives</em> under rather mild
+conditions. We will not go into the proof of this result, which is known as
+<a href="https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives" target="_blank">Clairaut's theorem</a>.<div style="margin-top:20px"></div><div class="emphasize"><span id="env7.13"></span><div class="genericenv" data-count="7.13" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">f:U\rightarrow \mathbb{R}^m</script> be a function with <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script> an
+  open subset. If the partial derivatives for <span class="math"></span><script type="math/tex">f</script> exist at every <span class="math"></span><script type="math/tex">x\in U</script> with
+  <div class="math"></div><script type="math/tex; mode=display">
+    \frac{\partial f_i}{\partial x_j}
+  </script> 
+  continuous (for <span class="math"></span><script type="math/tex">i = 1, \dots, m</script> and <span class="math"></span><script type="math/tex">j = 1, \dots, n</script>), then <span class="math"></span><script type="math/tex">f</script>
+  is differentiable. If the second order partial
+  derivatives exist for a function 
+ <span class="math"></span><script type="math/tex">f : U\rightarrow \mathbb{R}</script> and are continuous functions,
+  then
+  <div class="math"></div><script type="math/tex; mode=display">
+    \frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial^2
+      f}{\partial x_j \partial x_i}
+  </script>
+  for <span class="math"></span><script type="math/tex">i, j = 1, \dots, n</script>.
+</div></div><div style="margin-top:20px"></div><span id="env7.14"></span><a class="Exerciseno" data-count="7.14"></a><a href="#6d6061b9-826a-475c-a92b-5013e72b6482" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6d6061b9-826a-475c-a92b-5013e72b6482 class = "collapse Exercise envbuttons">  
+Verify (by hand!) the symmetry of the second order partial derivatives for the function
+<span class="math"></span><script type="math/tex">f</script> in Example <a href=#env7.9 class="labelref">7.9</a> i.e., show that
+  <div class="math"></div><script type="math/tex; mode=display">
+    \frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2
+      f}{\partial y \partial x}.
+  </script>
+</div><div style="margin-top:20px"></div><span id="env7.15"></span><a class="Exerciseno" data-count="7.15"></a><a href="#92a7e203-d2a6-4d76-9312-0618a4fcc694" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=92a7e203-d2a6-4d76-9312-0618a4fcc694 class = "collapse Exercise envbuttons">  
+Verify that <span class="math"></span><script type="math/tex">f: \mathbb{R}^2\rightarrow \mathbb{R}</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = \frac{x^2 y}{1 + y^2}
+</script>
+is a differentiable function by computing
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{\partial f}{\partial x}\qquad\text{and}\qquad\frac{\partial f}{\partial y}
+</script>
+and applying Theorem <a href=#env7.13 class="labelref">7.13</a>. Check also that
+  <div class="math"></div><script type="math/tex; mode=display">
+    \frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2
+      f}{\partial y \partial x}.
+  </script>
+</div><div style="margin-top:20px"></div><span id="sec7.4"></span><h2 id="7cae04b8-b49b-4a3e-994d-c37b48809426">7.4 Newton-Raphson in several variables!</h2><div style="margin-top:20px"></div>There is a beautiful generalization of the Newton-Raphson method to several variable
+functions <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}^n</script>. Consider first that you would
+like to solve the system
+<span id="equ7.7"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  y^2-x^3 + x &= 0\\
+  y^3-x^2 &= 0
+\end{aligned}\tag{7.7}</script>
+of non-linear equations in the two variables <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script>. Notice that
+we are talking <em>non-linear</em> here. This is so much more
+difficult than the systems of linear equations that you
+encountered in a previous chapter.<div style="margin-top:20px"></div>However, just like we used Newton's method in one variable for solving
+a non-linear equation, Newton's method for finding
+a zero for a function <span class="math"></span><script type="math/tex">f: \mathbb{R}^n\rightarrow \mathbb{R}^n</script> generalized to the
+iterative scheme
+<div class="frameit">
+<span id="equ7.8"></span><div class="math"></div><script type="math/tex; mode=display">
+  x_{i+1} = x_i - f'(x_i)^{-1} f(x_i)
+\tag{7.8}</script>
+</div>
+provided that the <span class="math"></span><script type="math/tex">n\times n</script> matrix derivative <span class="math"></span><script type="math/tex">f'(x_i)</script> is invertible.<div style="margin-top:20px"></div>The reason that <a href=#equ7.8>(7.8)</a> works comes again from the
+powerful definition of differentiability in Definition <a href=#env7.5 class="labelref">7.5</a> using that
+  <span id="equ7.9"></span><div class="math"></div><script type="math/tex; mode=display">
+  f(x) - f(x_0)\qquad \text{is close to}\qquad f'(x_0) (x - x_0)
+\tag{7.9}</script>
+provided that <span class="math"></span><script type="math/tex">h = x - x_0</script> is small. In fact, you get (again)
+<a href=#equ7.8>(7.8)</a> from <a href=#equ7.9>(7.9)</a> by putting <span class="math"></span><script type="math/tex">f(x)</script> to
+<span class="math"></span><script type="math/tex">0</script>, replacing <em>is close to</em> by <span class="math"></span><script type="math/tex">=</script> and then isolating <span class="math"></span><script type="math/tex">x</script>.<div style="margin-top:20px"></div>For the equations in <a href=#equ7.7>(7.7)</a>, the iteration scheme <a href=#equ7.8>(7.8)</a> becomes<div style="margin-top:20px"></div><span id="equ7.10"></span><div class="math"></div><script type="math/tex; mode=display">
+    \begin{pmatrix}
+      x_{i+1} \\ y_{i+1}
+    \end{pmatrix} =
+    \begin{pmatrix}
+      x_i\\ y_i
+    \end{pmatrix} -
+    \begin{pmatrix}
+      - 3 x_i^2+1 & 2 y_i\\
+      -2 x_i & 3 y_i^2
+    \end{pmatrix}^{-1}
+    \begin{pmatrix}
+      y_i^2-x_i^3 + x_i\\ y_i^3 - x_i^2
+    \end{pmatrix}.
+  \tag{7.10}</script><div style="margin-top:20px"></div><span id="env7.16"></span><a class="Exerciseno" data-count="7.16"></a><a href="#622c0f51-8d29-4830-af0b-2abbf3b57f82" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=622c0f51-8d29-4830-af0b-2abbf3b57f82 class = "collapse Exercise envbuttons">  
+  Verify the claim in <a href=#equ7.10>(7.10)</a> by applying <a href=#equ7.8>(7.8)</a> to
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x, y) =
+  \begin{pmatrix}
+    y^2 - x^3 + x\\
+    y^3 - x^2
+  \end{pmatrix}.
+  </script>
+  Carry out sufficiently many iterations starting with the vector <span class="math"></span><script type="math/tex">(1, 1)</script> in
+  <a href=#equ7.10>(7.10)</a> to see the iteration stabilize. You should do this
+  using a computer, for example by modifying the Sage code in the last half of Example <a href="diffseveral.html#env7.18">7.18</a>.
+  </div><div style="margin-top:20px"></div><span id="sec7.5"></span><h2 id="cb4d570d-77dc-481e-bd49-df2631c4763a">7.5 Local extrema in several variables</h2><div style="margin-top:20px"></div>For a function
+<span class="math"></span><script type="math/tex">f:U\rightarrow \mathbb{R}</script>, where <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script>, the derivative
+<span class="math"></span><script type="math/tex">f'(v)</script> at <span class="math"></span><script type="math/tex">v\in U</script> is called <em>the gradient</em>
+for <span class="math"></span><script type="math/tex">f</script> at <span class="math"></span><script type="math/tex">v</script>. Classically, it is denoted <span class="math"></span><script type="math/tex"> \nabla f(v)</script> i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+\nabla f(v) = \left(\frac{\partial f}{\partial x_1}(v) \dots \frac{\partial f}{\partial x_n} (v)\right).
+</script>
+The definition below is stolen from the one variable case.<div style="margin-top:20px"></div><div class="emphasize"><span id="env7.17"></span><div class="genericenv" data-count="7.17" data-name="DEFINITION">     
+  Let <span class="math"></span><script type="math/tex">f:U\rightarrow \mathbb{R}</script> be a function, where <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script> is
+  an open subset. Suppose that the partial derivatives exist at
+  <span class="math"></span><script type="math/tex">x_0\in U</script>. Then <span class="math"></span><script type="math/tex">x_0</script> is called a <em>critical
+    point</em> for <span class="math"></span><script type="math/tex">f</script> if <span class="math"></span><script type="math/tex">\nabla f(x_0)=0</script>.
+</div></div><div style="margin-top:20px"></div><span id="env7.18"></span><div class="example" data-count="7.18">     
+    Consider the function <span class="math"></span><script type="math/tex">f: \mathbb{R}^2 \rightarrow \mathbb{R}^2</script> given by
+    <div class="math"></div><script type="math/tex; mode=display">
+    f\begin{pmatrix} x \\ y \end{pmatrix} =
+    \begin{pmatrix}
+      2 x + 3 \log(y)\\
+      3 x / y - 3 y^2
+      \end{pmatrix}
+      </script>
+      corresponding to finding critical points for the function
+      <span id="equ7.11"></span><div class="math"></div><script type="math/tex; mode=display">
+      g(x, y) = x^2 + 3 x \log(y) - y^3.
+      \tag{7.11}</script><div style="margin-top:20px"></div>You can left click and hold the graph computed below (after it has rendered) and rotate
+  the surface to get a feeling for what <a href=#equ7.11>(7.11)</a> looks like. Zooming in is also possible.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+x, y = var('x, y')
+plot3d(x^2 + 3*x*log(y) - y^3, (x, 0.25, 1), (y, 0.5, 1), 
+adaptive=True, color=rainbow(60, 'rgbtuple'))
+</script></div><div style="margin-top:20px"></div>Here
+      <div class="math"></div><script type="math/tex; mode=display">
+      f' =
+      \begin{pmatrix}
+        2 & 3/y \\
+        3/y & -3 x/y^2 - 6 y
+      \end{pmatrix}.
+      </script><div style="margin-top:20px"></div>In the Sage code below, Newton's method is started at <span class="math"></span><script type="math/tex">(1, 1)</script> and iterated four times.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+import numpy as np
+import numpy.linalg as la
+
+def f(x):
+  return np.array([2*x[0] + 3*log(x[1]), 3*x[0]/x[1] - 3*x[1]*x[1]])
+
+def df(x):
+  return np.array([[2, 3/x[1]], [3/x[1], -3*x[0]/x[1]^2 - 6*x[1]]]) 
+
+def newton(x):
+   s = la.solve(df(x), f(x)) # Corresponds to f'(x)^{-1} f(x).  
+   return x - s
+
+v0 = np.array([1, 1])
+
+v1 = newton(v0)
+print(v1)
+v2 = newton(v1)
+print(v2)
+v3 = newton(v2)
+print(v3)
+v4 = newton(v3)
+print(v4)
+</script></div>
+</div><div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">x_0</script> is not a critical point for <span class="math"></span><script type="math/tex">f</script> we can use the gradient
+vector to move in a direction making <span class="math"></span><script type="math/tex">f</script> strictly smaller/larger. This is
+very important for optimization problems.<div style="margin-top:20px"></div><div class="emphasize"><span id="env7.19"></span><div class="genericenv" data-count="7.19" data-name="LEMMA">     
+  Let <span class="math"></span><script type="math/tex">f: U\rightarrow \mathbb{R}</script> be a differentiable function, where
+  <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script> is an open subset. Suppose that <span class="math"></span><script type="math/tex">u\in \mathbb{R}^n</script> and
+  <span class="math"></span><script type="math/tex">\nabla f(x_0) u < 0</script> for <span class="math"></span><script type="math/tex">x_0\in U</script>. Then
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x_0 + \lambda u) < f(x_0)
+  </script>
+  for <span class="math"></span><script type="math/tex">\lambda > 0</script> small.
+</div></div>
+<a href="#85db2c5b-7832-4508-9a93-136a6e71a208" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=85db2c5b-7832-4508-9a93-136a6e71a208 class = "collapse Proof envbuttons">    
+  By the differentiability of <span class="math"></span><script type="math/tex">f</script>,
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x_0 + u) - f(x_0) = \nabla f(x_0) u + \epsilon(u) |u|,
+  </script>
+  where <span class="math"></span><script type="math/tex">\epsilon:\mathbb{R}^n \rightarrow \mathbb{R}</script> is a function satisfying
+  <span class="math"></span><script type="math/tex">\epsilon(h) \rightarrow 0</script> for <span class="math"></span><script type="math/tex">h\rightarrow 0</script>. For <span class="math"></span><script type="math/tex">\lambda > 0</script>
+  with <span class="math"></span><script type="math/tex">x_0 + \lambda u\in U</script> we have
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x_0 + \lambda u) - f(x_0) = \lambda (\nabla f(x_0) u +
+    \epsilon(\lambda u) 
+    | u |).
+  </script>
+  When <span class="math"></span><script type="math/tex">\lambda</script> tends to zero from the right, it follows that <span class="math"></span><script type="math/tex">f(x_0 + \lambda u) - f(x_0) <
+  0</script> for small <span class="math"></span><script type="math/tex">\lambda > 0</script>.
+  </div><div style="margin-top:20px"></div>Lemma <a href=#env7.19 class="labelref">7.19</a> looks innocent, but it is the bread and butter in the
+training of neural networks. In mathematical terms, training means
+minimizing a function. In machine learning terms, <span class="math"></span><script type="math/tex">\lambda</script> above
+is called the <em>learning rate</em>. One iteration (why do I choose <span class="math"></span><script type="math/tex">u = -\nabla f(x)</script>?)
+<div class="math"></div><script type="math/tex; mode=display">
+x - \lambda \nabla f(x)
+</script>
+of Lemma <a href=#env7.19 class="labelref">7.19</a> is the central ingredient in an <em>epoch</em>
+in training a neural network.<div style="margin-top:20px"></div><span id="env7.20"></span><div class="example" data-count="7.20">     
+Let us briefly pause and see Lemma <a href=#env7.19 class="labelref">7.19</a> in action. Consider the function
+<span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> given by 
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = x^2 + y^2
+</script>
+and <span class="math"></span><script type="math/tex">x_0 = \begin{pmatrix} 1\\ 1\end{pmatrix}</script> with 
+  <span class="math"></span><script type="math/tex">u = \begin{pmatrix} -1 \\ 0\end{pmatrix}</script>.
+    In this case <span class="math"></span><script type="math/tex">\nabla f(x_0) = \begin{pmatrix} 2 & 2\end{pmatrix}</script> and
+      <span class="math"></span><script type="math/tex">\nabla f(x_0) u = -2 < 0</script> . Therefore we may find a small <span class="math"></span><script type="math/tex">\lambda > 0</script>, such that <span class="math"></span><script type="math/tex">f(x_0 + \lambda u) < f(x_0)</script>.
+      How do we choose <span class="math"></span><script type="math/tex">\lambda</script> optimally? If <span class="math"></span><script type="math/tex">\lambda</script> is too big we fail and land up in a worse point than <span class="math"></span><script type="math/tex">x_0</script>.
+      Here
+<div class="math"></div><script type="math/tex; mode=display">
+f(x_0 + \lambda u) = (1 -\lambda)^2 + 1
+</script><div style="margin-top:20px"></div>This is a quadratic polynomial, which is minimal for 
+<span class="math"></span><script type="math/tex">\lambda = 1</script>. Therefor the minimal value reached in the direction of  <span class="math"></span><script type="math/tex">u</script> is  <span class="math"></span><script type="math/tex">1</script>.
+The process now continues replacing <span class="math"></span><script type="math/tex">x_0</script> by  <span class="math"></span><script type="math/tex">x_0 + 1\cdot u</script>.
+</div><div style="margin-top:20px"></div>The result below is the multi variable generalization of looking for
+local extrema by putting <span class="math"></span><script type="math/tex">f'=0</script> in the one variable case.<div style="margin-top:20px"></div><div class="emphasize"><span id="env7.21"></span><div class="genericenv" data-count="7.21" data-name="PROPOSITION">     
+  Let <span class="math"></span><script type="math/tex">f: U\rightarrow \mathbb{R}</script> be a differentiable function, where
+  <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script> is an open subset. If <span class="math"></span><script type="math/tex">x_0\in U</script> is a local
+  extremum, then <span class="math"></span><script type="math/tex">x_0</script> is a critical point for <span class="math"></span><script type="math/tex">f</script>.
+</div></div>
+<a href="#4ad8918f-8029-4f30-9f13-3273091a7a7f" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=4ad8918f-8029-4f30-9f13-3273091a7a7f class = "collapse Proof envbuttons">    
+  Suppose that <span class="math"></span><script type="math/tex">\nabla f(x_0)\neq 0</script>.  If <span class="math"></span><script type="math/tex">x_0</script> is a local minimum,
+  then we may use <span class="math"></span><script type="math/tex">u = -\nabla f(x_0)</script> in
+  Lemma <a href=#env7.19 class="labelref">7.19</a> to deduce that <span class="math"></span><script type="math/tex">f(x_0 + \lambda u) <
+  f(x_0)</script> for <span class="math"></span><script type="math/tex">\lambda>0</script> small. This contradicts the local minimality
+  of <span class="math"></span><script type="math/tex">x_0</script>.  If <span class="math"></span><script type="math/tex">x_0</script> is a local maximum we can apply
+  Lemma <a href=#env7.19 class="labelref">7.19</a> with <span class="math"></span><script type="math/tex">-f</script> and <span class="math"></span><script type="math/tex">u = \nabla f(x_0)</script>
+  to reach a similar contradiction.  Therefore <span class="math"></span><script type="math/tex">\nabla f(x_0)=0</script> and
+  <span class="math"></span><script type="math/tex">x_0</script> is a critical point for~<span class="math"></span><script type="math/tex">f</script>.
+  </div><div style="margin-top:20px"></div><span id="env7.22"></span><a class="Exerciseno" data-count="7.22"></a><a href="#72d8dcd5-9568-44fe-a20b-f4aebad4fbe1" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=72d8dcd5-9568-44fe-a20b-f4aebad4fbe1 class = "collapse Exercise envbuttons">  
+Compute the critical points of
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = x^3 + x y + y^3.
+</script>
+Is <span class="math"></span><script type="math/tex">(0,0)</script> a local maximum or a local minimum for <span class="math"></span><script type="math/tex">f</script>?<div style="margin-top:20px"></div><a href="#6ef24b6c-a497-4972-a9a7-6edc300f0155" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=6ef24b6c-a497-4972-a9a7-6edc300f0155 class="collapse">
+Look at 
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+f_1(t) &= f(t, t)\\
+f_2(t) &= f(t, -t)
+\end{aligned}</script>
+and <span class="math"></span><script type="math/tex">f_1''(0)</script> and <span class="math"></span><script type="math/tex">f_2''(0)</script> (along with Theorem <a href="convexfunctions.html#env6.43">6.43</a>).
+</div>
+</div><div style="margin-top:20px"></div><span id="env7.23"></span><a class="Exerciseno" data-count="7.23"></a><a href="#98d1b661-b9d2-4223-a17c-e34454e541b8" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=98d1b661-b9d2-4223-a17c-e34454e541b8 class = "collapse Exercise envbuttons">  
+We will prove later that a differentiable function <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> is
+strictly convex if the socalled Hessian matrix given by
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  \dfrac{\partial^2 f}{\partial x^2}(v) &   \dfrac{\partial^2 f}{\partial x \partial y}(v) \\[1em]
+  \dfrac{\partial^2 f}{\partial y \partial x}(v) &   \dfrac{\partial^2 f}{\partial y^2}(v)
+\end{pmatrix}
+</script>
+is positive definite for every <span class="math"></span><script type="math/tex">v\in \mathbb{R}^2</script>. This is a multivariable generalization of
+the fact that <span class="math"></span><script type="math/tex">g: \mathbb{R}\rightarrow \mathbb{R}</script> is strictly convex if <span class="math"></span><script type="math/tex">g''(x) > 0</script> for every
+<span class="math"></span><script type="math/tex">x\in \mathbb{R}</script>.<div style="margin-top:20px"></div>Now let
+<span id="equ7.12"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = x^2 + y^2 - \cos(x) -\sin(y).
+\tag{7.12}</script><div style="margin-top:20px"></div><a href="#baabd3fd-65ae-4b8b-a93a-1af2774a1683" class ="btn btn-default" data-toggle="collapse">3D graph</a><div id=baabd3fd-65ae-4b8b-a93a-1af2774a1683 class="collapse">
+  You can left click the surface computed below after it has rendered and  rotate
+  or zoom in.
+<div class=sage><script type="text/x-sage">
+x, y = var('x, y')
+plot3d(x^2 + y^2 - cos(x) -sin(y), (x, -1, 1), (y, -1, 1), adaptive=True, color=rainbow(60, 'rgbtuple'))
+</script></div>
+</div><div style="margin-top:20px"></div><ol class="alpha"><li id="ite7.4">
+  Show that <span class="math"></span><script type="math/tex">f</script> is strictly convex.
+</li><li id="ite7.5">
+  Compute the critical point(s) of <span class="math"></span><script type="math/tex">f</script>.<div style="margin-top:20px"></div><a href="#55ba2495-a29c-4491-beaf-40ede04b7ed0" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=55ba2495-a29c-4491-beaf-40ede04b7ed0 class="collapse">
+    This is a numerical computation! Modify the relevant Sage window for Newton's method
+    in the previous chapter to do it.
+    </div>
+</li><li id="ite7.6">
+  For a differentiable convex function <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> we have in general that
+  <span id="equ7.13"></span><div class="math"></div><script type="math/tex; mode=display">
+  f(v) \geq f(u) + \nabla f(u) (v-u)
+  \tag{7.13}</script>
+  for every <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^2</script>. This is a multivariable generalization of Theorem <a href="convexfunctions.html#env6.53">6.53</a>.<div style="margin-top:20px"></div>Explain how one can use <a href=#equ7.13>(7.13)</a> to find a global minimum for the function <span class="math"></span><script type="math/tex">f</script> in <a href=#equ7.12>(7.12)</a>. Is this minimum unique? Is
+  <span class="math"></span><script type="math/tex">f(x, y)\geq -1</script> for every <span class="math"></span><script type="math/tex">x, y\in \mathbb{R}</script>?
+</li></ol>
+  </div><div style="margin-top:20px"></div><span id="sec7.6"></span><h2 id="14dc8d71-f553-40ea-aa1a-32dc51db63c2">7.6 The chain rule</h2><div style="margin-top:20px"></div>Recall the chain rule for functions of one variable. Here we have
+functions <span class="math"></span><script type="math/tex">f:(a, b)\rightarrow \mathbb{R}</script> and <span class="math"></span><script type="math/tex">g:(c, d)\rightarrow \mathbb{R}</script>,
+such that <span class="math"></span><script type="math/tex">g(x)\in (a, b)</script> for <span class="math"></span><script type="math/tex">x\in (c, d)</script>. If <span class="math"></span><script type="math/tex">g</script> is differentiable at <span class="math"></span><script type="math/tex">x_0\in (c, d)</script> and <span class="math"></span><script type="math/tex">f</script>
+ is
+differentiable at <span class="math"></span><script type="math/tex">g(x_0)\in (a, b)</script>, the chain rule says that <span class="math"></span><script type="math/tex">f\circ
+g</script> is differentiable at <span class="math"></span><script type="math/tex">x_0</script> with
+<div class="math"></div><script type="math/tex; mode=display">
+  (f\circ g)'(x_0) = f'(g(x_0)) g'(x_0).
+</script>
+This rule generalizes verbatim to functions of several variables:
+<div class="math"></div><script type="math/tex; mode=display">
+  (f\circ g)'(x_0) = f'( g(x_0)) g'(x_0)
+</script>
+for compatible multivariate functions <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script> when you replace
+usual multiplication by matrix multiplication. <div style="margin-top:20px"></div><div class="emphasize"><span id="env7.24"></span><div class="genericenv" data-count="7.24" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">f:U\rightarrow \mathbb{R}^m</script> and <span class="math"></span><script type="math/tex">g: V\rightarrow \mathbb{R}^n</script> with
+  <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script>, <span class="math"></span><script type="math/tex">V\subseteq \mathbb{R}^l</script> open subsets and
+  <span class="math"></span><script type="math/tex">g(V)\subseteq U</script>. If <span class="math"></span><script type="math/tex">g</script> is differentiable at <span class="math"></span><script type="math/tex">x_0\in V</script> and <span class="math"></span><script type="math/tex">f</script> is
+  differentiable at <span class="math"></span><script type="math/tex">g(x_0)\in U</script>, then <span class="math"></span><script type="math/tex">f\circ g</script> is differentiable
+  at <span class="math"></span><script type="math/tex">x_0</script> with
+  <div class="math"></div><script type="math/tex; mode=display">
+    (f\circ g)'(x_0) = f'( g(x_0)) g'(x_0).
+  </script>
+</div></div><div style="margin-top:20px"></div>The proof of the chain rule in this general setting uses
+Definition <a href=#env7.5 class="labelref">7.5</a> just as in the one variable
+case. It is not conceptually difficult, but severely
+cumbersome. We will not give it here.<div style="margin-top:20px"></div><span id="env7.25"></span><div class="example" data-count="7.25">     
+Consider <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> given by 
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = x^2 + y^2
+</script> 
+and
+<span class="math"></span><script type="math/tex">g:\mathbb{R} \rightarrow \mathbb{R}^2</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+g(t) = \begin{pmatrix}
+t^2\\
+t^3
+\end{pmatrix}.
+</script>
+We wish to use the chain rule to compute <span class="math"></span><script type="math/tex">(f\circ g)'(t)</script>. Now,
+<span class="math"></span><script type="math/tex">f'(v)</script> is a <span class="math"></span><script type="math/tex">1\times 2</script> matrix and <span class="math"></span><script type="math/tex">g'(t)</script> is a <span class="math"></span><script type="math/tex">2\times 1</script> matrix
+and the chain rule reads
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+(f\circ g)'(t) &= f'(g(t)) g'(t) \\
+&= \begin{pmatrix} \frac{\partial f}{\partial x}(t^2, t^3) & \frac{\partial f}{\partial y}(t^2, t^3) \end{pmatrix}
+\begin{pmatrix}
+2 t\\
+3 t^2
+\end{pmatrix} =\\
+&= \frac{\partial f}{\partial x}(t^2, t^3) 2 t + \frac{\partial f}{\partial y}(t^2, t^3) 3 t^2 \\
+&= 4 t^3 + 6 t^5.
+\end{aligned}</script>
+Of course, this agrees with the computation
+<div class="math"></div><script type="math/tex; mode=display">
+(f\circ g)(t) = t^4 + t^6.
+</script>
+But, often you cannot hope to be able to compute the function and then find
+the derivative. Here the chain rule may come in handy (as in backpropagation in
+training neural networks).
+</div><div style="margin-top:20px"></div><span id="sec7.6.1"></span><h3>7.6.1 Computational graphs and the chain rule</h3><div style="margin-top:20px"></div>Consider a composition of the functions <span class="math"></span><script type="math/tex">f:\mathbb{R}^m\rightarrow \mathbb{R}^n</script> and
+<span class="math"></span><script type="math/tex">C: \mathbb{R}^n\rightarrow \mathbb{R}</script>. This gives a composite function
+<div class="math"></div><script type="math/tex; mode=display">
+F = C\circ f: \mathbb{R}^m\rightarrow \mathbb{R}.
+</script>
+The chain rule then says that
+<div class="math"></div><script type="math/tex; mode=display">
+F'(x) = C'(u) f'(x)
+</script> for
+a vector <span class="math"></span><script type="math/tex">x\in \mathbb{R}^m</script> and <span class="math"></span><script type="math/tex">u = f(x)</script>. Notice that this is a matrix
+product between a <span class="math"></span><script type="math/tex">1\times n</script> matrix and an <span class="math"></span><script type="math/tex">n\times m</script> matrix.<div style="margin-top:20px"></div>Let us write it out. Suppose that 
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = 
+f
+\begin{pmatrix}
+  x_1\\ \vdots \\ x_m
+\end{pmatrix} =
+\begin{pmatrix}
+  u_1(x_1, \dots, x_m) \\ \vdots \\ u_n(x_1, \dots, x_m)
+\end{pmatrix}
+</script><div style="margin-top:20px"></div>and
+<div class="math"></div><script type="math/tex; mode=display">
+C(u) = C
+\begin{pmatrix} u_1\\ \vdots \\ u_n
+\end{pmatrix}.
+</script>
+Then
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{\partial F}{\partial x_i} =
+\frac{\partial C}{\partial u_1}\frac{\partial u_1}{\partial x_i} + \cdots +
+\frac{\partial C}{\partial u_n} \frac{\partial u_n}{\partial x_i}
+</script>
+for <span class="math"></span><script type="math/tex">i = 1, \dots, m</script>.<div style="margin-top:20px"></div>This is simply writing out the matrix multiplication
+<div class="math"></div><script type="math/tex; mode=display">
+  C'(u) f'(x) =
+  \begin{pmatrix}
+    \frac{\partial C}{\partial u_1} & \cdots & \frac{\partial C}{\partial u_n}
+  \end{pmatrix}
+  \begin{pmatrix}
+    \frac{\partial u_1}{\partial x_1} & \cdots & \frac{\partial u_1}{\partial x_m}\\
+    \vdots & \ddots & \vdots \\
+   \frac{\partial u_n}{\partial x_1} & \cdots & \frac{\partial u_n}{\partial x_m}
+  \end{pmatrix}.
+</script><div style="margin-top:20px"></div><span id="env7.26"></span><div class="example" data-count="7.26">     
+  Consider three innocent functions <span class="math"></span><script type="math/tex">f, g, C: \mathbb{R}\rightarrow \mathbb{R}</script> given by
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    f(x) &= \alpha x + \beta\\
+    g(x) &= \gamma x + \delta\\
+    C(x) &= x^2,
+  \end{aligned}</script>
+  where <span class="math"></span><script type="math/tex">\alpha, \beta, \gamma, \delta\in \mathbb{R}</script>.
+  Then the composite <span class="math"></span><script type="math/tex">F = C\circ g\circ f</script> is also a function <span class="math"></span><script type="math/tex">\mathbb{R}\rightarrow
+  \mathbb{R}</script>. Let us turn things upside down. If we fix <span class="math"></span><script type="math/tex">x\in \mathbb{R}</script> and let
+  <span class="math"></span><script type="math/tex">\alpha, \beta, \gamma\, \delta\in \mathbb{R}</script> vary, then <span class="math"></span><script type="math/tex">F</script> may be viewed
+  as a function <span class="math"></span><script type="math/tex">\mathbb{R}^4\rightarrow \mathbb{R}</script>. Here <span class="math"></span><script type="math/tex">C'(u) = 2 u</script> and
+  <div class="math"></div><script type="math/tex; mode=display">
+  F'(w) = \begin{pmatrix}
+    \frac{\partial F}{\partial \alpha} &
+    \frac{\partial F}{\partial \beta} &
+    \frac{\partial F}{\partial \gamma} &
+    \frac{\partial F}{\partial \delta} 
+  \end{pmatrix} =
+  C'(u) u'(w) = 2 u u'(w),
+  </script>
+  where
+  <div class="math"></div><script type="math/tex; mode=display">
+  u = u(\alpha, \beta, \gamma, \delta) = (g\circ f)(\alpha, \beta, \gamma, \delta) = \gamma ( \alpha x + \beta) + \delta.
+  </script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env7.27"></span><div class="example" data-count="7.27">     <div style="margin-top:20px"></div>It is often complicated to apply the chain rule if the
+function <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}^m</script> is composed of many
+functions. To organize the computation of <span class="math"></span><script type="math/tex">f'(x_0)</script> one
+works with the socalled <em>computational graph</em> of <span class="math"></span><script type="math/tex">f</script>.<div style="margin-top:20px"></div>A computational graph is made up of several nodes and directed edges.<div style="margin-top:20px"></div><div style="margin-top:20px"></div>We will consider the example
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) =   \sin(x y) + x^2 y^2 + y
+</script>
+from Example <a href=#env7.9 class="labelref">7.9</a>. Even though <span class="math"></span><script type="math/tex">f(x, y)</script> superficially looks rather simple,
+it is composed of several smaller functions as displayed in the computational graph<div style="margin-top:20px"></div><div class="centerimg"><img src="img/fsevgraph.svg" ></div><div style="margin-top:20px"></div>Every node in the above graph, except the input nodes (with no ingoing arrows),
+represents some function <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}^m</script>. For example the node
+<span class="math"></span><script type="math/tex">\sin</script> represents a function <span class="math"></span><script type="math/tex">f: \mathbb{R}\rightarrow \mathbb{R}</script> and <span class="math"></span><script type="math/tex">*</script> represents
+a function <span class="math"></span><script type="math/tex">f: \mathbb{R}^2\rightarrow \mathbb{R}</script>.<div style="margin-top:20px"></div>To emphasize that the non-input nodes really are functions we replace them by letters:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/fsevgraphfunct.svg" ></div><div style="margin-top:20px"></div>Here we see that 
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = F(a(c(x, y)), y, b(d(x), e(y))), 
+</script>
+where
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  F(a, y, b) &= a + y + b\\
+  a(c) &= \sin(c)\\
+  c(x, y) &= x y\\
+  b(d, e) &= d e\\
+  d(x) &= x^2\\
+  e(y) &= y^2
+\end{aligned}</script><div style="margin-top:20px"></div>The gradient is then available from the decorated graph below<div style="margin-top:20px"></div><div class="centerimg"><img src="img/fsevgraphfunctpd.svg" ></div><div style="margin-top:20px"></div>by multiplying the decorations on each path from the top to the input variable and the summing up. For example,
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{\partial F}{\partial x} = \frac{\partial F}{\partial a} \frac{\partial a}{\partial c} \frac{\partial c}{\partial x} + \frac{\partial F}{\partial b} \frac{\partial b}{\partial d} \frac{\partial d}{\partial x}.
+</script><div style="margin-top:20px"></div>
+Computational graphs and the chain rule are important components in machine learning libraries. Below is an example of
+the computation of <span class="math"></span><script type="math/tex">\frac{\partial F}{\partial x}</script> in the computational graph above using the <a href="https://en.wikipedia.org/wiki/PyTorch" target="_blank"><tt>pytorch</tt></a> library.<div style="margin-top:20px"></div><div class=sagepython><script type="text/x-sage">
+import torch
+
+# Ensure that PyTorch tensors use gradients
+x = torch.tensor(1.0, requires_grad=True)
+y = torch.tensor(1.0, requires_grad=True)
+
+# Define the operations
+c = x * y
+d = x**2
+e = y**2
+b = d * e
+a = torch.sin(c)
+F = a + b + y
+
+# Calculate the gradient with respect to x
+F.backward()
+
+# Print the gradient of F with respect to x
+print(x.grad)
+</script></div><div style="margin-top:20px"></div>
+
+
+</div><div style="margin-top:20px"></div><span id="env7.28"></span><a class="Exerciseno" data-count="7.28"></a><a href="#0a1e1eb5-2d9f-4afb-a7ad-e47bbadee537" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=0a1e1eb5-2d9f-4afb-a7ad-e47bbadee537 class = "collapse Exercise envbuttons">  
+Construct a computational graph for
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = x^3 + x y + y^3
+</script>
+and detail the computation of the gradient <span class="math"></span><script type="math/tex">\nabla f</script> in this context.<div style="margin-top:20px"></div>Compute the
+gradient of <span class="math"></span><script type="math/tex">f</script> at <span class="math"></span><script type="math/tex">(x, y) = (1, 1)</script> using <tt>pytorch</tt>.
+</div><div style="margin-top:20px"></div><span id="env7.29"></span><a class="Exerciseno" data-count="7.29"></a><a href="#1d98b9cd-4243-4fdc-bc09-ef8fe617e89e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=1d98b9cd-4243-4fdc-bc09-ef8fe617e89e class = "collapse Exercise envbuttons">  
+Consider <span class="math"></span><script type="math/tex">f: \mathbb{R}\rightarrow \mathbb{R}^3</script> and <span class="math"></span><script type="math/tex">g:\mathbb{R}^3\rightarrow \mathbb{R}</script>
+  given by
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(t) =
+     \begin{pmatrix}
+       t\\ t^2\\ t^3
+     \end{pmatrix}\qquad \text{and}\qquad g
+    \begin{pmatrix}
+       x\\ y\\ z
+     \end{pmatrix} = x^2 + 3 y^6 + 2 z^5.
+  </script>
+  Compute <span class="math"></span><script type="math/tex">(g\circ f)'(t)</script> using the chain rule and check the result
+  with an explicit computation of the derivative of <span class="math"></span><script type="math/tex">g\circ f:
+  \mathbb{R}\rightarrow \mathbb{R}</script>.
+</div><div style="margin-top:20px"></div><span id="env7.30"></span><a class="Exerciseno" data-count="7.30"></a><a href="#6cf727a8-a1b1-4594-be23-d81672ff3b96" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6cf727a8-a1b1-4594-be23-d81672ff3b96 class = "collapse Exercise envbuttons">  
+We wish to show that the function <span class="math"></span><script type="math/tex">f: \mathbb{R}^2 \rightarrow \mathbb{R}</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = x^2 + y^2
+</script>
+is convex. This means that we need to prove that
+<div class="math"></div><script type="math/tex; mode=display">
+f((1-t)x_0 + t x_1, (1-t) y_0 + t y_1) \leq (1-t) f(x_0, y_0) + t f(x_1, y_1)
+</script>
+for every <span class="math"></span><script type="math/tex">(x_0. y_0), (x_1, y_1)\in \mathbb{R}^2</script> and every <span class="math"></span><script type="math/tex">t</script> with <span class="math"></span><script type="math/tex">0\leq t\leq 1</script>.
+This can be accomplished from the one variable case in the following way. Define
+<div class="math"></div><script type="math/tex; mode=display">
+g(t) = f((1-t)x_0 + t x_1, (1-t) y_0 + t y_1)
+</script>
+and show that <span class="math"></span><script type="math/tex">g</script> is convex by using the chain rule to show that <span class="math"></span><script type="math/tex">g''(t) \geq 0</script>. Show
+how the convexity of <span class="math"></span><script type="math/tex">f</script> follows from this by using that
+<div class="math"></div><script type="math/tex; mode=display">
+g(t) = g((1-t)\cdot 0 + t\cdot 1).
+</script>
+</div><div style="margin-top:20px"></div><span id="sec7.7"></span><h2 id="8fe04136-d8ac-49f4-aa68-822690597bad">7.7 Logistic regression</h2><div style="margin-top:20px"></div>The beauty of the sigmoid function is that it takes any value <span class="math"></span><script type="math/tex">x\in \mathbb{R}</script> and turns it into
+a probability <span class="math"></span><script type="math/tex">0< \sigma(x) < 1</script> by
+<div class="math"></div><script type="math/tex; mode=display">
+\sigma(x) =  \frac{1}{1 + e^{-x}},
+</script>
+i.e., <span class="math"></span><script type="math/tex">\sigma(-\infty) = 0</script> and <span class="math"></span><script type="math/tex">\sigma(\infty) = 1</script>.<div style="margin-top:20px"></div><a href="#8f58c98f-65ca-43d9-be53-1080e209aa97" class ="btn btn-default" data-toggle="collapse">Graph of the sigmoid function</a><div id=8f58c98f-65ca-43d9-be53-1080e209aa97 class="collapse">
+  <div class=sage><script type="text/x-sage">
+    plot(1/(1 + exp(-x)), (x, -10, 10))
+  </script></div>
+</div><div style="margin-top:20px"></div><span id="env7.31"></span><a class="Exerciseno" data-count="7.31"></a><a href="#ed047f1e-12d9-4f87-80c7-7515c333a3c9" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ed047f1e-12d9-4f87-80c7-7515c333a3c9 class = "collapse Exercise envbuttons">  
+Prove that
+<div class="math"></div><script type="math/tex; mode=display">
+\sigma'(x) =  \sigma(x) (1-\sigma(x))
+</script>
+and
+<div class="math"></div><script type="math/tex; mode=display">
+\log \frac{\sigma(x)}{1-\sigma(x)} = x.
+</script>
+</div><div style="margin-top:20px"></div>We will not go into all the details (some of which can be traced
+to your course in introductory probability and statistics), but
+suppose that we have an outcome <span class="math"></span><script type="math/tex">E</script>, which may or may not happen.<div style="margin-top:20px"></div>We have an idea, that the probability of <span class="math"></span><script type="math/tex">E</script> is
+dependent on certain parameters <span class="math"></span><script type="math/tex">w_0, w_1, \dots, w_n</script> and
+observations <span class="math"></span><script type="math/tex">x_1, \dots, x_n</script> that fit into the sigmoid function as
+<span id="equ7.14"></span><div class="math"></div><script type="math/tex; mode=display">
+p(x_1, \dots, x_n) = \sigma(w_0 + w_1 x_1 + \cdots + w_n x_n) = \frac{1}{1 + e^{-w_0 - w_1 x_1 - \cdots - w_n x_n}}.
+\tag{7.14}</script><div style="margin-top:20px"></div>An example of this could be where <span class="math"></span><script type="math/tex">x_1, \dots, x_{784}</script> denote the
+gray scale of each pixel in a <span class="math"></span><script type="math/tex">28\times 28</script> image. The event <span class="math"></span><script type="math/tex">E</script>
+is whether the image contains the digit <span class="math"></span><script type="math/tex">4</script>:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/four.png" ></div><div style="margin-top:20px"></div>Here <span class="math"></span><script type="math/tex">p(x_1, \dots, x_{784})</script> would be the probability that the image contains the digit <span class="math"></span><script type="math/tex">4</script>.<div style="margin-top:20px"></div><span id="sec7.7.1"></span><h3>7.7.1 Estimating the parameters</h3><div style="margin-top:20px"></div>Suppose also that we have a table of observations (data set)<div style="margin-top:20px"></div><span id="equ7.15"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{matrix}
+  x_{11} & \cdots & x_{1n} & E_1\\
+  x_{21} & \cdots & x_{2n} & E_2\\
+  \vdots & \ddots & \vdots & \vdots\\
+  x_{m1} & \cdots & x_{mn} & E_m,
+\end{matrix}
+\tag{7.15}</script><div style="margin-top:20px"></div>where each row has observations <span class="math"></span><script type="math/tex">x_{i1}, \dots, x_{in}</script> along with a
+binary variable <span class="math"></span><script type="math/tex">E_i</script>, which is <span class="math"></span><script type="math/tex">1</script> if <span class="math"></span><script type="math/tex">E</script> was observed to occur and
+<span class="math"></span><script type="math/tex">0</script> if not.<div style="margin-top:20px"></div>Assuming that <a href=#equ7.14>(7.14)</a> holds, the probability of observing the
+<span class="math"></span><script type="math/tex">m</script> observations in <a href=#equ7.15>(7.15)</a> is
+<span id="equ7.16"></span><div class="math"></div><script type="math/tex; mode=display">
+\prod_{i=1}^m p(x_{i1}, \dots, x_{in})^{E_i} (1 - p(x_{i1}, \dots, x_{in}))^{1-E_i}.
+\tag{7.16}</script>
+Notice that <a href=#equ7.16>(7.16)</a> is a function <span class="math"></span><script type="math/tex">L(w_0, \dots, w_n)</script> of the
+parameters <span class="math"></span><script type="math/tex">w_0, w_1, \dots, w_n</script> for fixed observations <span class="math"></span><script type="math/tex">x_1,\dots, x_n</script>.<div style="margin-top:20px"></div>We wish to choose the parameters so that <span class="math"></span><script type="math/tex">L(w_0, w_1, \dots, w_n)</script> is
+maximized (this is called <a href="https://en.wikipedia.org/wiki/Maximum_likelihood_estimation" target="_blank">maximum likelihood
+  estimation</a>).
+So we are in fact here, dealing with an optimization problem, which is
+usually solved by gradient descent (for <span class="math"></span><script type="math/tex">-L</script>) or solving the equations
+<div class="math"></div><script type="math/tex; mode=display">
+\nabla L (w_0, w_1, \dots, w_n) = 0.
+</script><div style="margin-top:20px"></div>Instead of maximizing <span class="math"></span><script type="math/tex">L(w_0, \dots, w_n)</script> one usually maximizes  the logarithm
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+\ell(w_0, w_1, \dots, w_n) &= \log L(w_0, w_1, \dots, w_n)\\
+                           &= \sum_{i=1}^m E_i \log p(x_{i1}, \dots, x_{in}) + (1 - E_i) \log ( 1 - p(x_{i1}, \dots, x_{in}))\\
+  &= \sum_{i=1}^m E_i (w_0 + w_1 x_{i1} + \cdots + w_n x_{in}) -  \log (1 + e^{w_0 + w_1 x_{i1} + \cdots + w_n x_{in}}).
+\end{aligned}</script><div style="margin-top:20px"></div>Notice that we have used Exercise <a href=#env7.31 class="labelref">7.31</a> and the logarithm rules
+<span class="math"></span><script type="math/tex">\log(a b) = \log(a) + \log(b)</script> and <span class="math"></span><script type="math/tex">\log(a/b) = \log(a) - \log(b)</script> in
+the computation above.<div style="margin-top:20px"></div><span id="env7.32"></span><div class="example" data-count="7.32">     
+  Suppose that the event <span class="math"></span><script type="math/tex">E</script> is assumed to be dependent on only one observation <span class="math"></span><script type="math/tex">x</script> i.e., <span class="math"></span><script type="math/tex">n=1</script> above.
+  For example, <span class="math"></span><script type="math/tex">E</script> could be the event of not showing up on a Monday paired with the amount of sleep
+  <span class="math"></span><script type="math/tex">x</script> in the weekend.<div style="margin-top:20px"></div>Here
+  <div class="math"></div><script type="math/tex; mode=display">
+  p(x) = \sigma(\alpha + \beta x)
+  </script>
+  and
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  \ell(\alpha, \beta) &= \sum_{i=1}^m E_i \log p(x_i) +
+                        (1 - E_i)\log (1-p(x_i))\\
+                      &= \sum_{i=1}^m E_i (\alpha + \beta x_i) - \log(1 + e^{\alpha + \beta x_i}).
+  \end{aligned}</script>
+</div><div style="margin-top:20px"></div><span id="env7.33"></span><a class="Exerciseno" data-count="7.33"></a><a href="#12ff2af9-33da-4669-b14a-6121635f1e23" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=12ff2af9-33da-4669-b14a-6121635f1e23 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Explain how the end result of the computation of <span class="math"></span><script type="math/tex">\ell(\alpha, \beta)</script> in Example <a href=#env7.32 class="labelref">7.32</a> is obtained and
+compute <span class="math"></span><script type="math/tex">\nabla \ell (\alpha, \beta)</script>.
+</div><div style="margin-top:20px"></div><span id="env7.34"></span><div class="example" data-count="7.34">     
+  I remember exactly where I was when first hearing about
+  the <span class="bubblelabel footnotecolor">Challenger</span><span class="bubblecontent"><span class="bubbleinnercontent">See <a href="https://byuistats.github.io/Statistics-Notebook/Analyses/Logistic%20Regression/Examples/challengerLogisticReg.html" target="_blank">byuistats.github.io</a> for more details on this example</span></span> disaster in 1986.<div style="margin-top:20px"></div>    <iframe width="100%" height="360" src="https://www.youtube.com/embed/fSTrmJtHLFU?rel=0" frameborder="0" allowfullscreen></iframe><div style="margin-top:20px"></div>This dreadful event was caused by failure of a socalled O-ring. The
+  O-rings had been tested before the launch for failure (=1 below) at different
+  temperatures (in F) resulting in the (partial) table below.
+  <div class="math"></div><script type="math/tex; mode=display">
+  \begin{matrix}
+    53.0 & 1\\
+    56.0 & 1\\
+    57.0 & 1\\
+    63.0 & 0\\
+    \vdots & \vdots\\
+    70.0 & 0\\
+    70.0 & 1\\
+    \vdots & \vdots\\
+    79.0 & 0
+  \end{matrix}
+  </script>
+   At the morning of the launch the outside temperature was
+   (uncharacteristically low for Florida) <span class="math"></span><script type="math/tex">31</script> degrees Fahrenheit. We
+   wish to use logistic regression to compute the probability that the
+   O-ring fails.<div style="margin-top:20px"></div>Below we have sketched how the logistic regression is carried out using the python library <tt>SciKit-Learn</tt>.
+   The option <tt>solver='lbfgs'</tt> chooses an algorithm for maximizing <span class="math"></span><script type="math/tex">\ell(\alpha, \beta)</script>.<div style="margin-top:20px"></div>Press the
+   Compute button and see the probability of failure during the launch.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+from sklearn.linear_model import LogisticRegression 
+X = [[53.0],[56.0],[57.0],[63.0],[66.0],[67.0],[67.0],[67.0],[68.0],[69.0],[70.0],[70.0],[70.0],[70.0],[72.0],[73.0],[75.0],[75.0],[76.0],[76.0],[78.0],[79.0],[80.0],[81.0]]
+y = [1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+model = LogisticRegression(C=25, solver='lbfgs')
+model.fit(X,y)
+
+print("alpha =", model.intercept_[0])
+print("beta =", model.coef_[0][0])
+
+print("Probability of failure at 31 degrees Fahrenheit =", model.predict_proba([[31]])[0][1])
+</script></div>  
+</div><div style="margin-top:20px"></div><span id="env7.35"></span><a class="Exerciseno" data-count="7.35"></a><a href="#1b6d3901-4372-46b9-9eca-28a7ac181d7c" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=1b6d3901-4372-46b9-9eca-28a7ac181d7c class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>In the button below is a naive implementation of gradient descent (in fact gradient ascent, because we are dealing
+with a maximization problem) for the Challenger data set and logistic regression. The implementation
+is derived from the introduction to gradient descent in this chapter, where we adjusted the step
+with successive negative powers of <span class="math"></span><script type="math/tex">2</script>.<div style="margin-top:20px"></div>Run experiments with different initial values and number of iterations. Compare with the <em>official</em>
+output from <tt>scikit-learn</tt> in the example above. What is going on?<div style="margin-top:20px"></div>Also try adjusting the <tt>scikit-learn</tt> output in the example
+above by removing <tt>C=25</tt> first and then <tt>solver='lbfgs'</tt>. What happens? Compare the quality of the
+solutions in terms of the gradient (which is available in the output from the Naive code).<div style="margin-top:20px"></div>Do some internet surfing and find out in general terms what <tt>C=25</tt> and <tt>solver='lbfgs'</tt> mean.<div style="margin-top:20px"></div><a href="#07cc7963-d210-4eaf-890b-c7a2cef85be8" class ="btn btn-default" data-toggle="collapse">Naive code</a><div id=07cc7963-d210-4eaf-890b-c7a2cef85be8 class="collapse">
+<div class=sage><script type="text/x-sage">
+x0 = [1, 1]    
+noofits = 20
+  
+
+x = [53.0, 56.0, 57.0, 63.0, 66.0, 67.0, 67.0, 67.0, 68.0, 69.0, 70.0, 70.0, 70.0, 70.0, 72.0, 73.0, 75.0, 75.0, 76.0, 76.0, 78.0, 79.0, 80.0, 81.0]
+E = [1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Es = sum(E)
+Exs = sum(u*v for (u, v) in zip(x, E))
+    
+def sigmoid(a, b, x):
+  s = 1/(1 + exp(-a - b*x))
+  return s.n()
+
+def ell(v):
+  a = v[0]
+  b = v[1]
+  return sum(e*(a + b*t) - log(1 + exp(a + b*t)) for (e, t) in zip(E, x))
+      
+def gradient(v):
+  a = v[0]
+  b = v[1]
+  return vector((Es - sum(sigmoid(a, b, t) for t in x), Exs - sum(t*sigmoid(a, b, t) for t in x)))
+    
+def gradientascent(x0):
+  v0 = vector(x0)
+  l0 = ell(v0)
+  d = gradient(v0)
+  k = 0
+  while True:
+    v1 = v0 + 2^(-k)*d
+    if (ell(v1) > l0):
+      break
+    k += 1
+  return v1
+
+v = x0  
+for k in range(noofits):
+  v = gradientascent(v)
+
+print("x0 = ", x0)
+print("Number of gradient ascents (maximization problem) =  ", noofits)
+print("Predicted maximal point =  ", v)
+
+alpha = v[0]
+beta = v[1]
+
+print("Gradient at predicted maximal point = ", gradient(v))
+print("Predicted probability of failure at 31F = ", sigmoid(alpha, beta, 31))
+</script></div> 
+</div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec7.8"></span><h2 id="4b2d9442-1e84-4f6d-bf0e-1b0d0e67ce1b">7.8 3Blue1Brown</h2><div style="margin-top:20px"></div>Sit back and enjoy the masterful presentations of neural networks (and
+the chain rule) by the YouTuber 3Blue1Brown.<div style="margin-top:20px"></div><span id="sec7.8.1"></span><h3>7.8.1 Introduction to neural networks</h3><div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/aircAruvnKk?rel=0" frameborder="0" allowfullscreen></iframe><div style="margin-top:20px"></div><span id="sec7.8.2"></span><h3>7.8.2 Gradient descent</h3><div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/IHZwWFHWa-w?rel=0" frameborder="0" allowfullscreen></iframe><div style="margin-top:20px"></div><span id="sec7.8.3"></span><h3>7.8.3 Backpropagation and training</h3><div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/Ilg3gGewQ5U?rel=0" frameborder="0" allowfullscreen></iframe><div style="margin-top:20px"></div><span id="sec7.8.4"></span><h3>7.8.4 The chain rule in action</h3><div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/tIeHLnjs5U8?rel=0" frameborder="0" allowfullscreen></iframe><div style="margin-top:20px"></div><div style="margin-top:20px"></div><span id="env7.36"></span><a class="Exerciseno" data-count="7.36"></a><a href="#bfe5745d-baf8-4810-acc6-e66ff6bfac91" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=bfe5745d-baf8-4810-acc6-e66ff6bfac91 class = "collapse Exercise envbuttons">  
+Watch the video above before solving this exercise.<div style="margin-top:20px"></div>Consider the simple neural network<div style="margin-top:20px"></div><div class="centerimg"><img src="img/neural1d.svg" ></div><div style="margin-top:20px"></div>where<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  z_2 = \sigma_1(z_1) = \sigma(a + b z_1)\\
+  z_3 = \sigma_2(z_2) = \sigma(c + d z_2)\\
+  z_4 = \sigma_3(z_3) = \sigma(e + f z_3),
+\end{aligned}</script>
+and <span class="math"></span><script type="math/tex">\sigma</script> is the sigmoid function. This neural network has input <span class="math"></span><script type="math/tex">z_1</script> 
+and output <span class="math"></span><script type="math/tex">z_4</script>. Let <span class="math"></span><script type="math/tex">C</script> be a function of the output <span class="math"></span><script type="math/tex">z_4</script>. For fixed
+<span class="math"></span><script type="math/tex">z_1</script>, we consider <span class="math"></span><script type="math/tex">C</script> as a function of <span class="math"></span><script type="math/tex">a, b, c, d, e, f</script> via
+<div class="math"></div><script type="math/tex; mode=display">
+F\begin{pmatrix} a\\ b\\ c\\ d\\ e\\ f\end{pmatrix} =
+C(\sigma_3(\sigma_2(\sigma_1(z_1)))).
+</script>
+Backpropagation for training neural networks is using the
+chain rule for computing the gradient
+<div class="math"></div><script type="math/tex; mode=display">
+\nabla F = \left( \dfrac{\partial F}{\partial a}, \dfrac{\partial F}{\partial b}, \dfrac{\partial F}{\partial c}, \dfrac{\partial F}{\partial d}, \dfrac{\partial F}{\partial e}, \dfrac{\partial F}{\partial f} \right).
+</script><div style="margin-top:20px"></div>Explain how this is
+done using the chain rule. Why is the method called backpropagation?<div style="margin-top:20px"></div><a href="#4ed8945c-b25b-4bd0-84f8-870056910f0f" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=4ed8945c-b25b-4bd0-84f8-870056910f0f class="collapse">
+  <div class="math"></div><script type="math/tex; mode=display">
+  \dfrac{\partial F}{\partial z_3} = \dfrac{\partial F}{\partial z_4} \dfrac{\partial z_4}{\partial z_3}
+  </script>
+  and
+  <div class="math"></div><script type="math/tex; mode=display">
+  \dfrac{\partial F}{\partial c} = \dfrac{\partial F}{\partial z_3} \dfrac{\partial z_3}{\partial c}
+  </script>
+</div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec7.9"></span><h2 id="798828ad-b196-4fe3-9a1c-d287e53461fd">7.9 Lagrange multipliers</h2><div style="margin-top:20px"></div>The method of <a href="https://en.wikipedia.org/wiki/Lagrange_multiplier" target="_blank">Lagrange multipliers</a> is a super classical way of solving
+optimization problems with non-linear (equality) constraints. We will only
+consider the special case<div style="margin-top:20px"></div><span id="equ7.17"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Maximize/Minimize} &f(x_1, \dots, x_n)\\
+    &\text{with constraint}\\
+    &&g (x_1, \dots, x_n) = 0,
+  \end{aligned}\tag{7.17}</script><div style="margin-top:20px"></div>where both <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}</script> and <span class="math"></span><script type="math/tex">g:\mathbb{R}^n\rightarrow \mathbb{R}</script> are
+  differentiable functions.<div style="margin-top:20px"></div>There is a very useful trick for attacking <a href=#equ7.17>(7.17)</a>. One introduces an
+  extra variable <span class="math"></span><script type="math/tex">\lambda</script> (a Lagrange multiplier) and the Lagrangian function
+  <span class="math"></span><script type="math/tex">L:\mathbb{R}^{n+1}\rightarrow \mathbb{R}</script> given by
+  <div class="math"></div><script type="math/tex; mode=display">
+  L(x_1, \dots, x_n, \lambda) = f(x_1, \dots, x_n) + \lambda g(x_1, \dots, x_n).
+  </script><div style="margin-top:20px"></div>The main result is the following.<div style="margin-top:20px"></div><div class="emphasize"><span id="env7.37"></span><div class="genericenv" data-count="7.37" data-name="THEOREM">     
+    Suppose that <span class="math"></span><script type="math/tex">(z_1, \dots, z_n)</script> is a local maximum/minimum for <a href=#equ7.17>(7.17)</a>. Then there exists
+    <span class="math"></span><script type="math/tex">\lambda\in \mathbb{R}</script>, such that <span class="math"></span><script type="math/tex">(z_1, \dots, z_n, \lambda)</script> is a critical point for <span class="math"></span><script type="math/tex">L</script>.
+  </div></div><div style="margin-top:20px"></div>So to solve <a href=#equ7.17>(7.17)</a> we simply (well, this is not always so simple) look for critical points for
+  <span class="math"></span><script type="math/tex">L</script>. This amounts to solving the <span class="math"></span><script type="math/tex">n+1</script> (non-linear) equations coming from <span class="math"></span><script type="math/tex">\nabla L = 0</script> i.e.,
+  <span id="equ7.18"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    g(x_1, \dots, x_n) &= 0\\
+    \dfrac{\partial f}{\partial x_1}(x_1, \dots, x_n) + \lambda \dfrac{\partial g}{\partial x_1}(x_1, \dots, x_n) &= 0\\
+                       &\vdots\\
+    \dfrac{\partial f}{\partial x_n}(x_1, \dots, x_n) + \lambda \dfrac{\partial g}{\partial x_n}(x_1, \dots, x_n) &= 0         
+  \end{aligned}\tag{7.18}</script><div style="margin-top:20px"></div>For <span class="math"></span><script type="math/tex">n=2</script> we can quickly give a sketch of the idea behind the proof. The (difficult) fact is that
+  we may find a differentiable function <span class="math"></span><script type="math/tex">x(t)</script> in one variable <span class="math"></span><script type="math/tex">t</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  g(t, x(t)) = 0
+  </script>
+  and the local minimum has the form <span class="math"></span><script type="math/tex">v_0 = (t_0, x(t_0))</script>.<div style="margin-top:20px"></div>Once we have this, the chain rule does its magic. We consider the one variable functions
+  <span id="equ7.19"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    F(t) &= f(t, x(t))\\
+    G(t) &= g(t, x(t))
+  \end{aligned}\tag{7.19}</script>
+  For both of these we have <span class="math"></span><script type="math/tex">F'(t_0) = G'(t_0) = 0</script> (why?). The
+  chain rule now gives a non-zero vector orthogonal to <span class="math"></span><script type="math/tex">\nabla f(v_0)</script> and <span class="math"></span><script type="math/tex">\nabla g(v_0)</script>. This is
+  only possible if they are parallel as vectors i. e. , there exists <span class="math"></span><script type="math/tex">\lambda</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \nabla f (v_0) = \lambda \nabla g (v_0).
+  </script><div style="margin-top:20px"></div><span id="env7.38"></span><div class="example" data-count="7.38">     
+    Consider the minimization problem
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &x+y\\
+    &\text{with constraint}\\
+    &&x^2 + y^2 = 1.
+  \end{aligned}</script>
+  First of all, why does this problem have a solution at all? We write
+  the non-linear equations
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    1 + 2 x\lambda &= 0\\
+    1 + 2 y\lambda &= 0\\
+    x^2 + y^2 - 1&= 0
+  \end{aligned}</script>
+  up coming from the critical points of the Langrange function. Now we know that
+  these can be solved and that amongst our solutions there is a minimum!
+  </div><div style="margin-top:20px"></div><span id="env7.39"></span><a class="Exerciseno" data-count="7.39"></a><a href="#a9b08248-3c81-4339-8bce-ce62d819b552" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=a9b08248-3c81-4339-8bce-ce62d819b552 class = "collapse Exercise envbuttons">  
+    Computing the distance from the line <span class="math"></span><script type="math/tex">y = x +1</script> to the point <span class="math"></span><script type="math/tex">(1, 1)</script> gives rise to the
+    minimization problem
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &(x-1)^2 + (y-1)^2\\
+    &\text{with constraint}\\
+    &&y = x + 1.
+    \end{aligned}</script>
+    Solve this minimization problem using Theorem <a href=#env7.37 class="labelref">7.37</a>.
+    </div><div style="margin-top:20px"></div><span id="env7.40"></span><a class="Exerciseno" data-count="7.40"></a><a href="#94f70fe7-103e-4141-b943-9d0ef8f49726" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=94f70fe7-103e-4141-b943-9d0ef8f49726 class = "collapse Exercise envbuttons">  
+  Use Theorem <a href=#env7.37 class="labelref">7.37</a> to
+maximize <span class="math"></span><script type="math/tex">x^2 + y^2</script> subject to <span class="math"></span><script type="math/tex">x^2 + x y + y^2 = 4</script>. <div style="margin-top:20px"></div><a href="#597eabf2-61aa-4554-92da-c10e968fb14d" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=597eabf2-61aa-4554-92da-c10e968fb14d class="collapse">
+Here you end up with the system
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+(2\lambda + 2) x  + \lambda y &= 0\\
+\lambda x + (2\lambda + 2) y &= 0
+\end{aligned}</script>
+of linear equations in <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script>, where you
+regard <span class="math"></span><script type="math/tex">\lambda</script> as a constant. Use Gaussian
+elimination to solve this system in order to
+derive a (nice) quadratic equation in <span class="math"></span><script type="math/tex">\lambda</script> coming from
+<div class="math"></div><script type="math/tex; mode=display">
+-\frac{\lambda}{2\lambda +2} \lambda y + (2 \lambda + 2) y = 0,
+</script>
+where you assume that <span class="math"></span><script type="math/tex">y\neq 0</script>. Handle the case <span class="math"></span><script type="math/tex">y = 0</script> separately.
+</div><div style="margin-top:20px"></div>Consider the subset
+<span class="math"></span><script type="math/tex">C = \{(x, y)\in \mathbb{R}^2\mid x^2 + x y + y^2 = 4\}</script>. Why is <span class="math"></span><script type="math/tex">C</script> a closed subset?
+Why is <span class="math"></span><script type="math/tex">C</script> bounded? <div style="margin-top:20px"></div><a href="#3abb2379-27a1-4dbb-9549-d3cdefe41995" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=3abb2379-27a1-4dbb-9549-d3cdefe41995 class="collapse">
+To prove that <span class="math"></span><script type="math/tex">C</script> is bounded you can keep <span class="math"></span><script type="math/tex">y</script> fixed in 
+<span id="equ7.20"></span><div class="math"></div><script type="math/tex; mode=display">
+x^2 + y x + y^2 - 4 = 0
+\tag{7.20}</script>
+and solve for <span class="math"></span><script type="math/tex">x</script>. A last resort is using the plot in Sage in the Hint button below, but that
+does not give any real insight unless you explain how Sage makes the plot from
+the equation <a href=#equ7.20>(7.20)</a>.
+</div><div style="margin-top:20px"></div>How does this relate to Theorem <a href="euclidean.html#env5.77">5.77</a>?<div style="margin-top:20px"></div>Does the optimization
+problem have a geometric interpretation?<div style="margin-top:20px"></div><a href="#bc1d0f07-d1f4-4e6d-8383-a13bc695943b" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=bc1d0f07-d1f4-4e6d-8383-a13bc695943b class="collapse">
+  <div class=sage><script type="text/x-sage">
+x, y = var('x, y')
+implicit_plot(x^2 + x*y + y^2 - 4, (x, -3, 3), (y, -3, 3))
+  </script></div>
+</div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env7.41"></span><a class="Exerciseno" data-count="7.41"></a><a href="#b03ef583-7374-4e5e-b50b-3d2cb3de1653" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=b03ef583-7374-4e5e-b50b-3d2cb3de1653 class = "collapse Exercise envbuttons">  
+  A rectangular box has side lengths <span class="math"></span><script type="math/tex">x</script>, <span class="math"></span><script type="math/tex">y</script> and <span class="math"></span><script type="math/tex">z</script>. What is its
+  maximal volume when we assume that <span class="math"></span><script type="math/tex">(x, y, z)</script> lies on the plane
+  <div class="math"></div><script type="math/tex; mode=display">
+    \frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1
+  </script>
+  for <span class="math"></span><script type="math/tex">a, b, c > 0</script>.
+</div><div style="margin-top:20px"></div><span id="env7.42"></span><a class="Exerciseno" data-count="7.42"></a><a href="#d7988771-abf8-4dd5-9fda-831c6fa6db92" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=d7988771-abf8-4dd5-9fda-831c6fa6db92 class = "collapse Exercise envbuttons">  
+  A company is planning to produce a box with volume
+  <span class="math"></span><script type="math/tex">2</script> <span class="math"></span><script type="math/tex">m^3</script>. For design reasons it needs different
+  materials for the sides, top and bottom. The cost of the materials
+  per square meter is <span class="math"></span><script type="math/tex">1</script> dollar for the sides, <span class="math"></span><script type="math/tex">1.5</script> dollars for the
+  bottom and the top. Find the measurements of the box minimizing the
+  production costs.<div style="margin-top:20px"></div><a href="#85e43498-2430-4ebf-8443-3598326d974b" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=85e43498-2430-4ebf-8443-3598326d974b class="collapse">
+    Let <span class="math"></span><script type="math/tex">x, y</script> and <span class="math"></span><script type="math/tex">z</script> be the measurements. Use <span class="math"></span><script type="math/tex">x y z = 2</script> to
+    rewrite the Lagrange equations so that <span class="math"></span><script type="math/tex">y</script> and <span class="math"></span><script type="math/tex">z</script> are expressed in terms
+    of <span class="math"></span><script type="math/tex">x</script>.
+    </div>
+</div><div style="margin-top:20px"></div><span id="env7.43"></span><a class="Exerciseno" data-count="7.43"></a><a href="#a0d60f60-558d-4aec-b629-11af85bf4a0d" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=a0d60f60-558d-4aec-b629-11af85bf4a0d class = "collapse Exercise envbuttons">  
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Maximize} &- p_1 \log_2(p_1) - \cdots - p_n \log_2(p_n)\\
+    &\text{with constraint(s)}\\
+    &&p_1 + \cdots + p_n = 1.\\
+    &&p_1 > 0, \dots, p_n > 0
+  \end{aligned}</script><div style="margin-top:20px"></div>The sum
+  <div class="math"></div><script type="math/tex; mode=display">
+  H(p_1, \dots, p_n) = -p_1 \log_2(p_1) - \cdots - p_n \log_2(p_n)
+  </script>
+  is called the (Shannon) <a href="https://en.wikipedia.org/wiki/Information_theory" target="_blank">entropy</a> of the discrete probability distribution <span class="math"></span><script type="math/tex">p_1, \dots, p_n</script>. One may use
+  <a href="https://en.wikipedia.org/wiki/Jensen%27s_inequality" target="_blank">Jensen's inequality</a>
+    applied to the convex function <span class="math"></span><script type="math/tex">-\log_2(x)</script> to prove that
+  <div class="math"></div><script type="math/tex; mode=display">
+  H(p_1,\dots, p_n) \leq \log_2(n).
+  </script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec7.10"></span><h2 id="714939c5-f53a-46c0-a517-145ded0716ed">7.10 The interior and the boundary of a subset</h2><div style="margin-top:20px"></div>Suppose that <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^n</script> is a closed subset and <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}</script> is a
+continuous function. Recall (see Theorem <a href="euclidean.html#env5.77">5.77</a>) that the
+optimization problem
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Optimize} &f(x)\\
+    &\text{with constraint}\\
+    &&x\in C
+  \end{aligned}</script>
+  always has a solution if <span class="math"></span><script type="math/tex">C</script> in addition to being closed is also bounded. To solve such an optimization problem, it often
+  pays to decompose <span class="math"></span><script type="math/tex">C</script> as
+  <div class="math"></div><script type="math/tex; mode=display">
+  C = \partial C \cup C^o,
+  </script>
+  where <span class="math"></span><script type="math/tex">\partial C</script> is the boundary of <span class="math"></span><script type="math/tex">C</script> and <span class="math"></span><script type="math/tex">C^o</script> the interior of <span class="math"></span><script type="math/tex">C</script>. The strategy
+  is then to look for an optimal solution both in  <span class="math"></span><script type="math/tex">\partial C</script> and <span class="math"></span><script type="math/tex">C^o</script> and then compare these.
+  In some sense we are making a "recursive" call to a lower dimensional optimization problem
+  for the boundary <span class="math"></span><script type="math/tex">\partial C</script>. This is illustrated by the basic example:
+  <span class="math"></span><script type="math/tex">f(x) = x^2 - 5 x + 6</script> and <span class="math"></span><script type="math/tex">C = [0, 4]</script>. Here <span class="math"></span><script type="math/tex">\partial C = \{0, 4\}</script> and <span class="math"></span><script type="math/tex">C^o = (0, 4)</script>. Notice that
+  <span class="math"></span><script type="math/tex">\partial C</script> is finite here.<div style="margin-top:20px"></div>The boundary of <span class="math"></span><script type="math/tex">C</script> is the set of points in <span class="math"></span><script type="math/tex">C</script>, which are limits of both
+  convergent sequences with elements not in <span class="math"></span><script type="math/tex">C</script> and convergent sequences with elements in <span class="math"></span><script type="math/tex">C</script>.
+Informally these are points in <span class="math"></span><script type="math/tex">C</script>,
+  that can be approximated (arbitrarily well) both from outside <span class="math"></span><script type="math/tex">C</script> and from inside <span class="math"></span><script type="math/tex">C</script>.<div style="margin-top:20px"></div><span id="env7.44"></span><a class="Exerciseno" data-count="7.44"></a><a href="#926763ba-1597-4c49-a51b-6828aac3e538" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=926763ba-1597-4c49-a51b-6828aac3e538 class = "collapse Exercise envbuttons">  
+What are the boundary points of <span class="math"></span><script type="math/tex">(0, 1)\subseteq \mathbb{R}</script>?
+</div>  <div style="margin-top:20px"></div>The interior of <span class="math"></span><script type="math/tex">C</script> is the set of points in <span class="math"></span><script type="math/tex">C</script>, which are
+  not limits of convergent sequences with elements not in <span class="math"></span><script type="math/tex">C</script>. Informally these are points in <span class="math"></span><script type="math/tex">C</script>,
+  that cannot be approximated (arbitrarily well) from outside <span class="math"></span><script type="math/tex">C</script>.<div style="margin-top:20px"></div><span id="env7.45"></span><a class="Exerciseno" data-count="7.45"></a><a href="#05030a3f-7652-45d4-82ff-76b3c807b9d0" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=05030a3f-7652-45d4-82ff-76b3c807b9d0 class = "collapse Exercise envbuttons">  
+  Compute the boundary and the interior of the subset <span class="math"></span><script type="math/tex">\{1, 2, 3\}\subseteq \mathbb{R}</script>.<div style="margin-top:20px"></div>What is the interior and the boundary of the subset <span class="math"></span><script type="math/tex">[0, 1] \subseteq \mathbb{R}</script>? Same question for
+  <span class="math"></span><script type="math/tex">\{(x, 0) \mid x\in [0, 1]\}\subseteq \mathbb{R}^2</script>.
+  </div><div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">x_0</script> is an element of <span class="math"></span><script type="math/tex">C^o</script>, then there exists an open subset
+  <span class="math"></span><script type="math/tex">U\subseteq C</script>, such that <span class="math"></span><script type="math/tex">x_0\in U</script>. Therefore the following proposition holds, when you take Proposition <a href=#env7.21 class="labelref">7.21</a> into account.<div style="margin-top:20px"></div><div class="emphasize"><span id="env7.46"></span><div class="genericenv" data-count="7.46" data-name="PROPOSITION">     
+    Consider an optimization problem
+  <span id="equ7.21"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Optimize} &f(x)\\
+    &\text{with constraint}\\
+    &&x\in C,
+  \end{aligned}\tag{7.21}</script>
+  where <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^n</script> is a subset, <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}</script> a
+  differentiable function and <span class="math"></span><script type="math/tex">x_0</script> an optimal solution to <a href=#equ7.21>(7.21)</a>. If <span class="math"></span><script type="math/tex">x_0\in C^o</script>, then <span class="math"></span><script type="math/tex">x_0</script> is a critical point of <span class="math"></span><script type="math/tex">f</script>.
+</div></div><div style="margin-top:20px"></div>Basically, to solve an optimization problem like <a href=#equ7.21>(7.21)</a> one needs to
+consider the boundary and interior as separate cases. For points on
+the boundary we cannot use the critical point test in Proposition <a href=#env7.21 class="labelref">7.21</a>.
+This test only applies to the interior points. Usually the boundary cases
+are of smaller dimension and easier to handle as illustrated in the example below.<div style="margin-top:20px"></div><span id="env7.47"></span><div class="example" data-count="7.47">     
+    Consider the minimization  problem
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &x+y\\
+    &\text{with constraint}\\
+    &&x^2 + y^2 = 1.
+  \end{aligned}</script>
+  from Example <a href=#env7.38 class="labelref">7.38</a>. Let us modify it to
+<span id="equ7.22"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &x+y\\
+    &\text{with constraint}\\
+    &&(x, y)\in C,
+\end{aligned}\tag{7.22}</script>
+where
+<div class="math"></div><script type="math/tex; mode=display">
+C=\{(x, y)\in \mathbb{R}^2 \mid x^2 + y^2\leq  1\}.
+</script>
+We are now minimizing not only over the unit circle, but
+the whole unit disk. Here
+<div class="math"></div><script type="math/tex; mode=display">
+\partial C = \{(x, y)\in \mathbb{R}^2 \mid x^2 + y^2 = 1\}\quad
+\text{and}\quad
+C^o = \{(x, y)\in \mathbb{R}^2 \mid x^2 + y^2 < 1\}.
+</script>
+Proposition <a href=#env7.46 class="labelref">7.46</a> guides us first to look for
+optimal points in <span class="math"></span><script type="math/tex">C^o</script>. Here we use Proposition <a href=#env7.21 class="labelref">7.21</a> to
+show that there can be no optimal points in <span class="math"></span><script type="math/tex">C^o</script>, because
+the gradient of the function <span class="math"></span><script type="math/tex">f(x, y) = x + y</script> is
+<div class="math"></div><script type="math/tex; mode=display">
+\nabla f = (1, 1).
+</script>
+Therefore the boundary needs to be analyzed and the usual technique
+(as was implicit in Lagrange multipliers) is to find
+a parametrization for the points <span class="math"></span><script type="math/tex">(x, y)</script> satisfying
+<span class="math"></span><script type="math/tex">x^2 + y^2 = 1</script>. There are two of those (one for the upper unit circle and one for the lower unit circle):
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\left(t, \sqrt{1 - t^2}\right)\\
+  &\left(t, -\sqrt{1 - t^2}\right),
+\end{aligned}</script>
+where <span class="math"></span><script type="math/tex">t\in [-1, 1]</script>.
+This means that the optimization problem for the boundary <span class="math"></span><script type="math/tex">\partial C</script> turns into the two
+simpler optimization problems of minimizing
+<div class="math"></div><script type="math/tex; mode=display">
+t + \sqrt{1 - t^2}\qquad \text{and}\qquad t - \sqrt{1 - t^2}
+</script>
+subject to <span class="math"></span><script type="math/tex">t\in [-1, 1]</script>. These can as one variable optimization problems be solved the usual way.
+</div><div style="margin-top:20px"></div>The
+exercises below are taken from the Calculus course.<div style="margin-top:20px"></div><span id="env7.48"></span><a class="Exerciseno" data-count="7.48"></a><a href="#5a4d49a7-76c8-400b-a15b-d7035bea2046" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=5a4d49a7-76c8-400b-a15b-d7035bea2046 class = "collapse Exercise envbuttons">  
+Solve the two optimization problems
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Maximize/Minimize} &x^2 - 2 x y + 2 y\\
+    &\text{with constraint}\\
+    &&(x, y)\in C,
+  \end{aligned}</script>
+  where <span class="math"></span><script type="math/tex">C = \{(x, y)\in \mathbb{R}^2 \mid 0\leq x \leq 3, 0\leq y \leq 2\}</script>. But first give a
+  reason as to why they both are solvable.<div style="margin-top:20px"></div><a href="#e5daa56d-876e-4cd9-bfa1-e7c566a42450" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=e5daa56d-876e-4cd9-bfa1-e7c566a42450 class="collapse">
+    First find <span class="math"></span><script type="math/tex">\partial C</script> and <span class="math"></span><script type="math/tex">C^o</script>. Then try with Proposition <a href=#env7.46 class="labelref">7.46</a>
+    supposing that a maximal point really is to be found in <span class="math"></span><script type="math/tex">C^o</script> and not
+    on <span class="math"></span><script type="math/tex">\partial C</script>.
+  </div>
+</div><div style="margin-top:20px"></div><span id="env7.49"></span><a class="Exerciseno" data-count="7.49"></a><a href="#fcd9b4ed-4555-4a97-90b8-5507f75e1b4c" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=fcd9b4ed-4555-4a97-90b8-5507f75e1b4c class = "collapse Exercise envbuttons">  
+Solve the two optimization problems
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Maximize/Minimize} &1 + 4 x - 5 y\\
+    &\text{with constraint}\\
+    &&(x, y)\in C,
+  \end{aligned}</script>
+  where <span class="math"></span><script type="math/tex">C = \{(x, y)\in \mathbb{R}^2 \mid 0\leq x, 0\leq y, 3 x + 2 y \leq 6\}</script>. But first give a
+  reason as to why they both are solvable.
+</div><div style="margin-top:20px"></div><span id="env7.50"></span><a class="Exerciseno" data-count="7.50"></a><a href="#23ed8b44-df47-4aac-854c-2b96a7ac59d3" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=23ed8b44-df47-4aac-854c-2b96a7ac59d3 class = "collapse Exercise envbuttons">  
+Solve the two optimization problems
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Maximize/Minimize} &3 + x y - x - 2 y\\
+    &\text{with constraint}\\
+    &&(x, y)\in C,
+  \end{aligned}</script>
+  where <span class="math"></span><script type="math/tex">C</script> is the triangle with vertices in <span class="math"></span><script type="math/tex">(1, 0), (5, 0)</script> and <span class="math"></span><script type="math/tex">(1, 4)</script>. But first give a
+  reason as to why they both are solvable.
+</div><div style="margin-top:20px"></div><span id="env7.51"></span><a class="Exerciseno" data-count="7.51"></a><a href="#c11aa03d-1fcb-4bb5-8694-f8826dc97c2d" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c11aa03d-1fcb-4bb5-8694-f8826dc97c2d class = "collapse Exercise envbuttons">  
+Use Proposition <a href=#env7.46 class="labelref">7.46</a> to give all the minute details in applying
+Theorem <a href=#env7.37 class="labelref">7.37</a> to solve Exercise <a href=#env7.42 class="labelref">7.42</a>.<div style="margin-top:20px"></div><a href="#21c7f2c4-1867-435d-909a-e631fc7674fe" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=21c7f2c4-1867-435d-909a-e631fc7674fe class = "collapse Hint envbuttons">    
+  First rewrite to the problem, where you minimize <span class="math"></span><script type="math/tex">6/y + 4/x + 2 x y</script> subject to <span class="math"></span><script type="math/tex">x>0, y> 0</script> by using <span class="math"></span><script type="math/tex">x y z = 2</script>.
+  Then explain why this problem may be solved by restricting with upper and lower bounds on <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script>. The minimum (<span class="math"></span><script type="math/tex">6 \sqrt[3]{6}</script>) is attained in a critical point and not on the
+  boundary. For <span class="math"></span><script type="math/tex">N\in \mathbb{N}\setminus\{0\}</script> one may optimize over the compact subset<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+C_N = \{(x, y) \mid \frac{1}{N} \leq x \leq N, \frac{1}{N} \leq y \leq N\}
+  </script><div style="margin-top:20px"></div>and analyze what happens when <span class="math"></span><script type="math/tex">N\to\infty</script>.
+  </div>
+</div><div style="margin-top:20px"></div></div></body>

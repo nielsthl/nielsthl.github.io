@@ -1,0 +1,973 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#006d74a3-2d1f-4b10-b24c-37560502324f"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#6eaa1609-7074-4d00-aa72-5cd54ef4a24a">1.1 Black box warnings</a></li><li><a href="intro.html#c2cbbb02-0276-4ce0-a901-610faab6b812">1.2 Computer algebra</a></li><li><a href="intro.html#c6cdba52-7276-4db8-a2b8-7b920c49e0a3">1.3 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#f843e6e0-51ec-4d30-bdca-7d7c0d65b2b4">1.4 Sets</a></li><li><a href="intro.html#5a199e30-ea07-404f-87b3-8dca740580e7">1.5 Ordering numbers</a></li><li><a href="intro.html#98c264f9-b21b-4887-b862-6b14a8c6b715">1.6 Propositional logic</a></li><li><a href="intro.html#96873e91-8ccf-4678-a266-c16638ce7ed9">1.7 What is a mathematical proof?</a></li><li><a href="intro.html#cb119b82-1051-4dac-b94f-81ecb346b47b">1.8 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#e18d3854-9e17-4ce6-9cbe-f20aa5413f48"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#b5b22ce9-83eb-4971-b842-02bd99dd01fe">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#bd72d81e-802d-40f1-8e5a-9e0a966b5394">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#1519df08-6fa8-4aa0-936d-81a5c67947ef">2.3 Gauss elimination</a></li><li><a href="lineqs.html#408bfec6-58eb-4c0b-9b03-a09807caf3fb">2.4 Polynomials</a></li><li><a href="lineqs.html#e310ba8f-3d3e-4dfe-9fd1-896b50494fc6">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#bdc72d0f-7748-4776-b854-726ff83ad9d0">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#cd57f44e-44a3-4df8-b0f1-af79172b7d75">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#999d29d6-cc98-42a0-bfeb-d89aff2ad728"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#acea57dc-a493-4260-b445-f776b821ad36">3.1 Matrices</a></li><li><a href="matrices.html#20342fc3-09a2-4c9b-82c7-fa3dad20ccab">3.2 Linear maps</a></li><li><a href="matrices.html#f332c88c-8268-4602-928e-ac8687e75bea">3.3 Matrix multiplication</a></li><li><a href="matrices.html#53360251-42af-4a10-8b09-cbc76db0cf9a">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#5b178149-5b14-49e5-876c-afc87af74857">3.5 The inverse matrix</a></li><li><a href="matrices.html#25536c85-160f-462f-99cb-6a6dad75ba0d">3.6 The transposed matrix</a></li><li><a href="matrices.html#59c55165-0cb1-409a-b428-ab189cfb72d7">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#5f94c5a1-3a60-417c-91fa-8e2af76995a6"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#1f20cd20-f831-4fea-9515-9304b9d3fb14">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#fdf66530-fea8-4312-8e27-a65fbee5087b">4.2 General definition</a></li><li><a href="whatisopt.html#ab530ba9-0621-4662-a880-4afbf29fbf8a">4.3 Convex optimization</a></li><li><a href="whatisopt.html#b078a91f-1c19-4a67-bd47-39ef7c01d833">4.4 Linear optimization</a></li><li><a href="whatisopt.html#76ea50d6-77b7-4148-a13e-261de3d6aa0d">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#7198d8d0-6cb4-43ec-964a-112bdb113873">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#7004cde2-baf5-4631-a27e-f05a9e7adf92"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#343af046-e32a-457c-9137-485a8fc2710c">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#ca688149-f0c2-448a-9937-c652974e129f">5.2 Higher dimensions</a></li><li><a href="euclidean.html#d814e2f3-ca31-4d44-bef0-1973205eedff">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#19070637-799f-4d34-8233-8007b99a483d">5.4 Sequences and limits in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script></a></li><li><a href="euclidean.html#51aa864a-2904-4648-96dc-ade30de2ea1a">5.5 Continuous functions</a></li></ul><li><a class="kap" href="convexfunctions.html#5bd7c54f-91ea-4145-bb20-db7e92fb84d7"><b>6</b> Convex functions</a></li><a href="#kap6" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap6" class="collapse"><li><a href="convexfunctions.html#957624e7-479d-480d-9d65-9159ff51a5df">6.1 Strictly convex functions</a></li><li><a href="convexfunctions.html#d742dd52-fcd3-42d6-8b0e-ced92f89c2ca">6.2 Why are convex functions interesting?</a></li><li><a href="convexfunctions.html#d33ee78c-606b-4136-b52b-7f68a83ffbc3">6.3 Differentiable functions</a></li><li><a href="convexfunctions.html#c071e099-4a00-406b-8419-f6cbbea15131">6.4 Taylor polynomials</a></li><li><a href="convexfunctions.html#acc2d9f5-37e6-4ae5-b93a-6ae1661d8c1a">6.5 Differentiable convex functions</a></li></ul><li><a class="kap" href="diffseveral.html#ec344e7f-5efd-4fc8-a3d7-28caea0e2df7"><b>7</b> Several variables</a></li><a href="#kap7" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap7" class="collapse"><li><a href="diffseveral.html#f25eba08-b8e6-4682-9e42-9726432a3078">7.1 Introduction</a></li><li><a href="diffseveral.html#82042f45-9fe3-4165-89b1-d3cf33b126bb">7.2 Vector functions</a></li><li><a href="diffseveral.html#71f2df16-f0b4-431a-8127-9059314ecea5">7.3 Differentiability</a></li><li><a href="diffseveral.html#7cae04b8-b49b-4a3e-994d-c37b48809426">7.4 Newton-Raphson in several variables!</a></li><li><a href="diffseveral.html#cb4d570d-77dc-481e-bd49-df2631c4763a">7.5 Local extrema in several variables</a></li><li><a href="diffseveral.html#14dc8d71-f553-40ea-aa1a-32dc51db63c2">7.6 The chain rule</a></li><li><a href="diffseveral.html#8fe04136-d8ac-49f4-aa68-822690597bad">7.7 Logistic regression</a></li><li><a href="diffseveral.html#4b2d9442-1e84-4f6d-bf0e-1b0d0e67ce1b">7.8 3Blue1Brown</a></li><li><a href="diffseveral.html#798828ad-b196-4fe3-9a1c-d287e53461fd">7.9 Lagrange multipliers</a></li><li><a href="diffseveral.html#714939c5-f53a-46c0-a517-145ded0716ed">7.10 The interior and the boundary of a subset</a></li></ul><li><a class="kap" href="hessian.html#1d4d7f52-ef3b-49d7-96c5-7063208a6d0a"><b>8</b> The Hessian</a></li><a href="#kap8" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap8" class="collapse"><li><a href="hessian.html#47ffb3a0-adab-46bc-b7e2-4cd37e11148b">8.1 Introduction</a></li><li><a href="hessian.html#1ee906f0-0750-4478-9ab1-069565010997">8.2 Several variables</a></li><li><a href="hessian.html#3a13db0d-01e4-496f-8c2c-61e30b8755db">8.3 Newton's method for finding critical points</a></li><li><a href="hessian.html#9d4eeaaa-0155-4a4c-9e11-ea4fa32e48ff">8.4 The Taylor series in several variables</a></li><li><a href="hessian.html#1d424597-f73f-4ab5-b5f1-d9a4e1bb9681">8.5 Convex functions of several variables</a></li><li><a href="hessian.html#ccfc9e26-749e-4bc9-870a-dd59ac1a2188">8.6 How to decide the definiteness of a matrix</a></li></ul><li><a class="kap" href="convexoptimization.html#d3beb991-21bd-4e49-8500-2df3ec89eb97"><b>9</b> Convex optimization</a></li><a href="#kap9" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap9" class="collapse"><li><a href="convexoptimization.html#a39d1aa3-34ea-40a0-803d-381fc2f5548c">9.1 Finding the best hyperplane separating data</a></li><li><a href="convexoptimization.html#3c57808a-288d-4cc8-b91d-6fbef44f983c">9.2 Logarithmic barrier functions</a></li><li><a href="convexoptimization.html#d0332f83-5f95-4d0c-aa6e-c907cac6bb9f">9.3 A geometric optimality criterion</a></li><li><a href="convexoptimization.html#9bcbcfae-3dc8-4743-87b7-090021b8b7da">9.4 KKT</a></li><li><a href="convexoptimization.html#61952270-997d-4c6c-b743-4ca48cc2320f">9.5 Computing with KKT</a></li><li><a href="convexoptimization.html#294fa246-3df7-40dc-bb89-d9287b8b9bfa">9.6 Optimization exercises</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><h1 id="5f94c5a1-3a60-417c-91fa-8e2af76995a6">4<span style="float:right;">What is optimization?</span></h1><div style="margin-top:20px"></div>In this chapter we will denote the set of column vectors with <span class="math"></span><script type="math/tex">d</script> rows by <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>.
+The arithmetic
+of <span class="math"></span><script type="math/tex">d\times 1</script> matrices apply i.e., we may add vectors in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> and   
+multiply them by a number in <span class="math"></span><script type="math/tex">\mathbb{R}</script>.<div style="margin-top:20px"></div>In the next chapter we will introduce them as <em>euclidean</em> vector spaces. The
+term euclidean refers to a norm: a function measuring the size of a vector. In this
+chapter we only need the structure as column vectors.<div style="margin-top:20px"></div><span id="sec4.1"></span><h2 id="1f20cd20-f831-4fea-9515-9304b9d3fb14">4.1 What is an optimization problem?</h2><div style="margin-top:20px"></div>An optimization problem consists of maximizing or minimizing a function subject
+to constraints. <div style="margin-top:20px"></div>Below are two classical examples related to minimizing (non-linear) functions subject to
+(non-linear) constraints. These are actually examples of
+convex optimization problems. More about that later.<div style="margin-top:20px"></div><span id="env4.1"></span><div class="example" data-count="4.1">       <div style="margin-top:20px"></div>A cylindrical can is supposed to have a volume of <span class="math"></span><script type="math/tex">V</script> <span class="math"></span><script type="math/tex">\text{m}^3</script>. The material used
+  for the top and bottom costs <span class="math"></span><script type="math/tex">T</script> DKK per <span class="math"></span><script type="math/tex">\text{m}^2</script> and the material used for
+  the side costs <span class="math"></span><script type="math/tex">S</script> DKK per <span class="math"></span><script type="math/tex">\text{m}^2</script>. Give the dimensions <span class="math"></span><script type="math/tex">r</script> and <span class="math"></span><script type="math/tex">h</script> of the
+  can minimizing the price of the materials.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/cylinder.svg" ></div>  <div style="margin-top:20px"></div>The cost of the top and bottom pieces are <span class="math"></span><script type="math/tex">2 \pi r^2 T</script>. The cost of the 
+side material is <span class="math"></span><script type="math/tex">2\pi r h S</script>. The constraint is that the volume must be
+<span class="math"></span><script type="math/tex">V</script>. This is expressed in the equation <span class="math"></span><script type="math/tex">\pi r^2 h = V</script>. All in all
+the optimization problem is
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned} 
+  &\text{Minimize} &2\pi r^2 T + 2\pi r h S&\\
+  &\text{with constraints}\\
+  &&\pi r^2 h &= V\\
+  &&r &\geq 0\\
+  &&h &\geq 0,
+\end{aligned}</script>
+where <span class="math"></span><script type="math/tex">V, T</script> and <span class="math"></span><script type="math/tex">S</script> are constants.<div style="margin-top:20px"></div><span id="env4.2"></span><a class="Exerciseno" data-count="4.2"></a><a href="#70f2a256-9d72-46a6-b43e-e46b3d17d996" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=70f2a256-9d72-46a6-b43e-e46b3d17d996 class = "collapse Exercise envbuttons">  
+Can you see a way of solving this optimization problem by eliminating <span class="math"></span><script type="math/tex">h</script> in
+the constraint <span class="math"></span><script type="math/tex">\pi r^2 h = V</script>?<div style="margin-top:20px"></div><a href="#f4a77298-5304-4eb5-9e86-70b88d8caafc" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=f4a77298-5304-4eb5-9e86-70b88d8caafc class="collapse">
+<div class="math"></div><script type="math/tex; mode=display">
+\pi r^2 h = V\iff h = \frac{V}{\pi r^2}
+</script>
+and <span class="math"></span><script type="math/tex">h</script> can be inserted in <span class="math"></span><script type="math/tex">2\pi r^2 T + 2 \pi r h S</script>. Why is this helpful?
+</div>
+</div>
+</div><div style="margin-top:20px"></div><span id="env4.3"></span><div class="example" data-count="4.3">     
+  A person is in distress <span class="math"></span><script type="math/tex">D</script> meters from the beach. The life guard
+  spots the situation, but is <span class="math"></span><script type="math/tex">d</script> meters from where he would naturally jump
+  in the water as indicated below. The life guard runs <span class="math"></span><script type="math/tex">8</script> m/s on the
+  beach and swims <span class="math"></span><script type="math/tex">1</script> m/s in the water. How far (<span class="math"></span><script type="math/tex">x</script>) should he run along the
+  beach before jumping into the water in order to minimize the time needed
+  to reach the person in distress?<div style="margin-top:20px"></div><div class="centerimg"><img src="img/lifeguard.png" ></div><div style="margin-top:20px"></div>The time spent moving with a speed of <span class="math"></span><script type="math/tex">v</script> over a distance of <span class="math"></span><script type="math/tex">s</script> is
+  <div class="math"></div><script type="math/tex; mode=display">
+  t = \frac{s}{v}.
+  </script>
+  If the life guard jumps in the water at the point <span class="math"></span><script type="math/tex">x</script> he will have
+  to swim a distance of
+  <div class="math"></div><script type="math/tex; mode=display">
+  \sqrt{D^2 + (d-x)^2}
+  </script>
+  using the Pythagorean theorem. Therefore the optimization problem becomes
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{Minimize} &\frac{x}{8} + \sqrt{D^2 + (d-x)^2}&\\
+  &\text{with constraints}\\
+  &&x\geq 0\\
+\end{aligned}</script>
+Strictly speaking we do not need the constraint <span class="math"></span><script type="math/tex">x\geq 0</script>, as the life guard is free
+to run in the other direction. So the optimization problem is simply to minimize
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{x}{8} + \sqrt{D^2 + (d-x)^2}
+</script>
+with no strings attached i.e., <span class="math"></span><script type="math/tex">x\in \mathbb{R}</script> is just assumed to be any number.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+D = 200
+d = 100
+plot(x/8 + sqrt(D**2 + (d-x)**2), (x, 0, d))
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env4.4"></span><a class="Exerciseno" data-count="4.4"></a><a href="#89327714-e7df-403d-b9c4-6cfdad7e2eb3" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=89327714-e7df-403d-b9c4-6cfdad7e2eb3 class = "collapse Exercise envbuttons">  
+  You need to build a rectangular fence in front of your house for a herb garden.
+  Your house will make up one side of the rectangle, so you only need to build three
+  sides. Suppose you have 10 m of wire. What is the maximum area of the herb garden you can
+  wall in?
+</div><div style="margin-top:20px"></div><span id="sec4.2"></span><h2 id="fdf66530-fea8-4312-8e27-a65fbee5087b">4.2 General definition</h2><div style="margin-top:20px"></div>An optimization problem consists of a subset <span class="math"></span><script type="math/tex">D\subseteq \mathbb{R}^d</script> and
+a function <span class="math"></span><script type="math/tex">f:D\rightarrow \mathbb{R}</script>. We will consider optimization problems in the context
+of minimization. Optimize in this situation means minimize.<div style="margin-top:20px"></div><div class="emphasize"><span id="env4.5"></span><div class="genericenv" data-count="4.5" data-name="DEFINITION">     
+  In our most general setting an optimization problem looks like
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{Minimize} &f(x)&\\
+  &\text{with constraint}\\
+  &&x\in C,
+\end{aligned}</script>
+     where <span class="math"></span><script type="math/tex">C</script> and <span class="math"></span><script type="math/tex">D</script> are subsets of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> with <span class="math"></span><script type="math/tex">C\subseteq D</script> and <span class="math"></span><script type="math/tex">f: D\rightarrow \mathbb{R}</script> is a function.
+A solution to the optimization problem is a vector <span class="math"></span><script type="math/tex">x_0\in C</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+f(x_0) \leq f(x)
+</script>
+for every <span class="math"></span><script type="math/tex">x\in C</script>. Here <span class="math"></span><script type="math/tex">x_0</script> is called an <em>optimum</em> and <span class="math"></span><script type="math/tex">f(x_0)</script> is called the <em>optimal value</em>.<div style="margin-top:20px"></div>We will often write the optimization problem defined above in short form as
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{min}\, f(x)\\
+  &x\in C.
+\end{aligned}</script>
+</div></div><div style="margin-top:20px"></div>The complexity of the problem depends very much on the nature of <span class="math"></span><script type="math/tex">C</script> and <span class="math"></span><script type="math/tex">f</script>. Also,
+  we cannot even be certain that an optimization problem has a solution. Consider
+  the problem<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{min}\,x\\
+    &x\leq 0
+  \end{aligned}</script><div style="margin-top:20px"></div>Here <span class="math"></span><script type="math/tex">x</script> can be made arbitrarily small subject to the constraint <span class="math"></span><script type="math/tex">x\leq 0</script> and
+  the problem has no solution.<div style="margin-top:20px"></div><div class="emphasize"><span id="env4.6"></span><div class="genericenv" data-count="4.6" data-name="REMARK">     
+    We have deliberately not included maximization problems in Definition <a href=#env4.5 class="labelref">4.5</a>. This is
+because a maximization problem, such as
+<span id="equ4.1"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{Maximize} &f(x)&\\
+  &\text{with constraint}\\
+  &&x\in C
+\end{aligned}\tag{4.1}</script><div style="margin-top:20px"></div>can be formulated as the minimization problem
+<span id="equ4.2"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{Minimize} &-f(x)&\\
+  &\text{with constraint}\\
+  &&x\in C.
+\end{aligned}\tag{4.2}</script><div style="margin-top:20px"></div>Again, we will use the short notation
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{max}\,f(x)\\
+  &x\in C
+\end{aligned}</script>
+for the maximization problem in <a href=#equ4.1>(4.1)</a>.
+A solution to <a href=#equ4.1>(4.1)</a> is a vector <span class="math"></span><script type="math/tex">x_0\in C</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+f(x_0) \geq f(x)
+</script>
+for every <span class="math"></span><script type="math/tex">x\in C</script>. Again, <span class="math"></span><script type="math/tex">x_0</script> is called an optimum and <span class="math"></span><script type="math/tex">f(x_0)</script> the
+optimal value.<div style="margin-top:20px"></div></div></div><div style="margin-top:20px"></div><span id="env4.7"></span><a class="Exerciseno" data-count="4.7"></a><a href="#c1cf5705-ae5b-4794-9e06-0a4ec850f8e4" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c1cf5705-ae5b-4794-9e06-0a4ec850f8e4 class = "collapse Exercise envbuttons">  
+Suppose that the maximization problem 
+<span id="equ4.3"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{max}\, f(x)\\
+  &x\in C
+\end{aligned}\tag{4.3}</script>
+is formulated as
+the minimization problem
+<span id="equ4.4"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{min}\, -f(x)\\
+  &x\in C.
+\end{aligned}\tag{4.4}</script>
+Show that <span class="math"></span><script type="math/tex">f(x_0)</script> is the optimal value 
+and <span class="math"></span><script type="math/tex">x_0</script> the optimum for <a href=#equ4.3>(4.3)</a> if
+<span class="math"></span><script type="math/tex">-f(x_0)</script> is the optimal value 
+and <span class="math"></span><script type="math/tex">x_0</script> the optimum for <a href=#equ4.4>(4.4)</a>. 
+</div><div style="margin-top:20px"></div><span id="env4.8"></span><a class="Exerciseno" data-count="4.8"></a><a href="#ebfee6dc-e856-4df5-bb3f-1a2e90f51ed0" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ebfee6dc-e856-4df5-bb3f-1a2e90f51ed0 class = "collapse Exercise envbuttons">  
+    Suppose that <span class="math"></span><script type="math/tex">a > 0</script>. Solve the optimization problem
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &a x^2 + b x + c\\
+    &\text{with constraint}\\
+    &&x\in \mathbb{R}.
+  \end{aligned}</script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec4.3"></span><h2 id="ab530ba9-0621-4662-a880-4afbf29fbf8a">4.3 Convex optimization</h2><div style="margin-top:20px"></div>Particularly well behaved optimization problems are the convex ones. These are optimization
+    problems, where <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^d</script> is a convex subset and <span class="math"></span><script type="math/tex">f:C\rightarrow \mathbb{R}</script> a
+    convex function in Definition <a href=#env4.5 class="labelref">4.5</a>. To define these concepts we first introduce
+    the notion of 
+    a line in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>.<div style="margin-top:20px"></div><div class="emphasize"><span id="env4.9"></span><div class="genericenv" data-count="4.9" data-name="DEFINITION">     
+      A line <span class="math"></span><script type="math/tex">L\subseteq \mathbb{R}^d</script> is a subset of the form
+      <div class="math"></div><script type="math/tex; mode=display">
+      L = \{u + t v \mid t\in \mathbb{R}\},
+      </script>
+      where <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^d</script> with <span class="math"></span><script type="math/tex">v\neq 0</script>.
+    </div></div><div style="margin-top:20px"></div><span id="env4.10"></span><div class="example" data-count="4.10">     
+A line <span class="math"></span><script type="math/tex">L</script> in the plane <span class="math"></span><script type="math/tex">\mathbb{R}^2</script> is (usually) given by its equation
+<span id="equ4.5"></span><div class="math"></div><script type="math/tex; mode=display">
+y = a x + b.
+\tag{4.5}</script>
+This means that it consists of points <span class="math"></span><script type="math/tex">(x, y)\in \mathbb{R}^2</script> satisfying <span class="math"></span><script type="math/tex">y = a x + b</script>.
+Here <span class="math"></span><script type="math/tex">a</script> can be interpreted as the slope of the line and <span class="math"></span><script type="math/tex">b</script> the intersection with the
+<span class="math"></span><script type="math/tex">y</script>-axis.<div style="margin-top:20px"></div>What about all the points <span class="math"></span><script type="math/tex">(x, y)</script> with <span class="math"></span><script type="math/tex">x = 0</script>? Certainly they also deserve to be called
+a line. However, they do not satisfy an equation like <a href=#equ4.5>(4.5)</a>. Informally, this line
+has infinite slope.<div style="margin-top:20px"></div>Therefore we introduce the parametric representation of a line: a line is the
+set of points of the form
+<span id="equ4.6"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix} x_0 \\ y_0 \end{pmatrix} +
+t \begin{pmatrix} u_0 \\ v_0 \end{pmatrix},
+\tag{4.6}</script>
+where <span class="math"></span><script type="math/tex">t\in \mathbb{R}</script>,
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix} x_0 \\ y_0\end{pmatrix}
+</script>
+is any point on the line and
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix} u_0 \\ v_0\end{pmatrix}
+</script>
+is a non-zero (directional) vector.<div style="margin-top:20px"></div><span id="env4.11"></span><div class="figure" data-count="4.11">     
+  <div class="centerimg"><img src="img/line.png" ></div>
+  <center>
+    Example of a line in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script> with (directional) vector <span class="math"></span><script type="math/tex">v\in \mathbb{R}^2</script> through the point <span class="math"></span><script type="math/tex">u\in \mathbb{R}^2</script>.
+  </center><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>Given two distinct points
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  x_0 \\ y_0
+\end{pmatrix}
+\qquad\text{and}\qquad
+\begin{pmatrix}
+  x_1 \\ y_1
+\end{pmatrix},
+</script>
+there is one and only one line passing through them. This line is given by
+<span id="equ4.7"></span><div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  x_0 \\ y_0
+\end{pmatrix}
++ t
+\begin{pmatrix}
+  x_1 -x_0\\ y_1-y_0
+\end{pmatrix}.
+\tag{4.7}</script><div style="margin-top:20px"></div>How do we convert the line <span class="math"></span><script type="math/tex">y = a x + b</script> in <a href=#equ4.5>(4.5)</a> to the parametric form
+<a href=#equ4.6>(4.6)</a>? Well, we know that the two distinct points
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  0 \\ b
+\end{pmatrix}\qquad\text{and}\qquad
+\begin{pmatrix}
+  1 \\
+  a + b
+  \end{pmatrix}
+  </script>
+  are on the line. Therefore it is given by
+  <div class="math"></div><script type="math/tex; mode=display">
+  \begin{pmatrix} 0 \\ b
+  \end{pmatrix}  +
+  t \begin{pmatrix} 1 \\ a
+    \end{pmatrix}
+    </script>
+by <a href=#equ4.7>(4.7)</a>.
+</div><div style="margin-top:20px"></div><a href="#56b53787-7196-456a-95f0-ae2019bae3af" class ="btn btn-default" data-toggle="collapse">Mentimeter</a><div id=56b53787-7196-456a-95f0-ae2019bae3af class="collapse">
+  <a href="https://www.mentimeter.com/s/aluu5py33nfsbducbdy1icent8mcmsb2/5yqqwuhrir7k" target="_blank">Line directional vector</a>
+</div><div style="margin-top:20px"></div><span id="env4.12"></span><a class="Exerciseno" data-count="4.12"></a><a href="#7958bca4-c1b0-46f8-a33e-832fbec7aee6" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=7958bca4-c1b0-46f8-a33e-832fbec7aee6 class = "collapse Exercise envbuttons">  
+Compute the parametric representation of the line <span class="math"></span><script type="math/tex">L</script> through the points <span class="math"></span><script type="math/tex">(1, 1)</script> and <span class="math"></span><script type="math/tex">(2, 3)</script>.
+Also compute <span class="math"></span><script type="math/tex">a</script> and <span class="math"></span><script type="math/tex">b</script> in the representation <span class="math"></span><script type="math/tex">y = a x + b</script> for <span class="math"></span><script type="math/tex">L</script>.
+</div><div style="margin-top:20px"></div><span id="env4.13"></span><a class="Exerciseno" data-count="4.13"></a><a href="#ebbf11d6-5eaa-4211-9c52-a786f870b171" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ebbf11d6-5eaa-4211-9c52-a786f870b171 class = "collapse Exercise envbuttons">  
+What is the parametric representation of the
+line consisting of the points <span class="math"></span><script type="math/tex">(x, y)</script> with <span class="math"></span><script type="math/tex">x=0</script>?
+</div><div style="margin-top:20px"></div><span id="env4.14"></span><a class="Exerciseno" data-count="4.14"></a><a href="#6e579c30-af2a-4a39-9ee4-466fb918b26d" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6e579c30-af2a-4a39-9ee4-466fb918b26d class = "collapse Exercise envbuttons">  
+    Show in Definition <a href=#env4.9 class="labelref">4.9</a> that if <span class="math"></span><script type="math/tex">L</script> is given by <span class="math"></span><script type="math/tex">u</script> and <span class="math"></span><script type="math/tex">v</script>, then
+    you might as well replace <span class="math"></span><script type="math/tex">v</script> by <span class="math"></span><script type="math/tex">s v</script>, where <span class="math"></span><script type="math/tex">s</script> is a real number and <span class="math"></span><script type="math/tex">s\neq 0</script>.  It gives
+    the same line.
+    </div><div style="margin-top:20px"></div><div class="emphasize"><span id="env4.15"></span><div class="genericenv" data-count="4.15" data-name="EXERCISE">     
+  Show that there is a unique line passing through two distinct points
+    <span class="math"></span><script type="math/tex">x, y\in \mathbb{R}^d</script> and that it is given by <span class="math"></span><script type="math/tex">u = x</script> and <span class="math"></span><script type="math/tex">v = y - x</script> in Definition <a href=#env4.9 class="labelref">4.9</a>.
+</div></div><div style="margin-top:20px"></div><span id="env4.16"></span><a class="Exerciseno" data-count="4.16"></a><a href="#e879852f-4d4c-4498-ae5f-2ff3159b9702" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=e879852f-4d4c-4498-ae5f-2ff3159b9702 class = "collapse Exercise envbuttons">  
+    Do the points
+    <div class="math"></div><script type="math/tex; mode=display">
+    \begin{pmatrix}1\\ 2\\ 3\end{pmatrix}, \quad \begin{pmatrix} 4\\ 5\\ 6\end{pmatrix}
+    \quad\text{and}\quad \begin{pmatrix} 7\\ 8\\ 9\end{pmatrix}
+    </script>
+    lie on the same line in <span class="math"></span><script type="math/tex">\mathbb{R}^3</script>?
+    </div><div style="margin-top:20px"></div><span id="env4.17"></span><a class="Exerciseno" data-count="4.17"></a><a href="#4fbefa28-91f0-4c10-a456-e69ae0234847" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4fbefa28-91f0-4c10-a456-e69ae0234847 class = "collapse Exercise envbuttons">  
+    Show that the line through two distinct points <span class="math"></span><script type="math/tex">x, y\in \mathbb{R}^d</script> is equal to the subset
+    <div class="math"></div><script type="math/tex; mode=display">
+    \{ (1-t) x + t y \mid t\in \mathbb{R}\} \subseteq \mathbb{R}^d.
+    </script>
+    </div><div style="margin-top:20px"></div><div class="emphasize"><span id="env4.18"></span><div class="genericenv" data-count="4.18" data-name="DEFINITION">     
+    A convex subset <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^d</script> is a subset that contains the
+    line segment between any two of its points <span class="math"></span><script type="math/tex">x, y\in C</script> i.e.,
+    <div class="math"></div><script type="math/tex; mode=display">
+    (1 - t) x + t y\in C
+    </script>
+    for every number <span class="math"></span><script type="math/tex">t</script> with <span class="math"></span><script type="math/tex">0\leq t \leq 1</script>.
+    </div></div><div style="margin-top:20px"></div><span id="env4.19"></span><div class="figure" data-count="4.19">     
+  <div class="centerimg"><img src="img/nonconvex.png" ></div>
+  <center>
+    Example of non-convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>.
+  </center>
+</div><div style="margin-top:20px"></div><span id="env4.20"></span><a class="Quizexerciseno" data-count="4.20"></a><a href="#35685cf8-4394-4773-a8c8-d33e3cf737cd" class ="btn btn-default Quizexercisebutton" data-toggle="collapse"></a><div id=35685cf8-4394-4773-a8c8-d33e3cf737cd class = "collapse Quizexercise envbuttons">  
+  <span id="{labelname}"></span><div id="quiz1" style="width:100%;"><div class="row quizquestion">
+    Which of the subsets below are convex?
+    </div><div class="row quizboxes"><div class="col-xs-5 quizanswer" datav="T">
+    <div class="math"></div><script type="math/tex; mode=display">C=\{1\}\subseteq \mathbb{R}</script>
+    </div><div class="col-xs-5 quizanswer" datav="F">
+    <div class="math"></div><script type="math/tex; mode=display">C=\{1, 2\}\subseteq \mathbb{R}</script>
+    </div><div class="col-xs-5 quizanswer" datav="T">
+    The points <span class="math"></span><script type="math/tex">C</script> on a line <span class="math"></span><script type="math/tex">y = a x + b</script> in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>.
+    </div><div class="col-xs-5 quizanswer" datav="F">
+    <div class="math"></div><script type="math/tex; mode=display">
+    C=\{(x, y)\in \mathbb{R}^2 \mid x y \geq 0\}.
+    </script>
+  </div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div><div style="margin-top:20px"></div><span id="env4.21"></span><a class="Exerciseno" data-count="4.21"></a><a href="#f99b131a-339e-4df0-aa6b-7e934920cb32" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=f99b131a-339e-4df0-aa6b-7e934920cb32 class = "collapse Exercise envbuttons">  
+      A closed interval in <span class="math"></span><script type="math/tex">\mathbb{R}</script> is a subset of the form
+      <div class="math"></div><script type="math/tex; mode=display">
+      [a, b] = \{x \mid a \leq x \leq b\}
+      </script>
+      for <span class="math"></span><script type="math/tex">a \leq b</script>. Prove that <span class="math"></span><script type="math/tex">[a, b]</script> is a convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}</script>.<div style="margin-top:20px"></div><a href="#7ba172b5-7be7-4eb6-9db3-3dbcebb69ee7" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=7ba172b5-7be7-4eb6-9db3-3dbcebb69ee7 class="collapse"><div style="margin-top:20px"></div>Keep cool and just apply the definitions! First of all, <span class="math"></span><script type="math/tex">x\in [a, b]</script> if and only if
+<span id="equ4.8"></span><div class="math"></div><script type="math/tex; mode=display">
+a\leq x \land x \leq b.
+\tag{4.8}</script>
+Now pick any <span class="math"></span><script type="math/tex">t\in [0, 1]</script>. We must show that if <span class="math"></span><script type="math/tex">x\in [a, b]</script> and <span class="math"></span><script type="math/tex">y\in [a, b]</script>, then
+<div class="math"></div><script type="math/tex; mode=display">
+(1 - t)x + t y \in [a, b].
+</script>
+You may also write this out as
+<div class="math"></div><script type="math/tex; mode=display">
+a\leq x \land x \leq b\qquad\land\qquad a\leq y \land y \leq b
+</script>
+implies that
+<div class="math"></div><script type="math/tex; mode=display">
+a\leq (1 - t)x + t y \qquad \land \qquad (1 - t)x + t y \leq b. 
+</script><div style="margin-top:20px"></div><a href="#e497d97c-d583-4dee-89d6-cba72d067c18" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=e497d97c-d583-4dee-89d6-cba72d067c18 class="collapse">
+<div class="math"></div><script type="math/tex; mode=display">
+a\leq x\implies (1-t) a \leq (1-t) x\qquad\land\qquad a\leq y \implies t a \leq t y
+</script>
+implies that 
+<div class="math"></div><script type="math/tex; mode=display">
+(1 - t) a + t a \leq (1-t)x + t y.
+</script>
+What is <span class="math"></span><script type="math/tex">(1-t)a + t a</script>?
+</div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>      
+    <span id="env4.22"></span><a class="Exerciseno" data-count="4.22"></a><a href="#0770116e-b0f6-4939-a978-d4e2cf8b95db" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=0770116e-b0f6-4939-a978-d4e2cf8b95db class = "collapse Exercise envbuttons">  
+    Let <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script> be convex subsets of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>. Prove that <span class="math"></span><script type="math/tex">A\cap B</script> is a
+    convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>. Generalize this to show that if <span class="math"></span><script type="math/tex">A_1, \dots, A_n</script>
+    are any number of convex subsets of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>, then their intersection
+    <div class="math"></div><script type="math/tex; mode=display">
+    A_1 \cap \cdots \cap A_n
+    </script>
+    is a convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>. Is the union of two convex subsets necessarily convex?
+    </div><div style="margin-top:20px"></div><div class="emphasize"><span id="env4.23"></span><div class="genericenv" data-count="4.23" data-name="DEFINITION">     
+    A convex function is a function <span class="math"></span><script type="math/tex">f: C\rightarrow \mathbb{R}</script>
+    defined on a convex subset <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^d</script>, such that
+    <div class="math"></div><script type="math/tex; mode=display">
+    f((1 - t) x + t y) \leq (1-t) f(x) + t f(y)
+    </script>
+    for every number <span class="math"></span><script type="math/tex">t</script> with <span class="math"></span><script type="math/tex">0\leq t \leq 1</script>.
+    </div></div><div style="margin-top:20px"></div><span id="env4.24"></span><div class="figure" data-count="4.24">     
+  <div class="centerimg"><img src="img/convexfct.png" ></div>
+  <center>
+    Graph of convex function. The line segment between <span class="math"></span><script type="math/tex">(x, f(x))</script> and <span class="math"></span><script type="math/tex">(y, f(y))</script>
+    lies above the graph.
+  </center>
+</div><div style="margin-top:20px"></div><span id="env4.25"></span><a class="Exerciseno" data-count="4.25"></a><a href="#83ac9e93-ebac-4648-8b92-9163901b1389" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=83ac9e93-ebac-4648-8b92-9163901b1389 class = "collapse Exercise envbuttons">  
+<ol class="lowerroman"><li id="ite4.1">
+    Let the function <span class="math"></span><script type="math/tex">f: \mathbb{R} \rightarrow \mathbb{R}</script> be given by
+    <span class="math"></span><script type="math/tex">f(x) = a x + b</script>, where <span class="math"></span><script type="math/tex">a, b\in \mathbb{R}</script>. Show that <span class="math"></span><script type="math/tex">f</script> is a convex
+    function.<div style="margin-top:20px"></div><a href="#905913f4-574c-40d8-819f-1dad659aba3e" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=905913f4-574c-40d8-819f-1dad659aba3e class="collapse">
+      Try the case <span class="math"></span><script type="math/tex">a = 0</script> first.
+    </div>
+</li><li id="ite4.2">
+    Can you at this point prove that <span class="math"></span><script type="math/tex">f(x) = x^2</script> is a convex function?<div style="margin-top:20px"></div><a href="#aea1288d-4105-45ad-aaa4-6e25f30140b0" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=aea1288d-4105-45ad-aaa4-6e25f30140b0 class="collapse">
+      Simplify
+      <div class="math"></div><script type="math/tex; mode=display">
+      (1 - t) x^2 + t y^2 - ((1-t) x + t y)^2
+      </script>
+      to an expression that has to be non-negative.<div style="margin-top:20px"></div><a href="#eaeecd97-31e0-4ae1-b5af-d10041ffdcfc" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=eaeecd97-31e0-4ae1-b5af-d10041ffdcfc class="collapse">
+        <div class=sage><script type="text/x-sage">
+from sympy.abc import x, y, t
+f = (1-t)*x^2 + t*y^2 - ((1-t)*x + t*y)^2
+factor(f)
+        </script></div>
+    </div>
+  </div>
+</li><li id="ite4.3">
+  Using that <span class="math"></span><script type="math/tex">f(x) = x^2</script> is a convex function, prove that <span class="math"></span><script type="math/tex">g(x) = x^4</script> is a convex function. <div style="margin-top:20px"></div><a href="#3abcd4a3-13ca-470a-a579-bc04fa1a294b" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=3abcd4a3-13ca-470a-a579-bc04fa1a294b class="collapse">
+    Use that 
+    <span class="math"></span><script type="math/tex">g(x) = f(x)^2</script> 
+    and <span class="math"></span><script type="math/tex">a \leq b\implies a^2 \leq b^2</script> if <span class="math"></span><script type="math/tex">a, b\geq 0</script> (here we really need <span class="math"></span><script type="math/tex">a, b\geq 0</script>, since for example <span class="math"></span><script type="math/tex">-2 \leq -1</script>, but
+    <span class="math"></span><script type="math/tex">4 \leq 1</script> is not true) to conclude that
+    <div class="math"></div><script type="math/tex; mode=display">
+    ((1-t) x + t y)^4 = (((1-t)x + t y)^2)^2 \leq ((1-t)x^2 + t y^2))^2 \leq (1-t) x^4 + t y^4
+    </script>
+    for <span class="math"></span><script type="math/tex">x, y\in \mathbb{R}</script>.
+    </div>
+  </li><li id="ite4.4">
+    It is a fact that <span class="math"></span><script type="math/tex">f(x) = x^3</script> is not a convex function, but can
+    you explain this using the definition of a convex function?<div style="margin-top:20px"></div><a href="#95f54211-525d-45b2-8280-dfd5766facef" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=95f54211-525d-45b2-8280-dfd5766facef class="collapse">
+      Try <span class="math"></span><script type="math/tex">x = -1, y = 0</script> and <span class="math"></span><script type="math/tex">t =\frac{1}{2}</script>.
+    </div><div style="margin-top:20px"></div></li></ol><div style="margin-top:20px"></div>    </div><div style="margin-top:20px"></div><div class="emphasize"><span id="env4.26"></span><div class="genericenv" data-count="4.26" data-name="LEMMA">     
+    Let <span class="math"></span><script type="math/tex">f: \mathbb{R}^d\rightarrow \mathbb{R}</script> be a convex function. Then the subset
+    <div class="math"></div><script type="math/tex; mode=display">
+    C = \{x\in \mathbb{R}^d \mid f(x) \leq a\}
+    </script>
+    is a convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>, where <span class="math"></span><script type="math/tex">a\in \mathbb{R}</script>.
+    </div></div>
+    <div class="proof">
+    Suppose that <span class="math"></span><script type="math/tex">u, v\in C</script> and <span class="math"></span><script type="math/tex">t\in [0, 1]</script>. Looking at Definition <a href=#env4.18 class="labelref">4.18</a>
+we must prove that
+<div class="math"></div><script type="math/tex; mode=display">
+(1-t) u + t v \in C.
+</script>
+By the definition of <span class="math"></span><script type="math/tex">f</script> being convex (Definition <a href=#env4.23 class="labelref">4.23</a>), it follows that
+<div class="math"></div><script type="math/tex; mode=display">
+f((1-t) u + t v) \leq (1- t) f(u) + t f(v).
+</script> 
+But, since <span class="math"></span><script type="math/tex">f(u)\leq a</script> and <span class="math"></span><script type="math/tex">f(v)\leq a</script> we have
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+(1- t) f(u) &\leq (1-t) a\\
+t f(v) &\leq t a
+\end{aligned}</script>
+and therefore
+<div class="math"></div><script type="math/tex; mode=display">
+(1- t) f(u) + t f(v) \leq (1-t) a + t a = a.
+</script>
+Therefore, 
+<div class="math"></div><script type="math/tex; mode=display">
+f((1-t) u + t v)\leq a 
+</script>
+and <span class="math"></span><script type="math/tex">(1-t) u + t v\in C</script>.
+</div><div style="margin-top:20px"></div>We do not have the tools yet to prove the crucial
+    result about convex optimization problems, but at least we can state it.<div style="margin-top:20px"></div><div class="emphasize"><span id="env4.27"></span><div class="genericenv" data-count="4.27" data-name="REMARK">     
+    In hunting for optimal solutions to an optimization problem one is often stuck with a
+    point <span class="math"></span><script type="math/tex">x_0\in \mathbb{R}^d</script>, which is optimal locally. This means that <span class="math"></span><script type="math/tex">f(x_0)\leq f(x)</script> for
+    every <span class="math"></span><script type="math/tex">x</script> that is sufficiently close to <span class="math"></span><script type="math/tex">x_0</script> (we will explain what this means in the next
+    chapter). The remarkable thing that happens in a convex optimization problem is
+    that if <span class="math"></span><script type="math/tex">x_0</script> is optimal locally, then it is a global optimum! It satisfies
+    <span class="math"></span><script type="math/tex">f(x_0)\leq f(x)</script> not only for <span class="math"></span><script type="math/tex">x</script> close to <span class="math"></span><script type="math/tex">x_0</script>, but for every <span class="math"></span><script type="math/tex">x\in C</script>.
+</div></div><div style="margin-top:20px"></div>The optimization problem in Exercise <a href=#env4.8 class="labelref">4.8</a> is a very typical convex optimization
+    problem.<div style="margin-top:20px"></div>Below you see a plot of the function (press Compute)
+    <div class="math"></div><script type="math/tex; mode=display">
+    f(x) = x^3 + 2 x^2 + x + 1
+    </script>
+    restricted
+    to the interval <span class="math"></span><script type="math/tex">[-1.5, 0]</script>. You can see that it has a local minimum around <span class="math"></span><script type="math/tex">-0.3</script> and
+    also that this minimum is not a global minimum (certainly <span class="math"></span><script type="math/tex">f(-1.4)</script> is smaller). So <span class="math"></span><script type="math/tex">f(x)</script>
+    is not a convex function on this interval (but if you look at it more locally on the
+    interval <span class="math"></span><script type="math/tex">[-0.6, 0]</script> it is a convex function.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+      plot(x**3+2*x**2+x+1, (x, -1.5, 0))
+    </script></div><div style="margin-top:20px"></div><span id="env4.28"></span><a class="Exerciseno" data-count="4.28"></a><a href="#9f2832c4-f843-451c-ac0b-c964fab8d764" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=9f2832c4-f843-451c-ac0b-c964fab8d764 class = "collapse Exercise envbuttons">  
+    Solve the optimization problem
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &x^3 + 2 x^2 + x + 1\\
+    &\text{with constraint}\\
+      &&x\in C
+    \end{aligned}</script>
+    for <span class="math"></span><script type="math/tex">C = [-0.6, 0]</script> and <span class="math"></span><script type="math/tex">C = [-2, 0]</script>.
+    </div><div style="margin-top:20px"></div><span id="sec4.4"></span><h2 id="b078a91f-1c19-4a67-bd47-39ef7c01d833">4.4 Linear optimization</h2><div style="margin-top:20px"></div>We will start this section with a concrete example.<div style="margin-top:20px"></div>A company
+    produces two products <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script>. The product <span class="math"></span><script type="math/tex">A</script> is selling
+    for <span class="math"></span><script type="math/tex">350</script> USD and <span class="math"></span><script type="math/tex">B</script> is selling for <span class="math"></span><script type="math/tex">300</script> USD. There are certain
+    limited ressources in the production of <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">B</script>. Two raw
+    materials <span class="math"></span><script type="math/tex">S_1</script> and <span class="math"></span><script type="math/tex">S_2</script> are needed along with employee
+    work time. The production of <span class="math"></span><script type="math/tex">A</script> requires <span class="math"></span><script type="math/tex">18</script> minutes, one
+    unit of <span class="math"></span><script type="math/tex">S_1</script> and six units of <span class="math"></span><script type="math/tex">S_2</script>. The production of
+    <span class="math"></span><script type="math/tex">B</script> requires <span class="math"></span><script type="math/tex">12</script> minutes, one unit of <span class="math"></span><script type="math/tex">S_1</script> and
+    eight units of <span class="math"></span><script type="math/tex">S_2</script>. There are <span class="math"></span><script type="math/tex">3132</script> minutes of employee work time,
+    <span class="math"></span><script type="math/tex">200</script> units of <span class="math"></span><script type="math/tex">S_1</script> and <span class="math"></span><script type="math/tex">1440</script> units of <span class="math"></span><script type="math/tex">S_2</script> available.
+    These constraints in the production can be outlined in the diagram below
+    <div class="math"></div><script type="math/tex; mode=display">
+\def\arraystretch{1.5}
+\begin{array}{c|r|r|r}
+    & \text{minutes} & S_1 & S_2\\ \hline
+  A & 18 & 1 & 6\\ \hline
+  B & 12 & 1 & 8\\ \hline
+  \text{constraint} & 3132 & 200 & 1440
+\end{array}
+</script><div style="margin-top:20px"></div>How many units <span class="math"></span><script type="math/tex">x</script> of <span class="math"></span><script type="math/tex">A</script> and <span class="math"></span><script type="math/tex">y</script> of <span class="math"></span><script type="math/tex">B</script> should the company produce to
+    maximize its profit?<div style="margin-top:20px"></div>You can rewrite this as the optimization problem<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Maximize} &350 x + 300 y&\\
+    &\text{with constraints}\\
+    &&18 x + 12 y &\leq 3132\\
+    &&x + y &\leq 200\\
+    &&6 x + 8 y &\leq 1440\\
+    &&x &\geq 0\\
+    &&y &\geq 0
+\end{aligned}</script><div style="margin-top:20px"></div>This optimization problem is a special case of linear optimization, which
+arguably is one of the most succesful applications of mathematics (after the introduction of the <a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank">simplex algorithm</a> following World War II). We will give a taste of the
+mathematical setup here.<div style="margin-top:20px"></div>The simplest convex optimization problems are the linear ones. Recall that a
+  linear function <span class="math"></span><script type="math/tex">f: \mathbb{R}^d\rightarrow \mathbb{R}</script> has the form
+  <div class="math"></div><script type="math/tex; mode=display">
+  f\begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} =
+  c_1 x_1 + \cdots + c_n x_n
+  </script>
+  for <span class="math"></span><script type="math/tex">c_1, \dots, c_n\in \mathbb{R}</script>. Usually we write this with matrix notation as
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x) = c^\top x,
+  </script>
+  where
+  <div class="math"></div><script type="math/tex; mode=display">
+  c =
+  \begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix}\qquad \text{and} \qquad
+  x = \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix}.
+  </script><div style="margin-top:20px"></div><span id="env4.29"></span><a class="Exerciseno" data-count="4.29"></a><a href="#d3062557-7933-4163-bb8d-d9cc93c4b2d8" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=d3062557-7933-4163-bb8d-d9cc93c4b2d8 class = "collapse Exercise envbuttons">  
+  Show that a linear function is convex.
+  </div><div style="margin-top:20px"></div>A linear optimization problem is not about minimizing a linear function over
+  an arbitrary convex subset. We choose the convex subset as an intersection of
+  subsets of the form
+  <div class="math"></div><script type="math/tex; mode=display">
+  \{x\in \mathbb{R}^d\mid a^\top x \leq b\},
+  </script>
+  where <span class="math"></span><script type="math/tex">a\in \mathbb{R}^d</script> is a non-zero vector and <span class="math"></span><script type="math/tex">b\in \mathbb{R}</script> a number i.e.,
+  a linear optimization problem has the form
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{min}\,c^\top x\\
+    &x\in C,
+  \end{aligned}</script>
+  where
+  <span id="equ4.9"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    C &= \{x\in \mathbb{R}^d \mid a_1^\top x \leq b_1, \dots, a_m^\top x\leq b_m\}\\
+    &= \{x\in \mathbb{R}^d \mid a_1^\top x \leq b_1\} \cap \cdots \cap \{x\in \mathbb{R}^d \mid a_m^\top x \leq b_m\}
+  \end{aligned}\tag{4.9}</script>
+  and <span class="math"></span><script type="math/tex">c, a_1, \dots, a_m\in \mathbb{R}^d</script> and <span class="math"></span><script type="math/tex">b_1, \dots, b_m\in \mathbb{R}</script>.<div style="margin-top:20px"></div><span id="env4.30"></span><a class="Exerciseno" data-count="4.30"></a><a href="#7ec4c2de-e6d9-478d-a946-494d9ad4bcb4" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=7ec4c2de-e6d9-478d-a946-494d9ad4bcb4 class = "collapse Exercise envbuttons">  
+  Use a selection of previous exercises to show that
+  the subset <span class="math"></span><script type="math/tex">C</script> defined in <a href=#equ4.9>(4.9)</a> is a convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>.
+  </div><div style="margin-top:20px"></div>Using matrix notation we write <span class="math"></span><script type="math/tex">C</script> as
+  <div class="math"></div><script type="math/tex; mode=display">
+  C = \{x\in \mathbb{R}^d \mid A x \leq b\},
+  </script>
+  where <span class="math"></span><script type="math/tex">A</script> is the <span class="math"></span><script type="math/tex">m\times d</script> matrix with row vectors <span class="math"></span><script type="math/tex">a_1^\top, \dots, a_m^\top</script> and
+  <div class="math"></div><script type="math/tex; mode=display">
+  b =
+  \begin{pmatrix}
+    b_1 \\ \vdots \\ b_m
+  \end{pmatrix}.
+  </script><div style="margin-top:20px"></div><span id="env4.31"></span><div class="example" data-count="4.31">     <div style="margin-top:20px"></div>Here is a concrete example for <span class="math"></span><script type="math/tex">d = 2</script>. The optimization problem
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Maximize} &x + y&\\
+    &\text{with constraints}\\
+    &&2 x + y &\leq 1\\
+    &&x + 2 y &\leq 1\\
+    &&x &\geq 0\\
+    &&y &\geq 0
+  \end{aligned}</script>
+  translates into matrix notation with the matrices
+  
+  <div class="math"></div><script type="math/tex; mode=display">
+  c = \begin{pmatrix} 1 \\ 1 \end{pmatrix}, \qquad
+  A = \begin{pmatrix} \hphantom{-} 2 & \hphantom{-} 1 \\ \hphantom{-} 1 & \hphantom{-} 2 \\ -1 & \hphantom{-} 0 \\ \hphantom{-} 0 & - 1\end{pmatrix}\qquad \text{and}\qquad
+  b = \begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \end{pmatrix}.
+  </script><div style="margin-top:20px"></div>In this case it is helpful to draw the optimization problem in the plane <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>. This is done below.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/LP.png" ></div>
+  <center>
+    Constraints pictured as shaded area above. Optimum occurs in a vertex (corner).
+    </center><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>We will give a general (but rather slow) algorithm below for solving
+  linear optimization problems. In fact it all boils down to solving
+  systems of linear inequalities. Sometimes linear optimization is
+  referred to as <a href="https://en.wikipedia.org/wiki/Linear_programming" target="_blank">linear
+    programming</a>. The
+  basic theory of linear programming was pioneered, among others, by
+  one of the inventors of the modern computer, John von Neumann.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/vonNeumann.gif" ></div>
+<center>
+  <a href="https://en.wikipedia.org/wiki/John_von_Neumann" target="_blank">John von Neumann</a> (1903-1957). Picture from <a href="https://en.wikipedia.org/wiki/Los_Alamos_National_Laboratory" target="_blank">LANL</a>.
+</center><div style="margin-top:20px"></div>Sage has much more advanced algorithms built in for solving (integer) linear optimization
+  problems. I have translated the linear optimization problem in Example <a href=#env4.31 class="labelref">4.31</a> into
+  Sage below.<div style="margin-top:20px"></div><span id="env4.32"></span><div class="example" data-count="4.32">     
+<div class=sage><script type="text/x-sage">
+LP = MixedIntegerLinearProgram(solver = "GLPK")
+ 
+# generate variables (do not require integer solution) 
+x = LP.new_variable(integer=False)
+ 
+# Linear function to be maximized (notice maximized!)
+
+LP.set_objective(x[1] + x[2])
+    
+# Add constraints
+LP.add_constraint( 2*x[1] + x[2] <= 1 );
+LP.add_constraint( x[1] + 2*x[2] <= 1 );
+LP.add_constraint( x[1] >= 0 );
+LP.add_constraint( x[2] >= 0 );
+
+ 
+LP.show()
+ 
+oval = LP.solve()
+xopt = LP.get_values(x);
+ 
+print('Optimal Value:', oval)
+print('occurs in')
+for i, v in xopt.items():
+    print('x_%s = %f' % (i, v))
+</script></div>
+</div>  <div style="margin-top:20px"></div><a href="#6637833a-d505-40d1-ab0c-e8641a7ebde3" class ="btn btn-default" data-toggle="collapse">Mentimeter</a><div id=6637833a-d505-40d1-ab0c-e8641a7ebde3 class="collapse">
+  <a href="https://www.mentimeter.com/s/alfcngomtww9twfto9cwc6vggfm2bj16/4913mhwg2ra1" target="_blank">Concrete LP</a>
+</div><div style="margin-top:20px"></div><span id="sec4.5"></span><h2 id="76ea50d6-77b7-4148-a13e-261de3d6aa0d">4.5 Fourier-Motzkin elimination</h2><div style="margin-top:20px"></div>Fourier-Motzkin elimination is a classical method (dating back to 1826) for solving linear inequalities. 
+It is also a key ingredient in an algorithm for solving linear optimization problems.<div style="margin-top:20px"></div>I am convinced that
+the best way to explain this method is by way of an extended example. For more formalities you may
+consult <a href="https://www.worldscientific.com/doi/suppl/10.1142/8527/suppl_file/8527_chap01.pdf" target="_blank">Chapter 1</a> of my book <a href="https://www.worldscientific.com/worldscibooks/10.1142/8527" target="_blank">Undergraduate Convexity</a>.<div style="margin-top:20px"></div>Consider the linear optimization problem<div style="margin-top:20px"></div><span id="equ4.10"></span><div class="math"></div><script type="math/tex; mode=display">
+  \begin{array}{llrrrr}
+    \text{Maximize} &x + y\\
+    \text{with constraints}\\
+    &2 x &+ &y &\leq &6\\
+    &x &+ &2 y &\leq &6\\
+    &x &+ &2 y &\geq &2\\
+    &x && &\geq &0\\
+    &&&y &\geq &0.
+  \end{array}
+\tag{4.10}</script><div style="margin-top:20px"></div>We might as well write this as<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+  \begin{array}{llrrrl}
+    \text{Maximize} &z\\
+    \text{with constraints}\\
+    &&& z &= &x + y\\
+    &2 x &+ &y &\leq &6\\
+    &x &+ &2 y &\leq &6\\
+    &x &+ &2 y &\geq &2\\
+    &x &&&\geq &0\\
+    &&&y &\geq &0
+  \end{array}
+</script><div style="margin-top:20px"></div>by adding the extra variable <span class="math"></span><script type="math/tex">z</script>. This enables us to reformulate the problem as follows: Find
+  the maximal value of <span class="math"></span><script type="math/tex">z</script>, such that there exists <span class="math"></span><script type="math/tex">(x, y)\in \mathbb{R}^2</script> with
+  <div class="math"></div><script type="math/tex; mode=display">
+  (x, y, z)\in P,
+  </script>
+  where <span class="math"></span><script type="math/tex">P\subseteq \mathbb{R}^3</script> is the set of solutions to the system<div style="margin-top:20px"></div><span id="equ4.11"></span><div class="math"></div><script type="math/tex; mode=display">
+
+\begin{array}{llrrrl}
+    &&& z &= &x + y\\
+    &2 x &+ &y &\leq &6\\
+    &x &+ &2 y &\leq &6\\
+    &x &+ &2 y &\geq &2\\
+    &x &&&\geq &0\\
+    &&&y &\geq &0
+  \end{array}
+
+\tag{4.11}</script><div style="margin-top:20px"></div><div style="margin-top:20px"></div>of <span class="bubblelabel footnotecolor">inequalities</span><span class="bubblecontent"><span class="bubbleinnercontent">An equality <span class="math"></span><script type="math/tex">a = b</script> is logically equivalent to the two
+    inequalities <span class="math"></span><script type="math/tex">a\leq b</script> and <span class="math"></span><script type="math/tex">a \geq b</script> in the sense that <span class="math"></span><script type="math/tex">(a\leq b) \wedge (a\geq b) \iff a = b</script>.</span></span>.<div style="margin-top:20px"></div>We have the Gauss elimination method for solving systems of linear equations. How do we now solve
+  <a href=#equ4.11>(4.11)</a>, where we also have inequalities?<div style="margin-top:20px"></div>Well, at first we can actually do a Gauss elimination step by eliminating <span class="math"></span><script type="math/tex">x</script> in the equation
+  <span class="math"></span><script type="math/tex">z = x + y</script> i.e., by putting <span class="math"></span><script type="math/tex">x = z - y</script>. This is then inserted into the inequalities in
+  <a href=#equ4.11>(4.11)</a>:<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\begin{array}{llrrrl}
+    &2 (z - y) &+ &y &\leq &6\\
+    &(z - y) &+ &2 y &\leq &6\\
+    &(z - y) &+ &2 y &\geq &2\\
+    &(z - y) &  &    &\geq &0\\
+    &          &  &  y &\geq &0
+\end{array}
+</script><div style="margin-top:20px"></div>and we get the system <div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+  \begin{array}{llrrrl}
+    &2 z &- &y&\leq &6\\
+    &z &+ &y &\leq &6\\
+    &z &+ & y &\geq &2\\
+    &z &- &y &\geq &0\\
+    &  &  &y   &\geq &0
+  \end{array}
+</script>
+  of inequalities
+  in the variables <span class="math"></span><script type="math/tex">z</script> and <span class="math"></span><script type="math/tex">y</script>. Now we only have inequalities left and we have to invent a trick for
+  eliminating <span class="math"></span><script type="math/tex">y</script>. Let us isolate <span class="math"></span><script type="math/tex">y</script> on one side of the inequality signs <span class="math"></span><script type="math/tex">\leq</script> and <span class="math"></span><script type="math/tex">\geq</script>:<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+    \begin{array}{llrrrl}
+    &2 z &- &6 &\leq &y\\
+    &6 &- &z &\geq &y\\
+    &2 &- &z &\leq &y\\
+    & & &z &\geq &y\\
+    &&&0 &\leq &y
+  \end{array}
+</script><div style="margin-top:20px"></div>Written a little differently this is the same as<div style="margin-top:20px"></div><span id="equ4.12"></span><div class="math"></div><script type="math/tex; mode=display">
+  \begin{array}{llllllllll}
+    &2 z &- &6&\leq &{\color{red} y} \\
+    &&&&&{\color{red} y} &\leq &6 &- &z\\
+    &2&- &z&\leq &{\color{red} y} \\
+    &&&&&{\color{red} y} &\leq &z\\
+    &&&0&\leq &{\color{red} y}
+  \end{array}
+\tag{4.12}</script><div style="margin-top:20px"></div>Now the scene is set for elimination of <span class="math"></span><script type="math/tex">y</script>. Listen carefully. First the inequalities in 
+<a href=#equ4.12>(4.12)</a> can be boiled down to the following two inequalities<div style="margin-top:20px"></div><span id="equ4.13"></span><div class="math"></div><script type="math/tex; mode=display">
+  \begin{array}{lllll}
+\max(2 z - 6, 2 - z, 0) &\leq &{\color{red} y}\\
+&& {\color{red} y} & \leq &\min(6 - z, z)
+  \end{array}
+\tag{4.13}</script>
+by using (repeatedly) that  <span class="math"></span><script type="math/tex">\max(a, b) \leq c \iff a\leq c \wedge b\leq c</script> and
+  <span class="math"></span><script type="math/tex">c\leq \min(a, b) \iff c\leq a \wedge c\leq b</script> for three
+numbers <span class="math"></span><script type="math/tex">a, b, c\in \mathbb{R}</script>.<div style="margin-top:20px"></div>Then, finally comes the (Fourier-Motzkin) elimination step: The existence of a solution to <a href=#equ4.13>(4.13)</a> is
+equivalent to the single inequality<div style="margin-top:20px"></div><span id="equ4.14"></span><div class="math"></div><script type="math/tex; mode=display">
+\max(2 z - 6, 2 - z, 0) \leq \min(6 - z, z).
+\tag{4.14}</script><div style="margin-top:20px"></div>This single inequality can be exploded or expanded (see Exercise <a href="whatisopt.html#env4.34">4.34</a>) into the following <span class="math"></span><script type="math/tex">6 = 3\cdot 2</script> inequalities<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+2 z - 6 &\leq 6 - z\\
+2 z - 6 &\leq z\\
+2 - z &\leq 6 - z\\
+2 - z &\leq z\\
+0 &\leq 6 - z\\
+0 &\leq z.
+\end{aligned}</script><div style="margin-top:20px"></div>Similarly to <a href=#equ4.12>(4.12)</a> we now isolate <span class="math"></span><script type="math/tex">z</script> from the above inequalities:<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+  \begin{array}{lllll}
+&&{\color{red} z} &\leq &4\\
+&&{\color{red} z} &\leq &6\\
+1&\leq &{\color{red} z}\\
+&&{\color{red} z} &\leq &6\\
+0&\leq &{\color{red} z}
+\end{array}
+</script><div style="margin-top:20px"></div>and find that<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+  \begin{array}{lllll}
+\max(1, 0) = 1 &\leq &{\color{red} z}\\
+&& {\color{red} z} & \leq &\min(4, 6) = 4.
+  \end{array}
+</script><div style="margin-top:20px"></div>Therefore the maximum in the optimization problem <a href=#equ4.10>(4.10)</a> is <span class="math"></span><script type="math/tex">z = x + y = 4</script>. 
+How do we now find numbers <span class="math"></span><script type="math/tex">x, y\in \mathbb{R}</script> satisfying the constraints
+in the optimization problem <a href=#equ4.10>(4.10)</a> with <span class="math"></span><script type="math/tex">z = x + y = 4</script>?<div style="margin-top:20px"></div>This is simply done inserting first <span class="math"></span><script type="math/tex">z = 4</script> in <a href=#equ4.13>(4.13)</a>. Here you get the two inequalities
+<span class="math"></span><script type="math/tex">2 \leq y</script> and <span class="math"></span><script type="math/tex">y\leq 2</script>. Therefore <span class="math"></span><script type="math/tex">y = 2</script>. Since we had <span class="math"></span><script type="math/tex">x = z - y</script> from the very beginning
+we therefore get <span class="math"></span><script type="math/tex">x = 2</script> and we have the unique solution to the optimization problem.<div style="margin-top:20px"></div><span id="env4.33"></span><a class="Exerciseno" data-count="4.33"></a><a href="#8712b9fb-085e-4101-9440-3f02cc469825" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=8712b9fb-085e-4101-9440-3f02cc469825 class = "collapse Exercise envbuttons">  
+What is the solution if we replace Maximize with Minimize in the optimization problem <a href=#equ4.10>(4.10)</a>?
+</div><div style="margin-top:20px"></div><span id="env4.34"></span><a class="Exerciseno" data-count="4.34"></a><a href="#99ff955a-dcb3-4162-9eeb-e09d83761350" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=99ff955a-dcb3-4162-9eeb-e09d83761350 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Prove the following:<div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">x_1, \dots, x_m, y_1, \dots, y_n\in \mathbb{R}</script> be <span class="math"></span><script type="math/tex">m + n</script> numbers. Then
+    <div class="math"></div><script type="math/tex; mode=display">
+    \max(x_1, \dots, x_m) \leq \min(y_1, \dots, y_n)
+    </script>
+    if and only if the <span class="math"></span><script type="math/tex">m n</script> inequalities
+    <div class="math"></div><script type="math/tex; mode=display">
+    \begin{matrix}
+      &x_1 \leq y_1 &x_1 \leq y_2 &\dots &x_1\leq y_n\\
+      \\
+      &\vdots & \vdots &\ddots &\vdots\\
+      \\
+      &x_m \leq y_1 &x_m \leq y_2 &\dots &x_m\leq y_n
+    \end{matrix}
+    </script>
+    are satisfied.
+</div><div style="margin-top:20px"></div><span id="env4.35"></span><a class="Exerciseno" data-count="4.35"></a><a href="#5d4b1709-75a4-4b76-8fd4-a0c93a16c032" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=5d4b1709-75a4-4b76-8fd4-a0c93a16c032 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>The following is Exercise 1.8 from my book <a href="https://www.worldscientific.com/worldscibooks/10.1142/8527" target="_blank">Undergraduate Convexity</a>.<div style="margin-top:20px"></div>A vitamin pill <span class="math"></span><script type="math/tex">P</script> is produced using two ingredients <span class="math"></span><script type="math/tex">M_1</script>
+  and <span class="math"></span><script type="math/tex">M_2</script>. The pill needs to satisfy four constraints for the vital
+  vitamins <span class="math"></span><script type="math/tex">V_1</script> and <span class="math"></span><script type="math/tex">V_2</script>. It must contain at least <span class="math"></span><script type="math/tex">6</script> milligrams and
+  at most <span class="math"></span><script type="math/tex">15</script> milligrams of <span class="math"></span><script type="math/tex">V_1</script> and at least <span class="math"></span><script type="math/tex">5</script> milligrams and at
+  most <span class="math"></span><script type="math/tex">12</script> milligrams of <span class="math"></span><script type="math/tex">V_2</script>. The ingredient <span class="math"></span><script type="math/tex">M_1</script> contains <span class="math"></span><script type="math/tex">3</script>
+  milligrams of <span class="math"></span><script type="math/tex">V_1</script> and <span class="math"></span><script type="math/tex">2</script> milligrams of <span class="math"></span><script type="math/tex">V_2</script> per gram.  The
+  ingredient <span class="math"></span><script type="math/tex">M_2</script> contains <span class="math"></span><script type="math/tex">2</script> milligrams of <span class="math"></span><script type="math/tex">V_1</script> and <span class="math"></span><script type="math/tex">3</script> milligrams
+  of <span class="math"></span><script type="math/tex">V_2</script> per gram:<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\def\arraystretch{1.5}
+\begin{array}{c|c|c}
+& V_1 & V_2\\ \hline
+M_1 & 3 & 2\\ \hline
+M_2 & 2 & 3
+\end{array}
+</script><div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">x</script> denote the amount of <span class="math"></span><script type="math/tex">M_1</script> and <span class="math"></span><script type="math/tex">y</script> the amount of <span class="math"></span><script type="math/tex">M_2</script>
+  (measured in grams) in the production of a vitamin pill. Write down
+  a system of linear inequalities in <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script> describing the
+  constraints above.<div style="margin-top:20px"></div>We want a vitamin pill of minimal weight satisfying the
+  constraints. How many grams of <span class="math"></span><script type="math/tex">M_1</script> and <span class="math"></span><script type="math/tex">M_2</script> should we mix?<div style="margin-top:20px"></div>Use Fourier-Motzkin elimination to solve this
+  problem.<div style="margin-top:20px"></div>Check your solution by modifying the input to the Sage code in Example <a href=#env4.32 class="labelref">4.32</a> using Remark <a href=#env4.6 class="labelref">4.6</a>.<div style="margin-top:20px"></div>One may also force minimization by inserting the following option<div style="margin-top:20px"></div><blockquote>
+  <tt>LP = MixedIntegerLinearProgram(maximization=False, solver = "GLPK")</tt>.
+  </blockquote><div style="margin-top:20px"></div>in Example <a href=#env4.32 class="labelref">4.32</a>.
+</div><div style="margin-top:20px"></div><span id="sec4.6"></span><h2 id="7198d8d0-6cb4-43ec-964a-112bdb113873">4.6 Application in machine learning and data science</h2><div style="margin-top:20px"></div>To start with, consider a toy example of a machine learning problem: we wish
+to tell the gender of a person based on a data point consisting of
+the height and weight of the person.<div style="margin-top:20px"></div>To do this we train our model by measuring the height and weight of a
+lot of people. Each of these measured data points are labeled
+female or male according to the gender of the person.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/sephp.png" ></div><div style="margin-top:20px"></div>Given a new data point, we wish to tell if the person is female or male. Here we
+consider a very simple model for doing this. First we need to introduce some
+new mathematical terms. We will introduce the terms generally for
+data points in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> and not just in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script> as above.<div style="margin-top:20px"></div>A hyperplane in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> is a generalization of a line <span class="math"></span><script type="math/tex">y = a x + b</script> in the plane. In general
+a hyperplane is defined as the set of points <span class="math"></span><script type="math/tex">x\in \mathbb{R}^d</script> satisfying
+<div class="math"></div><script type="math/tex; mode=display">
+a^\top x = b,
+</script>
+where <span class="math"></span><script type="math/tex">a\in \mathbb{R}^d</script> is a non-zero vector and <span class="math"></span><script type="math/tex">b</script> is a number. A hyperplane divides <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>
+into two subsets: the points above or on the hyperplane satisfying <span class="math"></span><script type="math/tex">a^\top x \geq b</script> and the ones
+below the hyperplane satisfying <span class="math"></span><script type="math/tex">a^\top x < b</script>.<div style="margin-top:20px"></div>Suppose we are given a data set as a finite set of points in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> and that each of
+these points are labeled with either a blue or a red color. We wish to
+find a hyperplane, such that the blue points are above and the red points
+are below the hyperplane.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/sephpWithline.png" ></div><div style="margin-top:20px"></div>We may then use the hyperplane to predict the label of a point. This could be
+gender, if you win or lose money buying a stock, anything with
+a binary classifier.<div style="margin-top:20px"></div><span id="sec4.6.1"></span><h3>4.6.1 Formulation as a linear optimization problem</h3><div style="margin-top:20px"></div>Suppose that the points labeled blue are <span class="math"></span><script type="math/tex">x_1, \dots, x_m\in \mathbb{R}^d</script> and
+  the points labeled red are <span class="math"></span><script type="math/tex">y_1, \dots, y_n\in \mathbb{R}^d</script>. Then we wish to
+  find <span class="math"></span><script type="math/tex">a\in \mathbb{R}^d</script> and <span class="math"></span><script type="math/tex">b\in \mathbb{R}</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  a^\top x_i > b
+  </script>
+  for <span class="math"></span><script type="math/tex">i = 1, \dots, m</script> and
+  <div class="math"></div><script type="math/tex; mode=display">
+  a^\top y_j < b
+  </script>
+  for <span class="math"></span><script type="math/tex">j = 1, \dots, n</script>. One can show that these strict inequalities may be solved 
+  for <span class="math"></span><script type="math/tex">a</script> and <span class="math"></span><script type="math/tex">b</script> if and only if the inequalities
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  a^\top x_i &\geq b + 1\\
+  a^\top y_j &\leq b - 1
+  \end{aligned}</script>
+  are solvable for <span class="math"></span><script type="math/tex">a</script> and <span class="math"></span><script type="math/tex">b</script>, where <span class="math"></span><script type="math/tex">i = 1, \dots, m</script> and <span class="math"></span><script type="math/tex">j = 1, \dots, n</script>.<div style="margin-top:20px"></div>It is, however, not realistic to expect data to behave this nicely. Instead one invents
+  the rather ingenious linear optimization problem<div style="margin-top:20px"></div><span id="equ4.15"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &\frac{1}{m}(u_1 + \cdots + u_m) + \frac{1}{n}(v_1 + \cdots + v_n)\\
+    &\text{with constraints}\\
+    &&a^\top x_i + u_i&\geq b + 1\\
+    &&a^\top y_j - v_j &\leq b - 1\\
+    &&u_i&\geq 0\\
+    &&v_j&\geq 0
+  \end{aligned}\tag{4.15}</script><div style="margin-top:20px"></div>for <span class="math"></span><script type="math/tex">i = 1, \dots, m</script> and <span class="math"></span><script type="math/tex">j = 1, \dots, n</script>. This linear optimization problem has optimal value zero
+  if and only if data can be separated strictly. Otherwise, it finds a hyperplane minimizing the mean errors
+  for the points involved.<div style="margin-top:20px"></div>The linear optimization problem <a href=#equ4.15>(4.15)</a> may look untied to the real world, but it has
+  been used very successfully in the diagnosis and prognosis of breast
+  cancer. See <a href="https://www.jstor.org/stable/171686" target="_blank">Mangasarian et al.</a><div style="margin-top:20px"></div>In the sage window below we have implemented the solution of the
+  linear optimization problem <a href=#equ4.15>(4.15)</a>, where the output is
+  a graphical illustration of the optimal line, that separates the
+  points in <tt>xpts</tt> and <tt>ypts</tt> with the smallest mean
+  error as defined in the function to be minimized in <a href=#equ4.15>(4.15)</a>.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+# Enter blue data points below
+xpts = [(3, 1), (4, 2), (4, 3), (3, 5)]
+# Enter red data points below
+ypts = [(2, 2), (2.5, 4.5), (3, 2), (4, 1)]
+
+LP = MixedIntegerLinearProgram(solver = "GLPK", maximization=False)
+ 
+# generate variables (do not require integer solution) 
+a = LP.new_variable(integer=False)
+b = LP.new_variable(integer=False)
+u = LP.new_variable(integer=False, nonnegative=True)
+v = LP.new_variable(integer=False, nonnegative=True)
+
+
+
+# Linear function to be minimized
+
+LP.set_objective(float(1)/len(xpts)*sum(u[i] for i in range(1, len(xpts)+1)) + float(1)/len(ypts)*sum(v[i] for i in range(1, len(ypts)+1)))
+    
+# Add constraints
+
+for i in range(1, len(xpts)+1):
+  LP.add_constraint(xpts[i-1][0]*a[1] + xpts[i-1][1]*a[2] + u[i] >= b[1] + 1)
+
+for j in range(1, len(ypts)+1):
+  LP.add_constraint(ypts[j-1][0]*a[1] + ypts[j-1][1]*a[2] - v[j] <= b[1] - 1)
+ 
+# LP.show()
+ 
+oval = LP.solve()
+aopt = LP.get_values(a);
+bopt = LP.get_values(b)
+
+# Compute frame for showing separating line
+
+pts = xpts + ypts
+xvals = list(map(lambda x: x[0], pts))
+yvals = list(map(lambda y: y[1], pts))
+
+xmin = min(xvals)
+xmax = max(xvals)
+ymin = min(yvals)
+ymax = max(yvals)
+
+
+# Intersection of separating line with frame (cumbersome!):
+
+if (aopt[2] == 0):
+  x =  bopt[1]/aopt[1]
+  p1 = (x, ymin)
+  p2 = (x, ymax)
+else:
+  a = -aopt[1]/aopt[2]
+  b = bopt[1]/aopt[2]
+  y = a*xmin + b
+  if (y >= ymin and y <= ymax):
+    p1 = (xmin, y)
+    x = (ymax - b)/a
+    if (x > xmin and x <= xmax):
+      p2 = (x, ymax)
+    else:
+      x = (ymin - b)/a  
+      if (x >= xmin and x <= xmax):
+        p2 = (x, ymin)
+      else:
+        p2 = (xmax, a*xmax+b)
+  else:
+    x = (ymax - b)/a
+    if (x >= xmin and x <= xmax):
+      p1 = (x, ymax)
+      y = a*xmax + b
+      if (y >= ymin and y < ymax):
+        p2 = (xmax, y)
+      else:
+        x = (ymin -b)/a
+        p2 = (x, ymin)
+    else:
+      p1 = (xmax, a*xmax + b)
+      x = (ymin - b)/a
+      p2 = (x, ymin)
+      
+show(points(xpts, rgbcolor=(0, 0, 1), pointsize=30) + points(ypts, rgbcolor=(1,0,0), pointsize=30) + line([p1, p2], rgbcolor=(100, 100, 100), linestyle='dashed')) 
+</script></div><div style="margin-top:20px"></div></div></body><div style="margin-top:20px"></div>

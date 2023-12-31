@@ -1,0 +1,1245 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#006d74a3-2d1f-4b10-b24c-37560502324f"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#6eaa1609-7074-4d00-aa72-5cd54ef4a24a">1.1 Black box warnings</a></li><li><a href="intro.html#c2cbbb02-0276-4ce0-a901-610faab6b812">1.2 Computer algebra</a></li><li><a href="intro.html#c6cdba52-7276-4db8-a2b8-7b920c49e0a3">1.3 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#f843e6e0-51ec-4d30-bdca-7d7c0d65b2b4">1.4 Sets</a></li><li><a href="intro.html#5a199e30-ea07-404f-87b3-8dca740580e7">1.5 Ordering numbers</a></li><li><a href="intro.html#98c264f9-b21b-4887-b862-6b14a8c6b715">1.6 Propositional logic</a></li><li><a href="intro.html#96873e91-8ccf-4678-a266-c16638ce7ed9">1.7 What is a mathematical proof?</a></li><li><a href="intro.html#cb119b82-1051-4dac-b94f-81ecb346b47b">1.8 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#e18d3854-9e17-4ce6-9cbe-f20aa5413f48"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#b5b22ce9-83eb-4971-b842-02bd99dd01fe">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#bd72d81e-802d-40f1-8e5a-9e0a966b5394">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#1519df08-6fa8-4aa0-936d-81a5c67947ef">2.3 Gauss elimination</a></li><li><a href="lineqs.html#408bfec6-58eb-4c0b-9b03-a09807caf3fb">2.4 Polynomials</a></li><li><a href="lineqs.html#e310ba8f-3d3e-4dfe-9fd1-896b50494fc6">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#bdc72d0f-7748-4776-b854-726ff83ad9d0">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#cd57f44e-44a3-4df8-b0f1-af79172b7d75">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#999d29d6-cc98-42a0-bfeb-d89aff2ad728"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#acea57dc-a493-4260-b445-f776b821ad36">3.1 Matrices</a></li><li><a href="matrices.html#20342fc3-09a2-4c9b-82c7-fa3dad20ccab">3.2 Linear maps</a></li><li><a href="matrices.html#f332c88c-8268-4602-928e-ac8687e75bea">3.3 Matrix multiplication</a></li><li><a href="matrices.html#53360251-42af-4a10-8b09-cbc76db0cf9a">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#5b178149-5b14-49e5-876c-afc87af74857">3.5 The inverse matrix</a></li><li><a href="matrices.html#25536c85-160f-462f-99cb-6a6dad75ba0d">3.6 The transposed matrix</a></li><li><a href="matrices.html#59c55165-0cb1-409a-b428-ab189cfb72d7">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#5f94c5a1-3a60-417c-91fa-8e2af76995a6"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#1f20cd20-f831-4fea-9515-9304b9d3fb14">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#fdf66530-fea8-4312-8e27-a65fbee5087b">4.2 General definition</a></li><li><a href="whatisopt.html#ab530ba9-0621-4662-a880-4afbf29fbf8a">4.3 Convex optimization</a></li><li><a href="whatisopt.html#b078a91f-1c19-4a67-bd47-39ef7c01d833">4.4 Linear optimization</a></li><li><a href="whatisopt.html#76ea50d6-77b7-4148-a13e-261de3d6aa0d">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#7198d8d0-6cb4-43ec-964a-112bdb113873">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#7004cde2-baf5-4631-a27e-f05a9e7adf92"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#343af046-e32a-457c-9137-485a8fc2710c">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#ca688149-f0c2-448a-9937-c652974e129f">5.2 Higher dimensions</a></li><li><a href="euclidean.html#d814e2f3-ca31-4d44-bef0-1973205eedff">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#19070637-799f-4d34-8233-8007b99a483d">5.4 Sequences and limits in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script></a></li><li><a href="euclidean.html#51aa864a-2904-4648-96dc-ade30de2ea1a">5.5 Continuous functions</a></li></ul><li><a class="kap" href="convexfunctions.html#5bd7c54f-91ea-4145-bb20-db7e92fb84d7"><b>6</b> Convex functions</a></li><a href="#kap6" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap6" class="collapse"><li><a href="convexfunctions.html#957624e7-479d-480d-9d65-9159ff51a5df">6.1 Strictly convex functions</a></li><li><a href="convexfunctions.html#d742dd52-fcd3-42d6-8b0e-ced92f89c2ca">6.2 Why are convex functions interesting?</a></li><li><a href="convexfunctions.html#d33ee78c-606b-4136-b52b-7f68a83ffbc3">6.3 Differentiable functions</a></li><li><a href="convexfunctions.html#c071e099-4a00-406b-8419-f6cbbea15131">6.4 Taylor polynomials</a></li><li><a href="convexfunctions.html#acc2d9f5-37e6-4ae5-b93a-6ae1661d8c1a">6.5 Differentiable convex functions</a></li></ul><li><a class="kap" href="diffseveral.html#ec344e7f-5efd-4fc8-a3d7-28caea0e2df7"><b>7</b> Several variables</a></li><a href="#kap7" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap7" class="collapse"><li><a href="diffseveral.html#f25eba08-b8e6-4682-9e42-9726432a3078">7.1 Introduction</a></li><li><a href="diffseveral.html#82042f45-9fe3-4165-89b1-d3cf33b126bb">7.2 Vector functions</a></li><li><a href="diffseveral.html#71f2df16-f0b4-431a-8127-9059314ecea5">7.3 Differentiability</a></li><li><a href="diffseveral.html#7cae04b8-b49b-4a3e-994d-c37b48809426">7.4 Newton-Raphson in several variables!</a></li><li><a href="diffseveral.html#cb4d570d-77dc-481e-bd49-df2631c4763a">7.5 Local extrema in several variables</a></li><li><a href="diffseveral.html#14dc8d71-f553-40ea-aa1a-32dc51db63c2">7.6 The chain rule</a></li><li><a href="diffseveral.html#8fe04136-d8ac-49f4-aa68-822690597bad">7.7 Logistic regression</a></li><li><a href="diffseveral.html#4b2d9442-1e84-4f6d-bf0e-1b0d0e67ce1b">7.8 3Blue1Brown</a></li><li><a href="diffseveral.html#798828ad-b196-4fe3-9a1c-d287e53461fd">7.9 Lagrange multipliers</a></li><li><a href="diffseveral.html#714939c5-f53a-46c0-a517-145ded0716ed">7.10 The interior and the boundary of a subset</a></li></ul><li><a class="kap" href="hessian.html#1d4d7f52-ef3b-49d7-96c5-7063208a6d0a"><b>8</b> The Hessian</a></li><a href="#kap8" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap8" class="collapse"><li><a href="hessian.html#47ffb3a0-adab-46bc-b7e2-4cd37e11148b">8.1 Introduction</a></li><li><a href="hessian.html#1ee906f0-0750-4478-9ab1-069565010997">8.2 Several variables</a></li><li><a href="hessian.html#3a13db0d-01e4-496f-8c2c-61e30b8755db">8.3 Newton's method for finding critical points</a></li><li><a href="hessian.html#9d4eeaaa-0155-4a4c-9e11-ea4fa32e48ff">8.4 The Taylor series in several variables</a></li><li><a href="hessian.html#1d424597-f73f-4ab5-b5f1-d9a4e1bb9681">8.5 Convex functions of several variables</a></li><li><a href="hessian.html#ccfc9e26-749e-4bc9-870a-dd59ac1a2188">8.6 How to decide the definiteness of a matrix</a></li></ul><li><a class="kap" href="convexoptimization.html#d3beb991-21bd-4e49-8500-2df3ec89eb97"><b>9</b> Convex optimization</a></li><a href="#kap9" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap9" class="collapse"><li><a href="convexoptimization.html#a39d1aa3-34ea-40a0-803d-381fc2f5548c">9.1 Finding the best hyperplane separating data</a></li><li><a href="convexoptimization.html#3c57808a-288d-4cc8-b91d-6fbef44f983c">9.2 Logarithmic barrier functions</a></li><li><a href="convexoptimization.html#d0332f83-5f95-4d0c-aa6e-c907cac6bb9f">9.3 A geometric optimality criterion</a></li><li><a href="convexoptimization.html#9bcbcfae-3dc8-4743-87b7-090021b8b7da">9.4 KKT</a></li><li><a href="convexoptimization.html#61952270-997d-4c6c-b743-4ca48cc2320f">9.5 Computing with KKT</a></li><li><a href="convexoptimization.html#294fa246-3df7-40dc-bb89-d9287b8b9bfa">9.6 Optimization exercises</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div>
+<h1 id="d3beb991-21bd-4e49-8500-2df3ec89eb97">9<span style="float:right;">Convex optimization</span></h1><div style="margin-top:20px"></div>In this last chapter we will deal exclusively with convex optimization problems.<div style="margin-top:20px"></div>Recall that a convex optimization problem has the form<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x_1, \dots, x_d)\\
+    &\text{with constraint}\\
+    &&(x_1, \dots, x_d)\in C,
+  \end{aligned}</script>
+  where <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^d</script> is a <em>convex subset</em> (see Definition <a href="whatisopt.html#env4.18">4.18</a>) and <span class="math"></span><script type="math/tex">f:C\rightarrow \mathbb{R}</script> a <em>convex function</em> (see Definition <a href="whatisopt.html#env4.23">4.23</a>). We will mainly
+  deal with the case, where <span class="math"></span><script type="math/tex">f</script> is differentiable defined on all of <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> in addition to just being convex defined on <span class="math"></span><script type="math/tex">C</script>. Also recall that convex optimization problems are very well behaved in the sense that local minima are global (see Theorem <a href="convexfunctions.html#env6.12">6.12</a>).<div style="margin-top:20px"></div><span id="env9.1"></span><div class="example" data-count="9.1">     
+    Below is an example of a convex optimization problem in the plane <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>.
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &x^2 + y^2\\
+    &\text{with constraint}\\
+    &&(x, y)\in C,
+    \end{aligned}</script>
+    where <span class="math"></span><script type="math/tex">C</script> is the subset of points <span class="math"></span><script type="math/tex">(x, y)</script> in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script> satisfying
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+      x + y &\geq 2\\
+      y &\leq 2\\
+      x &\leq 3\\
+      y &\geq 1.
+    \end{aligned}</script>
+  </div><div style="margin-top:20px"></div><span id="env9.2"></span><a class="Exerciseno" data-count="9.2"></a><a href="#f3f587f4-e68a-485d-933c-c8a6dbb77367" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=f3f587f4-e68a-485d-933c-c8a6dbb77367 class = "collapse Exercise envbuttons">  
+  Sketch the subset <span class="math"></span><script type="math/tex">C</script> in Example <a href=#env9.1 class="labelref">9.1</a>. Show that Example <a href=#env9.1 class="labelref">9.1</a> really is a
+  convex optimization problem and solve it.
+  </div><div style="margin-top:20px"></div>Below is an example of a convex optimization problem modelling the real life problem of placing a fire station (center of circle) so that the maximal distance to the surrounding houses (points to be enclosed) is minimal.<div style="margin-top:20px"></div><span id="env9.3"></span><div class="example" data-count="9.3">     
+    Given <span class="math"></span><script type="math/tex">n</script> points
+<span class="math"></span><script type="math/tex">(x_1, y_1), \dots, (x_n, y_n)\in \mathbb{R}^2</script>, what is the center and
+radius of the smallest circle containing these points?<div style="margin-top:20px"></div><div class="centerimg"><img src="img/mincircle.png" ></div><div style="margin-top:20px"></div>We can write this optimization problem as
+    <span id="equ9.1"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize}\quad r\\
+    &\text{with constraint}\\
+    &&(x, y)\in C,
+    \end{aligned}\tag{9.1}</script>
+    where
+    <div class="math"></div><script type="math/tex; mode=display">
+    C = \{(x, y)\in \mathbb{R}^2 \mid (x - x_i)^2 + (y- y_i)^2 \leq r^2\quad\text{for}\quad i = 1, \dots, n\}.
+    </script>
+    Upon rewriting this turns into the optimization problem
+    <span id="equ9.2"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &x^2 + y^2 + \lambda\\
+    &\text{with constraint}\\
+    &&(x, y)\in C',
+    \end{aligned}\tag{9.2}</script>
+    where
+    <div class="math"></div><script type="math/tex; mode=display">
+    C' = \{(x, y, \lambda)\in \mathbb{R}^3 \mid x_i^2 + y_i^2 \leq 2 x_i x + 2 y_i y + \lambda\quad \text{for}\quad i = 1, \dots, n\}
+    </script>
+    and <span class="math"></span><script type="math/tex">\lambda = r^2 - x^2 - y^2</script>.
+  </div><div style="margin-top:20px"></div><span id="env9.4"></span><a class="Exerciseno" data-count="9.4"></a><a href="#cf1638bf-d5e1-4b12-a434-b14fafc0734f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=cf1638bf-d5e1-4b12-a434-b14fafc0734f class = "collapse Exercise envbuttons">  
+  Prove that <a href=#equ9.1>(9.1)</a> and <a href=#equ9.2>(9.2)</a> both are convex optimization problems.
+  Explain how <a href=#equ9.1>(9.1)</a> is rewritten into <a href=#equ9.2>(9.2)</a>.<div style="margin-top:20px"></div><a href="#ea503f17-e911-47ae-a4d6-bd2777832236" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=ea503f17-e911-47ae-a4d6-bd2777832236 class="collapse">
+    Expand
+    <div class="math"></div><script type="math/tex; mode=display">
+    (x - x_i)^2 + (y- y_i)^2 \leq r^2
+    </script>
+    and put <span class="math"></span><script type="math/tex">\lambda = r^2-x^2-y^2</script>.
+  </div>
+  </div><div style="margin-top:20px"></div><span id="sec9.1"></span><h2 id="a39d1aa3-34ea-40a0-803d-381fc2f5548c">9.1 Finding the best hyperplane separating data</h2><div style="margin-top:20px"></div>In section <a href="euclidean.html#sec5.2.3">5.2.3</a> we were
+  presented with labeled data
+  <span id="equ9.3"></span><div class="math"></div><script type="math/tex; mode=display">
+  (v_1, y_1), \dots, (v_m, y_m),
+  \tag{9.3}</script>
+  where <span class="math"></span><script type="math/tex">v_i\in \mathbb{R}^d</script> and <span class="math"></span><script type="math/tex">y_i = \pm 1</script>. The task at hand was to separate differently
+  labeled data by a hyperplane <span class="math"></span><script type="math/tex">\alpha^T v + \beta = 0</script>, such that
+  <span id="equ9.4"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    \alpha^T v_i + \beta &> 0\quad\text{if}\quad y_i = 1\\
+    \alpha^T v_i + \beta &< 0\quad\text{if}\quad y_i = -1
+  \end{aligned}\tag{9.4}</script>
+  for <span class="math"></span><script type="math/tex">i = 1, ,\dots, m</script>. 
+  Please browse back to section <a href="whatisopt.html#sec4.6">4.6</a> for the definition of a hyperplane in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script>.<div style="margin-top:20px"></div>To make this more real, consider the points <span class="math"></span><script type="math/tex">(1, 1), (-1, -1)</script> with label <span class="math"></span><script type="math/tex">+1</script> and
+  the points <span class="math"></span><script type="math/tex">(-1, 1), (1, -1)</script> with label <span class="math"></span><script type="math/tex">-1</script>. Here a
+  hyperplane satisfying <a href=#equ9.4>(9.4)</a> cannot exist: suppose that
+  <span class="math"></span><script type="math/tex">\alpha = (\alpha_1, \alpha_2)^T</script>. Then <a href=#equ9.4>(9.4)</a> is tantamount to
+  the following inequalities
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    \alpha_1 + \alpha_2 + \beta &> 0\\
+    -\alpha_1 - \alpha_2 + \beta &> 0\\
+    -\alpha_1 + \alpha_2 + \beta &< 0\\
+    \alpha_1 - \alpha_2 + \beta &< 0.
+  \end{aligned}</script>
+  But these inequalities are unsolvable in <span class="math"></span><script type="math/tex">\alpha_1, \alpha_2</script> and <span class="math"></span><script type="math/tex">\beta</script> (why?).<div style="margin-top:20px"></div>If the data in <a href=#equ9.3>(9.3)</a> can be separated according to
+  <a href=#equ9.4>(9.4)</a>, we may find a hyperplane <span class="math"></span><script type="math/tex">(\alpha^*)^T x + \beta^* = 0</script>,
+  such that
+  <span id="equ9.5"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    (\alpha^*)^T v_i + \beta^* &\geq 1\quad\text{if}\quad y_i = 1\\
+    (\alpha^*)^T v_i + \beta^* &\leq -1\quad\text{if}\quad y_i = -1.
+  \end{aligned}\tag{9.5}</script><div style="margin-top:20px"></div><span id="env9.5"></span><a class="Exerciseno" data-count="9.5"></a><a href="#832038c0-a66a-44da-a534-e352b0ada609" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=832038c0-a66a-44da-a534-e352b0ada609 class = "collapse Exercise envbuttons">  
+  How do you go from <a href=#equ9.4>(9.4)</a> to <a href=#equ9.5>(9.5)</a>?<div style="margin-top:20px"></div><a href="#ca7af893-19e9-43ba-894d-85c8807b2ff4" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=ca7af893-19e9-43ba-894d-85c8807b2ff4 class = "collapse Hint envbuttons">    
+    Suppose that 
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    \alpha^T v_i + \beta &> 0\quad\text{if}\quad y_i = 1\\
+    \alpha^T v_i + \beta &< 0\quad\text{if}\quad y_i = -1.
+\end{aligned}</script>
+Let
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    N &= \min\{\alpha^T v_i + \beta \mid y_i = 1\}\\
+    M &= \max\{\alpha^T v_i + \beta \mid y_i = -1\}.
+\end{aligned}</script>
+Show that <span class="math"></span><script type="math/tex">N > 0</script> and <span class="math"></span><script type="math/tex">M < 0</script>. How can <span class="math"></span><script type="math/tex">N</script> and <span class="math"></span><script type="math/tex">M</script> be applied in
+constructing <span class="math"></span><script type="math/tex">\alpha^*</script> and <span class="math"></span><script type="math/tex">\beta^*</script>?<div style="margin-top:20px"></div><a href="#a65f5b4f-8781-42da-b6cc-9d42ce3efad8" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=a65f5b4f-8781-42da-b6cc-9d42ce3efad8 class = "collapse Hint envbuttons">    
+  Consider
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    \alpha^T v_i + \beta \geq N &> 0\quad\text{if}\quad y_i = 1\\
+    \alpha^T v_i + \beta \leq M &< 0\quad\text{if}\quad y_i = -1.
+\end{aligned}</script>
+What is special about <span class="math"></span><script type="math/tex">m = \min(N, |M|)</script>?
+  </div>
+  </div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>What does best hyperplane mean in this setting? This is the one maximizing the width of the
+  strip between the two labeled clusters. 
+  <span id="env9.6"></span><div class="figure" data-count="9.6">     
+    <div class="centerimg"><img src="img/Vapnik.png" ></div>
+    <figcaption>Figure from the Cortes and Vapnik paper: <a href="https://edtech.dk/IMO/img/cortes_vapnik95.pdf" target="_blank">Support vector networks</a>, Machine Learning, 1995.</figcaption>
+  </div><div style="margin-top:20px"></div>A rather crucial insight (not explicitly mentioned in the paper by Cortes and Vapnik) is that such a hyperplane is given as
+  <span class="math"></span><script type="math/tex">H = \{v\in \mathbb{R}^d \mid \alpha^T v + \beta\}</script> satisfying <a href=#equ9.5>(9.5)</a> <b>and</b> with maximal distance to all
+  of the data points. Therefore the function to maximize is
+  <div class="math"></div><script type="math/tex; mode=display">
+  \min \left\{ \frac{|\alpha^T v_i + \beta|}{|\alpha|} \middle| i = 1, \dots, m\right\}.
+  </script>
+  This follows from the fact (see Exercise <a href="convexoptimization.html#env9.7">9.7</a>) that the distance from <span class="math"></span><script type="math/tex">H</script> to a point <span class="math"></span><script type="math/tex">u</script> is
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{|\alpha^T u + \beta|}{|\alpha|}.
+  </script>
+  The conditions in <a href=#equ9.5>(9.5)</a> may be written as <span class="math"></span><script type="math/tex">| \alpha^T v_i + \beta | \geq 1</script> for <span class="math"></span><script type="math/tex">i = 1, \dots, m</script>. 
+  If <span class="math"></span><script type="math/tex">m = \min\{|\alpha^T v_i + \beta| \, \mid\, i = 1, \dots, m\} > 1</script>,
+  then we may multiply <span class="math"></span><script type="math/tex">\alpha</script> and <span class="math"></span><script type="math/tex">\beta</script> by <span class="math"></span><script type="math/tex">1/m</script> so that we may assume
+  <div class="math"></div><script type="math/tex; mode=display">
+  \min \left\{ \frac{|\alpha^T v_i + \beta|}{|\alpha|}\middle| i = 1, \dots, m\right\} = \frac{1}{|\alpha|}.
+  </script><div style="margin-top:20px"></div>The terminology <em>support vector machines</em> comes from the fact that <span class="math"></span><script type="math/tex">\alpha</script> defines a supporting hyperplane for
+  the two groups of points i.e., there exists <span class="math"></span><script type="math/tex">\beta_1, \beta_2\in \mathbb{R}</script> such that <span class="math"></span><script type="math/tex">\alpha^T v_i + \beta_1 \geq 0</script> if
+  <span class="math"></span><script type="math/tex">y_i = 1</script> with some <span class="math"></span><script type="math/tex">\alpha^T v_k + \beta_1 = 0</script> for <span class="math"></span><script type="math/tex">y_k = 1</script> and similarly for <span class="math"></span><script type="math/tex">y_i = -1</script> with <span class="math"></span><script type="math/tex">\beta_2</script> instead
+  of <span class="math"></span><script type="math/tex">\beta_1</script> and <span class="math"></span><script type="math/tex">\geq 0</script> replaced by <span class="math"></span><script type="math/tex">\leq 0</script>. <div style="margin-top:20px"></div>
+<span id="env9.7"></span><a class="Exerciseno" data-count="9.7"></a><a href="#a95e5dc1-204d-42c5-9502-2b38fce14bb4" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=a95e5dc1-204d-42c5-9502-2b38fce14bb4 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">H</script> be the hyperplane in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script> given by <span class="math"></span><script type="math/tex">\alpha^T x + \beta = 0</script> and let <span class="math"></span><script type="math/tex">v\in \mathbb{R}^d</script>.
+The point closest to <span class="math"></span><script type="math/tex">v</script> in <span class="math"></span><script type="math/tex">H</script> can be found by solving the optimization problem
+  <span id="equ9.6"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &|v - x|^2\\
+    &\text{with constraint}\\
+    &&x\in H.
+  \end{aligned}\tag{9.6}</script><div style="margin-top:20px"></div>Explain why <a href=#equ9.6>(9.6)</a> is a convex optimization problem.<div style="margin-top:20px"></div>Show how Theorem <a href="diffseveral.html#env7.37">7.37</a> can be used to solve this optimization problem by
+  first deducing the equations
+  <span id="equ9.7"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    -2(v - x) + \lambda \alpha &= 0\\
+    \alpha^T x + \beta &= 0
+  \end{aligned}\tag{9.7}</script>
+  for the Lagrange multiplier <span class="math"></span><script type="math/tex">\lambda</script>. Notice here that 
+  <span class="math"></span><script type="math/tex">-2(v - x) + \lambda \alpha = 0</script> above really contains <span class="math"></span><script type="math/tex">d</script> equations, whereas
+  <span class="math"></span><script type="math/tex">\alpha^T x + \beta = 0</script> is only one equation in <span class="math"></span><script type="math/tex">x_1, \dots, x_d</script>, where
+  <span class="math"></span><script type="math/tex">x = (x_1, \dots, x_d)^T</script>. Solve the equations <a href=#equ9.7>(9.7)</a> for <span class="math"></span><script type="math/tex">x\in \mathbb{R}^d</script> and <span class="math"></span><script type="math/tex">\lambda\in \mathbb{R}</script>.
+  How can we be sure that <span class="math"></span><script type="math/tex">x</script> really is a minimum in
+  <a href=#equ9.6>(9.6)</a>?<div style="margin-top:20px"></div>Finally show that the distance from <span class="math"></span><script type="math/tex">H</script> to <span class="math"></span><script type="math/tex">v</script> is given by the formula
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left| \frac{\alpha^T v + \beta}{|\alpha|}\right|.
+  </script>
+  </div><div style="margin-top:20px"></div>The optimal hyperplane is therefore (maximizing <span class="math"></span><script type="math/tex">1/|\alpha|</script> is the same as minimizing <span class="math"></span><script type="math/tex">|\alpha|^2</script>)
+  found by solving the convex optimization problem<div style="margin-top:20px"></div><span id="equ9.8"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned} 
+    \text{Minimize}\qquad\quad &|\alpha|^2\\
+     \text{with constraints}&\\
+    \alpha^T v_i + \beta &\geq 1\quad\text{if}\quad y_i = 1\\
+    \alpha^T v_i + \beta &\leq -1\quad\text{if}\quad y_i = -1.
+  \end{aligned}\tag{9.8}</script><div style="margin-top:20px"></div><span id="env9.8"></span><div class="example" data-count="9.8">     
+    Let us explicitly write up the optimization problem <a href=#equ9.8>(9.8)</a> in
+    a very simple situation: finding the best line <span class="math"></span><script type="math/tex">y = a x + b</script> separating the points
+    <span class="math"></span><script type="math/tex">(1, 1)</script> and <span class="math"></span><script type="math/tex">(2, 2)</script>. In the notation of <a href=#equ9.5>(9.5)</a>, we have (without the
+    stars on <span class="math"></span><script type="math/tex">\alpha</script> and <span class="math"></span><script type="math/tex">\beta</script>)
+    <div class="math"></div><script type="math/tex; mode=display">
+    \alpha = \begin{pmatrix} a \\ -1 \end{pmatrix}\qquad\text{and}\qquad
+    \beta = b
+    </script>
+    so that
+    <div class="math"></div><script type="math/tex; mode=display">
+    \alpha^T \begin{pmatrix} x \\ y \end{pmatrix} + b = a x - y + b = 0.
+    </script>
+    The points are
+    <div class="math"></div><script type="math/tex; mode=display">
+    v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\qquad\text{and}\qquad
+    v_2 = \begin{pmatrix} 2 \\ 2 \end{pmatrix},
+    </script>
+    where <span class="math"></span><script type="math/tex">y_1 = 1</script> and <span class="math"></span><script type="math/tex">y_2 = -1</script>.<div style="margin-top:20px"></div>Therefore <a href=#equ9.8>(9.8)</a> takes the form
+  <span id="equ9.9"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+ \text{Minimize}\qquad\quad &1 + a^2\\
+     \text{with constraints}&\\
+    a + b &\geq 2\\
+    2 a + b&\leq 1
+  \end{aligned}\tag{9.9}</script>
+  </div><div style="margin-top:20px"></div><span id="env9.9"></span><a class="Exerciseno" data-count="9.9"></a><a href="#32eda26e-78fb-44aa-a628-8ae01e612bc8" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=32eda26e-78fb-44aa-a628-8ae01e612bc8 class = "collapse Exercise envbuttons">  
+  Solve the optimization problem <a href=#equ9.9>(9.9)</a> and verify that the best line
+  from the optimization problem is the one we expect it to be. Also, check how
+  <a href="https://wolframalpha.com" target="_blank">WolframAlpha</a> solves this optimization problem.<div style="margin-top:20px"></div><a href="#c8931e78-fde8-4743-870d-c1a34228726c" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=c8931e78-fde8-4743-870d-c1a34228726c class="collapse">
+    You could maybe use Fourier-Motzkin elimination to show that
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+      a + b &\geq 2\\
+    2 a + b&\leq 1
+    \end{aligned}</script>
+    implies <span class="math"></span><script type="math/tex">a \leq -1</script>.
+  </div>
+  </div><div style="margin-top:20px"></div>Notice that <a href=#equ9.8>(9.8)</a> has number of constraints equal to the
+  number of points to be separated. For an extended (soft margin)
+  optimization problem, when the data at hand cannot be separated we
+  refer to section 3 of the
+    <a href="https://edtech.dk/IMO/img/cortes_vapnik95.pdf" target="_blank">Cortes and Vapnik  paper</a>.<div style="margin-top:20px"></div>
+Usually one does not use the optimization problem formulated in <a href=#equ9.8>(9.8)</a>, but
+rather its socalled (Lagrange) dual for finding the optimal hyperplane. This dual
+optimization problem uses that <span class="math"></span><script type="math/tex">\alpha</script> is a linear combination
+<span id="equ9.10"></span><div class="math"></div><script type="math/tex; mode=display">
+\alpha = \lambda_1 v_1 + \cdots + \lambda_m v_m
+\tag{9.10}</script>
+of the support vectors. It is an optimization problem
+in <span class="math"></span><script type="math/tex">\Lambda^T = (\lambda_1,\dots, \lambda_m)</script>
+from <a href=#equ9.10>(9.10)</a> and looks like<div style="margin-top:20px"></div><span id="equ9.11"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned} 
+    \text{Maximize}\qquad\quad &\lambda_1 + \cdots + \lambda_m - \frac{1}{2} \Lambda^T D \Lambda\\
+     \text{with constraints}&\\
+    \Lambda &\geq 0\\
+    \Lambda^T Y &= 0,
+    \end{aligned}\tag{9.11}</script>
+    where <span class="math"></span><script type="math/tex">Y =(y_1, \dots, y_m)^T</script> is the vector of labels attached to
+    the points <span class="math"></span><script type="math/tex">v_1, \dots, v_m</script> and <span class="math"></span><script type="math/tex">D</script> is the symmetric <span class="math"></span><script type="math/tex">m\times m</script>
+    matrix given by
+    <span id="equ9.12"></span><div class="math"></div><script type="math/tex; mode=display">
+    D_{ij} = y_i y_j\, v^T_i v_j = y_i y_j\, v_i\cdot v_j.
+    \tag{9.12}</script><div style="margin-top:20px"></div>The dual optimization problem <a href=#equ9.11>(9.11)</a> can be derived
+    formally from the original optimization problem
+    <a href=#equ9.8>(9.8)</a>. This is, however, beyond the scope of this
+    course (see section 2.1 of the <a href="https://edtech.dk/IMO/img/cortes_vapnik95.pdf" target="_blank">Cortes and Vapnik paper</a>).<div style="margin-top:20px"></div><span id="env9.10"></span><div class="example" data-count="9.10">     
+      Quadratic optimization problems, such as <a href=#equ9.8>(9.8)</a> can in fact be handled by Sage (well, python
+      in this case). See
+      <a href="https://cvxopt.org/index.html" target="_blank">CVXOPT</a> for
+      further information.  Note that the code below needs to be
+      executed as <tt>Python</tt> code (choose Python in the pull
+      down). It attempts (in general) to solve the optimization
+      problem<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned} 
+    \text{Minimize}\qquad\quad &\frac{1}{2} x^T Q x + p^T x\\
+     \text{with constraints}&\\
+    G x &\leq h\\
+    A x  &= b.
+    \end{aligned}</script><div style="margin-top:20px"></div>In the Sage window below the optimization problem
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned} 
+    \text{Minimize}\qquad\quad &2 x_1^2 + x_2^2 + x_1 x_2 + x_1 + x_2\\
+  \text{with constraints}&\\
+                               &x_1 \geq 0\\
+                               &x_2 \geq 0\\
+  &x_1 + x_2 = 1
+    \end{aligned}</script>
+    has been entered.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+RealNumber=float
+Integer=int
+
+from cvxopt import matrix, solvers
+Q = 2*matrix([ [2, .5], [.5, 1] ])
+p = matrix([1.0, 1.0])
+G = matrix([[-1.0,0.0],[0.0,-1.0]])
+h = matrix([0.0,0.0])
+A = matrix([[1.0], [1.0]])
+b = matrix(1.0)
+sol=solvers.qp(Q, p, G, h, A, b)
+print(sol['x'])
+</script></div><div style="margin-top:20px"></div>What happens if you remove
+<p><pre><code>RealNumber=float
+Integer=int
+</code></pre></p>
+from the code above?
+</div><div style="margin-top:20px"></div><span id="env9.11"></span><a class="Exerciseno" data-count="9.11"></a><a href="#a5b97ef4-7c88-45d2-8ff2-dc0267f63962" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=a5b97ef4-7c88-45d2-8ff2-dc0267f63962 class = "collapse Exercise envbuttons">  
+Take a look at the input format in Example <a href=#env9.10 class="labelref">9.10</a>. Can you tell which
+optimization problem in this chapter is solved below? Also, the code below seems to report some errors after pressing the compute button. Can you make it run smoothly by making a very, very
+small change?<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+from cvxopt import matrix, solvers
+Q = 2*matrix([ [1.0, 0.0], [0.0, 0.0] ])
+p = matrix([0.0, 0.0])
+G = matrix([[-1.0,2.0],[-1.0,1.0]])
+h = matrix([-2.0,1.0])
+sol=solvers.qp(Q, p, G, h)
+print(sol['x'])
+</script></div>
+</div><div style="margin-top:20px"></div><span id="sec9.1.1"></span><h3>9.1.1 Separating by non-linear functions</h3><div style="margin-top:20px"></div>Sometimes one needs more complex separating curves than just a line. 
+  Consider the five points
+  <div class="math"></div><script type="math/tex; mode=display">
+  (-1, 1), \quad (1, 1), \quad (1, -1), \quad (-1, -1),\quad \text{and} \quad (0, 0),
+  </script>
+  where we wish to separate <span class="math"></span><script type="math/tex">(0, 0)</script> from the other points. This is impossible
+  using a line, but certainly doable by a circle
+  <span id="equ9.13"></span><div class="math"></div><script type="math/tex; mode=display">
+  x^2 + y^2 = r^2,
+  \tag{9.13}</script>
+  where <span class="math"></span><script type="math/tex">0<r<\sqrt{2}</script>:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/simplesepcirc.png" ></div><div style="margin-top:20px"></div>The circle <a href=#equ9.13>(9.13)</a> may be a circle in two
+  dimensions, but viewed in three dimensions it turns into a
+  hyperplane in the following way.<div style="margin-top:20px"></div>By using the function <span class="math"></span><script type="math/tex">\varphi:\mathbb{R}^2\rightarrow \mathbb{R}^3</script> given by
+  <div class="math"></div><script type="math/tex; mode=display">
+  \varphi(x, y) = (x^2, y^2, 1)\in \mathbb{R}^3 = \{(x_1, y_1, z_1)\mid x_1, y_1, z_1\in \mathbb{R}\},
+  </script>
+  points lying on <a href=#equ9.13>(9.13)</a> map to points lying on the
+  hyperplane in <span class="math"></span><script type="math/tex">\mathbb{R}^3</script> given by
+  <div class="math"></div><script type="math/tex; mode=display">
+  x_1 + y_1 = r^2 z_1
+  </script>
+  in <span class="math"></span><script type="math/tex">\mathbb{R}^3</script>.<div style="margin-top:20px"></div>The general trick is to find a suitable map
+<div class="math"></div><script type="math/tex; mode=display">
+\varphi: \mathbb{R}^d\rightarrow \mathbb{R}^N,
+</script>
+such that the transformed data
+<div class="math"></div><script type="math/tex; mode=display">
+  (\varphi(x_1), y_1), \dots, (\varphi(x_m), y_m)
+  </script>
+  becomes linearly separable. 
+  Since,
+  <div class="math"></div><script type="math/tex; mode=display">
+  \alpha = \lambda_1 \varphi(x_1) + \cdots + \lambda_m \varphi(x_m)
+  </script>
+  for suitable <span class="math"></span><script type="math/tex">\lambda_1, \dots, \lambda_m\in \mathbb{R}</script>, the (dual) optimization problem in  
+<a href=#equ9.11>(9.11)</a> becomes
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    \text{Maximize}\qquad\quad &\lambda_1 + \cdots + \lambda_m - \frac{1}{2} \Lambda^T D \Lambda\\
+     \text{with constraints}&\\
+    \Lambda &\geq 0\\
+    \Lambda^T Y &= 0,
+    \end{aligned}</script>
+    where <span class="math"></span><script type="math/tex">Y =(y_1, \dots, y_m)^T</script> is the vector of labels attached to
+    the points <span class="math"></span><script type="math/tex">\varphi(x_1), \dots, \varphi(x_m)</script> and <span class="math"></span><script type="math/tex">D</script> is the symmetric <span class="math"></span><script type="math/tex">m\times m</script>
+    matrix given by
+    <span id="equ9.14"></span><div class="math"></div><script type="math/tex; mode=display">
+    D_{ij} = y_i y_j\, \varphi(x_i)\cdot \varphi(x_j).
+    \tag{9.14}</script><div style="margin-top:20px"></div>The beauty of the dual problem is that we do not have to care about the (sometimes astronomical, even
+    "infinite") dimension of <span class="math"></span><script type="math/tex">\mathbb{R}^N</script>. The optimization problem is situated in <span class="math"></span><script type="math/tex">\mathbb{R}^m</script>, where
+    <span class="math"></span><script type="math/tex">m</script> is the number of data points (or more precisely the number of constraints). We only need a clever way of getting our hands on
+    <span class="math"></span><script type="math/tex">\varphi(x_i)\cdot \varphi(x_j)</script> in <a href=#equ9.14>(9.14)</a>. Here an old concept from
+    pure mathematics called kernels helps us.<div style="margin-top:20px"></div><span id="sec9.1.2"></span><h3>9.1.2 Kernels</h3><div style="margin-top:20px"></div>A kernel is a function
+  <span class="math"></span><script type="math/tex">k: \mathbb{R}^n\times \mathbb{R}^n \rightarrow \mathbb{R}</script>, that is a hidden dot product
+  in the following sense: there exists a function
+  <div class="math"></div><script type="math/tex; mode=display">
+  \varphi: \mathbb{R}^n\rightarrow \mathbb{R}^N,
+  </script>
+  such that
+    <span id="equ9.15"></span><div class="math"></div><script type="math/tex; mode=display">
+  k(u, v) = \varphi(u)\cdot \varphi(v).
+\tag{9.15}</script><div style="margin-top:20px"></div><span id="env9.12"></span><div class="example" data-count="9.12">     
+    Let <span class="math"></span><script type="math/tex">k:\mathbb{R}^2 \times \mathbb{R}^2 \rightarrow \mathbb{R}</script> be given by
+    <div class="math"></div><script type="math/tex; mode=display">
+    k(u, v) = (u^T v + 1)^2.
+    </script>
+    Then
+    <span id="equ9.16"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+      k((x_1, y_1), (x_2, y_2)) &= (x_1 x_2 + y_1 y_2 +1)^2\\
+      &= x_1^2 x_2^2 + y_1^2 y_2^2 + 2 x_1 x_2 y_1 y_2 + 2 x_1 x_2 + 2 y_1 y_2 + 1.
+    \end{aligned}\tag{9.16}</script>
+    One gleans from <a href=#equ9.16>(9.16)</a> that <span class="math"></span><script type="math/tex">k</script> is a kernel function, since <a href=#equ9.15>(9.15)</a> is
+    satisfied for <span class="math"></span><script type="math/tex">\varphi: \mathbb{R}^2\rightarrow \mathbb{R}^6</script> given by
+    <div class="math"></div><script type="math/tex; mode=display">
+    \varphi(a, b) = (a^2, b^2, \sqrt{2} a b, \sqrt{2} a, \sqrt{2} b, 1).
+    </script>
+  </div><div style="margin-top:20px"></div><span id="env9.13"></span><a class="Exerciseno" data-count="9.13"></a><a href="#1952515a-dea8-4656-89b5-6d111cc7eccf" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=1952515a-dea8-4656-89b5-6d111cc7eccf class = "collapse Exercise envbuttons">  
+  The simplest example of non-linear separation comes from the one dimensional case <span class="math"></span><script type="math/tex">\mathbb{R}</script>:
+  consider the labeled points <span class="math"></span><script type="math/tex">((-1), 1), ((1), -1), ((2), 1)</script>. Show by a drawing
+  that these points cannot be separated in <span class="math"></span><script type="math/tex">\mathbb{R}</script>, but that they become separable
+  in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script> by using <span class="math"></span><script type="math/tex">\varphi(x) = (x, x^2)</script> i.e., that the labeled points
+  <span class="math"></span><script type="math/tex">(\varphi(-1), 1), (\varphi(1), -1), (\varphi(2), 1)</script> are linearly separable
+  in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>.<div style="margin-top:20px"></div>How does one glean from <a href=#equ9.16>(9.16)</a> that <span class="math"></span><script type="math/tex">k</script> is a kernel function?
+  </div><div style="margin-top:20px"></div>Once we have a kernel for <span class="math"></span><script type="math/tex">\varphi</script> we can replace the matrix in <a href=#equ9.14>(9.14)</a> by<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+    D_{ij} = y_i y_j\, k(x_i, x_j)
+  </script><div style="margin-top:20px"></div>and proceed to solve the optimization problem without worrying about <span class="math"></span><script type="math/tex">\mathbb{R}^N</script> (or even an
+  infinite dimensional space).<div style="margin-top:20px"></div><span id="sec9.1.3"></span><h3>9.1.3 The kernel perceptron algorithm</h3><div style="margin-top:20px"></div>Recall the stunningly simple perceptron algorithm from section
+  <a href="euclidean.html#sec5.2.3">5.2.3</a>. This algorithm can be modified to handle
+  non-linear separation too by using kernel functions. In fact, this
+  modification was one of the inspirations for the development of the
+  support vector machines described above.<div style="margin-top:20px"></div>After having mapped a set of vectors <span class="math"></span><script type="math/tex">x_1, \dots, x_m\in \mathbb{R}^d</script> with
+  labels <span class="math"></span><script type="math/tex">y_1, \dots, y_m\in\{\pm 1\}</script> to
+  <span class="math"></span><script type="math/tex">\varphi(x_1), \dots, \varphi(x_m)</script>, via <span class="math"></span><script type="math/tex">\varphi:\mathbb{R}^d\rightarrow \mathbb{R}^N</script>, we are looking for a vector
+  <span class="math"></span><script type="math/tex">w\in \mathbb{R}^N</script>, such that
+  <span id="equ9.17"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    w^T \varphi(x_i) &> 0\quad\text{if}\quad y_i = 1\\
+    w^T \varphi(x_i) &< 0\quad\text{if}\quad y_i = -1.
+  \end{aligned}\tag{9.17}</script>
+  Such a vector is expressible as
+  <div class="math"></div><script type="math/tex; mode=display">
+  w = \lambda_1 \varphi(x_1) + \cdots + \lambda_m \varphi(x_m).
+  </script>
+  The (dual) perceptron algorithm works adjusting the coefficients
+  <span class="math"></span><script type="math/tex">\lambda_1, \dots, \lambda_m</script> successively as follows: if
+  <span class="math"></span><script type="math/tex">w^T</script> is wrong about the placement of <span class="math"></span><script type="math/tex">\varphi(x_j)</script> in <a href=#equ9.17>(9.17)</a> i.e., 
+  if <span class="math"></span><script type="math/tex">y_j w^T \varphi(x_j) < 0</script>, then let
+  <div class="math"></div><script type="math/tex; mode=display">
+  \lambda_j := \lambda_j + y_j.
+  </script>
+  If we have a kernel function <span class="math"></span><script type="math/tex">k</script> for <span class="math"></span><script type="math/tex">\varphi</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+  w^T \varphi(x_j) = w\cdot \varphi(x_j) = \sum_{i=1}^m \lambda_i \varphi(x_i)\cdot \varphi(x_j) =
+  \sum_{i=1}^m \lambda_i k(x_i, x_j)
+  </script>
+  and we can use the kernel function in the algorithm without resorting to computing <span class="math"></span><script type="math/tex">\varphi</script> and
+  the inner product in <span class="math"></span><script type="math/tex">\mathbb{R}^N</script>.<div style="margin-top:20px"></div><span id="env9.14"></span><a class="Exerciseno" data-count="9.14"></a><a href="#9ae09061-bf99-40ad-a72e-622bd0238083" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=9ae09061-bf99-40ad-a72e-622bd0238083 class = "collapse Exercise envbuttons">  
+  Use the kernel function in Example <a href=#env9.12 class="labelref">9.12</a> and the kernel perceptron algorithm to
+  separate
+  <div class="math"></div><script type="math/tex; mode=display">
+  ((-1, -1), -1), \quad ((-1, 1), -1), \quad ((1, -1), -1), \quad ((0,0), 1), \quad ((1, 1), 1).
+  </script>
+  Sketch the points and the separating curve.
+  </div><div style="margin-top:20px"></div><span id="sec9.2"></span><h2 id="3c57808a-288d-4cc8-b91d-6fbef44f983c">9.2 Logarithmic barrier functions</h2><div style="margin-top:20px"></div>We need an algorithm for solving optimization problems like <a href=#equ9.8>(9.8)</a>.
+  There is a very nice trick (probably going back to <a href="https://en.wikipedia.org/wiki/John_von_Neumann" target="_blank">von Neumann</a>) for solving constrained optimization problems of the form
+  <span id="equ9.18"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x_1, \dots, x_n)\\
+    &\text{with constraint}\\
+    &&(x_1, \dots, x_n)\in C,
+  \end{aligned}\tag{9.18}</script>
+  where <span class="math"></span><script type="math/tex">C</script> is defined by the differentiable functions
+  <span class="math"></span><script type="math/tex">g_i:\mathbb{R}^n\rightarrow \mathbb{R}</script> as
+  <div class="math"></div><script type="math/tex; mode=display">
+  C = \{x\in \mathbb{R}^n \mid g_1(x) \leq 0, \dots, g_m(x)\leq 0\}.
+  </script>
+  The functions <span class="math"></span><script type="math/tex">g_i</script> define the boundary (or barrier) of <span class="math"></span><script type="math/tex">C</script>. We use
+  them to define the logarithmic <em>barrier function</em>
+  <div class="math"></div><script type="math/tex; mode=display">
+  B(x) = - \sum_{i=1}^m \log(-g_i(x))
+  </script>
+  defined on the interior
+  <div class="math"></div><script type="math/tex; mode=display">
+  C^o = \{x\in \mathbb{R}^n \mid g_1(x) < 0, \dots, g_m(x) < 0\}.
+  </script>
+  The boundary of <span class="math"></span><script type="math/tex">C</script> is
+  <div class="math"></div><script type="math/tex; mode=display">
+  \partial C = \{x\in C \mid g_1(x) = 0 \vee \cdots \vee g_m(x) = 0\}.
+  </script>
+  You can see that the logarithmic barrier function explodes (becomes unbounded), when a
+  vector <span class="math"></span><script type="math/tex">x\in C^o</script> approaches <span class="math"></span><script type="math/tex">\partial C</script>, since <span class="math"></span><script type="math/tex">-\log(t)</script> is unbounded as <span class="math"></span><script type="math/tex">t\to 0</script> for <span class="math"></span><script type="math/tex">t>0</script>.<div style="margin-top:20px"></div>The cool idea is  to consider the function
+  <span id="equ9.19"></span><div class="math"></div><script type="math/tex; mode=display">
+  f_\epsilon(x) = f(x) + \epsilon B(x)
+  \tag{9.19}</script>
+  for <span class="math"></span><script type="math/tex">\epsilon > 0</script>. This function has a global minimum <span class="math"></span><script type="math/tex">x_\epsilon\in C^o</script>.<div style="margin-top:20px"></div><span id="env9.15"></span><a class="Exerciseno" data-count="9.15"></a><a href="#72d9bd6a-2922-4e6b-94b2-bbc58186c7b7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=72d9bd6a-2922-4e6b-94b2-bbc58186c7b7 class = "collapse Exercise envbuttons">  
+  Prove that <span class="math"></span><script type="math/tex">f_\epsilon</script> is a convex function if <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g_1, \dots, g_m</script> are
+  convex functions.<div style="margin-top:20px"></div><a href="#d4b20320-cc69-44af-9548-3278e43260ad" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=d4b20320-cc69-44af-9548-3278e43260ad class="collapse">
+    Prove and use that if <span class="math"></span><script type="math/tex">f</script> is a decreasing convex function (in one variable) and <span class="math"></span><script type="math/tex">g</script> is a convex function, then
+    <span class="math"></span><script type="math/tex">f(-g(x))</script> is a convex function, where we assume the composition makes sense.
+  </div>
+  </div><div style="margin-top:20px"></div>The upshot is that <span class="math"></span><script type="math/tex">x_\epsilon \to x_0</script> as <span class="math"></span><script type="math/tex">\epsilon\to 0</script>. This is the content of the following theorem, which we will not prove.<div style="margin-top:20px"></div><div class="emphasize"><span id="env9.16"></span><div class="genericenv" data-count="9.16" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">x_\epsilon</script> be a point in <span class="math"></span><script type="math/tex">C^o</script> with
+  <div class="math"></div><script type="math/tex; mode=display">
+    f_\epsilon(x_\epsilon) = \min\left\{ f_\epsilon(x) \middle| x\in C^o \right\}
+  </script>
+  for <span class="math"></span><script type="math/tex">\epsilon > 0</script> and <span class="math"></span><script type="math/tex">f^* = \min\left\{ f(x) \middle| x\in C \right\}</script>.  Then
+  <div class="math"></div><script type="math/tex; mode=display">
+    0\leq f(x_\varepsilon) - f^* \leq \varepsilon m
+  </script>
+  and <span class="math"></span><script type="math/tex">f(x_\varepsilon)\to f^*</script> as <span class="math"></span><script type="math/tex">\varepsilon \to 0</script>. If
+  <a href=#equ9.18>(9.18)</a> has a unique optimum <span class="math"></span><script type="math/tex">x^*</script>, 
+then by using <span class="math"></span><script type="math/tex">\epsilon=\frac1n</script> we obtain a sequence <span class="math"></span><script type="math/tex">x_{\frac{1}{n}}\to  x^*</script> as <span class="math"></span><script type="math/tex">n\to \infty</script>.
+ </div></div><div style="margin-top:20px"></div>We move on to give concrete examples of Theorem <a href=#env9.16 class="labelref">9.16</a> in action.<div style="margin-top:20px"></div><span id="sec9.2.1"></span><h3>9.2.1 Quadratic function with polyhedral constraints</h3><div style="margin-top:20px"></div>A much used setup in optimization is minimizing a quadratic functions
+ subject to polyhedral constraints. This is the optimization problem
+<span id="equ9.20"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &\text{Minimize} &x^T Q x + c^T x\\
+  &\text{with constraint}\\
+  &&A x \leq b,
+\end{aligned}\tag{9.20}</script>
+where <span class="math"></span><script type="math/tex">Q</script> is an <span class="math"></span><script type="math/tex">n\times n</script> matrix, <span class="math"></span><script type="math/tex">A</script> is an <span class="math"></span><script type="math/tex">m\times n</script> matrix,  <span class="math"></span><script type="math/tex">c\in \mathbb{R}^n</script> and <span class="math"></span><script type="math/tex">b\in \mathbb{R}^m</script>.<div style="margin-top:20px"></div>Certainly the constraints <span class="math"></span><script type="math/tex">A x\leq b</script> define a convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}^n</script>, but the function
+<span class="math"></span><script type="math/tex">x^T Q x + c^T x</script> is not strictly convex unless <span class="math"></span><script type="math/tex">Q</script> is positive definite. If <span class="math"></span><script type="math/tex">Q</script> is not
+positive semidefinite <a href=#equ9.20>(9.20)</a> is difficult.<div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">Q</script> is positive semidefinite, the interior point method outlined above usually works well.<div style="margin-top:20px"></div><span id="env9.17"></span><div class="example" data-count="9.17">     
+  The optimization problem <a href=#equ9.2>(9.2)</a> has the form <a href=#equ9.20>(9.20)</a>, when we put
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    Q &=
+        \begin{pmatrix}
+          1 & 0 & 0\\
+          0 & 1 & 0\\
+          0 & 0 & 0
+        \end{pmatrix}\\
+    c &= \begin{pmatrix}
+      0 \\ 0 \\ 2
+    \end{pmatrix}\\
+    A &=
+        \begin{pmatrix}
+          -2x_1 & -2y_1 & -1\\
+          \vdots & \vdots & \vdots \\
+          -2x_n & -2y_n & -1
+        \end{pmatrix}\\
+    b &= \begin{pmatrix}
+      -x_1^2 - y_1^2\\
+      \vdots \\
+      -x_n^2 - y_n^2
+      \end{pmatrix}
+  \end{aligned}</script>
+</div><div style="margin-top:20px"></div><span id="env9.18"></span><div class="example" data-count="9.18">     
+  The optimization problem <a href=#equ9.8>(9.8)</a> has the form <a href=#equ9.20>(9.20)</a>, when we put
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    Q &=
+        \begin{pmatrix}
+          1 & 0 & \dots & 0 & 0\\
+          0 & 1 & \dots & 0 & 0\\
+          \vdots & \vdots &\ddots & \vdots\\
+          0 & 0 & \dots & 1 & 0\\
+          0 & 0 & \dots & 0 & 0
+        \end{pmatrix}\\
+    c &= \begin{pmatrix}
+      0 \\ \vdots \\ 0
+    \end{pmatrix}\\
+    A &=
+        \begin{pmatrix}
+          -y_1 x_1 & -y_1\\
+          \vdots & \vdots\\
+          - y_n x_n & -y_n
+        \end{pmatrix}\\
+    b &= \begin{pmatrix}
+      -1\\
+      \vdots \\
+      -1
+      \end{pmatrix}
+  \end{aligned}</script>
+  Here <span class="math"></span><script type="math/tex">Q</script> is a <span class="math"></span><script type="math/tex">(d+1)\times (d+1)</script> matrix, <span class="math"></span><script type="math/tex">A</script> is an <span class="math"></span><script type="math/tex">n\times (d+1)</script> matrix and
+  <span class="math"></span><script type="math/tex">b\in \mathbb{R}^n</script>. 
+</div><div style="margin-top:20px"></div>Optimization of a quadratic function as in <a href=#equ9.20>(9.20)</a> is implemented below using the
+interior point method and <a href="https://en.wikipedia.org/wiki/Line_search" target="_blank">exact line search</a>. See Section 10.5.1 of my book <a href="https://www.worldscientific.com/worldscibooks/10.1142/8527" target="_blank">Undergraduate Convexity</a> for further details. Only
+<tt>python</tt> with <tt>numpy</tt> is used.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+import numpy as np
+
+def Newton(Q0, c0, A0, b0, xinit, eps):
+
+    nrows = len(A0)
+    tolerance = 0.00001
+    tolerancebisect = 0.0001
+
+    
+    Q = np.array(Q0)
+    c = np.array(c0)
+    A = np.array(A0)
+    b = np.array(b0)
+    x0 = np.array(xinit)
+
+    def vabs(v): # Use L1 norm
+      return sum(abs(x) for x in v)
+    
+    def tzero(x0, v):
+        return min([(b[i] - A[i].dot(x0))/A[i].dot(v) for i in range(nrows) if A[i].dot(v)>0])
+
+    recip = np.vectorize(lambda x: 1/x)
+    
+    def gradient(x):
+      diff = b - A.dot(x)
+      return 2*Q.dot(x) + c + (eps*recip(diff).dot(A))
+
+    def hessian(x):
+      diff = b - A.dot(x)
+      return 2*Q + (eps*np.transpose(A).dot(np.diag(recip(np.multiply(diff, diff))).dot(A)))
+
+    def g(t):
+      return gradient(x0+t*v).dot(v)
+  
+    v = - np.linalg.inv(hessian(x0)).dot(gradient(x0))
+
+    while(vabs(v) > tolerance):
+        delta = tzero(x0, v)/2
+        t1 = t2 = 0
+        
+        while (g(t2) < 0):
+            t1 = t2
+            t2 += delta
+            delta /= 2
+
+        crit = True
+        while crit:
+            t = t1 + delta
+            if (g(t) < 0):
+                t1 = t
+            else:
+                t2 = t
+            delta /= 2
+            crit = (delta > tolerancebisect) 
+        
+        x0 = x0 + (t*v)
+        v = - np.linalg.inv(hessian(x0)).dot(gradient(x0))
+
+    return x0
+
+# Helper function for generating matrices for the optimization problem of finding
+# the optimal hyperplane separating labeled points in the plane.
+#
+# Example:
+#
+# (Q1, c1, A1, b1) =
+# bestsep([[1, 0], [2, 0], [3, 0], [3, 2],  [1, 1], [2, 2]], [1, 1, 1, 1, -1, -1], 10)
+#
+# generates data for separating ([1, 0], +1), ([2, 0], +1), ([3, 0], +1), ([3, 2), +1) from
+# ([1, 1], -1), ([2, 2], -1)
+#
+# bounding the absolute value of the coordinates of alpha and beta by 10 (=bound).
+#
+# Note that it can be tricky to find x0 with A x0 < b1 as initial point. If this condition
+# is broken, Newton fails.
+#
+# def bestsep(points, labels, bound):
+#     A1 = [[-s*x, -s*y, -s] for ([x, y], s) in zip(points, labels)]
+#     b1 = len(points)*[-1]
+#     c1 = [0, 0, 0]
+#     Q1 = [[1, 0, 0], [0, 1, 0], [0, 0, 0]]
+#     A1 = [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]] + A1
+#     b1 = (6*[bound]) + b1
+#     return (Q1, c1, A1, b1)
+    
+
+
+# Enclosing circle:
+A1 = [
+    [0, 0, 1],
+    [0, 0,-1],
+    [-4, -4, -1],
+    [6, -4, -1],
+    [-2, 0, -1],
+    [4, -2, -1],
+    [2, -6, -1],
+    [0, -8, -1]
+]
+
+b1 = [20, 0, -8, -13, -1, -5, -10, -16]
+Q1 = [[1, 0, 0], [0, 1, 0], [0, 0, 0]]
+c1 = [0, 0, 1]
+  
+Newton(Q1, c1, A1, b1, [0,0,18], 0.0001)
+</script></div><div style="margin-top:20px"></div><span id="env9.19"></span><div class="example" data-count="9.19">     <div style="margin-top:20px"></div>Below are samples of output running the interior point algorithm on the enclosing circle problem in Example <a href=#env9.3 class="labelref">9.3</a>.<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+  \epsilon = 1,\quad 0.5, \quad 0.1, \quad 0.05, \quad 0.01, \quad 0.005, \quad 0.001, \quad 0.0005, \quad 0.0001
+  </script>
+  in the barrier function <span class="math"></span><script type="math/tex">f_\epsilon(x)</script> in <a href=#equ9.19>(9.19)</a>. We are attempting to compute the center
+  of the smallest enclosing circle of the points
+  <div class="math"></div><script type="math/tex; mode=display">
+  (0, 0), \quad (2,2), \quad (-3, 2), \quad (1, 0), \quad (-2, 1), \quad (-1, 3), \quad\text{and}\quad
+  (0, 4).
+  </script>
+<p><pre><code>&gt;&gt;&gt; Newton(Q1, c1, A1, b1, [0,0,18], 1)
+array([-0.43814179,  1.84835643,  7.69779763])
+&gt;&gt;&gt; Newton(Q1, c1, A1, b1, [0,0,18], 0.5)
+array([-0.45244596,  1.81135335,  4.99353576])
+&gt;&gt;&gt; Newton(Q1, c1, A1, b1, [0,0,18], 0.1)
+array([-0.49569549,  1.84020923,  2.91071666])
+&gt;&gt;&gt; Newton(Q1, c1, A1, b1, [0,0,18], 0.05)
+array([-0.49875614,  1.87002433,  2.63917096])
+&gt;&gt;&gt; Newton(Q1, c1, A1, b1, [0,0,18], 0.01)
+array([-0.4999099 ,  1.93327221,  2.28805064])
+&gt;&gt;&gt; Newton(Q1, c1, A1, b1, [0,0,18], 0.005)
+array([-0.49996901,  1.95176304,  2.20331123])
+&gt;&gt;&gt; Newton(Q1, c1, A1, b1, [0,0,18], 0.001)
+array([-0.49999729,  1.97792915,  2.09031159])
+&gt;&gt;&gt; Newton(Q1, c1, A1, b1, [0,0,18], 0.0005)
+array([-0.49999904,  1.98432672,  2.06370265])
+&gt;&gt;&gt; Newton(Q1, c1, A1, b1, [0,0,18], 0.0001)
+array([-0.49999991,  1.99295433,  2.0283835 ])
+</code></pre></p>
+The first two coordinates of the output are the <span class="math"></span><script type="math/tex">x</script>- and <span class="math"></span><script type="math/tex">y</script>-coordinates of the center. The third
+is <span class="math"></span><script type="math/tex">\lambda</script> from <a href=#equ9.2>(9.2)</a>. 
+</div><div style="margin-top:20px"></div><span id="env9.20"></span><a class="Exerciseno" data-count="9.20"></a><a href="#38f5aa2c-bfdc-4a91-8033-71659c7a2327" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=38f5aa2c-bfdc-4a91-8033-71659c7a2327 class = "collapse Exercise envbuttons">  
+Try out the code in the Sage window above on the Exercises <a href="diffseveral.html#env7.48">7.48</a>, <a href="diffseveral.html#env7.49">7.49</a> and
+<a href="diffseveral.html#env7.50">7.50</a>. Check the output of the code by actually solving these exercises.
+</div><div style="margin-top:20px"></div><span id="env9.21"></span><a class="Exerciseno" data-count="9.21"></a><a href="#512f0957-f7e7-4cf2-a4de-e4f7cb053f57" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=512f0957-f7e7-4cf2-a4de-e4f7cb053f57 class = "collapse Exercise envbuttons">  
+Compute the best line separating the labeled data
+<p><pre><code>((1, 0), +1), ((2, 0), +1), ((3, 0), +1), ((3, 2), +1), ((1, 1), -1), ((2, 2), -1).
+</code></pre></p>
+</div><div style="margin-top:20px"></div><span id="sec9.3"></span><h2 id="d0332f83-5f95-4d0c-aa6e-c907cac6bb9f">9.3 A geometric optimality criterion</h2><div style="margin-top:20px"></div>Consider the general optimization problem
+  <span id="equ9.21"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x_1, \dots, x_n)\\
+    &\text{with constraint}\\
+    &&(x_1, \dots, x_n)\in C,
+  \end{aligned}\tag{9.21}</script>
+  where <span class="math"></span><script type="math/tex">C</script> is a subset of <span class="math"></span><script type="math/tex">\mathbb{R}^n</script>.<div style="margin-top:20px"></div><div class="emphasize"><span id="env9.22"></span><div class="genericenv" data-count="9.22" data-name="PROPOSITION">     
+  Suppose that <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^n</script> is a convex subset and <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}</script> a
+  differentiable function in <a href=#equ9.21>(9.21)</a>. If <span class="math"></span><script type="math/tex">x_0\in C</script> is an optimal solution of <a href=#equ9.21>(9.21)</a>,
+  then
+  <span id="equ9.22"></span><div class="math"></div><script type="math/tex; mode=display">
+    \nabla f (x_0) (x - x_0) \geq 0\qquad\text{for every } x\in C.
+  \tag{9.22}</script>
+  If <span class="math"></span><script type="math/tex">f</script> in addition is a convex function, then <a href=#equ9.22>(9.22)</a> implies that
+  <span class="math"></span><script type="math/tex">x_0</script> is optimal.
+</div></div>
+<a href="#8fdc49dd-26dc-4bf5-9a6a-fba33dbd936f" class ="btn btn-default" data-toggle="collapse">Proof</a><div id=8fdc49dd-26dc-4bf5-9a6a-fba33dbd936f class="collapse">
+  If <span class="math"></span><script type="math/tex">x_0</script> is an optimal solution and <span class="math"></span><script type="math/tex">x\in C\setminus\{x_0\}</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    0 &\leq f((1-t)x_0 + t x) - f(x_0) = f(x_0 + t(x-x_0)) - f(x_0)\\
+    &= t\,\left (\nabla f(x_0)(x-x_0) + \epsilon(t (x-x_0)) \left\vert x-x_0  \right\vert\right)
+  \end{aligned}</script>
+  for every <span class="math"></span><script type="math/tex">t</script> with <span class="math"></span><script type="math/tex">0\leq t \leq 1</script>, where <span class="math"></span><script type="math/tex">\epsilon</script> denotes the
+  epsilon function in the definition of differentiability (see
+  Definition <a href="diffseveral.html#env7.5">7.5</a>). Therefore
+  <div class="math"></div><script type="math/tex; mode=display">
+    \nabla f(x_0)(x-x_0) + \epsilon(t (x-x_0)) \left\vert  x-x_0  \right\vert\geq 0
+  </script>
+  for <span class="math"></span><script type="math/tex">0\leq t\leq 1</script>. This is only possible if <span class="math"></span><script type="math/tex">\nabla
+  f(x_0)(x-x_0)\geq 0</script>.  We have silently applied the convexity of <span class="math"></span><script type="math/tex">C</script>
+  and the differentiability of <span class="math"></span><script type="math/tex">f</script> at <span class="math"></span><script type="math/tex">x_0</script>.<div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">f</script> in addition is convex and <a href=#equ9.22>(9.22)</a> holds, then
+  Theorem <a href="hessian.html#env8.19">8.19</a> shows that <span class="math"></span><script type="math/tex">x_0</script> is an optimal solution.
+</div><div style="margin-top:20px"></div><span id="env9.23"></span><div class="example" data-count="9.23">     <div style="margin-top:20px"></div>A nice application of Proposition <a href=#env9.22 class="labelref">9.22</a> is for example to the optimization problem<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &(x+1)^2 + (y+1)^2\\
+    &\text{with constraint}\\
+    &&x^2 + 3 y^2 \leq 1
+\end{aligned}</script><div style="margin-top:20px"></div>Here Proposition <a href=#env9.22 class="labelref">9.22</a> shows that <span class="math"></span><script type="math/tex">x_0=\left(-\tfrac{1}{2}, -\tfrac{1}{2}\right)</script> is optimal, since
+the hyperplane
+<div class="math"></div><script type="math/tex; mode=display">
+\nabla f(x_0) x = \nabla f(x_0) x_0
+</script>
+touches the boundary of
+<div class="math"></div><script type="math/tex; mode=display">
+C = \{(x, y)\in \mathbb{R}^2\mid x^2 + 3y^2\leq 1\}
+</script>
+as shown below.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/simpopt.png" ></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><div style="margin-top:20px"></div><span id="env9.24"></span><a class="Exerciseno" data-count="9.24"></a><a href="#1f772f20-05e0-46a6-9cee-61df69822b1b" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=1f772f20-05e0-46a6-9cee-61df69822b1b class = "collapse Exercise envbuttons">  
+Sketch how Proposition <a href=#env9.22 class="labelref">9.22</a> applies to show that an optimum in a linear programming
+problem
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &c x + d y\\
+    &\text{with constraint}\\
+    &&A \begin{pmatrix} x \\ y \end{pmatrix} \leq b
+  \end{aligned}</script>
+in the plane <span class="math"></span><script type="math/tex">\mathbb{R}^2</script> always can be found in a vertex.
+</div><div style="margin-top:20px"></div><span id="env9.25"></span><a class="Exerciseno" data-count="9.25"></a><a href="#283559d2-3d91-4bc1-b52a-470d9f5a147f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=283559d2-3d91-4bc1-b52a-470d9f5a147f class = "collapse Exercise envbuttons">  
+  Let <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> be a differentiable convex function and
+  <div class="math"></div><script type="math/tex; mode=display">
+    S =\left\{  (x, y)  \middle|  -1 \leq x \leq 2, -1 \leq y \leq 1  \right\}.
+  </script>
+  Suppose that <span class="math"></span><script type="math/tex">\nabla f(x_0) = (1,0)</script> for <span class="math"></span><script type="math/tex">x_0 =
+  (-1,\frac{1}{2})</script>. Prove that <span class="math"></span><script type="math/tex">x_0</script> is a minimum for <span class="math"></span><script type="math/tex">f</script> defined on
+  <span class="math"></span><script type="math/tex">S</script>.
+</div><div style="margin-top:20px"></div><span id="env9.26"></span><a class="Exerciseno" data-count="9.26"></a><a href="#9f5b65c9-0baa-461e-899b-5291a966e437" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=9f5b65c9-0baa-461e-899b-5291a966e437 class = "collapse Exercise envbuttons">  
+  Guess the solution to the optimization problem
+  <div class="math"></div><script type="math/tex; mode=display">
+    \min\left\{  (x-5)^2 + (y-5)^2\,  \middle|  \, x\geq 0,\, y\geq 0,\, x^2 +
+      y^2 \leq 25  \right\}. 
+  </script>
+  Show that your guess was correct!
+</div><div style="margin-top:20px"></div><span id="sec9.4"></span><h2 id="9bcbcfae-3dc8-4743-87b7-090021b8b7da">9.4 KKT</h2><div style="margin-top:20px"></div>The KKT in the title of this section is short for Karush-Kuhn-Tucker.<div style="margin-top:20px"></div>We will limit ourselves to a convex optimization problem of the form
+  <span id="equ9.23"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x_1, \dots, x_n)\\
+    &\text{with constraint}\\
+    &&(x_1, \dots, x_n)\in C,
+  \end{aligned}\tag{9.23}</script>
+  where <span class="math"></span><script type="math/tex">C</script> is defined by the differentiable convex functions
+  <span class="math"></span><script type="math/tex">g_i:\mathbb{R}^n\rightarrow \mathbb{R}</script> for <span class="math"></span><script type="math/tex">i = 1, \dots, m</script> as
+  <div class="math"></div><script type="math/tex; mode=display">
+  C = \{v\in \mathbb{R}^n \mid g_1(v) \leq 0, \dots, g_m(v)\leq 0\}
+  </script>
+  and <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}</script> is a convex function.<div style="margin-top:20px"></div>To the optimization problem <a href=#equ9.23>(9.23)</a> we associate the (famous)
+  <a href="https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions" target="_blank">Karush-Kuhn-Tucker</a> (KKT) conditions:
+  <div class="emphasize"><span id="equ9.24"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\lambda_1 \geq 0, \dots, \lambda_m\geq 0\\
+    \\
+    &g_1(v_0)\leq 0, \dots, g_m(v_0)\leq 0\\
+    \\
+    &\lambda_1 g_1(v_0) = 0, \dots, \lambda_m g_m(v_0) = 0\\
+      \\
+    &\nabla f(v_0) + \lambda_1 \nabla g_1(v_0) + \cdots + \lambda_m
+    \nabla g_m(v_0) = 0.
+  \end{aligned}\tag{9.24}</script></div><div style="margin-top:20px"></div>Notice that the KKT conditions consist of  <span class="math"></span><script type="math/tex">2m</script> inequalities and <span class="math"></span><script type="math/tex">m+n</script>
+  equations in the <span class="math"></span><script type="math/tex">m+n</script> unknowns
+  <span class="math"></span><script type="math/tex">\lambda_1, \dots, \lambda_m, v_0 = (x_1, \dots, x_n)</script>. The KKT
+  conditions form a surprising theoretical foundation for optimization
+  problems of the type in <a href=#equ9.23>(9.23)</a>. You should take a peek back
+  to the theory of Lagrange multipliers in section <a href="diffseveral.html#sec7.9">7.9</a> and
+  compare with <a href=#equ9.24>(9.24)</a>.<div style="margin-top:20px"></div><span id="env9.27"></span><div class="example" data-count="9.27">     
+    The KKT conditions associated with the convex optimization problem in <a href=#env9.1>(9.1)</a> are
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+      \lambda_1, \lambda_2, \lambda_3, \lambda_4 & \geq 0\\
+ -x -y + 2 &\leq 0\\
+  y - 2&\leq 0\\
+  x - 3&\leq 0\\
+  -y + 1 &\leq 0\\
+  \lambda_1 (- x - y + 2) &=0\\
+  \lambda_2 (y - 2) &= 0\\
+  \lambda_3 (x - 3) &= 0\\
+  \lambda_4 (-y + 1) &= 0\\
+  2 x - \lambda_1  + \lambda_3 &= 0\\
+  2 y - \lambda_1  + \lambda_2 -\lambda_4 &= 0.
+\end{aligned}</script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env9.28"></span><a class="Exerciseno" data-count="9.28"></a><a href="#c667c41a-c5e2-427c-bf2f-8a8a4954f953" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c667c41a-c5e2-427c-bf2f-8a8a4954f953 class = "collapse Exercise envbuttons">  
+  Verify that the KKT conditions of the optimization problem in <a href=#env9.1>(9.1)</a> are the
+  ones given in Example <a href=#env9.27 class="labelref">9.27</a>.
+  </div><div style="margin-top:20px"></div>To state our main theorem we
+  need a definition.<div style="margin-top:20px"></div><div class="emphasize"><span id="env9.29"></span><div class="genericenv" data-count="9.29" data-name="DEFINITION">     
+  The optimization problem <a href=#equ9.23>(9.23)</a> is called <em>strictly
+    feasible</em> if there exists <span class="math"></span><script type="math/tex">z_0\in \mathbb{R}^n</script> with
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    g_1(z_0) &< 0\\
+    &\vdots\\
+    g_m(z_0) &< 0.
+  \end{aligned}</script>
+</div></div><div style="margin-top:20px"></div>Below is the main result in our limited convex setting. We will not go into the proof, which can be found in my book <a href="https://www.worldscientific.com/worldscibooks/10.1142/8527" target="_blank">Undergraduate Convexity</a>.<div style="margin-top:20px"></div><div class="emphasize"><span id="env9.30"></span><div class="genericenv" data-count="9.30" data-name="THEOREM">     
+<ol class="lowerroman"><li id="ite9.1">
+  Let <span class="math"></span><script type="math/tex">v_0</script> be an optimal solution of <a href=#equ9.23>(9.23)</a>. If <a href=#equ9.23>(9.23)</a>
+  is strictly feasible, then the KKT conditions are satisfied at <span class="math"></span><script type="math/tex">v_0</script>
+  for suitable <span class="math"></span><script type="math/tex">\lambda_1, \dots, \lambda_m</script>.
+</li><li id="ite9.2"> 
+  If the KKT conditions are satisfied at <span class="math"></span><script type="math/tex">z\in \mathbb{R}^n</script> for some
+  <span class="math"></span><script type="math/tex">\lambda_1, \dots, \lambda_m</script>, then <span class="math"></span><script type="math/tex">z</script> is an optimal solution to
+  <a href=#equ9.23>(9.23)</a>.
+  </li></ol>
+</div></div><div style="margin-top:20px"></div>Let us now touch base with  a rather simple example.  Consider the optimization problem<div style="margin-top:20px"></div><span id="equ9.25"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &x\\
+    &\text{with constraint}\\
+    &&x\in [1, 2].
+  \end{aligned}\tag{9.25}</script><div style="margin-top:20px"></div>Here <span class="math"></span><script type="math/tex">f(x) = x, g_1(x) = -x + 1</script> and <span class="math"></span><script type="math/tex">g_2(x) = x - 2</script> in <a href=#equ9.23>(9.23)</a>. Therefore
+  the KKT conditions in <a href=#equ9.24>(9.24)</a> are
+  <span id="equ9.26"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    \lambda_1 &\geq 0\\
+    \lambda_2 &\geq 0\\
+    -x + 1 &\leq 0\\
+    x - 2 &\leq 0\\
+    \lambda_1 (- x + 1) &= 0\\
+    \lambda_2 (x -2 ) &= 0\\
+    1 -\lambda_1 + \lambda_2 &= 0.
+  \end{aligned}\tag{9.26}</script><div style="margin-top:20px"></div>Before even thinking about moving on to the next section, you should attempt to
+  find a solution <span class="math"></span><script type="math/tex">x, \lambda_1, \lambda_2</script> to the above KKT conditions (inequalities) and then verify using Theorem <a href=#env9.30 class="labelref">9.30</a><a href=#ite9.2 class="labelref">(&#8561;.)</a> that <span class="math"></span><script type="math/tex">x</script> is optimal. Also, try only using Theorem <a href=#env9.30 class="labelref">9.30</a><a href=#ite9.1 class="labelref">(&#8560;.)</a> and <a href=#equ9.26>(9.26)</a> to show that <span class="math"></span><script type="math/tex">x = 2</script> is not
+  a solution to <a href=#equ9.25>(9.25)</a>.<div style="margin-top:20px"></div><div style="margin-top:20px"></div><span id="env9.31"></span><a class="Exerciseno" data-count="9.31"></a><a href="#ee5274fc-48c7-4a7f-85e0-5550b415f73a" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ee5274fc-48c7-4a7f-85e0-5550b415f73a class = "collapse Exercise envbuttons">  
+Give an example of a convex optimization problem as in <a href=#equ9.23>(9.23)</a>, which is not strictly feasible and with an optimal solution <span class="math"></span><script type="math/tex">v_0</script> that does
+not satisfy the KKT conditions. Such an example shows that strict feasibility is necessary in Theorem <a href=#env9.30 class="labelref">9.30</a><a href=#ite9.1 class="labelref">(&#8560;.)</a>.
+</div><div style="margin-top:20px"></div><span id="sec9.5"></span><h2 id="61952270-997d-4c6c-b743-4ca48cc2320f">9.5 Computing with KKT</h2><div style="margin-top:20px"></div><span id="sec9.5.1"></span><h3>9.5.1 Strategy</h3><div style="margin-top:20px"></div>A general strategy for finding solutions to the KKT conditions in <a href=#equ9.24>(9.24)</a>
+is zooming in on (the Lagrange multipliers) <span class="math"></span><script type="math/tex">\lambda_1, \dots, \lambda_m</script> testing
+each of them for the two cases <span class="math"></span><script type="math/tex">\lambda_i = 0</script> and <span class="math"></span><script type="math/tex">\lambda_i> 0</script>.<div style="margin-top:20px"></div>One important point, which you can read from <a href=#equ9.24>(9.24)</a>, is
+that <span class="math"></span><script type="math/tex">g_i(v_0) = 0</script> if <span class="math"></span><script type="math/tex">\lambda_i > 0</script>. To further elaborate, if
+<span class="math"></span><script type="math/tex">\lambda_i > 0</script>, then an optimal solution must satisfy <span class="math"></span><script type="math/tex">g_i(v_0) = 0</script>.<div style="margin-top:20px"></div><span id="env9.32"></span><a class="Exerciseno" data-count="9.32"></a><a href="#76df2e32-6c71-41d4-a5f5-b4f669731406" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=76df2e32-6c71-41d4-a5f5-b4f669731406 class = "collapse Exercise envbuttons">  
+So where exactly in <a href=#equ9.24>(9.24)</a> is the above claim verified?
+</div><div style="margin-top:20px"></div>The condition <span class="math"></span><script type="math/tex">\lambda_i = 0</script> simplifies the equations
+<div class="math"></div><script type="math/tex; mode=display">
+\nabla f(v_0) + \lambda_1 \nabla g_1(v_0) + \cdots + \lambda_m
+    \nabla g_m(v_0) = 0
+</script>
+in <a href=#equ9.24>(9.24)</a>.    <div style="margin-top:20px"></div>In principle to solve the KKT conditions, one has to try out all the
+<span class="math"></span><script type="math/tex">2^m</script> possibilities coming from <span class="math"></span><script type="math/tex">\lambda_i = 0</script> or <span class="math"></span><script type="math/tex">\lambda_i > 0</script> for <span class="math"></span><script type="math/tex">i=1, \dots, m</script>.<div style="margin-top:20px"></div><span id="env9.33"></span><a class="Exerciseno" data-count="9.33"></a><a href="#631bcf21-8066-4b68-b0fa-c0562d7f4c81" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=631bcf21-8066-4b68-b0fa-c0562d7f4c81 class = "collapse Exercise envbuttons">  
+Why <span class="math"></span><script type="math/tex">2^m</script> possibilities above?
+</div><div style="margin-top:20px"></div><span id="env9.34"></span><a class="Exerciseno" data-count="9.34"></a><a href="#53f80942-a397-458d-a259-4b1b6a85e693" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=53f80942-a397-458d-a259-4b1b6a85e693 class = "collapse Exercise envbuttons">  
+How do you solve the optimization problem (or decide there is no solution)
+if <span class="math"></span><script type="math/tex">\lambda_1 = \cdots = \lambda_m = 0</script>?
+</div><div style="margin-top:20px"></div><span id="sec9.5.2"></span><h3>9.5.2 Example</h3><div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">C</script> denote the set
+(see Figure <a href="convexoptimization.html#env9.35">9.35</a>) of points <span class="math"></span><script type="math/tex">(x, y)\in \mathbb{R}^2</script> with
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  x^2 + 2y^2 &\leq 1\\
+  x + y &\leq 1\\
+  y &\leq x.
+\end{aligned}</script>
+We will illustrate the mechanics of solving the KKT conditions in
+finding an optimal solution for
+  <span id="equ9.27"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &x + 3 y\\
+    &\text{with constraint}\\
+    &&(x, y)\in C.
+  \end{aligned}\tag{9.27}</script><div style="margin-top:20px"></div><span id="env9.35"></span><div class="figure" data-count="9.35">     
+<div class="centerimg"><img src="img/kktexample.png" ></div>
+  <figcaption>The convex set <span class="math"></span><script type="math/tex">C</script> with optimal solution for
+    <a href=#equ9.27>(9.27)</a> marked.</figcaption>
+</div><div style="margin-top:20px"></div>Putting
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  g_1(x, y) &= x^2 + 2 y^2 -1\\
+  g_2(x, y) &= x + y  - 1\\
+  g_3(x, y) &= y - x
+\end{aligned}</script>
+and <span class="math"></span><script type="math/tex">f(x, y) = x + 3y</script>, we are in a position to apply Theorem
+<a href=#env9.30 class="labelref">9.30</a>, since <span class="math"></span><script type="math/tex">g_1, g_2, g_3</script> are convex functions and
+<span class="math"></span><script type="math/tex">g_1(z_0) < 0, g_2(z_0)<0, g_3(z_0)<0</script> for <span class="math"></span><script type="math/tex">z_0 = (0,
+-\frac{1}{2})</script>. This means that an optimal solution of
+<a href=#equ9.27>(9.27)</a> satisfies the KKT conditions. The same theorem tells
+us that the <span class="math"></span><script type="math/tex">x_0</script> in a solution of the KKT conditions is an optimal
+solution (here we also use that <span class="math"></span><script type="math/tex">f</script> is a convex function). The full
+set of KKT conditions in
+<span class="math"></span><script type="math/tex">x, y, \lambda_1, \lambda_2, \lambda_3\in \mathbb{R}</script> are
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  x^2 + 2y^2 -1 &\leq 0\\
+  x + y -1&\leq 0\\
+  y - x&\leq 0\\
+  \lambda_1, \lambda_2, \lambda_3 & \geq 0\\
+  \lambda_1 (x^2 + 2y^2 -1) &=0\\
+  \lambda_2 (x+y -1) &= 0\\
+  \lambda_3 (-x + y) &= 0\\
+  1 + 2 \lambda_1 x + \lambda_2 - \lambda_3 &= 0\\
+  3 + 4\lambda_1 y + \lambda_2 +\lambda_3 &= 0.
+\end{aligned}</script>
+A strategy for finding a solution to the KKT conditions is trying (the
+eight) different combinations of strict inequalities in <span class="math"></span><script type="math/tex">\lambda_1,
+\lambda_2, \lambda_3\geq 0</script>. You can see from the last two equations
+that <span class="math"></span><script type="math/tex">\lambda_1 = 0</script> is impossible. The condition <span class="math"></span><script type="math/tex">\lambda_1 > 0</script>
+shows that an optimal solution has to occur on the lower arc in
+Figure <a href=#env9.35 class="labelref">9.35</a>. If <span class="math"></span><script type="math/tex">\lambda_3 > 0</script>, then <span class="math"></span><script type="math/tex">x = y</script> and
+<span class="math"></span><script type="math/tex">\lambda_2 = 1+3 \lambda_3 > 0</script> by the last two equations. This
+implies <span class="math"></span><script type="math/tex">x = y = \frac{1}{2}</script> violating <span class="math"></span><script type="math/tex">x^2 + 2 y^2 - 1 =
+0</script>. Therefore <span class="math"></span><script type="math/tex">\lambda_3 = 0</script>. If <span class="math"></span><script type="math/tex">\lambda_2 > 0</script>, then <span class="math"></span><script type="math/tex">y=1-x</script> and <span class="math"></span><script type="math/tex">5
++ 4 \lambda_1 + 3 \lambda_2 = 0</script> by <span class="math"></span><script type="math/tex">\lambda_3 = 0</script> and the last two
+equations. Therefore <span class="math"></span><script type="math/tex">\lambda_2=0</script>. So we are left with the case
+<span class="math"></span><script type="math/tex">\lambda_1 > 0</script> and <span class="math"></span><script type="math/tex">\lambda_2 = \lambda_3 = 0</script> giving
+<div class="math"></div><script type="math/tex; mode=display">
+  x = -\frac{1}{2\lambda_1}\quad\text{and}\quad   y = -\frac{3}{4 \lambda_1}.
+</script>
+Inserting this into <span class="math"></span><script type="math/tex">x^2 + 2 y^2 - 1 = 0</script> we end up with (see
+Figure <a href=#env9.35 class="labelref">9.35</a>)
+<div class="math"></div><script type="math/tex; mode=display">
+  \lambda_1 = \frac{\sqrt{11}}{2 \sqrt{2}},\quad x =
+  -\sqrt{\frac{2}{11}}
+  \quad\text{and}\quad y = -\frac{3}{\sqrt{22}}.
+</script><div style="margin-top:20px"></div>Theorem <a href=#env9.30 class="labelref">9.30</a> is beautiful mathematics. Going through the KKT
+conditions as above can be quite lengthy if not impossible in
+practice. As we have seen, there are other methods for (at least)
+approximating an optimal solution.<div style="margin-top:20px"></div><span id="sec9.6"></span><h2 id="294fa246-3df7-40dc-bb89-d9287b8b9bfa">9.6 Optimization exercises</h2><div style="margin-top:20px"></div>Below are some exercises especially related to the KKT conditions. In some of the
+exercises the minimization problem
+  <span id="equ9.28"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x_1, \dots, x_n)\\
+    &\text{with constraint}\\
+    &&(x_1, \dots, x_n)\in C,
+  \end{aligned}\tag{9.28}</script>
+  is denoted
+  <div class="math"></div><script type="math/tex; mode=display">
+  \min\{f(x_1, \dots, x_n) \mid (x_1, \dots, x_n)\in C\}.
+  </script>
+This should cause no confusion.<div style="margin-top:20px"></div><span id="env9.36"></span><a class="Exerciseno" data-count="9.36"></a><a href="#515300ea-dc66-4e1a-9309-30ec91143d6e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=515300ea-dc66-4e1a-9309-30ec91143d6e class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Consider the optimization problem<div style="margin-top:20px"></div><span id="equ9.29"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &-x + y\\
+    &\text{with constraints}\\
+    &&x^2  +y^2 &\leq 1\\
+    &&(x+1)^2 + (y-1)^2&\leq 1
+  \end{aligned}\tag{9.29}</script><div style="margin-top:20px"></div><ol class="alpha"><li id="ite9.3">
+    Show that <a href=#equ9.29>(9.29)</a> is a convex optimization problem.
+</li><li id="ite9.4">
+  Sketch the set of constraints in <span class="math"></span><script type="math/tex">\mathbb{R}^2</script> and show that <span class="math"></span><script type="math/tex">\left(-\frac{1}{2}, \frac{1}{2}\right)</script> cannot be an optimal
+  solution to <a href=#equ9.29>(9.29)</a>.
+</li><li id="ite9.5">
+  Write up the KKT conditions for <a href=#equ9.29>(9.29)</a> and explain theoretically (without actually solving them) why
+  they must have a solution.
+  </li><li id="ite9.6">
+    Now solve <a href=#equ9.29>(9.29)</a>. Is the solution unique?
+</li></ol><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env9.37"></span><a class="Exerciseno" data-count="9.37"></a><a href="#91da065f-d0b6-4f99-aae8-bb8442c9e1a5" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=91da065f-d0b6-4f99-aae8-bb8442c9e1a5 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Consider the function <span class="math"></span><script type="math/tex">f:\mathbb{R}^3\rightarrow \mathbb{R}</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+f(x_1, x_2, x_3) = 2 x_1^2 + 3 x_2^2 + 4 x_3^2.
+</script><div style="margin-top:20px"></div><ol class="alpha"><li id="ite9.7">
+  Show that <span class="math"></span><script type="math/tex">f</script> is strictly convex.
+</li><li id="ite9.8">
+Let <span class="math"></span><script type="math/tex">S \subseteq \mathbb{R}^3</script> denote the subset of points <span class="math"></span><script type="math/tex">(x_1, x_2, x_3)\in \mathbb{R}^3</script> satisfying
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+x_1 + x_2 + x_3 &\geq 1\\
+x_1 + 2 x_2 + 3 x_3 &\leq 5
+\end{aligned}</script>
+Show that <span class="math"></span><script type="math/tex">S</script> is a closed convex subset.
+</li><li id="ite9.9">
+Solve the optimization problem
+  <span id="equ9.30"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &f(x_1, x_2, x_3)\\
+    &\text{with constraints}\\
+    &&(x_1, x_2, x_3)\in S
+  \end{aligned}\tag{9.30}</script>
+</li></ol>
+</div><div style="margin-top:20px"></div><span id="env9.38"></span><a class="Exerciseno" data-count="9.38"></a><a href="#dba34dfe-ca94-40f4-8279-dc2051242187" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=dba34dfe-ca94-40f4-8279-dc2051242187 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">S\subseteq B \subseteq \mathbb{R}^3</script>, where 
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+S &= \{(x, y, z)\in \mathbb{R}^3 \mid x^2 + y^2 + z^2 = 1\}\qquad\text{and}\\
+B &= \{(x, y, z)\in \mathbb{R}^3 \mid x^2 + y^2 + z^2 \leq 1\}.
+\end{aligned}</script><div style="margin-top:20px"></div><ol class="alpha"><li id="ite9.10">
+  Why does the optimization problem<div style="margin-top:20px"></div><span id="equ9.31"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &x + 2y + z\\
+    &\text{with constraints}\\
+    &&(x, y, z)\in S
+\end{aligned}\tag{9.31}</script>
+have a solution?
+</li><li id="ite9.11">
+Find all optimal solutions to <a href=#equ9.31>(9.31)</a>.  
+</li><li id="ite9.12">
+Let <span class="math"></span><script type="math/tex">a, b, c\in \mathbb{R}</script>, where at least one of <span class="math"></span><script type="math/tex">a, b, c</script> is non-zero. Show that an optimal solution to
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    &\text{Minimize} &a x + b y + c z\\
+    &\text{with constraints}\\
+    &&(x, y, z)\in B
+\end{aligned}</script>
+belongs to <span class="math"></span><script type="math/tex">S</script>.
+</li></ol>
+</div><div style="margin-top:20px"></div><span id="env9.39"></span><a class="Exerciseno" data-count="9.39"></a><a href="#34e71d62-c13c-4877-8cb5-00c89e5580c7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=34e71d62-c13c-4877-8cb5-00c89e5580c7 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let
+  <div class="math"></div><script type="math/tex; mode=display">
+    S = \left\{  (x, y)\in \mathbb{R}^2  \middle| 
+      \begin{matrix}
+        -x  & - & y   & \leq & 0 \\
+        2 x & - & y   & \leq & 1 \\
+        -x & + & 2 y & \leq & 1
+      \end{matrix}
+     \right\}.
+  </script>
+  <ol class="number"><li id="ite9.13"> Use the KKT conditions to solve the minimization problem
+    <div class="math"></div><script type="math/tex; mode=display">
+      \min\left\{  -x - 4 y  \middle| (x, y)\in S  \right\}.
+    </script> <div style="margin-top:20px"></div></li><li id="ite9.14"> Use the KKT conditions to solve the minimization problem
+    <div class="math"></div><script type="math/tex; mode=display">
+      \min\left\{  x + y  \middle|  (x, y)\in S  \right\}.
+    </script> 
+  </li></ol>
+</div><div style="margin-top:20px"></div><span id="env9.40"></span><a class="Exerciseno" data-count="9.40"></a><a href="#725ff2ec-b4b2-4b33-898f-90e8e985f59a" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=725ff2ec-b4b2-4b33-898f-90e8e985f59a class = "collapse Exercise envbuttons">  
+  Solve the optimization problem
+  <div class="math"></div><script type="math/tex; mode=display">
+    \min\left\{ x^2 + 2 y^2 + 3 z^2- 2 x z - x y \middle| 
+      \begin{matrix}
+        2x^2 + y^2 + z^2 & \leq & 4 \\
+        1 & \geq & x+y+z
+      \end{matrix}
+     \right\}.
+  </script>
+  </div><div style="margin-top:20px"></div><span id="env9.41"></span><a class="Exerciseno" data-count="9.41"></a><a href="#696f3636-4c6a-4329-879e-47c02fd081be" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=696f3636-4c6a-4329-879e-47c02fd081be class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">S =\left\{  (x, y)  \middle|  2 x^2 + y^2 \leq 3, \, x^2 + 2y^2 \leq 3  \right\}</script>
+  and <span class="math"></span><script type="math/tex">f(x, y) = (x-4)^2 + (y-4)^2</script>.
+  <ol class="number"><li id="ite9.15"> State the KKT conditions for <span class="math"></span><script type="math/tex">\min\left\{  f(x, y)  \middle|  (x, y)\in S
+     \right\}</script> for <span class="math"></span><script type="math/tex">(x, y) = (1,1)</script>.
+  </li><li id="ite9.16"> Suppose now that <span class="math"></span><script type="math/tex">g(x, y) = (x-a)^2 + (y-b)^2</script>. For which <span class="math"></span><script type="math/tex">a</script>
+    and <span class="math"></span><script type="math/tex">b</script> does <span class="math"></span><script type="math/tex">\min\left\{  g(x, y)  \middle|  (x, y)\in S  \right\}</script> have optimum in
+    <span class="math"></span><script type="math/tex">(1,1)</script>?  State the KKT conditions when <span class="math"></span><script type="math/tex">(a, b) = (1,1)</script>.
+  </li></ol>
+</div><div style="margin-top:20px"></div><span id="env9.42"></span><a class="Exerciseno" data-count="9.42"></a><a href="#c66de080-da30-40af-b3cb-9edfdc6128dc" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c66de080-da30-40af-b3cb-9edfdc6128dc class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> be given by
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x, y) = (x-1)^2+ (y-1)^2 + 2 x y.
+  </script>
+  <ol class="number"><li id="ite9.17"> Show that <span class="math"></span><script type="math/tex">f</script> is a convex function.<div style="margin-top:20px"></div></li><li id="ite9.18"> Find <span class="math"></span><script type="math/tex">\min\left\{  f(x, y)  \middle|  (x, y)\in \mathbb{R}^2  \right\}</script>. Is this minimum
+    unique?  Is <span class="math"></span><script type="math/tex">f</script> a strictly convex function.<div style="margin-top:20px"></div>Let
+    <div class="math"></div><script type="math/tex; mode=display">
+      S = \left\{  (x, y)\in \mathbb{R}^2  \middle| 
+        x + y \leq 0, \quad x - y \leq 0
+       \right\}.
+    </script>
+  </li><li id="ite9.19"> Apply the KKT-conditions to decide if <span class="math"></span><script type="math/tex">(-1, -1)</script> is an optimal
+    solution to
+    <div class="math"></div><script type="math/tex; mode=display">
+      \min\left\{  f(x, y)  \middle|  (x, y)\in S  \right\}.
+    </script> 
+  </li><li id="ite9.20"> Find
+    <div class="math"></div><script type="math/tex; mode=display">
+      m = \min\left\{  f(x, y)  \middle|  (x, y)\in S  \right\}
+    </script>
+    and
+    <div class="math"></div><script type="math/tex; mode=display">
+      \left\{  (x, y)\in \mathbb{R}^2  \middle|  f(x, y) = m  \right\}.
+    </script>
+  </li></ol>
+</div><div style="margin-top:20px"></div><span id="env9.43"></span><a class="Exerciseno" data-count="9.43"></a><a href="#2ebdfefc-6906-4ae2-b771-312429e0c332" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=2ebdfefc-6906-4ae2-b771-312429e0c332 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> be given by
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x, y) = x^2 + y^2 - e^{x-y-1}
+  </script>
+  and let
+  <div class="math"></div><script type="math/tex; mode=display">
+    C =\left\{  (x, y)  \middle|  x - y \leq 0  \right\}.
+  </script>
+  <ol class="number"><li id="ite9.21"> Show that <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> is not a convex function.
+  </li><li id="ite9.22"> Show that <span class="math"></span><script type="math/tex">f</script> is a convex function on the open subset
+    <div class="math"></div><script type="math/tex; mode=display">
+      \left\{  (x, y) \in \mathbb{R}^2  \middle|  x - y< \tfrac{1}{2}  \right\}
+    </script>
+    and conclude that <span class="math"></span><script type="math/tex">f</script> is convex on <span class="math"></span><script type="math/tex">C</script>.
+  </li><li id="ite9.23"> Show that <span class="math"></span><script type="math/tex">v = (0,0)</script> is an optimal solution for the
+    optimization problem <span class="math"></span><script type="math/tex">\min\left\{  f(v)  \middle|  v\in C  \right\}</script>. Is <span class="math"></span><script type="math/tex">v</script> a unique
+    optimal solution here?
+  </li></ol>
+</div><div style="margin-top:20px"></div><span id="env9.44"></span><a class="Exerciseno" data-count="9.44"></a><a href="#975d3ca9-c8e8-479f-9d34-3f059177f247" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=975d3ca9-c8e8-479f-9d34-3f059177f247 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">f:\mathbb{R}^4\rightarrow \mathbb{R}</script> be given by
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x_1, x_2, x_3, x_4) = (x_1 - x_3)^2 + (x_2 - x_4)^2
+  </script>
+  and <span class="math"></span><script type="math/tex">C\subseteq \mathbb{R}^4</script> by
+  <div class="math"></div><script type="math/tex; mode=display">
+    C =\left\{  (x_1, x_2, x_3, x_4)\in \mathbb{R}^4  \middle|  x_1^2 + (x_2 - 2)^2 \leq 1,\,
+      x_3 -x_4\geq 0  \right\}.
+  </script>
+  <ol class="number"><li id="ite9.24"> Show that <span class="math"></span><script type="math/tex">f</script> is a convex function. Is <span class="math"></span><script type="math/tex">f</script> strictly convex?
+  </li><li id="ite9.25"> Show that <span class="math"></span><script type="math/tex">C</script> is a convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}^4</script>.
+  </li><li id="ite9.26"> Does there exist an optimal point <span class="math"></span><script type="math/tex">v = (x_1, x_2, x_3, x_4)\in
+    \mathbb{R}^4</script> for the minimization problem
+    <div class="math"></div><script type="math/tex; mode=display">
+      \min_{v\in C} f(v)
+    </script>
+    with <span class="math"></span><script type="math/tex">x_3 = x_4 = 0</script>?
+  </li><li id="ite9.27"> Does there exist an optimal point <span class="math"></span><script type="math/tex">v = (x_1, x_2, x_3, x_4)\in
+    \mathbb{R}^4</script> for the minimization problem
+    <div class="math"></div><script type="math/tex; mode=display">
+      \min_{v\in C} f(v)
+    </script>
+    with <span class="math"></span><script type="math/tex">x_3 = x_4 = 1</script>?
+  </li></ol>
+</div><div style="margin-top:20px"></div><span id="env9.45"></span><a class="Exerciseno" data-count="9.45"></a><a href="#41dda3be-9847-4ec7-ada2-fb94c1db07b8" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=41dda3be-9847-4ec7-ada2-fb94c1db07b8 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x, y) = (x-1)^2 + y^2
+  </script>
+  and
+  <div class="math"></div><script type="math/tex; mode=display">
+    C =\left\{  (x, y)\in \mathbb{R}^2  \middle|  -1\leq x \leq 0,\,\, -1 \leq y \leq 1  \right\}.
+  </script>
+Solve the optimization problem
+    <div class="math"></div><script type="math/tex; mode=display">
+      \min\left\{  f(x, y)  \middle|  (x, y)\in C  \right\}.
+    </script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env9.46"></span><a class="Exerciseno" data-count="9.46"></a><a href="#ed004569-4293-4242-8833-d3bc8a08c69b" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=ed004569-4293-4242-8833-d3bc8a08c69b class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> be given by
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x, y) = \tfrac{1}{2} x^2+ y^2-2 y+2.
+  </script>
+  Below, the minimization problem
+  <span id="equ9.32"></span><div class="math"></div><script type="math/tex; mode=display">
+    \min\left\{  f(x, y)  \middle|  (x, y) \in S  \right\}
+  \tag{9.32}</script>
+  is analyzed for various subsets <span class="math"></span><script type="math/tex">S\subseteq \mathbb{R}^2</script>.
+  <ol class="number"><li id="ite9.28"> Show that <span class="math"></span><script type="math/tex">f</script> is a convex function
+  </li><li id="ite9.29">  Let
+    <div class="math"></div><script type="math/tex; mode=display">
+      S =\left\{  (x, y)\in \mathbb{R}^2  \middle|  - x + 2y \leq 1  \right\}.
+    </script>
+    Show that <span class="math"></span><script type="math/tex">(-1, 0)\in S</script> cannot be an optimal solution to
+    <a href=#equ9.32>(9.32)</a>. Find an optimal solution to <a href=#equ9.32>(9.32)</a>.<div style="margin-top:20px"></div></li><li id="ite9.30"> Find an optimal solution in <a href=#equ9.32>(9.32)</a> for
+    <div class="math"></div><script type="math/tex; mode=display">
+      S =\left\{  (x, y)\in \mathbb{R}^2  \middle|  -x + 2y \geq 1  \right\}.
+    </script>
+  </li><li id="ite9.31"> Are the optimal solutions in <a href=#ite9.29 class="labelref">(2.)</a> and <a href=#ite9.30 class="labelref">(3.)</a> unique?
+  </li></ol>
+  </div><div style="margin-top:20px"></div><span id="env9.47"></span><a class="Exerciseno" data-count="9.47"></a><a href="#6e60e002-9db3-42b0-a72a-e94a7a7a7a09" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6e60e002-9db3-42b0-a72a-e94a7a7a7a09 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> be given by
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x, y) = 2x^2 +3 x + y^2 + y.
+  </script>
+  <ol class="number"><li id="ite9.32"> Show that <span class="math"></span><script type="math/tex">f</script> is a convex function and solve the minimization
+    problem <span class="math"></span><script type="math/tex">\min\left\{  f(x, y)  \middle|  x, y\in \mathbb{R}  \right\}</script>.<div style="margin-top:20px"></div>Now let
+    <div class="math"></div><script type="math/tex; mode=display">
+      S = \left\{  (x, y)\in \mathbb{R}^2  \middle| 
+        \begin{matrix}
+          x^2 +  (y+1)^2 & \leq & 1 \\
+          y  -  x & \leq & 0
+        \end{matrix}
+       \right\}
+    </script>
+    and consider the minimization problem (P) given by
+    <div class="math"></div><script type="math/tex; mode=display">
+      \min\left\{  f(x, y)  \middle|  (x, y)\in S  \right\}.
+    </script><div style="margin-top:20px"></div></li><li id="ite9.33"> Show using the KKT conditions that <span class="math"></span><script type="math/tex">(0,0)</script> is not optimal for
+    (P).<div style="margin-top:20px"></div></li><li id="ite9.34"> Find an optimal solution for (P). Is it unique?
+  </li></ol>
+</div><div style="margin-top:20px"></div></div></body>

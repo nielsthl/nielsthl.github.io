@@ -1,0 +1,136 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#2bdf0d46-46f8-464f-91b8-5ce2251bace0"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#25a22360-33dc-4a5c-859c-32f91a09598d">1.1 Black box warnings</a></li><li><a href="intro.html#ee2470c8-834a-4093-a333-7859fdaf7e71">1.2 Computer algebra</a></li><li><a href="intro.html#d080ea67-0d49-4a3c-a60e-5d0616d1272f">1.3 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#2a3f9c99-4078-4a4f-96a8-d9ab016e9ada">1.4 Sets</a></li><li><a href="intro.html#a0cb04ca-ea20-4955-a947-b681d87553c9">1.5 Ordering numbers</a></li><li><a href="intro.html#d7ea8991-1566-4e2b-a9bd-5f0bf5f3a7b3">1.6 Propositional logic</a></li><li><a href="intro.html#33dc8b8f-7720-4324-a863-899b413afd0e">1.7 What is a mathematical proof?</a></li><li><a href="intro.html#2ad2c58e-2c98-433f-82e8-47b0c16a08f0">1.8 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#f1a69ec3-8920-4a25-b206-b4daa3d31b83"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#8950534d-e82c-438c-9763-5c640d1ed744">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#955d4fc7-34c1-4add-a4a8-de90f3c3ed2b">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#a424a661-3ede-440b-8b89-e6e6d91623ba">2.3 Gauss elimination</a></li><li><a href="lineqs.html#424913ff-3cb2-4609-bab0-fd2b59ff54e8">2.4 Polynomials</a></li><li><a href="lineqs.html#e8b0068c-c6b1-4a6e-bcea-706dd2afb4f9">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#abd15812-4254-4537-8999-f314acb99a2e">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#37f24803-a533-4843-b775-7093d14f2292">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#f09bf072-021b-49f9-b7bd-fd4e717bdcd7"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#334c8627-e964-4cb1-b2a6-a6e32880adb2">3.1 Matrices</a></li><li><a href="matrices.html#73936caf-27e8-41e7-a0b2-f760c2a10d39">3.2 Linear maps</a></li><li><a href="matrices.html#a844065d-b14f-4798-bdc7-ed8ae1efd0d7">3.3 Matrix multiplication</a></li><li><a href="matrices.html#347d8926-67e2-443b-a1bf-a97547026a8d">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#b18973f2-472b-4cf1-8a4c-82d376600f98">3.5 The inverse matrix</a></li><li><a href="matrices.html#8204cc5f-fbe5-47b9-b161-081d4ade42d2">3.6 The transposed matrix</a></li><li><a href="matrices.html#4a3fb439-0d7f-4d44-85fb-d74db19185a9">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#0d5623ae-69d0-45d9-9443-e31c555bca40"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#1fa3c87f-b043-4fe7-86cd-cc3f770ec8bc">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#b341f9fd-24a3-43e9-aac9-80f54e4dd061">4.2 General definition</a></li><li><a href="whatisopt.html#58d646c7-2b11-4e69-8a92-0ba6e1e8b80c">4.3 Convex optimization</a></li><li><a href="whatisopt.html#c127809b-6db6-4435-bd5c-f933258a5dd4">4.4 Linear optimization</a></li><li><a href="whatisopt.html#84b89d03-0f71-4262-9434-473c3f48cef1">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#c651bc33-f71d-410f-a15b-343edaf56c4a">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="appendixA.html#16b19570-d1cd-462d-b81d-3f20a5a2a187"><b>A</b> Annotation playground</a></li><a href="#kapA" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapA" class="collapse"></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="16b19570-d1cd-462d-b81d-3f20a5a2a187">A<span style="float:right;">Annotation playground</span></h1><div style="margin-top:20px"></div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a posuere diam, quis semper quam. Nunc rutrum pharetra orci non viverra. Praesent mattis vel augue a euismod. Suspendisse potenti. Vivamus nulla quam, tristique vitae nisl sodales, rutrum malesuada turpis. Phasellus suscipit dignissim semper. Curabitur malesuada nisi tortor, ut venenatis purus venenatis a. Sed non augue in nibh rhoncus tempus at et neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque urna arcu, sollicitudin vitae tortor quis, tempus convallis dolor. Maecenas dignissim, libero ac blandit volutpat, augue dolor dignissim arcu, nec ultricies mauris lorem a massa. Sed finibus ornare elit, in mattis arcu aliquet eu. Integer egestas, urna in sagittis mollis, eros eros facilisis purus, nec ultrices arcu erat vel nibh. Nulla commodo gravida neque, sed pharetra magna condimentum vel.<div style="margin-top:20px"></div>Phasellus urna ante, posuere non tempus sed, maximus ac arcu. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sit amet ante sit amet ex imperdiet tristique. In leo mi, congue ut odio quis, ultricies ultricies metus. Donec consequat bibendum lectus. Mauris sed eros sit amet tortor efficitur hendrerit. Quisque imperdiet dui non magna convallis, efficitur molestie ligula laoreet. Praesent rhoncus, purus quis hendrerit placerat, mi ex malesuada est, eget fermentum tortor neque eu libero. Sed id orci ut erat vestibulum volutpat vel at purus.<div style="margin-top:20px"></div>Cras augue dolor, aliquet ac convallis id, blandit eu quam. Morbi id efficitur sapien. Pellentesque vel pellentesque ante. Proin sed urna et lectus posuere aliquam. Etiam sapien ligula, auctor a ex vel, feugiat suscipit odio. Morbi tristique facilisis neque consectetur hendrerit. Aliquam vulputate dignissim vulputate. Ut nec velit in ante blandit luctus. Praesent id luctus magna.<div style="margin-top:20px"></div>Proin pellentesque purus ante, eu euismod leo condimentum ac. Aliquam erat volutpat. Integer quis condimentum diam, ac accumsan urna. Cras elementum turpis et luctus hendrerit. Integer faucibus sollicitudin arcu, in ultricies neque ultricies tempus. Ut vestibulum risus lorem, eget tempor turpis dictum sed. Sed commodo, velit sit amet mattis posuere, nulla nisl vulputate massa, vel lobortis ante libero sed nunc. Mauris tempor, nisi sed faucibus convallis, felis velit consequat nunc, non volutpat diam turpis non augue. In id interdum arcu. Sed fringilla consequat rhoncus. Fusce non laoreet tellus, in accumsan libero. Aenean porta nunc quis elit faucibus sagittis. Nam tristique vulputate blandit. Integer tempus sit amet ante eu tempor. Nulla dictum justo arcu, sit amet fermentum enim malesuada quis.<div style="margin-top:20px"></div>Fusce blandit sapien lectus, ac condimentum nibh pharetra eu. Pellentesque vel ante ac elit suscipit scelerisque sed placerat erat. Vivamus euismod id orci non egestas. Ut sapien lectus, auctor eget risus et, consectetur consectetur odio. Aliquam non quam at purus sollicitudin aliquam. Etiam quis hendrerit erat. Curabitur blandit facilisis urna in eleifend. Sed feugiat sollicitudin augue quis hendrerit. Phasellus non ultrices risus. Proin commodo nec purus id faucibus.<div style="margin-top:20px"></div>Donec rhoncus metus purus, id posuere enim pellentesque a. Vestibulum gravida nibh non justo bibendum, quis finibus libero egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas tristique leo arcu. Vivamus finibus fringilla aliquet. Maecenas accumsan nibh vel diam interdum dapibus. Donec pulvinar id nibh non mattis. Donec sed vestibulum lacus. Aenean vehicula, felis a ultricies venenatis, turpis orci ullamcorper justo, quis euismod est felis a lacus. Praesent condimentum massa ultrices, maximus turpis vitae, malesuada ligula. Nulla id rhoncus ipsum.<div style="margin-top:20px"></div>Cras in pretium dolor. Etiam ut maximus neque, vel viverra diam. Mauris nec feugiat lectus. Duis vitae erat quis mauris auctor pulvinar. Sed eget nibh vulputate, aliquam diam vel, pretium enim. In porta finibus libero quis convallis. Nulla sollicitudin sem nec lectus finibus fringilla. Quisque fermentum vulputate ligula, a sodales orci viverra congue. Vivamus elit ligula, porta sit amet vulputate id, rhoncus eleifend odio.<div style="margin-top:20px"></div>Etiam varius rhoncus quam in gravida. Phasellus urna odio, sollicitudin nec sapien ac, pellentesque lacinia nisi. Vestibulum eget efficitur ante, ut viverra mauris. Proin at quam vitae diam tincidunt tristique. Sed et sem in enim euismod volutpat. Nunc aliquam ipsum non magna tincidunt, convallis fringilla massa feugiat. Pellentesque eget ligula pulvinar, gravida tellus eget, placerat massa. In nulla quam, consequat commodo velit sit amet, mattis aliquet purus. Ut sit amet rutrum velit, porta sodales purus.<div style="margin-top:20px"></div>Curabitur elementum massa in mi vehicula lobortis. Fusce varius, ligula sit amet aliquet euismod, metus sapien bibendum lectus, sed blandit nunc erat sit amet ligula. Aliquam non leo interdum, blandit dolor volutpat, malesuada risus. Morbi luctus tortor sed urna pulvinar, id accumsan nisl gravida. Sed hendrerit malesuada porta. Etiam semper pharetra ultrices. Donec congue dictum lorem cursus pulvinar. Mauris congue mauris non urna auctor, et luctus metus feugiat. Sed ac aliquam lorem. Nulla tristique tortor nec porttitor varius. Mauris vitae ultrices odio. Maecenas turpis lacus, gravida eu pharetra ac, vestibulum at arcu. Cras elementum accumsan efficitur.<div style="margin-top:20px"></div>In ac lobortis leo. Phasellus felis enim, consectetur eget nunc et, venenatis hendrerit arcu. Praesent dignissim felis eros, et scelerisque ante pharetra ac. In aliquam urna non porta aliquam. Quisque dapibus vitae tellus vitae ornare. Donec sed nunc suscipit felis aliquet egestas eu vitae neque. Praesent a orci auctor, pharetra tortor vel, faucibus lacus. Vivamus eget elementum lacus, at molestie ex. Vivamus dictum mi tempus erat dictum convallis. Sed congue quis augue sed volutpat. Cras ac orci nec magna lobortis venenatis. Ut eleifend, purus quis faucibus consequat, nisi lorem iaculis dolor, vel sodales erat odio vitae risus. <div style="margin-top:20px"></div></div></body>

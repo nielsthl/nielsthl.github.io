@@ -1,0 +1,998 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#006d74a3-2d1f-4b10-b24c-37560502324f"><b>1</b> The language of mathematics</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#6eaa1609-7074-4d00-aa72-5cd54ef4a24a">1.1 Black box warnings</a></li><li><a href="intro.html#c2cbbb02-0276-4ce0-a901-610faab6b812">1.2 Computer algebra</a></li><li><a href="intro.html#c6cdba52-7276-4db8-a2b8-7b920c49e0a3">1.3 Objects or elements and the symbols <span class="math"></span><script type="math/tex">=</script> and <span class="math"></span><script type="math/tex">\neq</script></a></li><li><a href="intro.html#f843e6e0-51ec-4d30-bdca-7d7c0d65b2b4">1.4 Sets</a></li><li><a href="intro.html#5a199e30-ea07-404f-87b3-8dca740580e7">1.5 Ordering numbers</a></li><li><a href="intro.html#98c264f9-b21b-4887-b862-6b14a8c6b715">1.6 Propositional logic</a></li><li><a href="intro.html#96873e91-8ccf-4678-a266-c16638ce7ed9">1.7 What is a mathematical proof?</a></li><li><a href="intro.html#cb119b82-1051-4dac-b94f-81ecb346b47b">1.8 The concept of a function</a></li></ul><li><a class="kap" href="lineqs.html#e18d3854-9e17-4ce6-9cbe-f20aa5413f48"><b>2</b> Linear equations</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="lineqs.html#b5b22ce9-83eb-4971-b842-02bd99dd01fe">2.1 One linear equation with one unknown</a></li><li><a href="lineqs.html#bd72d81e-802d-40f1-8e5a-9e0a966b5394">2.2 Several linear equations with several unknowns</a></li><li><a href="lineqs.html#1519df08-6fa8-4aa0-936d-81a5c67947ef">2.3 Gauss elimination</a></li><li><a href="lineqs.html#408bfec6-58eb-4c0b-9b03-a09807caf3fb">2.4 Polynomials</a></li><li><a href="lineqs.html#e310ba8f-3d3e-4dfe-9fd1-896b50494fc6">2.5 Applications to polynomials</a></li><li><a href="lineqs.html#bdc72d0f-7748-4776-b854-726ff83ad9d0">2.6 Shamir secret sharing</a></li><li><a href="lineqs.html#cd57f44e-44a3-4df8-b0f1-af79172b7d75">2.7 Fitting data</a></li></ul><li><a class="kap" href="matrices.html#999d29d6-cc98-42a0-bfeb-d89aff2ad728"><b>3</b> Matrices</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="matrices.html#acea57dc-a493-4260-b445-f776b821ad36">3.1 Matrices</a></li><li><a href="matrices.html#20342fc3-09a2-4c9b-82c7-fa3dad20ccab">3.2 Linear maps</a></li><li><a href="matrices.html#f332c88c-8268-4602-928e-ac8687e75bea">3.3 Matrix multiplication</a></li><li><a href="matrices.html#53360251-42af-4a10-8b09-cbc76db0cf9a">3.4 Matrix arithmetic</a></li><li><a href="matrices.html#5b178149-5b14-49e5-876c-afc87af74857">3.5 The inverse matrix</a></li><li><a href="matrices.html#25536c85-160f-462f-99cb-6a6dad75ba0d">3.6 The transposed matrix</a></li><li><a href="matrices.html#59c55165-0cb1-409a-b428-ab189cfb72d7">3.7 Symmetric matrices</a></li></ul><li><a class="kap" href="whatisopt.html#5f94c5a1-3a60-417c-91fa-8e2af76995a6"><b>4</b> What is optimization?</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="whatisopt.html#1f20cd20-f831-4fea-9515-9304b9d3fb14">4.1 What is an optimization problem?</a></li><li><a href="whatisopt.html#fdf66530-fea8-4312-8e27-a65fbee5087b">4.2 General definition</a></li><li><a href="whatisopt.html#ab530ba9-0621-4662-a880-4afbf29fbf8a">4.3 Convex optimization</a></li><li><a href="whatisopt.html#b078a91f-1c19-4a67-bd47-39ef7c01d833">4.4 Linear optimization</a></li><li><a href="whatisopt.html#76ea50d6-77b7-4148-a13e-261de3d6aa0d">4.5 Fourier-Motzkin elimination</a></li><li><a href="whatisopt.html#7198d8d0-6cb4-43ec-964a-112bdb113873">4.6 Application in machine learning and data science</a></li></ul><li><a class="kap" href="euclidean.html#7004cde2-baf5-4631-a27e-f05a9e7adf92"><b>5</b> Euclidean vector spaces</a></li><a href="#kap5" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap5" class="collapse"><li><a href="euclidean.html#343af046-e32a-457c-9137-485a8fc2710c">5.1 Vectors in the plane</a></li><li><a href="euclidean.html#ca688149-f0c2-448a-9937-c652974e129f">5.2 Higher dimensions</a></li><li><a href="euclidean.html#d814e2f3-ca31-4d44-bef0-1973205eedff">5.3 An important remark about the real numbers</a></li><li><a href="euclidean.html#19070637-799f-4d34-8233-8007b99a483d">5.4 Sequences and limits in <span class="math"></span><script type="math/tex">\mathbb{R}^d</script></a></li><li><a href="euclidean.html#51aa864a-2904-4648-96dc-ade30de2ea1a">5.5 Continuous functions</a></li></ul><li><a class="kap" href="convexfunctions.html#5bd7c54f-91ea-4145-bb20-db7e92fb84d7"><b>6</b> Convex functions</a></li><a href="#kap6" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap6" class="collapse"><li><a href="convexfunctions.html#957624e7-479d-480d-9d65-9159ff51a5df">6.1 Strictly convex functions</a></li><li><a href="convexfunctions.html#d742dd52-fcd3-42d6-8b0e-ced92f89c2ca">6.2 Why are convex functions interesting?</a></li><li><a href="convexfunctions.html#d33ee78c-606b-4136-b52b-7f68a83ffbc3">6.3 Differentiable functions</a></li><li><a href="convexfunctions.html#c071e099-4a00-406b-8419-f6cbbea15131">6.4 Taylor polynomials</a></li><li><a href="convexfunctions.html#acc2d9f5-37e6-4ae5-b93a-6ae1661d8c1a">6.5 Differentiable convex functions</a></li></ul><li><a class="kap" href="diffseveral.html#ec344e7f-5efd-4fc8-a3d7-28caea0e2df7"><b>7</b> Several variables</a></li><a href="#kap7" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap7" class="collapse"><li><a href="diffseveral.html#f25eba08-b8e6-4682-9e42-9726432a3078">7.1 Introduction</a></li><li><a href="diffseveral.html#82042f45-9fe3-4165-89b1-d3cf33b126bb">7.2 Vector functions</a></li><li><a href="diffseveral.html#71f2df16-f0b4-431a-8127-9059314ecea5">7.3 Differentiability</a></li><li><a href="diffseveral.html#7cae04b8-b49b-4a3e-994d-c37b48809426">7.4 Newton-Raphson in several variables!</a></li><li><a href="diffseveral.html#cb4d570d-77dc-481e-bd49-df2631c4763a">7.5 Local extrema in several variables</a></li><li><a href="diffseveral.html#14dc8d71-f553-40ea-aa1a-32dc51db63c2">7.6 The chain rule</a></li><li><a href="diffseveral.html#8fe04136-d8ac-49f4-aa68-822690597bad">7.7 Logistic regression</a></li><li><a href="diffseveral.html#4b2d9442-1e84-4f6d-bf0e-1b0d0e67ce1b">7.8 3Blue1Brown</a></li><li><a href="diffseveral.html#798828ad-b196-4fe3-9a1c-d287e53461fd">7.9 Lagrange multipliers</a></li><li><a href="diffseveral.html#714939c5-f53a-46c0-a517-145ded0716ed">7.10 The interior and the boundary of a subset</a></li></ul><li><a class="kap" href="hessian.html#1d4d7f52-ef3b-49d7-96c5-7063208a6d0a"><b>8</b> The Hessian</a></li><a href="#kap8" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap8" class="collapse"><li><a href="hessian.html#47ffb3a0-adab-46bc-b7e2-4cd37e11148b">8.1 Introduction</a></li><li><a href="hessian.html#1ee906f0-0750-4478-9ab1-069565010997">8.2 Several variables</a></li><li><a href="hessian.html#3a13db0d-01e4-496f-8c2c-61e30b8755db">8.3 Newton's method for finding critical points</a></li><li><a href="hessian.html#9d4eeaaa-0155-4a4c-9e11-ea4fa32e48ff">8.4 The Taylor series in several variables</a></li><li><a href="hessian.html#1d424597-f73f-4ab5-b5f1-d9a4e1bb9681">8.5 Convex functions of several variables</a></li><li><a href="hessian.html#ccfc9e26-749e-4bc9-870a-dd59ac1a2188">8.6 How to decide the definiteness of a matrix</a></li></ul><li><a class="kap" href="convexoptimization.html#d3beb991-21bd-4e49-8500-2df3ec89eb97"><b>9</b> Convex optimization</a></li><a href="#kap9" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap9" class="collapse"><li><a href="convexoptimization.html#a39d1aa3-34ea-40a0-803d-381fc2f5548c">9.1 Finding the best hyperplane separating data</a></li><li><a href="convexoptimization.html#3c57808a-288d-4cc8-b91d-6fbef44f983c">9.2 Logarithmic barrier functions</a></li><li><a href="convexoptimization.html#d0332f83-5f95-4d0c-aa6e-c907cac6bb9f">9.3 A geometric optimality criterion</a></li><li><a href="convexoptimization.html#9bcbcfae-3dc8-4743-87b7-090021b8b7da">9.4 KKT</a></li><li><a href="convexoptimization.html#61952270-997d-4c6c-b743-4ca48cc2320f">9.5 Computing with KKT</a></li><li><a href="convexoptimization.html#294fa246-3df7-40dc-bb89-d9287b8b9bfa">9.6 Optimization exercises</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div>
+<h1 id="1d4d7f52-ef3b-49d7-96c5-7063208a6d0a">8<span style="float:right;">The Hessian</span></h1><div style="margin-top:20px"></div>In Chapter <a href="convexfunctions.html#sec6.">6</a> we exploited the second derivative
+<span class="math"></span><script type="math/tex">f''(x)</script> of a one variable real function <span class="math"></span><script type="math/tex">f:(a, b) \rightarrow \mathbb{R}</script> to analyze
+convexity along with local minima and maxima.<div style="margin-top:20px"></div>In this chapter we introduce an analogue of the second derivative for real functions <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}</script> of
+several variables. This will be an <span class="math"></span><script type="math/tex">n\times n</script> matrix. The important notion of a matrix
+being positive (semi-) definite introduced in Section <a href="matrices.html#sec3.7">3.7</a> will now
+make its appearance.<div style="margin-top:20px"></div><span id="sec8.1"></span><h2 id="47ffb3a0-adab-46bc-b7e2-4cd37e11148b">8.1 Introduction</h2><div style="margin-top:20px"></div>In Section <a href="convexfunctions.html#sec6.4">6.4</a> the Taylor expansion for a one variable differentiable
+function <span class="math"></span><script type="math/tex">f:\mathbb{R}\rightarrow \mathbb{R}</script> centered a <span class="math"></span><script type="math/tex">x_0</script> with step size
+<span class="math"></span><script type="math/tex">h  = x - x_0</script> was introduced as
+<span id="equ8.1"></span><div class="math"></div><script type="math/tex; mode=display">
+f(x_0 + h) = f(x_0) + f'(x_0) h + \frac{1}{2!} f''(x_0) h^2 + \cdots
+\tag{8.1}</script><div style="margin-top:20px"></div>Recall that the second derivative <span class="math"></span><script type="math/tex">f''(x_0)</script> contains a
+wealth of information about the function. Especially if <span class="math"></span><script type="math/tex">f'(x_0) = 0</script>,
+then we might glean from <span class="math"></span><script type="math/tex">f''(x_0)</script> if <span class="math"></span><script type="math/tex">x_0</script> is a local maximum or
+minimum or none of these (see Theorem <a href="convexfunctions.html#env6.43">6.43</a> and review Exercise <a href="convexfunctions.html#env6.46">6.46</a>).<div style="margin-top:20px"></div>We also noticed that gradient descent did not work so well only
+descending along the gradient. We need to take the second
+derivative into account to get a more detailed picture of the
+function.<div style="margin-top:20px"></div><span id="sec8.2"></span><h2 id="1ee906f0-0750-4478-9ab1-069565010997">8.2 Several variables</h2><div style="margin-top:20px"></div>Our main character is a differentiable function <span class="math"></span><script type="math/tex">F:\mathbb{R}^n\rightarrow \mathbb{R}</script> in
+several variables. We already know that
+<div class="math"></div><script type="math/tex; mode=display">
+F(x_0 + h) = F(x_0) + \nabla F(x_0) h + \epsilon(h) \left\vert h \right\vert,
+</script>
+where <span class="math"></span><script type="math/tex">x_0</script> and <span class="math"></span><script type="math/tex">h</script> are vectors in <span class="math"></span><script type="math/tex">\mathbb{R}^n</script> (as opposed to the good old
+numbers in <a href=#equ8.1>(8.1)</a>). Take a look back at Definition <a href="diffseveral.html#env7.5">7.5</a> for
+the general definition of differentiability.<div style="margin-top:20px"></div>We wish to have an analogue of the Taylor expansion in <a href=#equ8.1>(8.1)</a> for
+such a function of several variables. To this end we introduce the function
+<span class="math"></span><script type="math/tex">g:\mathbb{R}\rightarrow \mathbb{R}</script> given by
+<span id="equ8.2"></span><div class="math"></div><script type="math/tex; mode=display">
+g(t) = F(x_0 + t h).
+\tag{8.2}</script>
+Notice that
+<div class="math"></div><script type="math/tex; mode=display">
+g(t) = (F\circ A)(t),
+</script>
+where <span class="math"></span><script type="math/tex">A: \mathbb{R}\rightarrow \mathbb{R}^n</script> is the function given by <span class="math"></span><script type="math/tex">A(t) = x_0 + t h</script>. In particular
+we get
+<span id="equ8.3"></span><div class="math"></div><script type="math/tex; mode=display">
+g'(t) = F'(x_0 + t h) h = \nabla F(x_0 + t h) h
+\tag{8.3}</script>
+by using the chain rule (see Theorem <a href="diffseveral.html#env7.24">7.24</a>).<div style="margin-top:20px"></div><span id="env8.1"></span><a class="Exerciseno" data-count="8.1"></a><a href="#a7a78db8-cdba-46fe-bc7e-8f856ef88b72" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=a7a78db8-cdba-46fe-bc7e-8f856ef88b72 class = "collapse Exercise envbuttons">  
+Explain how the chain rule is applied to get <a href=#equ8.3>(8.3)</a>.
+</div><div style="margin-top:20px"></div>The derivative <span class="math"></span><script type="math/tex">g'(t)</script> is also composed of several functions and again we may
+compute <span class="math"></span><script type="math/tex">g''(t)</script> by using the chain rule:
+<span id="equ8.4"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  g''(t) &= (C\circ B \circ A)'(t)\\
+        &= (C\circ B)'(A(t)) A'(t) \\
+        &= C'(B(A(t))) B'(A(t)) A'(t),
+\end{aligned}\tag{8.4}</script>
+where <span class="math"></span><script type="math/tex">B: \mathbb{R}^n\rightarrow \mathbb{R}^n</script> is defined by
+<div class="math"></div><script type="math/tex; mode=display">
+B(v) = \nabla F(v)^T
+</script>
+and <span class="math"></span><script type="math/tex">C:\mathbb{R}^n \rightarrow \mathbb{R}</script> by
+<div class="math"></div><script type="math/tex; mode=display">
+C(v) = v^T h.
+</script><div style="margin-top:20px"></div><div class="emphasize"><span id="env8.2"></span><div class="genericenv" data-count="8.2" data-name="DEFINITION">     <div style="margin-top:20px"></div>The <em>Hessian matrix</em> of <span class="math"></span><script type="math/tex">F</script> at the point
+<span class="math"></span><script type="math/tex">x\in \mathbb{R}^n</script> is defined by<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+  \nabla^2 F(x) :=
+  \begin{pmatrix}
+    \dfrac{ \partial^2 F}{ \partial x_1 \partial x_1}(x) &
+    \cdots & \dfrac{ \partial^2 F}{ \partial x_1 \partial
+      x_n}(x)
+    \\
+    \vdots & \ddots & \vdots
+    \\
+    \dfrac{ \partial^2 F}{ \partial x_n \partial x_1}(x) &
+    \cdots & \dfrac{\partial^2 F}{ \partial x_n\partial
+      x_n}(x)
+  \end{pmatrix}
+  .
+
+</script>
+</div></div><div style="margin-top:20px"></div>A very important observation is that <span class="math"></span><script type="math/tex">\nabla^2 F(x)</script> above is a
+symmetric matrix. Again, you should review what this means by clicking
+back to Section <a href="matrices.html#sec3.7">3.7</a>.<div style="margin-top:20px"></div><span id="env8.3"></span><a class="Exerciseno" data-count="8.3"></a><a href="#f900b9d7-1023-46ce-a6fd-74d325eb26d1" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=f900b9d7-1023-46ce-a6fd-74d325eb26d1 class = "collapse Exercise envbuttons">  
+Why is the Hessian matrix symmetric?
+</div><div style="margin-top:20px"></div><span id="env8.4"></span><div class="example" data-count="8.4">     
+  Suppose that <span class="math"></span><script type="math/tex">f: \mathbb{R}^2\rightarrow \mathbb{R}</script> is given by
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x, y) = \sin(x y) + x^2 y^2 + y.
+  </script>
+  Then the gradient
+  <div class="math"></div><script type="math/tex; mode=display">
+  \nabla f = \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)
+  </script>
+  and the Hessian<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+  \nabla^2 f =
+  \begin{pmatrix}
+    \dfrac{\partial^2 f}{\partial x^2} & \dfrac{\partial^2 f}{\partial x \partial y} \\
+    \\
+    \dfrac{\partial^2 f}{\partial y \partial x} & \dfrac{\partial^2 f}{\partial y^2}
+  \end{pmatrix}
+  </script>
+  of <span class="math"></span><script type="math/tex">f</script> are computed in the Sage window below.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+x, y = var('x, y')
+f = sin(x*y) + x^2*y^2 + y
+print("gradient = ", f.gradient())
+print("Hessian = ", f.hessian())
+  </script></div><div style="margin-top:20px"></div>See the <a href="http://doc.sagemath.org/html/en/reference/calculus/sage/calculus/functions.html" target="_blank">further documentation</a> for Calculus functions in Sage.
+</div><div style="margin-top:20px"></div><span id="env8.5"></span><a class="Exerciseno" data-count="8.5"></a><a href="#6bbddd71-e1ee-4eba-9be8-66d83c77f84f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=6bbddd71-e1ee-4eba-9be8-66d83c77f84f class = "collapse Exercise envbuttons">  
+Verify (just this once) by hand the computations done by Sage in Example <a href=#env8.4 class="labelref">8.4</a>.<div style="margin-top:20px"></div>Also, experiment with a few other functions in the Sage window and compute their
+Hessians.
+</div><div style="margin-top:20px"></div>By applying Proposition <a href="diffseveral.html#env7.11">7.11</a> it is not too hard to see that the Hessian
+matrix fits nicely into the framework above, since
+<span id="equ8.5"></span><div class="math"></div><script type="math/tex; mode=display">
+B'(v) = \nabla^2 F(v).
+\tag{8.5}</script><div style="margin-top:20px"></div>The full application of the chain rule then gives
+<span id="equ8.6"></span><div class="math"></div><script type="math/tex; mode=display">
+g''(t) = h^T \nabla^2 F(x_0 + t h) h.
+\tag{8.6}</script><div style="margin-top:20px"></div><span id="env8.6"></span><a class="Exerciseno" data-count="8.6"></a><a href="#1d6ceb30-ad6d-4fdf-9b4c-c776449af9d8" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=1d6ceb30-ad6d-4fdf-9b4c-c776449af9d8 class = "collapse Exercise envbuttons">  
+Give a detailed explanation as to why <a href=#equ8.5>(8.5)</a> holds.
+</div><div style="margin-top:20px"></div><span id="sec8.3"></span><h2 id="3a13db0d-01e4-496f-8c2c-61e30b8755db">8.3 Newton's method for finding critical points</h2><div style="margin-top:20px"></div>We may use Newton's method for computing critical points for a function
+<span class="math"></span><script type="math/tex">F:\mathbb{R}^n\rightarrow \mathbb{R}</script> of several variables. Recall that a
+critical point is a point <span class="math"></span><script type="math/tex">x_0\in \mathbb{R}^n</script> with <span class="math"></span><script type="math/tex">\nabla F(x_0) = 0</script>.
+By <a href="diffseveral.html#equ7.8">(7.8)</a> and <a href=#equ8.5>(8.5)</a> the computation in Newton's method becomes
+<span id="equ8.7"></span><div class="math"></div><script type="math/tex; mode=display">
+x_1 = x_0 - \left(\nabla^2 F(x_0)\right)^{-1} \nabla F(x_0).
+\tag{8.7}</script>
+In practice 
+the (inverse) Hessian appearing in <a href=#equ8.7>(8.7)</a> is often a heavy
+computational burden. This leads to the socalled
+<a href="https://en.wikipedia.org/wiki/Quasi-Newton_method" target="_blank">quasi-Newton methods</a>, where
+the inverse Hessian in <a href=#equ8.7>(8.7)</a> is replaced by other matrices. <div style="margin-top:20px"></div><span id="env8.7"></span><div class="example" data-count="8.7">     
+We will return to the logistic regression in Example <a href="diffseveral.html#env7.34">7.34</a> about the
+Challenger disaster. Here we sought to maximize the function
+  <span id="equ8.8"></span><div class="math"></div><script type="math/tex; mode=display">
+  \ell(\alpha, \beta) = \sum_{i=1}^m E_i (\alpha + \beta x_i) - \log(1 + e^{\alpha + \beta x_i}).
+  \tag{8.8}</script><div style="margin-top:20px"></div>In order to employ Newton's method we compute the gradient and the Hessian of <a href=#equ8.8>(8.8)</a>
+<span id="equ8.9"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  \frac{\partial \ell}{\partial \alpha} &= \sum_{i=1}^m E_i - \sigma(\alpha + \beta x_i)\\
+  \frac{\partial \ell}{\partial \beta} &= \sum_{i=1}^m E_i x_i - x_ i\sigma(\alpha + \beta x_i)\\
+  \frac{\partial^2 \ell}{\partial \alpha^2} &= \sum_{i=1}^m - \sigma'(\alpha + \beta x_i)\\
+  \frac{\partial^2 \ell}{\partial \beta \partial \alpha} &= \sum_{i=1}^m -\sigma'(\alpha + \beta x_i) x_i\\
+  \frac{\partial^2 \ell}{\partial \beta^2} &= \sum_{i=1}^m - \sigma'(\alpha + \beta x_i) x_i^2,
+\end{aligned}\tag{8.9}</script>
+where
+<div class="math"></div><script type="math/tex; mode=display">
+\sigma(t) = \frac{1}{1 + e^{-t}}
+</script>
+is the sigmoid function.<div style="margin-top:20px"></div>Notice the potential problem in using Newton's method here: the formula for
+the second order derivatives in <a href=#equ8.9>(8.9)</a> show that if the <span class="math"></span><script type="math/tex">\alpha +\beta x_i</script> are just mildly big, say <span class="math"></span><script type="math/tex">\geq 50</script>, then
+the Hessian is extremely close to the zero matrix and therefore Sage considers it non-invertible and
+<a href=#equ8.7>(8.7)</a> fails.<div style="margin-top:20px"></div>In the code below we have nudged the initial vector so that it works, but you
+can easily set other values and see its failure. Optimization is not just mathematics, it also calls
+for some good (engineering) implementation skills (see for example details on the
+<a href="https://en.wikipedia.org/wiki/Quasi-Newton_method" target="_blank">quasi Newton algorithms</a>).<div style="margin-top:20px"></div>In the instance below we do, however, get a gradient that is practically <span class="math"></span><script type="math/tex">(0, 0)</script>.<div style="margin-top:20px"></div><a href="#49e3e0c5-7828-4acb-bba4-2e1db0c92d85" class ="btn btn-default" data-toggle="collapse">Code for Newton's method</a><div id=49e3e0c5-7828-4acb-bba4-2e1db0c92d85 class="collapse">
+<div class=sage><script type="text/x-sage">
+x0 = [11,-0.2] 
+noofits = 10
+  
+
+x = [53.0, 56.0, 57.0, 63.0, 66.0, 67.0, 67.0, 67.0, 68.0, 69.0, 70.0, 70.0, 70.0, 70.0, 72.0, 73.0, 75.0, 75.0, 76.0, 76.0, 78.0, 79.0, 80.0, 81.0]
+E = [1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Es = sum(E)
+Exs = sum(u*v for (u, v) in zip(x, E))
+    
+def sigmoid(a, b, x):
+  s = 1/(1 + exp(-a - b*x))
+  return s.n()
+
+def sigmoidm(a, b, x):
+  s = sigmoid(a, b, x)
+  return s*(1-s)
+      
+def gradient(v):
+  a = v[0]
+  b = v[1]
+  return vector((Es - sum(sigmoid(a, b, t) for t in x), Exs - sum(t*sigmoid(a, b, t) for t in x)))
+    
+def hessian(v):
+  a = v[0]
+  b = v[1]
+  h11 = - sum(sigmoidm(a, b, t) for t in x)
+  h12 = - sum(sigmoidm(a, b, t)*t for t in x)
+  h22 = - sum(sigmoidm(a, b, t)*t*t for t in x)
+  return matrix([[h11, h12], [h12, h22]])
+
+def newtonstep(v0):
+  d = gradient(v0)
+  h = hessian(v0)
+  return v0 - h.inverse()*d
+
+v = vector(x0)  
+for k in range(noofits):
+  print(v)
+  v = newtonstep(v)
+
+print("x0 = ", x0)
+print("Number of Newton iterations =  ", noofits)
+print("Predicted maximal point =  ", v)
+
+alpha = v[0]
+beta = v[1]
+
+print("Gradient at predicted maximal point = ", gradient(v))
+print("Predicted probability of failure at 31F = ", sigmoid(alpha, beta, 31))
+</script></div> 
+</div>
+</div><div style="margin-top:20px"></div><span id="sec8.3.1"></span><h3>8.3.1 Transforming data for better numerical performance</h3><div style="margin-top:20px"></div>The numerical problems with Newton's method in Example <a href=#env8.7 class="labelref">8.7</a> can be prevented by transforming the input data.
+It makes sense to transform data from large numbers to
+smaller numbers around <span class="math"></span><script type="math/tex">0</script>. There is a rather standard way of doing this.<div style="margin-top:20px"></div>Suppose in logistic regression we have a set of data
+<span id="equ8.10"></span><div class="math"></div><script type="math/tex; mode=display">
+x_1, x_2, \dots, x_n
+\tag{8.10}</script>
+associated with outcomes <span class="math"></span><script type="math/tex">E_1, \dots, E_n</script>. Then the function
+  <div class="math"></div><script type="math/tex; mode=display">
+  \ell(\alpha, \beta) = \sum_{i=1}^m E_i (\alpha + \beta x_i) - \log(1 + e^{\alpha + \beta x_i}).
+  </script>
+  from Example <a href="diffseveral.html#env7.32">7.32</a> becomes much more manageable if we first
+  transform the data according to
+  <div class="math"></div><script type="math/tex; mode=display">
+  x'_i = \frac{x_i - \overline{x}}{\sigma} 
+  </script>
+  and instead optimize the function
+  <div class="math"></div><script type="math/tex; mode=display">
+  \ell'(\alpha, \beta) = \sum_{i=1}^m E_i (\alpha + \beta x'_i) - \log(1 + e^{\alpha + \beta x'_i}).
+  </script>
+  Here
+  <div class="math"></div><script type="math/tex; mode=display">
+  \overline{x} = \frac{x_1 + x_2 + \cdots + x_n}{n}
+  </script>
+  is the mean value and
+  <div class="math"></div><script type="math/tex; mode=display">
+  \sigma^2 = \frac{(x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \cdots + (x_n - \overline{x})^2}{n}
+  </script>
+  the variance of the data in <a href=#equ8.10>(8.10)</a>.<div style="margin-top:20px"></div>Now if <span class="math"></span><script type="math/tex">\alpha'</script> and <span class="math"></span><script type="math/tex">\beta'</script> is an optimum for <span class="math"></span><script type="math/tex">\ell'</script>, then
+  <span id="equ8.11"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    \alpha &= \alpha' - \frac{\overline{x}}{\sigma} \beta'\\
+    \beta &= \frac{\beta'}{\sigma}
+  \end{aligned}\tag{8.11}</script>
+  is an optimum for <span class="math"></span><script type="math/tex">\ell</script>, since
+  <div class="math"></div><script type="math/tex; mode=display">
+  \ell'(\alpha, \beta) = \ell\left(\alpha - \beta \frac{\overline{x}}{\sigma}, \frac{\beta}{\sigma}\right).
+  </script><div style="margin-top:20px"></div><span id="env8.8"></span><a class="Exerciseno" data-count="8.8"></a><a href="#e2bbb500-2d18-4db7-87bf-f4606196af04" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=e2bbb500-2d18-4db7-87bf-f4606196af04 class = "collapse Exercise envbuttons">  
+Why is the claim/trick alluded to in <a href=#equ8.11>(8.11)</a> true?<div style="margin-top:20px"></div>Below is a snippet of Sage code implementing the trick in <a href=#equ8.11>(8.11)</a>.
+The function <tt>test</tt> takes as input <tt>x0</tt> (an initial vector like <tt>[0,0]</tt>) and
+<tt>noofits</tt> (the number of iterations of Newton's method). You execute this in the Sage
+window by adding for example
+<p><pre><code>test([0,0], 10)
+</code></pre></p>
+and then pressing <tt>Compute</tt>.<div style="margin-top:20px"></div>Experiment and compare with the official output from Example <a href="diffseveral.html#env7.34">7.34</a>. Also, compute
+the gradient of the output below for the original non-transformed problem.<div style="margin-top:20px"></div><a href="#7d5f79e7-7da0-48ba-9086-4be21e8401e1" class ="btn btn-default" data-toggle="collapse">Transformed code</a><div id=7d5f79e7-7da0-48ba-9086-4be21e8401e1 class="collapse">
+<div class=sage><script type="text/x-sage">
+x = [53.0, 56.0, 57.0, 63.0, 66.0, 67.0, 67.0, 67.0, 68.0, 69.0, 70.0, 70.0, 70.0, 70.0, 72.0, 73.0, 75.0, 75.0, 76.0, 76.0, 78.0, 79.0, 80.0, 81.0]
+E = [1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+mean = sum(x)/len(x)
+std = sqrt(sum(map(lambda t: (t-mean)^2, x))/len(x))
+
+x = list(map(lambda t: (t-mean)/std, x))
+
+
+Es = sum(E)
+Exs = sum(u*v for (u, v) in zip(x, E))
+    
+def sigmoid(a, b, x):
+  s = 1/(1 + exp(-a - b*x))
+  return s.n()
+
+def sigmoidm(a, b, x):
+  s = sigmoid(a, b, x)
+  return s*(1-s)
+      
+def gradient(v):
+  a = v[0]
+  b = v[1]
+  return vector((Es - sum(sigmoid(a, b, t) for t in x), Exs - sum(t*sigmoid(a, b, t) for t in x)))
+    
+def hessian(v):
+  a = v[0]
+  b = v[1]
+  h11 = - sum(sigmoidm(a, b, t) for t in x)
+  h12 = - sum(sigmoidm(a, b, t)*t for t in x)
+  h22 = - sum(sigmoidm(a, b, t)*t*t for t in x)
+  return matrix([[h11, h12], [h12, h22]])
+
+def newtonstep(v0):
+  d = gradient(v0)
+  h = hessian(v0)
+  return v0 - h.inverse()*d
+
+
+def test(x0, noofits):
+  v = vector(x0)  
+  for k in range(noofits):
+    print(v)
+    v = newtonstep(v)
+  print("Number of Newton iterations =  ", noofits)
+  print("Predicted maximal point in transformed problem =  ", v)
+  tv =   matrix([[1, -mean/std], [0, 1/std]])*v
+  print("Predicted maximal point in original problem =  ", tv)
+
+
+  
+</script></div>
+</div>
+</div><div style="margin-top:20px"></div><span id="sec8.4"></span><h2 id="9d4eeaaa-0155-4a4c-9e11-ea4fa32e48ff">8.4 The Taylor series in several variables</h2><div style="margin-top:20px"></div>Now we are in a position to state at least the first terms in the
+Taylor expansion for a differentiable function <span class="math"></span><script type="math/tex">F:\mathbb{R}^n\rightarrow \mathbb{R}</script>.
+The angle of the proof is to reduce to the one-dimensional case through
+the function <span class="math"></span><script type="math/tex">g(t)</script> defined in <a href=#equ8.2>(8.2)</a>. Here
+one may prove that
+<span id="equ8.12"></span><div class="math"></div><script type="math/tex; mode=display">
+g(t) = g(0) + g'(0) t + \frac{1}{2} g''(0) t^2 + \epsilon(t)t^2,
+\tag{8.12}</script>
+where <span class="math"></span><script type="math/tex">\epsilon(0) = 0</script> with <span class="math"></span><script type="math/tex">\epsilon</script> continuous at <span class="math"></span><script type="math/tex">0</script>, much like
+in the definition of differentiability except that we also include
+the second derivative.<div style="margin-top:20px"></div>Now <a href=#equ8.12>(8.12)</a> translates into<div style="margin-top:20px"></div><span id="equ8.13"></span><div class="math"></div><script type="math/tex; mode=display">
+  F(x_0 + t h) = F(x_0) + \left(\nabla F(x_0) h \right) t + \frac{1}{2} \left( h^T \nabla^2 F(x_0) h \right) t^2 + \epsilon(t) t^2 
+\tag{8.13}</script>
+by using <a href=#equ8.3>(8.3)</a> and <a href=#equ8.6>(8.6)</a>.<div style="margin-top:20px"></div>From <a href=#equ8.13>(8.13)</a> one reads the following nice criterion, which may be viewed as a several variable generalization of Theorem <a href="convexfunctions.html#env6.43">6.43</a>.<div style="margin-top:20px"></div><div class="emphasize"><span id="env8.9"></span><div class="genericenv" data-count="8.9" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">x_0</script> be a critical point for <span class="math"></span><script type="math/tex">F:\mathbb{R}^n\rightarrow \mathbb{R}</script>. Then
+  <ol class="lowerroman"><li id="ite8.1">
+    <span class="math"></span><script type="math/tex">x_0</script> is a local minimum if <span class="math"></span><script type="math/tex">\nabla^2 F(x_0)</script> is positive definite.
+  </li><li id="ite8.2">
+    <span class="math"></span><script type="math/tex">x_0</script> is a local maximum if <span class="math"></span><script type="math/tex">-\nabla^2 F(x_0)</script> is positive definite (here we call
+    <span class="math"></span><script type="math/tex">\nabla^2 F(x_0)</script> negative definite).
+  </li><li id="ite8.3">
+    <span class="math"></span><script type="math/tex">x_0</script> is a <a href="https://en.wikipedia.org/wiki/Saddle_point" target="_blank">saddle point</a> if <span class="math"></span><script type="math/tex">\nabla^2 F(x_0)</script> is indefinite.
+  </li></ol>
+</div></div><div style="margin-top:20px"></div><span id="env8.10"></span><div class="remark" data-count="8.10">     
+  We need to clarify two things concerning the above theorem. 
+  <ol class="lowerroman"><li id="ite8.4">
+    An <span class="math"></span><script type="math/tex">n\times n</script> indefinite matrix is a symmetric matrix <span class="math"></span><script type="math/tex">A</script> with the property that there exists
+    <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^n</script> with
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+      u^T A u &>0\quad\text{and}\\
+      v^T A v &<0
+    \end{aligned}</script>
+    i.e., neither <span class="math"></span><script type="math/tex">A</script> nor <span class="math"></span><script type="math/tex">-A</script> is positive semidefinite.
+  </li><li id="ite8.5">
+    A saddle point <span class="math"></span><script type="math/tex">x_0</script> for <span class="math"></span><script type="math/tex">F</script> is defined by the existence of two vectors <span class="math"></span><script type="math/tex">u, v\in \mathbb{R}^n</script>, such that
+    <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+      &t=0\quad \text{is a local minimum for the function}\quad f(t) = F(x_0 + t u)\\
+      &t=0\quad \text{is a local maximum for the function}\quad  g(t) = F(x_0 + t v)
+    \end{aligned}</script>
+    as illustrated in the graphics below.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/saddle.png" ></div>
+    </li></ol>
+</div><div style="margin-top:20px"></div><span id="env8.11"></span><div class="example" data-count="8.11">     
+Consider, with our new technology in Theorem <a href=#env8.9 class="labelref">8.9</a>, Exercise <a href="diffseveral.html#env7.22">7.22</a> once again.
+Here we analyzed the point <span class="math"></span><script type="math/tex">v_0 = (0, 0)</script> for the function
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = x^3 + x y + y^3
+</script>
+and showed (by a trick) that <span class="math"></span><script type="math/tex">v_0</script> is neither a local maximum nor a local minimum for <span class="math"></span><script type="math/tex">f</script>. The Hessian
+matrix for <span class="math"></span><script type="math/tex">f(x, y)</script> at <span class="math"></span><script type="math/tex">v_0</script> is
+<div class="math"></div><script type="math/tex; mode=display">
+H = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}.
+</script><div style="margin-top:20px"></div>Now
+Theorem <a href=#env8.9 class="labelref">8.9</a><a href=#ite8.3 class="labelref">(&#8562;.)</a> shows that <span class="math"></span><script type="math/tex">v_0</script> is a saddle point, since
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix} x & y \end{pmatrix} H \begin{pmatrix} x \\ y \end{pmatrix} = 2 x y
+</script> 
+and
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+u^T H u &> 0\qquad\text{for } u = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\\
+v^T H v &< 0\qquad\text{for } v =  \begin{pmatrix} 1 \\ -1 \end{pmatrix}.
+\end{aligned}</script><div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+x, y = var('x, y')
+a = 1
+plot3d(x^3 + a*x*y+ y^3, (x, -0.4, 0.4), (y, -0.4, 0.4), 
+adaptive=True, color=rainbow(60, 'rgbtuple'))
+</script></div>
+</div><div style="margin-top:20px"></div><span id="env8.12"></span><a class="Exerciseno" data-count="8.12"></a><a href="#5d42f67a-9a66-4678-9279-8d373acce253" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=5d42f67a-9a66-4678-9279-8d373acce253 class = "collapse Exercise envbuttons">  
+Try plotting the graph for <span class="bubblelabel footnotecolor">different values of <tt>a</tt></span><span class="bubblecontent"><span class="bubbleinnercontent"><tt>a=4</tt> shows the saddle point clearly.</span></span> in the Sage window in 
+Example <a href=#env8.11 class="labelref">8.11</a>. What do you observe for the point <span class="math"></span><script type="math/tex">v_0</script> with
+respect to the function? Does <tt>a</tt> have to be a number? Could it be a symbolic
+expression in the variables <tt>x</tt> and <tt>y</tt> like <tt>a = -10*cos(x)*sin(y)</tt>?
+</div><div style="margin-top:20px"></div><span id="env8.13"></span><a class="Exerciseno" data-count="8.13"></a><a href="#4271c36b-7765-40e5-9745-7f023643d643" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4271c36b-7765-40e5-9745-7f023643d643 class = "collapse Exercise envbuttons">  
+Check the computation of the Hessian matrix <span class="math"></span><script type="math/tex">H</script> in Example <a href=#env8.11 class="labelref">8.11</a> by showing
+that the Hessian matrix for <span class="math"></span><script type="math/tex">f</script>  at the point <span class="math"></span><script type="math/tex">(x, y)</script> is
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+6 x & 1\\
+1 & 6 y
+\end{pmatrix}. 
+</script>
+</div><div style="margin-top:20px"></div><span id="env8.14"></span><a class="Exerciseno" data-count="8.14"></a><a href="#c9787039-cd82-4d5e-a863-4a121d018ab2" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c9787039-cd82-4d5e-a863-4a121d018ab2 class = "collapse Exercise envbuttons">  
+What about <span class="math"></span><script type="math/tex">u</script> and <span class="math"></span><script type="math/tex">v</script> in Example <a href=#env8.11 class="labelref">8.11</a>? How do they relate to the hint
+given in Exercise <a href="diffseveral.html#env7.22">7.22</a>?
+</div><div style="margin-top:20px"></div><span id="env8.15"></span><a class="Exerciseno" data-count="8.15"></a><a href="#63f1fdd6-f334-442b-bdc1-18558dae9bff" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=63f1fdd6-f334-442b-bdc1-18558dae9bff class = "collapse Exercise envbuttons">  
+  Give an example of a function <span class="math"></span><script type="math/tex">F:\mathbb{R}^2\rightarrow \mathbb{R}</script> having a local minimum at
+  <span class="math"></span><script type="math/tex">x_0</script>, where <span class="math"></span><script type="math/tex">\nabla^2 F(x_0)</script> is not positive definite.
+</div><div style="margin-top:20px"></div><span id="env8.16"></span><a class="Exerciseno" data-count="8.16"></a><a href="#aa2a250c-828a-4fc9-a192-3cc06491d5f1" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=aa2a250c-828a-4fc9-a192-3cc06491d5f1 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>The following exercise is a <tt>sci2u</tt> exercise from the Calculus book.<div style="margin-top:20px"></div><ol class="lowerroman"><li id="ite8.6">
+  The point <span class="math"></span><script type="math/tex">\left(0, \frac{\sqrt{3}}{3}\right)</script> is a critical point for
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x, y) = x^3 + y^3 - y.
+  </script>
+  What does Theorem <a href=#env8.9 class="labelref">8.9</a> say about this point?
+</li><li id="ite8.7">
+  The point <span class="math"></span><script type="math/tex">\left(\frac{1}{3}, \frac{1}{3}\right)</script> is a critical point for
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x, y) = -x^3 -x^2 + x - y^3 + 2 y^2 - y.
+  </script>
+  What does Theorem <a href=#env8.9 class="labelref">8.9</a> say about this point?
+</li><li id="ite8.8">
+  The point <span class="math"></span><script type="math/tex">(0, 1)</script> is a critical point for
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(x, y) = x^3 - x^2 + y^3 - y^2 - y.
+  </script>
+  What does Theorem <a href=#env8.9 class="labelref">8.9</a> say about this point?
+</li></ol>
+</div><div style="margin-top:20px"></div><span id="env8.17"></span><a class="Exerciseno" data-count="8.17"></a><a href="#f4d3aefa-0f64-40d4-8e06-a9715b084fca" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=f4d3aefa-0f64-40d4-8e06-a9715b084fca class = "collapse Exercise envbuttons">  
+Consider the function
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) = x^4 y^2 + x^2 y^4 - 3 x^2 y^2.
+</script>
+Compute its critical points and decide on their types according to Theorem <a href=#env8.9 class="labelref">8.9</a>. 
+Try to convince yourself that
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y) \geq -1
+</script>
+for every <span class="math"></span><script type="math/tex">x, y\in \mathbb{R}</script>.<div style="margin-top:20px"></div><a href="#ebfa8557-7c5e-48e5-8c2e-fa9d23496abf" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=ebfa8557-7c5e-48e5-8c2e-fa9d23496abf class = "collapse Hint envbuttons">    <div style="margin-top:20px"></div>Look at the minimization problem  
+<div class="math"></div><script type="math/tex; mode=display">
+\min f(x, y)
+</script>
+subject to
+<div class="math"></div><script type="math/tex; mode=display">
+(x, y)\in C = \{(x, y) \mid -M \leq x \leq M, \,\, -M \leq y \leq M\},
+</script>
+where <span class="math"></span><script type="math/tex">M</script> is a big number.
+  </div>
+</div><div style="margin-top:20px"></div><span id="env8.18"></span><a class="Exerciseno" data-count="8.18"></a><a href="#5365d99b-8d35-4f71-86cd-3335fcb2f8b6" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=5365d99b-8d35-4f71-86cd-3335fcb2f8b6 class = "collapse Exercise envbuttons">  
+Give an example of a function <span class="math"></span><script type="math/tex">f:\mathbb{R}\rightarrow \mathbb{R}</script> that has a local maximum, but where
+there exists <span class="math"></span><script type="math/tex">x\in \mathbb{R}</script> with <span class="math"></span><script type="math/tex">f(x) > M</script> for any given (large) number <span class="math"></span><script type="math/tex">M</script>.
+</div><div style="margin-top:20px"></div><span id="sec8.5"></span><h2 id="1d424597-f73f-4ab5-b5f1-d9a4e1bb9681">8.5 Convex functions of several variables</h2><div style="margin-top:20px"></div>Below is the generalization of Theorem <a href="convexfunctions.html#env6.53">6.53</a> to several
+variables. You have already seen this in Exercise <a href="convexfunctions.html#env6.54">6.54</a>, right?<div style="margin-top:20px"></div><div class="emphasize"><span id="env8.19"></span><div class="genericenv" data-count="8.19" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">f: U\rightarrow \mathbb{R}</script> be a differentiable function, where
+  <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script> is an open convex subset. Then <span class="math"></span><script type="math/tex">f</script> is convex if
+  and only if
+  <span id="equ8.14"></span><div class="math"></div><script type="math/tex; mode=display">
+    f(x) \geq f(x_0) + \nabla f(x_0) (x-x_0)
+  \tag{8.14}</script>
+  for every <span class="math"></span><script type="math/tex">x, x_0\in U</script>.
+</div></div>
+<a href="#a5d3fcb4-3c6a-4ddf-ad6d-17b90eb36654" class ="btn btn-default" data-toggle="collapse">Proof</a><div id=a5d3fcb4-3c6a-4ddf-ad6d-17b90eb36654 class="collapse">
+  Suppose that <a href=#equ8.14>(8.14)</a> holds and let <span class="math"></span><script type="math/tex">x_t = (1-t)x_0 + t x</script> with
+  <span class="math"></span><script type="math/tex">0 \leq t \leq 1</script>, where <span class="math"></span><script type="math/tex">x_0, x\in U</script>.  To prove that <span class="math"></span><script type="math/tex">f</script> is convex
+  we must verify the inequality
+  <span id="equ8.15"></span><div class="math"></div><script type="math/tex; mode=display">
+    f(x_t) \leq (1-t) f(x_0) + t f(x).
+  \tag{8.15}</script>
+  Let <span class="math"></span><script type="math/tex">\xi = \nabla f(x_t)</script>. Then
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    f(x) &\geq f(x_t) + \xi (1-t) (x-x_0)\\
+    f(x_0) &\geq f(x_t) - \xi t (x-x_0)
+  \end{aligned}</script>
+  by <a href=#equ8.14>(8.14)</a>.  If you multiply the first inequality by <span class="math"></span><script type="math/tex">t</script>, the
+  second by <span class="math"></span><script type="math/tex">1-t</script> and then add the two, you get <a href=#equ8.15>(8.15)</a>.<div style="margin-top:20px"></div>Suppose on the other hand that <span class="math"></span><script type="math/tex">f</script> is a convex function. Let <span class="math"></span><script type="math/tex">x_0,
+  x\in U</script>. Since <span class="math"></span><script type="math/tex">U</script> is an open subset, it follows that <span class="math"></span><script type="math/tex">(1-t)x_0 + t
+  x\in U</script> for <span class="math"></span><script type="math/tex">t\in I=(-\delta, 1 + \delta)</script>, where <span class="math"></span><script type="math/tex">\delta>0</script> is
+  sufficiently small. Now define the function <span class="math"></span><script type="math/tex">g:I\rightarrow \mathbb{R}</script> by
+  <div class="math"></div><script type="math/tex; mode=display">
+    g(t) = f((1-t) x_0 + t x) = f(x_0 + t (x-x_0)).
+  </script>
+  Being the composition of two differentiable functions, <span class="math"></span><script type="math/tex">g</script> is
+  differentiable.  Suppose that <span class="math"></span><script type="math/tex">0\leq \alpha \leq 1</script> and <span class="math"></span><script type="math/tex">t_1, t_2\in
+  I</script>. Then
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+   g((1- \alpha) t_1 + \alpha t_2) &= f(x_0 + ((1-\alpha)
+    t_1 + \alpha t_2)(x-x_0))
+    \\
+    &=f((1-\alpha)(x_0 + t_1(x-x_0)) + \alpha (x_0+t_2(x-x_0)))
+    \\
+    &\leq(1-\alpha) f(x_0 + t_1 (x-x_0)) + \alpha f(x_0 + t_2(x-x_0))
+    \\
+    &=(1-\alpha) g(t_1) + \alpha g(t_2)
+  \end{aligned}</script>
+  showing that <span class="math"></span><script type="math/tex">g</script> is a convex function.  By Theorem <a href="convexfunctions.html#env6.53">6.53</a>,
+  <div class="math"></div><script type="math/tex; mode=display">
+    g(1) \geq g(0) + g'(0),
+  </script>
+  which translates into
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x) \geq f(x_0) + \nabla f(x_0) (x-x_0)
+  </script>
+  by using the chain rule in computing <span class="math"></span><script type="math/tex">g'(0)</script>.
+</div><div style="margin-top:20px"></div><span id="env8.20"></span><a class="Exerciseno" data-count="8.20"></a><a href="#3ee89698-0de7-4d33-aacb-09e191f9c995" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=3ee89698-0de7-4d33-aacb-09e191f9c995 class = "collapse Exercise envbuttons">  
+  Prove that a bounded convex differentiable function <span class="math"></span><script type="math/tex">f:\mathbb{R}^n\rightarrow \mathbb{R}</script> is
+  constant.
+</div><div style="margin-top:20px"></div>The following is the generalization of  Corollary <a href="convexfunctions.html#env6.48">6.48</a>.<div style="margin-top:20px"></div><div style="margin-top:20px"></div><div style="margin-top:20px"></div><div class="emphasize"><span id="env8.21"></span><div class="genericenv" data-count="8.21" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">f: U\rightarrow \mathbb{R}</script> be a differentiable function with continuous
+  second order partial derivatives, where <span class="math"></span><script type="math/tex">U\subseteq \mathbb{R}^n</script> is a
+  convex open subset. Then <span class="math"></span><script type="math/tex">f</script> is convex if and only if the Hessian
+  <span class="math"></span><script type="math/tex">\nabla^2 f(x)</script> is positive semidefinite for every <span class="math"></span><script type="math/tex">x\in U</script>. If
+  <span class="math"></span><script type="math/tex">\nabla^2 f(x)</script> is positive definite for every <span class="math"></span><script type="math/tex">x\in U</script>, then <span class="math"></span><script type="math/tex">f</script> is
+  strictly convex.
+</div></div>
+<a href="#a8806354-c5a8-485d-918e-9d8a7791fe06" class ="btn btn-default" data-toggle="collapse">Proof</a><div id=a8806354-c5a8-485d-918e-9d8a7791fe06 class="collapse">
+  We have done all the work for a convenient reduction to the one
+  variable case. Suppose that <span class="math"></span><script type="math/tex">f</script> is convex. Then the same reasoning
+  as in the proof of Theorem <a href=#env8.19 class="labelref">8.19</a> shows that
+  <div class="math"></div><script type="math/tex; mode=display">
+    g(t) = f(x + t v)
+  </script>
+  is a convex function for every <span class="math"></span><script type="math/tex">x\in U</script> and every <span class="math"></span><script type="math/tex">v\in \mathbb{R}^n</script> from
+  an open interval <span class="math"></span><script type="math/tex">(-\delta, \delta)</script> to <span class="math"></span><script type="math/tex">\mathbb{R}</script> for suitable
+  <span class="math"></span><script type="math/tex">\delta>0</script>. Therefore <span class="math"></span><script type="math/tex">g''(0) = v^t \nabla^2 f(x) v \geq 0</script> by
+  Theorem <a href="convexfunctions.html#env6.47">6.47</a>. This proves that the matrix <span class="math"></span><script type="math/tex">\nabla^2 f(x)</script> is
+  positive semidefinite for every <span class="math"></span><script type="math/tex">x\in U</script>.  Suppose on the other hand
+  that <span class="math"></span><script type="math/tex">\nabla^2 f(x)</script> is positive semidefinite for every <span class="math"></span><script type="math/tex">x\in U</script>.
+  Then Theorem <a href="convexfunctions.html#env6.47">6.47</a> shows that <span class="math"></span><script type="math/tex">g(t) = f(x + t(y-x))</script> is a convex
+  function from <span class="math"></span><script type="math/tex">(-\delta, 1+\delta)</script> to <span class="math"></span><script type="math/tex">\mathbb{R}</script> for <span class="math"></span><script type="math/tex">\delta>0</script> small
+  and <span class="math"></span><script type="math/tex">x, y\in U</script>, since
+  <div class="math"></div><script type="math/tex; mode=display">
+    g''(\alpha) = (y-x)^t \nabla^2 f(x + \alpha(y-x)) (y-x) \geq 0
+  </script>
+  for <span class="math"></span><script type="math/tex">0\leq \alpha \leq 1</script>. Therefore <span class="math"></span><script type="math/tex">f</script> is a convex function, since
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    f((1-t) x + t y) = &g((1-t)\cdot 0 + t\cdot 1) \\
+    &\leq(1-t) g(0) + t g(1) = (1-t) f(x) + t f(y).
+  \end{aligned}</script>
+  The same argument (using the last part of Theorem <a href="convexfunctions.html#env6.47">6.47</a> on
+  strict convexity), shows that <span class="math"></span><script type="math/tex">g</script> is strictly convex if
+  <span class="math"></span><script type="math/tex">\nabla^2 f(x)</script> is positive definite. It follows that <span class="math"></span><script type="math/tex">f</script> is strictly
+  convex if <span class="math"></span><script type="math/tex">\nabla^2 f(x)</script> is positive definite for every <span class="math"></span><script type="math/tex">x\in U</script>.
+</div><div style="margin-top:20px"></div><span id="env8.22"></span><a class="Exerciseno" data-count="8.22"></a><a href="#d46d9ad6-3b72-4f1c-9037-3efa213b7b82" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=d46d9ad6-3b72-4f1c-9037-3efa213b7b82 class = "collapse Exercise envbuttons">  
+  Prove that
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x, y) = x^2 + y^2
+  </script>
+  is a strictly convex function from <span class="math"></span><script type="math/tex">\mathbb{R}^2</script> to <span class="math"></span><script type="math/tex">\mathbb{R}</script>. Also, prove that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \{(x, y)\in \mathbb{R}^2 \mid x^2 + y^2 \leq 1\}
+  </script>
+  is a convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}^2</script>.
+  </div><div style="margin-top:20px"></div><span id="env8.23"></span><a class="Exerciseno" data-count="8.23"></a><a href="#a1470557-3e12-429f-9592-fa3b8eb0133a" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=a1470557-3e12-429f-9592-fa3b8eb0133a class = "collapse Exercise envbuttons">  
+  Is <span class="math"></span><script type="math/tex">f(x, y) = \cos(x) + \sin(y)</script> strictly convex on some non-empty
+  open convex subset of the plane?
+</div><div style="margin-top:20px"></div><span id="env8.24"></span><a class="Exerciseno" data-count="8.24"></a><a href="#d7edb906-1035-47bc-8037-5208b5cb67c7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=d7edb906-1035-47bc-8037-5208b5cb67c7 class = "collapse Exercise envbuttons">  
+ Show that <span class="math"></span><script type="math/tex">f:\mathbb{R}^2 \rightarrow \mathbb{R}</script> given by
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x, y) = \log(e^x + e^y)
+  </script>
+  is a convex function. Is <span class="math"></span><script type="math/tex">f</script> strictly convex?
+</div><div style="margin-top:20px"></div><span id="env8.25"></span><a class="Exerciseno" data-count="8.25"></a><a href="#7ed09f04-2595-43c2-82ec-b86687abcad1" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=7ed09f04-2595-43c2-82ec-b86687abcad1 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">f:\mathbb{R}^2\rightarrow \mathbb{R}</script> be given by
+  <div class="math"></div><script type="math/tex; mode=display">
+    f(x, y) = a x^2 + b y^2 + c x y,
+  </script>
+  where <span class="math"></span><script type="math/tex">a, b, c\in \mathbb{R}</script>.<div style="margin-top:20px"></div><ol class="lowerroman"><li id="ite8.9"> Show that <span class="math"></span><script type="math/tex">f</script> is a strictly convex function if and only if <span class="math"></span><script type="math/tex">a > 0</script>
+    and <span class="math"></span><script type="math/tex">4 a b - c^2 > 0</script>.<div style="margin-top:20px"></div><a href="#869a078f-0c51-44f7-a5a1-3b438ac22dd4" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=869a078f-0c51-44f7-a5a1-3b438ac22dd4 class = "collapse Hint envbuttons">    
+      This is a hint for the only if part.
+      If <span class="math"></span><script type="math/tex">H</script> is the Hessian for <span class="math"></span><script type="math/tex">f</script>, then
+<div class="math"></div><script type="math/tex; mode=display">
+f(v) = \frac{1}{2} v^T H v,
+</script>
+where <span class="math"></span><script type="math/tex">v = (x, y)^T</script> - this is seen by a matrix multiplication computation. We know that <span class="math"></span><script type="math/tex">H</script> is positive semidefinite. If <span class="math"></span><script type="math/tex">H</script> was not positive definite, there would exist <span class="math"></span><script type="math/tex">v\neq 0</script> with <span class="math"></span><script type="math/tex">f(v) = 0</script>. Now use <span class="math"></span><script type="math/tex">f(t v) = t^2 f(v)</script> to complete the proof that <span class="math"></span><script type="math/tex">H</script> is positive definite by looking at <span class="math"></span><script type="math/tex">f((1-t)\cdot 0 + t\cdot v)</script>.
+      </div>
+  </li><li id="ite8.10"> Suppose now that <span class="math"></span><script type="math/tex">a > 0</script> and <span class="math"></span><script type="math/tex">4 a b - c^2>0</script>.  Show that <span class="math"></span><script type="math/tex">g(x,
+    y) = f(x, y) + x + y</script> has a unique global minimum and give a
+    formula for this minimum in terms of <span class="math"></span><script type="math/tex">a, b</script> and <span class="math"></span><script type="math/tex">c</script>.
+</li></ol>
+</div><div style="margin-top:20px"></div><span id="sec8.6"></span><h2 id="ccfc9e26-749e-4bc9-870a-dd59ac1a2188">8.6 How to decide the definiteness of a matrix</h2><div style="margin-top:20px"></div>In this section we will outline a straightforward method for
+deciding if a matrix is positive definite, positive semidefinite,
+negative definite or indefinite.<div style="margin-top:20px"></div>Before proceeding it is a must that you do the following exercise.<div style="margin-top:20px"></div><span id="env8.26"></span><a class="Exerciseno" data-count="8.26"></a><a href="#bf076f3b-03c8-4888-8c7d-dcb0a0f2231f" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=bf076f3b-03c8-4888-8c7d-dcb0a0f2231f class = "collapse Exercise envbuttons">  
+Show that a diagonal matrix
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+  \lambda_1 & 0 & \dots & 0\\
+  0 &\lambda_2 & \dots &0\\
+  \vdots & \vdots & \ddots & \vdots\\
+  0 & 0 &\dots & \lambda_n
+\end{pmatrix}
+</script>
+is positive definite if and only if <span class="math"></span><script type="math/tex">\lambda_1 > 0, \dots, \lambda_n > 0</script>
+and positive semidefinite
+if and only if <span class="math"></span><script type="math/tex">\lambda_1 \geq  0, \dots, \lambda_n \geq 0</script>.<div style="margin-top:20px"></div>Also, show that if <span class="math"></span><script type="math/tex">A</script> is a symmetric matrix, then <span class="math"></span><script type="math/tex">A</script> is
+positive definite if and only if
+<div class="math"></div><script type="math/tex; mode=display">
+B^T A B
+</script>
+is positive definite, where <span class="math"></span><script type="math/tex">B</script> is an invertible matrix.
+</div><div style="margin-top:20px"></div>The crucial ingredient is the following result.<div style="margin-top:20px"></div><div class="emphasize"><span id="env8.27"></span><div class="genericenv" data-count="8.27" data-name="THEOREM">     
+  Let <span class="math"></span><script type="math/tex">A</script> be a real symmetric <span class="math"></span><script type="math/tex">n\times n</script> matrix. Then there exists an
+  invertible matrix <span class="math"></span><script type="math/tex">B</script>, such that <span class="math"></span><script type="math/tex">B^T A B</script> is a diagonal matrix.
+</div></div><div style="margin-top:20px"></div>The proof contains an algorithm for building <span class="math"></span><script type="math/tex">B</script> by different steps.
+We will supply examples afterwards illustrating these. Incidentally,
+how does this help you in deciding for example that a given matrix
+is positive definite? If you cannot answer this question, please
+do the exercise above.<div style="margin-top:20px"></div><a href="#8d04af72-97a4-4b76-84bb-441efe69f3da" class ="btn btn-default" data-toggle="collapse">Proof</a><div id=8d04af72-97a4-4b76-84bb-441efe69f3da class="collapse">
+   Suppose that <span class="math"></span><script type="math/tex">A=(a_{ij})</script>. If <span class="math"></span><script type="math/tex">A</script> has a non-zero entry in the upper
+  left hand corner i.e., <span class="math"></span><script type="math/tex">a_{11}\neq 0</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+    B_1^T A B_1 =
+    \begin{pmatrix}
+      a_{11} & 0 & \cdots & 0\\
+      0 & c_{11} & \cdots & c_{1, n-1}\\
+      \vdots & \vdots & \ddots & \vdots \\
+      0 & c_{n-1, 1} & \cdots & c_{n-1, n-1},
+    \end{pmatrix}
+  </script>
+  where <span class="math"></span><script type="math/tex">C = (c_{ij})</script> is a real symmetric matrix and <span class="math"></span><script type="math/tex">B_1</script> is the
+  invertible <span class="math"></span><script type="math/tex">n\times n</script> matrix
+  <div class="math"></div><script type="math/tex; mode=display">
+        \begin{pmatrix}
+      1 & -\frac{ a_{12}}{a_{11}} & \cdots & -\frac{
+        a_{1n}}{a_{11}}\\
+      0 & 1 & \cdots & 0\\
+      \vdots & \vdots & \ddots & \vdots\\
+      0 & 0 & \cdots & 1
+    \end{pmatrix}
+    .
+  </script>
+  By induction on <span class="math"></span><script type="math/tex">n</script> we may find an invertible matrix <span class="math"></span><script type="math/tex">(n-1)\times
+  (n-1)</script> matrix <span class="math"></span><script type="math/tex">B_2</script> such that
+  <div class="math"></div><script type="math/tex; mode=display">
+    B_2^t C B_2 =
+    \begin{pmatrix}
+      a_1 & 0 &\cdots & 0\\
+      0 & a_2 & \cdots & 0\\
+      \vdots & \vdots & \ddots &\vdots\\
+      0 & 0 & \cdots & a_{n-1}
+    \end{pmatrix}
+    .
+  </script><div style="margin-top:20px"></div>Putting
+  <div class="math"></div><script type="math/tex; mode=display">
+B = B_1
+    \begin{pmatrix}
+      1 & 0\\
+      0 & B_2
+    \end{pmatrix},
+    </script>
+    it follows that
+<div class="math"></div><script type="math/tex; mode=display">
+    B^t A B =                           
+    \begin{pmatrix}
+      a_{11} & 0 &\cdots & 0\\
+      0 & a_1 & \cdots & 0\\
+      \vdots & \vdots & \ddots &\vdots\\
+      0 & 0 & \cdots & a_{n-1}
+    \end{pmatrix}
+    .
+  </script><div style="margin-top:20px"></div>We now treat the case of a zero entry in the upper left hand corner
+  i.e., <span class="math"></span><script type="math/tex">a_{11}=\nobreak 0</script>.  Suppose first that <span class="math"></span><script type="math/tex">a_{jj} \neq 0</script> for
+  some <span class="math"></span><script type="math/tex">j > 1</script>. Let <span class="math"></span><script type="math/tex">P</script> denote the identity matrix with the first and
+  <span class="math"></span><script type="math/tex">j</script>-th rows interchanged.  The operation <span class="math"></span><script type="math/tex">A\mapsto A P</script> amounts to
+  interchanging the first and <span class="math"></span><script type="math/tex">j</script>-th columns in <span class="math"></span><script type="math/tex">A</script>.  Similarly
+  <span class="math"></span><script type="math/tex">A\mapsto P^t A</script> is interchanging that first and <span class="math"></span><script type="math/tex">j</script>-th rows in <span class="math"></span><script type="math/tex">A</script>.
+  The matrix <span class="math"></span><script type="math/tex">P</script> is invertible and <span class="math"></span><script type="math/tex">P^t A P</script> is a symmetric matrix
+  with <span class="math"></span><script type="math/tex">(P^t A P)_{11} = a_{jj}\neq 0</script> and we have reduced to the case
+  of a non-zero entry in the upper left hand corner.<div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">a_{ii} = 0</script> for every <span class="math"></span><script type="math/tex">i = 1, \dots, n</script> we may assume that <span class="math"></span><script type="math/tex">a_{1
+    j}\neq 0</script> for some <span class="math"></span><script type="math/tex">j>1</script>. Let <span class="math"></span><script type="math/tex">B</script> denote the identity matrix where
+  the entry in the first column and <span class="math"></span><script type="math/tex">j</script>-th row is <span class="math"></span><script type="math/tex">1</script>. The operation
+  <span class="math"></span><script type="math/tex">A\mapsto A B</script> amounts to adding the <span class="math"></span><script type="math/tex">j</script>-th column to the first
+  column in <span class="math"></span><script type="math/tex">A</script>. Similarly <span class="math"></span><script type="math/tex">A\mapsto B^t A</script> is adding the <span class="math"></span><script type="math/tex">j</script>-th row
+  to the first row in <span class="math"></span><script type="math/tex">A</script>. All in all we get <span class="math"></span><script type="math/tex">(B^t A B)_{11} = 2 a_{1
+    j} \neq 0</script>, where we have used that <span class="math"></span><script type="math/tex">a_{ii} = 0</script> for <span class="math"></span><script type="math/tex">i=1, \dots,
+  n</script>. Again we have reduced to the case of a non-zero entry in the
+  upper left hand corner.
+</div><div style="margin-top:20px"></div><span id="env8.28"></span><div class="example" data-count="8.28">     
+            Consider the <span class="math"></span><script type="math/tex">3\times 3</script> real symmetric matrix.
+  <div class="math"></div><script type="math/tex; mode=display">
+    A = (a_{ij}) = 
+    \begin{pmatrix}
+      1 & 5 & 2\\
+      5 & 3 & 0\\
+      2 & 0 & 5
+    \end{pmatrix}
+    .
+  </script>
+  Here <span class="math"></span><script type="math/tex">a_{11} = 1 \neq 0</script>. Therefore the fundamental step in the
+  proof of Theorem <a href=#env8.27 class="labelref">8.27</a> applies and
+    <div class="math"></div><script type="math/tex; mode=display">
+    \begin{pmatrix}
+      1 & 0 & 0 \\
+      -5 & 1 & 0\\
+      -2 & 0 & 1
+    \end{pmatrix}
+    A
+    \begin{pmatrix}
+      1 & -5 & -2\\
+      0 & 1 & 0\\
+      0 & 0 & 1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & -22 & -10\\
+      0 & -10 & 1
+    \end{pmatrix}
+  </script>
+  and again
+  <div class="math"></div><script type="math/tex; mode=display">
+    \begin{pmatrix}
+      1 & 0 & 0 \\
+      0 & 1 & 0\\
+      0 & -\frac{5}{11} & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & -22 & -10\\
+      0 & -10 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & 1 & -\frac{5}{11}\\
+      0 & 0 & 1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & -22 & 0\\
+      0 & 0 & \frac{61}{11}
+    \end{pmatrix}
+    .
+  </script><div style="margin-top:20px"></div>Summing up we get
+  <div class="math"></div><script type="math/tex; mode=display">
+    B = 
+    \begin{pmatrix}
+      1 & -5 & -2\\
+      0 & 1 & 0\\
+      0 & 0 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & 1 & -\frac{5}{11}\\
+      0 & 0 & 1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      1 & -5 & \frac{3}{11}\\
+      0 & 1 & -\frac{5}{11}\\
+      0 & 0 & 1
+    \end{pmatrix}
+    .
+  </script>
+  You are invited to check that
+  <div class="math"></div><script type="math/tex; mode=display">
+    B^t A B =
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & -22 & 0\\
+      0 & 0 & \frac{61}{11}
+    \end{pmatrix}
+    .
+  </script>
+</div><div style="margin-top:20px"></div><span id="env8.29"></span><div class="example" data-count="8.29">     
+  Let
+  <div class="math"></div><script type="math/tex; mode=display">
+    A =
+    \begin{pmatrix}
+      0 & 0 & 1 & 1\\
+      0 & 0 & 2 & 3\\
+      1 & 2 & 1 & 4\\
+      1 & 3 & 4 & 0
+    \end{pmatrix}.
+  </script>
+  Here <span class="math"></span><script type="math/tex">a_{11} = a_{22} = 0</script>, but the diagonal element <span class="math"></span><script type="math/tex">a_{33}\neq
+  0</script>. So we are in the second step of the proof of
+  Theorem <a href=#env8.27 class="labelref">8.27</a>.  Using the matrix
+  <div class="math"></div><script type="math/tex; mode=display">
+    P =
+    \begin{pmatrix}
+      0 & 0 & 1 & 0\\
+      0 & 1 & 0 & 0\\
+      1 & 0 & 0 & 0\\
+      0 & 0 & 0 & 1
+    \end{pmatrix}
+  </script>
+  we get
+<div class="math"></div><script type="math/tex; mode=display">
+  P^t A P =
+    \begin{pmatrix}
+      1 & 2 & 1 & 4\\
+      2 & 0 & 0 & 3\\
+      1 & 0 & 0 & 1\\
+      4 & 3 & 1 & 0
+    \end{pmatrix}
+    .
+  </script><div style="margin-top:20px"></div>As argued in the proof, this corresponds to interchanging the first
+  and third columns and then interchanging the first and third
+  rows. In total you move the non-zero <span class="math"></span><script type="math/tex">a_{33}</script> to the upper left
+  corner in the matrix.
+</div><div style="margin-top:20px"></div><span id="env8.30"></span><div class="example" data-count="8.30">     
+            Consider the symmetric matrix
+  <div class="math"></div><script type="math/tex; mode=display">
+    A =
+    \begin{pmatrix}
+      0 & 1 & 1 & 1\\
+      1 & 0 & 1 & 1\\
+      1 & 1 & 0 & 1\\
+      1 & 1 & 1 & 0
+    \end{pmatrix}
+    .
+  </script>
+  We have zero entries in the diagonal. As in the third step in the
+  proof of Theorem <a href=#env8.27 class="labelref">8.27</a> we must find an invertible matrix
+  <span class="math"></span><script type="math/tex">B_1</script>, such that the upper left corner in <span class="math"></span><script type="math/tex">B_1^t A B_1</script> is
+  non-zero. In the proof it is used that every diagonal element is
+  zero: if we locate a non-zero element in the <span class="math"></span><script type="math/tex">j</script>-th column in the
+  first row, we can add the <span class="math"></span><script type="math/tex">j</script>-th column to the first column and then
+  the <span class="math"></span><script type="math/tex">j</script>-th row to the first row obtaining a non-zero element in the
+  upper left corner. For <span class="math"></span><script type="math/tex">A</script> above we choose <span class="math"></span><script type="math/tex">j=2</script> and the matrix
+  <span class="math"></span><script type="math/tex">B_1</script> becomes
+  <div class="math"></div><script type="math/tex; mode=display">
+    B_1 =
+    \begin{pmatrix}
+      1 & 0 & 0 & 0\\
+      1 & 1 & 0 & 0\\
+      0 & 0 & 1 & 0\\
+      0 & 0 & 0 & 1
+    \end{pmatrix}
+  </script>
+  so that
+<div class="math"></div><script type="math/tex; mode=display">
+  B_1^t A B_1 =
+    \begin{pmatrix}
+      2 & 1 & 2 & 2\\
+      1 & 0 & 1 & 1\\
+      2 & 1 & 0 & 1\\
+      2 & 1 & 1 & 0
+    \end{pmatrix}
+    .
+  </script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env8.31"></span><a class="Exerciseno" data-count="8.31"></a><a href="#620799be-4870-442f-a53b-4595f3b767f2" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=620799be-4870-442f-a53b-4595f3b767f2 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">A</script> be any matrix. Show that
+<div class="math"></div><script type="math/tex; mode=display">
+A^T A
+</script>
+is positive semidefinite.
+</div><div style="margin-top:20px"></div><span id="env8.32"></span><a class="Exerciseno" data-count="8.32"></a><a href="#cef0e900-1f99-4775-a5ed-1c0eecffc4ff" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=cef0e900-1f99-4775-a5ed-1c0eecffc4ff class = "collapse Exercise envbuttons">  
+ Find inequalities defining the set
+  <div class="math"></div><script type="math/tex; mode=display">
+    \left\{(a, b)\in \mathbb{R}^2 \middle\vert
+      \begin{pmatrix}
+        2 & 1 & a\\ 1 & 1 & 1 \\ a & 1 & b
+      \end{pmatrix}
+      \,\,\text{is positive definite}
+    \right\}.
+  </script>
+  Same question with positive semidefinite. Sketch and compare the two
+  subsets of the plane <span class="math"></span><script type="math/tex">\{(a, b) \mid a, b\in \mathbb{R}\}</script>.
+</div><div style="margin-top:20px"></div><span id="env8.33"></span><a class="Exerciseno" data-count="8.33"></a><a href="#7055275d-ea57-405b-a356-c18e991466a1" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=7055275d-ea57-405b-a356-c18e991466a1 class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">f:\mathbb{R}^3\rightarrow \mathbb{R}</script> denote the function given by
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y, z) = x^2 + y^2 + z^2 +  a x y +  x z +  y z,
+</script>
+where <span class="math"></span><script type="math/tex">a\in \mathbb{R}</script>. Let <span class="math"></span><script type="math/tex">H</script> denote the Hessian of
+<span class="math"></span><script type="math/tex">f</script> in a point <span class="math"></span><script type="math/tex">(x, y, z)\in \mathbb{R}^3</script>.<div style="margin-top:20px"></div><ol class="lowerroman"><li id="ite8.11">
+  Compute <span class="math"></span><script type="math/tex">H</script>.
+</li><li id="ite8.12">
+  Show that <span class="math"></span><script type="math/tex">f(v) = v^T A v</script> for <span class="math"></span><script type="math/tex">v=(x, y, z)\in \mathbb{R}^3</script> and <span class="math"></span><script type="math/tex">A = \frac{1}{2} H</script>.
+</li><li id="ite8.13">
+  Compute a non-zero vector <span class="math"></span><script type="math/tex">v\in \mathbb{R}^3</script>, such that <span class="math"></span><script type="math/tex">H v = 0</script> in
+  the case, where <span class="math"></span><script type="math/tex">a=2</script>. Is <span class="math"></span><script type="math/tex">H</script> invertible in this case?
+</li><li id="ite8.14">
+  Show that <span class="math"></span><script type="math/tex">f</script> is strictly convex if <span class="math"></span><script type="math/tex">-1 < a < 2</script>.
+</li><li id="ite8.15">
+  Is <span class="math"></span><script type="math/tex">f</script> strictly convex if <span class="math"></span><script type="math/tex">a=2</script>?<div style="margin-top:20px"></div><a href="#f1ab15c0-4a16-4b05-a049-63dece355943" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=f1ab15c0-4a16-4b05-a049-63dece355943 class="collapse">
+    Consider the line segment between <span class="math"></span><script type="math/tex">0</script> and a suitable vector
+    <span class="math"></span><script type="math/tex">u\neq 0</script>, where <span class="math"></span><script type="math/tex">f(u) = 0</script>.<div style="margin-top:20px"></div>    
+  </div>
+</li></ol>
+</div><div style="margin-top:20px"></div><span id="env8.34"></span><a class="Exerciseno" data-count="8.34"></a><a href="#04338728-e76f-4877-afff-be8a2b3868ff" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=04338728-e76f-4877-afff-be8a2b3868ff class = "collapse Exercise envbuttons">  
+Why is the subset given by the inequalities
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    x &\geq 0\\
+    y &\geq 0\\
+    x y - z^2 &\geq 0
+  \end{aligned}</script>
+  a convex subset of <span class="math"></span><script type="math/tex">\mathbb{R}^3</script>?
+</div><div style="margin-top:20px"></div></div></body>
