@@ -1,0 +1,230 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.css" integrity="sha384-NFGicHNcq1l2DafLerXQeI3h3jJY3dCcDQF+29rtRBHW7P7ti+/XIRY7ALbJOaeh" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.js" integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#9a6e48b8-560e-4743-b6cc-78d08efd26d4"><b>1</b> A partly topological introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#4cbf1ecb-03bd-47fa-8c94-b66989068d80">1.1 A few words about rational functions</a></li><li><a href="intro.html#1d060616-4656-4b6f-aa26-374d7d84d7a2">1.2 Topology</a></li><li><a href="intro.html#3771d33a-7d9b-41c3-a6c7-602ebf1c5fe1">1.3 Compactification</a></li><li><a href="intro.html#12aef400-a75d-4054-bced-14580b5d5033">1.4 Projective spaces</a></li></ul><li><a class="kap" href="algebra.html#82c2a6e9-4760-4b82-8c26-1e0eca0715b9"><b>2</b> Algebra and geometry</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="algebra.html#44821ab0-9b5a-48b4-8725-a894b892b0ba">2.1 Algebraic sets</a></li><li><a href="algebra.html#4c52ba4a-8efd-4bfd-a837-9316ec399ea4">2.2 Irreducible components</a></li><li><a href="algebra.html#ebe242c9-f749-4cec-8d54-c831483add77">2.3 Primary decomposition</a></li><li><a href="algebra.html#5c9d8b64-a28e-4f50-91ea-28f41ef848d6">2.4 Computation</a></li><li><a href="algebra.html#eca6ff0b-2f3b-4265-9c51-65ee95879a6b">2.5 The Hilbert Nullstellensatz</a></li><li><a href="algebra.html#670547b0-892c-4d0c-baed-9196427bec3c">2.6 The combinatorial Nullstellensatz</a></li></ul><li><a class="kap" href="algcurves.html#51d2669f-9f54-4d3c-8ae3-03553c1c3427"><b>3</b> Affine algebraic curves</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="algcurves.html#bfd7cb65-013b-484a-8885-74342bf27e49">3.1 Intersection of two plane curves</a></li><li><a href="algcurves.html#d28414ce-e21f-4e1f-b663-307928731a89">3.2 Rational functions and local rings</a></li><li><a href="algcurves.html#78f530b6-7cba-4d4c-bd4f-2130682c11c7">3.3 Dimension in local rings</a></li><li><a href="algcurves.html#fab9922e-8acd-466f-a17f-b437a5b2f5f9">3.4 The crucial isomorphism</a></li></ul><li><a class="kap" href="projplanecurves.html#5b893ec3-273f-4bd3-8242-9f126677e61e"><b>4</b> Projective plane curves</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="projplanecurves.html#97e1ecca-5947-4783-8d83-f72b46771831">4.1 Rational functions on the projective plane</a></li><li><a href="projplanecurves.html#f68a370f-b108-4bda-843e-6631e6d77d0f">4.2 Homogeneous polynomials with no common factors</a></li><li><a href="projplanecurves.html#f25678fd-17d3-4bee-835d-c602058ed34a">4.3 Projective transformations</a></li><li><a href="projplanecurves.html#3422a594-3d07-458f-9771-27c0170b154e">4.4 Invariance under projective transformations</a></li><li><a href="projplanecurves.html#becfe332-68e3-4b67-bd8f-22ad1b1bee23">4.5 Statement and proof of Bezout</a></li><li><a href="projplanecurves.html#e85ffce3-afe6-4cd3-b55e-2e5dc47effe1">4.6 Some more local algebra and local geometry</a></li><li><a href="projplanecurves.html#f3f58efd-1ea4-4089-a8b8-cf642d758626">4.7 Max Noether's theorem</a></li><li><a href="projplanecurves.html#3f9a0559-4001-4af4-b504-ce19570fcbb5">4.8 Elliptic curves</a></li><li><a href="projplanecurves.html#e2c4bfb3-7cc0-4aa1-b20f-5420aab0c460">4.9 Fun and surprising facts</a></li></ul><li><a class="kap" href="appendixA.html#e7f7511c-a042-485b-9cb2-33902e521cae"><b>A</b> Basic algebra</a></li><a href="#kapA" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapA" class="collapse"><li><a href="appendixA.html#4aaf0af7-cfc7-4e2c-9752-4971ef4a362e">A.1 Commutative rings</a></li><li><a href="appendixA.html#4d03a8ba-08af-4072-a08b-30c8bcc29028">A.2 Local rings</a></li></ul><li><a class="kap" href="references.html#a900eada-dca2-4106-b628-68d4975cbcf3"><b>R</b> References</a></li><a href="#kapR" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapR" class="collapse"></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="e7f7511c-a042-485b-9cb2-33902e521cae">A<span style="float:right;">Basic algebra</span></h1><div style="margin-top:20px"></div><span id="secA.1"></span><h2 id="4aaf0af7-cfc7-4e2c-9752-4971ef4a362e">A.1 Commutative rings</h2><div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">R</script> be a commutative ring. 
+Recall that <span class="math"></span><script type="math/tex">u\in R</script> is a unit if there exists <span class="math"></span><script type="math/tex">v\in R</script>, such that <span class="math"></span><script type="math/tex">u v = 1</script>. The subset of units in <span class="math"></span><script type="math/tex">R</script> is an abelian group with the multiplication from <span class="math"></span><script type="math/tex">R</script>. It is denoted <span class="math"></span><script type="math/tex">R^*</script>.
+We will mostly be dealing with integral domains i.e., 
+commutative rings with no zero divisors.<div style="margin-top:20px"></div>We will assume that the definition and construction of <span class="math"></span><script type="math/tex">R[x]</script>, the commutative ring
+of polynomials with coefficients in <span class="math"></span><script type="math/tex">R</script>, is known. Also, recall that a non-zero
+polynomial <span class="math"></span><script type="math/tex">f\in R[x]</script> can have at most <span class="math"></span><script type="math/tex">\deg(f)</script> roots if <span class="math"></span><script type="math/tex">R</script> is an integral
+domain.<div style="margin-top:20px"></div><span id="secA.1.1"></span><h3>A.1.1 Quotients</h3><div style="margin-top:20px"></div>One exceedingly important construction is the quotient ring. If <span class="math"></span><script type="math/tex">I</script> is an ideal
+in <span class="math"></span><script type="math/tex">R</script>, then 
+<div class="math"></div><script type="math/tex; mode=display">
+x \equiv y \pmod I \iff x - y \in I
+</script>
+is an equivalence relation. The equivalence class containing <span class="math"></span><script type="math/tex">x\in R</script> is
+simply <span class="math"></span><script type="math/tex">x + I</script> (why?). We denote this <span class="math"></span><script type="math/tex">[x]</script>.  The set of equivalence classes
+is denoted <span class="math"></span><script type="math/tex">R/I</script> and becomes a commutative ring via
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    [a] + [b] &= [a + b]\\
+    [a] [b] &= [a b].
+\end{aligned}</script>
+Even though this is so simple to write up, it can sometimes be difficult to grasp
+in real life. It is a very powerful definition.<div style="margin-top:20px"></div><span id="secA.1.2"></span><h3>A.1.2 Homomorphisms and ideals</h3>
+Let <span class="math"></span><script type="math/tex">S</script> be another commutative ring and <span class="math"></span><script type="math/tex">f: R\rightarrow S</script> a ring homomorphism. If <span class="math"></span><script type="math/tex">I\subset R</script> is an ideal, then <span class="math"></span><script type="math/tex">f(I)</script> is not necessarily an ideal in <span class="math"></span><script type="math/tex">S</script>. We let
+<span class="math"></span><script type="math/tex">I S</script> denote the ideal generated by <span class="math"></span><script type="math/tex">f(I)</script> in this context.<div style="margin-top:20px"></div><span id="envA.1"></span><div class="exercise" data-count="A.1">     
+Show that <span class="math"></span><script type="math/tex">f(I)</script> is an ideal in <span class="math"></span><script type="math/tex">S</script> if <span class="math"></span><script type="math/tex">f</script> is surjective.
+Give an example of a ring homomorphism <span class="math"></span><script type="math/tex">f: R\rightarrow S</script> and an ideal <span class="math"></span><script type="math/tex">I\subset R</script>, such that
+<span class="math"></span><script type="math/tex">f(I)</script> is not an ideal in <span class="math"></span><script type="math/tex">S</script>.
+</div><div style="margin-top:20px"></div>For a surjective ring homomorphism <span class="math"></span><script type="math/tex">f: R\rightarrow S</script> with kernel <span class="math"></span><script type="math/tex">K</script>, there is a 1-1 inclusion preserving correspondence between ideals in  <span class="math"></span><script type="math/tex">S</script> and ideals in <span class="math"></span><script type="math/tex">R</script> containing <span class="math"></span><script type="math/tex">K</script>. This
+correspondence is given by 
+<span id="equA.1"></span><div class="math"></div><script type="math/tex; mode=display">
+J\mapsto f(J) = \{f(x) \mid x\in J\},
+\tag{A.1}</script>
+where <span class="math"></span><script type="math/tex">J\supseteq K</script> is an ideal containing <span class="math"></span><script type="math/tex">K</script>.<div style="margin-top:20px"></div><span id="envA.2"></span><div class="exercise" data-count="A.2">     
+Show that the inverse map to <a href=#equA.1>(A.1)</a> is 
+<div class="math"></div><script type="math/tex; mode=display">
+I\mapsto f^{-1}(I) = \{x\in R\mid f(x)\in I\},
+</script>
+where <span class="math"></span><script type="math/tex">I</script> is an ideal in <span class="math"></span><script type="math/tex">S</script> (as <span class="math"></span><script type="math/tex">f</script> is surjective, <span class="math"></span><script type="math/tex">f(f^{-1}(I)) = I</script> holds, but
+what about <span class="math"></span><script type="math/tex">f^{-1}(f(J)) = J</script>?).
+</div><div style="margin-top:20px"></div><span id="secA.1.3"></span><h3>A.1.3 Fields</h3>
+A commutative
+ring <span class="math"></span><script type="math/tex">k</script> is called a field if <span class="math"></span><script type="math/tex">k^* = k\setminus \{0\}</script>.
+An integral domain <span class="math"></span><script type="math/tex">R</script> is contained in its field <span class="math"></span><script type="math/tex">K</script> of fractions, which is given by
+<div class="math"></div><script type="math/tex; mode=display">
+K = \left\{\frac{f}{g}\, \middle| \, f\in R, g\in R\setminus\{0\}\right\},
+</script>
+where
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{f}{g}\sim \frac{r}{s} \iff f s = g r.
+</script>
+The above is an equivalence relation and behaves well with the usual addition and multiplication
+of fractions. We view <span class="math"></span><script type="math/tex">R</script> as a subring of <span class="math"></span><script type="math/tex">K</script> by mapping <span class="math"></span><script type="math/tex">r</script> to <span class="math"></span><script type="math/tex">r/1</script>.<div style="margin-top:20px"></div>The fraction field of the polynomial ring <span class="math"></span><script type="math/tex">k[x]</script> is denoted <span class="math"></span><script type="math/tex">k(x)</script>. These are the classical rational functions i.e.,
+quotients of polynomials.<div style="margin-top:20px"></div><span id="secA.1.4"></span><h3>A.1.4 Algebraically closed fields</h3> <div style="margin-top:20px"></div>A field <span class="math"></span><script type="math/tex">k</script> is called algebraically closed if every non-constant 
+polynomial <span class="math"></span><script type="math/tex">f\in k[x]</script> has a root i.e., there exists <span class="math"></span><script type="math/tex">\alpha\in k</script> with
+<span class="math"></span><script type="math/tex">f(\alpha) = 0</script>.<div style="margin-top:20px"></div><span id="envA.3"></span><div class="exercise" data-count="A.3">     
+Prove that an algebraically closed field must be infinite.
+</div><div style="margin-top:20px"></div><span id="envA.4"></span><div class="example" data-count="A.4">     
+The most famous example of an algebraically closed field is the complex numbers <span class="math"></span><script type="math/tex">\mathbb{C}</script>. It is, 
+however, not easy to prove that <span class="math"></span><script type="math/tex">\mathbb{C}</script> is algebraically closed. Do you recall a proof?
+</div><div style="margin-top:20px"></div>Every field <span class="math"></span><script type="math/tex">k</script>  is contained in a unique (up to isomorphism fixing <span class="math"></span><script type="math/tex">k</script>) algebraically closed field <span class="math"></span><script type="math/tex">\overline{k}</script>, such that
+the field extension <span class="math"></span><script type="math/tex">k\subset \overline{k}</script> is algebraic (what do I mean by algebraic here?).<div style="margin-top:20px"></div><span id="envA.5"></span><div class="example" data-count="A.5">     
+<div class="math"></div><script type="math/tex; mode=display">
+\overline{\mathbb{R}} = \mathbb{C}.
+</script>
+</div><div style="margin-top:20px"></div><span id="envA.6"></span><div class="exercise" data-count="A.6">     
+How would you describe <span class="math"></span><script type="math/tex">\overline{\mathbb{F}}_p</script>, where <span class="math"></span><script type="math/tex">\mathbb{F}_p</script> is the field with <span class="math"></span><script type="math/tex">p</script> (prime) elements?
+</div><div style="margin-top:20px"></div><span id="secA.1.5"></span><h3>A.1.5 Prime ideals</h3>
+An ideal <span class="math"></span><script type="math/tex">P\subset R</script> is called a prime ideal if 
+<div class="math"></div><script type="math/tex; mode=display">
+x y\in P\implies x\in P\quad\text{or}\quad y\in P
+</script>
+for every <span class="math"></span><script type="math/tex">x, y\in R</script>. This happens if and only if <span class="math"></span><script type="math/tex">R/P</script> is an integral domain.<div style="margin-top:20px"></div><span id="secA.1.6"></span><h3>A.1.6 Maximal ideals</h3><div style="margin-top:20px"></div>A maximal ideal is an ideal <span class="math"></span><script type="math/tex">M</script> in <span class="math"></span><script type="math/tex">R</script>, which is maximal among proper ideals i.e., 
+if <span class="math"></span><script type="math/tex">I</script> is a proper ideal with <span class="math"></span><script type="math/tex">M\subseteq I</script>, then <span class="math"></span><script type="math/tex">M=I</script>. An ideal <span class="math"></span><script type="math/tex">M</script> is a maximal ideal
+if and only if <span class="math"></span><script type="math/tex">R/M</script> is a field.<div style="margin-top:20px"></div><span id="envA.7"></span><div class="exercise" data-count="A.7">     
+Prove that <span class="math"></span><script type="math/tex">M</script> is a maximal ideal if and only if <span class="math"></span><script type="math/tex">M + R x = R</script> for every 
+<span class="math"></span><script type="math/tex">x\not\in M</script>.
+</div><div style="margin-top:20px"></div>One can prove that every commutative ring contains a maximal ideal (Zorn's lemma).<div style="margin-top:20px"></div><span id="secA.1.7"></span><h3>A.1.7 The correspondence respects max and prime</h3><div style="margin-top:20px"></div>The correspondence in <a href=#equA.1>(A.1)</a> respects maximal and prime ideals:
+<div class="math"></div><script type="math/tex; mode=display">
+M\, \text{is a maximal (prime) ideal in}\, R\, \text{if and only if}\, f(M)\, \text{is a maximal (prime) ideal in}\, S
+</script><div style="margin-top:20px"></div><span id="secA.2"></span><h2 id="4d03a8ba-08af-4072-a08b-30c8bcc29028">A.2 Local rings</h2><div style="margin-top:20px"></div>A commutative ring <span class="math"></span><script type="math/tex">R</script> is called a local ring if it contains precisely one
+maximal ideal.<div style="margin-top:20px"></div><span id="envA.8"></span><div class="exercise" data-count="A.8">     
+Show that a commutative ring <span class="math"></span><script type="math/tex">R</script> is local if and only if <span class="math"></span><script type="math/tex">R\setminus R^*</script> is an ideal (which then is the unique maximal ideal in <span class="math"></span><script type="math/tex">R</script>).
+</div><div style="margin-top:20px"></div><span id="envA.9"></span><div class="exercise" data-count="A.9">     
+Let <span class="math"></span><script type="math/tex">p</script> be a prime number.<div style="margin-top:20px"></div>Show that
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{Z}_{(p)} = \left\{\frac{a}{b}\, \middle| \, a, b\in \mathbb{Z}, p\nmid b\right\}
+</script>
+is a subring of <span class="math"></span><script type="math/tex">\mathbb{Q}</script> containg <span class="math"></span><script type="math/tex">\mathbb{Z}</script> as a subring:
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{Z}\subset \mathbb{Z}_{(p)} \subset \mathbb{Q}.
+</script>
+Prove that <span class="math"></span><script type="math/tex">\mathbb{Z}_{(p)}</script> is a local
+ring with unique maximal ideal <span class="math"></span><script type="math/tex">(p) \mathbb{Z}_{(p)}</script>. Is <span class="math"></span><script type="math/tex">\mathbb{Z}_{(p)}</script> a field?
+</div><div style="margin-top:20px"></div></div></body>

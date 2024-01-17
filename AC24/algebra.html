@@ -1,0 +1,817 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.css" integrity="sha384-NFGicHNcq1l2DafLerXQeI3h3jJY3dCcDQF+29rtRBHW7P7ti+/XIRY7ALbJOaeh" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.js" integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#9a6e48b8-560e-4743-b6cc-78d08efd26d4"><b>1</b> A partly topological introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#4cbf1ecb-03bd-47fa-8c94-b66989068d80">1.1 A few words about rational functions</a></li><li><a href="intro.html#1d060616-4656-4b6f-aa26-374d7d84d7a2">1.2 Topology</a></li><li><a href="intro.html#3771d33a-7d9b-41c3-a6c7-602ebf1c5fe1">1.3 Compactification</a></li><li><a href="intro.html#12aef400-a75d-4054-bced-14580b5d5033">1.4 Projective spaces</a></li></ul><li><a class="kap" href="algebra.html#82c2a6e9-4760-4b82-8c26-1e0eca0715b9"><b>2</b> Algebra and geometry</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="algebra.html#44821ab0-9b5a-48b4-8725-a894b892b0ba">2.1 Algebraic sets</a></li><li><a href="algebra.html#4c52ba4a-8efd-4bfd-a837-9316ec399ea4">2.2 Irreducible components</a></li><li><a href="algebra.html#ebe242c9-f749-4cec-8d54-c831483add77">2.3 Primary decomposition</a></li><li><a href="algebra.html#5c9d8b64-a28e-4f50-91ea-28f41ef848d6">2.4 Computation</a></li><li><a href="algebra.html#eca6ff0b-2f3b-4265-9c51-65ee95879a6b">2.5 The Hilbert Nullstellensatz</a></li><li><a href="algebra.html#670547b0-892c-4d0c-baed-9196427bec3c">2.6 The combinatorial Nullstellensatz</a></li></ul><li><a class="kap" href="algcurves.html#51d2669f-9f54-4d3c-8ae3-03553c1c3427"><b>3</b> Affine algebraic curves</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="algcurves.html#bfd7cb65-013b-484a-8885-74342bf27e49">3.1 Intersection of two plane curves</a></li><li><a href="algcurves.html#d28414ce-e21f-4e1f-b663-307928731a89">3.2 Rational functions and local rings</a></li><li><a href="algcurves.html#78f530b6-7cba-4d4c-bd4f-2130682c11c7">3.3 Dimension in local rings</a></li><li><a href="algcurves.html#fab9922e-8acd-466f-a17f-b437a5b2f5f9">3.4 The crucial isomorphism</a></li></ul><li><a class="kap" href="projplanecurves.html#5b893ec3-273f-4bd3-8242-9f126677e61e"><b>4</b> Projective plane curves</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="projplanecurves.html#97e1ecca-5947-4783-8d83-f72b46771831">4.1 Rational functions on the projective plane</a></li><li><a href="projplanecurves.html#f68a370f-b108-4bda-843e-6631e6d77d0f">4.2 Homogeneous polynomials with no common factors</a></li><li><a href="projplanecurves.html#f25678fd-17d3-4bee-835d-c602058ed34a">4.3 Projective transformations</a></li><li><a href="projplanecurves.html#3422a594-3d07-458f-9771-27c0170b154e">4.4 Invariance under projective transformations</a></li><li><a href="projplanecurves.html#becfe332-68e3-4b67-bd8f-22ad1b1bee23">4.5 Statement and proof of Bezout</a></li><li><a href="projplanecurves.html#e85ffce3-afe6-4cd3-b55e-2e5dc47effe1">4.6 Some more local algebra and local geometry</a></li><li><a href="projplanecurves.html#f3f58efd-1ea4-4089-a8b8-cf642d758626">4.7 Max Noether's theorem</a></li><li><a href="projplanecurves.html#3f9a0559-4001-4af4-b504-ce19570fcbb5">4.8 Elliptic curves</a></li><li><a href="projplanecurves.html#e2c4bfb3-7cc0-4aa1-b20f-5420aab0c460">4.9 Fun and surprising facts</a></li></ul><li><a class="kap" href="appendixA.html#e7f7511c-a042-485b-9cb2-33902e521cae"><b>A</b> Basic algebra</a></li><a href="#kapA" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapA" class="collapse"><li><a href="appendixA.html#4aaf0af7-cfc7-4e2c-9752-4971ef4a362e">A.1 Commutative rings</a></li><li><a href="appendixA.html#4d03a8ba-08af-4072-a08b-30c8bcc29028">A.2 Local rings</a></li></ul><li><a class="kap" href="references.html#a900eada-dca2-4106-b628-68d4975cbcf3"><b>R</b> References</a></li><a href="#kapR" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapR" class="collapse"></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div>
+<h1 id="82c2a6e9-4760-4b82-8c26-1e0eca0715b9">2<span style="float:right;">Algebra and geometry</span></h1><div style="margin-top:20px"></div>The exposition in this chapter is a supplement to Chapter 1 in 
+<a href="http://www.math.lsa.umich.edu/~wfulton/CurveBook.pdf" target="_blank">Fulton's book</a>.<div style="margin-top:20px"></div><span id="sec2.1"></span><h2 id="44821ab0-9b5a-48b4-8725-a894b892b0ba">2.1 Algebraic sets</h2><div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">\mathbb{K}</script> denote a field, not necessarily the real numbers or
+complex numbers. It might be a field of positive charateristic.<div style="margin-top:20px"></div><span id="env2.1"></span><a class="Exerciseno" data-count="2.1"></a><a href="#8a72bf4d-d28d-441c-9e0f-1f60976bdfdc" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=8a72bf4d-d28d-441c-9e0f-1f60976bdfdc class = "collapse Exercise envbuttons">  
+Give an example of an infinite field of characteristic <span class="math"></span><script type="math/tex">p > 0</script>, where
+<span class="math"></span><script type="math/tex">p</script> is a prime number.
+Why is
+an algebraically closed field infinite?
+Do you know a concrete example
+of an algebraically closed field of characteristic <span class="math"></span><script type="math/tex">p>0</script>? 
+</div><div style="margin-top:20px"></div>The geometry in <em>Algebraic Geometry</em> comes from loking at points
+in affine <span class="math"></span><script type="math/tex">n</script>-dimensional space over <span class="math"></span><script type="math/tex">\mathbb{K}</script>. This object is
+defined by
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{K}^n = \{(a_1, \dots, a_n) \mid a_1, \dots, a_n\in \mathbb{K}\}.
+</script><div style="margin-top:20px"></div><span id="sec2.1.1"></span><h3>2.1.1 From ideals to subsets</h3><div style="margin-top:20px"></div>Consider finitely many polynomials <span class="math"></span><script type="math/tex">f_1, \dots, f_m\in
+R = \mathbb{K}[x_1, \dots, x_n]</script>. The set of solutions to
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  f_1(x_1, \dots, x_n) &= 0\\
+                       &\vdots\\
+  f_m(x_1, \dots, x_n) &= 0
+\end{aligned}</script>
+in <span class="math"></span><script type="math/tex">\mathbb{K}^n</script> is denoted <span class="math"></span><script type="math/tex">V(f_1, \dots, f_m)</script>. If we wish to be
+completely formal,
+<div class="math"></div><script type="math/tex; mode=display">
+V(f_1, \dots, f_m) = \{(a_1, \dots, a_n)\in \mathbb{K}^n \mid
+\forall i=1, \dots, m:\, f_i(a_1, \dots, a_n) = 0\}. 
+</script>
+A subset of this form
+is called an <em>algebraic set</em>. We may even generalize more and introduce
+<span id="env2.2"></span><div class="definition" data-count="2.2">     
+<div class="math"></div><script type="math/tex; mode=display">
+V(I) = \{(a_1, \dots, a_n)\in \mathbb{K}^n \mid \forall f\in I: f(a_1, \dots, a_n) =0 \}
+</script>
+for an ideal <span class="math"></span><script type="math/tex">I \subset R</script>.
+</div><div style="margin-top:20px"></div><span id="env2.3"></span><div class="exercise" data-count="2.3">     
+  Prove that
+  <div class="math"></div><script type="math/tex; mode=display">
+  V(f_1, \dots, f_m) = V(\langle f_1, \dots, f_m \rangle)
+  </script>
+  for <span class="math"></span><script type="math/tex">f_1, \dots, f_m\in R</script>.
+</div><div style="margin-top:20px"></div><span id="sec2.1.2"></span><h3>2.1.2 The Hilbert Basissatz</h3><div style="margin-top:20px"></div>A natural question arises. Suppose <span class="math"></span><script type="math/tex">I\subset R</script> is an ideal. Then
+<span class="math"></span><script type="math/tex">V(I)</script> can be viewed as the solution set to potentially infinitely
+many polynomial equations. Is <span class="math"></span><script type="math/tex">V(I)</script> an algebraic set? Is it the
+solution set to finitely many polynomial equations?<div style="margin-top:20px"></div>The answer is affirmative and contained in the famous Hilbert
+Basissatz. Reading through the proof below makes me think of
+<a href="https://en.wikipedia.org/wiki/Paul_Gordan" target="_blank">Gordan</a>'s famous words<div style="margin-top:20px"></div><blockquote>
+das ist keine Mathematik, das ist Theologie!
+</blockquote><div style="margin-top:20px"></div>In a sense, Gordan is right. The proof is divine and not very constructive.<div style="margin-top:20px"></div><span id="env2.4"></span><div class="theorem" data-count="2.4">     
+  If <span class="math"></span><script type="math/tex">I\subset R</script> is an ideal, then there exists finitely many
+  polynomials <span class="math"></span><script type="math/tex">f_1, \dots, f_m\in R</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  I = \langle f_1, f_2, \dots, f_m\rangle,
+  </script>
+  i.e., <span class="math"></span><script type="math/tex">I</script> is finitely generated.
+</div>
+<a href="#c793bb61-8ff4-4611-9fe9-3762f76237bd" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=c793bb61-8ff4-4611-9fe9-3762f76237bd class = "collapse Proof envbuttons">    <div style="margin-top:20px"></div>Here is the proof from <a href="https://en.wikipedia.org/wiki/Hilbert%27s_basis_theorem" target="_blank">Wikipedia</a>.<div style="margin-top:20px"></div>We will prove more generally, that if <span class="math"></span><script type="math/tex">R</script> is a commutative ring, where
+  every ideal is finitely generated, then the same property holds for
+  the polynomial ring <span class="math"></span><script type="math/tex">R[x]</script>.<div style="margin-top:20px"></div>Suppose for contradiction that there exists an ideal <span class="math"></span><script type="math/tex">I\subseteq R[x]</script>, which is
+not finitely generated. Then we may find a sequence <span class="math"></span><script type="math/tex">f_1, f_2, \dots</script> of
+polynomials in <span class="math"></span><script type="math/tex">I</script>, such that<div style="margin-top:20px"></div><ul><li>
+  <span class="math"></span><script type="math/tex">0\subsetneq \langle f_1\rangle \subsetneq \langle f_1, f_2\rangle\subsetneq \cdots</script><div style="margin-top:20px"></div></li><li>
+<span class="math"></span><script type="math/tex">\deg(f_1)\leq \deg(f_2)\leq \cdots</script><div style="margin-top:20px"></div></li></ul><div style="margin-top:20px"></div>At each step in the process, we simply pick a polynomial of minimal degree in
+<div class="math"></div><script type="math/tex; mode=display">
+I\setminus \langle f_1, \dots, f_m\rangle.
+</script>
+Let <span class="math"></span><script type="math/tex">a_i\in R</script> denote the leading coefficient of <span class="math"></span><script type="math/tex">f_i</script>. Then the increasing chain
+<div class="math"></div><script type="math/tex; mode=display">
+\langle a_1\rangle\subseteq \langle a_1, a_2\rangle \subseteq \cdots
+</script>
+of ideals in <span class="math"></span><script type="math/tex">R</script> must stabilize i.e., there exists <span class="math"></span><script type="math/tex">N</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+\langle a_1, \dots, a_N\rangle = \langle a_1, \dots, a_N, a_{N+1}\rangle = \cdots 
+</script>
+Suppose that
+<div class="math"></div><script type="math/tex; mode=display">
+a_{N+1} = \lambda_1 a_1 + \cdots + \lambda_N a_N.
+</script>
+Then 
+<span id="equ2.1"></span><div class="math"></div><script type="math/tex; mode=display">
+f_{N+1} - \lambda_1 x^{\deg(f_{N+1})- \deg(f_1)}  f_1 - \cdots - \lambda_N x^{\deg(f_{N+1})-
+ \deg(f_N)}  f_N
+\tag{2.1}</script>
+is a polynomial of degree strictly less than <span class="math"></span><script type="math/tex">\deg(f_{N+1})</script>. The polynomial <a href=#equ2.1>(2.1)</a> 
+cannot belong to <span class="math"></span><script type="math/tex">\langle f_1, \dots, f_N\rangle</script>. On the other hand it cannot not belong either.
+This is a contradiction.
+  </div><div style="margin-top:20px"></div><span id="sec2.1.3"></span><h3>2.1.3 From subsets to ideals</h3><div style="margin-top:20px"></div><span id="env2.5"></span><div class="definition" data-count="2.5">     
+  Let <span class="math"></span><script type="math/tex">X \subset \mathbb{K}^n</script>. Then <span class="math"></span><script type="math/tex">I(X)</script> denotes the ideals of polynomials
+  vanishing on <span class="math"></span><script type="math/tex">X</script> i.e.,
+  <div class="math"></div><script type="math/tex; mode=display">
+  I(X) = \{f\in R \mid \forall (a_1, \dots, a_n)\in X: f(a_1, \dots, a_n) = 0\}.
+  </script>
+  </div><div style="margin-top:20px"></div><span id="env2.6"></span><div class="definition" data-count="2.6">     
+Let <span class="math"></span><script type="math/tex">J</script> be an ideal in a commutative ring <span class="math"></span><script type="math/tex">R</script>. Then
+<div class="math"></div><script type="math/tex; mode=display">
+\operatorname{rad}(J) = \{r\in R \mid \exists N\in \mathbb{N}: n\geq N \implies r^n \in J\}.
+</script>
+</div><div style="margin-top:20px"></div><span id="env2.7"></span><div class="exercise" data-count="2.7">     
+  Prove that <span class="math"></span><script type="math/tex">\operatorname{rad}(J)</script> is an ideal. Show that <span class="math"></span><script type="math/tex">J \subset \operatorname{rad}(J)</script> and given an example
+  of an ideal, where <span class="math"></span><script type="math/tex">J\subsetneq \operatorname{rad}(J)</script>.
+</div><div style="margin-top:20px"></div><span id="env2.8"></span><div class="exercise" data-count="2.8">     
+  Let <span class="math"></span><script type="math/tex">J</script> be an ideal in a commutative ring <span class="math"></span><script type="math/tex">R</script>.
+Prove that the radical <span class="math"></span><script type="math/tex">\operatorname{rad}(J)</script> is the intersection of the prime ideals
+<span class="math"></span><script type="math/tex">P\supset J</script> containing <span class="math"></span><script type="math/tex">J</script>.<div style="margin-top:20px"></div><a href="#78dfc89a-5d21-4640-a284-513b38c0627e" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=78dfc89a-5d21-4640-a284-513b38c0627e class = "collapse Hint envbuttons">    
+  Suppose that <span class="math"></span><script type="math/tex">f^n\not\in J</script> for <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script> and consider
+  <div class="math"></div><script type="math/tex; mode=display">
+  S = \{f^n \mid n\in \mathbb{N}\}
+  </script>
+  and the set of ideals
+  <div class="math"></div><script type="math/tex; mode=display">
+  \mathcal{I} = \{\mathfrak{a}\supseteq J \mid \mathfrak{a} \cap S = \emptyset\}.
+  </script>
+  Show that <span class="math"></span><script type="math/tex">\mathcal{I}</script> contains a maximal element <span class="math"></span><script type="math/tex">\mathfrak{p}</script> with respect to inclusion
+  and that <span class="math"></span><script type="math/tex">\mathfrak{p}</script> is a prime ideal containing <span class="math"></span><script type="math/tex">J</script>.<div style="margin-top:20px"></div><a href="#897411d7-e33c-47f4-b8e7-adfbf6590744" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=897411d7-e33c-47f4-b8e7-adfbf6590744 class = "collapse Hint envbuttons">    
+    Apply <a href="https://en.wikipedia.org/wiki/Zorn%27s_lemma" target="_blank">Zorn's lemma</a>
+    to <span class="math"></span><script type="math/tex">\mathcal{I}</script> to conclude the existence of a maximal element <span class="math"></span><script type="math/tex">\mathfrak{p}\in \mathcal{I}</script>.
+    If <span class="math"></span><script type="math/tex">\mathfrak{p}</script> is not a prime ideal, there exists <span class="math"></span><script type="math/tex">x, y\not\in \mathfrak{p}</script>,
+    such that <span class="math"></span><script type="math/tex">x y \in \mathfrak{p}</script>. Show that this leads to a
+    contradiction.
+      </div>
+  </div>
+</div><div style="margin-top:20px"></div><span id="sec2.1.4"></span><h3>2.1.4 Eisenbud-Evans</h3><div style="margin-top:20px"></div>So given an algebraic subset in <span class="math"></span><script type="math/tex">\mathbb{K}^n</script> it is always a finite intersection
+of algebraic hypersurfaces <span class="math"></span><script type="math/tex">V(f)</script> for <span class="math"></span><script type="math/tex">f\in \mathbb{K}[x_1, \dots, x_n]</script>. This is a
+consequence of Theorem <a href=#env2.4 class="labelref">2.4</a>. It turns
+out that <span class="math"></span><script type="math/tex">n</script> hypersurfaces is enough! This is a famous result by 
+<a href="https://en.wikipedia.org/wiki/David_Eisenbud" target="_blank">Eisenbud</a> and 
+Evans. Graham Evans was a professor at the <a href="https://uiuc.edu" target="_blank">University of Illinois</a>, where I got my phd.
+He passed away recently and Eisenbud (along with Phil Griffith) wrote
+<a href="https://www.commalg.org/2021/03/23/e-graham-evans-1942-2021/" target="_blank">obituaries</a>. <div style="margin-top:20px"></div>Here is an excerpt from the Eisenbud-Evans Inventiones paper.<div style="margin-top:20px"></div><span id="env2.9"></span><div class="figure" data-count="2.9">     
+The paper itself is very readable and starts with nice summary of the
+history:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/EE0.png" ></div><div style="margin-top:20px"></div>Then they move on to the proof itself. Here one needs to know
+some basic commutative algebra.<div style="margin-top:20px"></div><div class="centerimg"><img src="img/EE1.png" ></div><div style="margin-top:20px"></div><div class="centerimg"><img src="img/EE2.png" ></div>
+</div><div style="margin-top:20px"></div><span id="sec2.1.5"></span><h3>2.1.5 The Zariski topology on <span class="math"></span><script type="math/tex">\mathbb{K}^n</script></h3><div style="margin-top:20px"></div><span id="env2.10"></span><a class="Exerciseno" data-count="2.10"></a><a href="#8c75e4fe-c204-400c-b67c-0902ed5c254a" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=8c75e4fe-c204-400c-b67c-0902ed5c254a class = "collapse Exercise envbuttons">  
+<span id="{labelname}"></span><div id="quiz1" style="width:100%;"><div class="row quizquestion">
+Suppose that <span class="math"></span><script type="math/tex">I</script> and <span class="math"></span><script type="math/tex">J</script> are ideals in a commutative ring. What is the
+definition of the ideal <span class="math"></span><script type="math/tex">I J</script>?
+</div><div class="row quizboxes"><div class="col-xs-5 quizanswer" datav="F">
+<span class="math"></span><script type="math/tex">\{x y \mid x\in I, y\in J\}</script>
+</div><div class="col-xs-5 quizanswer" datav="T">
+No! It is a bit more subtle.
+</div></div></div><button id="quizbutton1" class = "btn btn-default">Check</button><script>$("#quizbutton1").click(function(){quizshowanswers(quiz1, quizbutton1);});</script>
+</div><div style="margin-top:20px"></div><span id="env2.11"></span><a class="Exerciseno" data-count="2.11"></a><a href="#b03b8d55-1808-47f4-a192-78bbd0e53c00" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=b03b8d55-1808-47f4-a192-78bbd0e53c00 class = "collapse Exercise envbuttons">  
+  Give an example of two ideals <span class="math"></span><script type="math/tex">I, J</script> in a ring <span class="math"></span><script type="math/tex">R</script>, where
+  <div class="math"></div><script type="math/tex; mode=display">
+  I J \neq \{x y \mid x\in I, y\in J\}.
+  </script>
+</div><div style="margin-top:20px"></div>The following result is not too hard to prove (do it!). Especially the last item is fun.
+It combines the other items.<div style="margin-top:20px"></div><span id="env2.12"></span><div class="proposition" data-count="2.12">     
+Let <span class="math"></span><script type="math/tex">X_1\subseteq X_2</script> be subsets of <span class="math"></span><script type="math/tex">\mathbb{K}^n</script>, <span class="math"></span><script type="math/tex">S_1\subseteq S_2</script> subsets
+of <span class="math"></span><script type="math/tex">R</script> with <span class="math"></span><script type="math/tex">J_1=\langle S_1\rangle</script> and <span class="math"></span><script type="math/tex">J_2 = \langle S_2\rangle</script>. Then<div style="margin-top:20px"></div><ul><li>
+<span class="math"></span><script type="math/tex">V(S_1)\supseteq V(S_2)</script><div style="margin-top:20px"></div></li><li>
+<span class="math"></span><script type="math/tex">I(X_1)\supseteq I(X_2)</script><div style="margin-top:20px"></div></li><li>
+<span class="math"></span><script type="math/tex">V(J_1)\cup V(J_2) = V(J_1 J_2)</script><div style="margin-top:20px"></div></li><li>
+<span class="math"></span><script type="math/tex">\bigcap_i V(J_i) = V\left(\sum_i J_i\right)</script> for a family <span class="math"></span><script type="math/tex">(J_i)</script> of ideals in <span class="math"></span><script type="math/tex">R</script>.<div style="margin-top:20px"></div></li><li>
+The algebraic subsets form a topology (of closed subsets) on <span class="math"></span><script type="math/tex">\mathbb{K}^n</script>.<div style="margin-top:20px"></div></li><li>
+<span class="math"></span><script type="math/tex">V(I(X))\supseteq X</script>, where <span class="math"></span><script type="math/tex">X</script> is a subset of <span class="math"></span><script type="math/tex">\mathbb{K}^n</script>.<div style="margin-top:20px"></div></li><li>
+<span class="math"></span><script type="math/tex">I(V(S))\supseteq S</script>, where <span class="math"></span><script type="math/tex">S</script> is a subset of <span class="math"></span><script type="math/tex">R</script>.<div style="margin-top:20px"></div></li><li>
+<span class="math"></span><script type="math/tex">V(I(V(S)) = V(S)</script>, where <span class="math"></span><script type="math/tex">S</script> is a subset of <span class="math"></span><script type="math/tex">R</script>.<div style="margin-top:20px"></div></li><li>
+<span class="math"></span><script type="math/tex">I(V(J)) \supseteq \operatorname{rad}(J)</script>, where <span class="math"></span><script type="math/tex">J</script> is an ideal of <span class="math"></span><script type="math/tex">R</script>.<div style="margin-top:20px"></div></li><li>
+<span class="math"></span><script type="math/tex">V(I(X)) = \overline{X}</script> i.e., the closure of <span class="math"></span><script type="math/tex">X</script>.
+</li></ul>
+</div><div style="margin-top:20px"></div>The topology alluded to in the above result is called the <em>Zariski topology</em> on
+<span class="math"></span><script type="math/tex">\mathbb{K}^n</script>. It is named after the legendary algebraic geometer <a href="https://en.wikipedia.org/wiki/Oscar_Zariski" target="_blank">Oscar Zariski</a>.<div style="margin-top:20px"></div>Compared to the usual topology on for example <span class="math"></span><script type="math/tex">\mathbb{C}</script> it is incredibly coarse. The closed subsets
+of <span class="math"></span><script type="math/tex">\mathbb{C}</script> are precisely the finite ones (why?). It is not Hausdorff, since two non-empty open
+subsets always have non-trivial intersection. Since the open subsets are the cofinite ones, the
+Zariski topology makes <span class="math"></span><script type="math/tex">\mathbb{C}</script> into a compact topological space.<div style="margin-top:20px"></div><span id="sec2.2"></span><h2 id="4c52ba4a-8efd-4bfd-a837-9316ec399ea4">2.2 Irreducible components</h2><div style="margin-top:20px"></div>In the previous chapter we defined what it means
+for a topological space to be irreduible.<div style="margin-top:20px"></div><span id="env2.13"></span><div class="proposition" data-count="2.13">     
+An algebraic subset <span class="math"></span><script type="math/tex">V</script> is irreducible if and only if <span class="math"></span><script type="math/tex">I(V)</script> is a prime ideal.
+</div><div style="margin-top:20px"></div>To show that every algebraic subset is a finite union of irreducible subsets,
+we need the following result on noetherian rings.<div style="margin-top:20px"></div><span id="env2.14"></span><div class="lemma" data-count="2.14">     
+Every non-empty collection of ideals in a noetherian ring <span class="math"></span><script type="math/tex">R</script> has a 
+maximal element.
+</div><div style="margin-top:20px"></div>This translates into the fact that every collection of algebraic
+subsets has a minimal member! Now the proof of the following theorem
+becomes accessible.  In fact the idea of the proof is very similar to
+the proof of the fundamental theorem of arithmetic! Just think about it:
+let <span class="math"></span><script type="math/tex">m</script> be the smallest natural number not having a prime factorization etc.<div style="margin-top:20px"></div><span id="env2.15"></span><div class="theorem" data-count="2.15">     
+Every algebraic subset <span class="math"></span><script type="math/tex">V</script> has a unique decomposition into irreducible subsets <span class="math"></span><script type="math/tex">V_1, \dots, V_m</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+V = V_1 \cup \cdots \cup V_m
+</script>
+and <span class="math"></span><script type="math/tex">V_i\nsubseteq V_j</script> for <span class="math"></span><script type="math/tex">i\neq j</script>.
+<p><div style="float:right;"><a href="#7673ba14-9812-4549-9fe5-7d313a07edb6" class="btn btn-default"data-toggle="collapse"><span class="glyphicon glyphicon-eye-open"></span><span class="glyphicon glyphicon-eye-open"></span></a></div><div style="clear: both;"></div></p><div id="7673ba14-9812-4549-9fe5-7d313a07edb6" class="collapse">
+Try to prove this using the above hints. Now, just because there is a slick proof does NOT mean that
+the irreducible components are easy to find.
+</div>
+</div><div style="margin-top:20px"></div><span id="sec2.3"></span><h2 id="ebe242c9-f749-4cec-8d54-c831483add77">2.3 Primary decomposition</h2><div style="margin-top:20px"></div>According to Theorem <a href=#env2.15 class="labelref">2.15</a> an algebraic subset <span class="math"></span><script type="math/tex">V\subset \mathbb{K}^n</script> is the
+union of irreducible algebraic subsets in an essentially unique way. If we translate this to algebra,
+it means
+<div class="math"></div><script type="math/tex; mode=display">
+I(V) = I(V_1) \cap \cdots \cap I(V_m)
+</script>
+or that a radical ideal is the intersection of the minimal
+prime ideals above it. We are interested in a generalization of this
+result. We want it to hold for all ideals, not just radical ideals.<div style="margin-top:20px"></div>A first guess looking at the non-radical ideal <span class="math"></span><script type="math/tex">(x^2)\subset \mathbb{C}[x]</script> could
+be that every ideal is the intersection of powers of prime ideals. The
+exercise below shows that this is wrong.<div style="margin-top:20px"></div><span id="env2.16"></span><div class="exercise" data-count="2.16">     
+  let <span class="math"></span><script type="math/tex">I = (x^2, y) \subset \mathbb{C}[x, y]</script>. Show that <span class="math"></span><script type="math/tex">I</script> is not an
+  intersection of powers of prime ideals.
+  </div><div style="margin-top:20px"></div>The right ideals in this context are primary ideals.<div style="margin-top:20px"></div><span id="env2.17"></span><div class="definition" data-count="2.17">     
+  An ideal <span class="math"></span><script type="math/tex">I\subset R</script> in a commutative ring <span class="math"></span><script type="math/tex">R</script>
+is called <em>irreducible</em> if <span class="math"></span><script type="math/tex">I = J_1 \cap J_2 \implies I = J_1 \lor I = J_2</script>, where
+  <span class="math"></span><script type="math/tex">J_1, J_2\subset R</script> are ideals of <span class="math"></span><script type="math/tex">R</script>.<div style="margin-top:20px"></div>It is called
+  <em>primary</em> if <span class="math"></span><script type="math/tex">\forall a, b\in R</script>,
+  <div class="math"></div><script type="math/tex; mode=display">
+  a b \in I\quad\land\quad a\not\in I \quad \implies \quad \exists n\in \mathbb{N}:\quad b^n\in I.
+  </script>
+</div><div style="margin-top:20px"></div>The third part of the exercise below was inspired by a great in class interaction.<div style="margin-top:20px"></div><span id="env2.18"></span><div class="exercise" data-count="2.18">     <div style="margin-top:20px"></div><ol class="lowerroman"><li id="ite2.1">
+  Show that an ideal <span class="math"></span><script type="math/tex">I\subset R</script> is primary if and only if the zero divisors in <span class="math"></span><script type="math/tex">R/I</script>
+  are nilpotent.
+</li><li id="ite2.2">
+  Show that the radical of a primary ideal is a prime ideal.
+</li><li id="ite2.3">
+  Suppose that <span class="math"></span><script type="math/tex">Q</script> is a primary ideal with <span class="math"></span><script type="math/tex">\operatorname{rad}(Q) = P</script>. Prove that
+  if <span class="math"></span><script type="math/tex">a b\in Q</script> and <span class="math"></span><script type="math/tex">a\not\in P</script>, then <span class="math"></span><script type="math/tex">b\in Q</script>.<div style="margin-top:20px"></div></li><li id="ite2.4">
+  Suppose that <span class="math"></span><script type="math/tex">Q_1</script> and <span class="math"></span><script type="math/tex">Q_2</script> are primary ideals with <span class="math"></span><script type="math/tex">\operatorname{rad}(Q_1) = \operatorname{rad}(Q_2) = P</script>. Prove
+  that <span class="math"></span><script type="math/tex">Q_1 \cap Q_2</script> is a primary ideal with <span class="math"></span><script type="math/tex">\operatorname{rad}(Q_1 \cap Q_2) = P</script>.
+  </li></ol>
+</div><div style="margin-top:20px"></div><span id="env2.19"></span><div class="exercise" data-count="2.19">     
+  Is a power of a prime ideal a primary ideal?
+  Is an ideal <span class="math"></span><script type="math/tex">I</script> a primary ideal if <span class="math"></span><script type="math/tex">\operatorname{rad}(I)</script> is a prime ideal?<div style="margin-top:20px"></div><a href="#6caa625b-50c7-4b65-92f2-ac775c2987c6" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=6caa625b-50c7-4b65-92f2-ac775c2987c6 class = "collapse Hint envbuttons">    
+    Consider <span class="math"></span><script type="math/tex">R = k[x, y, z]/(x y - z^2)</script> along with the prime ideal <span class="math"></span><script type="math/tex">\mathfrak{p} = ([x], [z])</script>
+    and <span class="math"></span><script type="math/tex">\mathfrak{q} = \mathfrak{p}^2</script>. Focus on the identity <span class="math"></span><script type="math/tex">[x] [y] = [z]^2</script> in <span class="math"></span><script type="math/tex">R</script>.
+      </div><div style="margin-top:20px"></div>Is an ideal <span class="math"></span><script type="math/tex">I</script> a primary ideal if <span class="math"></span><script type="math/tex">\operatorname{rad}(I)</script> is a maximal ideal?
+</div><div style="margin-top:20px"></div><span id="env2.20"></span><div class="exercise" data-count="2.20">     
+  Show that an irreducible ideal <span class="math"></span><script type="math/tex">I \subset R</script> in a noetherian ring <span class="math"></span><script type="math/tex">R</script> is primary.<div style="margin-top:20px"></div><a href="#9b4d2817-0305-4269-9886-d0f94708bd51" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=9b4d2817-0305-4269-9886-d0f94708bd51 class = "collapse Hint envbuttons">    
+    We may assume that <span class="math"></span><script type="math/tex">I = (0)</script> is an irreducible ideal by moving to <span class="math"></span><script type="math/tex">R/I</script> and in there prove that
+    <span class="math"></span><script type="math/tex">(0)</script> is a primary ideal. Assume that <span class="math"></span><script type="math/tex">a\neq 0</script> and <span class="math"></span><script type="math/tex">a b = 0</script>.
+    The annihilator <span class="math"></span><script type="math/tex">\operatorname{ann}(x) = \{r\in R \mid r x = 0\}</script> is an ideal for <span class="math"></span><script type="math/tex">x\in R</script>.
+    Apply the ascending chain
+    <div class="math"></div><script type="math/tex; mode=display">
+    \operatorname{ann}(b) \subset \operatorname{ann}(b^2) \subset \cdots
+    </script>
+    of ideals
+    to prove that <span class="math"></span><script type="math/tex">b^n = 0</script> for some <span class="math"></span><script type="math/tex">n</script> by showing that 
+      <div class="math"></div><script type="math/tex; mode=display">
+      (a) \cap (b^n) = (0).
+      </script>
+      </div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>The result below is often referred to as the <a href="https://en.wikipedia.org/wiki/Primary_decomposition" target="_blank">Lasker-Noether theorem</a>. It may be viewed as a purely algebraic analogue of the fact that every integer is
+a product of prime numbers.<div style="margin-top:20px"></div><span id="env2.21"></span><div class="theorem" data-count="2.21">     
+  Let <span class="math"></span><script type="math/tex">I\subset R</script> be an ideal in a noetherian commutative ring <span class="math"></span><script type="math/tex">R</script>. Then
+  there exists irredundant primary ideals <span class="math"></span><script type="math/tex">Q_1, \dots, Q_r</script> in <span class="math"></span><script type="math/tex">R</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  I = Q_1 \cap \cdots \cap Q_r
+  </script>
+  and the prime ideals <span class="math"></span><script type="math/tex">\operatorname{rad}(Q_i)</script> are distinct.
+  </div>
+  <a href="#0bedd395-7c80-4f54-bd9e-d188b94990e8" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=0bedd395-7c80-4f54-bd9e-d188b94990e8 class = "collapse Proof envbuttons">    
+    First prove that <span class="math"></span><script type="math/tex">I</script> can be written as the intersection of finitely many irreducible
+    ideals: suppose there exists ideals
+    without a finite irreducible decomposition. Pick a maximal one among these (every non-empty
+    set of ideals in a noetherian ring has a maximal element with respect to inclusion). Proceed
+    like in the proof of the existence of prime factorizations of natural numbers.<div style="margin-top:20px"></div>Use Exercise <a href=#env2.20 class="labelref">2.20</a>.<div style="margin-top:20px"></div>Then move on to prove the last statement in the theorem by applying
+    Exercise <a href=#env2.18 class="labelref">2.18</a> <a href=#ite2.4 class="labelref">(&#8563;.)</a>.
+    </div><div style="margin-top:20px"></div><span id="sec2.3.1"></span><h3>2.3.1 Monomial ideals</h3><div style="margin-top:20px"></div>For <span class="math"></span><script type="math/tex">v\in \mathbb{N}^n</script>. We use the notation <span class="math"></span><script type="math/tex">x^v</script> for the corresponding monomial in
+  <span class="math"></span><script type="math/tex">\mathbb{K}[x_1, \dots, x_n]</script> i.e., if for example <span class="math"></span><script type="math/tex">v = (1, 2, 3)</script>, then
+  <span class="math"></span><script type="math/tex">x^v = x_1\, x_2^2\, x_3^3</script>.<div style="margin-top:20px"></div><span id="env2.22"></span><div class="definition" data-count="2.22">     
+    An ideal <span class="math"></span><script type="math/tex">I</script> in <span class="math"></span><script type="math/tex">\mathbb{K}[x_1, \dots, x_n]</script>  is called a <em>monomial ideal</em> if it is generated
+    by monomials:
+    <span id="equ2.2"></span><div class="math"></div><script type="math/tex; mode=display">
+    I = \langle x^{v_1}, \dots, x^{v_m}\rangle.
+    \tag{2.2}</script>
+    A set of monomial generators as in <a href=#equ2.2>(2.2)</a> is called <em>minimal</em> if
+    <div class="math"></div><script type="math/tex; mode=display">
+    x^{v_i} \nmid x^{v_j}
+    </script>
+    for <span class="math"></span><script type="math/tex">i\neq j</script>.
+</div><div style="margin-top:20px"></div><span id="env2.23"></span><div class="exercise" data-count="2.23">     
+  Let <span class="math"></span><script type="math/tex">I = \langle x^{v_1}, \dots, x^{v_m}\rangle</script> be a monomial ideal.<div style="margin-top:20px"></div><ol class="lowerroman"><li id="ite2.5">
+  Prove that
+  a monomial <span class="math"></span><script type="math/tex">x^v\in I</script> if and only if <span class="math"></span><script type="math/tex">x^{v_i} \mid x^v</script> for some <span class="math"></span><script type="math/tex">i = 1, \dots, m</script>.
+</li><li id="ite2.6">
+  Prove that a polynomial <span class="math"></span><script type="math/tex">f\in \mathbb{K}[x_1, \dots, x_n]</script> belongs to <span class="math"></span><script type="math/tex">I</script> if and only
+  if every term (monomial with non-zero coefficient) in <span class="math"></span><script type="math/tex">f</script> belongs to <span class="math"></span><script type="math/tex">I</script>.
+</li><li id="ite2.7">
+  Prove that a monomial ideal is uniquely given by a set of minimal generators.
+</li><li id="ite2.8">
+  Prove that the intersection of two monomial ideals is a monomial ideal.
+</li><li id="ite2.9">
+  Prove that the product of two monomial ideals is a monomial ideal.
+</li><li id="ite2.10">
+  Suppose that <span class="math"></span><script type="math/tex">I</script> and <span class="math"></span><script type="math/tex">J</script> are monomial ideals. Is <span class="math"></span><script type="math/tex">I J  = I \cap J</script>?
+</li></ol><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>Irreducible decompositions (and thereby primary decompositions) of
+monomial ideals can be computed using the result below.<div style="margin-top:20px"></div><span id="env2.24"></span><div class="proposition" data-count="2.24">     
+    Let <span class="math"></span><script type="math/tex">I</script> be a monomial ideal and <span class="math"></span><script type="math/tex">m\in I</script> a minimal generator with <span class="math"></span><script type="math/tex">m = m_1 m_2</script>, where
+    <span class="math"></span><script type="math/tex">m_1</script> and <span class="math"></span><script type="math/tex">m_2</script> are relatively prime monomials. Then
+    <span id="equ2.3"></span><div class="math"></div><script type="math/tex; mode=display">
+    I = (I + \langle m_1\rangle)\cap (I+\langle m_2 \rangle).
+    \tag{2.3}</script>
+    A monomial ideal is irreducible if and only if it is generated by powers of a
+    subset of the variables.
+    </div><div style="margin-top:20px"></div><a href="#fe1cb3f8-c5be-4fec-8171-4ecea5d7cb07" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=fe1cb3f8-c5be-4fec-8171-4ecea5d7cb07 class = "collapse Proof envbuttons">    
+      If <span class="math"></span><script type="math/tex">m_1</script> and <span class="math"></span><script type="math/tex">m_2</script> are relatively prime monomials, then <span class="math"></span><script type="math/tex">m_1\mid x^v</script> and <span class="math"></span><script type="math/tex">m_2\mid x^v</script>
+      if and only if <span class="math"></span><script type="math/tex">m_1 m_2 \mid x^v</script>. This proves <a href=#equ2.3>(2.3)</a>.
+      </div><div style="margin-top:20px"></div><span id="env2.25"></span><div class="exercise" data-count="2.25">     
+      We have not proved above that a monomial ideal is irreducible if and only
+      if it is generated by powers of a subset of the variables like for example
+      <span id="equ2.4"></span><div class="math"></div><script type="math/tex; mode=display">
+      (x^2, y^3, z^5) \subset \mathbb{K}[x, y, z, w].
+      \tag{2.4}</script>
+      A light version of this result says the following. Suppose that <span class="math"></span><script type="math/tex">M</script> is
+      a monomial ideal in <span class="math"></span><script type="math/tex">R = \mathbb{K}[x_1, \dots, x_n]</script> generated by powers
+      of some of the variables (as in <a href=#equ2.4>(2.4)</a>). Suppose that
+      <div class="math"></div><script type="math/tex; mode=display">
+      M = M_1 \cap M_2,
+      </script>
+      where <span class="math"></span><script type="math/tex">M_1</script> and <span class="math"></span><script type="math/tex">M_2</script> are monomial ideals. Then <span class="math"></span><script type="math/tex">M = M_1</script> or <span class="math"></span><script type="math/tex">M = M_2</script>. Prove this.<div style="margin-top:20px"></div><a href="#528c6bec-e7af-4490-b250-8c34ee4dec7f" class ="btn btn-default" data-toggle="collapse">Extra credit</a><div id=528c6bec-e7af-4490-b250-8c34ee4dec7f class="collapse">
+        Show in the above setting, that if <span class="math"></span><script type="math/tex">M = J_1 \cap J_2</script>, where
+        <span class="math"></span><script type="math/tex">J_1</script> and <span class="math"></span><script type="math/tex">J_2</script> are arbitrary ideals, that <span class="math"></span><script type="math/tex">M = J_1</script> or
+        <span class="math"></span><script type="math/tex">M = J_2</script>.<div style="margin-top:20px"></div>I have only seen a proof of this once in the literature (see <span class="bubblelabel">[1, Theorem 3.2.4]</span><span class="bubblecontent"><span class="bubbleinnercontent">[1]: W. Frank Moore, Marks Rogers and Sean Sather-Wagstaff. <i>Monomial Ideals and Their Decompositions</i></span></span>) and it seemed
+        rather complicated. Would be nice with a short (and natural?) proof.
+      </div>
+      </div><div style="margin-top:20px"></div><span id="env2.26"></span><div class="exercise" data-count="2.26">     
+    Give an example of a primary ideal that is not irreducible.
+  </div><div style="margin-top:20px"></div><span id="env2.27"></span><div class="exercise" data-count="2.27">     
+    Show that
+    <div class="math"></div><script type="math/tex; mode=display">
+    (x^2, x y) = (x) \cap (x^2, y) = (x) \cap (x, y)^2.
+    </script>
+    Why is this example worth noticing? What does <tt>Macaulay2</tt> prefer?
+    </div><div style="margin-top:20px"></div>Primary decomposition is built into <tt>Macaulay2</tt>:<div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+R = QQ[x, y]
+I = ideal(x^2 * y, y^2)
+primaryDecomposition(I)
+</script></div><div style="margin-top:20px"></div><span id="sec2.4"></span><h2 id="5c9d8b64-a28e-4f50-91ea-28f41ef848d6">2.4 Computation</h2><div style="margin-top:20px"></div><span id="env2.28"></span><div class="example" data-count="2.28">     
+  Consider
+  <div class="math"></div><script type="math/tex; mode=display">
+  X = \{(t, t^2, t^3) \mid t\in k\} \subset k^3.
+  </script><div style="margin-top:20px"></div>Below you see a bit of <tt>Macaulay2</tt> magic used
+  to compute <span class="math"></span><script type="math/tex">I(X)</script>.<div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+R = QQ[x, y, z, t]
+I = ideal(x - t, y - t^2, z - t^3)
+eliminate(t, I)
+</script></div>
+</div><div style="margin-top:20px"></div>The magic technology in the above <tt>Macaulay2</tt> window involves the
+command <tt>eliminate(t, I)</tt>. What does this command do? In
+the situation above, it simply computes the ideal
+<div class="math"></div><script type="math/tex; mode=display">
+(x - t, y - t^2, z - t^3) \cap \mathbb{K}[x, y, z].
+</script>
+This operation is called <em>eliminating <span class="math"></span><script type="math/tex">t</script></em>.<div style="margin-top:20px"></div><span id="env2.29"></span><div class="remark" data-count="2.29">     
+To find the polynomials
+vanishing on <span class="math"></span><script type="math/tex">(t, t^2, t^3)</script> i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+I(\{(t, t^2, t^3) \mid t\in \mathbb{K}\})
+</script>
+is the same as finding the kernel
+of the <span class="math"></span><script type="math/tex">\mathbb{K}</script>-algebra homomorphism
+<span class="math"></span><script type="math/tex">\varphi: \mathbb{K}[x, y, z] \rightarrow \mathbb{K}[t]</script> given by
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  \varphi(x) &= t\\
+  \varphi(y) &= t^2\\
+  \varphi(z) &= t^3.
+\end{aligned}</script><div style="margin-top:20px"></div>Surprisingly,<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\operatorname{Ker}(\varphi) = \mathbb{K}[x, y, z] \cap (x - t, y - t^2, z - t^3).
+</script><div style="margin-top:20px"></div>Here is how to prove this.
+For a polynomial <span class="math"></span><script type="math/tex">f(x, y, z) \in \mathbb{K}[x, y, z, t]</script> we may use the division algorithm with respect
+to the lexicographic term order <span class="math"></span><script type="math/tex">x > y > z > t</script> to write
+<div class="math"></div><script type="math/tex; mode=display">
+f(x, y, z) = \lambda_1(x, y, z, t) (x - t) + \lambda_2(x, y, z, t) (x - t^2) + \lambda_3(x, y, z, t) (x - t^3) + R(t), 
+</script>
+where <span class="math"></span><script type="math/tex">R(t)\in \mathbb{K}[t]</script>. This shows that <span class="math"></span><script type="math/tex">f(t, t^2, t^3) = 0</script> if and only if <span class="math"></span><script type="math/tex">f(x, y, z)</script> is in
+the ideal generated by <span class="math"></span><script type="math/tex">x - t, y - t^2</script> and <span class="math"></span><script type="math/tex">z - t^3</script>.
+</div><div style="margin-top:20px"></div><span id="env2.30"></span><div class="exercise" data-count="2.30">     
+  Let
+  <div class="math"></div><script type="math/tex; mode=display">
+  X = \{(t, t^2, t^3) \mid t\in k\}\subseteq k^3
+  </script>
+  where <span class="math"></span><script type="math/tex">k</script> is a field. Show that
+  <div class="math"></div><script type="math/tex; mode=display">
+  I(X) = (y^2 - x z, x y - z, x^2 - y) 
+  </script>
+  and that <span class="math"></span><script type="math/tex">I(X)</script> can be generated by two polynomials.<div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env2.31"></span><div class="exercise" data-count="2.31">     
+  Let
+  <div class="math"></div><script type="math/tex; mode=display">
+  X = \{(t^3, t^4, t^5) \mid t\in k\},
+  </script>
+  where <span class="math"></span><script type="math/tex">k</script> is a field. Show that
+    <div class="math"></div><script type="math/tex; mode=display">
+    I(X) = (x^3 - y z, y^2 - x z, z^2 - x^2 y)
+    </script>
+    and that <span class="math"></span><script type="math/tex">I(X)</script> cannot be generated by less than
+    three polynomials.
+</div><div style="margin-top:20px"></div><span id="env2.32"></span><div class="exercise" data-count="2.32">     
+  Consider the ideal <span class="math"></span><script type="math/tex">I = I(X)</script> from Exercise <a href=#env2.31 class="labelref">2.31</a>.
+Show that <span class="math"></span><script type="math/tex">I</script> is a prime ideal, but
+<span class="math"></span><script type="math/tex">I^2</script> is not a primary ideal. Use <tt>Macaulay2</tt>
+to compute a primary decomposition of <span class="math"></span><script type="math/tex">I^2</script>.<div style="margin-top:20px"></div><a href="#16554033-4b00-42b9-872c-6ed90d30ae71" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=16554033-4b00-42b9-872c-6ed90d30ae71 class = "collapse Hint envbuttons">    
+Consider
+  <div class="math"></div><script type="math/tex; mode=display">
+  f_2^2 - f_1 f_3 = x (x^5 - 3 x^2 y z + x y^3 + z^3)\in I^2,
+  </script>
+  where
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    f_1 &= y^2 - x z\\
+    f_2 &= y z - x^3\\
+    f_3 &= z^2 - x^2 y.
+  \end{aligned}</script>
+  Then use Exercise <a href=#env2.18 class="labelref">2.18</a> <a href=#ite2.3 class="labelref">(&#8562;.)</a>.
+  </div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec2.5"></span><h2 id="eca6ff0b-2f3b-4265-9c51-65ee95879a6b">2.5 The Hilbert Nullstellensatz</h2><div style="margin-top:20px"></div><span id="sec2.5.1"></span><h3>2.5.1 Ring extensions</h3><div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">K\subseteq L</script> be a field extension. An element <span class="math"></span><script type="math/tex">\alpha\in L</script> is called <em>algebraic</em> over
+<span class="math"></span><script type="math/tex">K</script> if <span class="math"></span><script type="math/tex">f(\alpha) = 0</script> for some <span class="math"></span><script type="math/tex">f\in K[x]</script>. If every element in <span class="math"></span><script type="math/tex">L</script> is algebraic over
+<span class="math"></span><script type="math/tex">K</script>, then <span class="math"></span><script type="math/tex">L</script> is called an <em>algebraic extension</em> of <span class="math"></span><script type="math/tex">K</script>.<div style="margin-top:20px"></div><span class="math"></span><script type="math/tex">L</script> is naturally a vector space over <span class="math"></span><script type="math/tex">K</script> and we let
+<span class="math"></span><script type="math/tex">[L:K] = \dim_K L</script>. If <span class="math"></span><script type="math/tex">[L:K]<\infty</script> then <span class="math"></span><script type="math/tex">L</script> is an algebraic field
+extension (why?), but not the other way round (example?).<div style="margin-top:20px"></div>We wish to generalize this to integral domains <span class="math"></span><script type="math/tex">R\subseteq S</script>, but here we have to be
+a bit more careful. We call an element <span class="math"></span><script type="math/tex">s\in S</script> <em>integral</em> over <span class="math"></span><script type="math/tex">R</script> if there exists
+a monic polynomial <span class="math"></span><script type="math/tex">f\in R[x]</script>, such that <span class="math"></span><script type="math/tex">f(s) = 0</script> i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+s^n + a_{n-1} s^{n-1} + \cdots + a_1 s + a_0 = 0
+</script>
+for suitable <span class="math"></span><script type="math/tex">n\in\mathbb{N}</script> and <span class="math"></span><script type="math/tex">a_0, \dots, a_{n-1}\in R</script>. If every <span class="math"></span><script type="math/tex">s\in S</script> is integral
+over <span class="math"></span><script type="math/tex">R</script>, then <span class="math"></span><script type="math/tex">S</script> is called an integral extension of <span class="math"></span><script type="math/tex">R</script>.<div style="margin-top:20px"></div><span id="env2.33"></span><div class="lemma" data-count="2.33">     
+If <span class="math"></span><script type="math/tex">S</script> is finitely generated as an <span class="math"></span><script type="math/tex">R</script>-module, then <span class="math"></span><script type="math/tex">R\subseteq S</script> is an 
+integral extension.
+</div>
+<a href="#cc6493eb-373a-4efc-8fe3-295c0a1ea876" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=cc6493eb-373a-4efc-8fe3-295c0a1ea876 class = "collapse Proof envbuttons">    
+Suppose that <span class="math"></span><script type="math/tex">S = R s_1 + \cdots + R s_n</script> and let <span class="math"></span><script type="math/tex">s\in S</script>. Then we may write
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+s s_1 &= \lambda_{11} s_1 + \cdots + \lambda_{1n} s_n\\
+&\vdots\\
+s s_n &= \lambda_{n1} s_1 + \cdots + \lambda_{nn} s_n
+\end{aligned}</script>
+This translates into
+<div class="math"></div><script type="math/tex; mode=display">
+\begin{pmatrix}
+\lambda_{11} - s & \cdots & \lambda_{1n}\\
+\vdots & \ddots &\vdots\\
+\lambda_{n1} & \cdots & \lambda_{nn} - s
+\end{pmatrix}
+\begin{pmatrix}
+s_1\\
+\vdots\\
+s_n
+\end{pmatrix} = 
+\begin{pmatrix}
+0\\
+\vdots\\
+0
+\end{pmatrix}.
+</script>
+By linear algebra the determinant of the above matrix is zero, but this determinant is a
+monic polynomial (up to a sign) of degree <span class="math"></span><script type="math/tex">n</script> in <span class="math"></span><script type="math/tex">s</script>.
+  </div><div style="margin-top:20px"></div>Let us record the following result.<div style="margin-top:20px"></div><span id="env2.34"></span><div class="lemma" data-count="2.34">     
+Let <span class="math"></span><script type="math/tex">R\subseteq L</script> be an integral ring extension, where <span class="math"></span><script type="math/tex">L</script> is a field. Then <span class="math"></span><script type="math/tex">R</script> is a field.
+</div>
+<a href="#a130864b-2304-4f8e-ae42-eca90e90a704" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=a130864b-2304-4f8e-ae42-eca90e90a704 class = "collapse Proof envbuttons">    
+If <span class="math"></span><script type="math/tex">r\in R\setminus\{0\}</script>, then <span class="math"></span><script type="math/tex">r^{-1}</script> satisfies
+<div class="math"></div><script type="math/tex; mode=display">
+(r^{-1})^n + a_{n-1} (r^{-1})^{n-1} + \cdots + a_1 r^{-1} + a_0 = 0.
+</script>
+Multiplying the above by <span class="math"></span><script type="math/tex">r^n</script> gives that <span class="math"></span><script type="math/tex">r</script> is invertible in <span class="math"></span><script type="math/tex">R</script>.
+  </div><div style="margin-top:20px"></div>Our main result is the following.<div style="margin-top:20px"></div><span id="env2.35"></span><div class="theorem" data-count="2.35">     
+Let <span class="math"></span><script type="math/tex">K\subseteq L</script> be a field extension and suppose that 
+<div class="math"></div><script type="math/tex; mode=display">
+L = K[\alpha_1, \dots, \alpha_n]
+</script>
+for suitable <span class="math"></span><script type="math/tex">\alpha_1, \dots, \alpha_n\in L</script>. Then <span class="math"></span><script type="math/tex">\alpha_1, \dots, \alpha_n</script> are all
+algebraic over <span class="math"></span><script type="math/tex">K</script>.
+</div>
+<a href="#ec331ee3-89ad-4770-90a6-0ea05aa0ccd7" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=ec331ee3-89ad-4770-90a6-0ea05aa0ccd7 class = "collapse Proof envbuttons">    
+For <span class="math"></span><script type="math/tex">n=1</script> the result is true (why?). Since <span class="math"></span><script type="math/tex">L = K(\alpha_1)[\alpha_2, \dots, \alpha_n]</script>,
+we may assume by induction that <span class="math"></span><script type="math/tex">\alpha_2, \dots, \alpha_n</script> are algebraic over <span class="math"></span><script type="math/tex">K(\alpha_1)</script>.
+If <span class="math"></span><script type="math/tex">\alpha_1</script> is algebraic over <span class="math"></span><script type="math/tex">K</script> we are done, because this implies that
+<span class="math"></span><script type="math/tex">\alpha_2, \dots, \alpha_n</script> are algebraic over <span class="math"></span><script type="math/tex">K</script>. <div style="margin-top:20px"></div>Assume this is not the case. Then there exists <span class="math"></span><script type="math/tex">f\in K[\alpha_1]</script>,
+such that the elements <span class="math"></span><script type="math/tex">\alpha_2, \dots, \alpha_n</script> are integral over
+the subring <span class="math"></span><script type="math/tex">R = K[\alpha_1, 1/f]</script>. This implies that the ring
+extension <span class="math"></span><script type="math/tex">R\subseteq L</script> is finite and hence integral by Lemma
+<a href=#env2.33 class="labelref">2.33</a>. Therefore <span class="math"></span><script type="math/tex">R</script> is a field by Lemma
+<a href=#env2.34 class="labelref">2.34</a>. <div style="margin-top:20px"></div>But for an element <span class="math"></span><script type="math/tex">f\in K[x]</script> in a polynomial ring,
+<span class="math"></span><script type="math/tex">K[x, 1/f]</script> is never a field.
+  </div><div style="margin-top:20px"></div><span id="sec2.5.2"></span><h3>2.5.2 The weak Hilbert Nullstellensatz</h3><div style="margin-top:20px"></div>The major surprise is the following result:<div style="margin-top:20px"></div><span id="env2.36"></span><div class="theorem" data-count="2.36">     
+Let <span class="math"></span><script type="math/tex">K</script> be an algebraically closed field and <span class="math"></span><script type="math/tex">J\subseteq K[x_1, \dots, x_n]</script> an
+ideal. Then
+<div class="math"></div><script type="math/tex; mode=display">
+V(J) = \emptyset \iff 1\in J.
+</script>
+</div><div style="margin-top:20px"></div><span id="env2.37"></span><div class="remark" data-count="2.37">     
+  Theorem <a href=#env2.36 class="labelref">2.36</a> is sometimes referred to as the weak Nullstellensatz, which I
+  think is a bit of a misnomer. There is also a much more difficult version called
+  the effective Nullstellensatz: if <span class="math"></span><script type="math/tex">1\in J = (f_1, \dots, f_m)</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+  1 = a_1 f_1 + \cdots + a_m f_m,
+  </script>
+  for suitable <span class="math"></span><script type="math/tex">a_1, \dots, a_m\in K[x_1, \dots, x_n]</script>. If <span class="math"></span><script type="math/tex">\deg(f_i) \leq d</script>, what
+  can be said about <span class="math"></span><script type="math/tex">\deg(a_i)</script> above for <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>? This question can be
+  traced back to the <a href="https://link.springer.com/article/10.1007/BF01206635" target="_blank">classical paper from 1926</a> by <a href="https://en.wikipedia.org/wiki/Grete_Hermann" target="_blank">Grethe Hermann</a>.
+  </div><div style="margin-top:20px"></div><a href="#626edfc2-44a1-4b93-8bf3-bbb94fa1472a" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=626edfc2-44a1-4b93-8bf3-bbb94fa1472a class = "collapse Proof envbuttons">    
+If <span class="math"></span><script type="math/tex">1\in J</script>, then clearly <span class="math"></span><script type="math/tex">V(J)=\emptyset</script>. If on the other hand <span class="math"></span><script type="math/tex">1\notin J</script>, then
+<span class="math"></span><script type="math/tex">J</script> is a proper ideal contained in a maximal ideal <span class="math"></span><script type="math/tex">M</script>. Consider the field
+<div class="math"></div><script type="math/tex; mode=display">
+L = K[x_1, \dots, x_n]/M = K[\alpha_1, \dots, \alpha_n],
+</script>
+where <span class="math"></span><script type="math/tex">\alpha_1 = [x_1], \dots, \alpha_n=[x_n]</script>
+By Theorem <a href=#env2.35 class="labelref">2.35</a>, <span class="math"></span><script type="math/tex">\alpha_i</script> is algebraic over <span class="math"></span><script type="math/tex">K</script>. Since
+<span class="math"></span><script type="math/tex">K</script> is algebraically closed, it follows that <span class="math"></span><script type="math/tex">\alpha_i = [x_i] = \lambda_i\in K</script>. Therefore we
+get 
+<div class="math"></div><script type="math/tex; mode=display">
+(x_1 - \lambda_1, \dots, x_n - \lambda_n) \subseteq M,
+</script>
+but the ideal to the left is already a maximal ideal, so equality must hold. Therefore
+<div class="math"></div><script type="math/tex; mode=display">
+J \subseteq (x_1 - \lambda_1, \dots, x_n-\lambda_n)
+</script>
+and hence
+<div class="math"></div><script type="math/tex; mode=display">
+(\lambda_1, \dots, \lambda_n)\in V(J).
+</script>
+Therefore <span class="math"></span><script type="math/tex">V(J) \neq \emptyset</script>.
+  </div><div style="margin-top:20px"></div><span id="sec2.5.3"></span><h3>2.5.3 The Rabinowitz trick</h3><div style="margin-top:20px"></div>The following result is called the strong Nullstellensatz (the result above is called the
+weak Nullstellensatz). The slick proof uses the socalled
+<a href="https://en.wikipedia.org/wiki/Rabinowitsch_trick" target="_blank">Rabinowitz trick</a>
+published in a one page paper on <a href="https://www.springer.com/journal/208" target="_blank">Mathematische Annalen</a> in 1929.<div style="margin-top:20px"></div><span id="env2.38"></span><div class="theorem" data-count="2.38">     
+Let <span class="math"></span><script type="math/tex">K</script> be an algebraically closed field and <span class="math"></span><script type="math/tex">J\subseteq K[x_1, \dots, x_n]</script> an
+ideal. Then
+<div class="math"></div><script type="math/tex; mode=display">
+I(V(J)) = \operatorname{rad}(J).
+</script>
+</div>
+<a href="#1f415a51-da47-4e0f-9311-8bc7be767314" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=1f415a51-da47-4e0f-9311-8bc7be767314 class = "collapse Proof envbuttons">    
+  Suppose that <span class="math"></span><script type="math/tex">g\in I(V(J))</script>. Then we consider the
+  ideal
+  <div class="math"></div><script type="math/tex; mode=display">
+   I = (J, x_{n+1} g - 1) \subset K[x_1, \dots, x_n, x_{n+1}].
+  </script><div style="margin-top:20px"></div>Notice that<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+V(I) = \emptyset.
+</script><div style="margin-top:20px"></div>Therefore
+<div class="math"></div><script type="math/tex; mode=display">
+1 = \lambda_1 f_1 + \cdots + \lambda_m f_m + \mu (x_{n+1} g - 1).
+</script>
+Now put <span class="math"></span><script type="math/tex">x_{n+1} = 1/g</script> and multiply with <span class="math"></span><script type="math/tex">g^N</script> for <span class="math"></span><script type="math/tex">N\gg 0</script>.
+  </div><div style="margin-top:20px"></div>Here is an interesting application of Theorem <a href=#env2.38 class="labelref">2.38</a>, where linear algebra
+is used to bound the number of solutions to certain systems
+of polynomial equations. We will have more to say about this later.<div style="margin-top:20px"></div><span id="env2.39"></span><div class="corollary" data-count="2.39">     
+  Let <span class="math"></span><script type="math/tex">I</script> be an ideal in
+  <span class="math"></span><script type="math/tex">R = K[x_1, \dots, x_n]</script>, where <span class="math"></span><script type="math/tex">K</script> is any field. Then <span class="math"></span><script type="math/tex">V(I)</script> is finite if
+  <span class="math"></span><script type="math/tex">R/I</script> is a finite dimensional vector space over <span class="math"></span><script type="math/tex">K</script>.
+  In this case,
+  <span id="equ2.5"></span><div class="math"></div><script type="math/tex; mode=display">
+  |V(I)| \leq \dim_K R/I.
+  \tag{2.5}</script>
+  If <span class="math"></span><script type="math/tex">K</script> is algebraically closed then <span class="math"></span><script type="math/tex">R/I</script> is finite dimensional if <span class="math"></span><script type="math/tex">V(I)</script> is finite.
+  If <span class="math"></span><script type="math/tex">I = \operatorname{rad}(I)</script>, then <span class="math"></span><script type="math/tex">=</script> holds in <a href=#equ2.5>(2.5)</a>.
+</div>
+<a href="#dd4265e3-73e2-41d5-b268-16347228329c" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=dd4265e3-73e2-41d5-b268-16347228329c class = "collapse Proof envbuttons">    
+  Given <span class="math"></span><script type="math/tex">P_1, \dots, P_r\in V(I)</script>, we may find polynomials, such that
+  <span class="math"></span><script type="math/tex">F_i(P_j) = \delta_{ij}</script>. In one variable you know this from
+  Lagrange interpolation: for points <span class="math"></span><script type="math/tex">x_1, \dots, x_r\in \mathbb{R}</script>
+  <div class="math"></div><script type="math/tex; mode=display">
+  F(x) = \frac{(x-x_2)(x-x_3)\cdots (x-x_r)}{(x_1 - x_2)(x_1 - x_3) \cdots (x_1 - x_r)}
+  </script>
+  is a polynomial in <span class="math"></span><script type="math/tex">\mathbb{R}[x]</script> satisfying <span class="math"></span><script type="math/tex">F(x_1) = 1</script> and <span class="math"></span><script type="math/tex">F(x_i) = 0</script> for
+  <span class="math"></span><script type="math/tex">i > 1</script>. What is the generalization to several variables?<div style="margin-top:20px"></div>The residue classes of these polynomials in <span class="math"></span><script type="math/tex">R/I</script>
+  are linearly independent over <span class="math"></span><script type="math/tex">K</script>: suppose that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \lambda_1 [F_1] + \cdots + \lambda_r [F_r] = [\lambda_1 F_1 + \cdots \lambda_r F_r] = [0]
+  </script>
+  in <span class="math"></span><script type="math/tex">R/I</script>. Then <span class="math"></span><script type="math/tex">\lambda_1 F_1 + \cdots + \lambda_r F_r \in I</script> with
+  <div class="math"></div><script type="math/tex; mode=display">
+  (\lambda_1 F_1 + \cdots + \lambda_r F_r)(P_i) = 0
+  </script>
+  for <span class="math"></span><script type="math/tex">i = 1, \dots, r</script>. You do the rest of the math. This proves that
+  <div class="math"></div><script type="math/tex; mode=display">
+  |V(I)| \leq \dim_K R/I.
+  </script><div style="margin-top:20px"></div>Suppose on the other hand, that <span class="math"></span><script type="math/tex">V(I) = \{P_1, \dots, P_r\}</script> with
+  <span class="math"></span><script type="math/tex">P_i = (a_{i1}, \dots, a_{in})</script>. Let
+  <div class="math"></div><script type="math/tex; mode=display">
+  F_j = (x_j - a_{1j})(x_j - a_{2j}) \cdots (x_j - a_{nj})
+  </script>
+  for <span class="math"></span><script type="math/tex">j = 1, \dots, n</script>.
+  Then <span class="math"></span><script type="math/tex">F_j\in I(V(I))</script>. Therefore <span class="math"></span><script type="math/tex">F_j^{N_j}\in I</script> for <span class="math"></span><script type="math/tex">N_j\gg 0</script> by HNS.
+  As the leading term of <span class="math"></span><script type="math/tex">F_j</script> is a power of <span class="math"></span><script type="math/tex">x_j</script>, this gives that <span class="math"></span><script type="math/tex">R/I</script> is
+  finite dimensional, since we have a surjective vector space
+  homomorphism
+  <div class="math"></div><script type="math/tex; mode=display">
+  R/(F_1^{N_1}, ,\dots, F_n^{N_n}) \rightarrow R/I.
+  </script><div style="margin-top:20px"></div>Suppose that <span class="math"></span><script type="math/tex">I = \operatorname{rad}(I)</script> and consider the map <span class="math"></span><script type="math/tex">R/I \rightarrow K^r</script> given
+  by
+  <div class="math"></div><script type="math/tex; mode=display">
+  f \mapsto (f(P_1), \dots, f(P_r)),
+  </script>
+  where <span class="math"></span><script type="math/tex">V(I) = \{P_1, \dots, P_r\}</script>. We have already proved that this map is surjective.
+  If <span class="math"></span><script type="math/tex">f</script> maps to zero, then <span class="math"></span><script type="math/tex">f\in I(V(I)) = \operatorname{rad}(I) = I</script>.
+  </div><div style="margin-top:20px"></div><span id="env2.40"></span><div class="exercise" data-count="2.40">     
+  Give an example of an ideal <span class="math"></span><script type="math/tex">I\subset R = K[x_1, \dots, x_n]</script>, where <span class="math"></span><script type="math/tex">V(I)</script> is finite, but
+  <span class="math"></span><script type="math/tex">R/I</script> is infinite dimensional.
+</div><div style="margin-top:20px"></div><span id="env2.41"></span><div class="exercise" data-count="2.41">     
+  Consider <span class="math"></span><script type="math/tex">I = (y^2 - x^3 + x, y^3 - x^2) \subset R = K[x, y]</script>. Use the window below<div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+R = QQ[x, y]
+I = ideal(y^2 - x^3 + x, y^3 - x^2)
+radical(I)
+</script></div><div style="margin-top:20px"></div>to find a polynomial <span class="math"></span><script type="math/tex">f\not\in I</script>, such that <span class="math"></span><script type="math/tex">f^m\in I</script> for some <span class="math"></span><script type="math/tex">m>1</script> (verify that <span class="math"></span><script type="math/tex">f\not\in I</script> and <span class="math"></span><script type="math/tex">f^m\in I</script>).<div style="margin-top:20px"></div>Find a
+  vector space basis for <span class="math"></span><script type="math/tex">R/I</script> and use this basis to compute
+  <div class="math"></div><script type="math/tex; mode=display">
+  K[y] \cap I.
+  </script><div style="margin-top:20px"></div><a href="#5a0f513f-a89a-431b-8c69-5851ed55766b" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=5a0f513f-a89a-431b-8c69-5851ed55766b class = "collapse Hint envbuttons">    
+    Show that <span class="math"></span><script type="math/tex">x^3 - y^2 - x</script> and <span class="math"></span><script type="math/tex">y^3 - x^2</script> form a Groebner basis
+    for <span class="math"></span><script type="math/tex">I</script> with respect to the <a href="https://en.wikipedia.org/wiki/Monomial_order" target="_blank">degree lexicographic term order</a>. Use this to
+    prove that
+    <div class="math"></div><script type="math/tex; mode=display">
+    1, x, y, x^2, x y, y^2, x^2 y, x y^2, x^2 y^2
+    </script>
+    is a vector space basis for <span class="math"></span><script type="math/tex">R/I</script>. Once you have this basis, use
+    it to find a linear relation between
+    <div class="math"></div><script type="math/tex; mode=display">
+    1, y, y^2, y^3, \dots
+    </script>
+      </div><div style="margin-top:20px"></div>Use this to solve the equations
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    y^2 - x^3 + x &= 0\\
+    y^3 - x^2 &= 0.
+  \end{aligned}</script><div style="margin-top:20px"></div>It seems that there are <span class="math"></span><script type="math/tex">7</script> solutions according to the
+  homotopy methods of <a href="https://en.wikipedia.org/wiki/Numerical_algebraic_geometry" target="_blank">numerical algebraic geometry</a>.<div style="margin-top:20px"></div>Notice the
+  rounding problems for the solution <span class="math"></span><script type="math/tex">(0, 0)</script> when evaluating the window below. It seems that three homotopy paths end up in <span class="math"></span><script type="math/tex">(0, 0)</script>.<div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+loadPackage "NumericalAlgebraicGeometry"
+R = QQ[x, y]
+solveSystem {y^2 - x^3 + x, y^3 - x^2}    
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec2.6"></span><h2 id="670547b0-892c-4d0c-baed-9196427bec3c">2.6 The combinatorial Nullstellensatz</h2><div style="margin-top:20px"></div>The following result is due to <a href="https://en.wikipedia.org/wiki/Noga_Alon" target="_blank">Noga Alon</a>.<div style="margin-top:20px"></div><span id="env2.42"></span><div class="theorem" data-count="2.42">     
+  Let <span class="math"></span><script type="math/tex">F</script> be any field (not necessarily algebraically closed).
+  Suppose that <span class="math"></span><script type="math/tex">S_1, \dots, S_n\subset F</script>
+  are finite subsets of <span class="math"></span><script type="math/tex">F</script> and
+  <div class="math"></div><script type="math/tex; mode=display">
+  g_i(x_i) = \prod_{s\in S_i} (x_i - s)
+  </script>
+  for <span class="math"></span><script type="math/tex">i = 1, \dots, n</script>. If <span class="math"></span><script type="math/tex">f\in F[x_1, \dots, x_n]</script> and
+  <div class="math"></div><script type="math/tex; mode=display">
+  f(s_1, \dots, s_n) = 0
+  </script>
+  for <span class="math"></span><script type="math/tex">s_1\in S_1, \dots, s_n\in S_n</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+  f = h_1 g_1 + \cdots + h_n g_n,
+  </script>
+  where <span class="math"></span><script type="math/tex">\deg(h_i) \leq \deg(f) - \deg(g_i)</script>.
+</div><div style="margin-top:20px"></div>It seems that one may prove this dividing <span class="math"></span><script type="math/tex">f</script> by <span class="math"></span><script type="math/tex">(g_1, \dots, g_n)</script> using the division
+algorithm and then applying the following result to the remainder.<div style="margin-top:20px"></div><span id="env2.43"></span><div class="lemma" data-count="2.43">     
+  Let <span class="math"></span><script type="math/tex">P\in F[x_1, \dots, x_n]</script>, where <span class="math"></span><script type="math/tex">F</script> is a field. If <span class="math"></span><script type="math/tex">S_i\subset F</script> with <span class="math"></span><script type="math/tex">|S_i| > \deg_{x_i}(P)</script> and
+  <div class="math"></div><script type="math/tex; mode=display">
+  P(x_1, \dots, x_n) = 0\qquad\text{for every }\qquad(x_1, \dots, x_n)\in S_1\times \cdots \times S_n,
+  </script>
+  then <span class="math"></span><script type="math/tex">P = 0</script>.
+</div>
+<a href="#5adf2424-30ad-452b-a274-3da7764dc834" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=5adf2424-30ad-452b-a274-3da7764dc834 class = "collapse Proof envbuttons">    
+  For <span class="math"></span><script type="math/tex">n=1</script> this is the statement that a non-zero polynomial can have at most <span class="math"></span><script type="math/tex">\deg(P)</script> roots.
+  Write
+  <div class="math"></div><script type="math/tex; mode=display">
+  P = \sum_{i=0}^{N} P_i(x_1, \dots, x_{n-1}) x_n^i,
+  </script>
+  where <span class="math"></span><script type="math/tex">\deg_{x_n}(P)</script>.
+  Fix <span class="math"></span><script type="math/tex">(s_1, \dots, s_{n-1})\in
+  S_1\times \cdots \times S_{n-1}</script> and put
+  <div class="math"></div><script type="math/tex; mode=display">
+  f = \sum_{i=0}^{N} P_i(s_1, \dots, s_{n-1}) x_n^i\in F[x_n].
+  </script>
+  If non-zero this polynomial must have <span class="math"></span><script type="math/tex">>N</script> roots, which is a contradiction. Therefore
+  <span class="math"></span><script type="math/tex">P_i(s_1, \dots, s_{n-1}) = 0</script> for every <span class="math"></span><script type="math/tex">(s_1, \dots, s_{n-1})\in S_1 \times \cdots \times
+  S_{n-1}</script> and the result follows by induction.
+  </div><div style="margin-top:20px"></div><span id="env2.44"></span><div class="exercise" data-count="2.44">     
+  Let <span class="math"></span><script type="math/tex">K</script> be a finite field and <span class="math"></span><script type="math/tex">F\in K[x_1, \dots, x_n]</script>
+  a homogeneous polynomial with <span class="math"></span><script type="math/tex">\deg(F) < n</script>. Prove that
+  <span class="math"></span><script type="math/tex">F</script> has a non-trivial zero. Is this result true if <span class="math"></span><script type="math/tex">K</script>
+  is an infinite field?<div style="margin-top:20px"></div><a href="#b5aa4515-7d1e-43d0-a61c-74dba350b3f3" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=b5aa4515-7d1e-43d0-a61c-74dba350b3f3 class="collapse">
+Suppose that <span class="math"></span><script type="math/tex">K</script> has <span class="math"></span><script type="math/tex">p</script> elements, where <span class="math"></span><script type="math/tex">p</script> is a prime. Assume that
+<span class="math"></span><script type="math/tex">V(F) = \{(0, \dots, 0)\}</script> and apply the combinatorial Nullstellensatz to the polynomial
+<div class="math"></div><script type="math/tex; mode=display">
+f = 1 - F(x_1, \dots, x_n)^{p-1} + (-1)^{n+1} (x_1^{p-1} -1)\cdots (x_n^{p-1}- 1)
+</script>
+to reach a contradiction through
+<div class="math"></div><script type="math/tex; mode=display">
+f = h_1 (x_1^p - x_1) + \cdots + h_n(x_n^p - x_n)
+</script>
+and <span class="math"></span><script type="math/tex">\deg(h_i) \leq n(p-1) - p</script>.
+</div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div></div></body>
