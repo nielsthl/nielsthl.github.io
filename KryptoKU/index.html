@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/forside.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.css" integrity="sha384-BDqcjN11/6D69oC63ObubLHNvQR2fNjin6+AzxA3xalB0swTj17TxVV1tL1Q5Png" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.js" integrity="sha384-sKYm5us3z9/bRQA+cc3gPzqwI5RVgL8vJQx1lpBudr9IzHOR8fnFUH68dz1GsTQw" crossorigin="anonymous"></script>
+
+<!-- Also KaTeX TOC! -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+    
+    for(var i = 0; i < tex.length; ++i)
+       {
+         var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+      
+         var math = tex[i].previousSibling;
+         math.className = 'katex-render';
+        
+         var content = tex[i].textContent;
+
+	 katex.render(content, math, {
+	    displayMode: display,
+	    throwOnError: false,
+	    //macros: {"\\NN":"\\mathbb{N}",
+	    //	     "\\ZZ":"\\mathbb{Z}",
+	    //	     "\\QQ":"\\mathbb{Q}",
+	    //	     "\\RR":"\\mathbb{R}",
+	    //	     "\\CC":"\\mathbb{C}",
+	    //	     "\\tag":"\\pod\\text"}
+	    macros: {"\\tag":"\\pod\\text"} // Hack for \eqref!
+      });
+
+	tex[i].parentNode.removeChild(tex[i]);
+	
+    }
+    var eqno = document.querySelectorAll('.katex span > span.mspace.quad');
+    for(var i = 0; i < eqno.length; ++i)
+    {
+        if(eqno[i].parentNode.className)
+            continue;
+        var quad = eqno[i];
+        var span = quad.parentNode;
+        var text = span.nextSibling;
+        var pare = text.nextSibling;
+        span.removeChild(quad);
+        span.appendChild(text);
+        span.appendChild(pare);
+        span.className = 'eqno';
+    }
+});
+</script>
+		       
+<style>
+.katex-render {
+  font-size: 85%; }
+</style>
+
+		       
+
+
+</head>
+
+
+
+<body>
+  <br><br>
+<h1 title="Oktober, 2017"> Om kryptovalutaer og blockchain </h1>
+<h2>Niels Lauritzen</h2>
+
+<br><br><br>
+
+<a href="Chapters/intro.html"> <img title="Bitcoin" src="img/bitcoin.svg" width="50%"> </a>
+
+<br><br><br>
+
+</body></html>
