@@ -671,6 +671,7 @@ ol > li {
   padding: 4px 8px;
 }
 
+/*
 ol.alpha {
     list-style-type: lower-alpha;
 }
@@ -690,6 +691,58 @@ ol.lowerroman {
 ol.upperroman {
     list-style-type: upper-roman;
 }
+*/
+
+@counter-style paren-decimal {
+system: extends decimal;
+prefix: "(";
+suffix: ") ";
+}
+
+@counter-style paren-lower-greek {
+system: extends lower-greek;
+prefix: "(";
+suffix: ") ";
+}
+
+@counter-style paren-lower-alpha {
+system: extends lower-alpha;
+prefix: "(";
+suffix: ") ";
+}
+
+@counter-style paren-upper-roman {
+system: extends upper-roman;
+prefix: "(";
+suffix: ") ";
+}
+
+@counter-style paren-lower-roman {
+system: extends lower-roman;
+prefix: "(";
+suffix: ") ";
+}
+
+ol.alpha {
+list-style-type: paren-lower-alpha;
+}
+
+ol.greek {
+list-style-type: paren-lower-greek;
+}
+
+ol.number {
+list-style-type: paren-decimal;
+}
+
+ol.lowerroman {
+list-style-type: paren-lower-roman;
+}
+
+ol.upperroman {
+list-style-type: paren-upper-roman;
+}
+
 
 h1, h2, h3 {
   color: #76323f; }
