@@ -1,0 +1,212 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+<script defer src="js/bubble.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#2ad0f1d8-ec3d-471b-af28-aa1253fe9d78"><b>1</b> Introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#12770512-d501-4352-a966-accdf04f2098">1.1 Prerequisites</a></li><li><a href="intro.html#d16633b5-ce8c-42c3-8544-c6a84f0f37f8">1.2 Tinkering</a></li><li><a href="intro.html#c28fbf6e-11c5-486c-ae71-930fdeefd0b6">1.3 Basic design</a></li><li><a href="intro.html#8a5b1c0b-9447-4f61-9c30-63ce16337b26">1.4 Acknowledgements</a></li></ul><li><a class="kap" href="installuse.html#bbc7e98c-0a5f-41a0-a5ba-cf9a96c7969b"><b>2</b> Installation and use</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="installuse.html#214bd349-f9bc-41bd-858e-cc34bc027cd0">2.1 Installation</a></li><li><a href="installuse.html#3dc219a2-5b08-4a89-81f1-e07751e41e10">2.2 Basic use</a></li><li><a href="installuse.html#655e6e5f-5e94-4519-91bc-18980717be85">2.3 Beginning and working on your own project</a></li><li><a href="installuse.html#06920d59-8ff1-4c02-8905-6d616364774b">2.4 Sharing and uploading your notes</a></li></ul><li><a class="kap" href="functions.html#f71efde0-8aab-4c6a-ad65-367df50d0eb9"><b>3</b> Functions in QaDiL</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="functions.html#088155c5-f8bc-4b8e-828d-b59ffe77dab0">3.1 Format of output/inclusion of preamble files</a></li><li><a href="functions.html#37080aba-7926-4386-a2a2-98f24eb56a00">3.2 LaTeX and non-LaTeX commands</a></li><li><a href="functions.html#69d36b8e-fb8c-49aa-966a-cf0e88ffa157">3.3 List of functions</a></li><li><a href="functions.html#985be194-d443-4fb5-b583-c66b2900590e">3.4 Interactive functions (non-LaTeX) functions</a></li></ul><li><a class="kap" href="graphicsimages.html#1536e08f-b95a-41bd-b6ab-b4747b9e07b8"><b>4</b> Graphics, images and videos</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="graphicsimages.html#d25c49db-b0be-4b7e-a017-10a6e0f0308f">4.1 includegraphics</a></li><li><a href="graphicsimages.html#28d9fa00-8090-41af-9041-8aa5fac637ce">4.2 Using LaTeX/TikZ for standalone graphics</a></li><li><a href="graphicsimages.html#7558a2c8-d29f-4b8f-ad9e-034944292dd2">4.3 tikzpicture</a></li><li><a href="graphicsimages.html#3267bbb3-53ba-400f-a8ff-3a85effffdce">4.4 Matplotlib</a></li><li><a href="graphicsimages.html#46132b65-ebe7-43d4-bdc0-d48756aeb1a9">4.5 Embedding videos</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="1536e08f-b95a-41bd-b6ab-b4747b9e07b8">4<span style="float:right;">Graphics, images and videos</span></h1><div style="margin-top:20px"></div>Graphics and images are imported from files in <tt>img/</tt> in your
+project directory. The types of these files coincide with the
+file types used for the LaTeX command <tt>includegraphics</tt>. In
+addition the file type <tt>svg</tt> may be included.<div style="margin-top:20px"></div>The widespread <a href="https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ" target="_blank">TikZ</a> package from LaTeX is <del>not</del> included with QaDiL, but
+if you have LaTeX installed on your computer there is also an
+easy hack for generating standalone graphics files from TikZ for inclusion in
+QaDiL. This is described below. First we document the
+basic command for including graphics and images in QaDiL.<div style="margin-top:20px"></div><span id="sec4.1"></span><h2 id="d25c49db-b0be-4b7e-a017-10a6e0f0308f">4.1 includegraphics</h2><div style="margin-top:20px"></div>The <tt>includegraphics</tt> control sequence works almost
+like the one in regular LaTeX except that dimensions (percents and pixels)
+in the optional parameter are geared towards <tt>html</tt>.<div style="margin-top:20px"></div><p><pre><code>\includegraphics{vonNeumann.gif}
+</code></pre></p><div style="margin-top:20px"></div><div class="frameit">
+<div class="centerimg"><img src="img/vonNeumann.gif" ></div>
+</div><div style="margin-top:20px"></div><p><pre><code>\includegraphics[width="50\%"]{tweetmath.png}
+</code></pre></p><div style="margin-top:20px"></div><div class="frameit">
+<div class="centerimg"><img src="img/tweetmath.png" width="50%"></div>
+</div><div style="margin-top:20px"></div><span id="sec4.2"></span><h2 id="28d9fa00-8090-41af-9041-8aa5fac637ce">4.2 Using LaTeX/TikZ for standalone graphics</h2><div style="margin-top:20px"></div>A <tt>tikzpicture</tt> environment is included in QaDiL on an experimental basis. One can, however,
+with LaTeX/TikZ installed easily generate standalone graphics files
+for inclusion in QaDiL.<div style="margin-top:20px"></div>We will describe this using an example. Below is a
+standalone LaTeX snippet with TikZ code for generating a right
+triangle.<div style="margin-top:20px"></div><p><pre><code>\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}[2012/04/13]
+\makeatletter
+\begin{document}
+\begin{tikzpicture}[scale=8]
+\draw (0cm, 0cm) -- (1cm, 0cm) -- (1cm, 1cm) -- (0cm, 1cm) -- (0cm, 0cm);
+\draw[thick] (0cm, 0cm) -- (1cm, 1cm);
+\draw (0.4cm, 0.5cm) node[above] {$\sqrt{x_1^2 + y_1^2}$};
+\draw (0.5cm, 0cm) node[below] {$x_1$};
+\draw (1cm, 0.5cm) node[right] {$y_1$};
+\end{tikzpicture}
+\end{document}
+</code></pre></p><div style="margin-top:20px"></div>Suppose that you have the conversion program <tt>pdf2svg</tt> installed and
+that the above snippet is saved in the file <tt>Pythagoras.tex</tt>. Then<div style="margin-top:20px"></div><p><pre><code>pdflatex -shell-escape Pythagoras  
+</code></pre></p><div style="margin-top:20px"></div>gives as output the vector graphics file <tt>Pythagoras.svg</tt> for
+inclusion in QaDiL with<div style="margin-top:20px"></div><p><pre><code>\includegraphics{Pythagoras.svg}
+</code></pre></p><div style="margin-top:20px"></div>assuming that <tt>Pythagoras.svg</tt> resides in your <tt>img/</tt> directory.<div style="margin-top:20px"></div><span id="sec4.3"></span><h2 id="7558a2c8-d29f-4b8f-ad9e-034944292dd2">4.3 tikzpicture</h2><div style="margin-top:20px"></div>The <tt>tikzpicture</tt> environment has been added to QaDiL on an experimental basis and
+may be used (almost) as in ordinary LaTeX. It is based on <a href="https://tikzjax.com/" target="_blank">https://tikzjax.com/</a>.
+Here one needs to include <tt>tikz</tt> as an <tt>htmlinclude</tt> file before use.<div style="margin-top:20px"></div><p><pre><code>\includehtml{tikz}
+:
+\begin{document}
+:
+\begin{center} 
+ \begin{tikzpicture}[scale=2]
+   \draw (0,0) circle (1in);
+ \end{tikzpicture}
+\end{center}
+:
+</code></pre></p><div style="margin-top:20px"></div><center>
+<script type="text/tikz">\begin{tikzpicture}[scale=2]
+  \draw (0,0) circle (1in);    
+\end{tikzpicture}</script>
+</center><div style="margin-top:20px"></div><span id="sec4.4"></span><h2 id="3267bbb3-53ba-400f-a8ff-3a85effffdce">4.4 Matplotlib</h2><div style="margin-top:20px"></div>Another option for generating graphics is using the popular
+<a href="https://matplotlib.org/" target="_blank">matplotlib</a> library for python. Below is a simple example.<div style="margin-top:20px"></div><p><pre><code>import matplotlib
+import matplotlib.pyplot as plt
+
+plt.plot([1.35, 1.42, 1.45, 1.52], [35, 50, 40, 45], 'ro')
+plt.plot([1.68, 1.70, 1.73, 1.73], [65, 70, 60, 80], 'bo')
+plt.axis([1.3, 1.8, 30, 90])
+plt.xlabel("height (m)")
+plt.ylabel("weight (kg)")
+
+plt.show()
+#plt.savefig('ptplot.png')
+</code></pre></p><div style="margin-top:20px"></div>The above python snippet displays the plot with the option of
+saving to a <tt>png</tt>-file. If you 
+uncomment the last line and comment out <tt>plt.show()</tt>,
+the plot will be written to the file <tt>ptplot.png</tt>.<div style="margin-top:20px"></div><span id="sec4.5"></span><h2 id="46132b65-ebe7-43d4-bdc0-d48756aeb1a9">4.5 Embedding videos</h2><div style="margin-top:20px"></div>In the include file <tt>stddefs</tt> you will see macros for inclusion of <tt>YouTube</tt> and <tt>Vimeo</tt> videos. Let us briefly go through these.
+We will first define a macro to create an iframe in html<div style="margin-top:20px"></div><p><pre><code>\newcommand{\iframevideo}[1]{&lt;iframe width="100\%" height="360" src="#1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;}
+</code></pre></p><div style="margin-top:20px"></div><span id="sec4.5.1"></span><h3>4.5.1 From YouTube</h3><div style="margin-top:20px"></div>Input to the macro is the YouTube video identifier. It reads<div style="margin-top:20px"></div><p><pre><code>\newcommand{\youtube}[1]{\iframevideo{https://www.youtube.com/embed/#1?rel=0}}
+</code></pre></p><div style="margin-top:20px"></div>This macro can then be used as.<div style="margin-top:20px"></div><p><pre><code>\youtube{9bZkp7q19f0}
+</code></pre></p><div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://www.youtube.com/embed/9bZkp7q19f0?rel=0" frameborder="0" allowfullscreen></iframe><div style="margin-top:20px"></div><span id="sec4.5.2"></span><h3>4.5.2 From Vimeo</h3><div style="margin-top:20px"></div>There is a similar macro for embedding <tt>vimeo</tt> videos. This macro can be
+found in the included <tt>stddefs</tt> file.<div style="margin-top:20px"></div><p><pre><code>\vimeo{375432061}
+</code></pre></p><div style="margin-top:20px"></div><iframe width="100%" height="360" src="https://player.vimeo.com/video/375432061" frameborder="0" allowfullscreen></iframe><div style="margin-top:20px"></div></div></body><div style="margin-top:20px"></div>
