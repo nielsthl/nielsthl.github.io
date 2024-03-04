@@ -31,8 +31,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
 
  <script>
     document.addEventListener("DOMContentLoaded", function(){
@@ -66,6 +66,12 @@
 
 
 
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 
 <script>
@@ -74,8 +80,29 @@
   inputLocation: ".sage",
   evalButtonText: "Compute",
   linked: true,
-  languages : ["sage", "python"],
-  hide : ["permalink"] 
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
   });
 </script>
 
@@ -97,36 +124,70 @@
 <script defer src="js/quiz.js"></script>
 
 <script defer src="js/orderquiz.js"></script>
- 
+
+
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+<script defer src="js/bubble.js"></script>
+
 
 
 
 
 </head>
-<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#51274bf0-f343-411d-9c81-905f8c73dcd0"><b>1</b> Introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#e52d087a-8c14-4be7-a12f-006b609979cf">1.1 Prerequisites</a></li><li><a href="intro.html#d852af7a-5381-4ba0-97a7-051256d1bdc5">1.2 Tinkering</a></li><li><a href="intro.html#9fcfeaa6-9e17-4354-9bdc-56dbc6696a4d">1.3 Basic design</a></li></ul><li><a class="kap" href="installuse.html#45bfc6aa-0db9-492a-978d-607b3fa3e4b0"><b>2</b> Installation and use</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="installuse.html#bedc3026-868c-434d-9675-8d8404eb29b0">2.1 Installation</a></li><li><a href="installuse.html#fc86a14c-297b-439f-b7a3-aac8148f5ba8">2.2 Basic use</a></li><li><a href="installuse.html#b8a65099-2515-411d-ad8a-cd26b969c884">2.3 Beginning and working on your own project</a></li><li><a href="installuse.html#056001c0-c5a8-4a5a-beee-4c00750f2e6a">2.4 Sharing and uploading your notes</a></li></ul><li><a class="kap" href="functions.html#4fc9938e-cd01-40dc-aff5-c895d9ae0fe1"><b>3</b> Functions in QaDiL</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="functions.html#65200740-9206-4405-8c40-74311f8cee44">3.1 Format of output/inclusion of preamble files</a></li><li><a href="functions.html#30fb40b2-9251-4824-a9e4-adbd378493a0">3.2 LaTeX and non-LaTeX commands</a></li><li><a href="functions.html#9bb331d8-e4fb-4512-8e89-034150e7f913">3.3 List of functions</a></li><li><a href="functions.html#43b45179-490b-40ca-8004-84b44d846025">3.4 Interactive functions (non-LaTeX) functions</a></li></ul><li><a class="kap" href="usefulmacros.html#a413c113-f55a-4814-898b-7a83496b7361"><b>4</b> Useful macros</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="usefulmacros.html#60972ab4-d172-41ba-be57-078a49cd6188">4.1 Embedding of videos</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="51274bf0-f343-411d-9c81-905f8c73dcd0">1<span style="float:right;">Introduction</span></h1><div style="margin-top:20px"></div><p style="margin-bottom: 2cm;"></p><div style="margin-top:20px"></div>QaDiL has been used at Department of Mathematics at Aarhus University
-(under the name iLaTeX) for a variety of courses since 2016. It grew
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#845f712e-4245-4117-9bf8-b323aeb51251"><b>1</b> Introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#f2e7d06f-3c08-427c-9c34-0a324cae8192">1.1 Prerequisites</a></li><li><a href="intro.html#e81f887d-b4b2-4648-adcc-773a7340045f">1.2 Tinkering</a></li><li><a href="intro.html#903b0453-e6a4-4848-928b-b9f757d10016">1.3 Basic design</a></li><li><a href="intro.html#e42ecdac-ee3f-4ce2-b99a-5b630563abbd">1.4 Acknowledgements</a></li></ul><li><a class="kap" href="installuse.html#aacc17f5-3781-4d2c-9406-2393c3e08241"><b>2</b> Installation and use</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="installuse.html#d6717a0b-5eb0-4630-81e7-dacdfe5abdc8">2.1 Installation</a></li><li><a href="installuse.html#133ccabd-72b6-490d-a549-528a0ad3e062">2.2 Basic use</a></li><li><a href="installuse.html#b2084244-05ba-4f7a-9436-09d0a9059fa5">2.3 Beginning and working on your own project</a></li><li><a href="installuse.html#b8e1c74e-70d0-4c74-a7df-d3f4aa727c3f">2.4 Sharing and uploading your notes</a></li></ul><li><a class="kap" href="functions.html#c6597f5f-1dbe-4569-bd33-66525230354e"><b>3</b> Functions in QaDiL</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="functions.html#c19b9857-c4b8-401c-85c1-b4f28eb34587">3.1 Format of output/inclusion of preamble files</a></li><li><a href="functions.html#4716feee-6b94-499e-b54f-3caca941886d">3.2 LaTeX and non-LaTeX commands</a></li><li><a href="functions.html#0171b1bf-df77-4e8e-8ec8-38dd493f35da">3.3 List of functions</a></li><li><a href="functions.html#053c04a0-2cf7-4e6b-a292-3a29c33a8698">3.4 Interactive functions (non-LaTeX) functions</a></li></ul><li><a class="kap" href="graphicsimages.html#47ce060b-63ee-4c5b-a5b2-03463c2997a2"><b>4</b> Graphics, images and videos</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="graphicsimages.html#d27a729c-e994-4a92-aa6d-8ba8b7a69de2">4.1 includegraphics</a></li><li><a href="graphicsimages.html#6276a8e6-6453-4fe5-93f2-139d73ec2750">4.2 Using LaTeX/TikZ for standalone graphics</a></li><li><a href="graphicsimages.html#88fc5560-8cce-46c7-9349-720bd19a01a6">4.3 tikzpicture</a></li><li><a href="graphicsimages.html#74bc4f88-659c-4fab-bf66-8235a54402e8">4.4 Matplotlib</a></li><li><a href="graphicsimages.html#f1c48d98-0fe0-4728-a290-8867ac909324">4.5 Embedding videos</a></li></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="845f712e-4245-4117-9bf8-b323aeb51251">1<span style="float:right;">Introduction</span></h1><div style="margin-top:20px"></div><p style="margin-bottom: 2cm;"></p><div style="margin-top:20px"></div>QaDiL has been used at Department of Mathematics at Aarhus University
+(under the name iLaTeX) for a variety of courses since 2016. Among these are
+<a href="https://nielsthl.github.io/LinAlg" target="_blank">Linear Transformations (in Danish), fall 2017</a>, 
+<a href="https://data.math.au.dk/interactive/linalg/2020/" target="_blank">Linear Algebra (in Danish), spring 2020</a> and
+  <a href="https://nielsthl.github.io/IMO23" target="_blank">Introduction to Mathematics and Optimization, fall 2020-</a>.<div style="margin-top:20px"></div>iLaTeX has also been used in <a href="https://pure.au.dk/portal/en/persons/bjoerk-hammer(42b599ae-3c1c-4a97-9b90-374393df2fde).html" target="_blank">Bjørk Hammer</a>'s <a href="https://sci2u.dk" target="_blank">sci2u-system</a> for
+interactive notes in the Calculus courses at <a href="https://au.dk" target="_blank">Aarhus Universitet</a> (followed by
+close to one thousand students each year). It is also used in the basic
+statistics courses taught by <a href="https://pure.au.dk/portal/da/persons/jens-ledet-jensen(a58c9c5a-0879-4606-a387-ebc8b984b134).html" target="_blank">Jens Ledet Jensen</a>.<div style="margin-top:20px"></div>QaDiL/iLaTeX grew
 out of an attempt to write interactive/online math notes in
 <a href="https://www.sphinx-doc.org/en/master/" target="_blank">Sphinx</a>, which prompted a
 desire to write input in LaTeX syntax instead of
 <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">markdown</a>. The system was
-rewritten in August 2020 into QaDiL. It is referred to as<div style="margin-top:20px"></div><center>
-<b>Q</b>uick <b>a</b>nd
+rewritten in August 2020 into QaDiL for use in the new course
+<em>Introduction to Mathematics and Optimization</em> tailored to
+first year computer science and data science students. It is referred to as<div style="margin-top:20px"></div><center>
+QaDiL = <b>Q</b>uick <b>a</b>nd
 <b>D</b>irty <b>i</b>nteractive <b>L</b>aTeX
-</center><div style="margin-top:20px"></div>as it gets the (html) job done in a simple way
-without thinking too much about a complicated bottom-up design from TeX.<div style="margin-top:20px"></div>QaDiL is basically a collection of a few python programs (classes) designed to
-be easily extendable. For mathematical typesetting <a href="https://katex.org/" target="_blank">KaTeX</a> is used. Also, a very useful plugin for interactive computation is
+</center><div style="margin-top:20px"></div>as it gets the rendering job done in a simple (quick and dirty) way
+without thinking too much about a complicated bottom-up design from TeX.
+The system is sufficient for most (interactive) math notes in <tt>html</tt>, but it
+is not a full blown LaTeX installation. Please help improve the system on
+<a href="https://github.com/nielsthl/QaDiL" target="_blank">GitHub</a>
+if you have knowledge of css/javascript/python.<div style="margin-top:20px"></div>QaDiL is basically a collection of a few python programs (classes) designed to
+be easily extendable. For mathematical typesetting <a href="https://katex.org/" target="_blank">KaTeX</a> is used.
+Also, a very useful plugin for interactive computation is
 the <a href="https://sagecell.sagemath.org/" target="_blank">Sage cell server</a>. Furthermore,
-the author has successfully embedded annotation using
-<a href="https://web.hypothes.is/" target="_blank">Hypothesis</a>.<div style="margin-top:20px"></div><span id="sec1.1"></span><h2 id="e52d087a-8c14-4be7-a12f-006b609979cf">1.1 Prerequisites</h2><div style="margin-top:20px"></div>I will assume that you have a setup with working version of python (3) and
+student annotation can be added using 
+<a href="https://web.hypothes.is/" target="_blank">Hypothesis</a>. I consider QaDiL as a
+simple framework built on top of these three great plugins.<div style="margin-top:20px"></div>The beautiful
+math typesetting from KaTeX, the computer algebra interface from Sage and
+the annotation interface provided by Hypothesis will take you a long way when
+writing interactive math notes (for teaching).<div style="margin-top:20px"></div><span id="sec1.1"></span><h2 id="f2e7d06f-3c08-427c-9c34-0a324cae8192">1.1 Prerequisites</h2><div style="margin-top:20px"></div>I will assume that you have a setup with working version of python (3) and
 make. It is also assumed that you are comfortable working from a terminal
 window and using a text editor (like emacs or similar editing plain text).<div style="margin-top:20px"></div>It is not necessary to know any <tt>python</tt>. Also, detailed knowledge
 of <tt>make</tt> is not required. You only need to have a basic knowledge
 of using a text editor in order to add your chapter source files to the
 <tt>Makefile</tt> as your project grows. Every compilation of LaTeX to
-html is done by the command <tt>make</tt>.<div style="margin-top:20px"></div><span id="sec1.2"></span><h2 id="d852af7a-5381-4ba0-97a7-051256d1bdc5">1.2 Tinkering</h2><div style="margin-top:20px"></div>QaDiL is designed to be easy to use, but also for extendability. It is fairly
+html is done by the command <tt>make</tt>.<div style="margin-top:20px"></div><span id="sec1.2"></span><h2 id="e81f887d-b4b2-4648-adcc-773a7340045f">1.2 Tinkering</h2><div style="margin-top:20px"></div>QaDiL is designed to be easy to use, but also for extendability. It is fairly
 easy to tinker adding new functions to the python code, changing the
 look by modifying the included <tt>css</tt> files, adding new interative functions
-working with javascript in the <tt>js</tt> directory.<div style="margin-top:20px"></div><span id="sec1.3"></span><h2 id="9fcfeaa6-9e17-4354-9bdc-56dbc6696a4d">1.3 Basic design</h2><div style="margin-top:20px"></div>The overall idea in QaDiL is that a LaTeX command is a function with arguments and
+working with javascript in the <tt>js</tt> directory.<div style="margin-top:20px"></div><span id="sec1.3"></span><h2 id="903b0453-e6a4-4848-928b-b9f757d10016">1.3 Basic design</h2><div style="margin-top:20px"></div>The overall idea in QaDiL is that a LaTeX command is a function with arguments and
 optional arguments. A LaTeX environment is viewed as a function with an added
 body of LaTeX. This principle is reflected in the algebraic data types in the
-python code.<div style="margin-top:20px"></div></div></body>
+python code.<div style="margin-top:20px"></div><span id="sec1.4"></span><h2 id="e42ecdac-ee3f-4ce2-b99a-5b630563abbd">1.4 Acknowledgements</h2><div style="margin-top:20px"></div>My interest in interactive books was prompted by spirited
+interactions with Bjørk Hammer. I thank Bjørk for our shared
+nerdy interest in electronic teaching during the last many years.
+QaDiL started out as iLaTeX and was supported by the
+EDU-IT initiative at Aarhus Universitet in the fall of 2018,
+where a group of gifted students collaborated with Bjørk Hammer,
+<a href="https://pure.au.dk/portal/en/persons/jesper-funch-thomsen(ae84d659-6cc0-4a0e-82e9-9f42318390dd).html" target="_blank">Jesper Funch Thomsen</a> and I in redesigning
+Jesper's linear algebra notes (above) into interactive form in iLaTeX.<div style="margin-top:20px"></div>This resulted in the quiz environments <tt>orderquiz</tt> and
+<tt>paraquiz</tt> along with <tt>formatquiz</tt>. I am grateful
+to Johannes Jensen for programming these in javascript and
+designing the S-language for the interactive response.<div style="margin-top:20px"></div></div></body>
