@@ -1,0 +1,745 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.css" integrity="sha384-NFGicHNcq1l2DafLerXQeI3h3jJY3dCcDQF+29rtRBHW7P7ti+/XIRY7ALbJOaeh" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.js" integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#865dc405-de79-425a-a0d8-5d2d11cf9365"><b>1</b> A partly topological introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#97e0bdf6-2f48-4905-8907-f68630b253fd">1.1 A few words about rational functions</a></li><li><a href="intro.html#80090e52-739b-497f-903b-2fe2d278b46d">1.2 Topology</a></li><li><a href="intro.html#ecf3f66b-0543-4b1f-a81a-17825aecbc4a">1.3 Compactification</a></li><li><a href="intro.html#bbcc9317-318a-4771-aa2b-f4273aaf57c4">1.4 Projective spaces</a></li></ul><li><a class="kap" href="algebra.html#1ed734b7-6455-477f-9b44-0ea59bf6c31a"><b>2</b> Algebra and geometry</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="algebra.html#e4a511a7-6c36-49ca-a983-bd7c2cec6ea9">2.1 Algebraic sets</a></li><li><a href="algebra.html#c8a905e4-9b0e-46f5-9698-cdc66b0a43e3">2.2 Irreducible components</a></li><li><a href="algebra.html#ba8d5346-1f85-449c-b11b-d49b3b4e0f89">2.3 Primary decomposition</a></li><li><a href="algebra.html#9880dc01-5f6d-45f0-90c3-67510a1448f8">2.4 Computation</a></li><li><a href="algebra.html#076a918e-e09a-4fc2-9c5e-e4225d03d1e9">2.5 The Hilbert Nullstellensatz</a></li><li><a href="algebra.html#4860e90c-864b-4d67-bf57-96bc56bcf601">2.6 The combinatorial Nullstellensatz</a></li></ul><li><a class="kap" href="algcurves.html#ff176d0a-7a06-4daa-8fb9-e4de8a649262"><b>3</b> Affine algebraic curves</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="algcurves.html#76139805-0ce9-4dbd-bfe6-15f0bf2f2c32">3.1 Intersection of two plane curves</a></li><li><a href="algcurves.html#a97b3beb-7c73-4b4e-a07f-50f381164ad6">3.2 Rational functions and local rings</a></li><li><a href="algcurves.html#0a8f2420-b6b9-4034-be77-45cc96e3f473">3.3 Dimension in local rings</a></li><li><a href="algcurves.html#35347d83-a34a-4fb2-8d97-29983f88f292">3.4 The crucial isomorphism</a></li></ul><li><a class="kap" href="projplanecurves.html#2090f82e-a8dc-455c-8020-dbdf72031acc"><b>4</b> Projective plane curves</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="projplanecurves.html#a64557c6-6575-4126-bbf7-36b608c07bec">4.1 Rational functions on the projective plane</a></li><li><a href="projplanecurves.html#f26a8e14-45f2-46f0-a268-0524ba3ce8d5">4.2 Homogeneous polynomials with no common factors</a></li><li><a href="projplanecurves.html#bad03ff4-a571-42c2-833d-ce53678a84da">4.3 Projective transformations</a></li><li><a href="projplanecurves.html#b265511a-14ce-4a17-8e5c-18a8a8b3ef63">4.4 Invariance under projective transformations</a></li><li><a href="projplanecurves.html#4527af3e-bb0a-498d-aed9-900c9f51dae7">4.5 Statement and proof of Bezout</a></li><li><a href="projplanecurves.html#8041c00c-7461-4fb3-98a1-f0cc9b9b0ce3">4.6 Some more local algebra and local geometry</a></li><li><a href="projplanecurves.html#54e6adde-5781-4a3b-bbf7-62ac6353c439">4.7 Max Noether's theorem</a></li><li><a href="projplanecurves.html#a3ed75c8-fe29-4602-958c-a557d797adde">4.8 Elliptic curves</a></li><li><a href="projplanecurves.html#abec0501-e5d2-4715-8601-1e946e500324">4.9 Fun and surprising facts</a></li></ul><li><a class="kap" href="appendixA.html#08c025de-cd7e-4a67-a7ff-1b3e8f83b771"><b>A</b> Basic algebra</a></li><a href="#kapA" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapA" class="collapse"><li><a href="appendixA.html#5f534fa7-c80a-45b4-8308-f87a2f2e384d">A.1 Commutative rings</a></li><li><a href="appendixA.html#ca7011a4-c6a8-43df-98ee-1c1e4d669019">A.2 Local rings</a></li></ul><li><a class="kap" href="appendixE.html#ab9a2e95-72f4-4ca1-846c-f0c681596845"><b>E</b> Mandatory exercises AC25</a></li><a href="#kapE" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapE" class="collapse"></ul><li><a class="kap" href="references.html#36e9431f-9d93-424c-94e8-65d3d188e92c"><b>R</b> References</a></li><a href="#kapR" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapR" class="collapse"></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="ff176d0a-7a06-4daa-8fb9-e4de8a649262">3<span style="float:right;">Affine algebraic curves</span></h1><div style="margin-top:20px"></div>We will define an affine plane algebraic curve over a field <span class="math"></span><script type="math/tex">k</script> as the zero set
+<span class="math"></span><script type="math/tex">V(F)</script>, where <span class="math"></span><script type="math/tex">F\in k[x, y]</script> is an irreducible polynomial. So (at least
+in this chapter) we do not allow algebraic curves to have more than
+one component i.e., <span class="math"></span><script type="math/tex">V(x y)</script> is not considered an algebraic curve.<div style="margin-top:20px"></div>Algebraic curves are, in a sense we will not have time to explain, algebraic
+geometric objects of dimension one. The next step on the ladder is
+algebraic surfaces. Here we could consider <span class="math"></span><script type="math/tex">V(f)</script>, where
+<span class="math"></span><script type="math/tex">f\in k[x, y, z]</script>. An example plot is given below, where
+<span id="equ3.1"></span><div class="math"></div><script type="math/tex; mode=display">
+f = (x^2 + \frac{9}{4} y^2 + z^2 - 1)^3 - x^2 z^3 - \frac{9}{200} y^2 z^3
+\tag{3.1}</script>
+and <span class="math"></span><script type="math/tex">k = \mathbb{R}</script>. This surface could be called the <a href="https://en.wikipedia.org/wiki/Valentine%27s_Day" target="_blank">Valentine</a>'s surface. <div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+var('x, y, z')
+implicit_plot3d((x^2 + 9/4*y^2 + z^2 - 1)^3 - x^2*z^3 - 9/200 * y^2*z^3, (x,-1.2,1.2), (y,-1,1), (z,-1.3,1.3), plot_points=150, color='red')
+</script></div><div style="margin-top:20px"></div><span id="sec3.1"></span><h2 id="76139805-0ce9-4dbd-bfe6-15f0bf2f2c32">3.1 Intersection of two plane curves</h2><div style="margin-top:20px"></div>Below you see an extract from <a href="https://en.wikipedia.org/wiki/Disquisitiones_Arithmeticae" target="_blank">Disquisitiones Arithmeticae</a> of relevance
+in the proof of Lemma <a href="algcurves.html#env3.2">3.2</a>.<div style="margin-top:20px"></div><span id="env3.1"></span><div class="figure" data-count="3.1">     
+  <div class="centerimg"><img src="img/disqarit.png" ></div>
+</div><div style="margin-top:20px"></div>For an arbitrary integral domain <span class="math"></span><script type="math/tex">R</script>, a greatest common divisor for <span class="math"></span><script type="math/tex">a, b\in R</script>
+is an element <span class="math"></span><script type="math/tex">(a, b)\in R</script> satisfying<div style="margin-top:20px"></div><ol class="lowerroman"><li id="ite3.1">
+  <span class="math"></span><script type="math/tex">(a, b) \mid a</script> and <span class="math"></span><script type="math/tex">(a, b) \mid b</script>
+</li><li id="ite3.2">
+  If <span class="math"></span><script type="math/tex">d\mid a</script> and <span class="math"></span><script type="math/tex">d\mid b</script>, then <span class="math"></span><script type="math/tex">d\mid (a, b)</script> for <span class="math"></span><script type="math/tex">d\in R</script>.
+</li></ol><div style="margin-top:20px"></div>It follows from these two conditions that a greatest common divisor is uniquely determined up to multiplication by a unit. Furthermore, a greatest
+common divisor satisfies <span class="math"></span><script type="math/tex">(c a, c b) = c (a, b)</script> and <span class="math"></span><script type="math/tex">((a, b), c) = (a, (b, c))</script>
+for <span class="math"></span><script type="math/tex">a, b, c\in R</script>. The latter condition brings meaning to a greatest common divisor <span class="math"></span><script type="math/tex">(a_0, a_1, \dots, a_n)</script> of
+finitely many elements <span class="math"></span><script type="math/tex">a_0, a_1, \dots, a_n\in R</script>. A polynomial
+<div class="math"></div><script type="math/tex; mode=display">
+p(x) = a_0 + a_1 x + \dots + a_n x^n\in R[x]
+</script>
+is called <em>primitive</em> if <span class="math"></span><script type="math/tex">(a_0, a_1, \dots, a_n) = 1</script>.<div style="margin-top:20px"></div>We assume now that <span class="math"></span><script type="math/tex">R</script> is a UFD. This ensures the existence of <span class="math"></span><script type="math/tex">(a, b)</script> for <span class="math"></span><script type="math/tex">a, b\in R</script>.
+Let <span class="math"></span><script type="math/tex">K</script> denote the fraction field of <span class="math"></span><script type="math/tex">R</script>. Then any polynomial <span class="math"></span><script type="math/tex">f(x)\in K[x]</script> can
+be written as
+<div class="math"></div><script type="math/tex; mode=display">
+f(x) = \frac{a}{s}\, p(x),
+</script>
+where <span class="math"></span><script type="math/tex">p(x)\in R[x]</script> is a primitive polynomial and <span class="math"></span><script type="math/tex">\frac{a}{s}\in K</script>. The following result is (probably) hidden in the above excerpt from
+Disquisitiones.<div style="margin-top:20px"></div>  Suppose that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{a_1}{s_1} p_1(x) = \frac{a_2}{s_2} p_2(x),
+  </script>
+  where <span class="math"></span><script type="math/tex">p_1(x), p_2(x)\in R[x]</script> are primitive polynomials. Then there exists a unit <span class="math"></span><script type="math/tex">u\in R^*</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  u \frac{a_1}{s_1} = \frac{a_2}{s_2}.
+  </script>
+    One may also prove that a product of two primitive polynomials is a primitive polynomial.
+  Now one can conclude that if <span class="math"></span><script type="math/tex">(f, g) = 1</script> in <span class="math"></span><script type="math/tex">R[x]</script>, then <span class="math"></span><script type="math/tex">(f, g) = 1</script> in <span class="math"></span><script type="math/tex">K[x]</script>.<div style="margin-top:20px"></div><span id="env3.2"></span><div class="lemma" data-count="3.2">     
+If <span class="math"></span><script type="math/tex">f(x, y), g(x, y)\in k[x, y]</script> are polynomials with no common prime factors, then there exists
+<span class="math"></span><script type="math/tex">\lambda(x, y), \mu(x, y)\in k[x, y]</script> with
+<div class="math"></div><script type="math/tex; mode=display">
+\lambda(x, y) f(x, y) + \mu(x, y) g(x, y) = h(x)\in k[x]\setminus\{0\}.
+</script>
+</div>
+<a href="#a985fd3e-bed1-4bd1-93e1-d594fac88912" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=a985fd3e-bed1-4bd1-93e1-d594fac88912 class = "collapse Proof envbuttons">    
+  
+Let <span class="math"></span><script type="math/tex">R = k[x]</script> and <span class="math"></span><script type="math/tex">K = k(x)</script>.
+If <span class="math"></span><script type="math/tex">f, g\in k[x, y] = R[y]</script> have no common factors in <span class="math"></span><script type="math/tex">R[y]</script>, they also have
+no common factors in <span class="math"></span><script type="math/tex">k(x)[y] = K[y]</script>, which is a PID. Therefore
+<div class="math"></div><script type="math/tex; mode=display">
+\lambda_1 f + \lambda_2 g = 1
+</script>
+for suitable <span class="math"></span><script type="math/tex">\lambda_1, \lambda_2\in k(x)[y]</script>.
+Multiplying by a suitable polynomial <span class="math"></span><script type="math/tex">h(x)\in R</script>, we can clear the denominators on the left hand side
+and get the result.
+  </div><div style="margin-top:20px"></div><span id="env3.3"></span><div class="exercise" data-count="3.3">     
+  Get inspired by the proof of Lemma <a href=#env3.2 class="labelref">3.2</a> and explain
+  how the extended euclidean algorithm applied to the polynomials
+  <div class="math"></div><script type="math/tex; mode=display">
+  y^3 - x^2\qquad\text{and}\qquad y^2 - x^3 + x
+  </script>
+  in <span class="math"></span><script type="math/tex">k(x)[y]</script> (which is a euclidean ring!) helps in finding a polynomial <span class="math"></span><script type="math/tex">h \in k[x]</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  h \in (y^3 - x^2, y^2 - x^3 + x).
+  </script>
+  Can we be sure that <span class="math"></span><script type="math/tex">k[x] \cap (y^3 - x^2, y^2 - x^3 + x) = (h)</script>?<div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+R = frac(QQ[x])[y]
+f = y^3 - x^2;
+g = y^2 - x^3 + x;
+f1 = f - y*g;
+</script></div><div style="margin-top:20px"></div><a href="#b99e94b8-77d7-4211-aec1-0710c0a7505a" class ="btn btn-default" data-toggle="collapse">Macaulay2 code - viewer discretion advised</a><div id=b99e94b8-77d7-4211-aec1-0710c0a7505a class="collapse"><div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+R = frac(QQ[x])[y]
+
+euclid = (f, g) ->
+(
+  a := f; 
+  b := g;
+
+  lambda11 := 0;
+  lambda12 := 1;
+
+  lambda21 := 1;
+  lambda22 := 0;
+
+  lambda1 := 0;
+  lambda2 := 1;
+ 
+  while b != 0 do
+  {
+--    print(a, b);
+    q = a // b;
+    r = a % b;
+    if r == 0 then break 0;
+    a = b;
+    b = r; 
+    lambda1 = lambda12 - q*lambda11;
+    lambda2 = lambda22 - q*lambda21;
+    lambda12 = lambda11;
+    lambda22 = lambda21;
+    lambda11 = lambda1;
+    lambda21 = lambda2
+   };
+
+  {b, lambda1, lambda2}
+)
+
+f = y^2 - x^3 + x
+g = y^3 - x^2
+
+lcmDenominatorsCoefficients = (f) -> lcm(apply(flatten(entries((coefficients f)_1)), g -> denominator(leadCoefficient g)))
+
+
+polInx = (f, g) ->
+(
+  outputEuclid = euclid(f, g);
+  lcmMult = lcm(apply(outputEuclid_{1, 2}, g->lcmDenominatorsCoefficients(g)));
+  outputEuclid_0*lcmMult
+)
+
+polInx(f, g)
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env3.4"></span><div class="exercise" data-count="3.4">     
+Use Lemma <a href=#env3.2 class="labelref">3.2</a> to show that <span class="math"></span><script type="math/tex">V(f)\cap V(g)</script> is a finite set, when
+<span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script> have no common factors.
+</div><div style="margin-top:20px"></div>We consider two polynomials <span class="math"></span><script type="math/tex">f, g\in k[x, y]</script> with no common prime factors.
+As we saw in Lemma <a href=#env3.2 class="labelref">3.2</a> this implies that <span class="math"></span><script type="math/tex">V(f, g)\in k^2</script>
+is finite. It could be empty. The distant goal is to prove that in the
+right setting <span class="math"></span><script type="math/tex">V(f)</script> and <span class="math"></span><script type="math/tex">V(g)</script> intersect in preciselt <span class="math"></span><script type="math/tex">\deg(f) \deg(g)</script>
+points.<div style="margin-top:20px"></div><span id="env3.5"></span><div class="proposition" data-count="3.5">     
+  Let <span class="math"></span><script type="math/tex">f, g\in k[x, y]</script> be polynomials with no common factors,
+  <span class="math"></span><script type="math/tex">m_1 = \deg(f)</script> and <span class="math"></span><script type="math/tex">m_2 = \deg(g)</script>. Then
+  <div class="math"></div><script type="math/tex; mode=display">
+  \dim_k k[x, y]/(f, g) \leq m_1 m_2.
+  </script>
+</div><div style="margin-top:20px"></div><a href="#92ef6232-7f4f-4569-8d0b-549f6e4b986d" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=92ef6232-7f4f-4569-8d0b-549f6e4b986d class = "collapse Proof envbuttons">    
+  Let <span class="math"></span><script type="math/tex">R = k[x, y]</script> and <span class="math"></span><script type="math/tex">I = (f, g)</script>. We let <span class="math"></span><script type="math/tex">R_{\leq d}</script> denote the
+  finite dimensional vector space of polynomials of degree <span class="math"></span><script type="math/tex">\leq d</script>.
+  in <span class="math"></span><script type="math/tex">R</script>.
+  Check that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \dim(R_{\leq d}) = \frac{(d+1)(d+2)}{2}.
+  </script>
+  Define for <span class="math"></span><script type="math/tex">d\geq m_1, m_2</script>,
+  <span id="equ3.2"></span><div class="math"></div><script type="math/tex; mode=display">
+  V_d = R_{\leq d-m_1} f + R_{\leq d-m_2} g \subset I\cap R_{\leq d}.
+  \tag{3.2}</script>
+  Notice that
+  <div class="math"></div><script type="math/tex; mode=display">
+  R_{\leq d - m_1} f \cap R_{\leq d-m_2} g = R_{\leq d-m_1 - m_2} f g
+  </script>
+  for <span class="math"></span><script type="math/tex">d \geq m_1 + m_2</script>. This is because <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script>
+  are relatively prime (no common factors). Now
+  consider the subspaces <span class="math"></span><script type="math/tex">U = R_{\leq d-m_1} f</script> and
+  <span class="math"></span><script type="math/tex">V = R_{\leq d-m_2} g</script> and use the isomorphism <span class="math"></span><script type="math/tex">U/(U\cap V) \cong (U+V)/V</script>:<div style="margin-top:20px"></div><div class="centerimg"><img src="img/diagramvspaces.png" ></div><div style="margin-top:20px"></div>to conclude that <span class="math"></span><script type="math/tex">\dim_k (R_{\leq d}/V_d) = \dim_k(R_{\leq d}) - \dim_k V_d</script>
+  is equal to <span class="math"></span><script type="math/tex">(d+1)(d+2)/2</script> minus the dimension of <span class="math"></span><script type="math/tex">U + V</script> or
+  <span class="math"></span><script type="math/tex">\dim(U) + \dim(V) - \dim(U\cap V)</script>, which is
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{(d-m_1+1)(d-m_1+2)}{2} + \frac{(d-m_2+1)(d-m_2+2)}{2} - \frac{(d-m_1-m_2 + 1)(d - m_1 - m_2 + 2)}{2}.
+</script>
+Running this through a computer algebra system you magically end up with <span class="math"></span><script type="math/tex">m_1 m_2</script>.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+var('d m1 m2')
+expr = (d+1)*(d+2)/2 - (d-m1+1)*(d-m1+2)/2 - (d-m2+1)*(d-m2+2)/2 + (d-m1-m2+1)*(d-m1-m2+2)/2
+expr.simplify_full()
+</script></div><div style="margin-top:20px"></div>Since we have a surjective homomorphism
+    <div class="math"></div><script type="math/tex; mode=display">
+    R_{\leq d} /V_d \rightarrow R_{\leq d} / I\cap R_{\leq d},
+    </script>
+    it follows that <span class="math"></span><script type="math/tex">\dim_k R/I \leq m_1 m_2</script>.<div style="margin-top:20px"></div>In fact, suppose that <span class="math"></span><script type="math/tex">f_1, \dots, f_m\in R</script>
+    are polynomials so that <span class="math"></span><script type="math/tex">[f_1], \dots, [f_m]</script> are linearly independent in <span class="math"></span><script type="math/tex">R/I</script>. Choosing
+    <span class="math"></span><script type="math/tex">d \geq \max\left(\deg(f_1), \dots, \deg(f_m)\right)</script>, the equivalence classes
+    <span class="math"></span><script type="math/tex">[f_1], \dots, [f_m]</script> now in <span class="math"></span><script type="math/tex">R_{\leq d}/I\cap R_{\leq d}</script> must be linearly independent,
+    because we cannot find <span class="math"></span><script type="math/tex">\lambda_1, \dots, \lambda_m\in K</script>
+    <div class="math"></div><script type="math/tex; mode=display">
+    \lambda_1 f_1 + \cdots + \lambda_m f_m \in I\cap R_{\leq d} \subset I
+    </script>
+    unless <span class="math"></span><script type="math/tex">\lambda_1 = \cdots = \lambda_m = 0</script>.
+  </div><div style="margin-top:20px"></div><span id="env3.6"></span><div class="exercise" data-count="3.6">     
+  Show that the inclusion in <a href=#equ3.2>(3.2)</a> in the proof of Proposition <a href=#env3.5 class="labelref">3.5</a> can be strict.<div style="margin-top:20px"></div><a href="#60b2573d-a2db-4d6b-b1cf-ec8aa54c9285" class ="btn btn-default Hintbutton"data-toggle="collapse"></a> <div id=60b2573d-a2db-4d6b-b1cf-ec8aa54c9285 class = "collapse Hint envbuttons">    
+    Consider <span class="math"></span><script type="math/tex">f = x-1</script> and <span class="math"></span><script type="math/tex">g = y-x^2</script>.
+    </div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>Below we generate two random cubics in two variables
+over <span class="math"></span><script type="math/tex">\mathbb{Q}</script> and output the dimenson (or rather degree of
+<span class="math"></span><script type="math/tex">(f, g)</script>)  of <span class="math"></span><script type="math/tex">\mathbb{Q}[x, y]/(f,  g)</script>.<div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+R = QQ[x, y] 
+f = random(0, R) + random(1, R) + random(2, R) + random(3, R)
+g = random(0, R) + random(1, R) + random(2, R) + random(3, R)
+I = ideal(f, g);
+degree I
+</script></div><div style="margin-top:20px"></div><span id="env3.7"></span><div class="exercise" data-count="3.7">     
+  The example given above are random cubics.
+Find examples of <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script> in the Macaulay2 window above so that the degree becomes strictly
+less than <span class="math"></span><script type="math/tex">\deg(f) \deg(g)</script>.
+</div><div style="margin-top:20px"></div>Given a polynomial <span class="math"></span><script type="math/tex">p\in k[x, y]</script>, there is a very natural way
+of associating a homogeneous polynomial <span class="math"></span><script type="math/tex">p^*\in k[x, y, z]</script> by
+<div class="math"></div><script type="math/tex; mode=display">
+p^* = z^{\deg(f)} p\left(\frac{x}{z}, \frac{y}{z}\right).
+</script><div style="margin-top:20px"></div><span id="env3.8"></span><div class="example" data-count="3.8">     <div style="margin-top:20px"></div>Suppose that <span class="math"></span><script type="math/tex">p(x, y) = y^2 - x^3 + x</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+  p^*(x, y, z) = z^3 \left(\left(\frac{y}{z}\right)^2 - \left(\frac{x}{z}\right)^3 + \left(\frac{x}{z}\right)\right) =
+y^2 z - x^3 + x z^2.
+  </script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>Similarly having a homogeneous polynomial <span class="math"></span><script type="math/tex">P\in k[x,y , z]</script>
+we can dehomogenize by
+<div class="math"></div><script type="math/tex; mode=display">
+P_*(x, y) = P(x, y, 1).
+</script><div style="margin-top:20px"></div><span id="env3.9"></span><div class="example" data-count="3.9">     
+  For <span class="math"></span><script type="math/tex">P(x, y, z) = z^3 + x z^2 + y^2 z</script>,
+  <div class="math"></div><script type="math/tex; mode=display">
+  P_*(x, y) = 1 + x + y^2.
+  </script>
+  Notice here that
+  <div class="math"></div><script type="math/tex; mode=display">
+  P_*(x, y)^* = z^2 + x z + y^2 \neq P(x, y, z). 
+  </script>
+  However,
+  <div class="math"></div><script type="math/tex; mode=display">
+  P = z (P_*)^*. 
+  </script>
+</div><div style="margin-top:20px"></div><span id="env3.10"></span><div class="exercise" data-count="3.10">     
+  Similar to the situation in <span class="math"></span><script type="math/tex">k[x, y]</script>, we can also
+  homogenize a polynomial <span class="math"></span><script type="math/tex">f\in k[x_1, x_2, x_3]</script> and
+  obtain a homogeneous polynomial <span class="math"></span><script type="math/tex">f^*\in k[x_0, x_1, x_2, x_3]</script>.
+  Explain how this is done.<div style="margin-top:20px"></div>For an ideal <span class="math"></span><script type="math/tex">I\subset k[x_1, x_2, x_3]</script>, we define
+  <div class="math"></div><script type="math/tex; mode=display">
+  I^* = \left(f^* \mid f\in I\right)
+  </script>
+  i.e., as the ideal in <span class="math"></span><script type="math/tex">k[x_0, x_1, x_2, x_3]</script> generated by <span class="math"></span><script type="math/tex">f^*</script> for
+  <span class="math"></span><script type="math/tex">f\in I</script>.<div style="margin-top:20px"></div>Is it true that
+  <div class="math"></div><script type="math/tex; mode=display">
+  (x_2 - x_1^2, x_3 - x_1^3)^* = (x_0 x_2 - x_1^2, x_0^2 x_3 - x_1^3)?
+  </script>
+</div><div style="margin-top:20px"></div><span id="env3.11"></span><div class="proposition" data-count="3.11">     
+  Suppose that <span class="math"></span><script type="math/tex">f, g\in k[x, y]</script> have no common factors and
+  that <span class="math"></span><script type="math/tex">V(f)</script> and <span class="math"></span><script type="math/tex">V(g)</script> do not intersect at infinity i.e.
+  <div class="math"></div><script type="math/tex; mode=display">
+  V(f^*) \cap V(g^*) \cap V(z) = \emptyset \quad\text{in } \mathbb{P}^2.
+  </script>
+  Then
+  <div class="math"></div><script type="math/tex; mode=display">
+  \dim_k k[x, y]/(f, g) = m_1 m_2,
+  </script>
+  where <span class="math"></span><script type="math/tex">m_1 = \deg(f)</script> and <span class="math"></span><script type="math/tex">m_2 = \deg(g)</script>. Here we assume <span class="math"></span><script type="math/tex">k =
+  \overline{k}</script>.
+</div>
+<a href="#7f2a84b6-659a-4848-ba21-6983ddc8bc5c" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=7f2a84b6-659a-4848-ba21-6983ddc8bc5c class = "collapse Proof envbuttons">    
+  It is not too difficult to compute the points at infinity for a
+  polynomial. Write the highest degree terms in <span class="math"></span><script type="math/tex">f</script> as <span class="math"></span><script type="math/tex">f^h</script>. Here
+  <span class="math"></span><script type="math/tex">f^h</script> is a homogeneous polynomial of degree <span class="math"></span><script type="math/tex">m = \deg(f)</script> and <span class="math"></span><script type="math/tex">f^h</script>
+  survives in <span class="math"></span><script type="math/tex">f^*</script> without any multiplication of a power of <span class="math"></span><script type="math/tex">z</script>.
+  As <span class="math"></span><script type="math/tex">k</script> is algebraically closed, we may write
+  <div class="math"></div><script type="math/tex; mode=display">
+  f^h = (a_1 x + b_1 y) \cdots (a_m x + b_m y),
+  </script>
+  for <span class="math"></span><script type="math/tex">a_1, b_1, \dots, a_m, b_m\in k</script>,
+  since
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left(\frac{1}{y}\right)^m f^h(x, y) = f^h\left(\frac{x}{y}, 1\right) = \left(\frac{x}{y} - \alpha_1\right)
+  \cdots \left(\frac{x}{y} - \alpha_d\right),
+  </script>
+  for <span class="math"></span><script type="math/tex">d\leq m</script> and <span class="math"></span><script type="math/tex">\alpha_1, \dots, \alpha_d\in k</script>
+  because <span class="math"></span><script type="math/tex">k</script> is algebraically closed.<div style="margin-top:20px"></div>The points at infinity of <span class="math"></span><script type="math/tex">f</script> are
+  <div class="math"></div><script type="math/tex; mode=display">
+  (-b_1, a_1, 0), \dots, (-b_m, a_m, 0).
+  </script>
+  If <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script> do not have any common points at infinity, then
+  <span class="math"></span><script type="math/tex">f^h</script> and <span class="math"></span><script type="math/tex">g^h</script> are relatively prime polynomials.<div style="margin-top:20px"></div>This implies that
+  <span id="equ3.3"></span><div class="math"></div><script type="math/tex; mode=display">
+  R_{d-m_1} f + R_{d - m_2} g = I \cap R_d
+  \tag{3.3}</script>
+  and therefore that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \dim R/I = \dim R_{\leq d} / V_d = m_1 m_2
+  </script>
+  in the notation used in the proof of Proposition <a href=#env3.5 class="labelref">3.5</a>.<div style="margin-top:20px"></div>Let us explain <a href=#equ3.3>(3.3)</a>. Suppose that
+  <div class="math"></div><script type="math/tex; mode=display">
+  F \in \left(I\cap R_{\leq d}\right) \setminus \left( R_{d-m_1} f + R_{d-m_2} g\right).
+  </script>
+  Then <span class="math"></span><script type="math/tex">F = \lambda_1 f + \lambda_2 g</script> with <span class="math"></span><script type="math/tex">\deg(F)\leq d</script>. Let us assume that <span class="math"></span><script type="math/tex">\lambda_1, \lambda_2\in k[x, y]</script>
+  are picked so that <span class="math"></span><script type="math/tex">\deg(\lambda_1)</script> is minimal. A moment of reflection will
+  convince you that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \lambda_1^h f^h + \lambda_2^h g^h = 0,
+  </script>
+  since we must have <span class="math"></span><script type="math/tex">\lambda_1\not\in R_{\leq d-m_1}</script> and <span class="math"></span><script type="math/tex">\lambda_2\not\in R_{\leq d - m_2}</script>.
+  As <span class="math"></span><script type="math/tex">f^h</script> and <span class="math"></span><script type="math/tex">g^h</script> are relatively prime, <span class="math"></span><script type="math/tex">g^h \mid \lambda_1^h</script>. Therefore there
+  exists a polynomial <span class="math"></span><script type="math/tex">q\in k[x, y]</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \deg(\lambda_1 - q g) < \deg(\lambda_1).
+  </script>
+  Now focus on
+  <div class="math"></div><script type="math/tex; mode=display">
+  F = \lambda_1 f + \lambda_2 g = (\lambda_1 - q g) f + (\lambda_2 + q f) g.
+  </script>
+  </div><div style="margin-top:20px"></div><span id="sec3.2"></span><h2 id="a97b3beb-7c73-4b4e-a07f-50f381164ad6">3.2 Rational functions and local rings</h2><div style="margin-top:20px"></div>The quotient ring
+<div class="math"></div><script type="math/tex; mode=display">
+ \Gamma(F) := R/(F)
+</script>
+is an integral domain and we denote its field of fractions by <span class="math"></span><script type="math/tex">k(F)</script>.
+The elements in <span class="math"></span><script type="math/tex">k(F)</script> are called <em>rational functions</em> on <span class="math"></span><script type="math/tex">V(F)</script>.<div style="margin-top:20px"></div>Notice that
+<span id="equ3.4"></span><div class="math"></div><script type="math/tex; mode=display">
+\frac{[f]}{[g]} = \frac{[r]}{[s]} \iff [f] [s] = [g] [r] \iff
+f s - g r \in (F) \iff F \mid f s - g r. 
+\tag{3.4}</script><div style="margin-top:20px"></div><span id="env3.12"></span><div class="definition" data-count="3.12">     
+  A rational function <span class="math"></span><script type="math/tex">r\in k(F)</script> is defined at <span class="math"></span><script type="math/tex">P\in V(F)</script> if
+  there exists  <span class="math"></span><script type="math/tex">f, g\in k[x, y]</script>, such that 
+<div class="math"></div><script type="math/tex; mode=display">
+r = \frac{[f]}{[g]},
+</script>
+and <span class="math"></span><script type="math/tex">g(P)\neq 0</script>. The pole set of <span class="math"></span><script type="math/tex">r</script> is the set of points on <span class="math"></span><script type="math/tex">V(F)</script>, where
+<span class="math"></span><script type="math/tex">r</script> is not defined. 
+</div><div style="margin-top:20px"></div><span id="env3.13"></span><div class="proposition" data-count="3.13">     
+  The pole set of <span class="math"></span><script type="math/tex">r\in k(F)</script> is the zero set of the ideal <span class="math"></span><script type="math/tex">J_r</script>, where
+  <div class="math"></div><script type="math/tex; mode=display">
+  J_r = \{G\in k[x, y] \mid [G] r\in \Gamma(F)\}.
+  </script>
+  The pole set is finite. Also, if <span class="math"></span><script type="math/tex">r</script> is defined at <span class="math"></span><script type="math/tex">P</script>, then
+its value is well defined by
+<div class="math"></div><script type="math/tex; mode=display">
+r(P) = \frac{f(P)}{g(P)},
+</script>
+where <span class="math"></span><script type="math/tex">r = [f]/[g]</script>.
+  </div>
+  <a href="#a4b5f69c-8782-4160-b747-ab76c43f5c84" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=a4b5f69c-8782-4160-b747-ab76c43f5c84 class = "collapse Proof envbuttons">    
+Observe that <span class="math"></span><script type="math/tex">[g]</script> is a denominator for <span class="math"></span><script type="math/tex">r</script> if and only if <span class="math"></span><script type="math/tex">[g]r \in \Gamma(F)</script>.<div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">v\in V(J_r)</script>, then <span class="math"></span><script type="math/tex">v</script> has to be a pole for <span class="math"></span><script type="math/tex">r</script>. If not, then <span class="math"></span><script type="math/tex">r = [f]/[g]</script> with
+  <span class="math"></span><script type="math/tex">g(v)\neq 0</script>, but <span class="math"></span><script type="math/tex">g\in J_r</script>. If <span class="math"></span><script type="math/tex">v\not\in V(J_r)</script>, we may find <span class="math"></span><script type="math/tex">f, g\in k[x, y]</script>,
+  such that <span class="math"></span><script type="math/tex">[g] r = [f]</script> and <span class="math"></span><script type="math/tex">g(v)\neq 0</script>. Therefore <span class="math"></span><script type="math/tex">v</script> is not a pole of <span class="math"></span><script type="math/tex">r</script>.
+  We are assuming that <span class="math"></span><script type="math/tex">F</script> is an irreducible polynomial. If <span class="math"></span><script type="math/tex">r = [f]/[g]</script> and
+  <span class="math"></span><script type="math/tex">[g]\neq 0</script>, then <span class="math"></span><script type="math/tex">F\nmid g</script>. Therefore <span class="math"></span><script type="math/tex">V(F)\cap V(g)</script> is finite by
+  Exercise <a href=#env3.4 class="labelref">3.4</a>.<div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">r = [f]/[g_1] = [f_2]/[g_2]</script> with <span class="math"></span><script type="math/tex">g_1(P)\neq 0</script> and <span class="math"></span><script type="math/tex">g_2(P)\neq 0</script>, then 
+  <span class="math"></span><script type="math/tex">f(P) g_2(P) = g_1(P) f_2(P),</script> since <span class="math"></span><script type="math/tex">F(P)=0</script>. Therefore
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{f(P)}{g_1(P)} = \frac{f_2(P)}{g_2(P)}.
+  </script>
+  </div><div style="margin-top:20px"></div><span id="env3.14"></span><div class="example" data-count="3.14">     
+  Consider <span class="math"></span><script type="math/tex"> F = x^2 + y^2 - 1\in \mathbb{R}[x]</script> from Example <a href="intro.html#env1.9">1.9</a>. In
+  <span class="math"></span><script type="math/tex">\mathbb{R}(F)</script> we have
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{[y-1]}{[x]} = -\frac{[x]}{[y+1]}.
+  </script>
+  This follows from <a href=#equ3.4>(3.4)</a>.
+  </div><div style="margin-top:20px"></div><span id="env3.15"></span><div class="exercise" data-count="3.15">     
+Let <span class="math"></span><script type="math/tex">F = y^2 - x^3 + x</script>. What is the value of the rational function
+<div class="math"></div><script type="math/tex; mode=display">
+r = \frac{[x]}{[y]}
+</script>
+evaluated at <span class="math"></span><script type="math/tex">(0, 0)\in V(F)</script>? What about <span class="math"></span><script type="math/tex">\displaystyle\frac{[y]}{[x]}</script>?
+</div><div style="margin-top:20px"></div>Suppose that <span class="math"></span><script type="math/tex">R</script> is an arbitrary commutative ring with ideals <span class="math"></span><script type="math/tex">I, J\subseteq R</script>. Then
+the colon ideal is defined by
+<div class="math"></div><script type="math/tex; mode=display">
+I : J = \{r\in R \mid r J \subseteq I\}.
+</script><div style="margin-top:20px"></div><span id="env3.16"></span><div class="example" data-count="3.16">     
+  Suppose that you have a rational function <span class="math"></span><script type="math/tex">r\in K(F)</script>. Then its pole set is the
+  zero set of the ideal <span class="math"></span><script type="math/tex">J_r</script> from Proposition <a href=#env3.13 class="labelref">3.13</a>. If <span class="math"></span><script type="math/tex">r</script> is
+  represented by <span class="math"></span><script type="math/tex">[f]/[g]</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+  J_r = (F, g):(f).
+  </script>
+  Here are some examples in Macaulay2 related to the computation of <span class="math"></span><script type="math/tex">J_r</script> using
+  computation of the socalled colon ideal.<div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+R = QQ[x, y]
+F = x^2 + y^2 - 1
+ideal(F, x):ideal(y-1)
+</script></div><div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+R = QQ[x, y]
+F = y^2 - x^3 + x
+ideal(F, y):ideal(x)
+</script></div> <div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec3.2.1"></span><h3>3.2.1 The local ring at a point</h3><div style="margin-top:20px"></div><span id="env3.17"></span><div class="definition" data-count="3.17">     
+  A local ring is a commutative ring with precisely one
+  maximal ideal.
+</div><div style="margin-top:20px"></div><span id="env3.18"></span><div class="exercise" data-count="3.18">     
+  Define
+  <div class="math"></div><script type="math/tex; mode=display">
+  \mathbb{C}[z]_0 = \left\{\frac{f(z)}{g(z)}\, \middle|\, f(z), g(z)\in \mathbb{C}[z], \,z \nmid g(z)\right\}
+</script>
+and the ring of power series
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{C}\llbracket z\rrbracket = \left\{a_0 + a_1 z + a_2 z^2 + \cdots\, \middle|\, a_i\in \mathbb{C}\right\}
+</script>
+over <span class="math"></span><script type="math/tex">\mathbb{C}</script>.<div style="margin-top:20px"></div><ol class="alpha"><li id="ite3.3">
+  Prove that <span class="math"></span><script type="math/tex">\mathbb{C}[z]_0</script> is a subring of <span class="math"></span><script type="math/tex">\mathbb{C}\llbracket z \rrbracket</script> and that
+  they both are local rings. Show that
+  <div class="math"></div><script type="math/tex; mode=display">
+  e^z = 1 + z + \frac{z^2}{2!} + \cdots \in \mathbb{C}\llbracket z \rrbracket \setminus \mathbb{C}[z]_0.
+  </script>
+</li><li id="ite3.4">
+  Show that the field of fractions <span class="math"></span><script type="math/tex">\mathbb{C}((z))</script> of <span class="math"></span><script type="math/tex">\mathbb{C}\llbracket z\rrbracket</script> is the
+  Laurent series ring
+  <div class="math"></div><script type="math/tex; mode=display">
+  \left\{a_m z^m + a_{m+1} z^{m+1} + \cdots\, \middle|\, a_i\in \mathbb{C}, \, m\in \mathbb{Z}\right\}
+</script>
+  over <span class="math"></span><script type="math/tex">\mathbb{C}</script>.
+</li><li id="ite3.5"> Show that <span class="math"></span><script type="math/tex">\mathbb{C}((z))</script> is not an algebraically closed field.
+</li><li id="ite3.6"> One can prove that 
+  <div class="math"></div><script type="math/tex; mode=display">
+  \mathbb{C}\langle\langle z\rangle\rangle = \bigcup_{n\geq 1} \mathbb{C}((z^{1/n}))
+  </script>
+  is an algebraically closed field (Puiseux series) containing <span class="math"></span><script type="math/tex">\mathbb{C}((z))</script>. Is <span class="math"></span><script type="math/tex">K\langle\langle x \rangle\rangle</script> algebraically closed
+  if <span class="math"></span><script type="math/tex">K</script> is an algebraically closed field of characteristic <span class="math"></span><script type="math/tex">p>0</script>?
+</li></ol><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env3.19"></span><div class="definition" data-count="3.19">     
+Let <span class="math"></span><script type="math/tex">P\in V(F)</script>. Then we let <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script> denote the subset of <span class="math"></span><script type="math/tex">k(F)</script> given by the rational
+functions defined at <span class="math"></span><script type="math/tex">P</script>. This is a subring of <span class="math"></span><script type="math/tex">k(F)</script> and contains <span class="math"></span><script type="math/tex">\Gamma(F)</script> as a subring:
+<div class="math"></div><script type="math/tex; mode=display">
+\Gamma(F)\subset \mathcal{O}_P(F) \subset k(F).
+</script>
+</div><div style="margin-top:20px"></div><span id="env3.20"></span><div class="exercise" data-count="3.20">     
+Prove that <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script> is a local ring and that its unique maximal ideal
+is formed by the rational functions <span class="math"></span><script type="math/tex">r\in \mathcal{O}_P(F)</script> with <span class="math"></span><script type="math/tex">r(P) = 0</script>.
+</div><div style="margin-top:20px"></div><span id="env3.21"></span><div class="exercise" data-count="3.21">     
+Suppose that <span class="math"></span><script type="math/tex">P=(0,0)</script>. Show that the maximal ideal in <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script> is given
+by <span class="math"></span><script type="math/tex">([x], [y]) \mathcal{O}_P(F)</script> i.e. it is the ideal
+<div class="math"></div><script type="math/tex; mode=display">
+\left(\frac{[x]}{[1]}, \frac{[y]}{[1]}\right) \subset \mathcal{O}_P(F).
+</script>
+</div><div style="margin-top:20px"></div><span id="env3.22"></span><div class="exercise" data-count="3.22">     
+  Prove that
+  <div class="math"></div><script type="math/tex; mode=display">
+  \Gamma(F) = \bigcap_{P\in V(F)} \mathcal{O}_P(F).
+  </script>
+</div><div style="margin-top:20px"></div><span id="sec3.3"></span><h2 id="0a8f2420-b6b9-4034-be77-45cc96e3f473">3.3 Dimension in local rings</h2><div style="margin-top:20px"></div>Consider <span class="math"></span><script type="math/tex">I = (f, g) \subset R = K[x, y]</script>, where <span class="math"></span><script type="math/tex">K</script> is any field and <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script> have no common factors in <span class="math"></span><script type="math/tex">R</script>.
+Then we know by Proposition <a href=#env3.5 class="labelref">3.5</a> that
+<div class="math"></div><script type="math/tex; mode=display">
+\dim_K R/I \leq m_1 m_2,
+</script>
+where <span class="math"></span><script type="math/tex">m_1 = \deg(f)</script> and <span class="math"></span><script type="math/tex">m_2 = \deg(g)</script>.<div style="margin-top:20px"></div>We now wish to zoom in one of the finitely many points in <span class="math"></span><script type="math/tex">P\in V(I)</script>. We do this by focusing on the local ring<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+R_P = \left\{\frac{f}{g}\, \middle|\, g(P) \neq 0\right\} \subset K(x, y).
+</script><div style="margin-top:20px"></div>Define the ideal
+<div class="math"></div><script type="math/tex; mode=display">
+I_P = R_P\, f + R_P\, g \subset R_P.
+</script><div style="margin-top:20px"></div><span id="env3.23"></span><div class="exercise" data-count="3.23">     
+  To get grounded, consider first the one variable case <span class="math"></span><script type="math/tex">R = \mathbb{C}[x]</script> and for example
+  <span class="math"></span><script type="math/tex">I = (x^2 - 5 x + 6)\subset R</script> along with the point <span class="math"></span><script type="math/tex">P = 3\in \mathbb{C}</script>. Then
+  <div class="math"></div><script type="math/tex; mode=display">
+  R_P = \left\{\frac{f(x)}{g(x)} \middle| g(3) \neq 0\right\}.
+  </script>
+  Show that <span class="math"></span><script type="math/tex">I_P = (x-3)_P</script> and <span class="bubblelabel footnotecolor">that</span><span class="bubblecontent"><span class="bubbleinnercontent">Check that 
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{\lambda}{g} \equiv 
+\frac{\lambda}{g(3)} \pmod{x-3},
+</script>
+where <span class="math"></span><script type="math/tex">\lambda\in \mathbb{C}</script>. </span></span> <span class="math"></span><script type="math/tex">\dim_\mathbb{C} R_P/I_P = 1</script>, whereas <span class="math"></span><script type="math/tex">\dim_\mathbb{C} R/I = 2</script>.    
+</div><div style="margin-top:20px"></div><span id="env3.24"></span><div class="exercise" data-count="3.24">     
+Prove that <span class="math"></span><script type="math/tex">I_P = R_P</script> if <span class="math"></span><script type="math/tex">P\not\in V(I)</script>.
+</div><div style="margin-top:20px"></div>
+<div style="margin-top:20px"></div>
+<span id="sec3.4"></span><h2 id="35347d83-a34a-4fb2-8d97-29983f88f292">3.4 The crucial isomorphism</h2><div style="margin-top:20px"></div>Suppose that <span class="math"></span><script type="math/tex">V(I) = \{P_1, \dots, P_r\}</script> with <span class="math"></span><script type="math/tex">I = (f, g) \subset K[x, y]</script>, where
+<span class="math"></span><script type="math/tex">K</script> is algebraically closed. For each <span class="math"></span><script type="math/tex">P_i</script> we have a well defined
+canonical homomorphism
+<div class="math"></div><script type="math/tex; mode=display">
+\varphi_i: R/I\rightarrow R_{P_i}/I_{P_i}
+</script>
+given by <span class="math"></span><script type="math/tex">\varphi([f]) = [f/1]</script>. Our objective is to show that<div style="margin-top:20px"></div><span id="equ3.5"></span><div class="math"></div><script type="math/tex; mode=display">
+\varphi = (\varphi_1, \dots, \varphi_r): R/I\rightarrow \prod_{j=1}^r R_{P_j}/I_{P_j} 
+\tag{3.5}</script>
+is an isomorphism <span class="math"></span><script type="math/tex">K</script>-algebras and therefore that
+<div class="math"></div><script type="math/tex; mode=display">
+\dim_K R/I = \sum_{j=1}^r \dim_K R_{P_j}/I_{P_j}.
+</script><div style="margin-top:20px"></div><span id="sec3.4.1"></span><h3>3.4.1 Constructing orthogonal idempotents in <span class="math"></span><script type="math/tex">R/I</script></h3><div style="margin-top:20px"></div>We are proving that <span class="math"></span><script type="math/tex">\varphi</script> is an isomorphism by constructing socalled orthogonal idempotents in <span class="math"></span><script type="math/tex">R/I</script> i.e.,
+elements <span class="math"></span><script type="math/tex">e_1, \dots, e_r</script> satisfying
+<span id="equ3.6"></span><div class="math"></div><script type="math/tex; mode=display">
+e_i^2 = e_i,\qquad e_i e_j = 0\qquad\text{and}\qquad 1 = e_1 + \cdots + e_r
+\tag{3.6}</script>
+for <span class="math"></span><script type="math/tex">i = 1, \dots, r</script> and <span class="math"></span><script type="math/tex">j\neq i</script>. These correspond to the natural basis elements
+in the product ring on the right hand side of <a href=#equ3.5>(3.5)</a>. A first approach is to
+work with polynomials <span class="math"></span><script type="math/tex">F_1, \dots, F_r</script>, such that <span class="math"></span><script type="math/tex">F_i(P_j) = \delta_{ij}</script>. We know
+these polynomials from the proof of Corollary <a href="algebra.html#env2.39">2.39</a>.<div style="margin-top:20px"></div>Does it work to put <span class="math"></span><script type="math/tex">e_i = [F_i]</script>? Certainly <span class="math"></span><script type="math/tex">F_i^2 - F_i</script> vanishes on <span class="math"></span><script type="math/tex">\{P_1, \dots, P_r\}</script>, but
+this does not necessarily imply that <span class="math"></span><script type="math/tex">F_i^2 - F_i\in I</script>. We only have <span class="math"></span><script type="math/tex">F_i^2 - F_i \in \operatorname{rad}(I)</script>.
+We need to adjust <span class="math"></span><script type="math/tex">F_i</script> to make it work. This is done using Theorem <a href="algebra.html#env2.38">2.38</a> (the Hilbert Nullstellensatz).<div style="margin-top:20px"></div>Notice that <span class="math"></span><script type="math/tex">I(\{P_1, \dots, P_r\}) = M_1 \cap \cdots \cap M_r</script>, where <span class="math"></span><script type="math/tex">M_i</script> denotes the
+(maximal) ideal of polynomials vanishing on <span class="math"></span><script type="math/tex">P_i</script>. For example, 
+<span class="math"></span><script type="math/tex">
+M_i = (x - a_i, y- b_i)
+</script>
+if
+<span class="math"></span><script type="math/tex">P_i = (a_i, b_i)</script>. By Theorem <a href="algebra.html#env2.38">2.38</a>,
+<span id="equ3.7"></span><div class="math"></div><script type="math/tex; mode=display">
+  (M_1\cap \cdots \cap M_r)^d \subset I
+\tag{3.7}</script><div style="margin-top:20px"></div>for sufficiently big <span class="math"></span><script type="math/tex">d</script>. We keep this <span class="math"></span><script type="math/tex">d</script> fixed for the rest of the proof.<div style="margin-top:20px"></div>The elements that make <a href=#equ3.6>(3.6)</a> work are <span class="math"></span><script type="math/tex">e_i = [E_i]</script>, where
+<div class="math"></div><script type="math/tex; mode=display">
+E_i = 1 - (1 - F_i^d)^d.
+</script>
+Notice that <span class="math"></span><script type="math/tex">E_i = F_i^d D_i</script> for a suitable polynomial <span class="math"></span><script type="math/tex">D_i</script> by the binomial expansion of <span class="math"></span><script type="math/tex">(1 - F_i^d)^d</script>.
+Therefore <span class="math"></span><script type="math/tex">E_i \in M_j^d</script> for
+<span class="math"></span><script type="math/tex">j\neq i</script> and
+<div class="math"></div><script type="math/tex; mode=display">
+1 - (E_1 + \cdots + E_n) = (1 - E_j) - (E_1 + \cdots + \xcancel{E_j} + \cdots + E_n) \in M_i^d
+</script>
+for every <span class="math"></span><script type="math/tex">i = 1, \dots, r</script>. This implies that <span class="math"></span><script type="math/tex">e_1 + \cdots + e_r = 1</script> by Lemma <a href="algcurves.html#env3.25">3.25</a>.
+We continue to use this lemma below.<div style="margin-top:20px"></div>Also if <span class="math"></span><script type="math/tex">i\neq j</script>, then <span class="math"></span><script type="math/tex">E_i E_j\in M_h^d</script> for every <span class="math"></span><script type="math/tex">h = 1, \dots, r</script> and finally
+<div class="math"></div><script type="math/tex; mode=display">
+E_i^2 - E_i = 1 - 2(1-F_i^d)^d + (1 - F_i^d)^{2d} - (1 - (1 - F_i^d)^d) =
+(1 - F_i^d)^{2d} - (1 - F_i^d)^d
+</script>
+So we see that <span class="math"></span><script type="math/tex">E_i^2 - E_i \in M_i^d</script> and since
+<div class="math"></div><script type="math/tex; mode=display">
+(1 - F_i^d)^{2d} - (1 - F_i^d)^d = (F_i^d D_i)^2 - F_i^d D_i
+</script>
+it also belongs to <span class="math"></span><script type="math/tex">M_j^d</script> for <span class="math"></span><script type="math/tex">j\neq i</script>.<div style="margin-top:20px"></div><span id="sec3.4.2"></span><h3>3.4.2 Comaximal ideals</h3><div style="margin-top:20px"></div><span id="env3.25"></span><div class="lemma" data-count="3.25">     
+<div class="math"></div><script type="math/tex; mode=display">
+M_1^d \cap \cdots \cap M_r^d \subset I.
+</script>
+</div><div style="margin-top:20px"></div><span id="env3.26"></span><div class="exercise" data-count="3.26">     
+  Is it true in general that
+  <div class="math"></div><script type="math/tex; mode=display">
+  (I_1 \cap \cdots \cap I_r)^d = I_1^d \cap \cdots \cap I_r^d
+  </script>
+  for ideals <span class="math"></span><script type="math/tex">I_1, \dots I_r</script> in a commutative ring <span class="math"></span><script type="math/tex">R</script>?<div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+R = QQ[x, y];
+I = ideal(?, ?);
+J = ideal(?, ?);
+I2 = I^2;
+J2 = J^2;
+intersect(I2, J2)
+IJ = intersect(I, J);
+IJ^2
+</script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env3.27"></span><div class="definition" data-count="3.27">     
+  Two ideals <span class="math"></span><script type="math/tex">I, J\subset R</script> in a commutative ring <span class="math"></span><script type="math/tex">R</script> are called
+  <em>comaximal</em> if <span class="math"></span><script type="math/tex">I + J = R</script>.
+</div><div style="margin-top:20px"></div><span id="env3.28"></span><div class="exercise" data-count="3.28">     
+  Suppose that <span class="math"></span><script type="math/tex">I</script> and <span class="math"></span><script type="math/tex">J</script> are comaximal ideals. Prove that <span class="math"></span><script type="math/tex">I J = I\cap J</script> and
+  that <span class="math"></span><script type="math/tex">I^m</script> and <span class="math"></span><script type="math/tex">J^n</script> are comaximal for every <span class="math"></span><script type="math/tex">m, n\in \mathbb{N}</script>.
+</div><div style="margin-top:20px"></div><span id="env3.29"></span><div class="exercise" data-count="3.29">     
+  We know that <span class="math"></span><script type="math/tex">(M_1\cap \cdots \cap M_r)^d \subset I</script> from <a href=#equ3.7>(3.7)</a>.
+  How do we get the much needed result in Lemma <a href=#env3.25 class="labelref">3.25</a>?
+</div><div style="margin-top:20px"></div><span id="sec3.4.3"></span><h3>3.4.3 The image of the orthogonal idempotents</h3><div style="margin-top:20px"></div>We have constructed orthogonal idempotents <span class="math"></span><script type="math/tex">e_1, \dots, e_r\in R/I</script>. They will
+do their magic when <span class="math"></span><script type="math/tex">\varphi</script> is applied to them. First, notice that <span class="math"></span><script type="math/tex">\varphi_i(e_i)</script> is
+a unit in <span class="math"></span><script type="math/tex">R_{P_i}</script>, since <span class="math"></span><script type="math/tex">E_i(P_i)\neq 0</script>. This gives
+<div class="math"></div><script type="math/tex; mode=display">
+0 = \varphi_i(e_i e_j) = \varphi_i(e_i)\varphi_i(e_j) \implies \varphi_i(e_j) = 0
+</script>
+for <span class="math"></span><script type="math/tex">i\neq j</script>. Finally this implies
+<div class="math"></div><script type="math/tex; mode=display">
+1 = \varphi_i(e_1 + \cdots + e_r) = \varphi_i(e_i).
+</script><div style="margin-top:20px"></div>We realize the canonical basis vectors of the right hand side of <a href=#equ3.5>(3.5)</a> as images
+of <span class="math"></span><script type="math/tex">e_1, \dots, e_r</script>. But we need more.<div style="margin-top:20px"></div><span id="sec3.4.4"></span><h3>3.4.4 Fractions are polynomials!</h3><div style="margin-top:20px"></div><span id="env3.30"></span><div class="lemma" data-count="3.30">     
+  If <span class="math"></span><script type="math/tex">G\in k[x, y]</script> and <span class="math"></span><script type="math/tex">G(P_i)\neq 0</script>, then there exists <span class="math"></span><script type="math/tex">t\in R/I</script>, such that
+  <span class="math"></span><script type="math/tex">t g = e_i</script>, where <span class="math"></span><script type="math/tex">g = [G]</script>.
+</div>
+<div class="proof">
+  Assume that <span class="math"></span><script type="math/tex">G(P_i) = 1</script> and put <span class="math"></span><script type="math/tex">H = 1-G</script>. Then
+  <div class="math"></div><script type="math/tex; mode=display">
+  (1-H)(E_i + H E_i + \cdots + H^{d-1} E_i) = E_i - H^d E_i,
+  </script>
+  where <span class="math"></span><script type="math/tex">H\in M_i</script>, so that <span class="math"></span><script type="math/tex">H^d E_i\in I</script>. Therefore <span class="math"></span><script type="math/tex">g ( e_i + h e_i + \cdots +
+  h^{d-1} e_i) = e_i</script> with <span class="math"></span><script type="math/tex">h = [H]</script>. Notice that we have once again used Lemma <a href=#env3.25 class="labelref">3.25</a>.
+The geometric series rules. It rules!
+</div><div style="margin-top:20px"></div><span id="env3.31"></span><div class="remark" data-count="3.31">     
+  Notice that Lemma <a href=#env3.30 class="labelref">3.30</a> actually says that
+  <div class="math"></div><script type="math/tex; mode=display">
+  t = g^{-1}
+  </script>
+  in <span class="math"></span><script type="math/tex">R_{P_i}/I_{P_i}</script> (since <span class="math"></span><script type="math/tex">\varphi_i(e_i) = 1</script>).
+</div><div style="margin-top:20px"></div><span id="sec3.4.5"></span><h3>3.4.5 Injectivity</h3><div style="margin-top:20px"></div>Suppose that <span class="math"></span><script type="math/tex">\varphi(f) = 0</script> and <span class="math"></span><script type="math/tex">f = [F]</script>. This means that <span class="math"></span><script type="math/tex">F\in I_{P_j}</script> for
+every <span class="math"></span><script type="math/tex">j = 1, \dots, r</script>. Therefore there exists <span class="math"></span><script type="math/tex">G_j</script> with <span class="math"></span><script type="math/tex">G_j(P_j)\neq 0</script> and
+<span class="math"></span><script type="math/tex">F G_j\in I</script> for <span class="math"></span><script type="math/tex">j = 1, \dots, r</script>. Now use the notation <span class="math"></span><script type="math/tex">g_j = [G_j]</script> to conclude
+<div class="math"></div><script type="math/tex; mode=display">
+f = f(e_1 + \cdots + e_r) = f (g_ 1 t_1 + \cdots + g_r t_r) = f g_1 t_1 + \cdots + f g_r t_r = 0,
+</script>
+since <span class="math"></span><script type="math/tex">F G_j\in I</script> for <span class="math"></span><script type="math/tex">j = 1, \dots, r</script>. We have used Lemma <a href=#env3.30 class="labelref">3.30</a> <span class="math"></span><script type="math/tex">r</script> times.<div style="margin-top:20px"></div><span id="sec3.4.6"></span><h3>3.4.6 Surjectivity</h3><div style="margin-top:20px"></div>For a fraction <span class="math"></span><script type="math/tex">a/s\in R_{P_i}/I_{P_i}</script> we have (using Lemma <a href=#env3.30 class="labelref">3.30</a>)
+with <span class="math"></span><script type="math/tex">t s = e_i</script> for <span class="math"></span><script type="math/tex">t\in R/I</script>, that
+<div class="math"></div><script type="math/tex; mode=display">
+\varphi_i(t) \varphi(s) = 1
+</script>
+and therefore that <span class="math"></span><script type="math/tex">t = s^{-1}</script> in <span class="math"></span><script type="math/tex">R_{P_i}/I_{P_i}</script>. We get <span class="math"></span><script type="math/tex">\varphi_i(a t) = a/s</script>. If
+presented with
+<div class="math"></div><script type="math/tex; mode=display">
+q = \left(\frac{a_1}{s_1}, \dots, \frac{a_r}{s_r}\right)\in \prod_{j=1}^r R_{P_j}/I_{P_j},
+</script>
+we see that 
+<div class="math"></div><script type="math/tex; mode=display">
+\varphi(a_1 t_1e_1 + \cdots + a_r t_r e_r) = q,
+</script>
+where <span class="math"></span><script type="math/tex">t_i s_i = e_i</script> for <span class="math"></span><script type="math/tex">i = 1, \dots, r</script>.<div style="margin-top:20px"></div><span id="env3.32"></span><div class="exercise" data-count="3.32">     
+  Consider the two plane curves <span class="math"></span><script type="math/tex">V(f)</script> and <span class="math"></span><script type="math/tex">V(g)</script> in <span class="math"></span><script type="math/tex">\mathbb{C}^2</script>, where
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    f &= y^2 - x^3 + x\\
+    g &= y^3 - x^2.
+  \end{aligned}</script>
+  Show that <span class="math"></span><script type="math/tex">f</script> and <span class="math"></span><script type="math/tex">g</script> do not intersect at <span class="math"></span><script type="math/tex">\infty</script>. Now
+  zoom in on <span class="math"></span><script type="math/tex">P = (0, 0)\in V(f, g)</script>. What is
+  <div class="math"></div><script type="math/tex; mode=display">
+  \dim_\mathbb{C} R_P/I_P,
+  </script>
+  where <span class="math"></span><script type="math/tex">I = (f, g)\subset R = \mathbb{C}[x, y]</script>? Compare the dimension with
+  the output of<div style="margin-top:20px"></div><div class=sageM2><script type="text/x-sage">
+loadPackage "NumericalAlgebraicGeometry"
+R = QQ[x, y]
+solveSystem {y^2 - x^3 + x, y^3 - x^2}    
+  </script></div><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>
+<div style="margin-top:20px"></div>
+
+
+
+
+
+
+
+<div style="margin-top:20px"></div></div></body>

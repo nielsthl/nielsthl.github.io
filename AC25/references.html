@@ -1,0 +1,142 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.css" integrity="sha384-NFGicHNcq1l2DafLerXQeI3h3jJY3dCcDQF+29rtRBHW7P7ti+/XIRY7ALbJOaeh" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.js" integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+
+
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#865dc405-de79-425a-a0d8-5d2d11cf9365"><b>1</b> A partly topological introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#97e0bdf6-2f48-4905-8907-f68630b253fd">1.1 A few words about rational functions</a></li><li><a href="intro.html#80090e52-739b-497f-903b-2fe2d278b46d">1.2 Topology</a></li><li><a href="intro.html#ecf3f66b-0543-4b1f-a81a-17825aecbc4a">1.3 Compactification</a></li><li><a href="intro.html#bbcc9317-318a-4771-aa2b-f4273aaf57c4">1.4 Projective spaces</a></li></ul><li><a class="kap" href="algebra.html#1ed734b7-6455-477f-9b44-0ea59bf6c31a"><b>2</b> Algebra and geometry</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="algebra.html#e4a511a7-6c36-49ca-a983-bd7c2cec6ea9">2.1 Algebraic sets</a></li><li><a href="algebra.html#c8a905e4-9b0e-46f5-9698-cdc66b0a43e3">2.2 Irreducible components</a></li><li><a href="algebra.html#ba8d5346-1f85-449c-b11b-d49b3b4e0f89">2.3 Primary decomposition</a></li><li><a href="algebra.html#9880dc01-5f6d-45f0-90c3-67510a1448f8">2.4 Computation</a></li><li><a href="algebra.html#076a918e-e09a-4fc2-9c5e-e4225d03d1e9">2.5 The Hilbert Nullstellensatz</a></li><li><a href="algebra.html#4860e90c-864b-4d67-bf57-96bc56bcf601">2.6 The combinatorial Nullstellensatz</a></li></ul><li><a class="kap" href="algcurves.html#d520e382-af60-4e38-8e3c-529b23819923"><b>3</b> Affine algebraic curves</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="algcurves.html#d3273733-d9eb-4b1e-aae7-d5d04dbcbff8">3.1 Intersection of two plane curves</a></li><li><a href="algcurves.html#8cdb8029-5c5a-45a1-8b7d-9fc734c2726f">3.2 Rational functions and local rings</a></li><li><a href="algcurves.html#dd4edb85-5a60-4947-9013-278f21fda24c">3.3 Dimension in local rings</a></li><li><a href="algcurves.html#c5ed80fb-8999-4cca-a6be-623111554085">3.4 The crucial isomorphism</a></li></ul><li><a class="kap" href="projplanecurves.html#2090f82e-a8dc-455c-8020-dbdf72031acc"><b>4</b> Projective plane curves</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="projplanecurves.html#a64557c6-6575-4126-bbf7-36b608c07bec">4.1 Rational functions on the projective plane</a></li><li><a href="projplanecurves.html#f26a8e14-45f2-46f0-a268-0524ba3ce8d5">4.2 Homogeneous polynomials with no common factors</a></li><li><a href="projplanecurves.html#bad03ff4-a571-42c2-833d-ce53678a84da">4.3 Projective transformations</a></li><li><a href="projplanecurves.html#b265511a-14ce-4a17-8e5c-18a8a8b3ef63">4.4 Invariance under projective transformations</a></li><li><a href="projplanecurves.html#4527af3e-bb0a-498d-aed9-900c9f51dae7">4.5 Statement and proof of Bezout</a></li><li><a href="projplanecurves.html#8041c00c-7461-4fb3-98a1-f0cc9b9b0ce3">4.6 Some more local algebra and local geometry</a></li><li><a href="projplanecurves.html#54e6adde-5781-4a3b-bbf7-62ac6353c439">4.7 Max Noether's theorem</a></li><li><a href="projplanecurves.html#a3ed75c8-fe29-4602-958c-a557d797adde">4.8 Elliptic curves</a></li><li><a href="projplanecurves.html#abec0501-e5d2-4715-8601-1e946e500324">4.9 Fun and surprising facts</a></li></ul><li><a class="kap" href="appendixA.html#08c025de-cd7e-4a67-a7ff-1b3e8f83b771"><b>A</b> Basic algebra</a></li><a href="#kapA" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapA" class="collapse"><li><a href="appendixA.html#5f534fa7-c80a-45b4-8308-f87a2f2e384d">A.1 Commutative rings</a></li><li><a href="appendixA.html#ca7011a4-c6a8-43df-98ee-1c1e4d669019">A.2 Local rings</a></li></ul><li><a class="kap" href="appendixE.html#ab9a2e95-72f4-4ca1-846c-f0c681596845"><b>E</b> Mandatory exercises AC25</a></li><a href="#kapE" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapE" class="collapse"></ul><li><a class="kap" href="references.html#36e9431f-9d93-424c-94e8-65d3d188e92c"><b>R</b> References</a></li><a href="#kapR" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapR" class="collapse"></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="36e9431f-9d93-424c-94e8-65d3d188e92c">R<span style="float:right;">References</span></h1><div style="margin-top:20px"></div><ol class="bibliography"><li>W. Frank Moore, Marks Rogers and Sean Sather-Wagstaff. <i>Monomial Ideals and Their Decompositions</i></li><li>D. G. Northcott. <i>Ideal Theory</i></li></ol><div style="margin-top:20px"></div></div></body>

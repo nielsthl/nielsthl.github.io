@@ -1,0 +1,664 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.css" integrity="sha384-NFGicHNcq1l2DafLerXQeI3h3jJY3dCcDQF+29rtRBHW7P7ti+/XIRY7ALbJOaeh" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.js" integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#865dc405-de79-425a-a0d8-5d2d11cf9365"><b>1</b> A partly topological introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#97e0bdf6-2f48-4905-8907-f68630b253fd">1.1 A few words about rational functions</a></li><li><a href="intro.html#80090e52-739b-497f-903b-2fe2d278b46d">1.2 Topology</a></li><li><a href="intro.html#ecf3f66b-0543-4b1f-a81a-17825aecbc4a">1.3 Compactification</a></li><li><a href="intro.html#bbcc9317-318a-4771-aa2b-f4273aaf57c4">1.4 Projective spaces</a></li></ul><li><a class="kap" href="algebra.html#1ed734b7-6455-477f-9b44-0ea59bf6c31a"><b>2</b> Algebra and geometry</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="algebra.html#e4a511a7-6c36-49ca-a983-bd7c2cec6ea9">2.1 Algebraic sets</a></li><li><a href="algebra.html#c8a905e4-9b0e-46f5-9698-cdc66b0a43e3">2.2 Irreducible components</a></li><li><a href="algebra.html#ba8d5346-1f85-449c-b11b-d49b3b4e0f89">2.3 Primary decomposition</a></li><li><a href="algebra.html#9880dc01-5f6d-45f0-90c3-67510a1448f8">2.4 Computation</a></li><li><a href="algebra.html#076a918e-e09a-4fc2-9c5e-e4225d03d1e9">2.5 The Hilbert Nullstellensatz</a></li><li><a href="algebra.html#4860e90c-864b-4d67-bf57-96bc56bcf601">2.6 The combinatorial Nullstellensatz</a></li></ul><li><a class="kap" href="algcurves.html#d520e382-af60-4e38-8e3c-529b23819923"><b>3</b> Affine algebraic curves</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="algcurves.html#d3273733-d9eb-4b1e-aae7-d5d04dbcbff8">3.1 Intersection of two plane curves</a></li><li><a href="algcurves.html#8cdb8029-5c5a-45a1-8b7d-9fc734c2726f">3.2 Rational functions and local rings</a></li><li><a href="algcurves.html#dd4edb85-5a60-4947-9013-278f21fda24c">3.3 Dimension in local rings</a></li><li><a href="algcurves.html#c5ed80fb-8999-4cca-a6be-623111554085">3.4 The crucial isomorphism</a></li></ul><li><a class="kap" href="projplanecurves.html#2090f82e-a8dc-455c-8020-dbdf72031acc"><b>4</b> Projective plane curves</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="projplanecurves.html#a64557c6-6575-4126-bbf7-36b608c07bec">4.1 Rational functions on the projective plane</a></li><li><a href="projplanecurves.html#f26a8e14-45f2-46f0-a268-0524ba3ce8d5">4.2 Homogeneous polynomials with no common factors</a></li><li><a href="projplanecurves.html#bad03ff4-a571-42c2-833d-ce53678a84da">4.3 Projective transformations</a></li><li><a href="projplanecurves.html#b265511a-14ce-4a17-8e5c-18a8a8b3ef63">4.4 Invariance under projective transformations</a></li><li><a href="projplanecurves.html#4527af3e-bb0a-498d-aed9-900c9f51dae7">4.5 Statement and proof of Bezout</a></li><li><a href="projplanecurves.html#8041c00c-7461-4fb3-98a1-f0cc9b9b0ce3">4.6 Some more local algebra and local geometry</a></li><li><a href="projplanecurves.html#54e6adde-5781-4a3b-bbf7-62ac6353c439">4.7 Max Noether's theorem</a></li><li><a href="projplanecurves.html#a3ed75c8-fe29-4602-958c-a557d797adde">4.8 Elliptic curves</a></li><li><a href="projplanecurves.html#abec0501-e5d2-4715-8601-1e946e500324">4.9 Fun and surprising facts</a></li></ul><li><a class="kap" href="appendixA.html#08c025de-cd7e-4a67-a7ff-1b3e8f83b771"><b>A</b> Basic algebra</a></li><a href="#kapA" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapA" class="collapse"><li><a href="appendixA.html#5f534fa7-c80a-45b4-8308-f87a2f2e384d">A.1 Commutative rings</a></li><li><a href="appendixA.html#ca7011a4-c6a8-43df-98ee-1c1e4d669019">A.2 Local rings</a></li></ul><li><a class="kap" href="appendixE.html#ab9a2e95-72f4-4ca1-846c-f0c681596845"><b>E</b> Mandatory exercises AC25</a></li><a href="#kapE" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapE" class="collapse"></ul><li><a class="kap" href="references.html#36e9431f-9d93-424c-94e8-65d3d188e92c"><b>R</b> References</a></li><a href="#kapR" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapR" class="collapse"></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div><div style="margin-top:20px"></div><h1 id="2090f82e-a8dc-455c-8020-dbdf72031acc">4<span style="float:right;">Projective plane curves</span></h1><div style="margin-top:20px"></div>We now move into projective territory, where we handle lines as points i.e.,
+points will now be lines through zero in <span class="math"></span><script type="math/tex">K^3</script>. Such points are
+elements of the projective plane <span class="math"></span><script type="math/tex">\mathbb{P}^2(K)</script> over the field <span class="math"></span><script type="math/tex">K</script>. In more
+precise terms
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{P}^2(K) = \{[x, y, z] \mid (x, y, z)\in K^3\setminus\{0\}\}, 
+</script>
+where <span class="math"></span><script type="math/tex">[x, y, z] = [\lambda x, \lambda y, \lambda z]</script> for
+<span class="math"></span><script type="math/tex">\lambda\in K\setminus\{0\}</script>.<div style="margin-top:20px"></div>We aim for Bezout's theorem (see Theorem <a href="projplanecurves.html#env4.8">4.8</a>),
+which is a small miracle. Think about it.
+We have two equations <span class="math"></span><script type="math/tex">f, g\in K[x, y]</script> with no common solutions i.e.,
+<span class="math"></span><script type="math/tex">V(f, g) = \emptyset</script>. Then we homogenize them and suddenly
+<span class="math"></span><script type="math/tex">V(f^*, g^*) \neq \emptyset</script> in <span class="math"></span><script type="math/tex">\mathbb{P}^2</script>. Try to prove this
+from scratch!<div style="margin-top:20px"></div><span id="sec4.1"></span><h2 id="a64557c6-6575-4126-bbf7-36b608c07bec">4.1 Rational functions on the projective plane</h2><div style="margin-top:20px"></div>It does not really make sense to view polynomials <span class="math"></span><script type="math/tex">K[x, y, z]</script> as
+functions on <span class="math"></span><script type="math/tex">\mathbb{P}^2(K)</script>. Not even homogeneous polynomials define
+functions in this setting. We can however study a very particular
+subfield
+<div class="math"></div><script type="math/tex; mode=display">
+K(\mathbb{P}^2) \subset K(x, y, z)
+</script><div style="margin-top:20px"></div>given by<div style="margin-top:20px"></div><div class="frameit">
+  <div class="math"></div><script type="math/tex; mode=display">
+k(\mathbb{P}^2) = \left\{\frac{A}{B}\, \middle|\, A, B \text{ homogeneous and } \deg(A) = \deg(B)\right\}.
+</script>
+</div>
+If <span class="math"></span><script type="math/tex">A/B\in k(\mathbb{P}^2)</script> and <span class="math"></span><script type="math/tex">B(P) \neq 0</script>, then <span class="math"></span><script type="math/tex">A(P)/B(P)</script> is
+independent of the representative used for <span class="math"></span><script type="math/tex">P\in \mathbb{P}^2(K)</script>. So, it
+actually makes sense to consider rational functions on <span class="math"></span><script type="math/tex">\mathbb{P}^2</script>.<div style="margin-top:20px"></div>For <span class="math"></span><script type="math/tex">P\in \mathbb{P}^2</script>  may also define a local subring<div style="margin-top:20px"></div><div class="frameit">
+<div class="math"></div><script type="math/tex; mode=display">
+\mathcal{O}_P = \left\{r\in K(\mathbb{P}^2) \middle| r \text{ is  defined at } P\right\}
+\subset K(\mathbb{P}^2).
+</script>
+</div><div style="margin-top:20px"></div><span id="env4.1"></span><div class="exercise" data-count="4.1">     
+  The map <span class="math"></span><script type="math/tex">\varphi: K(\mathbb{P}^2) \rightarrow K(x, y)</script> given by
+  <div class="math"></div><script type="math/tex; mode=display">
+  \varphi\left(\frac{A}{B}\right) =  \frac{A_*}{B_*}
+  </script>
+  is an isomorphism of fields. If <span class="math"></span><script type="math/tex">P = [a, b, 1]</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+  \varphi(\mathcal{O}_P) = R_{(a, b)},
+  </script>
+  where <span class="math"></span><script type="math/tex">R = K[x, y]</script>.
+</div><div style="margin-top:20px"></div><span id="env4.2"></span><div class="definition" data-count="4.2">     
+  Let <span class="math"></span><script type="math/tex">F, G\in K[x, y, z]</script> be homogeneous polynomials. For
+  <span class="math"></span><script type="math/tex">(F, G)\subset K[x, y, z]</script>, we define the ideal
+  <span class="math"></span><script type="math/tex">(F, G) \mathcal{O}_P \subset \mathcal{O}_P</script> by<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    (F, G) \mathcal{O}_P = \Bigg\{\frac{H_1 F + H_2 G}{B}\, \Bigg| \, & \deg(H_1 F) = \deg(H_2 G) = \deg(B),\\
+    & H_1, H_2, B \text{ are homogeneous polynomials in } K[x, y, z] \text{ with } B(P) \neq 0\Bigg\}.
+\end{aligned}</script>
+</div><div style="margin-top:20px"></div><span id="env4.3"></span><div class="exercise" data-count="4.3">     
+  If <span class="math"></span><script type="math/tex">P = [a, b, 1]</script>, then for <span class="math"></span><script type="math/tex">\varphi</script> defined in Exercise <a href=#env4.1 class="labelref">4.1</a>,
+  <div class="math"></div><script type="math/tex; mode=display">
+  \varphi((F, G) \mathcal{O}_P) = (F_*, G_*) R_{(a, b)},
+  </script>
+  where <span class="math"></span><script type="math/tex">R = K[x, y]</script>.
+</div><div style="margin-top:20px"></div><span id="sec4.2"></span><h2 id="f26a8e14-45f2-46f0-a268-0524ba3ce8d5">4.2 Homogeneous polynomials with no common factors</h2><div style="margin-top:20px"></div><span id="env4.4"></span><div class="lemma" data-count="4.4">     
+  Let <span class="math"></span><script type="math/tex">F, G\in K[x, y, z]</script> be homogeneous polynomials with no common factors.
+  Then <span class="math"></span><script type="math/tex">V(F) \cap V(G) \subset \mathbb{P}^2</script> is finite.
+</div>
+<a href="#07389903-4c3a-4d3e-a1f2-b13689ade8e8" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=07389903-4c3a-4d3e-a1f2-b13689ade8e8 class = "collapse Proof envbuttons">    
+  Recall the definition
+  <div class="math"></div><script type="math/tex; mode=display">
+  \mathbb{P}_z^2 = \{[a, b, c] \mid c \neq 0\}
+  </script>
+  and similarly for <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script>. It suffices to prove that
+  <span class="math"></span><script type="math/tex">V(F) \cap V(G) \cap \mathbb{P}^2_z</script> is finite and similarly for <span class="math"></span><script type="math/tex">x</script> and <span class="math"></span><script type="math/tex">y</script>.
+  But
+  <div class="math"></div><script type="math/tex; mode=display">
+  V(F, G) \cap \mathbb{P}^2_z = V(F_*, G_*) \subset K^2
+  </script>
+  and <span class="math"></span><script type="math/tex">F_*</script> and <span class="math"></span><script type="math/tex">G_*</script> have no common factors, since <span class="math"></span><script type="math/tex">F</script> and <span class="math"></span><script type="math/tex">G</script> had no
+  common factors.
+  </div><div style="margin-top:20px"></div><span id="sec4.3"></span><h2 id="bad03ff4-a571-42c2-833d-ce53678a84da">4.3 Projective transformations</h2><div style="margin-top:20px"></div>An invertible matrix <span class="math"></span><script type="math/tex">T\in \operatorname{GL}_3(K)</script> gives rise to a bijection
+<span class="math"></span><script type="math/tex">\mathbb{P}^2 \rightarrow \mathbb{P}^2</script>. Also, <span class="math"></span><script type="math/tex">T</script> induces an algebra isomorphism
+<div class="math"></div><script type="math/tex; mode=display">
+T^*: K[x, y, z] \rightarrow K[x, y, z]
+</script>
+given by <span class="math"></span><script type="math/tex">T^*(f) = f\circ T^{-1}</script>. In more brutal terms, if
+<div class="math"></div><script type="math/tex; mode=display">
+T^{-1} =
+\begin{pmatrix}
+  a_{11} & a_{12} & a_{13}\\
+  a_{21} & a_{22} & a_{23}\\
+  a_{31} & a_{32} & a_{33}
+  \end{pmatrix},
+</script>
+then
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  T^*(x) &= a_{11} x + a_{12} y + a_{13} z\\
+  T^*(y) &= a_{21} x + a_{22} y + a_{23} z\\
+  T^*(z) &= a_{31} x + a_{32} y + a_{33} z
+\end{aligned}</script><div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">F</script> is a homogeneous polynomial, then <span class="math"></span><script type="math/tex">T^*(F)</script> is also
+a homogeneous polynomial and
+<div class="math"></div><script type="math/tex; mode=display">
+T(V(F)) = V(T^*(F)) = V(F\circ T^{-1}).
+</script><div style="margin-top:20px"></div><span id="env4.5"></span><div class="example" data-count="4.5">     
+  Consider <span class="math"></span><script type="math/tex">F = y</script> and <span class="math"></span><script type="math/tex">G = x y - z^2</script>. These two projective curves
+  intersect at <span class="math"></span><script type="math/tex">[1, 0, 0]</script> i.e., they intersect at <span class="math"></span><script type="math/tex">\infty</script>, but their
+  affine cousins <span class="math"></span><script type="math/tex">f = y</script> and <span class="math"></span><script type="math/tex">x y - 1</script> do not intersect. We can move
+  <span class="math"></span><script type="math/tex">[1, 0, 0]</script> to the "finite" affine plane, by using the projective
+  transformation <span class="math"></span><script type="math/tex">T</script> given by
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    T([1, 0, 0]) &= [0, 0, 1]\\
+    T([0, 1, 0]) &= [0, 1, 0]\\
+    T([0, 0, 1]) &= [1, 0, 0].
+  \end{aligned}</script>
+  Then
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    T^*(x) &= z\\
+    T^*(y) &= y\\
+    T^*(z) &= x
+  \end{aligned}</script>
+  and
+  <div class="math"></div><script type="math/tex; mode=display">
+  T(V(F, G)) = V(y, y z - x^2).
+  </script>
+  You see that <span class="math"></span><script type="math/tex">V(F, G)</script> is transformed into a set of points
+  with no points at <span class="math"></span><script type="math/tex">\infty</script> (having <span class="math"></span><script type="math/tex">z = 0</script>).
+</div><div style="margin-top:20px"></div><span id="sec4.4"></span><h2 id="b265511a-14ce-4a17-8e5c-18a8a8b3ef63">4.4 Invariance under projective transformations</h2><div style="margin-top:20px"></div><span id="env4.6"></span><div class="lemma" data-count="4.6">     
+  A projective transformation <span class="math"></span><script type="math/tex">T</script> gives an isomorphism
+  <span class="math"></span><script type="math/tex">T^*: K(\mathbb{P}^2) \rightarrow K(\mathbb{P}^2)</script>, such that <span class="math"></span><script type="math/tex">\mathcal{O}_P</script>
+  maps isomorphically to <span class="math"></span><script type="math/tex">\mathcal{O}_{T(P)}</script> and <span class="math"></span><script type="math/tex">(F, G)\mathcal{O}_P</script>
+  maps isomorphically to <span class="math"></span><script type="math/tex">(F\circ T^{-1}, G\circ T^{-1}) \mathcal{O}_{T(P)}</script>.
+</div><div style="margin-top:20px"></div><span id="env4.7"></span><div class="corollary" data-count="4.7">     
+  <div class="math"></div><script type="math/tex; mode=display">
+  \dim_K \mathcal{O}_P/ (F, G) \mathcal{O}_P = \dim_K \mathcal{O}_{T(P)}/(F\circ T^{-1}, G\circ T^{-1}) \mathcal{O}_{T(P)}.
+  </script>
+</div><div style="margin-top:20px"></div><span id="sec4.5"></span><h2 id="4527af3e-bb0a-498d-aed9-900c9f51dae7">4.5 Statement and proof of Bezout</h2><div style="margin-top:20px"></div>
+
+Now we have reached the crown jewel of the course: Bezout's theorem. We have done must of the work in  the previous chapter. We just need to move
+intersection points at <span class="math"></span><script type="math/tex">\infty</script> into the finite affine plane in order to apply
+Proposition <a href="algcurves.html#env3.11">3.11</a>. Also <span class="math"></span><script type="math/tex">R/I</script> from the left hand side of the arrow in 
+<a href="algcurves.html#equ3.5">(3.5)</a> does not make sense in the projective case, but
+the right hand side of <a href="algcurves.html#equ3.5">(3.5)</a> does. Let us define
+the <em>intersection multiplicity</em> of the two plane projective curves <span class="math"></span><script type="math/tex">V(F)</script> and
+<span class="math"></span><script type="math/tex">V(G)</script> at  <span class="math"></span><script type="math/tex">P\in \mathbb{P}^2(K)</script> by
+<div class="math"></div><script type="math/tex; mode=display">
+I(P, F\cap G) = \dim_K \mathcal{O}_P/(F, G) \mathcal{O}_P.
+</script><div style="margin-top:20px"></div><span id="env4.8"></span><div class="theorem" data-count="4.8">     
+  Let <span class="math"></span><script type="math/tex">F, G\in K[x, y, z]</script> be homogeneous polynomials with no common components.
+  Then
+  <div class="math"></div><script type="math/tex; mode=display">
+  \deg(F) \deg(G) = \sum_{P\in V(F) \cap  V(G)} I(P, F\cap G).
+  </script>
+</div>
+<div class="proof">
+  Suppose that
+  <div class="math"></div><script type="math/tex; mode=display">
+  V(F) \cap V(G) = \{P_1, \dots, P_r\}
+  </script>
+  with    
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    P_1 &= [x_1, y_1, z_1]\\
+        &\vdots\\
+    P_r &= [x_r, y_r, z_r]
+  \end{aligned}</script>
+  A line in <span class="math"></span><script type="math/tex">\mathbb{P}^2</script> is a subset <span class="math"></span><script type="math/tex">L\subset \mathbb{P}^2</script> of the form
+  <div class="math"></div><script type="math/tex; mode=display">
+  L = V( a x + b y + c z )
+  </script>
+  with at least one of <span class="math"></span><script type="math/tex">a, b, c</script> is non-zero. 
+  Why does there exist a line <span class="math"></span><script type="math/tex">L</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  P_1, \dots, P_r \not\in L?
+  </script><div style="margin-top:20px"></div>  
+  We assume the existence of such a line. Given <span class="math"></span><script type="math/tex">L</script>, we may find a projective
+  transformation <span class="math"></span><script type="math/tex">T</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  T(L) = V(z).
+  </script>
+  It follows that <span class="math"></span><script type="math/tex">F' = F\circ T^{-1}</script> and <span class="math"></span><script type="math/tex">G' = G\circ T^{-1}</script> have
+  no common points at the line at infinity <span class="math"></span><script type="math/tex">V(z)</script>. Therefore we may assume that 
+  <span class="math"></span><script type="math/tex">V(F, G, z) = \emptyset</script>. Since <span class="math"></span><script type="math/tex">F</script> and <span class="math"></span><script type="math/tex">G</script> have no common divisors,
+  this implies (why?) that <span class="math"></span><script type="math/tex">z</script> does not divide <span class="math"></span><script type="math/tex">F</script> and <span class="math"></span><script type="math/tex">z</script> does not divide <span class="math"></span><script type="math/tex">G</script>.<div style="margin-top:20px"></div>But then <span class="math"></span><script type="math/tex">F_*</script> and <span class="math"></span><script type="math/tex">G_*</script>
+  will have to have relatively prime highest degree components and
+  therefore Proposition <a href="algcurves.html#env3.11">3.11</a> applies to give the result (notice that
+  <span class="math"></span><script type="math/tex">\deg(F_*) = \deg(F)</script> and <span class="math"></span><script type="math/tex">\deg(G_*) = \deg(G)</script>).
+</div><div style="margin-top:20px"></div><span id="sec4.6"></span><h2 id="8041c00c-7461-4fb3-98a1-f0cc9b9b0ce3">4.6 Some more local algebra and local geometry</h2><div style="margin-top:20px"></div><span id="env4.9"></span><div class="definition" data-count="4.9">     
+  A discrete valuation ring (DVR) is a noetherian local domain <span class="math"></span><script type="math/tex">(R, \mathfrak{m})</script> (not a field!),<div style="margin-top:20px"></div>where the maximal ideal <span class="math"></span><script type="math/tex">\mathfrak{m}</script> is principal.
+  A generator of <span class="math"></span><script type="math/tex">\mathfrak{m}</script> is called a
+  <em>uniformizing parameter</em>.
+</div><div style="margin-top:20px"></div>
+<span id="env4.10"></span><div class="exercise" data-count="4.10">     
+  If <span class="math"></span><script type="math/tex">R</script> is a DVR with uniformizing parameter <span class="math"></span><script type="math/tex">\pi\in R</script>, then
+  for every <span class="math"></span><script type="math/tex">r\in R</script>, there exists a unique <span class="math"></span><script type="math/tex">n\in \mathbb{N}</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  r = u \pi^n,
+  </script>
+  where <span class="math"></span><script type="math/tex">u</script> is a unit in <span class="math"></span><script type="math/tex">R</script>. The function <span class="math"></span><script type="math/tex">\nu: R\setminus\{0\}\rightarrow \mathbb{N}</script> given by
+  <span class="math"></span><script type="math/tex">\nu(r) = n</script> is called
+  a valuation (<span class="math"></span><script type="math/tex">\pi</script>-adic) and is independent of the choice of generator for
+  the maximal ideal. It has the following properties<div style="margin-top:20px"></div><ol class="number"><li id="ite4.1">
+    <span class="math"></span><script type="math/tex">\nu(r s) = \nu(r) + \nu(s)</script>.
+    </li><li id="ite4.2">
+    <span class="math"></span><script type="math/tex">\nu(r + s) \geq \min(\nu(r), \nu(s))</script>.
+  </li></ol><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="env4.11"></span><div class="example" data-count="4.11">     
+  Let <span class="math"></span><script type="math/tex">K</script> be a field. Then the local ring
+  <div class="math"></div><script type="math/tex; mode=display">
+  K[x]_x = \left\{\frac{f(x)}{g(x)} \middle| x \nmid g(x)\right\} \subset K(x)
+  </script>
+  is a DVR with maximal ideal <span class="math"></span><script type="math/tex">(x)</script>. Similarly
+  <div class="math"></div><script type="math/tex; mode=display">
+  \mathbb{Z}_p = \left\{\frac{a}{b} \middle| p\nmid b\right\} \subset \mathbb{Q}
+  </script>
+  is a DVR with maximal ideal <span class="math"></span><script type="math/tex">(p)</script>, where <span class="math"></span><script type="math/tex">p</script> is a prime number.
+</div><div style="margin-top:20px"></div><span id="env4.12"></span><div class="exercise" data-count="4.12">     
+Suppose that <span class="math"></span><script type="math/tex">R</script> is a DVR with maximal ideal <span class="math"></span><script type="math/tex">(\pi)</script> and <span class="math"></span><script type="math/tex">R/(\pi) = K</script>.
+Assume that <span class="math"></span><script type="math/tex">K \subset R</script>, such that <span class="math"></span><script type="math/tex">R \rightarrow R/(\pi) = K</script> splits.
+Prove that an element <span class="math"></span><script type="math/tex">r</script>  in <span class="math"></span><script type="math/tex">R/(\pi^n)</script> has a unique expansion
+<div class="math"></div><script type="math/tex; mode=display">
+r = \lambda_0 + \lambda_1 \pi + \cdots + \lambda_{n-1} \pi^{n-1},
+</script>
+where <span class="math"></span><script type="math/tex">\lambda_i\in K</script>.
+</div><div style="margin-top:20px"></div>What is the connection to the local geometry of algebraic curves? For simplicity,
+let us fix the point <span class="math"></span><script type="math/tex">P = (0, 0)\in K^2</script> consider <span class="math"></span><script type="math/tex">P\in V(F)</script>. Then we may write
+<span id="equ4.1"></span><div class="math"></div><script type="math/tex; mode=display">
+F = F_m + F_{m+1} + \cdots,
+\tag{4.1}</script>
+where <span class="math"></span><script type="math/tex">m \geq 1</script> and <span class="math"></span><script type="math/tex">F_j</script> is a form of degree <span class="math"></span><script type="math/tex">j</script>. The lowest degree <span class="math"></span><script type="math/tex">F_m</script>
+factors into a product of lines. These lines are called the <em>tangent lines</em>
+at <span class="math"></span><script type="math/tex">P</script>.<div style="margin-top:20px"></div>You can experiment a bit with sage below to illustrate this.<div style="margin-top:20px"></div><span id="env4.13"></span><div class="example" data-count="4.13">     
+The tangent lines of
+<div class="math"></div><script type="math/tex; mode=display">
+F = y^2 - x^2(x+1) = y^2 - x^2 - x^3 = (y+x)(y-x) - x^3
+</script>
+are <span class="math"></span><script type="math/tex">y - x</script> and <span class="math"></span><script type="math/tex">y + x</script>.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+var("x y")
+implicit_plot(y^2- x^3 - x^2, (x, -2, 2), (y, -2, 2))
+</script></div>
+</div><div style="margin-top:20px"></div><span id="env4.14"></span><div class="definition" data-count="4.14">     
+The <span class="math"></span><script type="math/tex">m</script> in <a href=#equ4.1>(4.1)</a> is called the <em>multiplicity</em> for <span class="math"></span><script type="math/tex">V(F)</script> at <span class="math"></span><script type="math/tex">P</script>. It
+is denoted <span class="math"></span><script type="math/tex">m_P(F)</script>. If <span class="math"></span><script type="math/tex">m_P(F) = 1</script>, we call <span class="math"></span><script type="math/tex">P</script> a <em>simple point</em> on <span class="math"></span><script type="math/tex">V(F)</script>.
+</div><div style="margin-top:20px"></div><span id="env4.15"></span><div class="exercise" data-count="4.15">     
+How is the definition of mutliplicity generalized to an arbitrary point <span class="math"></span><script type="math/tex">P = (a, b)</script>?
+</div><div style="margin-top:20px"></div>Here is the (beautiful) connection to local algebra. Do not forget to look back at
+Definition <a href="algcurves.html#env3.19">3.19</a>.<div style="margin-top:20px"></div><span id="env4.16"></span><div class="theorem" data-count="4.16">     
+Let <span class="math"></span><script type="math/tex">F\in K[x, y]</script> be an irreducible polynomial. Then <span class="math"></span><script type="math/tex">P\in V(F)</script> is a
+simple point if and only if the local ring <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script> is a DVR. Any line <span class="math"></span><script type="math/tex">L</script>
+through <span class="math"></span><script type="math/tex">P</script>, which is not the tangent line may be used as a
+uniformizing parameter <span class="math"></span><script type="math/tex">\pi = [L]\in \mathcal{O}_P(F)</script>.
+</div>
+<div class="proof">
+Let us just assume that <span class="math"></span><script type="math/tex">x</script> is the tangent line at <span class="math"></span><script type="math/tex">P</script> and <span class="math"></span><script type="math/tex">L = y</script>. We know
+that <span class="math"></span><script type="math/tex">(x, y)\mathcal{O}_P(F)</script> is the maximal ideal in <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script>. In the local ring
+at <span class="math"></span><script type="math/tex">P</script> we have
+<div class="math"></div><script type="math/tex; mode=display">
+F = x u + g y,
+</script>
+where <span class="math"></span><script type="math/tex">u</script> is a unit. Therefore <span class="math"></span><script type="math/tex">x\in (y)</script>. To prove the converse i.e.,
+that <span class="math"></span><script type="math/tex">P</script> is a simple point if <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script> is a DVR, we need Theorem <a href="projplanecurves.html#env4.17">4.17</a>.
+</div><div style="margin-top:20px"></div><span id="env4.17"></span><div class="theorem" data-count="4.17">     
+Let <span class="math"></span><script type="math/tex">F\in K[x, y]</script> be an irreducible polynomial and let <span class="math"></span><script type="math/tex">\mathfrak{m}</script> denote
+the maximal ideal in <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script>. Then
+<div class="math"></div><script type="math/tex; mode=display">
+m_P(F) = \dim_K \mathfrak{m}^n/\mathfrak{m}^{n+1}
+</script>
+for <span class="math"></span><script type="math/tex">n\gg 0</script>.
+</div>
+<div class="proof">
+  Let <span class="math"></span><script type="math/tex">\mathfrak{m}</script> denote the maximal ideal in <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script> and <span class="math"></span><script type="math/tex">I= (x, y)\subset K[x, y]</script>. Notice that
+  <span class="math"></span><script type="math/tex">\mathfrak{m} = I \mathcal{O}_P(F)</script>.
+  Using the <a href="https://en.wikipedia.org/wiki/Exact_sequence" target="_blank">exact sequence</a> (see Fulton, page 28 for more on exact sequences of modules)
+  <div class="math"></div><script type="math/tex; mode=display">
+  0\rightarrow \mathfrak{m}^n/\mathfrak{m}^{n+1}
+  \rightarrow
+  \mathcal{O}_P(F)/\mathfrak{m}^{n+1} \rightarrow \mathcal{O}_P(F)/\mathfrak{m}^n\rightarrow 0
+  </script>
+  of vector spaces, 
+  it suffices to show that <span class="math"></span><script type="math/tex">\dim_K \mathcal{O}_P(F)/\mathfrak{m}^n = n\, m_P(F) + s</script> for
+  a constant <span class="math"></span><script type="math/tex">s</script> for <span class="math"></span><script type="math/tex">n \gg 0</script>. Assume that <span class="math"></span><script type="math/tex">P = (0, 0)</script>.
+  From our
+  crucial result in Section <a href="algcurves.html#sec3.4">3.4</a>, we know that
+  <div class="math"></div><script type="math/tex; mode=display">
+  K[x, y]/(I^n, F) \cong \mathcal{O}_P/(I^n, F)\mathcal{O}_P \cong \mathcal{O}_P(F)/I^n \mathcal{O}_P(F) = \mathcal{O}_P(F)/\mathfrak{m}^n,
+  </script>
+  where <span class="math"></span><script type="math/tex">\mathcal{O}_P</script> is the local ring of rational functions on <span class="math"></span><script type="math/tex">K^2</script> defined at <span class="math"></span><script type="math/tex">P</script>. For
+  <span class="math"></span><script type="math/tex">n \geq m = m_P(F)</script> consider the exact sequence
+  <div class="math"></div><script type="math/tex; mode=display">
+  0 \rightarrow K[x,y]/I^{n-m} \xrightarrow{F} K[x, y]/I^n \rightarrow K[x, y]/(I^n, F)
+  \rightarrow 0,
+  </script>
+  while quietly recalling that <span class="math"></span><script type="math/tex">\dim_K K[x, y]/I^n = n(n+1)/2</script>.
+</div><div style="margin-top:20px"></div><span id="env4.18"></span><div class="exercise" data-count="4.18">     
+  Given polynomials <span class="math"></span><script type="math/tex">f, g\in R = K[x, y]</script> and a point <span class="math"></span><script type="math/tex">P\in K^2</script>,
+  show that the natural homomorphism
+  <div class="math"></div><script type="math/tex; mode=display">
+  R_P \rightarrow \left(R/(f)\right)_P\Big/ g \left(R/(f)\right)_P = \Gamma(f)_P\Big/ [g] \Gamma(f)_P = \mathcal{O}_P(f)\Big/ [g] \mathcal{O}_P(f)
+  </script>
+  is surjective with kernel <span class="math"></span><script type="math/tex">(f, g) R_P</script>.
+</div><div style="margin-top:20px"></div>Finally we have the following result.<div style="margin-top:20px"></div><span id="env4.19"></span><div class="lemma" data-count="4.19">     
+Let <span class="math"></span><script type="math/tex">P</script> be a simple point on <span class="math"></span><script type="math/tex">V(F)</script>. Suppose that <span class="math"></span><script type="math/tex">G\in K[x, y]</script>. Then
+<div class="math"></div><script type="math/tex; mode=display">
+I(P, G\cap F) = \nu([G])
+</script>
+in <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script>. Here <span class="math"></span><script type="math/tex">\nu</script> denotes the valuation in the DVR <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script>.
+</div>
+<div class="proof">
+Here we make use of the isomorphism (see Exercise <a href=#env4.18 class="labelref">4.18</a>)
+<div class="math"></div><script type="math/tex; mode=display">
+\mathcal{O}_P/(G, F) \mathcal{O}_P \rightarrow \mathcal{O}_P(F) / G \mathcal{O}_P(F)
+</script>
+and Exercise <a href=#env4.12 class="labelref">4.12</a>.
+</div><div style="margin-top:20px"></div><span id="sec4.7"></span><h2 id="54e6adde-5781-4a3b-bbf7-62ac6353c439">4.7 Max Noether's theorem</h2><div style="margin-top:20px"></div><a href="https://en.wikipedia.org/wiki/Max_Noether" target="_blank">Max Noether</a> was the father of
+<a href="https://en.wikipedia.org/wiki/Emmy_Noether" target="_blank">Emmy Noether</a>. He worked
+extensively on algebraic geometry and we shall present one of his results.
+First some notation.<div style="margin-top:20px"></div><span id="env4.20"></span><div class="definition" data-count="4.20">     
+  Let <span class="math"></span><script type="math/tex">F</script> and <span class="math"></span><script type="math/tex">G</script> denote two projective algebraic curves with no common components and
+  <span class="math"></span><script type="math/tex">P\in \mathbb{P}^2</script>. Then we define
+  <div class="math"></div><script type="math/tex; mode=display">
+  I(P, F\cap G) = \dim_K \mathcal{O}_P/(F, G)\mathcal{O}_P
+  </script>
+  and the <em>intersection cycle</em>
+  <div class="math"></div><script type="math/tex; mode=display">
+  F\cdot G = \sum_{P\in V(F, G)} I(P, F\cap G) P.
+  </script>
+</div><div style="margin-top:20px"></div>Suppose that <span class="math"></span><script type="math/tex">H\cdot F \geq G\cdot F</script> (it is almost clear what this means, right?). Noether's theorem addresses the
+existence of a projective algebraic curve <span class="math"></span><script type="math/tex">B</script>, such that
+<div class="emphasize"><span id="equ4.2"></span><div class="math"></div><script type="math/tex; mode=display">
+B\cdot F = H\cdot F - G\cdot F.
+\tag{4.2}</script></div>
+Such a <span class="math"></span><script type="math/tex">B</script> may be found provided that <span class="math"></span><script type="math/tex">H = A F + B G</script> i.e., <span class="math"></span><script type="math/tex">H\in (F, G)</script>, since then
+<span id="equ4.3"></span><div class="math"></div><script type="math/tex; mode=display">
+(A F + B G)\cdot F = BG \cdot F = B\cdot F + G \cdot F.
+\tag{4.3}</script>
+<span id="env4.21"></span><div class="remark" data-count="4.21">     
+We have used in <a href=#equ4.3>(4.3)</a> that we have an exact sequence 
+<div class="math"></div><script type="math/tex; mode=display">
+0 \rightarrow \mathcal{O}_P/(B, F) \xrightarrow{\cdot G} \mathcal{O}_P/(G B, F) \rightarrow \mathcal{O}_P/(G, F) \rightarrow 0
+</script>
+of vector spaces over <span class="math"></span><script type="math/tex">K</script>: <span class="math"></span><script type="math/tex">I(P, (G B) \cap F) = I(P, G\cap F) + I(P, B\cap F)</script>.
+</div><div style="margin-top:20px"></div>When is <span class="math"></span><script type="math/tex">H = A F + G B</script> satisfied? The following (local to global) result due to Noether clarifies this.<div style="margin-top:20px"></div><span id="env4.22"></span><div class="theorem" data-count="4.22">     
+  <span class="math"></span><script type="math/tex">H\in (F, G) \iff H \in (F, G)\mathcal{O}_P</script> for every
+  <span class="math"></span><script type="math/tex">P\in V(F, G)</script>.
+</div>
+<div class="proof">
+  We will only prove the local to global direction. We may assume that <span class="math"></span><script type="math/tex">V(F, G, z) = \emptyset</script>.
+  From the affine case (section <a href="algcurves.html#sec3.4">3.4</a>), we conclude that <span class="math"></span><script type="math/tex">H_* = a F_* + b G_*</script> and therefore that
+  <span class="math"></span><script type="math/tex">Z^m H = A F + B G</script> for some <span class="math"></span><script type="math/tex">m\gg 0</script>. But since the multiplication map
+  <span id="equ4.4"></span><div class="math"></div><script type="math/tex; mode=display">
+  K[x, y, z]/(F, G) \xrightarrow{Z} k[x, y, z]/(F, G)
+  \tag{4.4}</script>
+  is injective, we get <span class="math"></span><script type="math/tex">H\in (F, G)</script>. Well, let us see why multiplication
+  by <span class="math"></span><script type="math/tex">Z</script> is injective in <a href=#equ4.4>(4.4)</a>. It is actually a nice proof:
+  for a general homogeneous polynomial <span class="math"></span><script type="math/tex">J\in k[x, y, z]</script>, we let <span class="math"></span><script type="math/tex">J_0 = J(x, y, 0)\in
+  k[x, y]</script>. Suppose that <span class="math"></span><script type="math/tex">z H = A F + B G</script>. Then <span class="math"></span><script type="math/tex">A_0 F_0 + B_0 G_0 = 0</script>.
+  Since <span class="math"></span><script type="math/tex">V(F, G, z) = \emptyset</script>, <span class="math"></span><script type="math/tex">A_0 = \lambda G_0</script> and <span class="math"></span><script type="math/tex">B_0 = \mu F_0</script> and
+  <div class="math"></div><script type="math/tex; mode=display">
+  z H = (A - \lambda G) F + (B + \lambda F) G
+  </script>
+  and we see that <span class="math"></span><script type="math/tex">z\mid A-\lambda G</script> and <span class="math"></span><script type="math/tex">z\mid B + \lambda F</script>, since
+  <span class="math"></span><script type="math/tex">(A - \lambda G)_0 = 0</script> and <span class="math"></span><script type="math/tex">(B + \lambda G)_0 = (B - \mu G)_0 = 0</script>.
+</div><div style="margin-top:20px"></div><span id="env4.23"></span><div class="lemma" data-count="4.23">     
+  When <span class="math"></span><script type="math/tex">P</script> is a simple point on <span class="math"></span><script type="math/tex">F</script> and <span class="math"></span><script type="math/tex">I(P, H\cap F) \geq I(P, G\cap F)</script>, then
+  <span class="math"></span><script type="math/tex">H_*\in (F, G)\mathcal{O}_P</script>.
+</div>
+<div class="proof">
+  We have <span class="math"></span><script type="math/tex">\nu(H) \geq \nu(G)</script> in <span class="math"></span><script type="math/tex">\mathcal{O}_P(F)</script> by Lemma <a href=#env4.19 class="labelref">4.19</a>. Therefore
+  <span class="math"></span><script type="math/tex">H_*\in (G_*)\subset \mathcal{O}_P(F)</script>. As <span class="math"></span><script type="math/tex">\mathcal{O}_P(F_*)/(G_*) \cong \mathcal{O}_P/(F_*, G_*)</script> by
+  Exercise <a href=#env4.18 class="labelref">4.18</a>, 
+  we get that <span class="math"></span><script type="math/tex">H_*\in (F_*, G_*)</script> at <span class="math"></span><script type="math/tex">P</script>.
+</div><div style="margin-top:20px"></div><span id="sec4.8"></span><h2 id="a3ed75c8-fe29-4602-958c-a557d797adde">4.8 Elliptic curves</h2><div style="margin-top:20px"></div>Elliptic curves are simply plane projective curves of degree three with only
+simple points i.e., non-singular cubics. They are among the most surprising
+and beautiful objects in all of modern mathematics. This is mainly due to
+the fact that they carry an abelian group structure.<div style="margin-top:20px"></div><span id="env4.24"></span><div class="proposition" data-count="4.24">     
+  Let <span class="math"></span><script type="math/tex">C</script> be an irreducible cubic and <span class="math"></span><script type="math/tex">C', C''</script> cubics. Suppose that
+  <span id="equ4.5"></span><div class="math"></div><script type="math/tex; mode=display">
+  C'\cdot C = P_1 + \cdots + P_8 + P_9,
+  \tag{4.5}</script>
+  where <span class="math"></span><script type="math/tex">P_1, \dots, P_9</script> are simple points on <span class="math"></span><script type="math/tex">C</script>, and suppose that
+  <span class="math"></span><script type="math/tex">C''\cdot C = P_1 + \cdots + P_8 + Q</script>. Then <span class="math"></span><script type="math/tex">Q = P_9</script>.
+</div>
+<div class="proof">
+Suppose that <span class="math"></span><script type="math/tex">Q\neq P_9</script>. Let <span class="math"></span><script type="math/tex">L</script> be a line through <span class="math"></span><script type="math/tex">P_9</script> not
+passing through <span class="math"></span><script type="math/tex">Q</script> with
+<div class="math"></div><script type="math/tex; mode=display">
+L\cdot C = P_9 + R + S.
+</script>
+Then
+<span id="equ4.6"></span><div class="math"></div><script type="math/tex; mode=display">
+(L C'')\cdot C = C'\cdot C + Q + R + S.
+\tag{4.6}</script>
+Comparing <a href=#equ4.5>(4.5)</a> with <a href=#equ4.6>(4.6)</a> we may, using Lemma <a href=#env4.23 class="labelref">4.23</a>,
+find a line <span class="math"></span><script type="math/tex">L'</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+L'\cdot C = Q + R + S.
+</script>
+But we must have <span class="math"></span><script type="math/tex">L = L'</script>.
+</div><div style="margin-top:20px"></div><span id="sec4.8.1"></span><h3>4.8.1 Addition on an elliptic curve</h3><div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">C</script> be an elliptic curve i.e., <span class="math"></span><script type="math/tex">C = V(F)</script>, where
+<span class="math"></span><script type="math/tex">F</script> is homogeneous of degree three with only simple points. For
+two points <span class="math"></span><script type="math/tex">P, Q\in C</script> we define <span class="math"></span><script type="math/tex">\varphi(P, Q) = R</script>, where
+<div class="math"></div><script type="math/tex; mode=display">
+L \cdot C = P + Q + R.
+</script>
+Of course this gives a commutative operation, but we need a
+neutral element <span class="math"></span><script type="math/tex">\mathcal{O}\in C</script>. Now we define
+<div class="math"></div><script type="math/tex; mode=display">
+P\oplus Q = \varphi(\mathcal{O}, \varphi(P, Q)).
+</script><div style="margin-top:20px"></div><div class="centerimg"><img src="img/ellcurvadd.png" ></div><div style="margin-top:20px"></div><span id="env4.25"></span><div class="theorem" data-count="4.25">     
+The operation <span class="math"></span><script type="math/tex">\oplus</script> makes <span class="math"></span><script type="math/tex">C</script> into an abelian group.
+</div>
+<div class="proof">
+We only need to check that <span class="math"></span><script type="math/tex">\oplus</script> is associative i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+\varphi(\varphi(\mathcal{O}, \varphi(P, Q)), R) =
+\varphi(\varphi(\mathcal{O}, \varphi(R, Q)), P).
+</script>
+We list the intersection cycles and end up with a good idea.
+Here goes <span class="math"></span><script type="math/tex">(P\oplus Q) \oplus R</script>:
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+C\cdot PQ &= P + Q + P'\\
+C\cdot \mathcal{O} P' &= \mathcal{O} + P' + S\\
+C\cdot RS &= R + S + R'
+\end{aligned}</script><div style="margin-top:20px"></div>Here is <span class="math"></span><script type="math/tex">P\oplus (Q \oplus R)</script>:
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+C\cdot QR &= Q + R + Q'\\
+C\cdot \mathcal{O} Q' &= \mathcal{O} + Q' + T\\
+C\cdot PT &= P + T + T'
+\end{aligned}</script><div style="margin-top:20px"></div>The endgame is to prove <span class="math"></span><script type="math/tex">R' = T'</script>.
+The magnificent trick appears now in using Proposition <a href=#env4.24 class="labelref">4.24</a>
+for
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+C' &= PQ \cdot RS \cdot \mathcal{O} Q'\\
+C'' &= \mathcal{O} P' \cdot QR \cdot PT
+\end{aligned}</script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec4.8.2"></span><h3>4.8.2 Explicit formulas</h3><div style="margin-top:20px"></div>Suppose that we have an elliptic curve <span class="math"></span><script type="math/tex">C = V(F)</script> given by the <span class="bubblelabel footnotecolor">affine equation</span><span class="bubblecontent"><span class="bubbleinnercontent">One may prove that, such an equation
+  really defines an elliptic curve if the discriminant of the cubic polynomial on the right hand side is <span class="math"></span><script type="math/tex">\neq 0</script>. Here the
+discriminant is <div class="math"></div><script type="math/tex; mode=display">a^2 b^2 - 4 b^3 - 4 a^3 c - 27 c^2 + 18 a b c.</script></span></span>
+<div class="math"></div><script type="math/tex; mode=display">
+y^2 = x^3 + a x^2 + b x + c
+</script>
+with <span class="math"></span><script type="math/tex">\mathcal{O} = (0, 1, 0)</script>.<div style="margin-top:20px"></div><span id="env4.26"></span><a class="Exerciseno" data-count="4.26"></a><a href="#0f113fbc-70bb-4342-86f3-d4127498b7a6" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=0f113fbc-70bb-4342-86f3-d4127498b7a6 class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">f(x, y) = y^2 - P(x)</script>, where <span class="math"></span><script type="math/tex">P\in k[x]</script> is
+a polynomial of degree three. Prove that the corresponding
+projective plane cubic curve <span class="math"></span><script type="math/tex">V(f^*)</script> has only simple points
+if and only if the discriminant of <span class="math"></span><script type="math/tex">P(x)</script> is <span class="math"></span><script type="math/tex">\neq 0</script>.
+</div><div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">P_1 = (x_1, y_1)</script> and <span class="math"></span><script type="math/tex">P_2 = (x_2, y_2)</script>, how
+do we actually compute <span class="math"></span><script type="math/tex">P_3 = (x_3, y_3) = P_1\oplus P_2</script>?<div style="margin-top:20px"></div>First, we notice that <span class="math"></span><script type="math/tex">\mathcal{O}, (x_0, y_0, 1), (x_0, -y_0, 1)\in C</script> all lie on the
+line <span class="math"></span><script type="math/tex">V(x - x_0 z)</script>, so that <span class="math"></span><script type="math/tex">- P = (x_0, -y_0, 1)</script> if <span class="math"></span><script type="math/tex">P = (x_0, y_0, 1)\in C</script>.<div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">x_1\neq x_2</script> in <span class="math"></span><script type="math/tex">P_1</script> and <span class="math"></span><script type="math/tex">P_2</script> above, we consider the line <span class="math"></span><script type="math/tex">y = \alpha x + \beta</script>
+through <span class="math"></span><script type="math/tex">P_1</script> and <span class="math"></span><script type="math/tex">P_2</script>. To find <span class="math"></span><script type="math/tex">x_3</script>, we simply use the identity
+<span id="equ4.7"></span><div class="math"></div><script type="math/tex; mode=display">
+x^3 + a x^2 + b x + c - (\alpha x + \beta)^2 = (x - x_1) (x - x_2) (x - x_3).
+\tag{4.7}</script>
+Comparing coefficients, this gives
+<div class="math"></div><script type="math/tex; mode=display">
+a - \alpha^2 = - (x_1 + x_2 + x_3)
+</script>
+and therefore
+<span id="equ4.8"></span><div class="math"></div><script type="math/tex; mode=display">
+x_3 = \alpha^2 - a - x_1 - x_2.
+\tag{4.8}</script>
+Of course here you already know that  <span class="math"></span><script type="math/tex">\alpha = (y_2 - y_1)/(x_1 - x_2)</script>.<div style="margin-top:20px"></div>What if <span class="math"></span><script type="math/tex">x_1 = x_2</script>? Well, if <span class="math"></span><script type="math/tex">P = P_1 = P_2</script>, then we need to compute the
+tangent line at <span class="math"></span><script type="math/tex">P = (x_1, y_1)</script>, which is
+<div class="math"></div><script type="math/tex; mode=display">
+\frac{\partial F}{\partial x}(x_1, y_1) (x - x_1) + \frac{\partial F}{\partial y}(x_1, y_1)(y-y_1) =
+(3 x_1^2 + 2 a x_1 + b)(x-x_1) + 2 y_1(y - y_1)
+</script>
+Here our line is given by <span class="math"></span><script type="math/tex">\alpha = -(3 x_1^2 + 2 a x_1 + b)/(2 y_1)</script> in
+<a href=#equ4.7>(4.7)</a> and we have a formula for the <span class="math"></span><script type="math/tex">x</script>-coordinate in <span class="math"></span><script type="math/tex">2 P_1</script> using
+<a href=#equ4.8>(4.8)</a>.<div style="margin-top:20px"></div>Computing the <span class="math"></span><script type="math/tex">y</script>-coordinate in both sums can be done by first finding
+the intersection of the relevant line with the <span class="math"></span><script type="math/tex">y</script>-axis:
+<div class="math"></div><script type="math/tex; mode=display">
+\beta = y_1 - \alpha x_1.
+</script>
+Then <span class="math"></span><script type="math/tex">y_3 = \alpha x_3 + \beta</script> Woooops! This is wrong. In fact the right formula is
+<div class="math"></div><script type="math/tex; mode=display">
+y_3 = - \alpha x_3 - \beta.
+</script>
+Why?<div style="margin-top:20px"></div><span id="sec4.8.3"></span><h3>4.8.3 Machine computation in Sage</h3><div style="margin-top:20px"></div>The computer algebra system Sage was originally built for experimenting with mathematics
+related to elliptic curves. Here is how to define the elliptic curve
+<span class="math"></span><script type="math/tex">y^2 = x^3 + a x + b</script> over <span class="math"></span><script type="math/tex">\mathbb{Q}</script> and compute with addition of points.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+#
+# The elliptic curve $y^2 = x^3 + 17$:
+#
+a = 0
+b = 17
+E = EllipticCurve([a, b])
+P = E(-1, 4)
+Q = E(-2, 3)
+print(P + Q)
+</script></div>
+
+
+
+
+
+
+
+
+
+
+
+<span id="sec4.9"></span><h2 id="abec0501-e5d2-4715-8601-1e946e500324">4.9 Fun and surprising facts</h2><div style="margin-top:20px"></div>The following result is deep and non-trivial.<div style="margin-top:20px"></div><span id="env4.27"></span><div class="theorem" data-count="4.27">     
+  Let <span class="math"></span><script type="math/tex">E</script> be an elliptic curve defined by a polynomial with
+  coefficients in <span class="math"></span><script type="math/tex">\mathbb{Q}</script>. Then <span class="math"></span><script type="math/tex">E(\mathbb{Q})</script> is a finitely generated
+  abelian group.
+</div><div style="margin-top:20px"></div>A finitely generated abelian group <span class="math"></span><script type="math/tex">A</script> is isomorphic to a <span class="math"></span><script type="math/tex">A_{\operatorname{free}} \oplus A_{\operatorname{tors}}</script>,
+where <span class="math"></span><script type="math/tex">A_{\operatorname{free}}</script> is finitely generated free isomorphic to <span class="math"></span><script type="math/tex">\mathbb{Z}^r</script> and <span class="math"></span><script type="math/tex">A_{\operatorname{tors}}</script>
+is the finite torsion subgroup. The rank of <span class="math"></span><script type="math/tex">E(\mathbb{Q})</script> is the dimension of <span class="math"></span><script type="math/tex">E(\mathbb{Q})_{\operatorname{free}}</script> i.e., <span class="math"></span><script type="math/tex">r</script> in <span class="math"></span><script type="math/tex">\mathbb{Z}^r</script>.<div style="margin-top:20px"></div>For an elliptic curve <span class="math"></span><script type="math/tex">E</script> as above, there are only
+finitely many possibilities for the torsion
+subgroup of <span class="math"></span><script type="math/tex">E(\mathbb{Q})</script>. See <a href="https://en.wikipedia.org/wiki/Torsion_conjecture#Elliptic_curves" target="_blank">Mazur's theorem</a>. For some reason <span class="math"></span><script type="math/tex">E(\mathbb{Q})</script> has no points of order <span class="math"></span><script type="math/tex">11</script> and no points
+of order <span class="math"></span><script type="math/tex">>12</script>. The points of finite order are available from the
+<a href="https://en.wikipedia.org/wiki/Nagell%E2%80%93Lutz_theorem" target="_blank">Nagell-Lutz theorem</a>.<div style="margin-top:20px"></div>It is not known if the rank of <span class="math"></span><script type="math/tex">E(\mathbb{Q})</script> is bounded, where <span class="math"></span><script type="math/tex">E</script> runs through the elliptic curves over <span class="math"></span><script type="math/tex">\mathbb{Q}</script>!
+The current record for the rank is given by the Elkies curve
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  &y^2 + x y + y = x^3 - x^2 -\\
+  &20067762415575526585033208209338542750930230312178956502 x + \\
+  &34481611795030556467032985690390720374855944359319180361266008296291939448732243429,
+\end{aligned}</script>
+which has rank at least <span class="math"></span><script type="math/tex">28</script>.
+
+The rank and the torsion subgroup can be computed for a given elliptic curve in Sage as illustrated below.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+#
+# The elliptic curve $y^2 = x^3 + 17$:
+#
+a = 0
+b = 17
+E = EllipticCurve([a, b])
+print('Rank = ', E.rank())
+print('Torsion subgroup = ', E.torsion_subgroup())
+</script></div><div style="margin-top:20px"></div></div></body>

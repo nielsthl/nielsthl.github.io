@@ -1,0 +1,600 @@
+<!doctype html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.css" integrity="sha384-NFGicHNcq1l2DafLerXQeI3h3jJY3dCcDQF+29rtRBHW7P7ti+/XIRY7ALbJOaeh" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.js" integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var tex = document.querySelectorAll('script[type^="math/tex"]');
+
+	for(var i = 0; i < tex.length; ++i)
+	    {
+		var display = tex[i].getAttribute('type').indexOf('mode=display') > -1;
+		
+		var math = tex[i].previousSibling;
+		math.className = 'katex-render';
+		
+		var content = tex[i].textContent;
+		
+		katex.render(content, math, {
+		    /* output: html, */
+		    displayMode: display,
+		    throwOnError: false,
+		    trust: true
+		});
+		
+		tex[i].parentNode.removeChild(tex[i]);
+		
+	    }
+    });
+  </script>
+
+
+<script src="js/sidebar.js"></script>
+
+
+
+<script defer src="js/search.js"></script>
+
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+  window.MathJax = 1 /* Disable MathJax */
+  sagecell.makeSagecell({
+  inputLocation: ".sage",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["sage", "python", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageM2",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["macaulay2", "sage", "python", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sagepython",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["python", "sage", "macaulay2", "r"],
+  hide : ["permalink"]
+  });
+  sagecell.makeSagecell({
+  inputLocation: ".sageR",
+  evalButtonText: "Compute",
+  linked: true,
+  languages : ["r", "python", "sage", "macaulay2"],
+  hide : ["permalink"]
+  });
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/openclosebuttons.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/iLaTeXen.css">
+
+<script defer src="js/quiz.js"></script>
+
+<script defer src="js/orderquiz.js"></script>
+ 
+
+<script defer src="js/bubble.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body><div class="sidenav normalwidth"><button style="border:none; background-color: Transparent;" onclick="showhidemenu()" title="Toggle toc"><span style="font-size: 30px;">&#9776;</span></button><button class="openbs" title="Open buttons">+</button><button class="closebs" title="Close buttons">-</button><ul class="leftmenu" style="display: none;"><li><a class="kap" href="intro.html#865dc405-de79-425a-a0d8-5d2d11cf9365"><b>1</b> A partly topological introduction</a></li><a href="#kap1" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap1" class="collapse"><li><a href="intro.html#97e0bdf6-2f48-4905-8907-f68630b253fd">1.1 A few words about rational functions</a></li><li><a href="intro.html#80090e52-739b-497f-903b-2fe2d278b46d">1.2 Topology</a></li><li><a href="intro.html#ecf3f66b-0543-4b1f-a81a-17825aecbc4a">1.3 Compactification</a></li><li><a href="intro.html#bbcc9317-318a-4771-aa2b-f4273aaf57c4">1.4 Projective spaces</a></li></ul><li><a class="kap" href="algebra.html#1ed734b7-6455-477f-9b44-0ea59bf6c31a"><b>2</b> Algebra and geometry</a></li><a href="#kap2" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap2" class="collapse"><li><a href="algebra.html#e4a511a7-6c36-49ca-a983-bd7c2cec6ea9">2.1 Algebraic sets</a></li><li><a href="algebra.html#c8a905e4-9b0e-46f5-9698-cdc66b0a43e3">2.2 Irreducible components</a></li><li><a href="algebra.html#ba8d5346-1f85-449c-b11b-d49b3b4e0f89">2.3 Primary decomposition</a></li><li><a href="algebra.html#9880dc01-5f6d-45f0-90c3-67510a1448f8">2.4 Computation</a></li><li><a href="algebra.html#076a918e-e09a-4fc2-9c5e-e4225d03d1e9">2.5 The Hilbert Nullstellensatz</a></li><li><a href="algebra.html#4860e90c-864b-4d67-bf57-96bc56bcf601">2.6 The combinatorial Nullstellensatz</a></li></ul><li><a class="kap" href="algcurves.html#d520e382-af60-4e38-8e3c-529b23819923"><b>3</b> Affine algebraic curves</a></li><a href="#kap3" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap3" class="collapse"><li><a href="algcurves.html#d3273733-d9eb-4b1e-aae7-d5d04dbcbff8">3.1 Intersection of two plane curves</a></li><li><a href="algcurves.html#8cdb8029-5c5a-45a1-8b7d-9fc734c2726f">3.2 Rational functions and local rings</a></li><li><a href="algcurves.html#dd4edb85-5a60-4947-9013-278f21fda24c">3.3 Dimension in local rings</a></li><li><a href="algcurves.html#c5ed80fb-8999-4cca-a6be-623111554085">3.4 The crucial isomorphism</a></li></ul><li><a class="kap" href="projplanecurves.html#2090f82e-a8dc-455c-8020-dbdf72031acc"><b>4</b> Projective plane curves</a></li><a href="#kap4" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kap4" class="collapse"><li><a href="projplanecurves.html#a64557c6-6575-4126-bbf7-36b608c07bec">4.1 Rational functions on the projective plane</a></li><li><a href="projplanecurves.html#f26a8e14-45f2-46f0-a268-0524ba3ce8d5">4.2 Homogeneous polynomials with no common factors</a></li><li><a href="projplanecurves.html#bad03ff4-a571-42c2-833d-ce53678a84da">4.3 Projective transformations</a></li><li><a href="projplanecurves.html#b265511a-14ce-4a17-8e5c-18a8a8b3ef63">4.4 Invariance under projective transformations</a></li><li><a href="projplanecurves.html#4527af3e-bb0a-498d-aed9-900c9f51dae7">4.5 Statement and proof of Bezout</a></li><li><a href="projplanecurves.html#8041c00c-7461-4fb3-98a1-f0cc9b9b0ce3">4.6 Some more local algebra and local geometry</a></li><li><a href="projplanecurves.html#54e6adde-5781-4a3b-bbf7-62ac6353c439">4.7 Max Noether's theorem</a></li><li><a href="projplanecurves.html#a3ed75c8-fe29-4602-958c-a557d797adde">4.8 Elliptic curves</a></li><li><a href="projplanecurves.html#abec0501-e5d2-4715-8601-1e946e500324">4.9 Fun and surprising facts</a></li></ul><li><a class="kap" href="appendixA.html#08c025de-cd7e-4a67-a7ff-1b3e8f83b771"><b>A</b> Basic algebra</a></li><a href="#kapA" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapA" class="collapse"><li><a href="appendixA.html#5f534fa7-c80a-45b4-8308-f87a2f2e384d">A.1 Commutative rings</a></li><li><a href="appendixA.html#ca7011a4-c6a8-43df-98ee-1c1e4d669019">A.2 Local rings</a></li></ul><li><a class="kap" href="appendixE.html#ab9a2e95-72f4-4ca1-846c-f0c681596845"><b>E</b> Mandatory exercises AC25</a></li><a href="#kapE" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapE" class="collapse"></ul><li><a class="kap" href="references.html#36e9431f-9d93-424c-94e8-65d3d188e92c"><b>R</b> References</a></li><a href="#kapR" data-toggle="collapse"><span class="downtick">&#10095</span></a><ul id="kapR" class="collapse"></ul></ul></div><div class="main normalmargin"><div style="margin-top:20px"></div> 
+<h1 id="865dc405-de79-425a-a0d8-5d2d11cf9365">1<span style="float:right;">A partly topological introduction</span></h1><div style="margin-top:20px"></div>The brief version is that an algebraic curve, or rather a plane algebraic curve,
+is the zero locus of a polynomial in two variables. To define this in
+more precision, let <span class="math"></span><script type="math/tex">k</script> be a field. Then the zero locus of
+<span class="math"></span><script type="math/tex">F\in k[x, y]</script> is
+<div class="math"></div><script type="math/tex; mode=display">
+V(F) = \{(a, b)\in k^2 \mid F(a, b) = 0\}
+</script><div style="margin-top:20px"></div><span id="env1.1"></span><div class="example" data-count="1.1">     
+  For <span class="math"></span><script type="math/tex">k = \mathbb{R}</script> and <span class="math"></span><script type="math/tex">F = x^2 + y^2 - 1</script> we get the well known unit circle.
+  <span id="env1.2"></span><div class="figure" data-count="1.2">     
+  <div class="centerimg"><img src="img/unitcircle.jpg" ></div>
+</div>
+  But we may also have more complicated curves like 
+  <span id="env1.3"></span><div class="figure" data-count="1.3">     
+  <div class="centerimg"><img src="img/folium.jpg" ></div>
+</div>
+given by <span class="math"></span><script type="math/tex">V(F)</script>, where <span class="math"></span><script type="math/tex">F = x^3 + y^3 - 3 x y</script>.
+  The unit circle
+  has the (well?) known parametrization
+  <span id="equ1.1"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    x &= \frac{2 t}{1 + t^2}\\
+    y &= \frac{1 - t^2}{1 + t^2}.
+  \end{aligned}\tag{1.1}</script>
+  Such a parametrization (with rational functions) always misses a finite number
+  of points on the curve. If you include transcendental functions, you can get
+  all the points (here with <span class="math"></span><script type="math/tex">t</script> only running through a closed and bounded interval!) with the parametrization
+   <span id="equ1.2"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    x &= \cos(t)\\
+    y &= \sin(t).
+  \end{aligned}\tag{1.2}</script>
+  Can you find a similar parametrization as in <a href=#equ1.1>(1.1)</a> for the (famous) <span class="bubblelabel footnotecolor">curve</span><span class="bubblecontent"><span class="bubbleinnercontent">This curve is called the <a href="https://en.wikipedia.org/wiki/Folium_of_Descartes" target="_blank">folium of Descartes</a></span></span> in Figure <a href=#env1.3>(1.3)</a>? Here
+  the rules of the game are: find rational functions <span class="math"></span><script type="math/tex">p(t), q(t)\in \mathbb{R}(t)</script>, such that
+  <div class="math"></div><script type="math/tex; mode=display">
+  F(p(t), q(t)) = 0,
+  </script>
+  where <span class="math"></span><script type="math/tex">F = x^3 + y^3 - 3 x y</script>.  
+</div><div style="margin-top:20px"></div><span id="env1.4"></span><div class="exercise" data-count="1.4">     
+Prove that <span class="math"></span><script type="math/tex">x^2 + y^2 - 1</script> and <span class="math"></span><script type="math/tex">x^3 + y^3 - 3 x y</script> are irreducible
+polynomials in <span class="math"></span><script type="math/tex">\mathbb{R}[x, y]</script>.
+</div><div style="margin-top:20px"></div><a href="#668a7fe1-5a2b-46b1-adee-cd24ea4f946b" class ="btn btn-default" data-toggle="collapse">Challenge</a><div id=668a7fe1-5a2b-46b1-adee-cd24ea4f946b class="collapse">
+  Prove that (the Fermat curve)
+  <div class="math"></div><script type="math/tex; mode=display">
+  x^n + y^n = 1
+  </script>
+  does not have solutions in the field <span class="math"></span><script type="math/tex">k(t)</script> of rational functions in the variable <span class="math"></span><script type="math/tex">t</script> for <span class="math"></span><script type="math/tex">n>2</script>. Here
+  <span class="math"></span><script type="math/tex">k</script> is any field.
+</div><div style="margin-top:20px"></div><span id="env1.5"></span><div class="exercise" data-count="1.5">     
+  Studying mathematics a century ago, you would probably in a flash be able to spot that
+  <span id="equ1.3"></span><div class="math"></div><script type="math/tex; mode=display">
+  \int \sqrt{x^2 - 5 x + 6}\, d x =
+    \left(\frac{x}{2}-\frac{5}{4}\right) \sqrt{x^2-5 x+6}-\frac{1}{8}
+   \log \left(-2 \sqrt{x^2-5 x+6}-2 x+5\right).
+ \tag{1.3}</script><div style="margin-top:20px"></div>You can see that <a href="https://www.sagemath.org/" target="_blank">Sage</a> says about this indefinite integral by evaluating the window below.<div style="margin-top:20px"></div><div class=sage><script type="text/x-sage">
+from sage.symbolic.integration.integral import indefinite_integral
+indefinite_integral(sqrt(x^2 - 5*x + 6), x)
+</script></div><div style="margin-top:20px"></div>The algebraic curve <span class="math"></span><script type="math/tex">V(F)</script> given by <span class="math"></span><script type="math/tex">F = y^2 - x^2 + 5 x - 6</script> is
+ parametrized by
+ <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+   x &= \frac{2 t^2 - 3}{t^2-1}\\
+   y &= \frac{t}{t^2-1}.
+ \end{aligned}</script>
+ How does this help you in computing an antiderivative of
+ <span class="math"></span><script type="math/tex">\sqrt{x^2 - 5 x + 6}</script>? Carry out the computation using a computer algebra
+ system and verify that you get an antiderivative.<div style="margin-top:20px"></div>The antiderivative
+ <div class="math"></div><script type="math/tex; mode=display">
+ \int \sqrt{x^3 + 1}\, d x
+ </script>
+ is a different story, partly because it is impossible to find a
+ rational parametrization of the algebraic curve <span class="math"></span><script type="math/tex">V(y^2 - x^3 - 1)</script>.
+</div><div style="margin-top:20px"></div><span id="env1.6"></span><div class="example" data-count="1.6">     
+  Classically (and astronomically!) ellipses are extremely interesting. An
+  ellipse is an algebraic curve of the form <span class="math"></span><script type="math/tex">V(F)</script> for
+  <div class="math"></div><script type="math/tex; mode=display">
+  F = \left(\frac{x}{A}\right)^2 + \left(\frac{y}{B}\right)^2 - 1,
+  </script>
+  where <span class="math"></span><script type="math/tex">A, B > 0</script>. It has the transcendental parametrization
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    x &= A \cos(t)\\
+    y &= B \sin(t).
+  \end{aligned}</script>
+  <span id="env1.7"></span><div class="figure" data-count="1.7">     
+  <div class="centerimg"><img src="img/ellipse.jpg" ></div>
+</div>
+<a href="https://en.wikipedia.org/wiki/Johannes_Kepler" target="_blank">Kepler</a> approximated the circumference using the formula <span class="math"></span><script type="math/tex">\pi (A + B)</script>. If you
+want to compute the circumference precisely, you run into a bit of trouble when
+trying find the antiderivative below
+<div class="math"></div><script type="math/tex; mode=display">
+4 \int_0^{\pi/2} \sqrt{A^2 \sin^2(t) + B^2 \cos^2(t)}\, dt =
+4 B \int_0^{\pi/2} \sqrt{1 - \lambda \sin^2(t)}\, d t,
+</script>
+where <span class="math"></span><script type="math/tex">\lambda = 1  - \frac{A^2}{B^2}</script>.
+</div><div style="margin-top:20px"></div><span id="sec1.1"></span><h2 id="97e0bdf6-2f48-4905-8907-f68630b253fd">1.1 A few words about rational functions</h2><div style="margin-top:20px"></div>The subset <span class="math"></span><script type="math/tex">V(F) \subseteq \R^2</script> could be called an algebraic set.
+What are algebraic functions? To start with let us define rational
+functions
+<span id="equ1.4"></span><div class="math"></div><script type="math/tex; mode=display">
+\mathbb{R}(x, y) = \left\{\frac{f(x, y)}{g(x, y)}\, \middle|\, f, g,\in \mathbb{R}[x, y], g\neq 0\right\}.
+\tag{1.4}</script>
+There are many representatives for a rational function <span class="math"></span><script type="math/tex">q\in \mathbb{R}(x, y)</script> when defined as in <a href=#equ1.4>(1.4)</a>. Just take a look at the example below for
+the rational functions <span class="math"></span><script type="math/tex">\mathbb{R}(x)</script> in just one variable.<div style="margin-top:20px"></div><span id="env1.8"></span><div class="example" data-count="1.8">     
+In an exercise in my first year course <em>Introduction to mathematics and optimization</em>, I asked students to analyze the behavior of the rational function
+<div class="math"></div><script type="math/tex; mode=display">
+q(x) = \frac{x^2 - 3 x + 2}{x^2-4 x + 3}
+</script>
+close to <span class="math"></span><script type="math/tex">x=1</script>.
+Clearly <span class="math"></span><script type="math/tex">q(x)</script> is not defined for <span class="math"></span><script type="math/tex">x = 1</script>, but it turns out that everything works 
+out, since   
+<div class="math"></div><script type="math/tex; mode=display">
+q(x) = \frac{(x-1)(x-2)} {(x-1)(x-3)} = \frac{x-2}{x-3}.
+</script>
+It looks like <span class="math"></span><script type="math/tex">q(x)</script> is not defined for <span class="math"></span><script type="math/tex">x = 1</script>, but
+it is! It may be defined in one representation, but not in another.
+</div><div style="margin-top:20px"></div>A rational function <span class="math"></span><script type="math/tex">q\in \mathbb{R}(x, y)</script> can be restricted to an
+algebraic curve <span class="math"></span><script type="math/tex">V(F)</script> and we may evaluate <span class="math"></span><script type="math/tex">q</script> given by
+a representative <span class="math"></span><script type="math/tex">q = f/g</script> in a point <span class="math"></span><script type="math/tex">P\in V(F)</script> provided that
+<span class="math"></span><script type="math/tex">g(P)\neq 0</script> (if <span class="math"></span><script type="math/tex">g</script> is in the principal ideal <span class="math"></span><script type="math/tex">(F)</script>,  we are doomed). Here the representative for the rational function
+is even more deceiving than in Example <a href=#env1.8 class="labelref">1.8</a>. <div style="margin-top:20px"></div><span id="env1.9"></span><div class="example" data-count="1.9">     
+  The unit circle <span class="math"></span><script type="math/tex">S^1</script> is given by <span class="math"></span><script type="math/tex">V(F)</script>, where <span class="math"></span><script type="math/tex">F = x^2 + y^2 - 1</script>. The rational function
+  <div class="math"></div><script type="math/tex; mode=display">
+  t = \frac{y-1}{x}\in \mathbb{R}(x, y)
+  </script>
+  restricts to give a function on <span class="math"></span><script type="math/tex">V(F)</script>. Does this rational function haves poles
+  in <span class="math"></span><script type="math/tex">(0, 1)</script> and <span class="math"></span><script type="math/tex">(0, -1)</script>? The funny thing is that when we restrict <span class="math"></span><script type="math/tex">t</script> to
+  <span class="math"></span><script type="math/tex">V(F)</script>, then
+  <div class="math"></div><script type="math/tex; mode=display">
+  t = \frac{y-1}{x} = -\frac{x}{y+1}
+  </script>
+  as rational functions on <span class="math"></span><script type="math/tex">V(F)</script>.
+  Therefore <span class="math"></span><script type="math/tex">t</script> is well defined at <span class="math"></span><script type="math/tex">(0, 1)</script> with value <span class="math"></span><script type="math/tex">0</script>. The above identity leads to
+  the system
+  <div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    - t x + y &= 1\\
+    - x - t y &= t
+  \end{aligned}</script>
+  of linear equations over the subfield <span class="math"></span><script type="math/tex">\mathbb{R}(t) \subseteq \mathbb{R}(x, y)</script> 
+  with solutions
+  <span id="equ1.5"></span><div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+    x &= \frac{-2 t}{1 + t^2}\\
+    y &= \frac{1 - t^2}{1 + t^2}.
+  \end{aligned}\tag{1.5}</script>
+  If you look closer, we have actually proved algebraically that the field
+  of rational functions (properly defined) on <span class="math"></span><script type="math/tex">S^1</script> is isomorphic to
+  <span class="math"></span><script type="math/tex">\mathbb{R}(t)</script>.
+</div><div style="margin-top:20px"></div><span id="sec1.2"></span><h2 id="80090e52-739b-497f-903b-2fe2d278b46d">1.2 Topology</h2><div style="margin-top:20px"></div>Recall that a topological space is a set <span class="math"></span><script type="math/tex">X</script> with a topology. A topology is a
+subset <span class="math"></span><script type="math/tex">\tau \subset 2^X</script> of socalled open subsets, such that
+<ol class="number"><li id="ite1.1"> <span class="math"></span><script type="math/tex">\emptyset\in \tau</script>
+</li><li id="ite1.2"> <span class="math"></span><script type="math/tex">X\in \tau</script>
+</li><li id="ite1.3">
+  <span class="math"></span><script type="math/tex">
+  \bigcup_{i\in I} U_i\in \tau
+  </script>
+  if <span class="math"></span><script type="math/tex">U_i\in \tau</script> for <span class="math"></span><script type="math/tex">i\in I</script>.
+</li><li id="ite1.4">
+  <span class="math"></span><script type="math/tex">
+  U_1 \cap \cdots \cap U_n\in \tau
+  </script>
+  if <span class="math"></span><script type="math/tex">U_1, \dots, U_n\in \tau</script>.
+</li></ol><div style="margin-top:20px"></div>This definition is so extremely basic and surprising. Even though topology was
+existing in the <span class="math"></span><script type="math/tex">19</script>th century, the definition of a topological space is
+from 1914.<div style="margin-top:20px"></div><span id="env1.10"></span><a class="Exerciseno" data-count="1.10"></a><a href="#b7a9c234-9416-41d0-9f58-3bf112c3e533" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=b7a9c234-9416-41d0-9f58-3bf112c3e533 class = "collapse Exercise envbuttons">  
+Suppose that <span class="math"></span><script type="math/tex">X</script> is a metric space with metric <span class="math"></span><script type="math/tex">d</script>. What is the natural topology
+associated with <span class="math"></span><script type="math/tex">d</script>?
+</div><div style="margin-top:20px"></div>A map
+<div class="math"></div><script type="math/tex; mode=display">
+f : X \rightarrow Y
+</script>
+between topological spaces with topologies <span class="math"></span><script type="math/tex">\tau_X\subseteq 2^X</script> and <span class="math"></span><script type="math/tex">\tau_Y\subseteq
+2^Y</script> is called <em>continuous</em> if <span class="math"></span><script type="math/tex">f^{-1}(U)\in \tau_X</script> for <span class="math"></span><script type="math/tex">U\in \tau_Y</script>.<div style="margin-top:20px"></div>If a continuous map is
+bijective, then its inverse map is not necessarily continuous. If its inverse map is continuous, then the bijection is called a <em>homeomorphism</em>.<div style="margin-top:20px"></div><span id="env1.11"></span><a class="Exerciseno" data-count="1.11"></a><a href="#4689e3fd-fe64-49d3-b34e-68565a29dfd7" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=4689e3fd-fe64-49d3-b34e-68565a29dfd7 class = "collapse Exercise envbuttons">  
+Give an example of a continuous bijective map whose inverse map
+is not continuous.
+</div><div style="margin-top:20px"></div><span id="env1.12"></span><div class="remark" data-count="1.12">     
+  A closed subset of a topological space <span class="math"></span><script type="math/tex">X</script> is the complement of an open subset. Therefore
+  the axioms for a topological space might as well be given for the set <span class="math"></span><script type="math/tex">\varphi = \{X\setminus U \mid U\in \tau\}\subset 2^X</script>
+  of closed subsets:
+<ol class="number"><li id="ite1.5"> <span class="math"></span><script type="math/tex">\emptyset\in \varphi</script>
+</li><li id="ite1.6"> <span class="math"></span><script type="math/tex">X\in \varphi</script>
+</li><li id="ite1.7">
+  <span class="math"></span><script type="math/tex">
+  \bigcap_{i\in I} F_i\in \varphi
+  </script>
+  if <span class="math"></span><script type="math/tex">F_i\in \varphi</script> for <span class="math"></span><script type="math/tex">i\in I</script>.
+</li><li id="ite1.8">
+  <span class="math"></span><script type="math/tex">
+  F_1 \cup \cdots \cup F_n\in \varphi
+  </script>
+  if <span class="math"></span><script type="math/tex">F_1, \dots, F_n\in \varphi</script>.
+</li></ol><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div><span id="sec1.2.1"></span><h3>1.2.1 Induced topology</h3><div style="margin-top:20px"></div>A subset <span class="math"></span><script type="math/tex">Z \subset X</script> of a topological space <span class="math"></span><script type="math/tex">X</script> carries the socalled induced
+topology, which is defined by
+<div class="math"></div><script type="math/tex; mode=display">
+\{Z \cap U \mid U\in \tau_X\}.
+</script><div style="margin-top:20px"></div><span id="env1.13"></span><div class="remark" data-count="1.13">     
+  The closure <span class="math"></span><script type="math/tex">\overline{Y}</script> of a subset <span class="math"></span><script type="math/tex">Y\subset X</script> is the smallest closed subset containing <span class="math"></span><script type="math/tex">Y</script>. It is the intersection of the closed subsets
+  containing <span class="math"></span><script type="math/tex">Y</script>. If
+<div class="math"></div><script type="math/tex; mode=display">
+X = U_1 \cup \cdots \cup U_n
+</script><div style="margin-top:20px"></div>is an open cover, then<div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\overline{Y} = \overline{Y\cap U_1} \cup \cdots \cup \overline{Y\cap U_n},
+</script><div style="margin-top:20px"></div>where <span class="math"></span><script type="math/tex">\overline{Y\cap U_i}\subseteq U_i</script> denotes closure in the induced topology.
+</div><div style="margin-top:20px"></div><span id="sec1.2.2"></span><h3>1.2.2 Quotient topology</h3><div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">\sim</script> be an equivalence relation on a topological space <span class="math"></span><script type="math/tex">X</script>. The equivalence
+class containing <span class="math"></span><script type="math/tex">a\in X</script> is defined by
+<div class="math"></div><script type="math/tex; mode=display">
+[a] = \{x\in X \mid x \sim a\} \subset X.
+</script>
+Recall that <span class="math"></span><script type="math/tex">[a] \neq [b]\implies [a] \cap [b] = \emptyset</script>. The set of equivalence classes is
+<div class="math"></div><script type="math/tex; mode=display">
+X/_\sim = \{[a] \mid a\in X\}.
+</script>
+There is a natural topology on <span class="math"></span><script type="math/tex">X/_\sim</script>, such that <span class="math"></span><script type="math/tex">U\subset X/_\sim</script> is an
+open subset if and only if <span class="math"></span><script type="math/tex">\pi^{-1}(U)</script> is open in <span class="math"></span><script type="math/tex">X</script>. Here
+<div class="math"></div><script type="math/tex; mode=display">
+\pi: X \rightarrow X/_\sim
+</script>
+is the canonical map given by <span class="math"></span><script type="math/tex">\pi(x) = [x]</script>. This topology on <span class="math"></span><script type="math/tex">X/_\sim</script> is
+called the <em>quotient topology</em> on <span class="math"></span><script type="math/tex">X</script>.<div style="margin-top:20px"></div><span id="env1.14"></span><a class="Exerciseno" data-count="1.14"></a><a href="#7dc48017-d8aa-49af-baa6-0e1997ad5998" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=7dc48017-d8aa-49af-baa6-0e1997ad5998 class = "collapse Exercise envbuttons">  
+Prove that the quotient topology is a topology.
+</div><div style="margin-top:20px"></div>If <span class="math"></span><script type="math/tex">G</script> is a topological group (group operations are continuous maps) and
+<span class="math"></span><script type="math/tex">H</script> a subgroup, then <span class="math"></span><script type="math/tex">G/H</script> is naturally a topological space. Furthermore,
+<span class="math"></span><script type="math/tex">\pi: G\rightarrow G/H</script> is an open map i.e., <span class="math"></span><script type="math/tex">\pi(U)\subset G/H</script> is an
+open subset of <span class="math"></span><script type="math/tex">G/H</script>. Recall that
+<div class="math"></div><script type="math/tex; mode=display">
+G/H = \{ g H \mid g\in H\}\quad\text{and}\quad \pi(g) = gH.
+</script>
+Therefore <span class="math"></span><script type="math/tex">\pi^{-1}(\pi(U)) = \bigcup_{h\in H} U h</script> is an open subset as
+a union of open subsets in <span class="math"></span><script type="math/tex">G</script>.<div style="margin-top:20px"></div><span id="env1.15"></span><div class="example" data-count="1.15">     
+Consider <span class="math"></span><script type="math/tex">X = [0, 1]</script> and <span class="math"></span><script type="math/tex">\sim</script> with <span class="math"></span><script type="math/tex">0\sim 1</script> and  <span class="math"></span><script type="math/tex">x\sim x</script> for <span class="math"></span><script type="math/tex">x\in X</script>. Then
+<div class="math"></div><script type="math/tex; mode=display">
+\pi\left([0, \frac{1}{2})\right) \subset X/\sim
+</script>
+is not an open subset.
+</div><div style="margin-top:20px"></div><span id="sec1.2.3"></span><h3>1.2.3 Compactness</h3><div style="margin-top:20px"></div>A topological space <span class="math"></span><script type="math/tex">X</script> is called <em>compact</em> if every open cover has
+a finite subcover i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+X = \bigcup_{i\in I} U_i \quad\implies \quad X = \bigcup_{j\in I_1} U_i.
+</script>
+where <span class="math"></span><script type="math/tex">U_i</script> is an open subset and <span class="math"></span><script type="math/tex">I_1\subset I</script> is a finite subset. This
+is also a very cool and surprising  definition. The result below is called
+the <a href="https://en.wikipedia.org/wiki/Heine%E2%80%93Borel_theorem" target="_blank">Heine-Borel theorem</a>.<div style="margin-top:20px"></div><span id="env1.16"></span><div class="theorem" data-count="1.16">     
+  A subset of a euclidean space <span class="math"></span><script type="math/tex">\mathbb{R}^n</script> with the usual metric (and topology) is compact if and only if it is closed and bounded. 
+</div><div style="margin-top:20px"></div><span id="env1.17"></span><a class="Exerciseno" data-count="1.17"></a><a href="#42c1832e-25c7-41e3-81f9-e46598795d4c" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=42c1832e-25c7-41e3-81f9-e46598795d4c class = "collapse Exercise envbuttons">  
+Give an example of a metric space, where closed and bounded subsets are
+not necessarily compact.<div style="margin-top:20px"></div><a href="#6c001447-9a6d-4454-a11e-3ed87529cd87" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=6c001447-9a6d-4454-a11e-3ed87529cd87 class="collapse">
+  Consider <span class="math"></span><script type="math/tex">X = [0, 2]\cap \mathbb{Q}\subset \mathbb{R}</script>.<div style="margin-top:20px"></div><a href="#503b62eb-013d-4628-bc26-4d0ff542f929" class ="btn btn-default" data-toggle="collapse">Hint</a><div id=503b62eb-013d-4628-bc26-4d0ff542f929 class="collapse">
+    Along with the open covering given by
+    <div class="math"></div><script type="math/tex; mode=display">
+    U_n = \{x\in X \mid |x^2 - 2| > 1/n\}
+    </script>
+    for <span class="math"></span><script type="math/tex">n = 1, 2, \dots</script>.
+  </div>
+</div>
+</div><div style="margin-top:20px"></div><span id="env1.18"></span><div class="example" data-count="1.18">     
+  The unit circle <span class="math"></span><script type="math/tex">V(x^2 + y^2 - 1)\subseteq \mathbb{R}^2</script> is
+  a compact topological space.
+</div><div style="margin-top:20px"></div>We also recall the following result, the proof of which is
+surprisingly straight forward. Notice how clean the statement is.
+No epsilons, no deltas. Just pure set theory.<div style="margin-top:20px"></div><span id="env1.19"></span><div class="theorem" data-count="1.19">     
+  Let <span class="math"></span><script type="math/tex">f: X\rightarrow Y</script> be a continuous map between
+  topological spaces. Then <span class="math"></span><script type="math/tex">f(X)</script> is compact if <span class="math"></span><script type="math/tex">X</script> is
+  compact.
+  </div><div style="margin-top:20px"></div>A consequence of the above result is that a continuous function
+<span class="math"></span><script type="math/tex">f:X\rightarrow \mathbb{R}</script> on a compact topological space attains
+its supremum and infimum.<div style="margin-top:20px"></div><span id="sec1.2.4"></span><h3>1.2.4 Hausdorff</h3><div style="margin-top:20px"></div>A topological space <span class="math"></span><script type="math/tex">X</script> is called <em>Hausdorff</em> if for
+every set of distinct point <span class="math"></span><script type="math/tex">x, y\in X</script> there exists
+open subsets <span class="math"></span><script type="math/tex">U, V\in X</script>, such that
+<div class="math"></div><script type="math/tex; mode=display">
+x\in U, y\in V\qquad\text{and} \qquad U\cap V = \emptyset.
+</script>
+This notion has a nice interplay with compactness:<div style="margin-top:20px"></div><span id="env1.20"></span><div class="proposition" data-count="1.20">     
+A compact subset of a Hausdorff topological space is closed.
+</div><div style="margin-top:20px"></div>Proving the above proposition also amounts to playing around with
+the abstract concepts. Once you get down to it, the proof is
+surprisingly short.<div style="margin-top:20px"></div>From Theorem <a href=#env1.19 class="labelref">1.19</a> it follows that
+<span id="env1.21"></span><div class="theorem" data-count="1.21">     
+  Let <span class="math"></span><script type="math/tex">f: X\rightarrow Y</script> be a continuous map, where
+  <span class="math"></span><script type="math/tex">X</script> is compact and <span class="math"></span><script type="math/tex">Y</script> is Hausdorff. Then <span class="math"></span><script type="math/tex">f</script> is closed i.e.,
+  <span class="math"></span><script type="math/tex">f(Z)\subset Y</script> is a closed subset if <span class="math"></span><script type="math/tex">Z\subset X</script> is a closed
+  subset.
+</div><div style="margin-top:20px"></div>To elucidate the result above:
+  let <span class="math"></span><script type="math/tex">\pi: \mathbb{R}^2 \rightarrow \mathbb{R}</script> denote the projection on the
+  first coordinate. Can you give an example of a closed subset <span class="math"></span><script type="math/tex">Z\subset \mathbb{R}^2</script>,
+  such that <span class="math"></span><script type="math/tex">\pi(Z)\subset \mathbb{R}</script> is not closed?<div style="margin-top:20px"></div><span id="env1.22"></span><a class="Exerciseno" data-count="1.22"></a><a href="#c296e513-8e9c-46dd-ab77-0bb044ee40e5" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=c296e513-8e9c-46dd-ab77-0bb044ee40e5 class = "collapse Exercise envbuttons">  
+Give a precise proof that the topological spaces
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{R}/2\pi \mathbb{Z} \qquad \text{and} \qquad S^1 = \{z\in \mathbb{C} \mid |z| = 1 \}
+</script>
+are homeomorphic.
+</div><div style="margin-top:20px"></div><span id="sec1.2.5"></span><h3>1.2.5 Product topology</h3><div style="margin-top:20px"></div>We will briefly introduce the product topology. To simplify, we do this only
+for the product <span class="math"></span><script type="math/tex">X\times Y</script> of two topological spaces <span class="math"></span><script type="math/tex">X</script> and <span class="math"></span><script type="math/tex">Y</script>.
+The product topology on <span class="math"></span><script type="math/tex">X\times Y</script> is defined as the smallest
+topology containing <span class="math"></span><script type="math/tex">X\times V</script> and <span class="math"></span><script type="math/tex">U\times Y</script>, where <span class="math"></span><script type="math/tex">U</script> is an open subset
+of <span class="math"></span><script type="math/tex">X</script> and <span class="math"></span><script type="math/tex">V</script> is an open subset of <span class="math"></span><script type="math/tex">Y</script>. So a subset <span class="math"></span><script type="math/tex">W\subset X\times Y</script>
+is open if and only if for every <span class="math"></span><script type="math/tex">(x, y)\in W</script>, there exists open
+subsets <span class="math"></span><script type="math/tex">U\subset X</script> and <span class="math"></span><script type="math/tex">V\subset Y</script>, such that <span class="math"></span><script type="math/tex">(x, y)\in U\times V</script> and
+<span class="math"></span><script type="math/tex">U\times V\subset W</script>.<div style="margin-top:20px"></div>You should check that a topological space <span class="math"></span><script type="math/tex">X</script> is Hausdorff if and only
+if the diagonal <span class="math"></span><script type="math/tex">\Delta_X \subset X\times X</script> is closed in the product
+topology.<div style="margin-top:20px"></div><span id="sec1.2.6"></span><h3>1.2.6 Connectedness</h3><div style="margin-top:20px"></div>A topological space <span class="math"></span><script type="math/tex">X</script> is connected if it is not the disjoint union of
+two non-empty subsets. If <span class="math"></span><script type="math/tex">f: X \rightarrow Y</script> is a continuous map, then
+<span class="math"></span><script type="math/tex">f(X)</script> is connected if <span class="math"></span><script type="math/tex">X</script> is connected.<div style="margin-top:20px"></div><span id="sec1.2.7"></span><h3>1.2.7 Irreducibility</h3><div style="margin-top:20px"></div>This is a notion you may not have seen before.<div style="margin-top:20px"></div>A topological space is called irreducible if it is not the
+union of two proper closed subsets.<div style="margin-top:20px"></div><span id="env1.23"></span><a class="Exerciseno" data-count="1.23"></a><a href="#2d617b58-712f-458e-99e3-2d0b36bc34e0" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=2d617b58-712f-458e-99e3-2d0b36bc34e0 class = "collapse Exercise envbuttons">  
+What are the irreducible subsets (as topological spaces) of <span class="math"></span><script type="math/tex">\mathbb{R}</script>?
+</div><div style="margin-top:20px"></div><span id="sec1.2.8"></span><h3>1.2.8 Complex vector spaces</h3><div style="margin-top:20px"></div>The set <span class="math"></span><script type="math/tex">\mathbb{C}^n</script> is a normed vector space over <span class="math"></span><script type="math/tex">\mathbb{C}</script> with
+<div class="math"></div><script type="math/tex; mode=display">
+||(z_1, \dots, z_n)|| = \sqrt{z_1 \overline{z}_1 + \dots + z_n \overline{z}_n}.
+</script><div style="margin-top:20px"></div>It is perfectly ok to view <span class="math"></span><script type="math/tex">\mathbb{C}^n</script> as <span class="math"></span><script type="math/tex">\mathbb{R}^{2n}</script> as a topological space. In fact,
+if <span class="math"></span><script type="math/tex">z_1 = x + i y</script> and <span class="math"></span><script type="math/tex">z_2 = u + i v</script>, then we have in <span class="math"></span><script type="math/tex">\mathbb{C}^2</script> that
+<div class="math"></div><script type="math/tex; mode=display">
+||(z_1, z_2) || = \sqrt{x^2 + y^2 + u^2 + v^2}.
+</script><div style="margin-top:20px"></div><span id="env1.24"></span><div class="exercise" data-count="1.24">     
+  Prove that <span class="math"></span><script type="math/tex">V(x^2 + y^2 - 1)\subset \mathbb{C}^2</script> is not a compact topological space.
+  </div><div style="margin-top:20px"></div><span id="env1.25"></span><a class="Exerciseno" data-count="1.25"></a><a href="#541689d6-681a-4773-8774-fc10354c672e" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=541689d6-681a-4773-8774-fc10354c672e class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">F(x, y)\in \mathbb{C}[x, y]</script> be a non-constant polynomial in two variables. Prove
+that <span class="math"></span><script type="math/tex">V(F)\subset \mathbb{C}^2</script> is not a compact topological space.
+</div><div style="margin-top:20px"></div><span id="sec1.3"></span><h2 id="ecf3f66b-0543-4b1f-a81a-17825aecbc4a">1.3 Compactification</h2><div style="margin-top:20px"></div><span id="sec1.3.1"></span><h3>1.3.1 The real line</h3><div style="margin-top:20px"></div>The solution in <a href=#equ1.5>(1.5)</a> gives us a bijective continuous map (a homeomorphism!) 
+<span class="math"></span><script type="math/tex">\varphi: \mathbb{R}\rightarrow S^1\setminus\{P\}</script> given by
+<span id="equ1.6"></span><div class="math"></div><script type="math/tex; mode=display">
+\varphi(x, y) = \left(\frac{2 t}{t^2 + 1}, \frac{t^2- 1}{t^2 + 1}\right),   
+\tag{1.6}</script>
+where <span class="math"></span><script type="math/tex">P = (0, 1)</script>. I find it intriguing that an infinitely large set of
+numbers, such as <span class="math"></span><script type="math/tex">\mathbb{R}</script> can be curled into the compact space <span class="math"></span><script type="math/tex">S^1</script> except
+for one point. This construction is an example of a socalled compactification. It
+turns out that every algebraic curve has one.<div style="margin-top:20px"></div><span id="env1.26"></span><a class="Exerciseno" data-count="1.26"></a><a href="#74a0f1de-c9d9-499d-bb04-d3d5bb42719c" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=74a0f1de-c9d9-499d-bb04-d3d5bb42719c class = "collapse Exercise envbuttons">  
+Prove precisely that <span class="math"></span><script type="math/tex">\varphi</script> in <a href=#equ1.6>(1.6)</a> is a homeomorphism.
+</div><div style="margin-top:20px"></div><span id="sec1.3.2"></span><h3>1.3.2 The famous Riemann sphere</h3><div style="margin-top:20px"></div>In section <a href=#sec1.3.1 class="labelref">1.3.1</a> we embedded <span class="math"></span><script type="math/tex">\mathbb{R}</script> in the compact topological space <span class="math"></span><script type="math/tex">S^1</script>
+by merely adding one point to <span class="math"></span><script type="math/tex">\mathbb{R}</script>! It turns out we can
+do the same with <span class="math"></span><script type="math/tex">\mathbb{C}</script>. Topologically the compactification is the unit sphere
+in <span class="math"></span><script type="math/tex">\mathbb{R}^3</script> i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+S^2 = \{(x, y, z) \in \mathbb{R}^3 \mid x^2 + y^2 + z^2 = 1\}.
+</script><div style="margin-top:20px"></div><div class="centerimg"><img src="img/unitsphere.jpg" ></div><div style="margin-top:20px"></div>We define a map (the inverse of stereographical projection) <span class="math"></span><script type="math/tex">\Phi: \mathbb{C}\rightarrow S^2\setminus\{\infty\}</script>, where <span class="math"></span><script type="math/tex">\infty</script> is the north pole <span class="math"></span><script type="math/tex">(0, 0, 1)</script>.<div style="margin-top:20px"></div>To <span class="math"></span><script type="math/tex">z = x + i y</script> we associate
+<div class="math"></div><script type="math/tex; mode=display">
+\Phi(z) =\left(\frac{2 x}{x^2 + y^2 + 1}, \frac{2 y}{x^2 + y^2 + 1}, \frac{x^2 + y^2 - 1}{x^2 + y^2 + 1}\right)
+</script>
+Notice that
+<div class="math"></div><script type="math/tex; mode=display">
+\Phi^{-1}(x, y, z) = \frac{x}{1-z} + i \frac{y}{1-z}.
+</script><div style="margin-top:20px"></div><span id="env1.27"></span><a class="Exerciseno" data-count="1.27"></a><a href="#656370fe-fe54-4be1-86a9-af029a8683fc" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=656370fe-fe54-4be1-86a9-af029a8683fc class = "collapse Exercise envbuttons">  
+Let <span class="math"></span><script type="math/tex">\sigma:S^2\setminus\{S\}\rightarrow \mathbb{C}</script> be stereographic projection from the
+south pole i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+\sigma(x, y, z) = \frac{x}{1+z} + i \frac{y}{1+z}.
+</script>
+Let <span class="math"></span><script type="math/tex">\varphi = \sigma \circ \Phi</script>. Prove that
+<div class="math"></div><script type="math/tex; mode=display">
+\varphi(z) = \frac{1}{\overline{z}}
+</script>
+and that <span class="math"></span><script type="math/tex">\varphi</script> is not holomorphic. Can you make
+a small adjustment <span class="math"></span><script type="math/tex">\sigma'</script> to <span class="math"></span><script type="math/tex">\sigma</script> so that <span class="math"></span><script type="math/tex">\sigma'\circ \Phi</script> becomes
+holomorphic? With this adjustment the Riemann sphere becomes a Riemann surface!
+</div><div style="margin-top:20px"></div>If you have a sequence <span class="math"></span><script type="math/tex">z_1, z_2, \dots</script> of complex numbers tending to infinity, then
+they actually converge (!) on the <a href="https://en.wikipedia.org/wiki/Riemann_sphere" target="_blank">Riemann sphere</a> to <span class="math"></span><script type="math/tex">\infty</script> - the north pole. Riemann defined
+<span class="math"></span><script type="math/tex">\overline{\mathbb{C}} = \mathbb{C}\cup \{\infty\}</script> with the extended arithmetic
+<div class="math"></div><script type="math/tex; mode=display">\begin{aligned}
+  z + \infty &= \infty\\
+  z \infty &= \infty\\
+  z/0 &= \infty\\
+  z/\infty &= 0
+\end{aligned}</script>
+for <span class="math"></span><script type="math/tex">z\in \mathbb{C}\setminus\{0\}</script>. In this round about way, we may for example view
+<span class="math"></span><script type="math/tex">z\mapsto 1/z</script> as a continuous function <span class="math"></span><script type="math/tex">\varphi:\overline{\mathbb{C}}\rightarrow \overline{\mathbb{C}}</script>
+with <span class="math"></span><script type="math/tex">\varphi(0) = \infty</script> and <span class="math"></span><script type="math/tex">\varphi(\infty) = 0</script>.<div style="margin-top:20px"></div><span id="sec1.4"></span><h2 id="bbcc9317-318a-4771-aa2b-f4273aaf57c4">1.4 Projective spaces</h2><div style="margin-top:20px"></div>For a field <span class="math"></span><script type="math/tex">k</script> we let <span class="math"></span><script type="math/tex">\mathbb{P}^n(k)</script> denote the set of lines through <span class="math"></span><script type="math/tex">0</script> in
+<span class="math"></span><script type="math/tex">k^{n+1}</script> i.e.,
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{P}^n(k) = \{[\alpha] \mid \alpha \in k^{n+1}\setminus \{0\}\},
+</script>
+where <span class="math"></span><script type="math/tex">[\alpha] = \{ t \alpha \mid t\in k\}</script>. Notice that <span class="math"></span><script type="math/tex">[\alpha] = [\beta]</script>
+if and only of <span class="math"></span><script type="math/tex">\alpha = c \beta</script> for <span class="math"></span><script type="math/tex">c\in k\setminus\{0\}</script>. This in fact gives
+an equivalence relation <span class="math"></span><script type="math/tex">\sim</script> on <span class="math"></span><script type="math/tex">k^{n+1}\setminus\{0\}</script> and we may make the
+identification
+<div class="math"></div><script type="math/tex; mode=display">
+\mathbb{P}^n(k) = k^{n+1}\setminus\{0\}/_\sim
+</script>
+and write
+<div class="math"></div><script type="math/tex; mode=display">
+[x_0, x_1, \dots, x_n] := [(x_0, x_1, \dots, x_n)].
+</script>
+<span id="env1.28"></span><div class="definition" data-count="1.28">     
+  We let <span class="math"></span><script type="math/tex">\mathbb{P}^n(k)_{x_i}</script> denote the subset
+  <div class="math"></div><script type="math/tex; mode=display">
+  \{[x_0, x_1, \dots, x_n] \mid x_i \neq 0\} \subset \mathbb{P}^n(k).
+  </script><div style="margin-top:20px"></div></div><div style="margin-top:20px"></div>Notice that we have bijective maps <span class="math"></span><script type="math/tex">\varphi_i: k^n\rightarrow \mathbb{P}^n(k)_{x_i}</script> given by
+<div class="math"></div><script type="math/tex; mode=display">
+\varphi_i(x_1, \dots, x_n) = [x_1, \dots, x_{i-1}, 1, x_i, \dots, x_n].
+</script>
+If <span class="math"></span><script type="math/tex">k^{n+1}\setminus\{0\}</script> carries a topology, then <span class="math"></span><script type="math/tex">\mathbb{P}^n(k)</script> can be equipped
+with the quotient topology.<div style="margin-top:20px"></div><span id="env1.29"></span><div class="theorem" data-count="1.29">     
+<span class="math"></span><script type="math/tex">\mathbb{P}^n(\mathbb{C})</script> is a compact topological space.
+</div>
+<a href="#1acf9a1f-c220-4cb1-95f1-ca6bd373a59a" class ="btn btn-default Proofbutton"data-toggle="collapse"></a> <div id=1acf9a1f-c220-4cb1-95f1-ca6bd373a59a class = "collapse Proof envbuttons">    
+  Use the surjective continuous map <span class="math"></span><script type="math/tex">\varphi: S^n_\mathbb{C}\rightarrow \mathbb{P}^n(\mathbb{C})</script> given by
+  <div class="math"></div><script type="math/tex; mode=display">
+  \varphi(z_0, \dots, z_n) = [z_0, \dots, z_n],
+  </script>
+  where
+  <div class="math"></div><script type="math/tex; mode=display">
+  S^n_\mathbb{C} = \{(z_0, z_1, \dots, z_n) \mid z_0 \overline{z}_0 + \cdots + z_n\overline{z}_n = 1\}.
+  </script>
+  Here <span class="math"></span><script type="math/tex">S^n_{\mathbb{C}}</script> is a closed and bounded subset of <span class="math"></span><script type="math/tex">\mathbb{C}^{n+1}\cong \mathbb{R}^{2n + 2}</script>.
+  </div><div style="margin-top:20px"></div>Why is projective space interesting? Because it is a remarkable abstraction of the
+Riemann sphere. In fact, we have<div style="margin-top:20px"></div><span id="env1.30"></span><div class="theorem" data-count="1.30">     
+<span class="math"></span><script type="math/tex">\mathbb{P}^1(\mathbb{C})</script> is homeomorphic to the Riemann sphere <span class="math"></span><script type="math/tex">\overline{\mathbb{C}}</script>. 
+</div><div style="margin-top:20px"></div>This is perhaps not such a big surprise, since <span class="math"></span><script type="math/tex">\mathbb{P}^1(\mathbb{C}) = \mathbb{C} \cup \{\infty\}</script>, where
+<span class="math"></span><script type="math/tex">\infty = [(1,0)]</script>.<div style="margin-top:20px"></div><span id="env1.31"></span><div class="exercise" data-count="1.31">     
+  Define a metric <span class="math"></span><script type="math/tex">d: \mathbb{P}^1(\mathbb{C})\times \mathbb{P}^1(\mathbb{C}) \rightarrow \mathbb{R}</script>, which
+  gives the topology on <span class="math"></span><script type="math/tex">\mathbb{P}^1(\mathbb{C})</script>. Prove that the distance from
+  <span class="math"></span><script type="math/tex">\infty = [(1, 0)]</script> to <span class="math"></span><script type="math/tex">[(z, 1)]</script> is
+  <div class="math"></div><script type="math/tex; mode=display">
+  \frac{2}{\sqrt{1 + x^2 + y^2}},
+  </script>
+  where <span class="math"></span><script type="math/tex">z = x + i y</script>. In particular, <span class="math"></span><script type="math/tex">d(0, \infty) = 2</script>.
+</div><div style="margin-top:20px"></div><span id="env1.32"></span><div class="definition" data-count="1.32">     
+A polynomial <span class="math"></span><script type="math/tex">f\in k[x, y, z]</script> is called homogeneous if all its terms have the same degree.
+</div><div style="margin-top:20px"></div><span id="env1.33"></span><div class="example" data-count="1.33">     
+  <span class="math"></span><script type="math/tex">x^2 + y^2 - 1</script> is not a homogeneous polynomial, since it has terms of degree zero and two,  whereas <span class="math"></span><script type="math/tex">x^2 + y^2 - z^2</script> is a
+  homogeneous polynomial in <span class="math"></span><script type="math/tex">k[x, y, z]</script> with each term of degree two.
+</div><div style="margin-top:20px"></div><div style="margin-top:20px"></div><span id="env1.34"></span><a class="Exerciseno" data-count="1.34"></a><a href="#9f826639-7531-4cca-b52a-5f7dc78dd289" class ="btn btn-default Exercisebutton" data-toggle="collapse"></a><div id=9f826639-7531-4cca-b52a-5f7dc78dd289 class = "collapse Exercise envbuttons">  <div style="margin-top:20px"></div>Let <span class="math"></span><script type="math/tex">F = x^2 + y^2 - z^2\in \mathbb{C}[x, y, z]</script> and <span class="math"></span><script type="math/tex">f = x^2 + y^2 - 1 \in \mathbb{C}[x, y]</script>.<div style="margin-top:20px"></div>Consider <span class="math"></span><script type="math/tex">\mathbb{C}^2</script> as
+an open subset of <span class="math"></span><script type="math/tex">\mathbb{P}^2(\mathbb{C})</script> using the injective map <span class="math"></span><script type="math/tex">\varphi:\mathbb{C}^2\rightarrow \mathbb{P}^2(\mathbb{C})</script>
+given by <div style="margin-top:20px"></div><div class="math"></div><script type="math/tex; mode=display">
+\varphi(x, y) = [x, y, 1]\in \mathbb{P}^2(\mathbb{C})_{x_2}
+</script><div style="margin-top:20px"></div>By abuse of notation, we let <span class="math"></span><script type="math/tex">V(f)</script> denote <span class="math"></span><script type="math/tex">\varphi(V(f))\subset \mathbb{P}^2(\mathbb{C})</script>.
+<ol class="number"><li id="ite1.9"> Show that
+  <div class="math"></div><script type="math/tex; mode=display">
+  F(\lambda x, \lambda y, \lambda z) = \lambda^2 F(x, y, z)
+  </script>
+  for <span class="math"></span><script type="math/tex">\lambda \in \mathbb{C}</script>.
+</li><li id="ite1.10"> Explain why
+  <div class="math"></div><script type="math/tex; mode=display">
+  V(F) = \{[x, y, z] \mid F(x, y, z) = 0\}
+  </script>
+  is a well defined subset of <span class="math"></span><script type="math/tex">\mathbb{P}^2(\mathbb{C})</script>.
+</li><li id="ite1.11">
+  Show that <span class="math"></span><script type="math/tex">V(F)</script> is a closed subset of <span class="math"></span><script type="math/tex">\mathbb{P}^2(\mathbb{C})</script>.
+</li><li id="ite1.12">
+  <span class="math"></span><script type="math/tex">V(F) \setminus V(f)</script> consists of only two
+  points! Find them.
+</li><li id="ite1.13">
+  Prove that <span class="math"></span><script type="math/tex">V(F) = \overline{V(f)}</script> in <span class="math"></span><script type="math/tex">\mathbb{P}^2(\mathbb{C})</script>.
+</li></ol>
+</div><div style="margin-top:20px"></div><div style="margin-top:20px"></div><div style="margin-top:20px"></div>
+
+
+
+<div style="margin-top:20px"></div>
+
+
+
+
+
+
+
+
+
+<div style="margin-top:20px"></div>
+
+
+
+<div style="margin-top:20px"></div></div></body>
